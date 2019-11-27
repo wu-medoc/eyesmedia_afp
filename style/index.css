@@ -40,12 +40,14 @@ body.fixedMenu .nav-tabs {
 }
 
 .kv-box .kv-top {
+  width: calc(100% - 30px);
   position: absolute;
-  left: 15px;
-  right: 15px;
+  left: 0;
+  right: 0;
   top: 20px;
-  display: -ms-flexbox;
+  margin: 0 auto;
   display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;

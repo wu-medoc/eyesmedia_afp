@@ -45,11 +45,13 @@ body{
         background: url('../img/kv_mask_right.svg') 0 0 no-repeat;
     }
     .kv-top{
+        width: calc(100% - 30px);
         position: absolute;
-        left: 15px;
-        right: 15px;
+        left: 0;
+        right: 0;
         top: 20px;
-        @include flexBox;
+        margin: 0 auto;
+        display: flex;
         -webkit-align-items: center;
         align-items: center;
         -webkit-justify-content: center;
