@@ -75,6 +75,7 @@ body{
                 }
             }
             &.input-box{
+                flex: 1;
                 @include flexBox;
                 -webkit-align-items: center;
                 align-items: center;
