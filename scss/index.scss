@@ -1,6 +1,27 @@
 @import '../style/module/mixin';
 @import '../style/module/variable';
 
+body{
+    height: 3000px;
+    &.is-open-aside{
+        .more-link-aside{
+            right: 0;
+        }
+    }
+    &.fixedMenu{
+        .nav-tabs{
+            position: fixed;
+            left: 0;
+            right: 0;
+            top: 0;
+            background-color: #fff;
+            z-index: 100;
+            padding: 20px 15px;
+            box-shadow: 0 5px 5px rgba(0,0,0,.2);
+        }
+    }
+}
+
 // kv
 .kv-box{
     position: relative;
@@ -168,6 +189,7 @@
     }
 }
 
+// 主要連結 & 自訂連結
 .main-link{
     @include flexBox;
     font-size: 13px;
@@ -234,6 +256,107 @@
             transform: translate(-50%, -50%);
         }
     }
+}
+
+// 去哪玩連結
+.go-where-link{
+    margin: 15px 0;
+    @include flexBox;
+    .link-item{
+        padding: 5px;
+        background-color: $default-white;
+        box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 5px;
+        -webkit-flex: 1;
+        flex: 1;
+        +.link-item{
+            margin-left: 10px;
+        }
+        .txt-box{
+            text-align: right;
+            margin-top: 5px;
+        }
+        p{
+            color: #182B56;
+            line-height: 1;
+            font-size: 13px;
+            font-weight: 900;
+        }
+        small{
+            color: #8E8E93;
+            line-height: 1;
+            font-size: 12px;
+        }
+    }
+}
+
+// afp-tab-box
+.afp-tab-box{
+    .nav-tabs{
+        @include flexBox;
+        padding: 20px 0;
+        align-items: center;
+        justify-content: space-between;
+        a{
+            color: #8E8E93;
+            text-decoration: none;
+
+            &.active{
+                font-size: 18px;
+                color: #182B56;
+            }
+        }
+    }
+    .tab-content{
+        .content-list{
+            @include flexBox;
+            flex-wrap: wrap;
+            .content-item{
+                width: 48%;
+                &:nth-child(2n){
+                    margin-left: 2%;
+                }
+            }
+            .img-box{
+                border-radius: 5px;
+                overflow: hidden;
+                img{
+                    width: 100%;
+                }
+            }
+            .item-title{
+                font-size: 16px;
+                color: #182B56;
+            }
+            .tag-list{
+                overflow: hidden;
+                li{
+                    float: left;
+                    color: #48A2DE;
+                    border: 1px #48A2DE solid;
+                    border-radius: 3px;
+                    padding: 0 3px;
+                    font-size: 12px;
+                    margin: 5px 0;
+                    + li{
+                        margin-left: 5px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.more-link-aside{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+    background-color: #fff;
+    z-index: 200;
 }
 
 .swiper-container{
