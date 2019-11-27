@@ -1,5 +1,20 @@
 @charset "utf-8";
+@import '../style/module/reset';
+@import '../style/module/variable';
+@import '../style/module/mixin';
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+TC:400,900&display=swap&subset=chinese-traditional');
+
+body, html{
+    box-sizing: border-box;
+    background-color: $default-white;
+    font-family: 'Noto Sans TC', sans-serif;
+}
 
 body{
+    overflow-x: hidden; 
+}
+
+.wrap{
     overflow-x: hidden;
 }
+
