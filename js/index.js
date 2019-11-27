@@ -45,4 +45,14 @@ $(document).ready(function(){
           body.css({"padding-top": ""});
         }
     }).trigger("scroll");
+
+    // 自訂連結更多按鈕 - 開啟側欄
+    $('.more-btn').on('click', function(){
+        $('body').addClass('is-open-aside');
+    })
+    // 側欄 header - 關閉側欄
+    $('.aside-header .close-btn').on('click', function(){
+        $('body').removeClass('is-open-aside');
+    })
+    
 });
