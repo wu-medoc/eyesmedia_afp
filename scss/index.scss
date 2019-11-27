@@ -2,7 +2,6 @@
 @import '../style/module/variable';
 
 body{
-    height: 3000px;
     &.is-open-aside{
         .more-link-aside{
             right: 0;
@@ -72,8 +71,8 @@ body{
                 }
             }
             &.input-box{
-                -webkit-flex: 1;
-                flex: 1;
+                // -webkit-flex: 1;
+                // flex: 1;
                 @include flexBox;
                 -webkit-align-items: center;
                 align-items: center;
@@ -83,8 +82,8 @@ body{
                 margin: 0 10px;
                 box-sizing: border-box;
                 input{
-                    -webkit-flex: 1;
-                    flex: 1;
+                    // -webkit-flex: 1;
+                    // flex: 1;
                     padding-top: 0;
                     background: transparent;
                     border: none;
@@ -313,7 +312,8 @@ body{
             @include flexBox;
             flex-wrap: wrap;
             .content-item{
-                width: 48%;
+                width: 49%;
+                margin-bottom: 15px;
                 &:nth-child(2n){
                     margin-left: 2%;
                 }
