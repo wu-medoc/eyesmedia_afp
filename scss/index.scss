@@ -297,7 +297,7 @@ body{
 
 // afp-tab-box
 .afp-tab-box{
-    .nav-tabs{
+    .nav-tabs{ 
         @include flexBox;
         padding: 15px 0;
         padding-bottom: 30px;
@@ -318,7 +318,7 @@ body{
                 right: 0;
                 bottom: -100%;
                 opacity: 0;
-                background: url('/img/tab_active.svg') 0 0 no-repeat;
+                background: url('../img/tab_active.svg') 0 0 no-repeat;
                 background-size: 100% auto;
                 transition: .5s opacity;
             }

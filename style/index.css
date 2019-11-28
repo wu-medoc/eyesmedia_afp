@@ -369,7 +369,7 @@ body.fixedMenu .nav-tabs {
   right: 0;
   bottom: -100%;
   opacity: 0;
-  background: url("/img/tab_active.svg") 0 0 no-repeat;
+  background: url("../img/tab_active.svg") 0 0 no-repeat;
   background-size: 100% auto;
   -webkit-transition: .5s opacity;
   transition: .5s opacity;
