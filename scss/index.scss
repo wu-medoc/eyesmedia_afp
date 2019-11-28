@@ -290,7 +290,7 @@ body{
         }
         small{
             color: #8E8E93;
-            line-height: 1;
+            display: block;
             font-size: 12px;
         }
     }
@@ -391,6 +391,16 @@ body{
         .close-btn{
             display: none;
         }
+        .service-box{
+            .service-title{
+                flex-wrap: wrap;
+                .main-link{
+                    width: 100%;
+                    margin-top: 10px;
+                    display: flex;
+                }
+            }
+        }
         .edit-title-box{
             display: flex;
         }
@@ -410,6 +420,14 @@ body{
                 &:after{
                     display: flex;
                 }
+            }
+        }
+        .title-group{
+            &.no-edit{
+                display: none;
+            }
+            &.yes-edit{
+                display: block;
             }
         }
     }
@@ -446,6 +464,24 @@ body{
             padding: 15px 0;
             display: flex;
             align-items: center;
+            .title-box{
+                display: flex;
+                margin: 0 10px;
+                .title-item{
+                    flex: 1;
+                    margin-right: 10px;
+                    &:last-child{
+                        margin-right: 0;
+                    }
+                    .material-icons{
+                        color: #B6C0D5;
+                        vertical-align: text-top;
+                    }
+                }
+                img{
+                    width: 30px;
+                }
+            }
             .edit-btn{
                 margin-left: auto;
                 background: linear-gradient(270deg, #568EE3 0%, #36D1DB 100%);
@@ -453,6 +489,10 @@ body{
                 color: $default-white;
                 font-size: 13px;
                 padding: 3px 5px;
+                align-self: center;
+            }
+            .main-link{
+                display: none;
             }
         }
         .main-link{
@@ -489,6 +529,19 @@ body{
                 content: '\e15b';
                 background: #FF0000;
                 color: $default-white;
+            }
+        }
+    }
+    .title-group{
+        display: flex;
+        flex: 1;
+        &.no-edit{}
+        &.yes-edit{
+            display: none;
+            p{
+                color: #7688B0;
+                font-size: 14px;
+                margin-left: 15px;
             }
         }
     }

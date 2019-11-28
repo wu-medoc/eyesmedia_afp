@@ -338,7 +338,7 @@ body.fixedMenu .nav-tabs {
 
 .go-where-link .link-item small {
   color: #8E8E93;
-  line-height: 1;
+  display: block;
   font-size: 12px;
 }
 
@@ -458,6 +458,19 @@ body.fixedMenu .nav-tabs {
   display: none;
 }
 
+.more-link-aside.edit-mode .service-box .service-title {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.more-link-aside.edit-mode .service-box .service-title .main-link {
+  width: 100%;
+  margin-top: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .more-link-aside.edit-mode .edit-title-box {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -488,6 +501,14 @@ body.fixedMenu .nav-tabs {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+.more-link-aside.edit-mode .title-group.no-edit {
+  display: none;
+}
+
+.more-link-aside.edit-mode .title-group.yes-edit {
+  display: block;
 }
 
 .more-link-aside .aside-header {
@@ -538,6 +559,33 @@ body.fixedMenu .nav-tabs {
           align-items: center;
 }
 
+.more-link-aside .service-box .service-title .title-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 10px;
+}
+
+.more-link-aside .service-box .service-title .title-box .title-item {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  margin-right: 10px;
+}
+
+.more-link-aside .service-box .service-title .title-box .title-item:last-child {
+  margin-right: 0;
+}
+
+.more-link-aside .service-box .service-title .title-box .title-item .material-icons {
+  color: #B6C0D5;
+  vertical-align: text-top;
+}
+
+.more-link-aside .service-box .service-title .title-box img {
+  width: 30px;
+}
+
 .more-link-aside .service-box .service-title .edit-btn {
   margin-left: auto;
   background: -webkit-gradient(linear, right top, left top, from(#568EE3), to(#36D1DB));
@@ -546,6 +594,13 @@ body.fixedMenu .nav-tabs {
   color: #fff;
   font-size: 13px;
   padding: 3px 5px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.more-link-aside .service-box .service-title .main-link {
+  display: none;
 }
 
 .more-link-aside .service-box .main-link {
@@ -586,6 +641,25 @@ body.fixedMenu .nav-tabs {
   content: '\e15b';
   background: #FF0000;
   color: #fff;
+}
+
+.more-link-aside .title-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.more-link-aside .title-group.yes-edit {
+  display: none;
+}
+
+.more-link-aside .title-group.yes-edit p {
+  color: #7688B0;
+  font-size: 14px;
+  margin-left: 15px;
 }
 
 .swiper-container img {
