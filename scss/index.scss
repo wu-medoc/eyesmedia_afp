@@ -15,7 +15,7 @@ body{
             top: 0;
             background-color: #fff;
             z-index: 100;
-            padding: 20px 15px;
+            padding: 15px;
             box-shadow: 0 5px 5px rgba(0,0,0,.2);
         }
     }
@@ -297,9 +297,10 @@ body{
 .afp-tab-box{
     .nav-tabs{
         @include flexBox;
-        padding: 20px 0;
+        padding: 15px 0;
         align-items: center;
         justify-content: space-between;
+        border-bottom: none;
         a{
             color: #8E8E93;
             text-decoration: none;
@@ -341,9 +342,9 @@ body{
                     border-radius: 3px;
                     padding: 0 3px;
                     font-size: 12px;
-                    margin: 5px 0;
-                    + li{
-                        margin-left: 5px;
+                    margin-right: 5px;
+                    &:last-child{
+                        margin-right: 0;
                     }
                 }
             }
