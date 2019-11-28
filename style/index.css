@@ -457,15 +457,11 @@ body.fixedMenu .nav-tabs {
 }
 
 .more-link-aside.edit-mode .link-item.add-item:before {
-  display: -ms-flexbox;
-  display: -webkit-box;
-  display: flex;
+  display: block;
 }
 
 .more-link-aside.edit-mode .link-item.remove-item:after {
-  display: -ms-flexbox;
-  display: -webkit-box;
-  display: flex;
+  display: block;
 }
 
 .more-link-aside .aside-header {
@@ -520,16 +516,12 @@ body.fixedMenu .nav-tabs {
   position: absolute;
   top: 3px;
   right: 3px;
-  width: 15px;
-  height: 15px;
+  width: 16px;
+  height: 16px;
   border-radius: 100%;
   display: none;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  text-align: center;
+  line-height: 15px;
   font-size: 12px;
 }
 

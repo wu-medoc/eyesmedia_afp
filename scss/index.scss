@@ -392,12 +392,12 @@ body{
             border-radius: 5px;
             &.add-item{
                 &:before{
-                    @include flexBox;
+                    display: block;
                 }
             }
             &.remove-item{
                 &:after{
-                    @include flexBox;
+                    display: block;
                 }
             }
         }
@@ -439,12 +439,12 @@ body{
                 position: absolute;
                 top: 3px;
                 right: 3px;
-                width: 15px;
-                height: 15px;
+                width: 16px;
+                height: 16px;
                 border-radius: 100%;
                 display: none;
-                align-items: center;
-                justify-content: center;
+                text-align: center;
+                line-height: 15px;
                 font-size: 12px;
             }
             &:before{
