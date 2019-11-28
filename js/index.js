@@ -61,5 +61,8 @@ $(document).ready(function(){
     $('.edit-btn').on('click', function(){
         $(this).closest('.more-link-aside').addClass('edit-mode');
     })
+    $('.aside-header .edit-title-cancel').on('click', function(){
+        $(this).closest('.more-link-aside').removeClass('edit-mode');
+    })
     
 });
