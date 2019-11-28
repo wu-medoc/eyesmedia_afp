@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    var body = $("body");
+    var body = $('body');
     var swiper = new Swiper('.kv-box .swiper-container', {
         effect: 'fade',
         loop: true,
@@ -11,7 +11,7 @@ $(document).ready(function(){
 
     // ad
     // 超過一張才執行 swiper，並且顯示 pagination
-    if ($(".ad-box .swiper-slide").length>1) {
+    if ($('.ad-box .swiper-slide').length>1) {
         // console.log('true');
         var swiper = new Swiper('.ad-box .swiper-container', {
             pagination: {
@@ -23,7 +23,7 @@ $(document).ready(function(){
 
     // 開啟 dropMenu
     body.on('click', function(evt){
-        if($(evt.target).attr('class') != "drop-content" && $(evt.target).attr('class') != "drop_menu_toggle") {
+        if($(evt.target).attr('class') != 'drop-content' && $(evt.target).attr('class') != 'drop_menu_toggle') {
             $('.more-horiz').removeClass('is-open');
         }
     })
@@ -33,19 +33,19 @@ $(document).ready(function(){
     })
 
     // 固定選單
-    var stickyOffset = $("#nav-tab").offset().top;
-    var stickyHeight = $("#nav-tab").outerHeight();
-    var navtabsbox = $(".nav-tabs-box");
+    var stickyOffset = $('#nav-tab').offset().top;
+    var stickyHeight = $('#nav-tab').outerHeight();
+    var navtabsbox = $('.nav-tabs-box');
     $(window).scroll(function() {
         var scroll = $(window).scrollTop();
         if (scroll >= stickyOffset) {
-          body.addClass("fixedMenu");
-          navtabsbox.css({"height": stickyHeight + "px"});
+          body.addClass('fixedMenu');
+          navtabsbox.css({'height': stickyHeight + 'px'});
         } else {
-          body.removeClass("fixedMenu");
-          navtabsbox.css({"height": "auto"});
+          body.removeClass('fixedMenu');
+          navtabsbox.css({'height': 'auto'});
         }
-    }).trigger("scroll");
+    }).trigger('scroll');
 
     // 自訂連結更多按鈕 - 開啟側欄
     $('.more-btn').on('click', function(){
@@ -54,6 +54,12 @@ $(document).ready(function(){
     // 側欄 header - 關閉側欄
     $('.aside-header .close-btn').on('click', function(){
         body.removeClass('is-open-aside');
+        $('.more-link-aside').removeClass('edit-mode')
+    })
+
+    // aside 編輯鍵
+    $('.edit-btn').on('click', function(){
+        $(this).closest('.more-link-aside').addClass('edit-mode');
     })
     
 });
