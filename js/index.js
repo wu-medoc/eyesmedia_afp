@@ -9,10 +9,6 @@ $(document).ready(function(){
           },
     });
 
-    $('.nav-item').on('click', function(){
-        event.preventDefault();
-    })
-
     // ad
     // 超過一張才執行 swiper，並且顯示 pagination
     if ($(".ad-box .swiper-slide").length>1) {
