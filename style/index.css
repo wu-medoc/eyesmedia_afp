@@ -139,6 +139,7 @@ body.fixedMenu .nav-tabs {
   bottom: 0;
   margin: 0 auto;
   z-index: 10;
+  outline: none;
 }
 
 .kv-box .kv-top .top-item.more-horiz .drop-menu {
@@ -341,6 +342,7 @@ body.fixedMenu .nav-tabs {
   display: -webkit-box;
   display: flex;
   padding: 15px 0;
+  padding-bottom: 30px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -350,14 +352,35 @@ body.fixedMenu .nav-tabs {
   border-bottom: none;
 }
 
-.afp-tab-box .nav-tabs a {
+.afp-tab-box .nav-tabs .nav-item {
   color: #8E8E93;
   text-decoration: none;
+  position: relative;
 }
 
-.afp-tab-box .nav-tabs a.active {
+.afp-tab-box .nav-tabs .nav-item:after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -100%;
+  opacity: 0;
+  background: url("/img/tab_active.svg") 0 0 no-repeat;
+  background-size: 100% auto;
+  -webkit-transition: .5s opacity;
+  transition: .5s opacity;
+}
+
+.afp-tab-box .nav-tabs .nav-item.active {
   font-size: 18px;
   color: #182B56;
+}
+
+.afp-tab-box .nav-tabs .nav-item.active:after {
+  opacity: 1;
 }
 
 .afp-tab-box .tab-content .content-list {
@@ -403,6 +426,7 @@ body.fixedMenu .nav-tabs {
   padding: 0 3px;
   font-size: 12px;
   margin-right: 5px;
+  margin-bottom: 5px;
 }
 
 .afp-tab-box .tab-content .content-list .tag-list li:last-child {

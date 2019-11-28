@@ -1,4 +1,5 @@
 $(document).ready(function(){
+    var body = $("body");
     var swiper = new Swiper('.kv-box .swiper-container', {
         effect: 'fade',
         loop: true,
@@ -8,10 +9,14 @@ $(document).ready(function(){
           },
     });
 
+    $('.nav-item').on('click', function(){
+        event.preventDefault();
+    })
+
     // ad
     // 超過一張才執行 swiper，並且顯示 pagination
     if ($(".ad-box .swiper-slide").length>1) {
-        console.log('true');
+        // console.log('true');
         var swiper = new Swiper('.ad-box .swiper-container', {
             pagination: {
                 el: '.swiper-pagination',
@@ -21,12 +26,12 @@ $(document).ready(function(){
     }
 
     // 開啟 dropMenu
-    $('body,html').on('click', function(evt){
+    body.on('click', function(evt){
         if($(evt.target).attr('class') != "drop-content" && $(evt.target).attr('class') != "drop_menu_toggle") {
             $('.more-horiz').removeClass('is-open');
         }
     })
-    $('body').on('click', '.drop_menu_toggle', function(){
+    body.on('click', '.drop_menu_toggle', function(){
         var dropwrap = $(this).parent('.more-horiz');
         dropwrap.toggleClass('is-open');
     })
@@ -34,25 +39,25 @@ $(document).ready(function(){
     // 固定選單
     var stickyOffset = $("#nav-tab").offset().top;
     var stickyHeight = $("#nav-tab").outerHeight();
+    var navtabsbox = $(".nav-tabs-box");
     $(window).scroll(function() {
-        var body = $("body");
         var scroll = $(window).scrollTop();
         if (scroll >= stickyOffset) {
           body.addClass("fixedMenu");
-          body.css({"padding-top": stickyHeight + "px"});
+          navtabsbox.css({"height": stickyHeight + "px"});
         } else {
           body.removeClass("fixedMenu");
-          body.css({"padding-top": ""});
+          navtabsbox.css({"height": "auto"});
         }
     }).trigger("scroll");
 
     // 自訂連結更多按鈕 - 開啟側欄
     $('.more-btn').on('click', function(){
-        $('body').addClass('is-open-aside');
+        body.addClass('is-open-aside');
     })
     // 側欄 header - 關閉側欄
     $('.aside-header .close-btn').on('click', function(){
-        $('body').removeClass('is-open-aside');
+        body.removeClass('is-open-aside');
     })
     
 });
