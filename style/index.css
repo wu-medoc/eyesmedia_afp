@@ -91,7 +91,7 @@ body.fixedMenu .nav-tabs {
           align-items: center;
   background-color: #fff;
   border-radius: 10px;
-  padding: 5px 10px;
+  padding: 0px 10px;
   margin: 0 10px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -99,15 +99,14 @@ body.fixedMenu .nav-tabs {
 
 .kv-box .kv-top .top-item.input-box input {
   width: 100%;
-  padding-top: 0;
   background: transparent;
   border: none;
+  padding: 3px 0;
 }
 
 .kv-box .kv-top .top-item.input-box .material-icons {
   color: #8E8E93;
   vertical-align: bottom;
-  margin-right: 5px;
 }
 
 .kv-box .kv-top .top-item.more-horiz {
