@@ -78,7 +78,7 @@ body{
             }
             &.input-box{
                 flex: 1;
-                @include flexBox;
+                display: flex;
                 -webkit-align-items: center;
                 align-items: center;
                 background-color: $default-white;
@@ -149,7 +149,7 @@ body{
                     }
                     ul{
                         height: 100%;
-                        @include flexBox;
+                        display: flex;
                         justify-content: space-between;
                         -webkit-flex-direction: column;
                         flex-direction: column;
@@ -197,7 +197,7 @@ body{
 
 // 主要連結 & 自訂連結
 .main-link{
-    @include flexBox;
+    display: flex;
     font-size: 13px;
     margin: 10px 0;
     @media screen and (max-width: 375px){
@@ -267,7 +267,7 @@ body{
 // 去哪玩連結
 .go-where-link{
     margin: 15px 0;
-    @include flexBox;
+    display: flex;
     .link-item{
         padding: 5px;
         background-color: $default-white;
@@ -299,7 +299,7 @@ body{
 // afp-tab-box
 .afp-tab-box{
     .nav-tabs{ 
-        @include flexBox;
+        display: flex;
         padding: 15px 0;
         padding-bottom: 30px;
         align-items: center;
@@ -336,7 +336,7 @@ body{
     }
     .tab-content{
         .content-list{
-            @include flexBox;
+            display: flex;
             flex-wrap: wrap;
             .content-item{
                 width: 49%;
@@ -392,19 +392,23 @@ body{
             display: none;
         }
         .edit-title-box{
-            @include flexBox;
+            display: flex;
         }
         .link-item{
             background-color: #eee;
             border-radius: 5px;
+            &:before, &:after{
+                align-items: center;
+                justify-content: center;
+            }
             &.add-item{
                 &:before{
-                    display: block;
+                    display: flex;
                 }
             }
             &.remove-item{
                 &:after{
-                    display: block;
+                    display: flex;
                 }
             }
         }
@@ -440,7 +444,7 @@ body{
         }
         .service-title{
             padding: 15px 0;
-            @include flexBox;
+            display: flex;
             align-items: center;
             .edit-btn{
                 margin-left: auto;
@@ -466,21 +470,23 @@ body{
                 position: absolute;
                 top: 3px;
                 right: 3px;
+                z-index: 200;
                 width: 16px;
                 height: 16px;
                 border-radius: 100%;
                 display: none;
-                text-align: center;
-                line-height: 15px;
+                // text-align: center;
+                // line-height: 15px;
+                font-family: "Material Icons";
                 font-size: 12px;
             }
             &:before{
-                content: '+';
+                content: '\e145';
                 background-color: #F8E71C;
                 color: #273D52;
             }
             &:after{
-                content: '−';
+                content: '\e15b';
                 background: #FF0000;
                 color: $default-white;
             }
