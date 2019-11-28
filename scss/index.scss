@@ -3,6 +3,7 @@
 
 body{
     &.is-open-aside{
+        overflow-y: hidden;
         .more-link-aside{
             right: 0;
         }
@@ -387,6 +388,12 @@ body{
     z-index: 200;
     transition: .5s all;
     &.edit-mode{
+        .close-btn{
+            display: none;
+        }
+        .edit-title-box{
+            @include flexBox;
+        }
         .link-item{
             background-color: #eee;
             border-radius: 5px;
@@ -405,6 +412,26 @@ body{
     .aside-header{
         padding: 10px 15px;
         border-bottom: 1px #eee solid;
+    }
+    .close-btn{
+        font-size: 18px;
+        font-weight: 700;
+        .material-icons{
+            vertical-align: bottom;
+        }
+    }
+    .edit-title-box{
+        display: none;
+        .edit-item{
+            color: #0091FF;
+            font-size: 16px;
+            &.edit-title{
+                font-size: 18px;
+                font-weight: 700;
+                margin: 0 auto;
+                color: #333;
+            }
+        }
     }
     .service-box {
         padding: 0 15px;
