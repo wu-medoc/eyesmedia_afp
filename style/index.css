@@ -450,8 +450,8 @@ body.fixedMenu .nav-tabs {
   overflow-y: scroll;
   background-color: #fff;
   z-index: 200;
-  -webkit-transition: .5s all;
-  transition: .5s all;
+  -webkit-transition: .25s all ease-in;
+  transition: .25s all ease-in;
 }
 
 .more-link-aside.edit-mode .close-btn {

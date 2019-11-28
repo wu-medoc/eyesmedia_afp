@@ -386,7 +386,7 @@ body{
     overflow-y: scroll;
     background-color: #fff;
     z-index: 200;
-    transition: .5s all;
+    transition: .25s all ease-in;
     &.edit-mode{
         .close-btn{
             display: none;
