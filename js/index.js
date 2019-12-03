@@ -64,5 +64,26 @@ $(document).ready(function(){
     $('.aside-header .edit-title-cancel').on('click', function(){
         $(this).closest('.more-link-aside').removeClass('edit-mode');
     })
+
+    // 開啟 login
+    $('.open-login').on('click', function(){
+        body.addClass('is-open-login');
+    })
+
+    // 關閉 login
+    $('.login-box .close-btn').on('click', function(){
+        body.removeClass('is-open-login');
+    })
+
+    // 關閉 login 開啟 reg
+    $('.login-box .go-reg-box').on('click', function(){
+        body.removeClass('is-open-login');
+        body.addClass('is-open-reg');
+    })
+
+    // 關閉 reg
+    $('.reg-box .close-btn').on('click', function(){
+        body.removeClass('is-open-reg');
+    })
     
 });

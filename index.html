@@ -17,7 +17,7 @@
     <title>eyemedia - afp</title>
 </head>
 
-<body class="">
+<body class="is-open-reg">
     <div class="wrap">
         <div class="kv-box">
             <div class="kv-top">
@@ -33,9 +33,9 @@
                     <button class="drop_menu_toggle"></button>
                     <div class="drop-menu">
                         <ul class="drop-content">
-                            <li><a href=""><img src="img/icons/icon_qrcode.svg" alt="">掃碼</a></li>
-                            <li><a href=""><img src="img/icons/icon_taxicode.svg" alt="">乘車碼</a></li>
-                            <li><a href=""><img src="img/icons/icon_login.svg" alt="">登入/註冊</a></li>
+                            <li><a href="javascript:;"><img src="img/icons/icon_qrcode.svg" alt="">掃碼</a></li>
+                            <li><a href="javascript:;"><img src="img/icons/icon_taxicode.svg" alt="">乘車碼</a></li>
+                            <li><a class="open-login" href="javascript:;"><img src="img/icons/icon_login.svg" alt="">登入/註冊</a></li>
                         </ul>
                     </div>
                 </div>
@@ -56,7 +56,7 @@
                 </div>
             </div>
         </div>
-        <div class="container-fluid">
+        <div class="container">
             <div class="row">
                 <!-- 主要連結 -->
                 <div class="col-12">
@@ -447,6 +447,7 @@
                 </div>
             </div>
         </div>
+        <!-- 自訂功能側邊欄 -->
         <div class="more-link-aside">
             <div class="aside-header">
                 <div class="close-btn">
@@ -519,73 +520,73 @@
                     亞洲好玩卡服務
                 </div>
                 <div class="main-link edit-link">
-                    <a href="" class="link-item add-item">
+                    <a href="javascript:;" data-num="0" data-item="乘車碼" class="link-item add-item">
                         <div class="img-box">
                             <img src="img/icons/icon_taxicode_2.svg" alt="">
                         </div>
                         <p>乘車碼</p>
                     </a>
-                    <a href="" class="link-item remove-item">
+                    <a href="javascript:;" data-num="1" data-item="交通訂票" class="link-item remove-item">
                         <div class="img-box">
                             <img src="img/icons/icon_booking.svg" alt="">
                         </div>
                         <p>交通訂票</p>
                     </a>
-                    <a href="" class="link-item add-item">
+                    <a href="" data-num="2" data-item="叫車" class="link-item add-item">
                         <div class="img-box">
                             <img src="img/icons/icon_taxi.svg" alt="">
                         </div>
                         <p>叫車</p>
                     </a>
-                    <a href="" class="link-item add-item">
+                    <a href="" data-num="3" data-item="交通資訊" class="link-item add-item">
                         <div class="img-box">
                             <img src="img/icons/icon_info.svg" alt="">
                         </div>
                         <p>交通資訊</p>
                     </a>
-                    <a href="" class="link-item remove-item">
+                    <a href="" data-num="4" data-item="路線規劃" class="link-item remove-item">
                         <div class="img-box">
                             <img src="img/icons/icon_router.svg" alt="">
                         </div>
                         <p>路線規劃</p>
                     </a>
-                    <a href="" class="link-item add-item">
+                    <a href="" data-num="5" data-item="美食" class="link-item add-item">
                         <div class="img-box">
                             <img src="img/icons/icon_food_2.svg" alt="">
                         </div>
                         <p>美食</p>
                     </a>
-                    <a href="" class="link-item remove-item">
+                    <a href="" data-num="6" data-item="購物" class="link-item remove-item">
                         <div class="img-box">
                             <img src="img/icons/icon_shopping_2.svg" alt="">
                         </div>
                         <p>購物</p>
                     </a>
-                    <a href="" class="link-item add-item">
+                    <a href="" data-num="7" data-item="景點/門票" class="link-item add-item">
                         <div class="img-box">
                             <img src="img/icons/icon_location_2.svg" alt="">
                         </div>
                         <p>景點/門票</p>
                     </a>
-                    <a href="" class="link-item remove-item">
+                    <a href="" data-num="8" data-item="去旅行" class="link-item remove-item">
                         <div class="img-box">
                             <img src="img/icons/icon_travel_2.svg" alt="">
                         </div>
                         <p>去旅行</p>
                     </a>
-                    <a href="" class="link-item add-item">
+                    <a href="" data-num="9" data-item="線上商城" class="link-item add-item">
                         <div class="img-box">
                             <img src="img/icons/icon_shop.svg" alt="">
                         </div>
                         <p>線上商城</p>
                     </a>
-                    <a href="" class="link-item add-item">
+                    <a href="" data-num="10" data-item="優惠券" class="link-item add-item">
                         <div class="img-box">
                             <img src="img/icons/icon_ticket_2.svg" alt="">
                         </div>
                         <p>優惠券</p>
                     </a>
-                    <a href="" class="link-item remove-item">
+                    <a href="" data-num="11" data-item="繳費" class="link-item remove-item">
                         <div class="img-box">
                             <img src="img/icons/icon_pay.svg" alt="">
                         </div>
@@ -598,12 +599,127 @@
                     合作夥伴服務
                 </div>
                 <div class="main-link edit-link">
-                    <a href="" class="link-item add-item">
+                    <a href="" data-num="12" data-item="外賣" class="link-item add-item">
                         <div class="img-box">
                             <img src="img/icons/icon_takeaway.svg" alt="">
                         </div>
                         <p>外賣</p>
                     </a>
+                </div>
+            </div>
+        </div>
+        <!-- 登入 -->
+        <div class="popup-box login-box">
+            <div class="close-btn">
+                <i class="material-icons">&#xE5CD;</i>
+            </div>
+            <div class="popup-banner">
+                <img src="img/login_banner.png" alt="">
+                <div class="logo-box">
+                    <img src="img/afp_logo_icon.png" alt="">
+                </div>
+            </div>
+            <div class="popup-title">
+                會員登入
+            </div>
+            <div class="login-method">
+                <div class="method-item">
+                    <img src="/img/social/facebook.svg" alt="">
+                    <p>Facebook</p>
+                </div>
+                <div class="method-item">
+                    <img src="/img/social/line.svg" alt="">
+                    <p>LINE</p>
+                </div>
+                <div class="method-item">
+                    <img src="/img/social/google.svg" alt="">
+                    <p>Google</p>
+                </div>
+                <div class="method-item">
+                    <img src="/img/social/wechat.svg" alt="">
+                    <p>Wechat</p>
+                </div>
+            </div>
+            <div class="or-box">
+                或
+            </div>
+            <div class="login-form">
+                <form action="">
+                    <input type="text" placeholder="Email/手機">
+                    <input type="text" placeholder="密碼">
+                    <button>登入</button>
+                </form>
+            </div>
+            <div class="reg-info">
+                <div class="reg-item">
+                    還不是會員嗎？<span class="go-reg-box">馬上註冊</span>
+                </div> 
+                <div class="reg-item">
+                    <span class="forget-password">忘記密碼</span>
+                </div>
+            </div>
+        </div>
+        <!-- 註冊 -->
+        <div class="popup-box reg-box">
+            <div class="close-btn">
+                <i class="material-icons">&#xE5CD;</i>
+            </div>
+            <div class="popup-banner">
+                <img src="img/reg_banner.png" alt="">
+                <div class="logo-box">
+                    <img src="img/afp_logo_icon.png" alt="">
+                </div>
+            </div>
+            <div class="popup-title">
+                會員註冊
+            </div>
+            <div class="login-method">
+                <div class="method-item">
+                    <img src="/img/social/facebook.svg" alt="">
+                    <p>Facebook</p>
+                </div>
+                <div class="method-item">
+                    <img src="/img/social/line.svg" alt="">
+                    <p>LINE</p>
+                </div>
+                <div class="method-item">
+                    <img src="/img/social/google.svg" alt="">
+                    <p>Google</p>
+                </div>
+                <div class="method-item">
+                    <img src="/img/social/wechat.svg" alt="">
+                    <p>Wechat</p>
+                </div>
+            </div>
+            <div class="or-box">
+                或
+            </div>
+            <div class="reg-tab">
+                <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                    <a class="nav-item active" id="reg_1_tab" data-toggle="tab" href="#reg_1" role="tab" aria-controls="nav_reg_1" aria-selected="true">電子信箱</a>
+                    <a class="nav-item" id="reg_2_tab" data-toggle="tab" href="#reg_2" role="tab" aria-controls="nav_reg_2" aria-selected="false">手機</a>
+                </div>
+                <div class="tab-content" id="reg-tabContent">
+                    <div class="tab-pane fade show active" id="reg_1" role="tabpanel" aria-labelledby="nav_reg_1_tab">
+                        <form action=""></form>
+                            <input type="text" placeholder="請輸入電子信箱">
+                        </form>
+                    </div>
+                    <div class="tab-pane fade" id="reg_2" role="tabpanel" aria-labelledby="nav_reg_2_tab">
+                        <form class="inline-input" action="">
+                            <input type="text" placeholder="" value="+886">
+                            <input type="text" placeholder="手機">
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="form-group form-check">
+                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                <label class="form-check-label" for="exampleCheck1">Check me out</label>
+            </div> -->
+            <div class="reg-info">
+                <div class="reg-item">
+                    已經是會員了嗎？<span>馬上登入</span>
                 </div>
             </div>
         </div>
