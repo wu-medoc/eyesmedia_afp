@@ -22,7 +22,6 @@ body.fixedMenu .afp-tab-box .nav-tabs {
   background-color: #fff;
   z-index: 100;
   padding: 15px;
-  padding-bottom: 30px;
   -webkit-box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
           box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
 }
