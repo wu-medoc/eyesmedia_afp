@@ -34,6 +34,7 @@ footer{
     -ms-transform: translateX(-50%);
     transform: translateX(-50%);
     bottom: 0;
+    z-index: 300;
     background-color: $default-white;
     .menu-bar{
         display: flex;
@@ -47,11 +48,18 @@ footer{
             flex: 1;
             text-align: center;
             padding: 5px;
-            font-size: 14px;
+            font-size: 13px;
             color: #7C7C7C;
             img{
                 width: 50%;
                 margin: auto;
+                display: block;
+                &.default-img{
+                    display: block;
+                }
+                &.active-img{
+                    display: none;
+                }
             }
             &.active{
                 color: $blue-dark;
@@ -68,12 +76,6 @@ footer{
                     margin-top: -20px;
                 }
             }
-        }
-        .default-img{
-            display: block;
-        }
-        .active-img{
-            display: none;
         }
     }
 }
