@@ -1,5 +1,6 @@
 $(document).ready(function(){
     var body = $('body');
+    $(".imgLiquidFill").imgLiquid();
     var swiper = new Swiper('.kv-box .swiper-container', {
         effect: 'fade',
         loop: true,
@@ -91,5 +92,11 @@ $(document).ready(function(){
         body.removeClass('is-open-reg');
         body.addClass('is-open-login');
     })
+
+    // footer
+    $('.bar-item').on('click', function() {
+        $('.bar-item').removeClass('active');
+        $(this).addClass('active');
+    });
     
 });

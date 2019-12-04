@@ -14,7 +14,67 @@ body{
     overflow-x: hidden; 
 }
 
+a{
+    &:hover, &:focus, &:visited{
+        text-decoration: none;
+    }
+}
+
 .wrap{
     overflow-x: hidden;
+}
+
+footer{
+    position: fixed;
+    width: 101%;
+    left: 50%;
+    -o-transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    bottom: 0;
+    background-color: $default-white;
+    .menu-bar{
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        border: 1px solid #DADADA;
+        border-bottom: none;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        .bar-item{
+            flex: 1;
+            text-align: center;
+            padding: 5px;
+            font-size: 14px;
+            color: #7C7C7C;
+            img{
+                width: 50%;
+                margin: auto;
+            }
+            &.active{
+                color: $blue-dark;
+                .default-img{
+                    display: none;
+                }
+                .active-img{
+                    display: block;
+                }
+            }
+            &.customer-item{
+                img{
+                    width: 80%;
+                    margin-top: -20px;
+                }
+            }
+        }
+        .default-img{
+            display: block;
+        }
+        .active-img{
+            display: none;
+        }
+    }
 }
 

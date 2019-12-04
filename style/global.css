@@ -100,6 +100,76 @@ body {
   overflow-x: hidden;
 }
 
+a:hover, a:focus, a:visited {
+  text-decoration: none;
+}
+
 .wrap {
   overflow-x: hidden;
+}
+
+footer {
+  position: fixed;
+  width: 101%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  bottom: 0;
+  background-color: #fff;
+}
+
+footer .menu-bar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: 1px solid #DADADA;
+  border-bottom: none;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+footer .menu-bar .bar-item {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  text-align: center;
+  padding: 5px;
+  font-size: 14px;
+  color: #7C7C7C;
+}
+
+footer .menu-bar .bar-item img {
+  width: 50%;
+  margin: auto;
+}
+
+footer .menu-bar .bar-item.active {
+  color: #182B56;
+}
+
+footer .menu-bar .bar-item.active .default-img {
+  display: none;
+}
+
+footer .menu-bar .bar-item.active .active-img {
+  display: block;
+}
+
+footer .menu-bar .bar-item.customer-item img {
+  width: 80%;
+  margin-top: -20px;
+}
+
+footer .menu-bar .default-img {
+  display: block;
+}
+
+footer .menu-bar .active-img {
+  display: none;
 }
