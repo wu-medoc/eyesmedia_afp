@@ -65,28 +65,28 @@ $(document).ready(function(){
         $(this).closest('.more-link-aside').removeClass('edit-mode');
     })
 
-    // 開啟 login
+    // 開啟登入頁
     $('.open-login').on('click', function(){
         body.addClass('is-open-login');
     })
 
-    // 關閉 login
+    // 關閉登入頁
     $('.login-box .close-btn').on('click', function(){
         body.removeClass('is-open-login');
     })
 
-    // 關閉 login 開啟 reg
+    // 關閉登入頁並開啟註冊頁
     $('.login-box .go-reg-box').on('click', function(){
         body.removeClass('is-open-login');
         body.addClass('is-open-reg');
     })
 
-    // 關閉 reg
+    // 關閉註冊頁
     $('.reg-box .close-btn').on('click', function(){
         body.removeClass('is-open-reg');
     })
 
-    // 關閉 reg 開啟 login
+    // 關閉註冊頁並開啟登入頁
     $('.reg-box .go-login-box').on('click', function(){
         body.removeClass('is-open-reg');
         body.addClass('is-open-login');
