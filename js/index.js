@@ -87,7 +87,7 @@ $(document).ready(function(){
     })
 
     // 關閉 reg 開啟 login
-    $('.login-box .go-login-box').on('click', function(){
+    $('.reg-box .go-login-box').on('click', function(){
         body.removeClass('is-open-reg');
         body.addClass('is-open-login');
     })
