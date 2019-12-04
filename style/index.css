@@ -718,6 +718,7 @@ body.fixedMenu .afp-tab-box .nav-tabs {
   padding-bottom: 5px;
   font-size: 18px;
   margin-bottom: 20px;
+  border-radius: 0;
 }
 
 .popup-box .popup-banner {
