@@ -698,7 +698,7 @@ body.fixedMenu .afp-tab-box .nav-tabs {
   height: 100%;
   overflow-y: scroll;
   background-color: #fff;
-  z-index: 200;
+  z-index: 500;
   -webkit-transition: .25s all ease-in;
   transition: .25s all ease-in;
   display: none;

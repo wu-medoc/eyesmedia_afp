@@ -586,7 +586,7 @@ body{
     height: 100%;
     overflow-y: scroll;
     background-color: $default-white;
-    z-index: 200;
+    z-index: 500;
     transition: .25s all ease-in;
     display: none;
     .close-btn{
