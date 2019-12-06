@@ -108,6 +108,18 @@ a:hover, a:focus, a:visited {
   overflow-x: hidden;
 }
 
+.default-btn {
+  width: 100%;
+  color: #fff;
+  background: -webkit-gradient(linear, right top, left top, from(#568EE3), to(#36D1DB));
+  background: linear-gradient(270deg, #568EE3 0%, #36D1DB 100%);
+  border-radius: 30px;
+  padding: 15px;
+  font-size: 18px;
+  margin-top: 15px;
+  outline: none;
+}
+
 footer {
   position: fixed;
   width: 101%;

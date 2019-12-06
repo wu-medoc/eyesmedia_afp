@@ -14,6 +14,10 @@ body.is-open-reg .reg-box {
   display: block;
 }
 
+body.is-open-verification .verification-box {
+  display: block;
+}
+
 body.fixedMenu .afp-tab-box .nav-tabs {
   position: fixed;
   left: 0;
@@ -704,6 +708,58 @@ body.fixedMenu .afp-tab-box .nav-tabs {
   display: none;
 }
 
+.popup-box.verification-box .popup-box-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 15px;
+}
+
+.popup-box.verification-box .popup-box-title .title-box {
+  margin: auto;
+  font-size: 18px;
+  font-weight: 700;
+  color: #182B56;
+}
+
+.popup-box.verification-box .popup-content {
+  text-align: center;
+}
+
+.popup-box.verification-box .popup-content small span {
+  padding: 0 3px;
+}
+
+.popup-box.verification-box .popup-content .veri-input-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 30px;
+}
+
+.popup-box.verification-box .popup-content .veri-input-group .veri-input {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  margin: 0 5px;
+}
+
+.popup-box.verification-box .popup-content .veri-input-group .veri-input input {
+  border-bottom: 1px #8E8E93 solid;
+  text-align: center;
+}
+
+.popup-box.verification-box .popup-content .re-box {
+  margin-top: 30px;
+  text-align: left;
+  font-size: 14px;
+}
+
+.popup-box.verification-box .popup-content .re-box span {
+  font-weight: 700;
+  color: #182B56;
+}
+
 .popup-box .close-btn {
   position: absolute;
   top: 15px;
@@ -712,7 +768,7 @@ body.fixedMenu .afp-tab-box .nav-tabs {
   color: #fff;
 }
 
-.popup-box input[type="text"] {
+.popup-box input[type="text"], .popup-box input[type="number"] {
   width: 100%;
   border: none;
   border-bottom: 1px #979797 solid;
@@ -842,18 +898,6 @@ body.fixedMenu .afp-tab-box .nav-tabs {
 
 .popup-box .login-form {
   margin: 35px 0;
-}
-
-.popup-box .login-form button {
-  width: 100%;
-  color: #fff;
-  background: -webkit-gradient(linear, right top, left top, from(#568EE3), to(#36D1DB));
-  background: linear-gradient(270deg, #568EE3 0%, #36D1DB 100%);
-  border-radius: 30px;
-  padding: 15px;
-  font-size: 18px;
-  margin-top: 15px;
-  outline: none;
 }
 
 .popup-box .reg-info {

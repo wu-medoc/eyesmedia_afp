@@ -24,6 +24,17 @@ a{
     overflow-x: hidden;
 }
 
+.default-btn{
+    width: 100%;
+    color: $default-white;
+    background: linear-gradient(270deg, #568EE3 0%, #36D1DB 100%);
+    border-radius: 30px;
+    padding: 15px;
+    font-size: 18px;
+    margin-top: 15px;
+    outline: none;
+}
+
 footer{
     position: fixed;
     width: 101%;

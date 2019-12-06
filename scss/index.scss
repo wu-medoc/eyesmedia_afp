@@ -18,6 +18,11 @@ body{
             display: block;
         }
     }
+    &.is-open-verification{
+        .verification-box{
+            display: block;
+        }
+    }
     &.fixedMenu{
         .afp-tab-box{
             .nav-tabs{
@@ -589,6 +594,48 @@ body{
     z-index: 500;
     transition: .25s all ease-in;
     display: none;
+    &.verification-box{
+        // display: block;
+        .popup-box-title{
+            display: flex;
+            padding: 15px;
+            .title-box{
+                margin: auto;
+                font-size: 18px;
+                font-weight: 700;
+                color: $blue-dark;
+            }
+        }
+        .popup-content{
+            text-align: center;
+            small{
+                span{
+                    padding: 0 3px;
+                }
+            }
+            .veri-input-group{
+                display: flex;
+                margin-top: 30px;
+                .veri-input{
+                    flex: 1;
+                    margin: 0 5px;
+                    input{
+                        border-bottom: 1px $gray-color solid;
+                        text-align: center;
+                    }
+                }
+            }
+            .re-box{
+                margin-top: 30px;
+                text-align: left;
+                font-size: 14px;
+                span{
+                    font-weight: 700;
+                    color: $blue-dark;
+                }
+            }
+        }
+    }
     .close-btn{
         position: absolute;
         top: 15px;
@@ -597,7 +644,7 @@ body{
         color: $default-white;
     }
     input{
-        &[type="text"]{
+        &[type="text"], &[type="number"]{
             width: 100%;
             border: none;
             border-bottom: 1px #979797 solid;
@@ -702,16 +749,6 @@ body{
     }
     .login-form{
         margin: 35px 0;
-        button{
-            width: 100%;
-            color: $default-white;
-            background: linear-gradient(270deg, #568EE3 0%, #36D1DB 100%);
-            border-radius: 30px;
-            padding: 15px;
-            font-size: 18px;
-            margin-top: 15px;
-            outline: none;
-        }
     }
     .reg-info{
         display: flex;

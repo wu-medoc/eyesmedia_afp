@@ -648,7 +648,7 @@
                     <div class="login-form">
                         <input type="text" placeholder="Email/手機">
                         <input type="text" placeholder="密碼">
-                        <button>登入</button>
+                        <button class="default-btn">登入</button>
                     </div>
                     <div class="reg-info">
                         <div class="reg-item">
@@ -713,7 +713,7 @@
                                     </label>
                                 </div>
                                 <div class="login-form">
-                                    <button>傳送驗證碼</button>
+                                    <button class="default-btn">傳送驗證碼</button>
                                 </div>
                             </div>
                             <div class="tab-pane fade" id="reg_2" role="tabpanel" aria-labelledby="nav_reg_2_tab">
@@ -732,7 +732,7 @@
                                     </label>
                                 </div>
                                 <div class="login-form">
-                                    <button>傳送簡訊驗證碼</button>
+                                    <button class="default-btn">傳送簡訊驗證碼</button>
                                 </div>
                             </div>
                         </div>
@@ -743,6 +743,46 @@
                         </div>
                     </div>
                 </form>
+            </div>
+        </div>
+        <!-- 驗證碼 -->
+        <div class="popup-box verification-box">
+            <div class="popup-box-title">
+                <div class="title-item close-left">
+                    <i class="material-icons">&#xE314;</i>
+                </div>
+                <div class="title-item title-box">
+                    輸入驗證碼
+                </div>
+            </div>
+            <div class="popup-content">
+                <small>驗證碼已發送至 <span>+886</span><span>0972XXXXXX</span> </small>
+                <form action="">
+                    <div class="veri-input-group">
+                        <div class="veri-input">
+                            <input type="number">
+                        </div>
+                        <div class="veri-input">
+                            <input type="number">
+                        </div>
+                        <div class="veri-input">
+                            <input type="number">
+                        </div>
+                        <div class="veri-input">
+                            <input type="number">
+                        </div>
+                        <div class="veri-input">
+                            <input type="number">
+                        </div>
+                        <div class="veri-input">
+                            <input type="number">
+                        </div>
+                    </div>
+                    <button class="default-btn">送出</button>
+                </form>
+                <div class="re-box">
+                    <p>沒有收到驗證碼？<span>59</span><span>秒後重新傳送</span></p>
+                </div>
             </div>
         </div>
     </div>
