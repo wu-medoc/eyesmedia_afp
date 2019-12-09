@@ -1,5 +1,6 @@
 var body = $('body');
 var wrap = $('.wrap');
+var windowWidth = 767;
 $(window).on('resize', function(){
     var footer = $('.mobile-footer').outerHeight();
     wrap.css({'padding-bottom':footer + 10});
@@ -27,6 +28,23 @@ if ($('.ad-box .swiper-slide').length>1) {
         },
         slidesPerView: 1.3,
         spaceBetween: 10,
+        breakpoints: {
+            // when window width is >= 320px
+            320: {
+              slidesPerView: 1,
+              spaceBetween: 0
+            },
+            // when window width is >= 480px
+            480: {
+              slidesPerView: 1,
+              spaceBetween: 0
+            },
+            // when window width is >= 640px
+            767: {
+              slidesPerView: 1,
+              spaceBetween: 0
+            }
+        },
     });
 }
 
@@ -134,6 +152,18 @@ $('.forget-password').on('click', function(){
 $('.password-box .close-left').on('click', function(){
     body.removeClass('is-open-password');
     body.addClass('is-open-login');
+})
+
+// 開啟 選擇國家或地區
+$('.open-country').on('click', function(){
+    body.removeClass('is-open-reg');
+    body.addClass('is-open-country');
+})
+
+/// 關閉 選擇國家或地區
+$('.country-box .close-left').on('click', function(){
+    body.removeClass('is-open-country');
+    body.addClass('is-open-reg');
 })
 
 // footer

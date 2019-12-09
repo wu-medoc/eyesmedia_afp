@@ -28,6 +28,11 @@ body{
             display: block;
         }
     }
+    &.is-open-country{
+        .country-box{
+            display: block;
+        }
+    }
     &.fixedMenu{
         .afp-tab-box{
             .nav-tabs{
@@ -453,7 +458,7 @@ body{
             display: flex;
             flex-wrap: wrap;
             .content-item{
-                width: 49%;
+                display: block;
                 margin-bottom: 15px;
                 &:nth-child(2n){
                     margin-left: 2%;
@@ -679,7 +684,7 @@ body{
     transition: .25s all ease-in;
     display: none;
     // 驗證碼
-    &.verification-box, &.password-box{
+    &.verification-box, &.password-box, &.country-box{
         // display: block;
         .popup-box-title{
             display: flex;
@@ -752,6 +757,54 @@ body{
             }
             .visibility-off{
                 display: none;
+            }
+        }
+    }
+    // 選擇國家或地區
+    &.country-box{
+        .popup-content{
+            padding: 0;
+            .input-box-group{
+                padding: 15px;
+                border-top: 1px #eee solid;
+                border-bottom: 1px #eee solid;
+            }
+            .input-box{
+                display: flex;
+                background: rgba(142, 142, 147, 0.12);
+                border-radius: 10px;
+            }
+            input[type="text"]{
+                padding: 0;
+                margin: 0;
+                background: transparent;
+                border-bottom: none;
+                padding: 3px 0;
+            }
+            button{
+                padding: 0 5px;
+            }
+            .country-code-list{
+                text-align: left;
+                p{
+                    background-color: #F8F8F8;
+                    color: #818181;
+                    font-size: 12px;
+                    padding: 5px 15px;
+                }
+                li{
+                    display: flex;
+                    padding: 15px;
+                    border-bottom: 1px $gray-light solid;
+                    cursor: pointer;
+                    span{
+                        flex: 1;
+                        color: $gray-color;
+                        &:first-child{
+                            color: $blue-dark;
+                        }
+                    }
+                }
             }
         }
     }

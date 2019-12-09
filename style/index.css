@@ -22,6 +22,10 @@ body.is-open-password .password-box {
   display: block;
 }
 
+body.is-open-country .country-box {
+  display: block;
+}
+
 body.fixedMenu .afp-tab-box .nav-tabs {
   position: fixed;
   left: 0;
@@ -550,7 +554,7 @@ body.fixedMenu .afp-tab-box .nav-tabs {
 }
 
 .afp-tab-box .tab-content .content-list .content-item {
-  width: 49%;
+  display: block;
   margin-bottom: 15px;
 }
 
@@ -832,25 +836,25 @@ body.fixedMenu .afp-tab-box .nav-tabs {
   display: none;
 }
 
-.popup-box.verification-box .popup-box-title, .popup-box.password-box .popup-box-title {
+.popup-box.verification-box .popup-box-title, .popup-box.password-box .popup-box-title, .popup-box.country-box .popup-box-title {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   padding: 15px;
 }
 
-.popup-box.verification-box .popup-box-title .title-box, .popup-box.password-box .popup-box-title .title-box {
+.popup-box.verification-box .popup-box-title .title-box, .popup-box.password-box .popup-box-title .title-box, .popup-box.country-box .popup-box-title .title-box {
   margin: auto;
   font-size: 18px;
   font-weight: 700;
   color: #182B56;
 }
 
-.popup-box.verification-box .popup-content, .popup-box.password-box .popup-content {
+.popup-box.verification-box .popup-content, .popup-box.password-box .popup-content, .popup-box.country-box .popup-content {
   text-align: center;
 }
 
-.popup-box.verification-box .popup-content small span, .popup-box.password-box .popup-content small span {
+.popup-box.verification-box .popup-content small span, .popup-box.password-box .popup-content small span, .popup-box.country-box .popup-content small span {
   padding: 0 3px;
 }
 
@@ -912,6 +916,67 @@ body.fixedMenu .afp-tab-box .nav-tabs {
 
 .popup-box.password-box .password-item .visibility-off {
   display: none;
+}
+
+.popup-box.country-box .popup-content {
+  padding: 0;
+}
+
+.popup-box.country-box .popup-content .input-box-group {
+  padding: 15px;
+  border-top: 1px #eee solid;
+  border-bottom: 1px #eee solid;
+}
+
+.popup-box.country-box .popup-content .input-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: rgba(142, 142, 147, 0.12);
+  border-radius: 10px;
+}
+
+.popup-box.country-box .popup-content input[type="text"] {
+  padding: 0;
+  margin: 0;
+  background: transparent;
+  border-bottom: none;
+  padding: 3px 0;
+}
+
+.popup-box.country-box .popup-content button {
+  padding: 0 5px;
+}
+
+.popup-box.country-box .popup-content .country-code-list {
+  text-align: left;
+}
+
+.popup-box.country-box .popup-content .country-code-list p {
+  background-color: #F8F8F8;
+  color: #818181;
+  font-size: 12px;
+  padding: 5px 15px;
+}
+
+.popup-box.country-box .popup-content .country-code-list li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 15px;
+  border-bottom: 1px #eee solid;
+  cursor: pointer;
+}
+
+.popup-box.country-box .popup-content .country-code-list li span {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  color: #8E8E93;
+}
+
+.popup-box.country-box .popup-content .country-code-list li span:first-child {
+  color: #182B56;
 }
 
 .popup-box .close-btn {
