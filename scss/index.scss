@@ -866,6 +866,10 @@ body{
         justify-content: space-between;
         text-align: center;
         margin: 40px 0;
+        .method-item{
+            flex: 1;
+            margin: 0 5px;
+        }
         p{
             color: #182B56;
             font-size: 14px;

@@ -1053,6 +1053,13 @@ body.fixedMenu .afp-tab-box .nav-tabs {
   margin: 40px 0;
 }
 
+.popup-box .login-method .method-item {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  margin: 0 5px;
+}
+
 .popup-box .login-method p {
   color: #182B56;
   font-size: 14px;
