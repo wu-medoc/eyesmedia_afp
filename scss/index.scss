@@ -853,8 +853,8 @@ body{
             border: 1px solid #568EE3;
             overflow: hidden;
             li{
-                flex: 1;
-                // width: 115px;
+                flex: none;
+                width: 50%;
                 box-sizing: border-box;
                 text-align: center;
                 text-decoration: none;
