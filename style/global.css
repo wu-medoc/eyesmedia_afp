@@ -104,6 +104,27 @@ a:hover, a:focus, a:visited {
   text-decoration: none;
 }
 
+@media screen and (max-width: 767px) {
+  .for-pc {
+    display: none;
+  }
+}
+
+.for-mobile {
+  display: none;
+}
+
+@media screen and (max-width: 767px) {
+  .for-mobile {
+    display: block;
+  }
+}
+
+.form-control {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
 .wrap {
   overflow-x: hidden;
 }

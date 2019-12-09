@@ -1,8 +1,8 @@
 var body = $('body');
 var wrap = $('.wrap');
 $(window).on('resize', function(){
-    var footer = $('footer').outerHeight();
-    wrap.css({'padding-bottom':footer});
+    var footer = $('.mobile-footer').outerHeight();
+    wrap.css({'padding-bottom':footer + 10});
     console.log(footer);
 }).trigger('resize');
 
@@ -25,6 +25,8 @@ if ($('.ad-box .swiper-slide').length>1) {
             el: '.swiper-pagination',
             clickable: true,
         },
+        slidesPerView: 1.3,
+        spaceBetween: 10,
     });
 }
 
@@ -96,6 +98,41 @@ $('.reg-box .close-btn').on('click', function(){
 // 關閉註冊頁並開啟登入頁
 $('.reg-box .go-login-box').on('click', function(){
     body.removeClass('is-open-reg');
+    body.addClass('is-open-login');
+})
+
+// 密碼
+$(".toggle-password").on('click', function() {
+    $(this).parent().toggleClass("toggle-visibility");
+    var input = $($(this).attr("toggle"));
+    if (input.attr("type") == "password") {
+      input.attr("type", "text");
+    } else {
+      input.attr("type", "password");
+    }
+});
+
+// 開啟 輸入驗證碼
+$('.send-veri-code').on('click', function(){
+    body.removeClass('is-open-reg');
+    body.addClass('is-open-verification');
+})
+
+// 關閉 輸入驗證碼
+$('.verification-box .close-left').on('click', function(){
+    body.removeClass('is-open-verification');
+    body.addClass('is-open-reg');
+})
+
+// 開啟 密碼設定
+$('.forget-password').on('click', function(){
+    body.removeClass('is-open-login');
+    body.addClass('is-open-password');
+})
+
+// 關閉 密碼設定
+$('.password-box .close-left').on('click', function(){
+    body.removeClass('is-open-password');
     body.addClass('is-open-login');
 })
 

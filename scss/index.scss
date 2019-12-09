@@ -23,6 +23,11 @@ body{
             display: block;
         }
     }
+    &.is-open-password{
+        .password-box{
+            display: block;
+        }
+    }
     &.fixedMenu{
         .afp-tab-box{
             .nav-tabs{
@@ -41,18 +46,24 @@ body{
 
 // kv
 .kv-box{
+    width: 100%;
+    max-width: 1140px;
+    margin: 0 auto;
     position: relative;
     // overflow: hidden;
     // border-radius mask
     &:before, &:after{
         content: '';
-        display: block;
+        display: none;
         width: 100px;
         height: 35px;
         position: absolute;
         bottom: -2px;
         background-size: 100% auto;
         z-index: 100;
+        @media screen and (max-width: 767px){
+            display: block;
+        }
     }
     &:before{
         left: -15px;
@@ -63,27 +74,47 @@ body{
         background: url('../img/kv_mask_right.svg') 0 0 no-repeat;
     }
     .kv-top{
-        width: calc(100% - 30px);
-        position: absolute;
-        left: 0;
-        right: 0;
-        top: 20px;
-        margin: 0 auto;
+        
         display: flex;
         -webkit-align-items: center;
         align-items: center;
         -webkit-justify-content: center;
         justify-content: center;
-        z-index: 150;
+        padding: 15px;
+        @media screen and (max-width: 767px){
+            width: calc(100% - 30px);
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 20px;
+            margin: 0 auto;
+            padding: 0;
+            z-index: 150;
+        }
         .top-item{
             .material-icons{
                 color: $default-white;
+            }
+            &.logo{
+                @media screen and (max-width: 767px){
+                    display: none;
+                }
             }
             &.climate{
     
                 flex: none;
                 line-height: 1;
                 color: $default-white;
+                .material-icons{
+                    color: $default-black;
+                    @media screen and (max-width: 767px){
+                        color: $default-white;
+                    }
+                }
+                @media screen and (min-width: 768px){
+                    order: 3;
+                    color: $default-black;
+                }
                 p{
                     font-weight: 700;
                 }
@@ -93,20 +124,51 @@ body{
                 }
             }
             &.input-box{
+                position: relative;
                 flex: 1;
                 display: flex;
                 -webkit-align-items: center;
                 align-items: center;
-                background-color: $default-white;
-                border-radius: 10px;
-                padding: 0px 10px;
-                margin: 0 10px;
                 box-sizing: border-box;
+                margin: 0 10px;
+                @media screen and (max-width: 767px){
+                    background-color: $default-white;
+                    border-radius: 10px;
+                    padding: 0px 10px;
+                }
                 input{
                     width: 100%;
                     background: transparent;
                     border: none;
-                    padding: 3px 0;
+                    padding: 3px 5px;
+                    border: 1px #818181 solid;
+                    border-radius: 5px;
+                    @media screen and (max-width: 767px){
+                        border: none;
+                        border-radius: 0;
+                    }
+                }
+                button{
+                    width: 50px;
+                    position: absolute;
+                    right: 5px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    background: linear-gradient(270deg, #568EE3 0%, #36D1DB 100%);
+                    border-radius: 5px;
+                    @media screen and (max-width: 767px){
+                        width: auto;
+                        position: static;
+                        background: none;
+                        border-radius: 0;
+                        transform: translateY(0);
+                    }
+                    .material-icons{
+                        color: $default-white;
+                        @media screen and (max-width: 767px){
+                            color: $gray-color;
+                        }
+                    }
                 }
                 .material-icons{
                     color: $gray-color;
@@ -117,6 +179,10 @@ body{
     
                 flex: none;
                 position: relative;
+                display: none;
+                @media screen and (max-width: 767px){
+                    display: block;
+                }
                 &:after{
                     content: '';
                     position: absolute;
@@ -208,6 +274,10 @@ body{
         pointer-events: none;
         background: linear-gradient(180deg, rgba(126, 126, 126, 0.4) 0%, rgba(196, 196, 196, 0) 100%);
         z-index: 10;
+        display: none;
+        @media screen and (max-width: 767px){
+            display: block;
+        }
     }
 }
 
@@ -328,11 +398,22 @@ body{
         align-items: center;
         justify-content: space-between;
         border-bottom: none;
-        .nav-item{
+        li{
             color: $gray-color;
             text-decoration: none;
             position: relative;
             transition: .5s color;
+            border: none;
+            a{
+                color: $gray-color;
+                border: none;
+                font-size: 16px;
+                padding: 0;
+                &:hover{
+                    border: none;
+                    background: transparent;
+                }
+            }
             &:after{
                 content: '';
                 display: block;
@@ -355,9 +436,12 @@ body{
             }
 
             &.active{
-                font-size: 16px;
                 font-weight: 700;
                 color: $blue-dark;
+                a{
+                    border: none;
+                    color: $blue-dark;
+                }
                 &:after{
                     width: 50%;
                 }
@@ -594,7 +678,8 @@ body{
     z-index: 500;
     transition: .25s all ease-in;
     display: none;
-    &.verification-box{
+    // 驗證碼
+    &.verification-box, &.password-box{
         // display: block;
         .popup-box-title{
             display: flex;
@@ -613,26 +698,60 @@ body{
                     padding: 0 3px;
                 }
             }
-            .veri-input-group{
-                display: flex;
-                margin-top: 30px;
-                .veri-input{
-                    flex: 1;
-                    margin: 0 5px;
-                    input{
-                        border-bottom: 1px $gray-color solid;
-                        text-align: center;
-                    }
+        }
+    }
+    &.verification-box{
+        .veri-input-group{
+            display: flex;
+            margin-top: 30px;
+            .veri-input{
+                flex: 1;
+                margin: 0 5px;
+                input{
+                    border-bottom: 1px $gray-color solid;
+                    text-align: center;
                 }
             }
-            .re-box{
-                margin-top: 30px;
-                text-align: left;
-                font-size: 14px;
-                span{
-                    font-weight: 700;
-                    color: $blue-dark;
+        }
+        .re-box{
+            margin-top: 30px;
+            text-align: left;
+            font-size: 14px;
+            span{
+                font-weight: 700;
+                color: $blue-dark;
+            }
+        }
+    }
+    // 密碼設定
+    &.password-box{
+        .password-item{
+            margin-top: 20px;
+            .form-group{
+                position: relative;
+                &.toggle-visibility{
+                    .visibility-off{
+                        display: block;
+                    }
+                    .visibility{
+                        display: none;
+                    }
                 }
+                .material-icons{
+                    position: absolute;
+                    right: 10px;
+                    top: 50%;
+                    -o-transform: translateY(-50%);
+                    -webkit-transform: translateY(-50%);
+                    -moz-transform: translateY(-50%);
+                    -ms-transform: translateY(-50%);
+                    transform: translateY(-50%);
+                    z-index: 2;
+                    color: rgba(24, 43, 86, 0.5);
+                }
+            }
+            .visibility-off{
+                display: none;
             }
         }
     }
@@ -644,7 +763,7 @@ body{
         color: $default-white;
     }
     input{
-        &[type="text"], &[type="number"]{
+        &[type="text"], &[type="number"], &[type="password"]{
             width: 100%;
             border: none;
             border-bottom: 1px #979797 solid;
@@ -652,6 +771,10 @@ body{
             font-size: 18px;
             margin-bottom: 20px;
             border-radius: 0;
+            outline: none;
+            &:focus{
+                outline: none;
+            }
         }
     }
     .popup-banner{
@@ -729,7 +852,7 @@ body{
             border-radius: 4px;
             border: 1px solid #568EE3;
             overflow: hidden;
-            .nav-item{
+            li{
                 flex: 1;
                 // width: 115px;
                 padding: 3px 15px;
@@ -739,7 +862,14 @@ body{
                 color: #568EE3;
                 &.active{
                     background: linear-gradient(270deg, #568EE3 0%, #36D1DB 100%);
-                    color: $default-white;
+                    a{
+                        color: $default-white;
+                    }
+                }
+                a{
+                    padding: 0;
+                    background-color: transparent;
+                    border: none;
                 }
             }
         }
@@ -789,4 +919,12 @@ body{
     img{
         width: 100%;
     }
+}
+
+.field-icon {
+    float: right;
+    margin-left: -25px;
+    margin-top: -25px;
+    position: relative;
+    z-index: 2;
 }

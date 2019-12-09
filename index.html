@@ -8,7 +8,7 @@
     <!-- Material Design for Bootstrap fonts and icons -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons">
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.0/css/bootstrap.min.css" integrity="sha384-SI27wrMjH3ZZ89r4o+fGIJtnzkAnFs3E4qz9DIYioCQ5l9Rd/7UAa8DHcaL8jkWt" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <!-- vendor css -->
     <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
     <!-- custom css -->
@@ -19,8 +19,15 @@
 
 <body class="">
     <div class="wrap">
+        <!-- kv -->
         <div class="kv-box">
+            <div class="for-pc">這裡要放PC版客服、登入、註冊</div>
             <div class="kv-top">
+                <div class="top-item logo">
+                    <a href="">
+                        <img src="img/logo.svg" alt="">
+                    </a>
+                </div>
                 <div class="top-item climate">
                     <p>台北<i class="material-icons">&#xE313;</i><small>32度C</small></p>
                 </div>
@@ -59,7 +66,7 @@
         <div class="container">
             <div class="row">
                 <!-- 主要連結 -->
-                <div class="col-12">
+                <div class="col-12 for-mobile">
                     <div class="main-link default-link">
                         <a href="" class="link-item">
                             <div class="img-box food">
@@ -128,8 +135,13 @@
                         </a>
                     </div>
                 </div>
-                <!-- 去哪玩連結 -->
-                <div class="col-12">
+                
+            </div>
+        </div>
+        <!-- 去哪玩連結 -->
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
                     <div class="go-where-link">
                         <a href="" class="link-item">
                             <div class="item">
@@ -169,8 +181,12 @@
                         </a>
                     </div>
                 </div>
-                <!-- ad banner -->
-                <div class="col-12">
+            </div>
+        </div>
+        <!-- ad banner -->
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
                     <div class="ad-box">
                         <!-- Swiper -->
                         <div class="swiper-container">
@@ -194,19 +210,97 @@
             <div class="afp-tab">
                 <div class="container-fluid">
                     <div class="row">
-                        <div class="col-12">
+                        <div class="col-md-12">
                             <div class="nav-tabs-box">
-                                <div class="nav nav-tabs" id="nav-tab" role="tablist">
-                                    <a class="nav-item active" id="theme_1_tab" data-toggle="tab" href="#theme_1" role="tab" aria-controls="nav_theme_1" aria-selected="true">週邊推薦</a>
-                                    <a class="nav-item" id="theme_2_tab" data-toggle="tab" href="#theme_2" role="tab" aria-controls="nav_theme_2" aria-selected="false">特別企劃</a>
-                                    <a class="nav-item" id="theme_3_tab" data-toggle="tab" href="#theme_3" role="tab" aria-controls="nav_theme_3" aria-selected="false">本月最新</a>
-                                    <a class="nav-item" id="theme_4_tab" data-toggle="tab" href="#theme_4" role="tab" aria-controls="nav_theme_4" aria-selected="false">推薦行程</a>
+                                <!-- Nav tabs -->
+                                <ul id="nav-tab" class="nav nav-tabs" role="tablist">
+                                    <li role="presentation" class="active">
+                                        <a href="#home" aria-controls="home" role="tab" data-toggle="tab">週邊推薦</a>
+                                    </li>
+                                    <li role="presentation">
+                                        <a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">特別企劃</a>
+                                    </li>
+                                    <li role="presentation">
+                                        <a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">本月最新</a>
+                                    </li>
+                                    <li role="presentation">
+                                        <a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">推薦行程</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <!-- Tab panes -->
+                        <div class="tab-content">
+                            <div role="tabpanel" class="tab-pane active" id="home">
+                                <div class="content-list">
+                                    <div class="col-xs-6 col-md-4">
+                                        <a href="" class="content-item">
+                                            <div class="img-box imgLiquidFill imgLiquid">
+                                                <img src="https://picsum.photos/500/500/?random=1">
+                                            </div>
+                                            <div class="item-title">
+                                                台北 101 天際線雲端漫步體驗
+                                            </div>
+                                            <ul class="tag-list">
+                                                <li>門票折扣</li>
+                                                <li>店家優惠</li>
+                                                <li>叫車服務</li>
+                                            </ul>
+                                        </a>
+                                    </div>
+                                    <div class="col-xs-6 col-md-4">
+                                        <a href="" class="content-item">
+                                            <div class="img-box imgLiquidFill imgLiquid">
+                                                <img src="https://picsum.photos/500/500/?random=1">
+                                            </div>
+                                            <div class="item-title">
+                                                台北 101 天際線雲端漫步體驗
+                                            </div>
+                                            <ul class="tag-list">
+                                                <li>門票折扣</li>
+                                                <li>店家優惠</li>
+                                                <li>叫車服務</li>
+                                            </ul>
+                                        </a>
+                                    </div>
+                                    <div class="col-xs-6 col-md-4">
+                                        <a href="" class="content-item">
+                                            <div class="img-box imgLiquidFill imgLiquid">
+                                                <img src="https://picsum.photos/500/500/?random=1">
+                                            </div>
+                                            <div class="item-title">
+                                                台北 101 天際線雲端漫步體驗
+                                            </div>
+                                            <ul class="tag-list">
+                                                <li>門票折扣</li>
+                                                <li>店家優惠</li>
+                                                <li>叫車服務</li>
+                                            </ul>
+                                        </a>
+                                    </div>
+                                    <div class="col-xs-6 col-md-4">
+                                        <a href="" class="content-item">
+                                            <div class="img-box imgLiquidFill imgLiquid">
+                                                <img src="https://picsum.photos/500/500/?random=1">
+                                            </div>
+                                            <div class="item-title">
+                                                台北 101 天際線雲端漫步體驗
+                                            </div>
+                                            <ul class="tag-list">
+                                                <li>門票折扣</li>
+                                                <li>店家優惠</li>
+                                                <li>叫車服務</li>
+                                            </ul>
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="tab-content" id="nav-tabContent">
-                                <div class="tab-pane fade show active" id="theme_1" role="tabpanel" aria-labelledby="nav_theme_1_tab">
-                                    <div class="content-list">
-                                        <a class="content-item">
+                            <div role="tabpanel" class="tab-pane" id="profile">
+                                <div class="content-list">
+                                    <div class="col-xs-6 col-md-4">
+                                        <a href="" class="content-item">
                                             <div class="img-box imgLiquidFill imgLiquid">
                                                 <img src="https://picsum.photos/500/500/?random=1">
                                             </div>
@@ -219,61 +313,11 @@
                                                 <li>叫車服務</li>
                                             </ul>
                                         </a>
-                                        <a class="content-item">
+                                    </div>
+                                    <div class="col-xs-6 col-md-4">
+                                        <a href="" class="content-item">
                                             <div class="img-box imgLiquidFill imgLiquid">
-                                                <img src="https://picsum.photos/500/500/?random=2">
-                                            </div>
-                                            <div class="item-title">
-                                                台北 101 天際線雲端漫步體驗
-                                            </div>
-                                            <ul class="tag-list">
-                                                <li>門票折扣</li>
-                                                <li>店家優惠</li>
-                                                <li>叫車服務</li>
-                                            </ul>
-                                        </a>
-                                        <a class="content-item">
-                                            <div class="img-box imgLiquidFill imgLiquid">
-                                                <img src="https://picsum.photos/500/500/?random=3">
-                                            </div>
-                                            <div class="item-title">
-                                                台北 101 天際線雲端漫步體驗
-                                            </div>
-                                            <ul class="tag-list">
-                                                <li>門票折扣</li>
-                                                <li>店家優惠</li>
-                                                <li>叫車服務</li>
-                                            </ul>
-                                        </a>
-                                        <a class="content-item">
-                                            <div class="img-box imgLiquidFill imgLiquid">
-                                                <img src="https://picsum.photos/500/500/?random=4">
-                                            </div>
-                                            <div class="item-title">
-                                                台北 101 天際線雲端漫步體驗
-                                            </div>
-                                            <ul class="tag-list">
-                                                <li>門票折扣</li>
-                                                <li>店家優惠</li>
-                                                <li>叫車服務</li>
-                                            </ul>
-                                        </a>
-                                        <a class="content-item">
-                                            <div class="img-box imgLiquidFill imgLiquid">
-                                                <img src="https://picsum.photos/500/500/?random=5">
-                                            </div>
-                                            <div class="item-title">
-                                                台北 101 天際線雲端漫步體驗
-                                            </div>
-                                            <ul class="tag-list">
-                                                <li>門票折扣</li>
-                                                <li>店家優惠</li>
-                                                <li>叫車服務</li>
-                                            </ul>
-                                        </a>
-                                        <a class="content-item">
-                                            <div class="img-box imgLiquidFill imgLiquid">
-                                                <img src="https://picsum.photos/500/500/?random=6">
+                                                <img src="https://picsum.photos/500/500/?random=1">
                                             </div>
                                             <div class="item-title">
                                                 台北 101 天際線雲端漫步體驗
@@ -285,75 +329,8 @@
                                             </ul>
                                         </a>
                                     </div>
-                                </div>
-                                <div class="tab-pane fade" id="theme_2" role="tabpanel" aria-labelledby="nav_theme_2_tab">
-                                    <div class="content-list">
-                                        <a class="content-item">
-                                            <div class="img-box imgLiquidFill imgLiquid">
-                                                <img src="https://picsum.photos/500/500/?random=4">
-                                            </div>
-                                            <div class="item-title">
-                                                台北 101 天際線雲端漫步體驗
-                                            </div>
-                                            <ul class="tag-list">
-                                                <li>門票折扣</li>
-                                                <li>店家優惠</li>
-                                                <li>叫車服務</li>
-                                            </ul>
-                                        </a>
-                                        <a class="content-item">
-                                            <div class="img-box imgLiquidFill imgLiquid">
-                                                <img src="https://picsum.photos/500/500/?random=5">
-                                            </div>
-                                            <div class="item-title">
-                                                台北 101 天際線雲端漫步體驗
-                                            </div>
-                                            <ul class="tag-list">
-                                                <li>門票折扣</li>
-                                                <li>店家優惠</li>
-                                                <li>叫車服務</li>
-                                            </ul>
-                                        </a>
-                                        <a class="content-item">
-                                            <div class="img-box imgLiquidFill imgLiquid">
-                                                <img src="https://picsum.photos/500/500/?random=6">
-                                            </div>
-                                            <div class="item-title">
-                                                台北 101 天際線雲端漫步體驗
-                                            </div>
-                                            <ul class="tag-list">
-                                                <li>門票折扣</li>
-                                                <li>店家優惠</li>
-                                                <li>叫車服務</li>
-                                            </ul>
-                                        </a>
-                                        <a class="content-item">
-                                            <div class="img-box imgLiquidFill imgLiquid">
-                                                <img src="https://picsum.photos/500/500/?random=3">
-                                            </div>
-                                            <div class="item-title">
-                                                台北 101 天際線雲端漫步體驗
-                                            </div>
-                                            <ul class="tag-list">
-                                                <li>門票折扣</li>
-                                                <li>店家優惠</li>
-                                                <li>叫車服務</li>
-                                            </ul>
-                                        </a>
-                                        <a class="content-item">
-                                            <div class="img-box imgLiquidFill imgLiquid">
-                                                <img src="https://picsum.photos/500/500/?random=2">
-                                            </div>
-                                            <div class="item-title">
-                                                台北 101 天際線雲端漫步體驗
-                                            </div>
-                                            <ul class="tag-list">
-                                                <li>門票折扣</li>
-                                                <li>店家優惠</li>
-                                                <li>叫車服務</li>
-                                            </ul>
-                                        </a>
-                                        <a class="content-item">
+                                    <div class="col-xs-6 col-md-4">
+                                        <a href="" class="content-item">
                                             <div class="img-box imgLiquidFill imgLiquid">
                                                 <img src="https://picsum.photos/500/500/?random=1">
                                             </div>
@@ -368,11 +345,13 @@
                                         </a>
                                     </div>
                                 </div>
-                                <div class="tab-pane fade" id="theme_3" role="tabpanel" aria-labelledby="nav_theme_3_tab">
-                                    <div class="content-list">
-                                        <a class="content-item">
+                            </div>
+                            <div role="tabpanel" class="tab-pane" id="messages">
+                                <div class="content-list">
+                                    <div class="col-xs-6 col-md-4">
+                                        <a href="" class="content-item">
                                             <div class="img-box imgLiquidFill imgLiquid">
-                                                <img src="https://picsum.photos/500/500/?random=7">
+                                                <img src="https://picsum.photos/500/500/?random=1">
                                             </div>
                                             <div class="item-title">
                                                 台北 101 天際線雲端漫步體驗
@@ -383,9 +362,11 @@
                                                 <li>叫車服務</li>
                                             </ul>
                                         </a>
-                                        <a class="content-item">
+                                    </div>
+                                    <div class="col-xs-6 col-md-4">
+                                        <a href="" class="content-item">
                                             <div class="img-box imgLiquidFill imgLiquid">
-                                                <img src="https://picsum.photos/500/500/?random=8">
+                                                <img src="https://picsum.photos/500/500/?random=1">
                                             </div>
                                             <div class="item-title">
                                                 台北 101 天際線雲端漫步體驗
@@ -396,9 +377,41 @@
                                                 <li>叫車服務</li>
                                             </ul>
                                         </a>
-                                        <a class="content-item">
+                                    </div>
+                                    <div class="col-xs-6 col-md-4">
+                                        <a href="" class="content-item">
                                             <div class="img-box imgLiquidFill imgLiquid">
-                                                <img src="https://picsum.photos/500/500/?random=9">
+                                                <img src="https://picsum.photos/500/500/?random=1">
+                                            </div>
+                                            <div class="item-title">
+                                                台北 101 天際線雲端漫步體驗
+                                            </div>
+                                            <ul class="tag-list">
+                                                <li>門票折扣</li>
+                                                <li>店家優惠</li>
+                                                <li>叫車服務</li>
+                                            </ul>
+                                        </a>
+                                    </div>
+                                    <div class="col-xs-6 col-md-4">
+                                        <a href="" class="content-item">
+                                            <div class="img-box imgLiquidFill imgLiquid">
+                                                <img src="https://picsum.photos/500/500/?random=1">
+                                            </div>
+                                            <div class="item-title">
+                                                台北 101 天際線雲端漫步體驗
+                                            </div>
+                                            <ul class="tag-list">
+                                                <li>門票折扣</li>
+                                                <li>店家優惠</li>
+                                                <li>叫車服務</li>
+                                            </ul>
+                                        </a>
+                                    </div>
+                                    <div class="col-xs-6 col-md-4">
+                                        <a href="" class="content-item">
+                                            <div class="img-box imgLiquidFill imgLiquid">
+                                                <img src="https://picsum.photos/500/500/?random=1">
                                             </div>
                                             <div class="item-title">
                                                 台北 101 天際線雲端漫步體驗
@@ -411,11 +424,13 @@
                                         </a>
                                     </div>
                                 </div>
-                                <div class="tab-pane fade" id="theme_4" role="tabpanel" aria-labelledby="nav_theme_4_tab">
-                                    <div class="content-list">
-                                        <a class="content-item">
+                            </div>
+                            <div role="tabpanel" class="tab-pane" id="settings">
+                                <div class="content-list">
+                                    <div class="col-xs-6 col-md-4">
+                                        <a href="" class="content-item">
                                             <div class="img-box imgLiquidFill imgLiquid">
-                                                <img src="https://picsum.photos/500/500/?random=11">
+                                                <img src="https://picsum.photos/500/500/?random=1">
                                             </div>
                                             <div class="item-title">
                                                 台北 101 天際線雲端漫步體驗
@@ -426,9 +441,26 @@
                                                 <li>叫車服務</li>
                                             </ul>
                                         </a>
-                                        <a class="content-item">
+                                    </div>
+                                    <div class="col-xs-6 col-md-4">
+                                        <a href="" class="content-item">
                                             <div class="img-box imgLiquidFill imgLiquid">
-                                                <img src="https://picsum.photos/500/500/?random=12">
+                                                <img src="https://picsum.photos/500/500/?random=1">
+                                            </div>
+                                            <div class="item-title">
+                                                台北 101 天際線雲端漫步體驗
+                                            </div>
+                                            <ul class="tag-list">
+                                                <li>門票折扣</li>
+                                                <li>店家優惠</li>
+                                                <li>叫車服務</li>
+                                            </ul>
+                                        </a>
+                                    </div>
+                                    <div class="col-xs-6 col-md-4">
+                                        <a href="" class="content-item">
+                                            <div class="img-box imgLiquidFill imgLiquid">
+                                                <img src="https://picsum.photos/500/500/?random=1">
                                             </div>
                                             <div class="item-title">
                                                 台北 101 天際線雲端漫步體驗
@@ -623,7 +655,7 @@
                 <div class="popup-title">
                     會員登入
                 </div>
-                <form action="">
+                <form action="" class="method-group">
                     <div class="login-method">
                         <div class="method-item">
                             <img src="img/social/facebook.svg" alt="">
@@ -676,7 +708,7 @@
                 <div class="popup-title">
                     會員註冊
                 </div>
-                <form action="">
+                <div class="method-group">
                     <div class="login-method">
                         <div class="method-item">
                             <img src="img/social/facebook.svg" alt="">
@@ -699,40 +731,54 @@
                         或
                     </div>
                     <div class="reg-tab">
-                        <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                        <!-- <div class="nav nav-tabs" id="nav-tab" role="tablist">
                             <a class="nav-item active" id="reg_1_tab" data-toggle="tab" href="#reg_1" role="tab" aria-controls="nav_reg_1" aria-selected="true">電子信箱</a>
                             <a class="nav-item" id="reg_2_tab" data-toggle="tab" href="#reg_2" role="tab" aria-controls="nav_reg_2" aria-selected="false">手機</a>
-                        </div>
-                        <div class="tab-content" id="reg-tabContent">
-                            <div class="tab-pane fade show active" id="reg_1" role="tabpanel" aria-labelledby="nav_reg_1_tab">
-                                <input type="text" placeholder="請輸入電子信箱">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                                    <label class="form-check-label" for="defaultCheck1">
-                                        我同意亞洲好玩卡的<a href="">會員條款</a>及<a href="">隱私權政策</a>
-                                    </label>
-                                </div>
+                        </div> -->
+                        <!-- Nav tabs -->
+                        <ul id="nav-tab" class="nav nav-tabs" role="tablist">
+                            <li role="presentation" class="active">
+                                <a class="nav-item active" id="reg_1_tab" data-toggle="tab" href="#reg_1" role="tab" aria-controls="nav_reg_1" aria-selected="true">電子信箱</a>
+                            </li>
+                            <li role="presentation">
+                                <a class="nav-item" id="reg_2_tab" data-toggle="tab" href="#reg_2" role="tab" aria-controls="nav_reg_2" aria-selected="false">手機</a>
+                            </li>
+                        </ul>
+                        <!-- Tab panes -->
+                        <div class="tab-content">
+                            <div role="tabpanel" class="tab-pane fade in active" id="reg_1">
+                                <form action="">
+                                    <input type="text" placeholder="請輸入電子信箱">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                        <label class="form-check-label" for="defaultCheck1">
+                                            我同意亞洲好玩卡的<a href="">會員條款</a>及<a href="">隱私權政策</a>
+                                        </label>
+                                    </div>
+                                </form>
                                 <div class="login-form">
-                                    <button class="default-btn">傳送驗證碼</button>
+                                    <button class="default-btn send-veri-code">傳送驗證碼</button>
                                 </div>
                             </div>
-                            <div class="tab-pane fade" id="reg_2" role="tabpanel" aria-labelledby="nav_reg_2_tab">
-                                <div class="form-row">
-                                    <div class="col-3">
-                                        <input type="text" placeholder="+886">
+                            <div role="tabpanel" class="tab-pane fade" id="reg_2">
+                                <form action="">
+                                    <div class="form-row">
+                                        <div class="col-3">
+                                            <input type="text" placeholder="+886">
+                                        </div>
+                                        <div class="col-9">
+                                            <input type="text" placeholder="手機">
+                                        </div>
                                     </div>
-                                    <div class="col-9">
-                                        <input type="text" placeholder="手機">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck2">
+                                        <label class="form-check-label" for="defaultCheck2">
+                                            我同意亞洲好玩卡的<a href="">會員條款</a>及<a href="">隱私權政策</a>
+                                        </label>
                                     </div>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck2">
-                                    <label class="form-check-label" for="defaultCheck2">
-                                        我同意亞洲好玩卡的<a href="">會員條款</a>及<a href="">隱私權政策</a>
-                                    </label>
-                                </div>
+                                </form>
                                 <div class="login-form">
-                                    <button class="default-btn">傳送簡訊驗證碼</button>
+                                    <button class="default-btn send-veri-code">傳送簡訊驗證碼</button>
                                 </div>
                             </div>
                         </div>
@@ -742,7 +788,7 @@
                             已經是會員了嗎？<span class="go-login-box">馬上登入</span>
                         </div>
                     </div>
-                </form>
+                </div>
             </div>
         </div>
         <!-- 驗證碼 -->
@@ -755,38 +801,71 @@
                     輸入驗證碼
                 </div>
             </div>
-            <div class="popup-content">
+            <form action="" class="popup-content">
                 <small>驗證碼已發送至 <span>+886</span><span>0972XXXXXX</span> </small>
-                <form action="">
-                    <div class="veri-input-group">
-                        <div class="veri-input">
-                            <input type="number">
-                        </div>
-                        <div class="veri-input">
-                            <input type="number">
-                        </div>
-                        <div class="veri-input">
-                            <input type="number">
-                        </div>
-                        <div class="veri-input">
-                            <input type="number">
-                        </div>
-                        <div class="veri-input">
-                            <input type="number">
-                        </div>
-                        <div class="veri-input">
-                            <input type="number">
-                        </div>
+                <div class="veri-input-group">
+                    <div class="veri-input">
+                        <input type="number">
                     </div>
-                    <button class="default-btn">送出</button>
-                </form>
+                    <div class="veri-input">
+                        <input type="number">
+                    </div>
+                    <div class="veri-input">
+                        <input type="number">
+                    </div>
+                    <div class="veri-input">
+                        <input type="number">
+                    </div>
+                    <div class="veri-input">
+                        <input type="number">
+                    </div>
+                    <div class="veri-input">
+                        <input type="number">
+                    </div>
+                </div>
+                <button class="default-btn">送出</button>
                 <div class="re-box">
                     <p>沒有收到驗證碼？<span>59</span><span>秒後重新傳送</span></p>
                 </div>
+            </form>
+        </div>
+        <!-- 密碼設定 -->
+        <div class="popup-box password-box">
+            <div class="popup-box-title">
+                <div class="title-item close-left">
+                    <i class="material-icons">&#xE314;</i>
+                </div>
+                <div class="title-item title-box">
+                    密碼設定
+                </div>
             </div>
+            <form class="popup-content">
+                <div class="password-item">
+                    <div class="form-group">
+                        <input id="password-field-1" type="password" class="form-control" name="password" placeholder="輸入密碼">
+                        <span toggle="#password-field-1" class="toggle-password"> 
+                            <i class="material-icons visibility ">&#xE8F4;</i>
+                            <i class="material-icons visibility-off">&#xE8F5;</i>
+                        </span>
+                    </div>
+                </div>
+                <div class="password-item">
+                    <div class="form-group">
+                        <input id="password-field-2" type="password" class="form-control" name="password" placeholder="再次輸入密碼">
+                        <span toggle="#password-field-2" class="toggle-password"> 
+                            <i class="material-icons visibility ">&#xE8F4;</i>
+                            <i class="material-icons visibility-off">&#xE8F5;</i>
+                        </span>
+                    </div>
+                </div>
+                <button class="default-btn">建立新用戶</button>
+            </form>
         </div>
     </div>
-    <footer>
+    <footer class="for-pc">
+        111
+    </footer>
+    <footer class="mobile-footer for-mobile">
         <div class="menu-bar">
             <a href="javascript:;" class="bar-item active">
                 <img class="default-img" src="img/icons/footer_1_1.svg" alt="">
@@ -819,7 +898,8 @@
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js" integrity="sha384-fA23ZRQ3G/J53mElWqVJEGJzU0sTs+SvzG8fXVWP+kJQ1lwFAOkcUOysnlKJC33U" crossorigin="anonymous"></script>
-    <script src="https://unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js" integrity="sha384-CauSuKpEqAFajSpkdjv3z9t8E7RlpJ1UP0lKM/+NdtSarroVKu069AlsRPKkFBz9" crossorigin="anonymous"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
     <!-- vendor js -->
     <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
