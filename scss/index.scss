@@ -855,21 +855,22 @@ body{
             li{
                 flex: 1;
                 // width: 115px;
-                padding: 3px 15px;
                 box-sizing: border-box;
                 text-align: center;
                 text-decoration: none;
                 color: #568EE3;
                 &.active{
-                    background: linear-gradient(270deg, #568EE3 0%, #36D1DB 100%);
                     a{
                         color: $default-white;
+                        background: linear-gradient(270deg, #568EE3 0%, #36D1DB 100%);
                     }
                 }
                 a{
-                    padding: 0;
+                    padding: 3px 15px;
                     background-color: transparent;
                     border: none;
+                    margin-right: 0;
+                    border-radius: 0;
                 }
             }
         }

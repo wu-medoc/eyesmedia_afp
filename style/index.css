@@ -1037,7 +1037,6 @@ body.fixedMenu .afp-tab-box .nav-tabs {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  padding: 3px 15px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   text-align: center;
@@ -1045,19 +1044,18 @@ body.fixedMenu .afp-tab-box .nav-tabs {
   color: #568EE3;
 }
 
-.popup-box .reg-tab .nav-tabs li.active {
+.popup-box .reg-tab .nav-tabs li.active a {
+  color: #fff;
   background: -webkit-gradient(linear, right top, left top, from(#568EE3), to(#36D1DB));
   background: linear-gradient(270deg, #568EE3 0%, #36D1DB 100%);
 }
 
-.popup-box .reg-tab .nav-tabs li.active a {
-  color: #fff;
-}
-
 .popup-box .reg-tab .nav-tabs li a {
-  padding: 0;
+  padding: 3px 15px;
   background-color: transparent;
   border: none;
+  margin-right: 0;
+  border-radius: 0;
 }
 
 .popup-box .reg-tab .tab-content {
