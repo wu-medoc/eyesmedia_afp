@@ -461,14 +461,32 @@ body.fixedMenu .afp-tab-box .nav-tabs {
   font-weight: 700;
 }
 
+@media screen and (max-width: 576px) {
+  .go-where-link .link-item p {
+    font-size: 14px;
+  }
+}
+
 .go-where-link .link-item small {
   color: #8E8E93;
   display: block;
   font-size: 14px;
 }
 
+@media screen and (max-width: 576px) {
+  .go-where-link .link-item small {
+    font-size: 12px;
+  }
+}
+
 .go-where-link .link-item img {
   width: 90px;
+}
+
+@media screen and (max-width: 576px) {
+  .go-where-link .link-item img {
+    width: 50px;
+  }
 }
 
 .afp-tab-box .nav-tabs {

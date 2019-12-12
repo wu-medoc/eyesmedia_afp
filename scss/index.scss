@@ -385,14 +385,23 @@ body{
             line-height: 1.6;
             font-size: 20px;
             font-weight: 700;
+            @media screen and (max-width: 576px){
+                font-size: 14px;
+            }
         }
         small{
             color: $gray-color;
             display: block;
             font-size: 14px;
+            @media screen and (max-width: 576px){
+                font-size: 12px;
+            }
         }
         img{
             width: 90px;
+            @media screen and (max-width: 576px){
+                width: 50px;
+            }
         }
     }
 }
