@@ -40,9 +40,9 @@ if ($('.ad-box .swiper-slide').length>1) {
               spaceBetween: 0
             },
             // when window width is >= 640px
-            767: {
-              slidesPerView: 1,
-              spaceBetween: 0
+            768: {
+              slidesPerView: 1.3,
+              spaceBetween: 20
             }
         },
     });
