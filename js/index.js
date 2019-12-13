@@ -60,19 +60,26 @@ body.on('click', '.drop_menu_toggle', function(){
 })
 
 // 固定選單
-var stickyOffset = $('#pc-top').offset().top;
-var stickyHeight = $('#pc-top').outerHeight();
-var navtabsbox = $('.pc-top');
-$(window).scroll(function() {
-    var scroll = $(window).scrollTop();
-    if (scroll >= stickyOffset) {
-        body.addClass('fixedMenu');
-        navtabsbox.css({'height': stickyHeight + 'px'});
-    } else {
-        body.removeClass('fixedMenu');
-        navtabsbox.css({'height': 'auto'});
-    }
-}).trigger('scroll');
+var windowsize = $('body').width();
+if (windowsize > 767) {
+    $(window).scroll(function() {
+        var stickyOffset = $('#pc-top').offset().top;
+        var stickyHeight = $('#pc-top').outerHeight();
+        var navtabsbox = $('.pc-top');
+        var scroll = $(window).scrollTop();
+        if (scroll >= stickyOffset) {
+            body.addClass('fixedMenu');
+            $('.swiper-container').addClass('container');
+            $('.kv-box .kv-top').addClass('container');
+            $('.pc-top .for-pc').addClass('container');
+        } else {
+            body.removeClass('fixedMenu');
+            $('.swiper-container').removeClass('container');
+            $('.kv-box .kv-top').removeClass('container');
+            $('.pc-top .for-pc').removeClass('container');
+        }
+    }).trigger('scroll');
+}
 
 
 // 自訂連結更多按鈕 - 開啟側欄
