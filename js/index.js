@@ -69,12 +69,12 @@ if (windowsize > 767) {
         var scroll = $(window).scrollTop();
         if (scroll >= stickyOffset) {
             body.addClass('fixedMenu');
-            $('.swiper-container').addClass('container');
+            $('.kv-box .swiper-container').addClass('container');
             $('.kv-box .kv-top').addClass('container');
             $('.pc-top .for-pc').addClass('container');
         } else {
             body.removeClass('fixedMenu');
-            $('.swiper-container').removeClass('container');
+            $('.kv-box .swiper-container').removeClass('container');
             $('.kv-box .kv-top').removeClass('container');
             $('.pc-top .for-pc').removeClass('container');
         }
