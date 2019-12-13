@@ -141,6 +141,12 @@ function mask(){
         $(".popup-box").addClass('center');
         $(".popup-box").css("width","500px");
     }
+    else
+    {
+        $('#mask').addClass('mask');
+        $(".popup-box").addClass('center');
+        $(".popup-box").css("width","300px");
+    }
 }
 
 // 密碼
