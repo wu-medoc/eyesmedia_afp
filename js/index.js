@@ -60,9 +60,9 @@ body.on('click', '.drop_menu_toggle', function(){
 })
 
 // 固定選單
-var stickyOffset = $('#nav-tab').offset().top;
-var stickyHeight = $('#nav-tab').outerHeight();
-var navtabsbox = $('.nav-tabs-box');
+var stickyOffset = $('#pc-top').offset().top;
+var stickyHeight = $('#pc-top').outerHeight();
+var navtabsbox = $('.pc-top');
 $(window).scroll(function() {
     var scroll = $(window).scrollTop();
     if (scroll >= stickyOffset) {
@@ -73,6 +73,7 @@ $(window).scroll(function() {
         navtabsbox.css({'height': 'auto'});
     }
 }).trigger('scroll');
+
 
 // 自訂連結更多按鈕 - 開啟側欄
 $('.more-btn').on('click', function(){
@@ -95,29 +96,45 @@ $('.aside-header .edit-title-cancel').on('click', function(){
 // 開啟登入頁
 $('.open-login').on('click', function(){
     body.addClass('is-open-login');
+    mask();
 })
 
 // 關閉登入頁
 $('.login-box .close-btn').on('click', function(){
     body.removeClass('is-open-login');
+    $('#mask').removeClass('mask');
+
 })
 
 // 關閉登入頁並開啟註冊頁
 $('.login-box .go-reg-box').on('click', function(){
     body.removeClass('is-open-login');
     body.addClass('is-open-reg');
+    mask();
 })
 
 // 關閉註冊頁
 $('.reg-box .close-btn').on('click', function(){
     body.removeClass('is-open-reg');
+    $('#mask').removeClass('mask');
 })
 
 // 關閉註冊頁並開啟登入頁
 $('.reg-box .go-login-box').on('click', function(){
     body.removeClass('is-open-reg');
     body.addClass('is-open-login');
+    mask();
 })
+
+// popup-box置中及遮罩
+function mask(){
+    var windowsize = $('body').width();
+    if (windowsize > 767) {
+        $('#mask').addClass('mask');
+        $(".popup-box").addClass('center');
+        $(".popup-box").css("width","500px");
+    }
+}
 
 // 密碼
 $(".toggle-password").on('click', function() {

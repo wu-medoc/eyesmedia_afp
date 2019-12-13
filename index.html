@@ -11,6 +11,10 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <!-- vendor css -->
     <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
+    <!-- fontawesome css -->
+    <link rel="stylesheet" href="dist/fontawesome/css/fontawesome.css">
+    <link rel="stylesheet" href="dist/fontawesome/css/brands.css">
+    <link rel="stylesheet" href="dist/fontawesome/css/solid.css">
     <!-- custom css -->
     <link rel="stylesheet" href="style/global.css">
     <link rel="stylesheet" href="style/index.css">
@@ -21,33 +25,38 @@
     <div class="wrap">
         <!-- kv -->
         <div class="kv-box">
-            <div class="for-pc">這裡要放PC版客服、登入、註冊</div>
-            <div class="kv-top">
-                <div class="top-item logo">
-                    <a href="">
-                        <img src="img/logo.svg" alt="">
-                    </a>
+            <div class="pc-top" id="pc-top">
+                <div class="for-pc f-right">
+                    <div id="mask"></div>
+                    <div class="text-right"><a class="open-login" href="javascript:;">登入/註冊</a></div>
                 </div>
-                <div class="top-item climate">
-                    <p>台北<i class="material-icons">&#xE313;</i><small>32度C</small></p>
-                </div>
-                <div class="top-item input-box">
-                    <button><i class="material-icons">&#xE8B6;</i></button>
-                    <input type="text" placeholder="熱搜：台北故宮博物館門票">
-                </div>
-                <div class="top-item more-horiz has-info">
-                    <i class="material-icons">&#xE5D3;</i>
-                    <button class="drop_menu_toggle"></button>
-                    <div class="drop-menu">
-                        <ul class="drop-content">
-                            <li><a href="javascript:;"><img src="img/icons/icon_qrcode.svg" alt="">掃碼</a></li>
-                            <li><a href="javascript:;"><img src="img/icons/icon_taxicode.svg" alt="">乘車碼</a></li>
-                            <li><a class="open-login" href="javascript:;"><img src="img/icons/icon_login.svg" alt="">登入/註冊</a></li>
-                        </ul>
+                <div class="kv-top">
+                    <div class="top-item logo">
+                        <a href="">
+                            <img src="img/logo.svg" alt="">
+                        </a>
+                    </div>
+                    <div class="top-item climate">
+                        <p>台北<i class="material-icons">&#xE313;</i><small>32度C</small></p>
+                    </div>
+                    <div class="top-item input-box">
+                        <button><i class="material-icons">&#xE8B6;</i></button>
+                        <input type="text" placeholder="熱搜：台北故宮博物館門票">
+                    </div>
+                    <div class="top-item more-horiz has-info">
+                        <i class="material-icons">&#xE5D3;</i>
+                        <button class="drop_menu_toggle"></button>
+                        <div class="drop-menu">
+                            <ul class="drop-content">
+                                <li><a href="javascript:;"><img src="img/icons/icon_qrcode.svg" alt="">掃碼</a></li>
+                                <li><a href="javascript:;"><img src="img/icons/icon_taxicode.svg" alt="">乘車碼</a></li>
+                                <li><a class="open-login" href="javascript:;"><img src="img/icons/icon_login.svg" alt="">登入/註冊</a></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="kv-mask"></div>
+            <div class="kv-mask"></div>          
             <!-- Swiper -->
             <div class="swiper-container">
                 <div class="swiper-wrapper">
@@ -905,7 +914,35 @@
         </div>
     </div>
     <footer class="for-pc">
-        111
+      <!--footer content-->
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3">
+            <h5>關於亞洲好玩卡</h5>
+            <ul>
+              <li><a href="#">關於我們</a></li>
+            </ul>            
+          </div>
+          <div class="col-md-3">
+            <h5>追蹤我們</h5>
+            <ul>
+              <li><a href="#"><i class="fab fa-facebook-f fa-fw"></i> Facebook</a></li>
+              <li><a href="#"><i class="fab fa-line fa-fw"></i> Line</a></li>
+              <li><a href="#"><i class="fab fa-instagram fa-fw"></i> Instagram</a></li>
+            </ul>            
+          </div>    
+        </div>  
+        <div class="row">  
+          <div class="col-12 border-t">
+            <div class="f-left">
+                <object data="img/logo-s.svg" width="30px" type="image/svg+xml"></object><span> Designed by Asia Fun Pass</span>
+            </div>
+            <div class="f-right">
+                Ⓒ2020 Asia Fun Pass. All Right Reserved          
+            </div>
+          </div>
+        </div>  
+      </div>
     </footer>
     <footer class="mobile-footer for-mobile">
         <div class="menu-bar">

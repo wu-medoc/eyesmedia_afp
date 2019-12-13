@@ -141,7 +141,7 @@ a:hover, a:focus, a:visited {
   outline: none;
 }
 
-footer {
+footer.for-mobile {
   position: fixed;
   width: 101%;
   left: 50%;
@@ -150,6 +150,12 @@ footer {
   bottom: 0;
   z-index: 300;
   background-color: #fff;
+}
+
+footer.for-pc{
+  position: block;
+  padding: 20px 0;
+  background: #f8f8f8;
 }
 
 footer .menu-bar {
