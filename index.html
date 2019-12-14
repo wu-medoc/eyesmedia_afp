@@ -8,7 +8,17 @@
     <!-- Material Design for Bootstrap fonts and icons -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons">
     <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="dist/jquery-editable-select-master/dist/jquery-editable-select.min.css">
     <link rel="stylesheet" href="dist/bs4/css/bootstrap.min.css">
+    <!-- owl.carousel core CSS -->
+    <link rel="stylesheet" href="dist/owlcarousel/owlcarousel/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="dist/owlcarousel/owlcarousel/assets/owl.theme.default.min.css">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+
     <!-- vendor css -->
     <link rel="stylesheet" href="dist/swiper/css/swiper.min.css">
     <!-- fontawesome css -->
@@ -26,9 +36,20 @@
         <!-- header top -->
         <div class="kv-box">
             <div class="pc-top" id="pc-top">
-                <div class="for-pc">
-                    <div id="mask"></div>
-                    <div class="kv-small"><a class="open-login" href="javascript:;">登入/註冊</a></div>
+                <div class="pc-top-box">
+                  <div class="for-pc">
+                    <div class="login-top">
+                        <div class="kv-small">
+                          <!-- login trigger modal -->
+                          <button type="button" id="kv-btn-log" class="btn btn-login btn-sm py-0" data-toggle="modal" data-target="#loginModalCenter">
+                              登入
+                          </button>
+                          <span>|</span>               
+                          <button type="button" id="kv-btn-reg" class="btn btn-login btn-sm py-0" data-toggle="modal" data-target="#registeredModalCenter">
+                              註冊
+                          </button> 
+                        </div>
+                    </div>          
                 </div>
                 <div class="kv-top">
                     <div class="top-item logo">
@@ -55,6 +76,7 @@
                         </div>
                     </div>
                 </div>
+              </div>
             </div>
             <div class="kv-mask"></div>          
             <!-- Swiper -->
@@ -73,106 +95,179 @@
             </div>
         </div>
         <div class="container">
-            <div class="row for-mobile">
-                <!-- 主要連結 -->
-                <div class="col-12 for-mobile">
-                    <div class="main-link default-link">
-                        <a href="" class="link-item">
-                            <div class="img-box food">
-                                <img src="img/icons/icon_food.svg" alt="">
-                            </div>
-                            <p>美食</p>
-                        </a>
-                        <a href="" class="link-item">
-                            <div class="img-box shopping">
-                                <img src="img/icons/icon_shopping.svg" alt="">
-                            </div>
-                            <p>購物</p>
-                        </a>
-                        <a href="" class="link-item">
-                            <div class="img-box location">
-                                <img src="img/icons/icon_location.svg" alt="">
-                            </div>
-                            <p>景點/門票</p>
-                        </a>
-                        <a href="" class="link-item">
-                            <div class="img-box ticket">
-                                <img src="img/icons/icon_ticket.svg" alt="">
-                            </div>
-                            <p>優惠券</p>
-                        </a>
-                        <a href="" class="link-item">
-                            <div class="img-box travel">
-                                <img src="img/icons/icon_travel.svg" alt="">
-                            </div>
-                            <p>去旅行</p>
-                        </a>
-                    </div>
-                </div>
-                <!-- 自訂連結 -->
-                <div class="col-12">
-                    <div class="main-link edit-link">
-                        <a href="" class="link-item">
+            <div class="row">
+                <!-- 主要連結 -->                
+                <div class="col-12 for-pc">  
+                    <div class="col-12">                    
+                    <!-- item carousel -->
+                        <div class="owl-carousel owl-theme owl-loaded owl-drag">
+                            <div class="item">
                             <div class="img-box">
-                                <img src="img/icons/icon_booking.svg" alt="">
+                                <img src="img/icons/icon_taxicode_2.svg" alt="">
+                            </div>乘車碼
                             </div>
-                            <p>交通訂票</p>
-                        </a>
-                        <a href="" class="link-item">
-                            <div class="img-box">
-                                <img src="img/icons/icon_info.svg" alt="">
+                            <div class="item">
+                                <div class="img-box">
+                                    <img src="img/icons/icon_booking.svg" alt="">
+                                </div>交通訂票
                             </div>
-                            <p>交通資訊</p>
-                        </a>
-                        <a href="" class="link-item">
+                            <div class="item">
                             <div class="img-box">
                                 <img src="img/icons/icon_taxi.svg" alt="">
+                            </div>叫車
                             </div>
-                            <p>叫車</p>
-                        </a>
-                        <a href="" class="link-item">
+                            <div class="item">
+                            <div class="img-box">
+                                <img src="img/icons/icon_info.svg" alt="">
+                            </div>交通資訊
+                            </div>
+                            <div class="item">
+                            <div class="img-box">
+                                <img src="img/icons/icon_router.svg" alt="">
+                            </div>路線規劃
+                            </div>
+                            <div class="item">
+                            <div class="img-box">
+                                <img src="img/icons/icon_food_2.svg" alt="">
+                            </div>美食
+                            </div>
+                            <div class="item">
+                            <div class="img-box">
+                                <img src="img/icons/icon_shopping_2.svg" alt="">
+                            </div>購物
+                            </div>
+                            <div class="item">
+                            <div class="img-box">
+                                <img src="img/icons/icon_location_2.svg" alt="">
+                            </div>景點/門票
+                            </div>
+                            <div class="item">
+                            <div class="img-box">
+                                <img src="img/icons/icon_travel_2.svg" alt="">
+                            </div>去旅行
+                            </div>
+                            <div class="item">
                             <div class="img-box">
                                 <img src="img/icons/icon_shop.svg" alt="">
+                            </div>線上商城
                             </div>
-                            <p>線上商城</p>
-                        </a>
-                        <a href="javascript:;" class="link-item more-btn">
+                            <div class="item">
                             <div class="img-box">
-                                <img src="img/icons/icon_more.svg" alt="">
+                                <img src="img/icons/icon_ticket_2.svg" alt="">
+                            </div>優惠券
                             </div>
-                            <p>更多</p>
-                        </a>
+                            <div class="item">
+                            <div class="img-box">
+                                <img src="img/icons/icon_pay.svg" alt="">
+                            </div>繳費
+                            </div>
+                            <div class="item">
+                            <div class="img-box">
+                                <img src="img/icons/icon_takeaway.svg" alt="">
+                            </div>外賣
+                            </div>
+                        </div>
                     </div>
                 </div>
-                
+                <div class="for-mobile">
+                    <div class="col-12">
+                        <div class="main-link default-link">
+                            <a href="" class="link-item">
+                                <div class="img-box food">
+                                    <img src="img/icons/icon_food.svg" alt="">
+                                </div>
+                                <p>美食</p>
+                            </a>
+                            <a href="" class="link-item">
+                                <div class="img-box shopping">
+                                    <img src="img/icons/icon_shopping.svg" alt="">
+                                </div>
+                                <p>購物</p>
+                            </a>
+                            <a href="" class="link-item">
+                                <div class="img-box location">
+                                    <img src="img/icons/icon_location.svg" alt="">
+                                </div>
+                                <p>景點/門票</p>
+                            </a>
+                            <a href="" class="link-item">
+                                <div class="img-box ticket">
+                                    <img src="img/icons/icon_ticket.svg" alt="">
+                                </div>
+                                <p>優惠券</p>
+                            </a>
+                            <a href="" class="link-item">
+                                <div class="img-box travel">
+                                    <img src="img/icons/icon_travel.svg" alt="">
+                                </div>
+                                <p>去旅行</p>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- 自訂連結 -->
+                    <div class="col-12">
+                        <div class="main-link edit-link">
+                            <a href="" class="link-item">
+                                <div class="img-box">
+                                    <img src="img/icons/icon_booking.svg" alt="">
+                                </div>
+                                <p>交通訂票</p>
+                            </a>
+                            <a href="" class="link-item">
+                                <div class="img-box">
+                                    <img src="img/icons/icon_info.svg" alt="">
+                                </div>
+                                <p>交通資訊</p>
+                            </a>
+                            <a href="" class="link-item">
+                                <div class="img-box">
+                                    <img src="img/icons/icon_taxi.svg" alt="">
+                                </div>
+                                <p>叫車</p>
+                            </a>
+                            <a href="" class="link-item">
+                                <div class="img-box">
+                                    <img src="img/icons/icon_shop.svg" alt="">
+                                </div>
+                                <p>線上商城</p>
+                            </a>
+                            <a href="javascript:;" class="link-item more-btn">
+                                <div class="img-box">
+                                    <img src="img/icons/icon_more.svg" alt="">
+                                </div>
+                                <p>更多</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
         <!-- 去哪玩連結 -->
         <div class="go-where-link">
             <div class="container">
-                <div class="row">
-                    <div class="col-3">
+                <div class="row px-2">
+                    <div class="col-3 p-1">
                         <div class="item">
                             <a href="" class="link-item">
                                     <img src="img/gowhere/gowhere-01.png" alt="">
                             </a>
                         </div>
                     </div>
-                    <div class="col-3">
+                    <div class="col-3 p-1">
                         <div class="item">
                           <a href="" class="link-item">
                                 <img src="img/gowhere/gowhere-02.png" alt="">
                           </a>
                         </div>
                     </div>
-                    <div class="col-3">
+                    <div class="col-3 p-1">
                         <div class="item">
                           <a href="" class="link-item">
                                 <img src="img/gowhere/gowhere-03.png" alt="">
                           </a>
                         </div>
                     </div>
-                    <div class="col-3">
+                    <div class="col-3 p-1">
                         <div class="item">
                           <a href="" class="link-item">
                                 <img src="img/gowhere/gowhere-04.png" alt="">
@@ -214,7 +309,7 @@
                                     <div class="col-md-12">
                                         <div class="nav-tabs-box">
                                             <!-- Nav tabs -->
-                                            <ul id="nav-tab" class="nav nav-tabs" role="tablist">
+                                            <ul id="nav-tab-ls" class="nav nav-tabs" role="tablist">
                                                 <li role="presentation" class="active">
                                                     <a href="#home" aria-controls="home" role="tab" data-toggle="tab">週邊推薦</a>
                                                 </li>
@@ -727,22 +822,18 @@
                         或
                     </div>
                     <div class="reg-tab">
-                        <!-- <div class="nav nav-tabs" id="nav-tab" role="tablist">
-                            <a class="nav-item active" id="reg_1_tab" data-toggle="tab" href="#reg_1" role="tab" aria-controls="nav_reg_1" aria-selected="true">電子信箱</a>
-                            <a class="nav-item" id="reg_2_tab" data-toggle="tab" href="#reg_2" role="tab" aria-controls="nav_reg_2" aria-selected="false">手機</a>
-                        </div> -->
                         <!-- Nav tabs -->
-                        <ul id="nav-tab" class="nav nav-tabs" role="tablist">
+                        <ul id="nav-tab-login" class="nav nav-tabs py-2" role="tablist">
                             <li role="presentation" class="active">
-                                <a class="nav-item active" id="reg_1_tab" data-toggle="tab" href="#reg_1" role="tab" aria-controls="nav_reg_1" aria-selected="true">電子信箱</a>
+                                <a class="nav-item active" id="reg_1_tab" data-toggle="tab" href="#reg_1" role="tab" aria-controls="nav_reg_1" aria-selected="false">電子信箱</a>
                             </li>
                             <li role="presentation">
-                                <a class="nav-item" id="reg_2_tab" data-toggle="tab" href="#reg_2" role="tab" aria-controls="nav_reg_2" aria-selected="false">手機</a>
+                                <a class="nav-item" id="reg_2_tab" data-toggle="tab" href="#reg_2" role="tab" aria-controls="nav_reg_2" aria-selected="true">手機</a>
                             </li>
                         </ul>
                         <!-- Tab panes -->
                         <div class="tab-content">
-                            <div role="tabpanel" class="tab-pane fade in active" id="reg_1">
+                            <div role="tabpanel" class="tab-pane fade" id="reg_1">
                                 <form action="">
                                     <input type="text" placeholder="請輸入電子信箱">
                                     <div class="form-check">
@@ -756,15 +847,11 @@
                                     <button class="default-btn send-veri-code">傳送驗證碼</button>
                                 </div>
                             </div>
-                            <div role="tabpanel" class="tab-pane fade" id="reg_2">
+                            <div role="tabpanel" class="tab-pane fade show active" id="reg_2">
                                 <form action="">
-                                    <div class="row">
-                                        <div class="col-sm-3">
-                                            <input class="open-country" type="text" placeholder="+886">
-                                        </div>
-                                        <div class="col-sm-9">
-                                            <input type="text" placeholder="手機">
-                                        </div>
+                                    <div class="form-inline">
+                                            <input class="col-3 open-country" type="text" placeholder="+886">
+                                            <input class="col-9" type="text" placeholder="手機">
                                     </div>
                                     <div class="form-check">
                                         <input class="form-check-input" type="checkbox" value="" id="defaultCheck2">
@@ -897,7 +984,61 @@
             </form>
         </div>
     </div>
+      
+
     <footer class="for-pc">
+        <!--web service-->
+        <div class="scroll-top-wrapper">
+            <span class="scroll-top-inner">
+                <button type="button" id="webservice"><img src="img/icons/for-pc/icon_service.png"></button>
+                <button type="button" id="webservice_close" class="d-none"><img src="img/icons/for-pc/icon_close.png"></button>
+            </span>
+        </div>
+            <div class="popup-box chat-popup" id="qnimate">
+                <div class="popup-head">
+            <div class="popup-head-left pull-left"><img src="img/icons/for-pc/icon_bear.png" alt="service"> 熊客服</div>
+            </div>
+            <div class="hr-100"></div>
+            <div class="popup-messages">          
+            <div class="direct-chat-messages">
+                <div class="chat-box-single-line">
+                        <abbr class="timestamp">Sun, Dec 11 1:20 PM</abbr>
+                </div>
+                
+                <!-- Message. Default to the left -->
+                <div class="direct-chat-msg">
+                    <!-- direct-chat-info -->
+                    <div class="direct-chat-text">
+                    Hey你好, 我是熊, 很高興為您服務
+                    </div>                  
+                    <ul class="direct-info">
+                        <span>來看看有什麼熱門問題吧!</span>
+                        <li><a href="">亞洲好玩卡網站是什麼?</a></li>
+                        <li><a href="">我想問如何快速取貨?</a></li>
+                        <li><a href="">想要退換貨怎麼辦?</a></li>
+                        <li><a href="">最近有什麼最新優惠?</a></li>
+                        <li><a href="">我該如何購買網路商品?</a></li>
+                    </ul>
+                </div>          
+                <!-- Message. Default to the right -->
+                <div class="guests-chat-msg">
+                    <!-- direct-chat-info -->
+                    <div class="guests-chat-text">
+                    請幫我轉真人服務
+                    </div> 
+                    <div class="guests-chat-name">
+                    guests
+                    </div> 
+                </div>          
+                        
+            </div>
+            </div>
+            <div class="hr-100"></div>
+            <div class="popup-messages-footer">
+                <input type="text" placeholder="請輸入問題">
+            </div>
+        </div>
+
       <!--footer content-->
       <div class="container">
         <div class="row d-flex">
@@ -955,13 +1096,135 @@
             </a>
         </div>
     </footer>
+    
+
+    <!-- login Modal -->
+    <div class="modal fade" id="loginModalCenter" tabindex="-1" role="dialog" aria-labelledby="loginModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header" data-dismiss="modal" aria-label="Close">
+            </div>
+            <div class="modal-body">              
+              <h5>會員登入</h5>       
+              <div class="container px-5">     
+                <div class="icon_group">
+                  <button type="button" class="btn btn-primary"><i class="fab fa-facebook-f fa-2x"></i></button>
+                  <button type="button" class="btn btn-success"><i class="fab fa-line fa-2x"></i></button>
+                  <button type="button" class="btn btn-danger"><i class="fab fa-google fa-2x"></i></button>
+                  <button type="button" class="btn btn-success"><i class="fab fa-weixin fa-2x"></i></button>
+                </div>
+                <div class="line-middle">
+                    <div class="line-middle-middle-line">
+                        <span class="line-middle-line-text">或</span>
+                    </div>
+                </div>
+                <form id="login-form">
+                    <div class="form-group form-inline linebt-row">
+                        <label for="loginInputEmailTel">Email/手機</label>
+                        <input type="text" class="form-control" id="loginInputEmailTel" placeholder="">
+                    </div>
+                    <div class="form-group form-inline linebt-row">
+                        <label for="loginInputPassword">密碼</label>
+                        <input type="password" class="form-control" id="loginInputPassword" placeholder="">
+                    </div>
+                    <div class="login-small">忘記密碼</div>
+                    <button type="submit" class="btn btn-primary login-btn">登入</button>
+                    <p class="text-left">還不是會員嗎? 
+                        <button type="button" class="btn btn-login font-bold px-0" data-toggle="modal" data-target="#registeredModalCenter" data-dismiss="modal">
+                          馬上註冊
+                        </button> 
+                    </p>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+   
+    <!-- registered Modal -->
+    <div class="modal fade" id="registeredModalCenter" tabindex="-1" role="dialog" aria-labelledby="registeredModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header" data-dismiss="modal" aria-label="Close">
+            </div>
+            <div class="modal-body">              
+              <h5>會員註冊</h5>       
+              <div class="container px-5">     
+                <div class="icon_group">
+                  <button type="button" class="btn btn-primary"><i class="fab fa-facebook-f fa-2x"></i></button>
+                  <button type="button" class="btn btn-success"><i class="fab fa-line fa-2x"></i></button>
+                  <button type="button" class="btn btn-danger"><i class="fab fa-google fa-2x"></i></button>
+                  <button type="button" class="btn btn-success"><i class="fab fa-weixin fa-2x"></i></button>
+                </div>
+                <div class="line-middle">
+                    <div class="line-middle-middle-line">
+                        <span class="line-middle-line-text">或</span>
+                    </div>
+                </div>
+                <form id="registered-form">
+                    <ul class="nav nav-tabs justify-content-center" id="regTab" role="tablist">
+                      <li class="nav-item">
+                        <a class="nav-link" id="email-tab" data-toggle="tab" href="#email" role="tab" aria-controls="email" aria-selected="false">電子信箱</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link active" id="phone-tab" data-toggle="tab" href="#phone" role="tab" aria-controls="phone" aria-selected="true">手機</a>
+                      </li>
+                    </ul>
+                    <div class="tab-content" id="regTabContent">
+                      <div class="tab-pane fade pt-4" id="email" role="tabpanel" aria-labelledby="email-tab">
+                          <div class="form-group linebt-row">
+                              <input type="email" class="form-control w-100" id="registeredInputEmail" placeholder="電子信箱">
+                          </div>        
+                      </div>
+                      <div class="tab-pane fade pt-4 show active" id="phone" role="tabpanel" aria-labelledby="phone-tab">
+                          <table class="form-group">
+                              <tbody>
+                                <tr>
+                                  <td width="25%" class="linebt-td">
+                                    <select id="registeredSelectState" class="form-control">
+                                        +886
+                                      <option value="+886" selected>台灣 +886</option>
+                                      <option value="86">中國大陸 86</option>
+                                      <option value="856">香港 856</option>
+                                    </select>
+                                  </td>
+                                  <td width="5%"></td>
+                                  <td width="70%" class="linebt-td"><input type="tel" class="form-control" id="registeredInputPhone" placeholder="手機"></td>
+                                </tr>
+                              </tbody>
+                          </table>
+                      </div>     
+                    </div>
+                    <div class="form-check form-inline">
+                        <input type="checkbox" class="form-check-input" id="registeredCheck1">
+                        <label class="form-check-label" for="registeredCheck1">我同意亞洲好玩卡的<span class="font-bold">會員條款</span>及<span class="font-bold">隱私政策</span></label>
+                    </div>
+                    <button type="submit" class="btn btn-primary login-btn">登入</button>
+                    <p class="text-left">己經是會員了嗎? 
+                        <button type="button" class="btn btn-login px-0 font-bold" data-toggle="modal" data-target="#loginModalCenter" data-dismiss="modal">
+                          馬上登入
+                        </button>
+                    </p>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="dist/bs4/js/jquery-3.2.1.slim.min.js"></script>
-    <script src="js/popper.js"></script>
     <!-- Latest compiled and minified JavaScript -->
+    <script src="dist/jquery-editable-select-master/dist/jquery-editable-select.min.js"></script>
     <script src="dist/bs4/js/bootstrap.min.js"></script>
+
+    <!-- owlcarousel JS -->
+    <script src="dist/owlcarousel/vendors/jquery.min.js"></script>
+    <script src="dist/owlcarousel/owlcarousel/owl.carousel.js"></script>
+    <script src="dist/owlcarousel/vendors/highlight.js"></script>
+    <script src="dist/owlcarousel/js/app.js"></script>   
 
     <!-- vendor js -->
     <script src="dist/swiper/js/swiper.min.js"></script>

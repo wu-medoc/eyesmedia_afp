@@ -4,7 +4,6 @@ var windowWidth = 767;
 $(window).on('resize', function(){
     var footer = $('.mobile-footer').outerHeight();
     wrap.css({'padding-bottom':footer + 10});
-    console.log(footer);
 }).trigger('resize');
 
 $(".imgLiquidFill").imgLiquid();
@@ -59,7 +58,7 @@ body.on('click', '.drop_menu_toggle', function(){
     dropwrap.toggleClass('is-open');
 })
 
-// 固定選單
+// 判斷螢幕width
 var windowsize = $('body').width();
 if (windowsize > 767) {
     $(window).scroll(function() {
@@ -68,15 +67,11 @@ if (windowsize > 767) {
         var navtabsbox = $('.pc-top');
         var scroll = $(window).scrollTop();
         if (scroll >= stickyOffset) {
-            body.addClass('fixedMenu');
             $('.kv-box .swiper-container').addClass('container');
-            $('.kv-box .kv-top').addClass('container');
-            $('.pc-top .for-pc').addClass('container');
+            $('.pc-top-box').addClass('container');
         } else {
-            body.removeClass('fixedMenu');
             $('.kv-box .swiper-container').removeClass('container');
-            $('.kv-box .kv-top').removeClass('container');
-            $('.pc-top .for-pc').removeClass('container');
+            $('.pc-top-box').removeClass('container');
         }
     }).trigger('scroll');
 }
@@ -103,51 +98,29 @@ $('.aside-header .edit-title-cancel').on('click', function(){
 // 開啟登入頁
 $('.open-login').on('click', function(){
     body.addClass('is-open-login');
-    mask();
 })
 
 // 關閉登入頁
 $('.login-box .close-btn').on('click', function(){
     body.removeClass('is-open-login');
-    $('#mask').removeClass('mask');
-
 })
 
 // 關閉登入頁並開啟註冊頁
 $('.login-box .go-reg-box').on('click', function(){
     body.removeClass('is-open-login');
     body.addClass('is-open-reg');
-    mask();
 })
 
 // 關閉註冊頁
 $('.reg-box .close-btn').on('click', function(){
     body.removeClass('is-open-reg');
-    $('#mask').removeClass('mask');
 })
 
 // 關閉註冊頁並開啟登入頁
 $('.reg-box .go-login-box').on('click', function(){
     body.removeClass('is-open-reg');
     body.addClass('is-open-login');
-    mask();
 })
-
-// popup-box置中及遮罩
-function mask(){
-    var windowsize = $('body').width();
-    if (windowsize > 767) {
-        $('#mask').addClass('mask');
-        $(".popup-box").addClass('center');
-        $(".popup-box").css("width","500px");
-    }
-    else
-    {
-        $('#mask').addClass('mask');
-        $(".popup-box").addClass('center');
-        $(".popup-box").css("width","300px");
-    }
-}
 
 // 密碼
 $(".toggle-password").on('click', function() {
@@ -200,4 +173,47 @@ $('.country-box .close-left').on('click', function(){
 $('.bar-item').on('click', function() {
     $('.bar-item').removeClass('active');
     $(this).addClass('active');
+})
+
+// registeredSelectState
+$('#registeredSelectState').on('click', function() {
+    $('#registeredSelectState').editableSelect();
+})
+
+// owl-carousel JS
+$('.owl-carousel').owlCarousel({
+    loop:true,
+    nav:true,
+    responsive:{
+        0:{
+            items:3
+        },
+        600:{
+            items:5
+        },
+        1000:{
+            items:9
+        }
+    }
+})
+$('.owl-prev').hide();
+$(".owl-next").click(function () {
+    $('.owl-prev').show();
+});
+
+// web service JS 
+$(document).on( 'scroll', function(){        
+    if ($(window).scrollTop() > 100) {
+    $('.scroll-top-wrapper').addClass('show');
+    }
+});
+$("#webservice").click(function () {
+    $('#qnimate').addClass('popup-box-on');
+    $('#webservice').addClass('d-none');
+    $('#webservice_close').removeClass();
+});
+$("#webservice_close").click(function () {
+    $('#qnimate').removeClass('popup-box-on');
+    $('#webservice_close').addClass('d-none');
+    $('#webservice').removeClass();
 });
