@@ -150,11 +150,24 @@ $('.forget-password').on('click', function(){
     body.removeClass('is-open-login');
     body.addClass('is-open-password');
 })
+$('.forget-password-pc').on('click', function(){
+    body.addClass('is-open-password');
+})
 
 // 關閉 密碼設定
 $('.password-box .close-left').on('click', function(){
     body.removeClass('is-open-password');
-    body.addClass('is-open-login');
+    //body.addClass('is-open-login');
+})
+
+// 登入及註冊訊息控制
+$('.msg-loginerror').on('click', function(){
+    $('#msg-loginerror').removeClass();
+    $('#msg-loginok').addClass('d-none');
+})
+$('.msg-loginok').on('click', function(){
+    $('#msg-loginok').removeClass();
+    $('#msg-loginerror').addClass('d-none');
 })
 
 // 開啟 選擇國家或地區
@@ -176,9 +189,10 @@ $('.bar-item').on('click', function() {
 })
 
 // registeredSelectState
-$('#registeredSelectState').on('click', function() {
-    $('#registeredSelectState').editableSelect();
-})
+$('#registeredSelectState').on('click', function () {
+    $('#registeredSelectState').editableSelect({ effects: 'default' });
+  });
+
 
 // owl-carousel JS
 $('.owl-carousel').owlCarousel({
