@@ -73,9 +73,19 @@ if (windowsize > 767) {
             $('.kv-box .swiper-container').removeClass('container');
             $('.pc-top-box').removeClass('container');
         }
-    }).trigger('scroll');
+    }).trigger('scroll');  
 }
 
+// 次頁header控制
+if ($('.kv-box').width() > 767) {
+    $('.for-sub .top-item.climate').show();
+    $('.for-sub .top-item.input-box').show();
+}else
+{
+    $('.for-sub .top-item.climate').hide();
+    $('.for-sub .top-item.input-box').hide();
+    $('.for-sub .top-item.more-horiz.has-info').addClass('ml-auto');
+}  
 
 // 自訂連結更多按鈕 - 開啟側欄
 $('.more-btn').on('click', function(){
@@ -142,7 +152,7 @@ $('.send-veri-code').on('click', function(){
 // 關閉 輸入驗證碼
 $('.verification-box .close-left').on('click', function(){
     body.removeClass('is-open-verification');
-    body.addClass('is-open-reg');
+    //body.addClass('is-open-reg');
 })
 
 // 開啟 密碼設定
@@ -195,7 +205,7 @@ $('#registeredSelectState').on('click', function () {
 
 
 // owl-carousel JS
-$('.owl-carousel').owlCarousel({
+$('.index-owl.owl-carousel').owlCarousel({
     loop:true,
     nav:true,
     responsive:{
