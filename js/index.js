@@ -1,9 +1,12 @@
 var body = $('body');
 var wrap = $('.wrap');
 var windowWidth = 767;
+var windowsize = $('body').width();
 $(window).on('resize', function(){
     var footer = $('.mobile-footer').outerHeight();
-    wrap.css({'padding-bottom':footer + 10});
+    if (windowsize < 767) {
+        wrap.css({'padding-bottom':footer + 10});
+    };
 }).trigger('resize');
 
 $(".imgLiquidFill").imgLiquid();
@@ -76,16 +79,21 @@ if (windowsize > 767) {
     }).trigger('scroll');  
 }
 
-// 次頁header控制
-if ($('.kv-box').width() > 767) {
+// body.width > 767 control
+if (windowsize > 767) {
+    $('.travel-hot').addClass('container');
+    $('.travel-topic').addClass('container');
+    $('.travel-featured').addClass('container');
     $('.for-sub .top-item.climate').show();
     $('.for-sub .top-item.input-box').show();
-}else
-{
+}else{
+    $('.travel-hot').removeClass('container');
+    $('.travel-topic').removeClass('container');
+    $('.travel-featured').removeClass('container');
     $('.for-sub .top-item.climate').hide();
     $('.for-sub .top-item.input-box').hide();
     $('.for-sub .top-item.more-horiz.has-info').addClass('ml-auto');
-}  
+}
 
 // 自訂連結更多按鈕 - 開啟側欄
 $('.more-btn').on('click', function(){
@@ -203,28 +211,6 @@ $('#registeredSelectState').on('click', function () {
     $('#registeredSelectState').editableSelect({ effects: 'default' });
   });
 
-
-// owl-carousel JS
-$('.index-owl.owl-carousel').owlCarousel({
-    loop:true,
-    nav:true,
-    responsive:{
-        0:{
-            items:3
-        },
-        600:{
-            items:5
-        },
-        1000:{
-            items:9
-        }
-    }
-})
-$('.owl-prev').hide();
-$(".owl-next").click(function () {
-    $('.owl-prev').show();
-});
-
 // web service JS 
 $(document).on( 'scroll', function(){        
     if ($(window).scrollTop() > 100) {
@@ -241,3 +227,125 @@ $("#webservice_close").click(function () {
     $('#webservice_close').addClass('d-none');
     $('#webservice').removeClass();
 });
+
+// owl-carousel JS for index
+if ($( ".gowhere-owl" ).hasClass("owl-carousel")) {
+    $('.gowhere-owl.owl-carousel').owlCarousel({
+        loop:true,
+        nav:false,
+        items:4,
+        margin:5
+    });
+}
+if ($( ".index-owl" ).hasClass("owl-carousel")) {
+    $('.index-owl.owl-carousel').owlCarousel({
+        loop:true,
+        nav:true,
+        responsive:{
+            0:{
+                items:3
+            },
+            600:{
+                items:5
+            },
+            1000:{
+                items:9
+            }
+        }
+    });
+    $('.owl-prev').hide();
+    $(".owl-next").click(function () {
+        $('.owl-prev').show();
+    });
+}
+
+// owl-carousel JS for travel
+if ($( ".tablist-owl" ).hasClass("owl-carousel")) {
+    $(".tablist-owl.owl-carousel").owlCarousel({    
+        loop:false,
+        nav:false,
+        margin:5,    
+        responsive:{
+            0:{
+                items:6
+            },
+            600:{
+                items:10
+            },
+            1000:{
+                items:15
+            }
+        }
+    });
+}
+if ($( ".travel-featured-owl" ).hasClass("owl-carousel")) {
+    $(".travel-featured-owl.owl-carousel").owlCarousel({    
+        loop:true,
+        nav:false,
+        margin:10,
+        responsive:{
+            0:{
+                items:2
+            },
+            600:{
+                items:2
+            },
+            1000:{
+                items:3
+            }
+        }
+    });
+}
+if ($( ".travel-topic-owl" ).hasClass("owl-carousel")) {
+    $(".travel-topic-owl.owl-carousel").owlCarousel({    
+        loop:true,
+        nav:false,
+        margin:10,
+        responsive:{
+            0:{
+                items:2
+            },
+            600:{
+                items:3
+            },
+            1000:{
+                items:3
+            }
+        }
+    });   
+}
+if ($( ".travel-hot-owl" ).hasClass("owl-carousel")) {
+    $(".travel-hot-owl.owl-carousel").owlCarousel({    
+        loop:true,
+        nav:false,
+        margin:10,
+        responsive:{
+            0:{
+                items:4
+            },
+            600:{
+                items:5
+            },
+            1000:{
+                items:6
+            }
+        }
+    });
+}
+if ($( ".travel-icon-owl" ).hasClass("owl-carousel")) {
+    $(".travel-icon-owl.owl-carousel").owlCarousel({    
+        loop:false,
+        nav:false,
+        responsive:{
+            0:{
+                items:6
+            },
+            600:{
+                items:6
+            },
+            1000:{
+                items:10
+            }
+        }
+    });
+}
