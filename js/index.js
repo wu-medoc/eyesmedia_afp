@@ -336,6 +336,7 @@ if ($( ".travel-icon-owl" ).hasClass("owl-carousel")) {
     $(".travel-icon-owl.owl-carousel").owlCarousel({    
         loop:false,
         nav:false,
+        margin:10,
         responsive:{
             0:{
                 items:6
@@ -349,3 +350,4 @@ if ($( ".travel-icon-owl" ).hasClass("owl-carousel")) {
         }
     });
 }
+
