@@ -560,18 +560,19 @@ a.tablist-link.active.show::after,
   transition: .5s width;
 }
 a.tablist-link.active::after, 
+a.tablist-link.active.show::after, 
 a.tablist-link.active.show:hover::after, 
 .tablist-link:hover::after {
   width: 100%;
   transition: width .5s;
 }
-.afp-tab-box .nav-tabs li a.tablist-link.active,
-.afp-tab-box .nav-tabs li a.tablist-link:hover.active.show{
+.afp-tab-box .nav-tabs li a.tablist-link.active.show, 
+.afp-tab-box .nav-tabs li a.tablist-link.active{
   border: none;
   background: transparent;
   font-weight: 700;
 }
-.afp-tab-box .nav-tabs li a.tablist-link.active.show, 
+.afp-tab-box .nav-tabs li a.tablist-link:hover.active.show, 
 .afp-tab-box .nav-tabs li a.tablist-link:hover.active{
   border: none;
   background: transparent;
