@@ -267,7 +267,7 @@ if ($( ".tablist-swiper" ).hasClass("swiper-container")) {
         freeMode: true
     });
 }
-if ($( ".travel-featuredbox" ).hasClass("swiper-container")) {
+if (document.getElementById("nav-tab-featured")) {
     var swiper = new Swiper('.travel-featuredbox.swiper-container', {
         slidesPerView: 2,
         spaceBetween: 10,
