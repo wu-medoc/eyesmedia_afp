@@ -188,14 +188,15 @@
   border-bottom: 1px solid #ccc;
 }
 .travel-featured .item-body {
-  padding: 0;
   border-top-left-radius: .5em;
   border-top-right-radius: .5em;
   text-align: left;
 }
-.travel-featured .item-img .rwdimg-h65{
+.travel-featured .item-img {
   border-top-left-radius: .5em;
   border-top-right-radius: .5em;
+  width: 100%;
+  height: auto;
 }
 .travel-featured .item-title {
   font-weight: bold;
@@ -231,14 +232,14 @@
 }
 .travel-featured .tablist-panes{
   position: relative;
-  padding-bottom: 22em;
-}
-.travel-featured .tab-pane{
-  position: absolute;
+  padding-bottom: 20em;
 }
 @media screen and (max-width: 767px) {
-  .travel-featured .tablist-panes{
+  .travel-featured .tablist-panes {
     position: relative;
     padding-bottom: 12em;
   }
+}
+.travel-featured .tab-pane{
+  position: absolute;
 }

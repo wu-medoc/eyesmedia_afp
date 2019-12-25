@@ -1533,12 +1533,6 @@ td.linebt-td,
   margin-bottom: 5px;
 }
 
-.travel-topic.owl-carousel .owl-item img:hover,
-.travel-hot.owl-carousel .owl-item img:hover {
-  -webkit-transform: scale(1.2);
-  transform: scale(1.2);
-}
-
 .owl-carousel.owl-theme .item .img-box img {
   width: auto;
   height: 5em;
