@@ -269,6 +269,7 @@ if ($( ".tablist-swiper" ).hasClass("swiper-container")) {
 }
 if (document.getElementById("nav-tab-featured")) {
     var swiper = new Swiper('.travel-featuredbox.swiper-container', {
+        freeMode: true,
         slidesPerView: 2,
         spaceBetween: 10,
         breakpoints: {
@@ -283,10 +284,9 @@ if (document.getElementById("nav-tab-featured")) {
 if ($( ".travel-topicbox" ).hasClass("swiper-container")) {
     var swiper = new Swiper('.travel-topicbox.swiper-container', {
         pagination: '.travel-topicbox .swiper-pagination',
-        slidesPerView: 2,
-        paginationClickable: true,
-        spaceBetween: 10,
         freeMode: true,
+        slidesPerView: 2,
+        spaceBetween: 10,
         breakpoints: {
           1024: {
             slidesPerView: 3,

@@ -188,17 +188,14 @@
   border-bottom: 1px solid #ccc;
 }
 .travel-featured .item-body {
-  width: 100%;
   padding: 0;
   border-top-left-radius: .5em;
   border-top-right-radius: .5em;
   text-align: left;
 }
-.travel-featured .item-img {
+.travel-featured .item-img .rwdimg-h65{
   border-top-left-radius: .5em;
   border-top-right-radius: .5em;
-  width: 100%;
-  height: auto;
 }
 .travel-featured .item-title {
   font-weight: bold;
@@ -242,6 +239,6 @@
 @media screen and (max-width: 767px) {
   .travel-featured .tablist-panes{
     position: relative;
-    padding-bottom: 11em;
+    padding-bottom: 12em;
   }
 }
