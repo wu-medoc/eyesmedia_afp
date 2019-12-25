@@ -179,10 +179,6 @@
       overflow: hidden;
       width: 110vw;
   }
-  .travel-featured .tablist-panes{
-    position: relative;
-    padding-bottom: 14em;
-  }
 }
 .travel-featured .swiper-wrapper{
   padding-bottom: 15px;
@@ -240,4 +236,10 @@
 }
 .travel-featured .tab-pane{
   position: absolute;
+}
+@media screen and (max-width: 767px) {
+  .travel-featured .tablist-panes{
+    position: relative;
+    padding-bottom: 15em;
+  }
 }
