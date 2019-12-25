@@ -212,6 +212,8 @@
 .travel-featured .item-img {
   border-top-left-radius: .5em;
   border-top-right-radius: .5em;
+  width: 100%;
+  height: auto;
 }
 
 .travel-featured .item-title {

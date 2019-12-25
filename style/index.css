@@ -1246,6 +1246,7 @@ a.tablist-link.active.show:hover::after,
 
 .swiper-container img {
   width: 100%;
+  height: auto;
 }
 
 .field-icon {
