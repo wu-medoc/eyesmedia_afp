@@ -259,95 +259,75 @@ if ($( ".index-owl" ).hasClass("owl-carousel")) {
     });
 }
 
-// owl-carousel JS for travel
-if ($( ".tablist-owl" ).hasClass("owl-carousel")) {
-    $(".tablist-owl.owl-carousel").owlCarousel({    
-        loop:false,
-        nav:false,
-        margin:5,    
-        responsive:{
-            0:{
-                items:6
-            },
-            600:{
-                items:10
-            },
-            1000:{
-                items:15
-            }
-        }
+// swiper JS for travel
+if ($( ".tablist-swiper" ).hasClass("swiper-container")) {
+    var swiper = new Swiper('.tablist-swiper.swiper-container', {
+        slidesPerView: 1,
+        spaceBetween: 10,
+        freeMode: true
     });
 }
-if ($( ".travel-featured-owl" ).hasClass("owl-carousel")) {
-    $(".travel-featured-owl.owl-carousel").owlCarousel({    
-        loop:true,
-        nav:false,
-        margin:10,
-        responsive:{
-            0:{
-                items:2
-            },
-            600:{
-                items:2
-            },
-            1000:{
-                items:3
-            }
-        }
+if ($( ".travel-featuredbox" ).hasClass("swiper-container")) {
+    var swiper = new Swiper('.travel-featuredbox.swiper-container', {
+        slidesPerView: 2,
+        spaceBetween: 10,
+        breakpoints: {
+          640: {
+            slidesPerView: 2,
+            spaceBetween: 10,
+          },
+          768: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+          },
+          1024: {
+            slidesPerView: 3,
+            spaceBetween: 20,
+          },
+        },
+        loop: true
     });
 }
-if ($( ".travel-topic-owl" ).hasClass("owl-carousel")) {
-    $(".travel-topic-owl.owl-carousel").owlCarousel({    
-        loop:true,
-        nav:false,
-        margin:10,
-        responsive:{
-            0:{
-                items:2
-            },
-            600:{
-                items:3
-            },
-            1000:{
-                items:3
-            }
-        }
-    });   
-}
-if ($( ".travel-hot-owl" ).hasClass("owl-carousel")) {
-    $(".travel-hot-owl.owl-carousel").owlCarousel({    
-        loop:true,
-        nav:false,
-        margin:10,
-        responsive:{
-            0:{
-                items:4
-            },
-            600:{
-                items:5
-            },
-            1000:{
-                items:6
-            }
-        }
+if ($( ".travel-topicbox" ).hasClass("swiper-container")) {
+    var swiper = new Swiper('.travel-topicbox.swiper-container', {
+        pagination: '.travel-topicbox .swiper-pagination',
+        slidesPerView: 1.5,
+        paginationClickable: true,
+        spaceBetween: 10,
+        freeMode: true,
+        breakpoints: {
+          640: {
+            slidesPerView: 2,
+            spaceBetween: 10,
+          },
+          768: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+          },
+          1024: {
+            slidesPerView: 3,
+            spaceBetween: 20,
+          },
+        },
+        loop: false
     });
 }
-if ($( ".travel-icon-owl" ).hasClass("owl-carousel")) {
-    $(".travel-icon-owl.owl-carousel").owlCarousel({    
-        loop:false,
-        nav:false,
-        margin:10,
-        responsive:{
-            0:{
-                items:6
-            },
-            600:{
-                items:6
-            },
-            1000:{
-                items:10
-            }
-        }
+if ($( ".travel-hotbox" ).hasClass("swiper-container")) {
+    var swiper = new Swiper('.travel-hotbox.swiper-container', {
+        pagination: '.travel-hotbox .swiper-pagination',
+        slidesPerView: 4,
+        paginationClickable: true,
+        spaceBetween: 20,
+        freeMode: true
+    });
+}
+if ($( ".travel-box" ).hasClass("swiper-container")) {
+    var swiper = new Swiper('.travel-box.swiper-container', {
+        pagination: '.travel-box .swiper-pagination',
+        slidesPerView: 5,
+        slidesPerColumn: 2,
+        paginationClickable: true,
+        spaceBetween: 10
     });
 }
 

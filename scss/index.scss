@@ -30,12 +30,26 @@ body.is-open-country .country-box {
 /* header kv-box*/
 .center{
   position: absolute;
-  top: 5%;
+  top: 45%;
   left: 50%;
   -webkit-transform: translate(-50%, 5%);
   transform: translate(-50%, 5%);
 }
-
+.center-v{
+      /* Center slide text vertically */
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      -webkit-justify-content: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      -webkit-align-items: center;
+      align-items: center;
+}
 @media screen and (min-width: 768px){
   #pc-top 
   {
@@ -528,8 +542,8 @@ body.is-open-country .country-box {
   display: inline-block;
   color: #182B56;
 }
-.tablist-link.active:hover::after, 
-.tablist-link.active.show:hover::after,
+a.tablist-link.active:hover::after, 
+a.tablist-link.active.show::after,
 .tablist-link::after {
   content: '';
   display: block;
@@ -545,18 +559,26 @@ body.is-open-country .country-box {
   -webkit-transition: .5s width;
   transition: .5s width;
 }
-.tablist-link.active::after, 
-.tablist-link.active.show::after, 
+a.tablist-link.active::after, 
+a.tablist-link.active.show:hover::after, 
 .tablist-link:hover::after {
   width: 100%;
   transition: width .5s;
 }
-.afp-tab-box .nav-tabs li a.active.show, 
-.afp-tab-box .nav-tabs li a.active, 
-.afp-tab-box .nav-tabs li a:hover {
+.afp-tab-box .nav-tabs li a.tablist-link.active,
+.afp-tab-box .nav-tabs li a:hover.active.show{
   border: none;
   background: transparent;
   font-weight: 700;
+}
+.afp-tab-box .nav-tabs li a.active.show, 
+.afp-tab-box .nav-tabs li a:hover.active{
+  border: none;
+  background: transparent;
+  font-weight: 200;
+}
+.tablist-panes{
+  position: relative;
 }
 .afp-tab-box .tab-content .content-list {
   display: -webkit-box;
