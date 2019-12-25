@@ -1944,9 +1944,15 @@ td.linebt-td,
   background-repeat: no-repeat;
   background-size:cover;
 }
-.rwdimg img{
+.rwdimg-h55 {
+  display:block;
   width: 100%;
-  visibility: hidden;
+  height: 0;
+  padding-bottom:55%;
+  overflow:hidden;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size:cover;
 }
 
 /* txt-line-clamp */
