@@ -566,13 +566,13 @@ a.tablist-link.active.show:hover::after,
   transition: width .5s;
 }
 .afp-tab-box .nav-tabs li a.tablist-link.active,
-.afp-tab-box .nav-tabs li a:hover.active.show{
+.afp-tab-box .nav-tabs li a.tablist-link:hover.active.show{
   border: none;
   background: transparent;
   font-weight: 700;
 }
-.afp-tab-box .nav-tabs li a.active.show, 
-.afp-tab-box .nav-tabs li a:hover.active{
+.afp-tab-box .nav-tabs li a.tablist-link.active.show, 
+.afp-tab-box .nav-tabs li a.tablist-link:hover.active{
   border: none;
   background: transparent;
   font-weight: 200;

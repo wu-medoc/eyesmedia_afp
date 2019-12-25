@@ -581,14 +581,14 @@ a.tablist-link.active.show:hover::after,
 }
 
 .afp-tab-box .nav-tabs li a.tablist-link.active,
-.afp-tab-box .nav-tabs li a:hover.active.show {
+.afp-tab-box .nav-tabs li a.tablist-link:hover.active.show {
   border: none;
   background: transparent;
   font-weight: 700;
 }
 
-.afp-tab-box .nav-tabs li a.active.show,
-.afp-tab-box .nav-tabs li a:hover.active {
+.afp-tab-box .nav-tabs li a.tablist-link.active.show,
+.afp-tab-box .nav-tabs li a.tablist-link:hover.active {
   border: none;
   background: transparent;
   font-weight: 200;
@@ -1531,6 +1531,12 @@ td.linebt-td,
   box-sizing: border-box;
   position: relative;
   margin-bottom: 5px;
+}
+
+.travel-topic.owl-carousel .owl-item img:hover,
+.travel-hot.owl-carousel .owl-item img:hover {
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
 }
 
 .owl-carousel.owl-theme .item .img-box img {
