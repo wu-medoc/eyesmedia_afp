@@ -267,12 +267,19 @@ if ($( ".tablist-swiper" ).hasClass("swiper-container")) {
         freeMode: true
     });
 }
-if (document.getElementById("nav-tab-featured")) {
+if ($( ".travel-featuredbox" ).hasClass("swiper-container")) {
     var swiper = new Swiper('.travel-featuredbox.swiper-container', {
-        freeMode: true,
         slidesPerView: 2,
         spaceBetween: 10,
         breakpoints: {
+          640: {
+            slidesPerView: 2,
+            spaceBetween: 10,
+          },
+          768: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+          },
           1024: {
             slidesPerView: 3,
             spaceBetween: 20,
@@ -284,16 +291,25 @@ if (document.getElementById("nav-tab-featured")) {
 if ($( ".travel-topicbox" ).hasClass("swiper-container")) {
     var swiper = new Swiper('.travel-topicbox.swiper-container', {
         pagination: '.travel-topicbox .swiper-pagination',
-        freeMode: true,
-        slidesPerView: 2,
+        slidesPerView: 1.5,
+        paginationClickable: true,
         spaceBetween: 10,
+        freeMode: true,
         breakpoints: {
+          640: {
+            slidesPerView: 2,
+            spaceBetween: 10,
+          },
+          768: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+          },
           1024: {
             slidesPerView: 3,
             spaceBetween: 20,
           },
         },
-        loop: true
+        loop: false
     });
 }
 if ($( ".travel-hotbox" ).hasClass("swiper-container")) {
@@ -302,8 +318,7 @@ if ($( ".travel-hotbox" ).hasClass("swiper-container")) {
         slidesPerView: 4,
         paginationClickable: true,
         spaceBetween: 20,
-        freeMode: true,
-        loop: true
+        freeMode: true
     });
 }
 if ($( ".travel-box" ).hasClass("swiper-container")) {
@@ -312,8 +327,7 @@ if ($( ".travel-box" ).hasClass("swiper-container")) {
         slidesPerView: 5,
         slidesPerColumn: 2,
         paginationClickable: true,
-        spaceBetween: 10,
-        loop: true
+        spaceBetween: 10
     });
 }
 
