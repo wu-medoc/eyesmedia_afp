@@ -164,9 +164,6 @@
   border-radius: .4rem;
   overflow: hidden;
   position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   padding-left: 0;
   padding-right: 0;
 }
