@@ -1,3 +1,5 @@
+@import '../style/module/variable';
+
 body.is-open-aside {
   overflow-y: hidden;
 }
@@ -647,7 +649,21 @@ a.tablist-link.active.show:hover::after,
   -webkit-transition: .25s all ease-in;
   transition: .25s all ease-in;
 }
-
+@media screen and (min-width: 640px){
+  .more-link-aside {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: -100%;
+    width: 60%;
+    height: 100%;
+    overflow-y: scroll;
+    background-color: #fff;
+    z-index: 200;
+    -webkit-transition: .25s all ease-in;
+    transition: .25s all ease-in;
+  }
+}
 .more-link-aside.edit-mode .close-btn {
   display: none;
 }
@@ -1227,10 +1243,6 @@ a.tablist-link.active.show:hover::after,
   font-weight: 700;
 }
 
-.swiper-container img {
-  width: 100%;
-  height: auto;
-}
 
 .field-icon {
   float: right;
@@ -1238,6 +1250,18 @@ a.tablist-link.active.show:hover::after,
   margin-top: -25px;
   position: relative;
   z-index: 2;
+}
+
+/* swiper */
+.swiper-container {
+  width: 100%;
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.swiper-container img {
+  width: 100%;
+  height: auto;
 }
 
 /* footer for-pc*/
@@ -1839,7 +1863,6 @@ td.linebt-td,
   position: absolute;
   top: 0;
   width: 2px;
-  display: inline;
   z-index: 1000;
 }
 
@@ -1927,7 +1950,7 @@ td.linebt-td,
 .rwdimg {
   display:block;
   width: 100%;
-  height: 0;
+  height: auto;
   padding-bottom:100%;
   overflow:hidden;
   background-position: center center;
@@ -1937,7 +1960,7 @@ td.linebt-td,
 .rwdimg-h65 {
   display:block;
   width: 100%;
-  height: 0;
+  height: auto;
   padding-bottom:65%;
   overflow:hidden;
   background-position: center center;
@@ -1947,14 +1970,33 @@ td.linebt-td,
 .rwdimg-h55 {
   display:block;
   width: 100%;
-  height: 0;
+  height: auto;
   padding-bottom:55%;
   overflow:hidden;
   background-position: center center;
   background-repeat: no-repeat;
   background-size:cover;
 }
-
+.rwdimg-h40 {
+  display:block;
+  width: 100%;
+  height: auto;
+  padding-bottom:40%;
+  overflow:hidden;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size:cover;
+}
+.rwdimg-h20 {
+  display:block;
+  width: 100%;
+  height: auto;
+  padding-bottom:20%;
+  overflow:hidden;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size:cover;
+}
 /* txt-line-clamp */
 .txt-line-clamp1 {
   overflow:hidden;

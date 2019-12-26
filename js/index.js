@@ -262,7 +262,6 @@ if ($( ".index-owl" ).hasClass("owl-carousel")) {
 // swiper JS for travel
 if ($( ".tablist-swiper" ).hasClass("swiper-container")) {
     var swiper = new Swiper('.tablist-swiper.swiper-container', {
-        pagination: '.travel-swiper .swiper-pagination',
         paginationClickable: true,
         slidesPerView: 1,
         spaceBetween: 10,
@@ -271,7 +270,6 @@ if ($( ".tablist-swiper" ).hasClass("swiper-container")) {
 }
 if ($( ".travel-featuredbox" ).hasClass("swiper-container"))  {
     var swiper = new Swiper('.travel-featuredbox.swiper-container', {
-        pagination: '.travel-featuredbox .swiper-pagination',
         paginationClickable: true,
         slidesPerView: 2,
         spaceBetween: 10,
@@ -282,37 +280,43 @@ if ($( ".travel-featuredbox" ).hasClass("swiper-container"))  {
           },
         },
         loop: true
+        //建議資料多時,關閉loop
     });
 }
 if ($( ".travel-topicbox" ).hasClass("swiper-container")) {
     var swiper = new Swiper('.travel-topicbox.swiper-container', {
-        pagination: '.travel-topicbox .swiper-pagination',
         paginationClickable: true,
         freeMode: true,
         slidesPerView: 1.5,
         spaceBetween: 10,
         breakpoints: {
           1024: {
-            slidesPerView: 2,
+            slidesPerView: 3,
             spaceBetween: 20,
           },
         },
         loop: true
+        //建議資料多時,關閉loop
     });
 }
 if ($( ".travel-hotbox" ).hasClass("swiper-container")) {
     var swiper = new Swiper('.travel-hotbox.swiper-container', {
-        pagination: '.travel-hotbox .swiper-pagination',
-        slidesPerView: 4,
         paginationClickable: true,
-        spaceBetween: 20,
         freeMode: true,
+        slidesPerView: 4,
+        spaceBetween: 20,
+        breakpoints: {
+          1024: {
+            slidesPerView: 6,
+            spaceBetween: 20,
+          },
+        },
         loop: true
+        //建議資料多時,關閉loop
     });
 }
 if ($( ".travel-box" ).hasClass("swiper-container")) {
     var swiper = new Swiper('.travel-box.swiper-container', {
-        pagination: '.travel-box .swiper-pagination',
         slidesPerView: 5,
         slidesPerColumn: 2,
         paginationClickable: true,
@@ -321,3 +325,34 @@ if ($( ".travel-box" ).hasClass("swiper-container")) {
     });
 }
 
+// swiper JS for shopping
+if ($( ".shopping-icon" ).hasClass("swiper-container")) {
+    var swiper = new Swiper('.shopping-icon.swiper-container', {
+        slidesPerView: 5,
+        slidesPerColumn: 2,
+        spaceBetween: 0,
+        pagination: {
+          el: '.shopping-icon .swiper-pagination',
+          clickable: true,
+        },
+    });
+}
+if ($( ".shopping-ad" ).hasClass("swiper-container")) {
+var swiper = new Swiper('.shopping-ad.swiper-container', {
+    scrollbar: {
+      el: '.shopping-ad .swiper-scrollbar',
+      hide: true,
+    },
+  });
+}
+if ($( ".shopping-products" ).hasClass("swiper-container")) {
+    var swiper = new Swiper('.shopping-products.swiper-container', {
+        slidesPerView: 3,
+        spaceBetween: 20,
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        },
+        loop: true
+      });
+    }
