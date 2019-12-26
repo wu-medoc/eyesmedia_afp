@@ -18,6 +18,8 @@ var swiper = new Swiper('.kv-box .swiper-container', {
         disableOnInteraction: false,
         },
 });
+// login.html引入
+$("#loginhtml").load("../login.html");
 
 // ad
 // 超過一張才執行 swiper，並且顯示 pagination
