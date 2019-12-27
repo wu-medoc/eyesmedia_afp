@@ -407,4 +407,22 @@ h6 {
     width: 110vw;
   }
 }
+
+#open-page {
+  position: absolute;
+  top: 0;
+  left: 20%;
+  width: 80%;
+  height: 100%;
+  z-index: 1050;
+  background-color: #fff;
+}
+
+.blur {
+  -webkit-filter: blur(5px);
+  /* Chrome, Opera */
+  -moz-filter: blur(5px);
+  -ms-filter: blur(5px);
+  filter: blur(5px);
+}
 /*# sourceMappingURL=shopping-index.css.map */

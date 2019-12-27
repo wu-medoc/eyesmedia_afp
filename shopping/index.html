@@ -27,6 +27,7 @@
     <link rel="stylesheet" href="../js/vendor/fontawesome/css/solid.css">
     <!-- custom css -->
     <link rel="stylesheet" href="../dist/style/shopping-index.min.css">
+    <link rel="stylesheet" href="../dist/style/animate.min.css">
     <title>eyemedia - afp</title>
 </head>
 
@@ -112,10 +113,10 @@
             <div class="shopping-icon swiper-container">     
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
-                        <a href>    
+                        <button class="open-page">    
                             <img src="../img/shopping/icon_food.svg" alt="">
                             <div class="icon-txt">美食餐券</div>
-                        </a>
+                        </button>
                     </div>  
                     <div class="swiper-slide">
                         <a href>    
@@ -401,7 +402,18 @@
     </footer>
     
     </div>
-
+    <div class="" id="open-mask"></div>
+    <!-- shopping secondary page -->
+    <div class="slideInRight animated d-none" id="open-page">
+        <div class="open-page-food">
+            <div class="title-item close-left">
+                <i class="material-icons">&#xE314;</i>
+            </div>
+            <div class="title-item title-box">
+                篩選與排序
+            </div>
+        </div>
+    </div>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

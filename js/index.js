@@ -358,3 +358,21 @@ if ($( ".shopping-products" ).hasClass("swiper-container")) {
         loop: true
       });
     }
+
+// open-page
+$( ".open-page" ).click(function() {
+    if ($( "#open-page" ).hasClass("slideOutRight animated")) {
+        $( "#open-page" ).removeClass('slideOutRight animated');
+        $( "#open-page" ).addClass('slideInRight animated');
+        $( "#open-page" ).addClass('d-none');
+    }
+    $( "#open-page" ).removeClass('d-none');
+    $( "#open-mask" ).addClass("modal-backdrop fade show");
+    $( ".wrap" ).addClass("blur");
+});
+$( ".close-left" ).click(function() {
+    $( "#open-page" ).removeClass('slideInRight animated');
+    $( "#open-page" ).addClass('slideOutRight animated');
+    $( "#open-mask" ).removeClass("modal-backdrop fade show");
+    $( ".wrap" ).removeClass("blur");
+});

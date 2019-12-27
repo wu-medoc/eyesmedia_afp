@@ -1522,6 +1522,7 @@ td.linebt-td,
   padding: 2px;
   border: 1px solid #ccc;
   border-radius: 20px;
+  z-index: 100;
 }
 
 .owl-stage {
@@ -1629,6 +1630,7 @@ td.linebt-td,
   padding: 2px;
   border: 0px;
   border-radius: 0px;
+  z-index: 100;
 }
 
 .gowhere-owl.owl-carousel .item {
