@@ -184,6 +184,10 @@
   width: auto;
 }
 
+.travel-featured h6 {
+  font-weight: bold;
+}
+
 @media screen and (max-width: 767px) {
   .travel-featured {
     overflow: hidden;

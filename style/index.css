@@ -1514,133 +1514,92 @@ td.linebt-td,
   font-weight: 500;
 }
 
-/* owl-carousel for index icon*/
-.owl-stage-outer {
-  margin-top: 1.2em;
-  margin-left: .4em;
-  margin-right: .5em;
-  padding: 2px;
-  border: 1px solid #ccc;
-  border-radius: 20px;
-  z-index: 100;
+/* swiper for index icon*/
+.index-iconbox .swiper-container {
+  background-color: #fff;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 10px;
+  padding: 0.5em;
+  border: 1px solid #b0b0b0;
 }
 
-.owl-stage {
-  margin-left: -0.5em;
+.index-iconbox .swiper-wrapper {
+  display: -moz-inline-box;
+  display: -webkit-inline-box;
 }
 
-.owl-theme .owl-nav {
-  position: relative;
-  margin-top: -6em;
-  padding-top: 0;
-  height: 6em;
-}
-
-.owl-theme .owl-nav [class*=owl-]:hover {
-  background-color: #ccc;
-}
-
-.owl-carousel.owl-theme .item {
-  margin: 1em 0;
-  padding: 0.6em;
+.index-iconbox .swiper-slide {
   text-align: center;
-  border-right: 1px solid #ccc;
-  font-size: 0.9em;
+  background: #fff;
+  height: calc((100% - 30px) / 2);
+  padding: 0.5em 0.5em;
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
-.owl-carousel.owl-theme .item .img-box {
-  width: 100%;
-  height: 0;
-  padding-bottom: 75%;
-  border-radius: 15px;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  position: relative;
-  margin-bottom: 5px;
-}
-
-.travel-topic.owl-carousel .owl-item img:hover,
-.travel-hot.owl-carousel .owl-item img:hover {
-  -webkit-transform: scale(1.2);
-  transform: scale(1.2);
-}
-
-.owl-carousel.owl-theme .item .img-box img {
+.index-iconbox .swiper-slide img {
   width: auto;
-  height: 5em;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+  height: 3.2em;
 }
 
-.owl-carousel .owl-nav button.owl-prev {
-  float: left;
-  background: 0 0;
-  color: inherit;
-  border: 1px solid #ccc;
-  width: 24px;
-  height: 24px;
-  margin-left: -6px;
-  border-radius: 24px;
-  padding: 0 !important;
+.index-iconbox .swiper-slide:nth-child(n) {
+  border-left: 1px solid #b0b0b0;
+}
+
+.index-iconbox .swiper-slide:nth-child(1) {
+  border-left: 0px;
+}
+
+.index-iconbox .swiper-button-next {
+  top: 60%;
+  right: 10px;
+  width: 1.2em;
+  height: 1.2em;
+  border: 1px solid #b0b0b0;
+  border-radius: 50%;
   background-color: #fff;
 }
 
-.owl-carousel .owl-nav button.owl-next {
-  float: right;
-  background: 0 0;
-  color: inherit;
-  border: 1px solid #ccc;
-  width: 24px;
-  height: 24px;
-  margin-right: -6px;
-  border-radius: 24px;
-  padding: 0 !important;
+.index-iconbox .swiper-button-prev {
+  top: 60%;
+  left: 10px;
+  width: 1.2em;
+  height: 1.2em;
+  border: 1px solid #b0b0b0;
+  border-radius: 50%;
   background-color: #fff;
 }
 
-.owl-carousel .owl-nav button.owl-prev span,
-.owl-carousel .owl-nav button.owl-next span {
-  font-size: 2em;
-  line-height: 0.5em;
-}
-
-.owl-prev i, .owl-next i {
-  -webkit-transform: scale(1, 6);
-          transform: scale(1, 6);
-  color: #ccc;
-}
-
-.owl-dots {
-  display: none;
-}
-
-.index-owl.owl-carousel a {
-  color: #212529;
+.index-iconbox .swiper-button-next:after, .index-iconbox .swiper-button-prev:after {
+  font-family: swiper-icons;
+  font-size: 14px;
+  text-transform: none !important;
+  letter-spacing: 0;
+  text-transform: none;
+  font-variant: initial;
 }
 
 /* owl-carousel for gowhere */
-.gowhere-owl.owl-carousel .owl-stage-outer {
-  margin-top: 0.5em;
-  margin-bottom: 0.5em;
-  margin-left: 0.4em;
-  margin-right: -0.5em;
-  padding: 2px;
-  border: 0px;
-  border-radius: 0px;
-  z-index: 100;
+.go-where-link .swiper-container .swiper-wrapper {
+  padding: 0.5em 0 1em 0;
 }
 
-.gowhere-owl.owl-carousel .item {
-  margin: 0;
-  padding: 8px;
-  text-align: center;
-  border-right: 0px;
+.go-where-link .swiper-container .item {
+  padding: 0.2em;
 }
 
-.gowhere-owl.owl-carousel img {
+.go-where-link .swiper-container img {
   border-radius: 5px;
   -webkit-box-shadow: 0px 1px 5px 0px #b0b0b0;
           box-shadow: 0px 1px 5px 0px #b0b0b0;
