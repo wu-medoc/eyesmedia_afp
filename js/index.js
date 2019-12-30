@@ -229,13 +229,12 @@ $("#webservice_close").click(function () {
     $('#webservice_close').addClass('d-none');
     $('#webservice').removeClass();
 });
-
 // swiper JS for index
 if ($( ".index-gowhere" ).hasClass("swiper-container")) {
     var swiper = new Swiper('.index-gowhere.swiper-container', {
         paginationClickable: true,
         slidesPerView: 4,
-        spaceBetween: 20,
+        spaceBetween: 15,
         freeMode: true
     });
 }
@@ -243,11 +242,9 @@ if ($( ".index-icon" ).hasClass("swiper-container"))  {
     var swiper = new Swiper('.index-icon.swiper-container', {
         paginationClickable: true,
         slidesPerView: 7,
-        spaceBetween: 10,
         breakpoints: {
           1024: {
-            slidesPerView: 9,
-            spaceBetween: 20,
+            slidesPerView: 9
           },
         },
         navigation: {
@@ -257,7 +254,6 @@ if ($( ".index-icon" ).hasClass("swiper-container"))  {
         loop: false
     });
 }
-
 // swiper JS for travel
 if ($( ".tablist-swiper" ).hasClass("swiper-container")) {
     var swiper = new Swiper('.tablist-swiper.swiper-container', {
