@@ -65,38 +65,47 @@ body.on('click', '.drop_menu_toggle', function(){
 
 // 判斷螢幕width
 var windowsize = $('body').width();
-if (windowsize > 767) {
-    $(window).scroll(function() {
-        var stickyOffset = $('#pc-top').offset().top;
-        var stickyHeight = $('#pc-top').outerHeight();
-        var navtabsbox = $('.pc-top');
-        var scroll = $(window).scrollTop();
-        if (scroll >= stickyOffset) {
-            $('.kv-box .swiper-container').addClass('container');
-            $('.pc-top-box').addClass('container');
-        } else {
-            $('.kv-box .swiper-container').removeClass('container');
-            $('.pc-top-box').removeClass('container');
-        }
-    }).trigger('scroll');  
+if ($('#pc-top').length>0) {
+    if (windowsize > 767) {
+        $(window).scroll(function() {
+            var stickyOffset = $('#pc-top').offset().top;
+            var stickyHeight = $('#pc-top').outerHeight();
+            var navtabsbox = $('.pc-top');
+            var scroll = $(window).scrollTop();
+            if (scroll >= stickyOffset) {
+                $('.kv-box .swiper-container').addClass('container');
+                $('.pc-top-box').addClass('container');
+            } else {
+                $('.kv-box .swiper-container').removeClass('container');
+                $('.pc-top-box').removeClass('container');
+            }
+        }).trigger('scroll');  
+    }
 }
 
 // body.width > 767 control
-if (windowsize > 767) {
-    $('.travel-hot').addClass('container');
-    $('.travel-topic').addClass('container');
-    $('.travel-featured').addClass('container');
-    $('.for-sub .top-item.climate').show();
-    $('.for-sub .top-item.input-box').show();
-}else{
-    $('.travel-hot').removeClass('container');
-    $('.travel-topic').removeClass('container');
-    $('.travel-featured').removeClass('container');
-    $('.for-sub .top-item.climate').hide();
-    $('.for-sub .top-item.input-box').hide();
-    $('.for-sub .top-item.more-horiz.has-info').addClass('ml-auto');
+if ($('.travel').length>0) {
+    if (windowsize > 767) {
+        $('.travel-hot').addClass('container');
+        $('.travel-topic').addClass('container');
+        $('.travel-featured').addClass('container');
+    }else{
+        $('.travel-hot').removeClass('container');
+        $('.travel-topic').removeClass('container');
+        $('.travel-featured').removeClass('container');
+    }
 }
 
+if ($('.for-sub').length>0) {
+    if (windowsize > 767) {
+        $('.for-sub .top-item.climate').show();
+        $('.for-sub .top-item.input-box').show();
+    }else{
+        $('.for-sub .top-item.climate').hide();
+        $('.for-sub .top-item.input-box').hide();
+        $('.for-sub .top-item.more-horiz.has-info').addClass('ml-auto');
+    }
+}
 // 自訂連結更多按鈕 - 開啟側欄
 $('.more-btn').on('click', function(){
     body.addClass('is-open-aside');
@@ -369,3 +378,18 @@ $( ".close-left" ).click(function() {
     $( "#open-mask" ).removeClass("modal-backdrop fade show");
     $( ".wrap" ).removeClass("blur");
 });
+if($('#open-page').length>0) {
+    var wrapheight = $('#products-list').innerHeight();
+    var openheight = $('#open-page').outerHeight();  
+    var openheight1 = (wrapheight-openheight)/3.5;
+    if (openheight < wrapheight) {
+        $('#open-page').css({'padding-bottom': openheight1});
+    }  
+}
+
+/* masonry */
+if($('.grid').length>0) {
+    $('.grid').masonry({
+        itemSelector: '.products-item'
+    });
+}
