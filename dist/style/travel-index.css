@@ -217,6 +217,16 @@
   height: auto;
 }
 
+.travel-featured .item-favorite {
+  position: absolute;
+  top: 50%;
+  right: 5%;
+  bottom: 0;
+  width: 2em;
+  height: auto;
+  color: #fff;
+}
+
 .travel-featured .item-title {
   font-weight: bold;
   color: #1E4067;
