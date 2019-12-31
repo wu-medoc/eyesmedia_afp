@@ -350,16 +350,28 @@ var swiper = new Swiper('.shopping-ad.swiper-container', {
   });
 }
 if ($( ".shopping-products" ).hasClass("swiper-container")) {
-    var swiper = new Swiper('.shopping-products.swiper-container', {
-        slidesPerView: 3,
-        spaceBetween: 20,
-        pagination: {
-          el: '.swiper-pagination',
-          clickable: true,
-        },
-        loop: true
-      });
-    }
+var swiper = new Swiper('.shopping-products.swiper-container', {
+    slidesPerView: 3,
+    spaceBetween: 20,
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+    },
+    loop: true
+    });
+}
+if ($( ".shopping-productsimg" ).hasClass("swiper-container")) {
+var swiper = new Swiper('.shopping-productsimg.swiper-container', {
+    pagination: {
+        el: '.shopping-productsimgbox .swiper-pagination',
+        type: 'fraction',
+      },
+      navigation: {
+        nextEl: '.shopping-productsimgbox .swiper-button-next',
+        prevEl: '.shopping-productsimgbox .swiper-button-prev',
+      },
+    });
+}
 
 // open-page
 $( ".open-page" ).click(function() {

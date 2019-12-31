@@ -447,3 +447,107 @@ h6 {
         }
     }
 }
+
+
+/* products-detail */
+.shopping-productsdetail {
+    
+    .shopping-productsdetailbox {
+        width: 100%;
+        padding-right: 0;
+        padding-left: 0;
+        margin-right: auto;
+        margin-left: auto;
+        position: relative;
+    }
+    .discount-price{
+        z-index: 10;
+        position: absolute;
+        top: 10px;
+        left: 0;
+        background: linear-gradient(270deg, #568EE3 0%, #36D1DB 100%);
+        padding: 2px 5px;
+        color: $default-white;
+        &:before, &:after{
+            content: '';
+            display: block;
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            right: -10px;
+        }
+        &:before{
+            border-width: 14px 10px 0 0;
+            border-color: #568EE3 transparent transparent transparent;
+            top: 0;
+        }
+        &:after{
+            border-width: 14px 0 0 10px;
+            border-color: transparent transparent transparent #568EE3;
+            bottom: 0;
+        }
+    }
+    .shopping-productsimgbox {
+        .swiper-pagination-fraction {
+            bottom: 0.5em;
+            right: 0.5em;
+            left: auto;
+            width: auto;
+            padding: 0.2em 0.4em;
+            font-weight: 700;
+            line-height: 1;
+            white-space: nowrap;
+            vertical-align: baseline;
+            border-radius: 0.5em;
+            background-color: #eee;
+            opacity: 0.7;
+        }
+    }
+    .add-favorite {
+        float: right;
+        position: absolute;
+        right: 1em;
+        top: 1em;
+        z-index: 10;
+        img {
+            width: 2.5em;
+        }
+    }
+    .products-title {        
+        color: $blue-dark;
+        font-weight: bold;
+        padding: 0 0.5em;
+    }
+    .products-price {
+        padding: 0 0.5em;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        align-items: center;
+        .price-asking {
+            color: tomato;
+            font-weight: bold;
+            font-size: 0.9em;
+        }
+        .price-original {
+            color: gray;
+            text-decoration: line-through;
+            text-align: bottom;
+            font-size: 0.75em; 
+            text-align: right;
+        }
+    }         
+}
+@media screen and (max-width: 767px) {
+    .shopping-productsdetail {
+        .shopping-productsdetailbox {
+            width: 100%;
+            padding-right: 0;
+            padding-left: 0;
+        }
+    }
+}

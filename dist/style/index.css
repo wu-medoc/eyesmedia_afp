@@ -2192,6 +2192,14 @@ td.linebt-td,
   height: 2em;
 }
 
+.header-42 {
+  width: 100%;
+  height: 42px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
 .header-90 {
   width: 100%;
   height: 90px;
