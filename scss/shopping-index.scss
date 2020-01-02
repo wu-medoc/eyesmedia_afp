@@ -514,7 +514,13 @@ h6 {
             width: 2.5em;
         }
     }
-    .products-title {        
+    .item {
+        padding-top: 1em;
+        &:nth-child(1) {
+            padding-top: 0;
+        }
+    }
+    .products-title {   
         color: $blue-dark;
         font-weight: bold;
         padding: 0 0.5em;
@@ -531,7 +537,12 @@ h6 {
         .price-asking {
             color: tomato;
             font-weight: bold;
-            font-size: 0.9em;
+            font-size: 1em;
+            span {
+                color: gray;
+                font-size: 0.75em; 
+                text-align: right;
+            }
         }
         .price-original {
             color: gray;
@@ -540,7 +551,55 @@ h6 {
             font-size: 0.75em; 
             text-align: right;
         }
-    }         
+    }     
+    .products-quantity {         
+        input.form-control.text-center {
+            width: 50px;   
+            padding: 2px 4px;
+            height: 1.8em;
+            border: 0px
+        }
+        .input-group-btn button{
+            font-size: 0.7em;
+            padding: 3px 6px;
+        }   
+    }    
+    .products-btn-addcart button, 
+    .products-btn-buynow button{
+        height: 2em;
+    }
+    .products-store{
+        background-color: #eee;
+        padding: 0.5em 0 0 0;
+        .products-storebox{
+            background-color: #fff;
+            padding: 0.5em 1em 0 1em;
+        }
+        .products-store-btn button{
+            font-size: 0.9em;
+            margin-top: 0px;
+            width: 80px;
+        }        
+        .img-box{
+            width: 4.5em;
+            height: 4.5em;
+            border: 1px #eee solid;
+            padding: 10px 5px;
+            border-radius: 50%;    
+            img {                
+                width: 100%;
+                height: auto;
+                vertical-align: middle;
+                top:50%;
+                transform:translateY(50%);
+            }
+        }
+        .store-title {
+            font-weight: bold;
+            font-size: 0.9em;
+            padding-left: 0.5em;
+        }
+    }
 }
 @media screen and (max-width: 767px) {
     .shopping-productsdetail {

@@ -1325,6 +1325,7 @@ footer.for-pc li {
   background-color: transparent;
 }
 
+#favoriteModal .modal-header,
 #messageModal .modal-header,
 #loginModalCenter .modal-header,
 #registeredModalCenter .modal-header {

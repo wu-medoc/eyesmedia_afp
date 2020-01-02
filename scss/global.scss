@@ -129,11 +129,38 @@ a:hover, a:focus, a:visited {
   background: -webkit-gradient(linear, right top, left top, from(#568EE3), to(#36D1DB));
   background: linear-gradient(270deg, #568EE3 0%, #36D1DB 100%);
   border-radius: 30px;
-  padding: 15px;
+  padding: 0 15px;
   font-size: 18px;
   margin-top: 15px;
   outline: none;
 }
+.default-outline-btn {
+  width: 100%;
+  color: #568EE3;
+  background: #fff;
+  border: 2px transparent;
+  border-radius: 30px;
+  background-image: linear-gradient(white, white), radial-gradient(circle at top left, #568EE3,#36D1DB);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  padding: 2px;
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 15px;
+  outline: none;
+  &:active, 
+  &:hover{    
+    color: #fff;
+    background: -webkit-gradient(linear, right top, left top, from(#568EE3), to(#36D1DB));
+    background: linear-gradient(270deg, #568EE3 0%, #36D1DB 100%);
+    border-radius: 30px;
+    padding: 0 15px;
+    font-size: 18px;
+    margin-top: 15px;
+    outline: none;
+  }
+}
+
 
 footer.for-mobile {
   position: fixed;

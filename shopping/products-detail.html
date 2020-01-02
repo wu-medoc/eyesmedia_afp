@@ -77,21 +77,69 @@
                     8折
                 </div>
                 <div class="add-favorite">
-                    <img src="../img/shopping/icon_favorite_gray.svg">
+                    <button type="button" data-toggle="modal" data-target=".bd-example-modal-sm"><img src="../img/shopping/icon_favorite_gray.svg"></button>
                 </div>
             </div>
             <div class="linebt-row"></div>
-            <div class="flex-inline-between p-3">
-                <div class="products-title">
-                    Apple iPhone XS 256GB                                
+            <div class="products-info p-3">
+                <div class="item flex-inline-between">
+                    <div class="products-title">
+                        Apple iPhone XS 256GB                                
+                    </div>
+                    <div class="products-price d-block border-left">
+                        <div class="price-original">$37,000</div>
+                        <div class="price-asking">$30,320 <span>/ 組</span></div>
+                    </div>
                 </div>
-                <div class="products-price">
-                    <div class="price-original">$37,000</div>
-                    <div class="price-asking">$30,320</div>
+                <div class="item flex-inline-between">
+                    <div class="products-title">
+                        商品規格                                
+                    </div>
+                    <div class="products-norm">
+                        <a href class="active">A款-黑色<i class="material-icons">&#xE315;</i></a>
+                    </div>
+                </div>
+                <div class="item flex-inline-between">
+                    <div class="products-title">
+                        數量                                
+                    </div>
+                    <div class="products-quantity">
+                        <div class="flex-inline-between number-spinner">
+                            <div class="input-group-btn data-dwn">
+                                <button class="btn btn-default btn-outline-secondary" data-dir="dwn"><i class="fas fa-minus"></i></button>
+                            </div>
+                            <div><input type="text" class="form-control text-center" value="1" min="0" max="3"></div>
+                            <div class="input-group-btn data-up">
+                                <button class="btn btn-default btn-outline-info" data-dir="up"><i class="fas fa-plus"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item flex-inline-between">
+                    <div class="products-btn-addcart w-50 pr-1">
+                        <button type="button" class="btn default-outline-btn">加入購物車</button>                           
+                    </div>
+                    <div class="products-btn-buynow w-50">                        
+                        <button type="button" class="btn default-btn">直接購買</button>      
+                    </div>
+                </div>
+            </div>            
+            <div class="products-store">
+                <div class="products-storebox flex-inline-between center-v">
+                    <div class="products-store-info d-flex d-inline center-v">
+                        <div class="img-box">
+                            <img src="../img/shopping/store/everrich.png" class="" alt="">
+                        </div>
+                        <div class="store-title">昇恆昌免稅購物網站</div>                         
+                    </div>
+                    <div class="products-store-btn">                        
+                        <button type="button" class="btn default-outline-btn">查看賣場</button>      
+                    </div>
                 </div>
             </div>
         </div>
         <div class="h-50 d-inline-block"></div>
+        <div id="loginhtml"></div>
     </main>
         
     </div>
