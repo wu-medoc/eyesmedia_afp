@@ -2065,12 +2065,25 @@ td.linebt-td,
 }
 
 /* header-secondary */
-.header-secondary{
+.header-secondary {
   background-color: #fff;
   line-height: 3em;
   .title-name{
     font-size: 1.3em;
     font-weight: bold;
+  }
+}
+.title-box {
+  line-height: 3em;
+  .title-name{
+    font-size: 1.3em;
+    font-weight: bold;
+  }
+  .icon-btn button {
+    border: 0;
+    padding: 0;
+    background-color: transparent;
+    cursor: pointer;
   }
 }
 .header-sort{
@@ -2105,4 +2118,7 @@ td.linebt-td,
   display: inline-flex!important;
   flex-direction:row;
   justify-content: space-between;
+}
+.line-height3 {
+  line-height: 3em;
 }
