@@ -103,6 +103,10 @@ a:hover, a:focus, a:visited {
   text-decoration: none;
 }
 
+.hasBg {
+  background-color: #F8F8F8;
+}
+
 .for-mobile {
   display: none;
 }

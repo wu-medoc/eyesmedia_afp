@@ -345,23 +345,14 @@ h6 {
 /* products-list */
 .products-listbox {
     background-color: #eee;
-    padding-top: 1%;
-    padding-left: 1%;    
-    padding-right: 1%;
+    padding-top: 2%;
+    padding-left: 2%;   
     margin: 0 auto;
-    .products-sizer {
-        width: 32.3%;   
-    }
+
     .products-item {
-        width: 32.3%;   
-        background-color: #fff;  
-        &:nth-child(even){
-            margin-right: 1%;
-            margin-bottom: 1%;
-        }   
-        &:nth-child(odd){
-            margin-bottom: 1%;
-        } 
+        width: 32.1%;   
+        background-color: #fff; 
+        margin-bottom: 10px;
         .products-title {
             color: $blue-dark;
             font-weight: bold;
@@ -398,21 +389,12 @@ h6 {
 @media screen and (max-width: 767px) {
     .products-listbox {
         background-color: #eee;
-        padding: 5px;
+        padding: 10px;
         margin: 0 auto;
-        .products-sizer {
-            width: 48.4%;   
-        }
         .products-item {
-            width: 48.4%;   
+            width: 47%;   
             background-color: #fff;  
-            &:nth-child(even){
-                margin-right: 6px;
-                margin-bottom: 5px;
-            }   
-            &:nth-child(odd){
-                margin-bottom: 5px;
-            } 
+            margin-bottom: 10px;
             .products-title {
                 color: $blue-dark;
                 font-weight: bold;
@@ -451,7 +433,7 @@ h6 {
 
 /* products-detail */
 .shopping-productsdetail {
-    
+    background-color: #fff;
     .shopping-productsdetailbox {
         width: 100%;
         padding-right: 0;
@@ -570,7 +552,7 @@ h6 {
     }
     .products-store{
         background-color: #eee;
-        padding: 0.5em 0 0 0;
+        padding: 0.5em 0 0 0; 
         .products-storebox{
             background-color: #fff;
             padding: 0.5em 1em 0 1em;
@@ -579,7 +561,7 @@ h6 {
             font-size: 0.9em;
             margin-top: 0px;
             width: 80px;
-        }        
+        }       
         .img-box{
             width: 4.5em;
             height: 4.5em;
@@ -598,6 +580,51 @@ h6 {
             font-weight: bold;
             font-size: 0.9em;
             padding-left: 0.5em;
+        }
+    }    
+    .products-storecoupon {
+        background-color: #eee;
+        padding: 0.5em 0 0 0;
+        .products-storecouponbox {
+            background-color: #fff;
+            padding: 0.5em 1em 0 1em;
+        }
+        .products-storecoupon-btn button.default-outline-btn {             
+            font-size: 0.9em;
+            margin-top: 0px;
+            width: 100px;
+            border-radius: 6px;
+        } 
+        .storecoupon-title {
+            font-weight: bold;
+            font-size: 0.9em;
+            padding: 0.5em 0.5em 1em 0.5em;
+        }
+    }    
+    .products-tag {
+        background-color: #eee;
+        padding: 0.5em 0 0 0;
+        .products-tagbox {
+            background-color: #fff;
+            padding: 0.5em 1em 0 1em;
+        }
+        .tab-content {
+            color: #182B56;
+            padding-bottom: 3em;
+            .tab-content-title{
+                font-size: 1em;
+                padding: 1em 0 0.5em 0;
+            }
+            h6 {
+                padding: 1em 0 0.5em 0;
+            }
+            p {
+                font-size: 0.9em;
+            }
+            img {
+                width: 100%;
+                height: auto;
+            }
         }
     }
 }

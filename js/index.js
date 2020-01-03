@@ -431,7 +431,8 @@ if($('#open-pagebox1').length>0) {
 /* masonry JS for shopping*/
 if($('.grid').length>0) {
     $('.grid').masonry({
-        itemSelector: '.products-item'
+        itemSelector: '.products-item',
+        gutter: 10
     });
 }
 

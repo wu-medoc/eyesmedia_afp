@@ -411,28 +411,15 @@ h6 {
 /* products-list */
 .products-listbox {
   background-color: #eee;
-  padding-top: 1%;
-  padding-left: 1%;
-  padding-right: 1%;
+  padding-top: 2%;
+  padding-left: 2%;
   margin: 0 auto;
 }
 
-.products-listbox .products-sizer {
-  width: 32.3%;
-}
-
 .products-listbox .products-item {
-  width: 32.3%;
+  width: 32.1%;
   background-color: #fff;
-}
-
-.products-listbox .products-item:nth-child(even) {
-  margin-right: 1%;
-  margin-bottom: 1%;
-}
-
-.products-listbox .products-item:nth-child(odd) {
-  margin-bottom: 1%;
+  margin-bottom: 10px;
 }
 
 .products-listbox .products-item .products-title {
@@ -476,22 +463,13 @@ h6 {
 @media screen and (max-width: 767px) {
   .products-listbox {
     background-color: #eee;
-    padding: 5px;
+    padding: 10px;
     margin: 0 auto;
   }
-  .products-listbox .products-sizer {
-    width: 48.4%;
-  }
   .products-listbox .products-item {
-    width: 48.4%;
+    width: 47%;
     background-color: #fff;
-  }
-  .products-listbox .products-item:nth-child(even) {
-    margin-right: 6px;
-    margin-bottom: 5px;
-  }
-  .products-listbox .products-item:nth-child(odd) {
-    margin-bottom: 5px;
+    margin-bottom: 10px;
   }
   .products-listbox .products-item .products-title {
     color: #182B56;
@@ -529,6 +507,10 @@ h6 {
 }
 
 /* products-detail */
+.shopping-productsdetail {
+  background-color: #fff;
+}
+
 .shopping-productsdetail .shopping-productsdetailbox {
   width: 100%;
   padding-right: 0;
@@ -699,6 +681,62 @@ h6 {
   font-weight: bold;
   font-size: 0.9em;
   padding-left: 0.5em;
+}
+
+.shopping-productsdetail .products-storecoupon {
+  background-color: #eee;
+  padding: 0.5em 0 0 0;
+}
+
+.shopping-productsdetail .products-storecoupon .products-storecouponbox {
+  background-color: #fff;
+  padding: 0.5em 1em 0 1em;
+}
+
+.shopping-productsdetail .products-storecoupon .products-storecoupon-btn button.default-outline-btn {
+  font-size: 0.9em;
+  margin-top: 0px;
+  width: 100px;
+  border-radius: 6px;
+}
+
+.shopping-productsdetail .products-storecoupon .storecoupon-title {
+  font-weight: bold;
+  font-size: 0.9em;
+  padding: 0.5em 0.5em 1em 0.5em;
+}
+
+.shopping-productsdetail .products-tag {
+  background-color: #eee;
+  padding: 0.5em 0 0 0;
+}
+
+.shopping-productsdetail .products-tag .products-tagbox {
+  background-color: #fff;
+  padding: 0.5em 1em 0 1em;
+}
+
+.shopping-productsdetail .products-tag .tab-content {
+  color: #182B56;
+  padding-bottom: 3em;
+}
+
+.shopping-productsdetail .products-tag .tab-content .tab-content-title {
+  font-size: 1em;
+  padding: 1em 0 0.5em 0;
+}
+
+.shopping-productsdetail .products-tag .tab-content h6 {
+  padding: 1em 0 0.5em 0;
+}
+
+.shopping-productsdetail .products-tag .tab-content p {
+  font-size: 0.9em;
+}
+
+.shopping-productsdetail .products-tag .tab-content img {
+  width: 100%;
+  height: auto;
 }
 
 @media screen and (max-width: 767px) {
