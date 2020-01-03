@@ -643,6 +643,9 @@ h6 {
     }
 }
 @media screen and (max-width: 767px) {
+    .shopping-productsdetail .products-tag .tag-topbox {    
+        padding: 0;
+    }
     .shopping-productsdetail {
         .shopping-productsdetailbox {
             width: 100%;
