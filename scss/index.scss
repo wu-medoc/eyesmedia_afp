@@ -2063,6 +2063,30 @@ td.linebt-td,
     color: #979797;
   }
 }
+#open-pageupbox {
+  width: 100%;
+  height: auto;
+  min-height: 50%;
+  z-index: 1050;
+  line-height: 3em;
+  background-color: #fff;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  .open-page-body {
+    padding: 0 0.5em;
+  }
+  .open-page-title {
+    font-weight: bold;
+    background-color: #eee;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+  }
+}
+.btn-gray {
+  border: 1px solid #eee;
+  border-radius: .25em;
+  margin: .25em;
+}
 
 /* header-secondary */
 .header-secondary {

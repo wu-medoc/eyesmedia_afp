@@ -387,10 +387,10 @@ h6 {
     }
 }
 @media screen and (max-width: 767px) {
-    .products-listbox {
-        background-color: #eee;
+    .products-listbox {    
+        background-color: #F8F8F8;
         padding: 10px;
-        margin: 0 auto;
+        width: 100%;
         .products-item {
             width: 47%;   
             background-color: #fff;  
@@ -441,6 +441,10 @@ h6 {
         margin-right: auto;
         margin-left: auto;
         position: relative;
+    }
+    button.active {
+        color: #568EE3;
+        font-weight: bold;
     }
     .discount-price{
         z-index: 10;
@@ -604,6 +608,16 @@ h6 {
     .products-tag {
         background-color: #eee;
         padding: 0.5em 0 0 0;
+        .tag-topbox {    
+            padding: 0;
+            .tag-top {    
+                background-color: #fff;            
+                padding: 0 1em;
+                z-index: 11;
+                top: 49px;
+            }
+        }
+
         .products-tagbox {
             background-color: #fff;
             padding: 0.5em 1em 0 1em;
@@ -616,7 +630,7 @@ h6 {
                 padding: 1em 0 0.5em 0;
             }
             h6 {
-                padding: 1em 0 0.5em 0;
+                padding: 4em 0 0.5em 0;
             }
             p {
                 font-size: 0.9em;
