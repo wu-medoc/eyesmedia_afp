@@ -482,8 +482,7 @@ if($('.number-spinner').length>0) {
 if($('#tag01').length>0) { 
     function ScrollTo(id_name) {
     $('.tag-topbox').addClass('fixed-top container');
-    $('.nav-tabs-box').addClass('tag-top container');    
-    $('.tablist-link.active').removeClass('active');
+    $('.nav-tabs-box').addClass('tag-top container'); 
     $('html,body').animate({
         scrollTop: $('#'+id_name).offset().top}, 1000);
     }
