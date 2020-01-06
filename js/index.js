@@ -211,6 +211,18 @@ $('.country-box .close-left').on('click', function(){
     body.addClass('is-open-reg');
 })
 
+// vcode
+$(function(){
+    $('.btn-vcode').click(function(){
+        var id=$('#vcode').val();
+        $(".vcode-val").text(id);    
+        if(id.indexOf("@") >= 0 ) { 
+            $(".vcode-mail").text("貼心小提醒：有時驗證信可能會被放到垃圾郵件喔！");
+        }     
+    });
+});
+
+
 // footer
 $('.bar-item').on('click', function() {
     $('.bar-item').removeClass('active');
@@ -483,8 +495,8 @@ function ScrollTo(id_name) {
     $('.tag-topbox').addClass('fixed-top container');
     $('.nav-tabs-box').addClass('tag-top'); 
     $('html,body').animate({scrollTop: $('#'+id_name).offset().top}, 1000);
-    $('.tablist-link').removeClass('active');
-    $('#tab-'+id_name).addClass('active');
+    $('.tablist-link').removeClass('active show');
+    $('#tab-'+id_name).addClass('active show');
 }
 $(document).on( 'scroll', function(){        
     if ($(window).scrollTop() < 200) {        

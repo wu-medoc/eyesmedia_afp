@@ -1,6 +1,7 @@
 @charset "utf-8";
-@import '../style/module/variable';
-@import '../style/module/mixin';
+@import '../dist/style/module/variable';
+@import '../dist/style/module/mixin';
+@import '../dist/style/module/global';
 @import url('https://fonts.googleapis.com/css?family=Noto+Sans+TC:400,900&display=swap&subset=chinese-traditional');
 
 .search-taxi-wave{
@@ -184,7 +185,7 @@ button, input{
     border-radius: 30px;
     padding: 10px 15px;
     font-size: 16px;
-    border: none;
+    border: 1px $default-white solid;
 }
 .default-btn{
     flex: none;

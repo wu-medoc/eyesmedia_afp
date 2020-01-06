@@ -1112,7 +1112,6 @@ a.tablist-link.active.show:hover::after,
   font-weight: 600;
 }
 
-.modal-body .login-method,
 .popup-box .login-method {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1127,7 +1126,6 @@ a.tablist-link.active.show:hover::after,
   margin: 20px 0;
 }
 
-.modal-body .login-method .method-item,
 .popup-box .login-method .method-item {
   -webkit-box-flex: 1;
   -ms-flex: 1;
@@ -1135,7 +1133,6 @@ a.tablist-link.active.show:hover::after,
   margin: 0 5px;
 }
 
-.modal-body .login-method p,
 .popup-box .login-method p {
   color: #182B56;
   font-size: 14px;
@@ -1325,10 +1322,7 @@ footer.for-pc li {
   background-color: transparent;
 }
 
-#favoriteModal .modal-header,
-#messageModal .modal-header,
-#loginModalCenter .modal-header,
-#registeredModalCenter .modal-header {
+.modal-header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1346,27 +1340,27 @@ footer.for-pc li {
   background: linear-gradient(to bottom right, #36D1DB, #568EE3);
 }
 
-#loginModalCenter .modal-body,
-#registeredModalCenter .modal-body {
+#registeredModalCenter .modal-body,
+#loginModalCenter .modal-body {
   text-align: center;
 }
 
-#loginModalCenter .modal-body h5,
-#registeredModalCenter .modal-body h5 {
+#registeredModalCenter .modal-body h5,
+#loginModalCenter .modal-body h5 {
   padding: 1em 0;
   font-weight: bold;
 }
 
-#loginModalCenter .modal-body .icon_group button,
-#registeredModalCenter .modal-body .icon_group button {
+#registeredModalCenter .modal-body .icon_group button,
+#loginModalCenter .modal-body .icon_group button {
   margin: 1em 0.5em;
   width: 3.5em;
   height: 3.5em;
   border-radius: 4em;
 }
 
-#loginModalCenter .modal-body button.login-btn,
-#registeredModalCenter .modal-body button.login-btn {
+#registeredModalCenter .modal-body button.login-btn,
+#loginModalCenter .modal-body button.login-btn {
   margin: 2em 0 1em 0;
   line-height: 2em;
   width: 100%;
@@ -1374,6 +1368,79 @@ footer.for-pc li {
   border: 0;
   background: -webkit-gradient(linear, left top, right bottom, from(#36D1DB), to(#568EE3));
   background: linear-gradient(to bottom right, #36D1DB, #568EE3);
+}
+
+#registeredModalCenter .modal-body .login-method,
+#loginModalCenter .modal-body .login-method {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  text-align: center;
+  margin: 20px 0;
+}
+
+#registeredModalCenter .modal-body .login-method .method-item,
+#loginModalCenter .modal-body .login-method .method-item {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  margin: 0 5px;
+}
+
+#registeredModalCenter .modal-body .login-method p,
+#loginModalCenter .modal-body .login-method p {
+  color: #182B56;
+  font-size: 14px;
+}
+
+#VcodeModalCenter h5,
+#forgetModalCenter h5 {
+  text-align: center;
+  position: relative;
+  top: -18px;
+}
+
+#VcodeModalCenter .small-warning,
+#forgetModalCenter .small-warning {
+  width: 100%;
+  margin-top: .25rem;
+  font-size: 80%;
+  color: #dc3545;
+}
+
+#VcodeModalCenter input,
+#forgetModalCenter input {
+  line-height: 3em;
+  width: 100%;
+  border: 0;
+  border-bottom: 1px #eee solid;
+}
+
+#VcodeModalCenter .btn-login,
+#forgetModalCenter .btn-login {
+  font-size: 90%;
+  color: #568EE3;
+}
+
+#VcodeModalCenter .vcode-msg,
+#forgetModalCenter .vcode-msg {
+  font-size: .8em;
+  text-align: center;
+}
+
+#vcode-form input.col:not(:last-child) {
+  margin-right: .5em;
+}
+
+#vcode-form .vcode-tel,
+#vcode-form .vcode-mail {
+  font-size: .8em;
 }
 
 .lineargradient-blue {
@@ -1429,12 +1496,6 @@ td.linebt-td,
   line-height: 2em;
 }
 
-.reg-tab li.nav-item,
-#registered-form li.nav-item {
-  width: 7em;
-  text-align: center;
-}
-
 .reg-tab .nav-tabs li,
 #registered-form .nav-tabs li {
   background-color: #fff;
@@ -1449,14 +1510,6 @@ td.linebt-td,
   border-bottom-right-radius: 0;
 }
 
-.reg-tab .nav-tabs li:last-child,
-#registered-form .nav-tabs li:last-child {
-  border-top-right-radius: .5rem;
-  border-bottom-right-radius: .5rem;
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
-}
-
 .reg-tab .nav-tabs li:first-child .nav-link,
 #registered-form .nav-tabs li:first-child .nav-link {
   border: 1px solid #568EE3;
@@ -1466,6 +1519,14 @@ td.linebt-td,
   border-bottom-right-radius: 0;
 }
 
+.reg-tab .nav-tabs li:last-child,
+#registered-form .nav-tabs li:last-child {
+  border-top-right-radius: .5rem;
+  border-bottom-right-radius: .5rem;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
 .reg-tab .nav-tabs li:last-child .nav-link,
 #registered-form .nav-tabs li:last-child .nav-link {
   border: 1px solid #568EE3;
@@ -1473,6 +1534,12 @@ td.linebt-td,
   border-bottom-right-radius: .5rem;
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
+}
+
+.reg-tab .nav-tabs li.nav-item,
+#registered-form .nav-tabs li.nav-item {
+  width: 7em;
+  text-align: center;
 }
 
 .reg-tab .nav-tabs .nav-item.show .nav-link,
