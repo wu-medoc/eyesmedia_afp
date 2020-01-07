@@ -35,10 +35,10 @@
     <div class="wrap">
     <header>
         <!-- header top -->
-        <div class="kv-box">
+        <div class="kv-box container">
             <nav>
                 <div class="pc-top" id="pc-top">
-                  <div class="pc-top-box">
+                  <div class="pc-top-box container">
                     <div class="for-pc">
                         <div class="login-top">
                             <div class="kv-small">
@@ -73,7 +73,7 @@
                                 <ul class="drop-content">
                                     <li><a href="javascript:;"><img src="img/index/icons/icon_qrcode.svg" alt="">掃碼</a></li>
                                     <li><a href="javascript:;"><img src="img/index/icons/icon_taxicode.svg" alt="">乘車碼</a></li>
-                                    <li><a class="open-login" href="javascript:;"><img src="img/index/icons/icon_login.svg" alt="">登入/註冊</a></li>
+                                    <li><a href data-toggle="modal" data-target="#loginModalCenter"><img src="img/index/icons/icon_login.svg" alt="">登入/註冊</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -1508,16 +1508,16 @@
                                         </tr>
                                     </tbody>
                                 </table>
-                                <div class="form-check form-inline">
+                                <small class="form-check ">
                                     <input type="checkbox" class="form-check-input" id="registeredCheck2">
                                     <label class="form-check-label" for="registeredCheck2">我同意亞洲好玩卡的<span class="font-bold">會員條款</span>及<span class="font-bold">隱私政策</span></label>
-                                </div>
+                                </small>
                                 <button type="button" class="default-btn send-veri-code py-0" data-dismiss="modal" aria-label="Close">
                                     傳送簡訊驗證碼
                                 </button>
                                 <p class="text-left">
                                     己經是會員了嗎?
-                                    <button type="button" class="btn btn-login px-0 font-bold" data-toggle="modal" data-target="#loginModalCenter" data-dismiss="modal">
+                                    <button type="button" class="btn btn-login px-0 font-bold" data-toggle="modal" data-target="#loginModalCenter" data-dismiss="modal" aria-label="Close">
                                         馬上登入
                                     </button>
                                 </p>
@@ -1546,7 +1546,7 @@
                     </div>
                 </div>
                 <div class="modal-body">
-                <button type="button" class="btn" data-toggle="modal" data-target="#loginModalCenter" data-dismiss="modal" aria-label="Close">
+                <button type="button" class="btn close float-left" data-toggle="modal" data-target="#loginModalCenter" data-dismiss="modal" aria-label="Close">
                     <i class="material-icons">&#xE314;</i>
                 </button>  
                 <h5>忘記密碼</h5>
@@ -1560,15 +1560,15 @@
                     <form id="forget-form">
                         <input type="text" placeholder="Email/手機" id="vcode">
                         <div class="small-warning">查無此帳號，你可以
-                            <button type="button" class="btn btn-login font-bold px-0" data-toggle="modal" data-target="#registeredModalCenter" data-dismiss="modal">
+                            <button type="button" class="btn btn-login font-bold px-0" data-toggle="modal" data-target="#registeredModalCenter" data-dismiss="modal" aria-label="Close">
                                 立即註冊
                             </button>
                         </div>
-                        <button type="button" class="default-btn btn-vcode" data-toggle="modal" data-target="#VcodeModalCenter" data-dismiss="modal">發送驗證碼</button>
+                        <button type="button" class="default-btn btn-vcode" data-toggle="modal" data-target="#VcodeModalCenter" data-dismiss="modal" aria-label="Close">發送驗證碼</button>
                     </form>
                 </div>
                 </div class="text-left w-100">
-            </div>>
+            </div>
             </div>
             </div>
         </div>      
@@ -1589,7 +1589,7 @@
                     </div>
                 </div>
                 <div class="modal-body">
-                <button type="button" class="btn" data-toggle="modal" data-target="#forgetModalCenter" data-dismiss="modal" aria-label="Close">
+                <button type="button" class="btn close float-left" data-toggle="modal" data-target="#forgetModalCenter" data-dismiss="modal" aria-label="Close">
                     <i class="material-icons">&#xE314;</i>
                 </button>  
                 <h5>輸入驗證碼</h5>
@@ -1611,11 +1611,62 @@
                         </div>
                         <div class="vcode-mail">
                         </div>
-                        <button type="button" class="default-btn">送出</button>
+                        <button type="button" class="btn default-btn" data-toggle="modal" data-target="#pswModalCenter" data-dismiss="modal" aria-label="Close">送出</button>
                     </form>
                 </div>
                 </div class="text-left w-100">
-            </div>>
+            </div>
+            </div>
+            </div>
+        </div>   
+
+        <!-- password setting  Modal -->
+        <div class="modal fade" id="pswModalCenter" tabindex="-1" role="dialog" aria-labelledby="pswModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header" data-dismiss="modal" aria-label="Close">
+                </div>
+                <div class="popup-banner for-mobile">
+                    <button type="button" class="close close-btn" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <img src="img/index/login_banner.png" alt="">
+                    <div class="logo-box">
+                        <img src="img/index/afp_logo_icon.svg" alt="">
+                    </div>
+                </div>
+                <div class="modal-body">
+                <button type="button" class="btn close float-left" data-toggle="modal" data-target="#VcodeModalCenter" data-dismiss="modal" aria-label="Close">
+                    <i class="material-icons">&#xE314;</i>
+                </button>  
+                <h5>密碼設定</h5>
+                <div class="container px-3 pt-2">
+                    <form class="popup-content">
+                        <div class="password-item">
+                            <div class="form-group">
+                                <input id="password-field-1" type="password" class="form-control" name="password" placeholder="輸入密碼">
+                                <span toggle="#password-field-1" class="toggle-password"> 
+                                    <i class="material-icons visibility ">&#xE8F4;</i>
+                                    <i class="material-icons visibility-off">&#xE8F5;</i>
+                                </span>
+                                <div class="small-warning">字元至少8位，需包含英文字母及數字</div>
+                            </div>
+                        </div>
+                        <div class="password-item">
+                            <div class="form-group">
+                                <input id="password-field-2" type="password" class="form-control" name="password" placeholder="再次輸入密碼">
+                                <span toggle="#password-field-2" class="toggle-password"> 
+                                    <i class="material-icons visibility ">&#xE8F4;</i>
+                                    <i class="material-icons visibility-off">&#xE8F5;</i>
+                                </span>
+                                <div class="small-warning">兩個密碼不相符</div>
+                            </div>
+                        </div>
+                        <button type="button" class="default-btn msg-psw" data-toggle="modal" data-target="#messageModal" data-dismiss="modal" aria-label="Close">設定新密碼</button>
+                    </form>
+                </div>
+                </div class="text-left w-100">
+            </div>
             </div>
             </div>
         </div>   
@@ -1627,11 +1678,15 @@
                 <div class="modal-header" data-dismiss="modal" aria-label="Close">
                 </div>
                 <div class="modal-body">
-                    <div id="msg-loginok" class="d-none">註冊成功, 歡迎加入亞洲好玩卡!</div>
-                    <div id="msg-loginerror" class="d-none">登入失敗, 輸入的帳號密碼有誤, 請重新輸入!</div>
-                </div>
-                <div class="modal-footer">
-                <button type="button" class="btn default-btn" data-dismiss="modal">關閉</button>
+                    <div id="msg-loginok">註冊成功, 歡迎加入亞洲好玩卡!</div>
+                    <div id="msg-loginerror">登入失敗, 輸入的帳號密碼有誤, 請重新輸入!</div>
+                    <div id="msg-psw">新密碼已設定完成
+                        <div class="text-center">
+                        <button type="button" class="btn btn-login font-bold px-0" data-toggle="modal" data-target="#loginModalCenter" data-dismiss="modal">
+                            重新登入
+                        </button>
+                    </div>
+                    </div>
                 </div>
             </div>
             </div>

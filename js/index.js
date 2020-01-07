@@ -63,38 +63,6 @@ body.on('click', '.drop_menu_toggle', function(){
     dropwrap.toggleClass('is-open');
 })
 
-// 判斷螢幕width
-var windowsize = $('body').width();
-if ($('#pc-top').length>0) {
-    if (windowsize > 767) {
-        $(window).scroll(function() {
-            var stickyOffset = $('#pc-top').offset().top;
-            var stickyHeight = $('#pc-top').outerHeight();
-            var navtabsbox = $('.pc-top');
-            var scroll = $(window).scrollTop();
-            if (scroll >= stickyOffset) {
-                $('.kv-box .swiper-container').addClass('container');
-                $('.pc-top-box').addClass('container');
-            } else {
-                $('.kv-box .swiper-container').removeClass('container');
-                $('.pc-top-box').removeClass('container');
-            }
-        }).trigger('scroll');  
-    }
-}
-
-// body.width > 767 control
-if ($('.travel').length>0) {
-    if (windowsize > 767) {
-        $('.travel-hot').addClass('container');
-        $('.travel-topic').addClass('container');
-        $('.travel-featured').addClass('container');
-    }else{
-        $('.travel-hot').removeClass('container');
-        $('.travel-topic').removeClass('container');
-        $('.travel-featured').removeClass('container');
-    }
-}
 
 if ($('.for-sub').length>0) {
     if (windowsize > 767) {
@@ -189,16 +157,6 @@ $('.password-box .close-left').on('click', function(){
     //body.addClass('is-open-login');
 })
 
-// 登入及註冊訊息控制
-$('.msg-loginerror').on('click', function(){
-    $('#msg-loginerror').removeClass();
-    $('#msg-loginok').addClass('d-none');
-})
-$('.msg-loginok').on('click', function(){
-    $('#msg-loginok').removeClass();
-    $('#msg-loginerror').addClass('d-none');
-})
-
 // 開啟 選擇國家或地區
 $('.open-country').on('click', function(){
     body.removeClass('is-open-reg');
@@ -211,14 +169,26 @@ $('.country-box .close-left').on('click', function(){
     body.addClass('is-open-reg');
 })
 
-// vcode
+// vcode msg model control
 $(function(){
-    $('.btn-vcode').click(function(){
+    $('.btn-vcode').on('click', function(){
         var id=$('#vcode').val();
         $(".vcode-val").text(id);    
         if(id.indexOf("@") >= 0 ) { 
             $(".vcode-mail").text("貼心小提醒：有時驗證信可能會被放到垃圾郵件喔！");
         }     
+    });
+    $('.msg-loginerror').on('click', function(){
+        $('#msg-loginok, #msg-psw').hide();  
+        $('#msg-loginerror').show();    
+    });
+    $('.msg-loginok').on('click', function(){
+        $('#msg-loginerror, #msg-psw').hide(); 
+        $('#msg-loginok').show();         
+    });
+    $('.msg-psw').on('click', function(){
+        $('#msg-loginok, #msg-loginerror').hide();     
+        $('#msg-psw').show();     
     });
 });
 

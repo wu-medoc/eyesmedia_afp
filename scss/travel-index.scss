@@ -114,9 +114,13 @@
 /* travel-hot */
 .travel-hot {
   overflow: hidden;
-  width: 110vw;
+  width: 100%;
 }
 @media screen and (max-width: 767px) {
+  .travel-hot {
+    overflow: hidden;
+    width: 110vw;
+  }
   .travel-topic {
       overflow: hidden;
       width: auto;

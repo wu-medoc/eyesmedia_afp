@@ -111,12 +111,17 @@ a:hover, a:focus, a:visited {
   display: none;
 }
 
-@media (max-width: 767px) {
+@media screen and (max-width: 767px) {
   .for-mobile {
     display: block;
   }
   .for-pc {
     display: none;
+  }
+  .container {
+    width: 100%;
+    padding-right: 0;
+    padding-left: 0;
   }
 }
 
@@ -127,14 +132,6 @@ a:hover, a:focus, a:visited {
 
 .wrap {
   overflow-x: hidden;
-}
-
-@media screen and (max-width: 767px) {
-  .container {
-    width: 100%;
-    padding-right: 0;
-    padding-left: 0;
-  }
 }
 
 .default-btn {
