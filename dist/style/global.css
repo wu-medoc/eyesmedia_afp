@@ -134,6 +134,10 @@ a:hover, a:focus, a:visited {
   overflow-x: hidden;
 }
 
+.addheight {
+  height: 58px;
+}
+
 .default-btn {
   width: 100%;
   color: #fff;

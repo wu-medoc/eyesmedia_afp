@@ -2,12 +2,6 @@ var body = $('body');
 var wrap = $('.wrap');
 var windowWidth = 767;
 var windowsize = $('body').width();
-$(window).on('resize', function(){
-    var footer = $('.mobile-footer').outerHeight();
-    if (windowsize < 767) {
-        wrap.css({'padding-bottom':footer + 10});
-    };
-}).trigger('resize');
 
 $(".imgLiquidFill").imgLiquid();
 var swiper = new Swiper('.kv-box .swiper-container', {
@@ -63,7 +57,7 @@ body.on('click', '.drop_menu_toggle', function(){
     dropwrap.toggleClass('is-open');
 })
 
-
+//header taipei
 if ($('.for-sub').length>0) {
     if (windowsize > 767) {
         $('.for-sub .top-item.climate').show();
@@ -92,32 +86,6 @@ $('.aside-header .edit-title-cancel').on('click', function(){
     $(this).closest('.more-link-aside').removeClass('edit-mode');
 })
 
-// 開啟登入頁
-$('.open-login').on('click', function(){
-    body.addClass('is-open-login');
-})
-
-// 關閉登入頁
-$('.login-box .close-btn').on('click', function(){
-    body.removeClass('is-open-login');
-})
-
-// 關閉登入頁並開啟註冊頁
-$('.login-box .go-reg-box').on('click', function(){
-    body.removeClass('is-open-login');
-    body.addClass('is-open-reg');
-})
-
-// 關閉註冊頁
-$('.reg-box .close-btn').on('click', function(){
-    body.removeClass('is-open-reg');
-})
-
-// 關閉註冊頁並開啟登入頁
-$('.reg-box .go-login-box').on('click', function(){
-    body.removeClass('is-open-reg');
-    body.addClass('is-open-login');
-})
 
 // 密碼
 $(".toggle-password").on('click', function() {
@@ -129,45 +97,6 @@ $(".toggle-password").on('click', function() {
       input.attr("type", "password");
     }
 });
-
-// 開啟 輸入驗證碼
-$('.send-veri-code').on('click', function(){
-    body.removeClass('is-open-reg');
-    body.addClass('is-open-verification');
-})
-
-// 關閉 輸入驗證碼
-$('.verification-box .close-left').on('click', function(){
-    body.removeClass('is-open-verification');
-    //body.addClass('is-open-reg');
-})
-
-// 開啟 密碼設定
-$('.forget-password').on('click', function(){
-    body.removeClass('is-open-login');
-    body.addClass('is-open-password');
-})
-$('.forget-password-pc').on('click', function(){
-    body.addClass('is-open-password');
-})
-
-// 關閉 密碼設定
-$('.password-box .close-left').on('click', function(){
-    body.removeClass('is-open-password');
-    //body.addClass('is-open-login');
-})
-
-// 開啟 選擇國家或地區
-$('.open-country').on('click', function(){
-    body.removeClass('is-open-reg');
-    body.addClass('is-open-country');
-})
-
-/// 關閉 選擇國家或地區
-$('.country-box .close-left').on('click', function(){
-    body.removeClass('is-open-country');
-    body.addClass('is-open-reg');
-})
 
 // vcode msg model control
 $(function(){
@@ -225,7 +154,7 @@ if ($( ".index-gowhere" ).hasClass("swiper-container")) {
     var swiper = new Swiper('.index-gowhere.swiper-container', {
         paginationClickable: true,
         slidesPerView: 4,
-        spaceBetween: 15,
+        spaceBetween: 5,
         freeMode: true
     });
 }
@@ -459,7 +388,7 @@ if($('.number-spinner').length>0) {
     });
 }
 
-/* href tag */
+/* products-detail href tag */
 
 function ScrollTo(id_name) {
     $('.tag-topbox').addClass('fixed-top container');
