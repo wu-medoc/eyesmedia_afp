@@ -1429,14 +1429,17 @@
 
         <!-- message Modal -->
         <div class="modal fade" id="messageModal" tabindex="-1" role="dialog" aria-labelledby="messageModalLabel" aria-hidden="true">
-            <div class="modal-dialog" role="document">
+            <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
                 <div class="modal-header" data-dismiss="modal" aria-label="Close">
                 </div>
                 <div class="modal-body">
                     <div id="msg-loginok">註冊成功, 歡迎加入亞洲好玩卡!</div>
                     <div id="msg-loginerror">登入失敗, 輸入的帳號密碼有誤, 請重新輸入!</div>
-                    <div id="msg-psw">新密碼已設定完成
+                    <div id="msg-psw">
+                        <div class="linebt-row w-100">
+                            新密碼已設定完成
+                        </div>
                         <div class="text-center">
                         <button type="button" class="btn btn-login font-bold px-0" data-toggle="modal" data-target="#loginModalCenter" data-dismiss="modal">
                             重新登入

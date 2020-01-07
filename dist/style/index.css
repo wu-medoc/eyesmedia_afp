@@ -1400,6 +1400,7 @@ footer.for-pc li {
   font-size: 14px;
 }
 
+#messageModal h5,
 #pswModalCenter h5,
 #VcodeModalCenter h5,
 #forgetModalCenter h5 {
@@ -1409,6 +1410,7 @@ footer.for-pc li {
   margin-bottom: 1em;
 }
 
+#messageModal .small-warning,
 #pswModalCenter .small-warning,
 #VcodeModalCenter .small-warning,
 #forgetModalCenter .small-warning {
@@ -1418,6 +1420,7 @@ footer.for-pc li {
   color: #dc3545;
 }
 
+#messageModal input,
 #pswModalCenter input,
 #VcodeModalCenter input,
 #forgetModalCenter input {
@@ -1427,6 +1430,7 @@ footer.for-pc li {
   border-bottom: 1px #eee solid;
 }
 
+#messageModal .btn-login,
 #pswModalCenter .btn-login,
 #VcodeModalCenter .btn-login,
 #forgetModalCenter .btn-login {
@@ -1434,6 +1438,7 @@ footer.for-pc li {
   color: #568EE3;
 }
 
+#messageModal .vcode-msg,
 #pswModalCenter .vcode-msg,
 #VcodeModalCenter .vcode-msg,
 #forgetModalCenter .vcode-msg {
