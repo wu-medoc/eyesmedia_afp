@@ -2249,3 +2249,28 @@ td.linebt-td,
 .line-height3 {
   line-height: 3em;
 }
+
+.item-favorite{
+  position:absolute;
+  width: 2em;
+  height: auto;
+  color: #fff;
+  position: absolute;
+  top: 58%;
+  right:1%;
+  transform: translate(-50%, -60%);
+  -webkit-transform: translate(-50%, -50%);
+}
+@media screen and (max-width: 767px) {
+  .item-favorite{
+    position:absolute;
+    width: 2em;
+    height: auto;
+    color: #fff;
+    position: absolute;
+    top: 40%;
+    right:1%;
+    transform: translate(-50%, -60%);
+    -webkit-transform: translate(-50%, -60%);
+  }
+}
