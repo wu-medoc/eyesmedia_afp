@@ -9,23 +9,17 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="../js/vendor/bs4/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../js/vendor/jquery-editable-select-master/dist/jquery-editable-select.min.css">
-    <!-- owl.carousel core CSS -->
-    <link rel="stylesheet" href="../js/vendor/owlcarousel/owlcarousel/assets/owl.carousel.min.css">
-    <link rel="stylesheet" href="../js/vendor/owlcarousel/owlcarousel/assets/owl.theme.default.min.css">
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
-    <![endif]-->
-
     <!-- vendor css -->
+    <link rel="stylesheet" href="../js/vendor/jquery-editable-select-master/dist/jquery-editable-select.min.css">
     <link rel="stylesheet" href="../js/vendor/swiper/css/swiper.min.css">
     <!-- fontawesome css -->
     <link rel="stylesheet" href="../js/vendor/fontawesome/css/fontawesome.css">
     <link rel="stylesheet" href="../js/vendor/fontawesome/css/brands.css">
     <link rel="stylesheet" href="../js/vendor/fontawesome/css/solid.css">
     <!-- custom css -->
+    <link rel="stylesheet" href="../dist/style/css.min.css">
+    <link rel="stylesheet" href="../dist/style/global.min.css">
+    <link rel="stylesheet" href="../dist/style/index.min.css">
     <link rel="stylesheet" href="../dist/style/shopping-index.min.css">
     <link rel="stylesheet" href="../dist/style/animate.min.css">
     <title>eyemedia - afp</title>
@@ -55,18 +49,18 @@
         <div class="header-42"></div>     
         <!-- Swiper for productbigimg -->        
         <div class="shopping-productsdetail">
-            <div class="shopping-productsdetailbox">
+            <div class="shopping-productsdetailbox container">
                 <div class="shopping-productsimgbox">
                     <div class="shopping-productsimg swiper-container">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
-                                <div class="rwdimg" style="background-image: url('../img/shopping/products/p00001.jpg');"></div>
+                                <img src="../img/shopping/products/p00001.jpg">
                             </div>
                             <div class="swiper-slide">                
-                                <div class="rwdimg" style="background-image: url('../img/shopping/products/p00002.jpg');"></div>
+                                <img src="../img/shopping/products/p00002.jpg">
                             </div>   
                             <div class="swiper-slide">         
-                                <div class="rwdimg" style="background-image: url('../img/shopping/products/p00003.jpg');"></div>
+                                <img src="../img/shopping/products/p00003.jpg">
                             </div>
                         </div>
                         <!-- Add Pagination -->
@@ -133,7 +127,7 @@
                         <div class="store-title">昇恆昌免稅購物網站</div>                         
                     </div>
                     <div class="products-store-btn">                        
-                        <button type="button" class="btn default-outline-btn">查看賣場</button>      
+                        <button type="button" class="btn default-outline-btn" onclick="location.href='store-info.html'">查看賣場</button>      
                     </div>
                 </div>
             </div>         

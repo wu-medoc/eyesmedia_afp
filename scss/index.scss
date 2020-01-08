@@ -1313,7 +1313,7 @@ footer.for-pc li{
   -ms-flex-pack: justify;
   justify-content: space-between;
   padding: 4px;
-  border-bottom: 0px solid #e9ecef;
+  border-bottom: 0px solid transparent;
   border-top-left-radius: .1rem;
   border-top-right-radius: .1rem;
   background: -webkit-linear-gradient(left top,#36D1DB,#568EE3);
@@ -1349,6 +1349,7 @@ footer.for-pc li{
     border-bottom: 1px #eee solid;
   }
   label.form-check-label {
+    font-size: 90%;
     vertical-align: super;
     line-height: initial;
   }
@@ -1519,6 +1520,17 @@ td.linebt-td,
 #pswModalCenter {
   .password-item {
     margin-top: 20px; 
+    .form-group.toggle-visibility {
+      .visibility-off {
+        display: block;
+      }
+      .visibility {
+        display: none;
+      }
+    }  
+    .visibility-off {
+      display: none;
+    }
     .form-group {
       position: relative;
       .material-icons {
@@ -1530,17 +1542,6 @@ td.linebt-td,
         z-index: 2;
         color: rgba(24, 43, 86, 0.5);
       }
-    }
-    .form-group.toggle-visibility{
-      .visibility-off {
-        display: block;
-      }
-      .visibility {
-        display: none;
-      }
-    }  
-    .visibility-off {
-      display: none;
     }
   }
 } 

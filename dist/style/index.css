@@ -1334,7 +1334,7 @@ footer.for-pc li {
   -ms-flex-pack: justify;
   justify-content: space-between;
   padding: 4px;
-  border-bottom: 0px solid #e9ecef;
+  border-bottom: 0px solid transparent;
   border-top-left-radius: .1rem;
   border-top-right-radius: .1rem;
   background: -webkit-gradient(linear, left top, right bottom, from(#36D1DB), to(#568EE3));
@@ -1374,6 +1374,7 @@ footer.for-pc li {
 }
 
 .modal-body label.form-check-label {
+  font-size: 90%;
   vertical-align: super;
   line-height: initial;
 }
@@ -1563,6 +1564,18 @@ td.linebt-td,
   margin-top: 20px;
 }
 
+#pswModalCenter .password-item .form-group.toggle-visibility .visibility-off {
+  display: block;
+}
+
+#pswModalCenter .password-item .form-group.toggle-visibility .visibility {
+  display: none;
+}
+
+#pswModalCenter .password-item .visibility-off {
+  display: none;
+}
+
 #pswModalCenter .password-item .form-group {
   position: relative;
 }
@@ -1575,18 +1588,6 @@ td.linebt-td,
   transform: translateY(-50%);
   z-index: 2;
   color: rgba(24, 43, 86, 0.5);
-}
-
-#pswModalCenter .password-item .form-group.toggle-visibility .visibility-off {
-  display: block;
-}
-
-#pswModalCenter .password-item .form-group.toggle-visibility .visibility {
-  display: none;
-}
-
-#pswModalCenter .password-item .visibility-off {
-  display: none;
 }
 
 @media screen and (max-width: 570px) {

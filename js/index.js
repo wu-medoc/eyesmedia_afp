@@ -85,16 +85,7 @@ $('.aside-header .edit-title-cancel').on('click', function(){
 })
 
 
-// 密碼
-$(".toggle-password").on('click', function() {
-    $(this).parent().toggleClass("toggle-visibility");
-    var input = $($(this).attr("toggle"));
-    if (input.attr("type") == "password") {
-      input.attr("type", "text");
-    } else {
-      input.attr("type", "password");
-    }
-});
+
 
 // vcode&msg modal control
 $(function(){
@@ -121,6 +112,20 @@ $(function(){
         $('#msg-loginok, #msg-loginerror, #msg-psw').hide();     
         $('#msg-noselected').show();     
     });
+    // 密碼
+    $(".toggle-password").on('click', function() {
+        $(this).parent().toggleClass("toggle-visibility");
+        var input = $($(this).attr("toggle"));
+        if (input.attr("type") == "password") {
+        input.attr("type", "text");
+        } else {
+        input.attr("type", "password");
+        }
+    });
+    // registeredSelectState
+    $('#registeredSelectState').on('click', function () {
+        $('#registeredSelectState').editableSelect({ effects: 'default' });
+    });
 });
 
 
@@ -130,10 +135,7 @@ $('.bar-item').on('click', function() {
     $(this).addClass('active');
 })
 
-// registeredSelectState
-$('#registeredSelectState').on('click', function () {
-    $('#registeredSelectState').editableSelect({ effects: 'default' });
-  });
+
 
 // web service JS 
 $(document).on( 'scroll', function(){        
