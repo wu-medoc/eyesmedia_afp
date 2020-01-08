@@ -85,10 +85,13 @@ $('.aside-header .edit-title-cancel').on('click', function(){
 })
 
 
-
-
 // vcode&msg modal control
 $(function(){
+    
+    // registeredSelectState
+    $('.registeredSelectState-btn').on('click', function () {
+        $('#registeredSelectState').editableSelect({ effects: 'default' });
+    });
     $('.btn-vcode').on('click', function(){
         var id=$('#vcode').val();
         $(".vcode-val").text(id);    
@@ -124,10 +127,6 @@ $(function(){
     });
 });
 
-// registeredSelectState
-$('#registeredSelectState').on('click', function () {
-    $('#registeredSelectState').editableSelect({ effects: 'default' });
-});
 
 // footer
 $('.bar-item').on('click', function() {
