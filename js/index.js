@@ -12,8 +12,6 @@ var swiper = new Swiper('.kv-box .swiper-container', {
         disableOnInteraction: false,
         },
 });
-// login.html引入
-$("#loginhtml").load("../login.html");
 
 // ad
 // 超過一張才執行 swiper，並且顯示 pagination
@@ -98,7 +96,7 @@ $(".toggle-password").on('click', function() {
     }
 });
 
-// vcode msg model control
+// vcode&msg modal control
 $(function(){
     $('.btn-vcode').on('click', function(){
         var id=$('#vcode').val();
@@ -108,16 +106,20 @@ $(function(){
         }     
     });
     $('.msg-loginerror').on('click', function(){
-        $('#msg-loginok, #msg-psw').hide();  
+        $('#msg-loginok, #msg-psw, #msg-noselected').hide();  
         $('#msg-loginerror').show();    
     });
     $('.msg-loginok').on('click', function(){
-        $('#msg-loginerror, #msg-psw').hide(); 
+        $('#msg-loginerror, #msg-psw, #msg-noselected').hide(); 
         $('#msg-loginok').show();         
     });
     $('.msg-psw').on('click', function(){
-        $('#msg-loginok, #msg-loginerror').hide();     
+        $('#msg-loginok, #msg-loginerror, #msg-noselected').hide();     
         $('#msg-psw').show();     
+    });
+    $('.msg-noselected').on('click', function(){
+        $('#msg-loginok, #msg-loginerror, #msg-psw').hide();     
+        $('#msg-noselected').show();     
     });
 });
 
@@ -403,3 +405,4 @@ $(document).on( 'scroll', function(){
     $('.nav-tabs-box').removeClass('tag-top');
     }
 });
+

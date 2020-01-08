@@ -246,18 +246,20 @@
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
                         <div class="products-item">
-                            <div class="products-img">
-                                <div class="img-box">
-                                    <div class="rwdimg" style="background-image: url('../img/shopping/products/products001.jfif');"></div>
-                                </div> 
-                            </div>
-                            <div class="products-title">
-                                <p class="txt-line-clamp1">Apple iPhone XS 256GB</p>
-                            </div>
-                            <div class="products-price">
-                                <div class="price-asking">$30,320</div>
-                                <div class="price-original">$37,000</div>
-                            </div>
+                            <a href="products-detail.html">
+                                <div class="products-img">
+                                    <div class="img-box">
+                                        <div class="rwdimg" style="background-image: url('../img/shopping/products/products001.jfif');"></div>
+                                    </div> 
+                                </div>
+                                <div class="products-title">
+                                    <p class="txt-line-clamp1">Apple iPhone XS 256GB</p>
+                                </div>
+                                <div class="products-price">
+                                    <div class="price-asking">$30,320</div>
+                                    <div class="price-original">$37,000</div>
+                                </div>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -288,6 +290,7 @@
                 </div>
             </div>
         </div>
+        <div class="addheight"></div>
         <div class="h-50 d-inline-block"></div>
         <div id="loginhtml"></div>
     </main>
@@ -424,6 +427,9 @@
     <script src="../js/vendor/imgLiquid.js"></script>
 
     <!-- custom js -->
+    <script>    
+        $("#loginhtml").load("../login.html");
+    </script>
     <script src="../js/index.js"></script>
 </body>
 

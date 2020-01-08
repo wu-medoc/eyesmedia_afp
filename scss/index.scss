@@ -1372,6 +1372,7 @@ footer.for-pc li{
     }
   }
 }
+#favoriteModal , 
 #messageModal , 
 #pswModalCenter , 
 #VcodeModalCenter , 
@@ -1401,6 +1402,9 @@ footer.for-pc li{
   .vcode-msg {
     font-size: .8em;
     text-align: center;
+  }
+  button.close {
+    line-height: 0.6em;
   }
 }
 #vcode-form {

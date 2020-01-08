@@ -1400,6 +1400,7 @@ footer.for-pc li {
   font-size: 14px;
 }
 
+#favoriteModal h5,
 #messageModal h5,
 #pswModalCenter h5,
 #VcodeModalCenter h5,
@@ -1410,6 +1411,7 @@ footer.for-pc li {
   margin-bottom: 1em;
 }
 
+#favoriteModal .small-warning,
 #messageModal .small-warning,
 #pswModalCenter .small-warning,
 #VcodeModalCenter .small-warning,
@@ -1420,6 +1422,7 @@ footer.for-pc li {
   color: #dc3545;
 }
 
+#favoriteModal input,
 #messageModal input,
 #pswModalCenter input,
 #VcodeModalCenter input,
@@ -1430,6 +1433,7 @@ footer.for-pc li {
   border-bottom: 1px #eee solid;
 }
 
+#favoriteModal .btn-login,
 #messageModal .btn-login,
 #pswModalCenter .btn-login,
 #VcodeModalCenter .btn-login,
@@ -1438,12 +1442,21 @@ footer.for-pc li {
   color: #568EE3;
 }
 
+#favoriteModal .vcode-msg,
 #messageModal .vcode-msg,
 #pswModalCenter .vcode-msg,
 #VcodeModalCenter .vcode-msg,
 #forgetModalCenter .vcode-msg {
   font-size: .8em;
   text-align: center;
+}
+
+#favoriteModal button.close,
+#messageModal button.close,
+#pswModalCenter button.close,
+#VcodeModalCenter button.close,
+#forgetModalCenter button.close {
+  line-height: 0.6em;
 }
 
 #vcode-form input.col:not(:last-child) {
