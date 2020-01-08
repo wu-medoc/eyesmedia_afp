@@ -3,13 +3,7 @@ var wrap = $('.wrap');
 var windowWidth = 767;
 var windowsize = $('body').width();
 
-var strFullPath=window.document.location.href;
-var strPath=window.document.location.pathname;
-var pos=strFullPath.indexOf(strPath);
-var prePath=strFullPath.substring(0,pos);
-var postPath=strPath.substring(0,strPath.substr(1).indexOf('/')+1);
-var basePath = prePath;
-basePath = prePath + postPath;	
+var basePath = "https://wu-medoc.github.io/eyesmedia_afp/";
 $("img.modal-img-bn").attr("src", basePath+($('img.modal-img-bn').attr('src')));
 $("img.modal-img-logo").attr("src", basePath+($('img.modal-img-logo').attr('src')));
 
