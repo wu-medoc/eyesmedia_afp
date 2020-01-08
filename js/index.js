@@ -122,19 +122,18 @@ $(function(){
         input.attr("type", "password");
         }
     });
-    // registeredSelectState
-    $('#registeredSelectState').on('click', function () {
-        $('#registeredSelectState').editableSelect({ effects: 'default' });
-    });
 });
 
+// registeredSelectState
+$('#registeredSelectState').on('click', function () {
+    $('#registeredSelectState').editableSelect({ effects: 'default' });
+});
 
 // footer
 $('.bar-item').on('click', function() {
     $('.bar-item').removeClass('active');
     $(this).addClass('active');
 })
-
 
 
 // web service JS 
