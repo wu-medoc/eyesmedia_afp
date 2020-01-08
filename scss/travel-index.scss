@@ -67,7 +67,7 @@
 .travel-box .travel-txt { 
   color: #212529;
 }   
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 570px) {
   .travel-box.swiper-container {
     width: 85%;
     height: auto;
@@ -116,7 +116,7 @@
   overflow: hidden;
   width: 100%;
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 570px) {
   .travel-hot {
     overflow: hidden;
     width: 110vw;
@@ -144,7 +144,7 @@
     overflow: hidden;
     width: auto;
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 570px) {
     .travel-topic {
         background-color: #1E4067;
         color: #fff;
@@ -181,7 +181,7 @@
   overflow: hidden;
   width: auto;
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 570px) {
   .travel-featured {
       overflow: hidden;
       width: 110vw;
@@ -242,7 +242,7 @@
   position: relative;
   padding-bottom: 20em;
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 570px) {
   .travel-featured .tablist-panes {
     position: relative;
     padding-bottom: 12em;

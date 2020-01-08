@@ -3,7 +3,7 @@
 @import url("afp.min.css");
 
 /* searchbar input */
-@media screen and (max-width: 767px){
+@media screen and (max-width: 570px){
     .kv-box .kv-top .top-item.input-box {
         border-radius: 10px;
         padding: 0px 10px;
@@ -76,7 +76,7 @@ h6 {
         width: 100%;
     }
 } 
-@media screen and (max-width: 767px){
+@media screen and (max-width: 570px){
     #shopping-iconbox {
         .icon-txt {
             font-size: 0.8em;
@@ -334,7 +334,7 @@ h6 {
         }
     }
   }
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: 570px) {
     .shopping-products {
         overflow: inherit;
         width: 110vw;
@@ -386,7 +386,7 @@ h6 {
         }         
     }
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 570px) {
     .products-listbox {    
         background-color: #F8F8F8;
         padding: 10px;
@@ -642,7 +642,7 @@ h6 {
         }
     }
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 570px) {
     .shopping-productsdetail .products-tag .tag-topbox {    
         padding: 0;
     }

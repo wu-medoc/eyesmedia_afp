@@ -33,6 +33,7 @@
 
 <body class="">
     <div class="wrap">
+
     <header>
         <!-- header top -->
         <div class="kv-box container">
@@ -1302,29 +1303,28 @@
                     </div>
                 </div>
                 <div class="modal-body">
-                <button type="button" class="btn close float-left" data-toggle="modal" data-target="#loginModalCenter" data-dismiss="modal" aria-label="Close">
-                    <i class="material-icons">&#xE314;</i>
-                </button>  
-                <h5>忘記密碼</h5>
-                <div class="container px-3 pt-2">
-                    <h6 class="font-bold text-left">
-                        請輸入註冊時使用的電子信箱或手機：
-                    </h6>
-                    <p class="text-left">
-                        我們會發送驗證碼以重設密碼
-                    </p>
-                    <form id="forget-form">
-                        <input type="text" placeholder="Email/手機" id="vcode">
-                        <div class="small-warning">查無此帳號，你可以
-                            <button type="button" class="btn btn-login font-bold px-0" data-toggle="modal" data-target="#registeredModalCenter" data-dismiss="modal" aria-label="Close">
-                                立即註冊
-                            </button>
-                        </div>
-                        <button type="button" class="default-btn btn-vcode" data-toggle="modal" data-target="#VcodeModalCenter" data-dismiss="modal" aria-label="Close">發送驗證碼</button>
-                    </form>
-                </div>
-                </div class="text-left w-100">
-            </div>
+                    <button type="button" class="btn close float-left" data-toggle="modal" data-target="#loginModalCenter" data-dismiss="modal" aria-label="Close">
+                        <i class="material-icons">&#xE314;</i>
+                    </button>  
+                    <h5>忘記密碼</h5>
+                    <div class="container px-3 pt-2">
+                        <h6 class="font-bold text-left">
+                            請輸入註冊時使用的電子信箱或手機：
+                        </h6>
+                        <p class="text-left">
+                            我們會發送驗證碼以重設密碼
+                        </p>
+                        <form id="forget-form">
+                            <input type="text" placeholder="Email/手機" id="vcode">
+                            <div class="small-warning">查無此帳號，你可以
+                                <button type="button" class="btn btn-login font-bold px-0" data-toggle="modal" data-target="#registeredModalCenter" data-dismiss="modal" aria-label="Close">
+                                    立即註冊
+                                </button>
+                            </div>
+                            <button type="button" class="default-btn btn-vcode" data-toggle="modal" data-target="#VcodeModalCenter" data-dismiss="modal" aria-label="Close">發送驗證碼</button>
+                        </form>
+                    </div>
+                    </div>
             </div>
             </div>
         </div>      
@@ -1345,33 +1345,32 @@
                     </div>
                 </div>
                 <div class="modal-body">
-                <button type="button" class="btn close float-left" data-toggle="modal" data-target="#forgetModalCenter" data-dismiss="modal" aria-label="Close">
-                    <i class="material-icons">&#xE314;</i>
-                </button>  
-                <h5>輸入驗證碼</h5>
-                <div class="container px-3 pt-2">
-                    <div class="vcode-msg">
-                        驗證碼已發送至 <span class="vcode-val"></span>
+                    <button type="button" class="btn close float-left" data-toggle="modal" data-target="#forgetModalCenter" data-dismiss="modal" aria-label="Close">
+                        <i class="material-icons">&#xE314;</i>
+                    </button>  
+                    <h5>輸入驗證碼</h5>
+                    <div class="container px-3 pt-2">
+                        <div class="vcode-msg">
+                            驗證碼已發送至 <span class="vcode-val"></span>
+                        </div>
+                        <form id="vcode-form">
+                            <div class="form-row">
+                                <input type="text" class="col">
+                                <input type="text" class="col">
+                                <input type="text" class="col">
+                                <input type="text" class="col">
+                                <input type="text" class="col">
+                                <input type="text" class="col">
+                            </div>
+                            <div class="vcode-tel">
+                                沒有收到驗證碼？<span class="font-bold">59秒後重新傳送</span>
+                            </div>
+                            <div class="vcode-mail">
+                            </div>
+                            <button type="button" class="btn default-btn" data-toggle="modal" data-target="#pswModalCenter" data-dismiss="modal" aria-label="Close">送出</button>
+                        </form>
                     </div>
-                    <form id="vcode-form">
-                        <div class="form-row">
-                            <input type="text" class="col">
-                            <input type="text" class="col">
-                            <input type="text" class="col">
-                            <input type="text" class="col">
-                            <input type="text" class="col">
-                            <input type="text" class="col">
-                        </div>
-                        <div class="vcode-tel">
-                            沒有收到驗證碼？<span class="font-bold">59秒後重新傳送</span>
-                        </div>
-                        <div class="vcode-mail">
-                        </div>
-                        <button type="button" class="btn default-btn" data-toggle="modal" data-target="#pswModalCenter" data-dismiss="modal" aria-label="Close">送出</button>
-                    </form>
                 </div>
-                </div class="text-left w-100">
-            </div>
             </div>
             </div>
         </div>   
@@ -1421,8 +1420,7 @@
                         <button type="button" class="default-btn msg-psw" data-toggle="modal" data-target="#messageModal" data-dismiss="modal" aria-label="Close">設定新密碼</button>
                     </form>
                 </div>
-                </div class="text-left w-100">
-            </div>
+                </div>
             </div>
             </div>
         </div>   

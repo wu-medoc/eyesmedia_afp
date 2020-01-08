@@ -111,7 +111,7 @@ a:hover, a:focus, a:visited {
   display: none;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 570px) {
   .for-mobile {
     display: block;
   }
