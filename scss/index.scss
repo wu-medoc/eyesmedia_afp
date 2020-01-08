@@ -1289,7 +1289,7 @@ footer.for-pc li{
 }
 
 
-/* index login for modal*/
+/* loginhtml for modal*/
 .login-top {
   font-size: 0.8em;
   white-space: nowrap;
@@ -1322,78 +1322,35 @@ footer.for-pc li{
   background: linear-gradient(to bottom right,#36D1DB,#568EE3);
 }
 
-#registeredModalCenter , 
-#loginModalCenter {
-  .modal-body {
-    text-align: center;
-    h5 {
-      padding: 1em 0;
-      font-weight: bold;
-    }
-    .icon_group button {
-      margin: 1em 0.5em;
-      width: 3.5em;
-      height: 3.5em;
-      border-radius:4em;
-    }
-    button.login-btn {
-      margin: 1.5em 0 0.5em 0;
-      line-height: 1.5em;
-      width: 100%;
-      border-radius:4em;
-      border: 0;
-      background: -webkit-linear-gradient(left top,#36D1DB,#568EE3);
-      background: -o-linear-gradient(bottom right,#36D1DB,#568EE3);
-      background: -moz-linear-gradient(bottom right,#36D1DB,#568EE3);
-      background: linear-gradient(to bottom right,#36D1DB,#568EE3);
-    }
-    .login-method {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-align: center;
-      -ms-flex-align: center;
-      align-items: center;
-      -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-      justify-content: space-between;
-      text-align: center;
-      margin: 0;
-      .method-item {
-        -webkit-box-flex: 1;
-            -ms-flex: 1;
-                flex: 1;
-        margin: 0 5px;
-      }
-      p {
-          color: #182B56;
-          font-size: 14px;
-      }
-    }
-  }
-}
-#favoriteModal , 
-#messageModal , 
-#pswModalCenter , 
-#VcodeModalCenter , 
-#forgetModalCenter {
+.modal-body {
+  text-align: center;
   h5 {
-    text-align: center;
-    position: relative;
-    top: 5px;
-    margin-bottom: 1em;
+    padding: 1em 0;
+    font-weight: bold;
+  }
+  .icon_group button {
+    margin: 1em 0.5em;
+    width: 3.5em;
+    height: 3.5em;
+    border-radius:4em;
   }
   .small-warning {
     width: 100%;
     margin-top: .25rem;
     font-size: 80%;
     color: #dc3545;
+    text-align: left;
   }
-  input {
+  input[type='password'], 
+  input[type='text'] {
     line-height: 3em;
     width: 100%;
     border: 0;
     border-bottom: 1px #eee solid;
+  }
+  label.form-check-label {
+    vertical-align: super;
+    line-height: initial;
   }
   .btn-login {
     font-size: 90%;
@@ -1406,8 +1363,48 @@ footer.for-pc li{
   button.close {
     line-height: 0.6em;
   }
+  button.close.float-left {
+    top: 0.8em;
+    position: inherit;
+  }
+  button.login-btn {
+    margin: 1.5em 0 0.5em 0;
+    line-height: 1.5em;
+    width: 100%;
+    border-radius:4em;
+    border: 0;
+    background: -webkit-linear-gradient(left top,#36D1DB,#568EE3);
+    background: -o-linear-gradient(bottom right,#36D1DB,#568EE3);
+    background: -moz-linear-gradient(bottom right,#36D1DB,#568EE3);
+    background: linear-gradient(to bottom right,#36D1DB,#568EE3);
+  }
+  .login-method {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    text-align: center;
+    margin: 0;
+    .method-item {
+      -webkit-box-flex: 1;
+          -ms-flex: 1;
+              flex: 1;
+      margin: 0 5px;
+    }
+    p {
+        color: #182B56;
+        font-size: 14px;
+    }
+  }
 }
+
 #vcode-form {
+  text-align: left;
   input.col:not(:last-child){
     margin-right: .5em;
   }  

@@ -1310,7 +1310,7 @@ footer.for-pc li {
   font-size: 0.9em;
 }
 
-/* index login for modal*/
+/* loginhtml for modal*/
 .login-top {
   font-size: 0.8em;
   white-space: nowrap;
@@ -1341,27 +1341,63 @@ footer.for-pc li {
   background: linear-gradient(to bottom right, #36D1DB, #568EE3);
 }
 
-#registeredModalCenter .modal-body,
-#loginModalCenter .modal-body {
+.modal-body {
   text-align: center;
 }
 
-#registeredModalCenter .modal-body h5,
-#loginModalCenter .modal-body h5 {
+.modal-body h5 {
   padding: 1em 0;
   font-weight: bold;
 }
 
-#registeredModalCenter .modal-body .icon_group button,
-#loginModalCenter .modal-body .icon_group button {
+.modal-body .icon_group button {
   margin: 1em 0.5em;
   width: 3.5em;
   height: 3.5em;
   border-radius: 4em;
 }
 
-#registeredModalCenter .modal-body button.login-btn,
-#loginModalCenter .modal-body button.login-btn {
+.modal-body .small-warning {
+  width: 100%;
+  margin-top: .25rem;
+  font-size: 80%;
+  color: #dc3545;
+  text-align: left;
+}
+
+.modal-body input[type='password'],
+.modal-body input[type='text'] {
+  line-height: 3em;
+  width: 100%;
+  border: 0;
+  border-bottom: 1px #eee solid;
+}
+
+.modal-body label.form-check-label {
+  vertical-align: super;
+  line-height: initial;
+}
+
+.modal-body .btn-login {
+  font-size: 90%;
+  color: #568EE3;
+}
+
+.modal-body .vcode-msg {
+  font-size: .8em;
+  text-align: center;
+}
+
+.modal-body button.close {
+  line-height: 0.6em;
+}
+
+.modal-body button.close.float-left {
+  top: 0.8em;
+  position: inherit;
+}
+
+.modal-body button.login-btn {
   margin: 1.5em 0 0.5em 0;
   line-height: 1.5em;
   width: 100%;
@@ -1371,8 +1407,7 @@ footer.for-pc li {
   background: linear-gradient(to bottom right, #36D1DB, #568EE3);
 }
 
-#registeredModalCenter .modal-body .login-method,
-#loginModalCenter .modal-body .login-method {
+.modal-body .login-method {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1386,77 +1421,20 @@ footer.for-pc li {
   margin: 0;
 }
 
-#registeredModalCenter .modal-body .login-method .method-item,
-#loginModalCenter .modal-body .login-method .method-item {
+.modal-body .login-method .method-item {
   -webkit-box-flex: 1;
   -ms-flex: 1;
   flex: 1;
   margin: 0 5px;
 }
 
-#registeredModalCenter .modal-body .login-method p,
-#loginModalCenter .modal-body .login-method p {
+.modal-body .login-method p {
   color: #182B56;
   font-size: 14px;
 }
 
-#favoriteModal h5,
-#messageModal h5,
-#pswModalCenter h5,
-#VcodeModalCenter h5,
-#forgetModalCenter h5 {
-  text-align: center;
-  position: relative;
-  top: 5px;
-  margin-bottom: 1em;
-}
-
-#favoriteModal .small-warning,
-#messageModal .small-warning,
-#pswModalCenter .small-warning,
-#VcodeModalCenter .small-warning,
-#forgetModalCenter .small-warning {
-  width: 100%;
-  margin-top: .25rem;
-  font-size: 80%;
-  color: #dc3545;
-}
-
-#favoriteModal input,
-#messageModal input,
-#pswModalCenter input,
-#VcodeModalCenter input,
-#forgetModalCenter input {
-  line-height: 3em;
-  width: 100%;
-  border: 0;
-  border-bottom: 1px #eee solid;
-}
-
-#favoriteModal .btn-login,
-#messageModal .btn-login,
-#pswModalCenter .btn-login,
-#VcodeModalCenter .btn-login,
-#forgetModalCenter .btn-login {
-  font-size: 90%;
-  color: #568EE3;
-}
-
-#favoriteModal .vcode-msg,
-#messageModal .vcode-msg,
-#pswModalCenter .vcode-msg,
-#VcodeModalCenter .vcode-msg,
-#forgetModalCenter .vcode-msg {
-  font-size: .8em;
-  text-align: center;
-}
-
-#favoriteModal button.close,
-#messageModal button.close,
-#pswModalCenter button.close,
-#VcodeModalCenter button.close,
-#forgetModalCenter button.close {
-  line-height: 0.6em;
+#vcode-form {
+  text-align: left;
 }
 
 #vcode-form input.col:not(:last-child) {
