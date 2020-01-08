@@ -3,10 +3,6 @@ var wrap = $('.wrap');
 var windowWidth = 767;
 var windowsize = $('body').width();
 
-var basePath = "https://wu-medoc.github.io/eyesmedia_afp/";
-$("img.modal-img-bn").attr("src", basePath+($('img.modal-img-bn').attr('src')));
-$("img.modal-img-logo").attr("src", basePath+($('img.modal-img-logo').attr('src')));
-
 $(".imgLiquidFill").imgLiquid();
 var swiper = new Swiper('.kv-box .swiper-container', {
     effect: 'fade',
