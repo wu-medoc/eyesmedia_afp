@@ -362,6 +362,7 @@ if($('.products-listbox .grid').length>0) {
     });
 }
 
+/* products-detail quantity min max control */
 if($('.number-spinner').length>0) {    
     $(document).on('click', '.number-spinner button', function () {    
         var btn = $(this),
