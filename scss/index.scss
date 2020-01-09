@@ -2262,3 +2262,15 @@ td.linebt-td,
   transform: translate(-50%, -65%);
   -webkit-transform: translate(-50%, -65%);
 }
+@media screen and (max-width: 570px) {
+  .item-favorite{
+    position:absolute;
+    width: 1.5em;
+    height: auto;
+    color: #fff;
+    top: 40%;
+    right:1%;
+    transform: translate(-50%, -65%);
+    -webkit-transform: translate(-50%, -65%);
+  }
+}
