@@ -1475,4 +1475,11 @@ h6 {
   width: 100%;
   font-size: 13px;
 }
+
+/* shopping cart */
+.shopping-cartfooter {
+  background-color: #fff;
+  padding-left: .5em;
+  padding-right: .5em;
+}
 /*# sourceMappingURL=shopping-index.css.map */
