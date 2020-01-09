@@ -2395,24 +2395,9 @@ td.linebt-td,
   width: 2em;
   height: auto;
   color: #fff;
-  position: absolute;
-  top: 58%;
+  top: 50%;
   right: 1%;
-  transform: translate(-50%, -60%);
-  -webkit-transform: translate(-50%, -50%);
-}
-
-@media screen and (max-width: 570px) {
-  .item-favorite {
-    position: absolute;
-    width: 2em;
-    height: auto;
-    color: #fff;
-    position: absolute;
-    top: 40%;
-    right: 1%;
-    transform: translate(-50%, -60%);
-    -webkit-transform: translate(-50%, -60%);
-  }
+  transform: translate(-50%, -65%);
+  -webkit-transform: translate(-50%, -65%);
 }
 /*# sourceMappingURL=index.css.map */
