@@ -221,11 +221,10 @@ if ($( ".travel-hotbox" ).hasClass("swiper-container")) {
         paginationClickable: true,
         freeMode: true,
         slidesPerView: 4,
-        spaceBetween: 20,
+        spaceBetween: 10,
         breakpoints: {
           1024: {
-            slidesPerView: 6,
-            spaceBetween: 20,
+            slidesPerView: 6
           },
         },
         loop: true
@@ -235,10 +234,13 @@ if ($( ".travel-hotbox" ).hasClass("swiper-container")) {
 if ($( ".travel-box" ).hasClass("swiper-container")) {
     var swiper = new Swiper('.travel-box.swiper-container', {
         slidesPerView: 5,
-        slidesPerColumn: 2,
+        slidesPerGroup: 5,
+        slidesPerColumn:2,
+        slidesPerColumnFill : 'row',
+        direction: 'horizontal',
         paginationClickable: true,
         spaceBetween: 0,
-        loop: false
+        loop: false        
     });
 }
 

@@ -26,7 +26,7 @@
   display: -webkit-box;
 }
 
-.travel-box.swiper-container .swiper-wrapper .swiper-slide {
+.travel-box.swiper-container .swiper-slide {
   text-align: center;
   /* Center slide text vertically */
   display: -webkit-box;
@@ -40,7 +40,7 @@
   align-items: center;
 }
 
-.travel-box.swiper-container .swiper-wrapper .swiper-slide .travel-bgbox {
+.travel-box.swiper-container .swiper-slide .travel-bgbox {
   width: 4.2em;
   height: 4.2em;
   border-radius: 50%;
@@ -57,11 +57,11 @@
   align-items: center;
 }
 
-.travel-box.swiper-container .swiper-wrapper .swiper-slide .travel-bgbox img {
+.travel-box.swiper-container .swiper-slide .travel-bgbox img {
   height: 3em;
 }
 
-.travel-box.swiper-container .swiper-wrapper .swiper-slide .travel-txt {
+.travel-box.swiper-container .swiper-slide .travel-txt {
   color: #212529;
   padding-bottom: 0.5em;
 }
@@ -112,6 +112,11 @@
 .travel-hot {
   overflow: hidden;
   width: 100%;
+}
+
+.travel-hot .col-12 {
+  padding-right: 0px;
+  padding-left: 0px;
 }
 
 @media screen and (max-width: 570px) {
