@@ -390,20 +390,3 @@ if($('.number-spinner').length>0) {
         btn.closest('.number-spinner').find('input').val(newVal);
     });
 }
-
-/* products-detail href tag */
-
-function ScrollTo(id_name) {
-    $('.tag-topbox').addClass('fixed-top container');
-    $('.nav-tabs-box').addClass('tag-top'); 
-    $('html,body').animate({scrollTop: $('#'+id_name).offset().top}, 1000);
-    $('.tablist-link').removeClass('active show');
-    $('#tab-'+id_name).addClass('active show');
-}
-$(document).on( 'scroll', function(){        
-    if ($(window).scrollTop() < 200) {        
-    $('.tag-topbox').removeClass('fixed-top container');
-    $('.nav-tabs-box').removeClass('tag-top');
-    }
-});
-

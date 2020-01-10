@@ -235,6 +235,10 @@ body.store-info-page .title-box .favorite {
   padding: 0 15px;
 }
 
+.explore-top-box .input-box input {
+  border: 0;
+}
+
 .explore-top-box .form-group .input {
   margin-left: 0;
 }

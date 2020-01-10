@@ -44,7 +44,9 @@
                 <div class="col-3 text-right">
                     <div class="top-item climate"> 
                         <img src="../img/shopping/icon_chat.svg"  data-toggle="tooltip" data-placement="bottom" title="客服">
-                        <img src="../img/shopping/icon_shoppingcart.svg" onclick="location.href='shopping-cart.html'" data-toggle="tooltip" data-placement="bottom" title="購物車">
+                        <button  onclick="location.href='shopping-cart.html'" data-toggle="tooltip" data-placement="bottom" title="購物車">
+                            <img src="../img/shopping/icon_shoppingcart.svg">
+                        </button>
                     </div>
                 </div>
             </div>
@@ -317,6 +319,24 @@
     <!-- custom js -->
     <script>    
         $("#loginhtml").load("../login.html");
+
+        /* products-detail href nav-tag */        
+        function ScrollTo(id_name) {
+            $('.tag-topbox').addClass('fixed-top container');
+            $('.nav-tabs-box').addClass('tag-top'); 
+            $('html,body').animate({scrollTop: $('#'+id_name).offset().top}, 1000);
+            $('.tablist-link').removeClass('active show');
+            $('#tab-'+id_name).addClass('active show');
+        }
+        $(document).on( 'scroll', function(){        
+            if ($(window).scrollTop() < 700) {        
+                $('.tag-topbox').removeClass('fixed-top container');
+                $('.nav-tabs-box').removeClass('tag-top');
+            } else {                
+                $('.tag-topbox').addClass('fixed-top container');
+                $('.nav-tabs-box').addClass('tag-top'); 
+            }
+        });
     </script>
     <script src="../js/index.js"></script>
 </body>
