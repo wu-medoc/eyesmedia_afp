@@ -655,6 +655,9 @@ h6 {
             }
             h6 {
                 padding: 4em 0 0.5em 0;
+                &:first-child {
+                    padding: 1.6em 0 0.5em 0;
+                }
             }
             p {
                 font-size: 0.9em;
