@@ -237,7 +237,7 @@ if ($( ".travel-box" ).hasClass("swiper-container")) {
         slidesPerView: 5,
         slidesPerColumn: 2,
         paginationClickable: true,
-        spaceBetween: 10,
+        spaceBetween: 0,
         loop: false
     });
 }

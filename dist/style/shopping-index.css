@@ -1486,4 +1486,49 @@ h6 {
   padding-left: .5em;
   padding-right: .5em;
 }
+
+.products-title {
+  color: #182B56;
+  font-weight: bold;
+  padding: 0 0.5em;
+}
+
+.products-item {
+  border: 1px solid #eee;
+  border-radius: 0.5em;
+  -webkit-box-shadow: 0px 1px 5px 0px #b0b0b0;
+          box-shadow: 0px 1px 5px 0px #b0b0b0;
+}
+
+.rwdimg {
+  border-top-left-radius: 0.5em;
+  border-top-right-radius: 0.5em;
+}
+
+main .products-price {
+  padding: 0 0.5em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .products-price .price-asking {
+  color: tomato;
+  font-weight: bold;
+  font-size: 0.9em;
+}
+
+main .products-price .price-original {
+  color: gray;
+  text-decoration: line-through;
+  text-align: bottom;
+  font-size: 0.75em;
+  text-align: right;
+}
 /*# sourceMappingURL=shopping-index.css.map */
