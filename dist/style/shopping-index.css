@@ -1102,8 +1102,8 @@ h6 {
 }
 
 .store-container .store-info-box .store-distance {
-  padding: 0 1.5em;
-  font-size: 0.8em;
+  padding: 0 1.5em 0 2em;
+  font-size: 0.7em;
 }
 
 .store-container .store-info-box .img-box {
@@ -1126,7 +1126,6 @@ h6 {
 .store-container .store-info-box .store-title {
   font-weight: bold;
   font-size: 1.1em;
-  padding-left: 0.5em;
 }
 
 .store-container .store-tab-box {
