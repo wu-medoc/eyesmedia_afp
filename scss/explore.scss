@@ -86,7 +86,17 @@ body {
         }
     }
 }
+.mask-container {
+    position: absolute;
+}
 
+.active{
+    font-weight: bold;
+}
+button.active{
+    color: #0056b3;
+    font-size: 0.9em;
+}
 .explore-container {
     // height: 100vh;
     overflow: hidden;
@@ -107,8 +117,42 @@ body {
         width: 80%;
         height: 100%;
         background-color: #fff;
-        display: none;
-
+        display: none;        
+        .open-page-title a{
+            font-size: 0.9em;
+        }
+        .open-page-ul label{
+            line-height: 3em;
+            font-weight: bold;
+            font-size: 1.1em;
+            padding-left: 0.5em;
+        }
+        .open-page-ul p{
+            line-height: 3.2em;
+            font-weight: 400;
+            font-size: 0.9em;
+            padding-left: 1em;
+        }
+        .open-page-ul li{
+            padding-left: 1em;
+            padding-right: 1em;
+            line-height: 3em;
+            font-size: 0.9em;
+            font-weight: 400;
+            border-top: 1px #C4C2C2 solid;
+        }
+        .open-page-ul li a:not(.active){
+            color: #212529;
+            font-size: 0.9em;
+        }  
+        .open-page-ul li button.active{
+            color: #0056b3;
+            font-size: 0.9em;
+            font-weight: bold;
+        }
+        .open-page-ul img{
+            height: 2em;
+        }
         &.is-open {
             display: block;
         }

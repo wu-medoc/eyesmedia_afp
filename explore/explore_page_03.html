@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="en">
 
 <head>
@@ -20,241 +20,290 @@
     <link rel="stylesheet" href="../dist/style/css.min.css">
     <link rel="stylesheet" href="../dist/style/global.min.css">
     <link rel="stylesheet" href="../dist/style/index.min.css">
-    <link rel="stylesheet" href="../dist/style/explore.min.css">
-    <title>艾斯移動 - 店家資訊</title>
+    <link rel="stylesheet" href="../dist/style/shopping-index.min.css">
+    <link rel="stylesheet" href="../dist/style/animate.min.css">
+    <title>eyemedia - afp</title>
 </head>
 
-<body class="hasBg store-info-page">
+<body class="hasBg">
     <div class="wrap container">
-        <div class="explore-top-box">
-            <div class="title-box">
-                <div class="item icon-btn"><i class="material-icons">&#xE314;</i></div>
-                <div class="item title-name"></div>
-                <div class="item icon-btn"><i class="material-icons favorite">&#xE87E;</i></div>
+    <main>        
+        <!-- Swiper for shopping-storeimg -->        
+        <div class="shopping-storedetail">
+            <div class="shopping-storedetailbox">
+                <div class="shopping-storeimgbox">
+                    <div class="shopping-storeimg swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img src="../img/shopping/store/store-001.jpg">
+                            </div>
+                            <div class="swiper-slide">                
+                                <img src="../img/shopping/store/store-002.jpg">
+                            </div>   
+                            <div class="swiper-slide">         
+                                <img src="../img/shopping/store/store-003.jpg">
+                            </div>
+                        </div>
+                        <!-- Add Pagination -->
+                        <div class="swiper-pagination"></div>
+                        <div class="shopping-storeup">         
+                            <div class="back-go">
+                                <button type="button" onclick="history.back()"><img src="../img/shopping/icon_back_gray.svg"></button>
+                            </div>
+                            <div class="add-favorite">
+                                <button type="button" data-toggle="modal" data-target=".bd-example-modal-sm"><img src="../img/shopping/icon_favorite_gray.svg"></button>
+                            </div>
+                        </div>  
+                    </div>  
+                </div>   
             </div>
-            <div class="store-slider">
-                <div class="slider-box">
-                    <div class="img-box imgLiquidFill">
-                        <img src="https://picsum.photos/600/450/?random=1">
-                    </div>
-                    <div class="img-box imgLiquidFill">
-                        <img src="https://picsum.photos/600/450/?random=2">
-                    </div>
-                    <div class="img-box imgLiquidFill">
-                        <img src="https://picsum.photos/600/450/?random=3">
-                    </div>
-                    <div class="img-box imgLiquidFill">
-                        <img src="https://picsum.photos/600/450/?random=3">
-                    </div>
-                </div>
-                <div class="slider-counter"></div>
-            </div>
-        </div>
-        <div class="explore-container">
-            <div class="store-info-box">
-                <div class="card-item">
-                    <div class="info-box">
-                        <ul class="info-list">
-                            <li class="info-name">
-                                <div>瑞豐夜市</div>
-                                <div class="item item-tag auto-left">
-                                    <img src="../img/explore/icon/food.svg" alt="">美食
+            <div class="store-container">
+                <div class="store-info-box">
+                    <div class="card-item">
+                        <div class="info-box">
+                            <div class="shopping-storebox">
+                                <div class="store-title">瑞豐夜市</div>     
+                                <div class="shopping-store-badge">                        
+                                    <span class="badge badge-pill badge-light"><img src="../img/explore/icon/food.svg" alt="">美食</span> 
+                                    <span class="badge badge-pill badge-light">折價券</span>      
                                 </div>
+                            </div>
+                            <div class="flex-inline-between store-distance">
+                                <div>
+                                    近左營捷運站
+                                </div>
+                                <div>
+                                    距離33km
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="store-tab-box">
+                        <ul class="nav nav-tabs" id="storeTab" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link active" id="store-tab" data-toggle="tab" href="#store" role="tab" aria-controls="store" aria-selected="true">商家簡介</a>
                             </li>
-                            <li>
-                                <div class="item item-ticket"><i class="material-icons offer">&#xE54E;</i><span>九折</span>折價券</div>
+                            <li class="nav-item">
+                                <a class="nav-link" id="ticket-tab" data-toggle="tab" href="#ticket" role="tab" aria-controls="ticket" aria-selected="false">優惠券</a>
                             </li>
-                            <li class="info-near">
-                                <div class="item">近高雄巨蛋捷運站</div>
-                                <div class="item auto-left">距離<span>33</span>km</div>
+                            <li class="nav-item">
+                                <a class="nav-link" id="shop-tab" data-toggle="tab" href="#shop" role="tab" aria-controls="shop" aria-selected="false">線上商城</a>
                             </li>
                         </ul>
-                    </div>
-                </div>
-                <div class="store-tab-box">
-                    <ul class="nav nav-tabs" id="storeTab" role="tablist">
-                        <li class="nav-item">
-                            <a class="nav-link active" id="store-tab" data-toggle="tab" href="#store" role="tab" aria-controls="store" aria-selected="true">商家簡介</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" id="ticket-tab" data-toggle="tab" href="#ticket" role="tab" aria-controls="ticket" aria-selected="false">優惠券</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" id="shop-tab" data-toggle="tab" href="#shop" role="tab" aria-controls="shop" aria-selected="false">線上商城</a>
-                        </li>
-                    </ul>
-                    <div class="tab-content">
-                        <!-- 商家簡介 -->
-                        <div class="tab-pane fade show active" id="store" role="tabpanel" aria-labelledby="store-tab">
-                            <div class="store-group">
-                                <div class="store-item store-open">
-                                    <p>
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus delectus, rem voluptates non fugit aliquam accusantium quas corrupti reiciendis illum odit saepe nihil fuga est, placeat animi cumque, perferendis natus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia maiores hic repellendus quia! Voluptatibus, perspiciatis cumque placeat quos explicabo eos hic aliquam aliquid maiores, tenetur dolorem maxime voluptas enim praesentium!
-                                    </p>
-                                    <div class="open-btn"><i class="material-icons">&#xE313;</i></div>
-                                </div>
-                                <div class="store-item">
-                                    <div class="item item-icon">
-                                        <i class="material-icons">&#xE0C8;</i>
+                        <div class="tab-content">
+                            <!-- 商家簡介 -->
+                            <div class="tab-pane fade show active" id="store" role="tabpanel" aria-labelledby="store-tab">
+                                <div class="store-group">
+                                    <div class="store-item store-open">
+                                        <p>
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus delectus, rem voluptates non fugit aliquam accusantium quas corrupti reiciendis illum odit saepe nihil fuga est, placeat animi cumque, perferendis natus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia maiores hic repellendus quia! Voluptatibus, perspiciatis cumque placeat quos explicabo eos hic aliquam aliquid maiores, tenetur dolorem maxime voluptas enim praesentium!
+                                        </p>
+                                        <div class="open-btn ml-auto"><i class="material-icons"></i></div>
                                     </div>
-                                    <div class="item">
-                                        高雄市左營區高鐵路115號
+                                    <div class="store-item store-itemopen">
+                                        <div class="item item-icon">
+                                            <i class="material-icons"></i>
+                                        </div>
+                                        <div class="item">
+                                            分店資訊
+                                        </div>
+                                        <div class="open-btn"><i class="material-icons"></i></div>
+                                        <ul class="itemopen-list">
+                                            <li><span>內湖復興店</span><i class="fas fa-chevron-right text-right pr-2"></i></li>
+                                            <li><span>金湖廣場</span><i class="fas fa-chevron-right text-right pr-2"></i></li>
+                                        </ul>
                                     </div>
-                                </div>
-                                <div class="store-item store-time">
-                                    <div class="item item-icon">
-                                        <i class="material-icons">&#xE192;</i>
+                                    <div class="store-item store-itemopen">
+                                        <div class="item item-icon">
+                                            <i class="material-icons"></i>
+                                        </div>
+                                        <div class="item">
+                                            <span>營業中</span>在22:00關閉
+                                        </div>
+                                        <div class="open-btn"><i class="material-icons"></i></div>
+                                        <ul class="itemopen-list">
+                                            <li class="this-day"><span>星期四</span><span>11:00~22:00</span></li>
+                                            <li><span>星期四</span><span>11:00~22:00</span></li>
+                                            <li><span>星期四</span><span>11:00~22:00</span></li>
+                                            <li><span>星期四</span><span>11:00~22:00</span></li>
+                                            <li><span>星期四</span><span>11:00~22:00</span></li>
+                                        </ul>
                                     </div>
-                                    <div class="item">
-                                        <span>營業中</span>在22:00關閉
+                                    <div class="store-item">
+                                        <div class="item item-icon">
+                                            <i class="material-icons"></i>
+                                        </div>
+                                        <div class="item">
+                                            07 346 9999
+                                        </div>
                                     </div>
-                                    <div class="open-btn auto-left"><i class="material-icons">&#xE313;</i></div>
-                                    <ul class="time-list">
-                                        <li class="this-day"><span>星期四</span><span>11:00~22:00</span></li>
-                                        <li><span>星期四</span><span>11:00~22:00</span></li>
-                                        <li><span>星期四</span><span>11:00~22:00</span></li>
-                                        <li><span>星期四</span><span>11:00~22:00</span></li>
-                                        <li><span>星期四</span><span>11:00~22:00</span></li>
-                                    </ul>
-                                </div>
-                                <div class="store-item">
-                                    <div class="item item-icon">
-                                        <i class="material-icons">&#xE0B0;</i>
+                                    <div class="store-item">
+                                        <div class="item item-icon">
+                                            <i class="material-icons"></i>
+                                        </div>
+                                        <div class="item">
+                                            現金、信用卡、LINE PAY
+                                        </div>
                                     </div>
-                                    <div class="item">
-                                        07 346 9999
-                                    </div>
-                                </div>
-                                <div class="store-item">
-                                    <div class="item item-icon">
-                                        <i class="material-icons">&#xE227;</i>
-                                    </div>
-                                    <div class="item">
-                                        現金、信用卡、LINE PAY
-                                    </div>
-                                </div>
-                                <div class="store-item">
-                                    <div class="item item-icon">
-                                        <i class="material-icons">&#xE80B;</i>
-                                    </div>
-                                    <div class="item">
-                                        <a href="https://www.google.com/">https://www.google.com/</a>
+                                    <div class="store-item">
+                                        <div class="item item-icon">
+                                            <i class="material-icons"></i>
+                                        </div>
+                                        <div class="item">
+                                            <a href="https://www.google.com/">https://www.google.com/</a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <!-- 優惠券 -->
-                        <div class="tab-pane fade" id="ticket" role="tabpanel" aria-labelledby="ticket-tab">
-                            <ul class="ticket-list">
-                                <li>
-                                    <div class="img-box">
-                                        <img src="../img/explore/logo.png" alt="">
-                                    </div>
-                                    <div class="ticket-info">
-                                        <div class="ticket-title">
-                                            <i class="material-icons offer">&#xE54E;</i>9折 折價券
+                            <!-- 優惠券 -->
+                            <div class="tab-pane fade" id="ticket" role="tabpanel" aria-labelledby="ticket-tab">
+                                <div class="container mb-2 other-discount-list">
+                                    <div class="discount-item">
+                                        <div class="item">
+                                            <div class="img-box">
+                                                <img src="../img/shopping/store/everrich.png" alt="">
+                                            </div>
                                         </div>
-                                        <div class="ticket-time">
-                                            2019/11/15 ~ 2019/12/31
+                                        <div class="item discount-text">
+                                            <p>9折 折扣券</p>
+                                            <p>2019/11/15 ~ 2019/12/31</p>
                                         </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="img-box">
-                                        <img src="../img/explore/logo.png" alt="">
-                                    </div>
-                                    <div class="ticket-info">
-                                        <div class="ticket-title">
-                                            <i class="material-icons offer">&#xE54E;</i>9折 折價券
-                                        </div>
-                                        <div class="ticket-time">
-                                            2019/11/15 ~ 2019/12/31
+                                        <div class="item ">
+                                            <div class="line-box"></div>
+                                            <div class="circle circle-top"></div>
+                                            <div class="circle circle-bottom"></div>
+                                            <button class="default-btn">領取</button>
+                                            <div class="m-quantity"><img src="../img/shopping/icon_m.svg"> 1</div>
                                         </div>
                                     </div>
-                                </li>
-                            </ul>
-                        </div>
-                        <!-- 線上商城 -->
-                        <div class="tab-pane fade" id="shop" role="tabpanel" aria-labelledby="shop-tab">
-                            <div class="shop-filter">
-                                <div class="item">
-                                    篩選與排序
-                                </div>
-                                <div class="item auto-left">
-                                    <i class="material-icons">&#xE152;</i>
+                                    <div class="discount-item">
+                                        <div class="item">
+                                            <div class="img-box">
+                                                <img src="../img/shopping/store/everrich.png" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="item discount-text">
+                                            <p>9折 折扣券</p>
+                                            <p>2019/11/15 ~ 2019/12/31</p>
+                                        </div>
+                                        <div class="item ">
+                                            <div class="line-box"></div>
+                                            <div class="circle circle-top"></div>
+                                            <div class="circle circle-bottom"></div>
+                                            <button class="default-btn">領取</button>
+                                            <div class="m-quantity"><img src="../img/shopping/icon_m.svg"> 1</div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="shop-list">
-                                <div class="shop-item">
-                                    <div class="img-box">
-                                        <img src="../img/explore/shop-test.png" alt="">
+                            <!-- 線上商城 -->
+                            <div class="tab-pane fade" id="shop" role="tabpanel" aria-labelledby="shop-tab">
+                                <div class="flex-inline-between p-2">
+                                    <div class="sub-title">
+                                        <button class="">
+                                            篩選與排序
+                                        </button>
                                     </div>
-                                    <div class="prod-name">
-                                        超級超好吃的舊振南風梨酥
-                                    </div>
-                                    <div class="prod-price">
-                                        <span class="new-price">$4880</span>
-                                        <span class="old-price">$6100</span>
-                                    </div>
-                                </div>
-                                <div class="shop-item">
-                                    <div class="img-box">
-                                        <img src="../img/explore/shop-test.png" alt="">
-                                    </div>
-                                    <div class="prod-name">
-                                        超級超好吃的舊振南風梨酥
-                                    </div>
-                                    <div class="prod-price">
-                                        <span class="new-price">$4880</span>
-                                        <span class="old-price">$6100</span>
+                                    <div class="sub-img">
+                                        <button class="">
+                                            <img src="../img/shopping/icon_sort.png" width="30">
+                                        </button>
                                     </div>
                                 </div>
-                                <div class="shop-item">
-                                    <div class="img-box">
-                                        <img src="../img/explore/shop-test.png" alt="">
-                                    </div>
-                                    <div class="prod-name">
-                                        超級超好吃的舊振南風梨酥
-                                    </div>
-                                    <div class="prod-price">
-                                        <span class="new-price">$4880</span>
-                                        <span class="old-price">$6100</span>
-                                    </div>
-                                </div>
-                                <div class="shop-item">
-                                    <div class="img-box">
-                                        <img src="../img/explore/shop-test.png" alt="">
-                                    </div>
-                                    <div class="prod-name">
-                                        超級超好吃的舊振南風梨酥
-                                    </div>
-                                    <div class="prod-price">
-                                        <span class="new-price">$4880</span>
-                                        <span class="old-price">$6100</span>
-                                    </div>
-                                </div>
-                                <div class="shop-item">
-                                    <div class="img-box">
-                                        <img src="../img/explore/shop-test.png" alt="">
-                                    </div>
-                                    <div class="prod-name">
-                                        超級超好吃的舊振南風梨酥
-                                    </div>
-                                    <div class="prod-price">
-                                        <span class="new-price">$4880</span>
-                                        <span class="old-price">$6100</span>
-                                    </div>
-                                </div>
-                                <div class="shop-item">
-                                    <div class="img-box">
-                                        <img src="../img/explore/shop-test.png" alt="">
-                                    </div>
-                                    <div class="prod-name">
-                                        超級超好吃的舊振南風梨酥
-                                    </div>
-                                    <div class="prod-price">
-                                        <span class="new-price">$4880</span>
-                                        <span class="old-price">$6100</span>
+                                <div id="products-list">
+                                    <div class="products-listbox">        
+                                            <div class="row">
+                                                <div class="col-4">
+                                                  <div class="products-item">
+                                                    <a href="products-detail.html">
+                                                        <div class="products-img">
+                                                            <div class="productimg-box">
+                                                                <div class="rwdimg" style="background-image: url('../img/shopping/products/products001.jfif');"></div>
+                                                            </div> 
+                                                        </div>
+                                                        <div class="products-title">
+                                                            <p class="txt-line-clamp2">Apple iPhone XS 256GB</p>
+                                                        </div>
+                                                        <div class="products-price">
+                                                            <div class="price-asking">$30,320</div>
+                                                            <div class="price-original">$37,000</div>
+                                                        </div>
+                                                    </a>
+                                                  </div>
+                                                </div>                                                
+                                                <div class="col-4">
+                                                    <div class="products-item">
+                                                    <a href="products-detail.html">
+                                                        <div class="products-img">
+                                                            <div class="productimg-box">
+                                                                <div class="rwdimg" style="background-image: url('../img/shopping/products/products001.jfif');"></div>
+                                                            </div> 
+                                                        </div>
+                                                        <div class="products-title">
+                                                            <p class="txt-line-clamp2">Apple iPhone XS 256GB</p>
+                                                        </div>
+                                                        <div class="products-price">
+                                                            <div class="price-asking">$30,320</div>
+                                                            <div class="price-original">$37,000</div>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                              </div>                                                
+                                              <div class="col-4">
+                                                  <div class="products-item">
+                                                    <a href="products-detail.html">
+                                                        <div class="products-img">
+                                                            <div class="productimg-box">
+                                                                <div class="rwdimg" style="background-image: url('../img/shopping/products/products001.jfif');"></div>
+                                                            </div> 
+                                                        </div>
+                                                        <div class="products-title">
+                                                            <p class="txt-line-clamp2">Apple iPhone XS 256GB</p>
+                                                        </div>
+                                                        <div class="products-price">
+                                                            <div class="price-asking">$30,320</div>
+                                                            <div class="price-original">$37,000</div>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                              </div>                                                
+                                              <div class="col-4">
+                                                  <div class="products-item">
+                                                    <a href="products-detail.html">
+                                                        <div class="products-img">
+                                                            <div class="productimg-box">
+                                                                <div class="rwdimg" style="background-image: url('../img/shopping/products/products001.jfif');"></div>
+                                                            </div> 
+                                                        </div>
+                                                        <div class="products-title">
+                                                            <p class="txt-line-clamp2">Apple iPhone XS 256GB</p>
+                                                        </div>
+                                                        <div class="products-price">
+                                                            <div class="price-asking">$30,320</div>
+                                                            <div class="price-original">$37,000</div>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                              </div>                                                
+                                              <div class="col-4">
+                                                  <div class="products-item">
+                                                    <a href="products-detail.html">
+                                                        <div class="products-img">
+                                                            <div class="productimg-box">
+                                                                <div class="rwdimg" style="background-image: url('../img/shopping/products/products001.jfif');"></div>
+                                                            </div> 
+                                                        </div>
+                                                        <div class="products-title">
+                                                            <p class="txt-line-clamp2">Apple iPhone XS 256GB</p>
+                                                        </div>
+                                                        <div class="products-price">
+                                                            <div class="price-asking">$30,320</div>
+                                                            <div class="price-original">$37,000</div>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                              </div>    
+                                            </div>
                                     </div>
                                 </div>
                             </div>
@@ -263,59 +312,56 @@
                 </div>
             </div>
         </div>
+        <div class="h-50 d-inline-block"></div>
+        <div id="loginhtml"></div>
+    </main>
+        
     </div>
+
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="../js/vendor/bs4/js/jquery-3.2.1.slim.min.js"></script>
     <!-- Latest compiled and minified JavaScript -->    
     <script src="../js/vendor/bs4/js/bootstrap.min.js"></script>
 
-    <script src="../js/popper.js"></script>
-    <script src="../js/vendor/imgLiquid.js"></script>   
-    <!-- slick --> 
-    <script src="../js/vendor/slick/slick/slick.min.js"></script>
+    <!-- owlcarousel JS -->
+    <script src="../js/vendor/owlcarousel/vendors/jquery.min.js"></script>
+    <script src="../js/vendor/owlcarousel/owlcarousel/owl.carousel.js"></script>
+    <script src="../js/vendor/owlcarousel/vendors/highlight.js"></script>
+    <script src="../js/vendor/owlcarousel/js/app.js"></script>   
+    <script src="../js/vendor/jquery-editable-select-master/dist/jquery-editable-select.js"></script>
 
-    <script>
-        $(document).ready(function(){
+    <!-- vendor js -->
+    <script src="../js/vendor/swiper/js/swiper.min.js"></script>
+    <script src="../js/vendor/imgLiquid.js"></script>
+    <script src="../js/masonry.pkgd.min.js"></script>
 
-            var $slider = $('.slider-box');
-            if ($slider.length) {
-                var currentSlide;
-                var slidesCount;
-                var sliderCounter = document.createElement('div');
-                sliderCounter.classList.add('slider_counter');
-                
-                var updateSliderCounter = function(slick, currentIndex) {
-                    currentSlide = slick.slickCurrentSlide() + 1;
-                    slidesCount = slick.slideCount;
-                    $(sliderCounter).text(currentSlide + '/' +slidesCount)
-                };
+    <!-- custom js -->
+    <script>   
+        // login.html load
+        $("#loginhtml").load("../login.html");
+        
+        // swiper for shopping-storeimg
+        if ($( ".shopping-storeimg" ).hasClass("swiper-container")) {
+        var swiper = new Swiper('.shopping-storeimg.swiper-container', {
+            autoplay: true,
+            pagination: {
+                el: '.shopping-storeimgbox .swiper-pagination',
+                type: 'fraction',
+            },
+            navigation: {
+                nextEl: '.shopping-storeimgbox .swiper-button-next',
+                prevEl: '.shopping-storeimgbox .swiper-button-prev',
+            },
+            });
+        }
 
-                $slider.on('init', function(event, slick) {
-                    $slider.append(sliderCounter);
-                    updateSliderCounter(slick);
-                });
-
-                $slider.on('afterChange', function(event, slick, currentSlide) {
-                    updateSliderCounter(slick, currentSlide);
-                });
-
-                $slider.slick({
-                    dots: false,
-                    autoplay: true,
-                    autoplaySpeed: 5000,
-                    fade: true,
-                    arrows: false,
-                    cssEase: 'linear'
-                });
-            }
-            $(".imgLiquidFill").imgLiquid();
-
-            $('.open-btn').on('click', function(){
-                $(this).parent().toggleClass('is-open');
-            })
+        // more info drop down toggle
+        $('.open-btn').on('click', function(){
+            $(this).parent().toggleClass('is-open');
         })
     </script>
+    <script src="../js/index.js"></script>
 </body>
 
 </html>

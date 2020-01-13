@@ -883,17 +883,25 @@ h6 {
 }
 .store-container {
     min-height: 550px;
-    .shopping-storebox{
-        padding: 0.5em 0.5em 0 0.5em; 
-        .shopping-storebox{
-            background-color: #fff;
-            padding: 0.5em 1em 0 1em;
+    .store-info-box {
+        background-color: #fff; 
+        .shopping-storebox{            
+            padding: 1em 1em 0 1em;
         }
         .shopping-store-btn button{
             font-size: 0.9em;
             margin-top: 0px;
             width: 80px;
         }       
+        .shopping-store-badge {
+            .badge {
+                line-height: 2;
+            }
+        }
+        .store-distance {
+            padding: 0 1.5em;
+            font-size: 0.8em;
+        }
         .img-box{
             width: 4.5em;
             height: 4.5em;

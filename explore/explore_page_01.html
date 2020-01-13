@@ -21,6 +21,7 @@
     <link rel="stylesheet" href="../dist/style/global.min.css">
     <link rel="stylesheet" href="../dist/style/index.min.css">
     <link rel="stylesheet" href="../dist/style/explore.min.css">
+    <link rel="stylesheet" href="../dist/style/animate.min.css">
     <title>艾斯移動 - 探索週邊</title>
 </head>
 
@@ -64,6 +65,7 @@
         </div>
         <div class="explore-container">
             <div class="explore-card-list">
+                <div class="mask-container w-100 h-100"></div>
                 <a href="explore_page_03.html">
                     <div class="card-item">
                         <div class="img-box">
@@ -196,143 +198,226 @@
                 </div>
             </a>            
             <div id="type" class="explore-filter-content">
-                <div class="nav-container">
-                    <nav>
-                        <ul class="levelOne">
-                            <li>
-                                <a href='#'>附近(GPS)</a>
-                            </li>
-                            <li>
-                                <a href='#'>類別選單</a>
-                            </li>
-                            <li>
-                                <a href='#'>高雄</a>
-                                <ul class='levelTwo'>
-                                    <li>
-                                        <a href='#'>捷運紅線</a>
-                                    </li>
-                                    <li>
-                                        <a href='#'>捷運橘線</a>
-                                    </li>
-                                    <li>
-                                        <a href='#'>輕軌</a>
-                                        <!-- ----levelThree---- -->
-                                        <ul class='levelThree'>
-                                            <li class="filter-all">
-                                                <a href=''>
-                                                    <span><i class="material-icons">&#xE5CA;</i></span>
-                                                    <span>全部</span>
-                                                    <span class="auto-left">218</span>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href=''>
-                                                    <span>籬仔內C1</span>
-                                                    <span class="auto-left">78</span>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href=''>
-                                                    <span>凱旋瑞田C2</span>
-                                                    <span class="auto-left"></span>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href=''>
-                                                    <span>前鎮之星C3</span>
-                                                    <span class="auto-left">100</span>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href=''>
-                                                    <span>凱旋中華C4</span>
-                                                    <span class="auto-left">100</span>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href=''>
-                                                    <span>前鎮之星C3</span>
-                                                    <span class="auto-left">100</span>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href=''>
-                                                    <span>夢時代C5</span>
-                                                    <span class="auto-left">100</span>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href=''>
-                                                    <span>經貿園區C7</span>
-                                                    <span class="auto-left">100</span>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href=''>
-                                                    <span>高雄展覽館C8</span>
-                                                    <span class="auto-left">100</span>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href=''>
-                                                    <span>旅運中心C9</span>
-                                                    <span class="auto-left">100</span>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href=''>
-                                                    <span>光榮碼頭C10</span>
-                                                    <span class="auto-left">100</span>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href=''>
-                                                    <span>高雄展覽館C8</span>
-                                                    <span class="auto-left">100</span>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href=''>
-                                                    <span>旅運中心C9</span>
-                                                    <span class="auto-left">100</span>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href=''>
-                                                    <span>光榮碼頭C10</span>
-                                                    <span class="auto-left">100</span>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href=''>
-                                                    <span>高雄展覽館C8</span>
-                                                    <span class="auto-left">100</span>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href=''>
-                                                    <span>旅運中心C9</span>
-                                                    <span class="auto-left">100</span>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href=''>
-                                                    <span>光榮碼頭C10</span>
-                                                    <span class="auto-left">100</span>
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </nav>
-                </div>
+                <ul class="open-page-ul">
+                    <li class="flex-inline-between">                
+                            <div class="">
+                                <button class="active">全部顯示</button>
+                            </div>
+                            <div class="">
+                                <button class="active"><i class="fas fa-check"></i></button>
+                            </div>   
+                    </li>
+                    <li class="flex-inline-between">
+                        <div class="">
+                            <button>熱門</button>
+                        </div>
+                        <div class="">
+                            13274
+                        </div>                
+                    </li>
+                    <li class="flex-inline-between">
+                        <div class="">
+                            <button>美食</button>
+                        </div>
+                        <div class="">
+                            1231
+                        </div>                
+                    </li>
+                    <li class="flex-inline-between">
+                        <div class="">
+                            <button>購物</button>
+                        </div>
+                        <div class="">
+                            274
+                        </div>                
+                    </li>
+                    <li class="flex-inline-between">
+                        <div class="">
+                            <button>景點</button>
+                        </div>
+                        <div class="">
+                            1374
+                        </div>                
+                    </li>
+                    <li class="flex-inline-between">
+                        <div class="">
+                            <button>遊樂</button>
+                        </div>
+                        <div class="">
+                            1327
+                        </div>                
+                    </li>
+                </ul>
             </div>
             
             </div>
         </div>
     </div>
+
+    <div class="close-left" id="open-mask"></div>
+    <!-- shopping right-menu (open-pagebox) -->
+    <div class="">
+        <div class="slideInRight animated d-none" id="open-pagebox">
+            <div class="open-page-title flex-inline-between">
+                <div class="title-icon">
+                </div>
+                <div class="title-txt">
+                    篩選與排序
+                </div>
+                <div class="title-txt">
+                    <button class="active">確定</button>
+                </div>
+            </div>
+            <ul class="open-page-ul">
+                <label>篩選</label>
+                <li class="flex-inline-between">
+                    <div class="">
+                        捷運紅線
+                    </div>
+                    <div class="">
+                        <button>全部顯示<i class="fas fa-chevron-right fa-fw"></i></button>
+                    </div>                
+                </li>
+                <li class="flex-inline-between">
+                    <div class="">
+                        捷運橘線
+                    </div>
+                    <div class="">
+                        <button>全部顯示<i class="fas fa-chevron-right fa-fw"></i></button>
+                    </div>                
+                </li>
+                <li class="flex-inline-between">
+                    <div class="">
+                        高捷輕軌
+                    </div>
+                    <div class="">
+                        <button href class="active open-page1">夢時代<i class="fas fa-chevron-right fa-fw"></i></button>
+                    </div>                
+                </li>
+                <li class="flex-inline-between">
+                    <div class="">
+                        藍色公路
+                    </div>
+                    <div class="">
+                        <button>全部顯示<i class="fas fa-chevron-right fa-fw"></i></button>
+                    </div>                
+                </li>
+                <li class="flex-inline-between">
+                    <div class="">
+                        往山上走
+                    </div>
+                    <div class="">
+                        <button>全部顯示<i class="fas fa-chevron-right fa-fw"></i></button>
+                    </div>                
+                </li>
+            </ul>
+            <ul class="open-page-ul">
+                <label>排序</label>
+                <li class="flex-inline-between">
+                    <div class="">
+                        <button>最新上架優先</button>
+                    </div>
+                    <div class="">                    
+                    </div>                
+                </li>
+                <li class="flex-inline-between">                
+                        <div class="">
+                            <button class="active">熱門程度優先</button>
+                        </div>
+                        <div class="">
+                            <button class="active"><i class="fas fa-check"></i></button>
+                        </div>   
+                </li>
+                <li class="flex-inline-between">
+                    <div class="">
+                        <button>距離由近而遠</button>
+                    </div>
+                    <div class="">
+                        
+                    </div>                
+                </li>
+                <li class="flex-inline-between">
+                    <div class="">
+                        <button>距離由遠而近</button>
+                    </div>
+                    <div class="">
+                        
+                    </div>                
+                </li>
+            </ul>
+            <button class="btn all-reset">
+                全部重設
+            </button>
+        </div>
+    </div>
+     <!-- shopping right-menu (open-pagebox1) -->
+     <div class="">
+        <div class="slideInRight animated d-none" id="open-pagebox1">
+            <div class="open-page-title flex-inline-between">                
+                <div class="close-btn">
+                    <button class="close-left1">
+                        <i class="material-icons">&#xE314;</i>
+                    </button>
+                </div>
+                <div class="title-txt">
+                    周邊         分類
+                </div>
+                <div class="title-txt">
+                    <button class="active">確定</button>
+                </div>
+            </div>
+            <ul class="open-page-ul">
+                <li class="flex-inline-between">
+                    <div class="">
+                        全部顯示
+                    </div>
+                    <div class="">
+                        
+                    </div>                
+                </li>
+                <li class="flex-inline-between">
+                    <div class="">
+                        籬仔內C1
+                    </div>
+                    <div class="">
+                        13274
+                    </div>                
+                </li>
+                <li class="flex-inline-between">
+                    <div class="">
+                        凱旋瑞田C2
+                    </div>
+                    <div class="">
+                        1231
+                    </div>                
+                </li>
+                <li class="flex-inline-between">
+                    <div class="">
+                        前鎮之星C3
+                    </div>
+                    <div class="">
+                        274
+                    </div>                
+                </li>
+                <li class="flex-inline-between">
+                    <div class="">
+                        凱旋中華C4
+                    </div>
+                    <div class="">
+                        1374
+                    </div>                
+                </li>
+                <li class="flex-inline-between">
+                    <div class="active">
+                        夢時代C5
+                    </div>
+                    <div class="">
+                        <button class="active">1327<i class="fas fa-check"></i></button>
+                    </div>                
+                </li>
+            </ul>
+        </div>
+    </div> 
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -368,9 +453,9 @@
                 var filter = $(this).data('filter');
                 $('#' + filter).toggleClass('is-open');
                 $('#' + filter).siblings().removeClass('is-open');
-                $( ".explore-card-list" ).removeClass("blur-bk");
+                $( ".mask-container" ).removeClass("blur-bk");
                 if ($( "button.filter-item" ).hasClass("active")) {
-                    $( ".explore-card-list" ).addClass("blur-bk");
+                    $( ".mask-container" ).addClass("blur-bk");
                 }
             })
             
@@ -386,12 +471,61 @@
                 $(this).addClass('active');
             })
 
-            // $('body').on('click', function(evt){
-            //     console.log(evt.target.className);
-            //     if($(evt.target).attr('class') != 'filter-item' && $(evt.target).attr('class') != 'nav-container'){
-            //         $('.explore-filter-content').removeClass('is-open');
-            //     }
-            // })
+
+            // open-page
+            $( ".open-page" ).on('click', function () {
+                if ($( "#open-pagebox" ).hasClass("slideOutRight animated")) {
+                    $( "#open-pagebox" ).removeClass('slideOutRight animated');
+                    $( "#open-pagebox" ).addClass('slideInRight animated');
+                    $( "#open-pagebox" ).removeClass('d-block');
+                    $( "#open-pagebox" ).addClass('d-none');
+                }
+                $( "#open-pagebox" ).removeClass('d-none');
+                $( "#open-pagebox" ).addClass('d-block');
+                $( "#open-mask" ).addClass("modal-backdrop fade show");
+                $( ".wrap" ).addClass("blur");
+            });
+            $( ".close-left" ).on('click', function () {
+                $( "#open-pagebox" ).removeClass('slideInRight animated');
+                $( "#open-pagebox" ).addClass('slideOutRight animated');
+                $( "#open-pagebox1" ).removeClass('slideInRight animated');
+                $( "#open-pagebox1" ).addClass('slideOutRight animated');
+                $( "#open-mask" ).removeClass("modal-backdrop fade show");
+                $( ".wrap" ).removeClass("blur");
+            });
+            if($('#open-pagebox').length>0) {
+                var wrapheight = $('#products-list').innerHeight();
+                var openheight = $('#open-pagebox').outerHeight();  
+                var openheight1 = (wrapheight-openheight)/3.5;
+                if (openheight < wrapheight) {
+                    $('#open-pagebox').css({'padding-bottom': openheight1});
+                }  
+            }
+            // open-page1
+            $( ".open-page1" ).on('click', function () {
+                if ($( "#open-pagebox1" ).hasClass("slideOutRight animated")) {
+                    $( "#open-pagebox1" ).removeClass('slideOutRight animated');
+                    $( "#open-pagebox1" ).addClass('slideInRight animated');
+                    $( "#open-pagebox1" ).removeClass('d-block');
+                    $( "#open-pagebox1" ).addClass('d-none');
+                }
+                $( "#open-pagebox1" ).removeClass('d-none');
+                $( "#open-pagebox1" ).addClass('d-block');
+                $( "#open-mask" ).addClass("modal-backdrop fade show");
+                $( ".wrap" ).addClass("blur");
+            });
+            $( ".close-left1" ).on('click', function () {
+                $( "#open-pagebox1" ).removeClass('slideInRight animated');
+                $( "#open-pagebox1" ).addClass('slideOutRight animated');
+            });
+            if($('#open-pagebox1').length>0) {
+                var wrapheight = $('#products-list').innerHeight();
+                var openheight = $('#open-pagebox1').outerHeight();  
+                var openheight1 = (wrapheight-openheight)/3.5;
+                if (openheight < wrapheight) {
+                    $('#open-pagebox1').css({'padding-bottom': openheight1});
+                }  
+            }
 
         })
     </script>

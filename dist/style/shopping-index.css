@@ -1083,22 +1083,30 @@ h6 {
   min-height: 550px;
 }
 
-.store-container .shopping-storebox {
-  padding: 0.5em 0.5em 0 0.5em;
-}
-
-.store-container .shopping-storebox .shopping-storebox {
+.store-container .store-info-box {
   background-color: #fff;
-  padding: 0.5em 1em 0 1em;
 }
 
-.store-container .shopping-storebox .shopping-store-btn button {
+.store-container .store-info-box .shopping-storebox {
+  padding: 1em 1em 0 1em;
+}
+
+.store-container .store-info-box .shopping-store-btn button {
   font-size: 0.9em;
   margin-top: 0px;
   width: 80px;
 }
 
-.store-container .shopping-storebox .img-box {
+.store-container .store-info-box .shopping-store-badge .badge {
+  line-height: 2;
+}
+
+.store-container .store-info-box .store-distance {
+  padding: 0 1.5em;
+  font-size: 0.8em;
+}
+
+.store-container .store-info-box .img-box {
   width: 4.5em;
   height: 4.5em;
   border: 1px #eee solid;
@@ -1106,7 +1114,7 @@ h6 {
   border-radius: 50%;
 }
 
-.store-container .shopping-storebox .img-box img {
+.store-container .store-info-box .img-box img {
   width: 100%;
   height: auto;
   vertical-align: middle;
@@ -1115,7 +1123,7 @@ h6 {
           transform: translateY(50%);
 }
 
-.store-container .shopping-storebox .store-title {
+.store-container .store-info-box .store-title {
   font-weight: bold;
   font-size: 1.1em;
   padding-left: 0.5em;
