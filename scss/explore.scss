@@ -467,7 +467,11 @@ button.active{
             display: flex;
             align-items: center;
             font-size: 13px;
-
+            .shopping-store-badge {
+                .badge {
+                    line-height: 2;
+                }
+            }
             &.info-near {
                 margin-top: auto;
             }

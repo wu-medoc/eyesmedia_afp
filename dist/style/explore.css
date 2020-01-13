@@ -715,6 +715,10 @@ button.active {
   font-size: 13px;
 }
 
+.card-item .info-box li .shopping-store-badge .badge {
+  line-height: 2;
+}
+
 .card-item .info-box li.info-near {
   margin-top: auto;
 }
