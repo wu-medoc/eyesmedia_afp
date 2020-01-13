@@ -2263,8 +2263,20 @@ button.open-page {
 .line-height3 {
   line-height: 3em;
 }
+.badge-img {
+  position:relative;
+  display:inline-block;
+}
 .badge-on {
-  position: relative;
+  position: absolute;
+  right:0px;
+  top:7px;
+  font-size: x-small;
+  padding-right: .4em;
+  padding-left: .4em;
+  border-radius: 50%;
+  color: #fff;
+  background-color: #dc3545;
 }
 .badge img {
   height: 2.3em;

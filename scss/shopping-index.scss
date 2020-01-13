@@ -334,6 +334,13 @@ h6 {
         }
     }
   }
+  .shopping-cartfooter {
+    .price-subtotal {
+        color: #22C2D3;
+        font-weight: bold;
+        font-size: 1.1em;
+    }
+  }
   @media screen and (max-width: 570px) {
     .shopping-products {
         overflow: inherit;
@@ -1302,4 +1309,7 @@ h6 {
             height: 10;
           }
     }
+}
+.subtotal-info {
+    line-height: 1.3;
 }

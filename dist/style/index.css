@@ -2408,8 +2408,21 @@ button.open-page img {
   line-height: 3em;
 }
 
-.badge-on {
+.badge-img {
   position: relative;
+  display: inline-block;
+}
+
+.badge-on {
+  position: absolute;
+  right: 0px;
+  top: 7px;
+  font-size: x-small;
+  padding-right: .4em;
+  padding-left: .4em;
+  border-radius: 50%;
+  color: #fff;
+  background-color: #dc3545;
 }
 
 .badge img {
