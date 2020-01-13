@@ -1,4 +1,3 @@
-@import "../dist/style/module/reset";
 @import "../dist/style/module/mixin";
 @import '../dist/style/module/variable';
 
@@ -1241,27 +1240,66 @@ h6 {
     border-top-left-radius: 0.5em;
     border-top-right-radius: 0.5em;
 }
-main{
-    .products-price {
-        padding: 0 0.5em;
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-        justify-content: space-between;
-        align-items: center;
-        .price-asking {
-            color: tomato;
-            font-weight: bold;
-            font-size: 0.9em;
+.shopping-cartlist {
+    ul.list-unstyled {
+        li {
+            padding: .5em;
+            border-bottom: 1px solid #F8F8F8;
+            img {
+                height: 1.8em;
+            }
+            .products-sitem {
+                .sitem-checkbox {
+                    width: 26px;
+                }
+                .sitem-img {
+                    width: 80px;
+                }
+                .sitem-title {
+                    width: 70%;
+                    small {
+                        color: #6c757d ;
+                    }
+                }
+                .products-quantity {  
+                    input.form-control.text-center {
+                        width: 50px;   
+                        padding: 2px 4px;
+                        height: 1.8em;
+                        border: 0px
+                    }
+                    .input-group-btn button{
+                        padding: 2px 3px;
+                        line-height: 1em;
+                        font-size: 0.7em;
+                    }   
+                }
+            }            
+            .price-asking {
+                color: tomato;
+                font-weight: bold;
+                text-align: right;
+            }
+            .price-original {
+                color: gray;
+                text-decoration: line-through;
+                text-align: bottom;
+                font-size: 0.75em; 
+                text-align: right;
+            }
+            .col-9 {
+                padding-right: 0px;
+                padding-left: 10px;
+            }
+            .col-3 {
+                padding-right: 10px;
+                padding-left: 10px;
+            }
         }
-        .price-original {
-            color: gray;
-            text-decoration: line-through;
-            text-align: bottom;
-            font-size: 0.75em; 
-            text-align: right;
-        }
+        li.linebt-row10 {
+            border-bottom: 10px solid #F8F8F8;
+            padding: 0;
+            height: 10;
+          }
     }
 }
