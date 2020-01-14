@@ -107,12 +107,12 @@ body.is-open-country .country-box {
 }
 .kv-box:before {
   left: -15px;
-  background: url("/img/index/kv_mask_left.svg") 0 0 no-repeat;
+  background: url("../../img/index/kv_mask_left.svg") 0 0 no-repeat;
   z-index: 9;
 }
 .kv-box:after {
   right: -15px;
-  background: url("/img/index/kv_mask_right.svg") 0 0 no-repeat;
+  background: url("../../img/index/kv_mask_right.svg") 0 0 no-repeat;
   z-index: 9;
 }
 .kv-box .kv-top {
