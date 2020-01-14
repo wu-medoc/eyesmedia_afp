@@ -55,21 +55,21 @@
         <div class="shopping-cartlist">
             <ul class="list-unstyled w-100">
                 <li class="flex-inline-between center-v">
-                    <div class="checkbox checkbox-primary w-50">
+                    <div class="checkbox checkbox-primary w-50 p-1">
                         <input id="checked-all" type="checkbox">
                         <label for="checked-all">
                             選擇全部
                         </label>
                     </div>
-                    <div class="w-50 text-right">
-                        <button class="btn text-info">
+                    <div class="w-50 text-right p-1">
+                        <button class="all-modifybtn btn text-info">
                             編輯全部
                         </button>
                     </div>
                 </li>
                 <li class="linebt-row10"></li>
                 <li class="flex-inline-between">      
-                    <div class="center-v">                                                
+                    <div class="store-title center-v p-1">                                                
                         <div class="checkbox checkbox-primary">
                             <input id="store01-all" type="checkbox" class="checkedall store01">
                             <label for="store01-all">
@@ -77,25 +77,25 @@
                             </label>
                         </div>         
                     </div>                
-                    <div class="text-right">
-                        <button class="btn text-info">
+                    <div class="text-right p-1">
+                        <button class="btn text-info s1-modifybtn">
                             編輯
                         </button>
                     </div>
                 </li>
                 <li>      
                     <div class="row">                
-                        <div class="col-9"> 
+                        <div class="col-9 col-lg-11"> 
                             <div class="products-sitem d-flex align-items-start bd-highlight">
                                 <div class="sitem-checkbox">
                                     <div class="checkbox checkbox-primary">
                                         <input id="products001" type="checkbox" class="checkedall store01"><label for="products001"></label>  
                                     </div>  
                                 </div>
-                                <div class="sitem-img bd-highlight">
+                                <div class="sitem-img bd-highlight py-1">
                                     <div class="rwdimg" style="background-image: url('../img/shopping/products/p00001.jpg');"></div>
                                 </div>
-                                <div class="sitem-title bd-highlight">
+                                <div class="sitem-title bd-highlight py-1">
                                     <p class="txt-line-clamp1">Apple iPhone XS 256GB Apple iPhone XS 256GB</p> 
                                     <small class="txt-line-clamp1">規格：香檳金</small> 
                                     <div class="products-quantity">
@@ -103,7 +103,7 @@
                                             <div class="input-group-btn data-dwn">
                                                 <button class="btn btn-default btn-outline-secondary" data-dir="dwn"><i class="fas fa-minus"></i></button>
                                             </div>
-                                            <div><input type="text" class="form-control text-center" value="1" min="0" max="3"></div>
+                                            <div><input type="number" class="form-control text-center" value="1" min="0" max="3"  required="required"></div>
                                             <div class="input-group-btn data-up">
                                                 <button class="btn btn-default btn-outline-info" data-dir="up"><i class="fas fa-plus"></i></button>
                                             </div>
@@ -112,24 +112,25 @@
                                 </div>
                             </div>  
                         </div>                    
-                        <div class="col-3">
-                            <div class="price-asking">$30,320 </div> 
+                        <div class="col-3 col-lg-1">
+                            <button class="store1 products-delbtn">刪除</button>
+                            <div class="store1 price-asking p-3">$30,320 </div> 
                         </div>  
                     </div>                    
                 </li>
                 <li>      
                     <div class="row">                
-                        <div class="col-9"> 
+                        <div class="col-9 col-lg-11"> 
                             <div class="products-sitem d-flex align-items-start bd-highlight">
                                 <div class="sitem-checkbox">
                                     <div class="checkbox checkbox-primary">
                                         <input id="products002" type="checkbox" class="checkedall store01"><label for="products002"></label>  
                                     </div>  
                                 </div>
-                                <div class="sitem-img bd-highlight">
+                                <div class="sitem-img bd-highlight py-1">
                                     <div class="rwdimg" style="background-image: url('../img/shopping/products/p00002.jpg');"></div>
                                 </div>
-                                <div class="sitem-title bd-highlight">
+                                <div class="sitem-title bd-highlight py-1">
                                     <p class="txt-line-clamp1">Apple iPhone XS 128GB Apple iPhone XS 128GB</p> 
                                     <small class="txt-line-clamp1">規格：黑色</small> 
                                     <div class="products-quantity">
@@ -137,7 +138,7 @@
                                             <div class="input-group-btn data-dwn">
                                                 <button class="btn btn-default btn-outline-secondary" data-dir="dwn"><i class="fas fa-minus"></i></button>
                                             </div>
-                                            <div><input type="text" class="form-control text-center" value="1" min="0" max="3"></div>
+                                            <div><input type="number" class="form-control text-center" value="1" min="0" max="3"  required="required"></div>
                                             <div class="input-group-btn data-up">
                                                 <button class="btn btn-default btn-outline-info" data-dir="up"><i class="fas fa-plus"></i></button>
                                             </div>
@@ -146,15 +147,16 @@
                                 </div>
                             </div>  
                         </div>                    
-                        <div class="col-3">
-                            <div class="price-asking">$27,320 </div> 
+                        <div class="col-3 col-lg-1">
+                            <button class="store1 products-delbtn">刪除</button>
+                            <div class="store1 price-asking p-3">$27,320 </div> 
                         </div>  
                     </div>                    
                 </li>
                 
                 <li class="linebt-row10"></li>
                 <li class="flex-inline-between">      
-                    <div class="center-v">                                                
+                    <div class="store-title center-v p-1">                                                
                         <div class="checkbox checkbox-primary">
                             <input id="store02-all" type="checkbox" class="checkedall store02">
                             <label for="store02-all">
@@ -162,25 +164,25 @@
                             </label>
                         </div>         
                     </div>                
-                    <div class="text-right">
-                        <button class="btn text-info">
+                    <div class="text-right p-1">
+                        <button class="btn text-info s2-modifybtn">
                             編輯
                         </button>
                     </div>
                 </li>
                 <li>      
                     <div class="row">                
-                        <div class="col-9"> 
+                        <div class="col-9 col-lg-11"> 
                             <div class="products-sitem d-flex align-items-start bd-highlight">
                                 <div class="sitem-checkbox">
                                     <div class="checkbox checkbox-primary">
                                         <input id="products003" type="checkbox" class="checkedall store02"><label for="products003"></label>  
                                     </div>  
                                 </div>
-                                <div class="sitem-img bd-highlight">
+                                <div class="sitem-img bd-highlight py-1">
                                     <div class="rwdimg" style="background-image: url('../img/shopping/products/p00001.jpg');"></div>
                                 </div>
-                                <div class="sitem-title bd-highlight">
+                                <div class="sitem-title bd-highlight py-1">
                                     <p class="txt-line-clamp1">Apple iPhone XS 256GB Apple iPhone XS 256GB</p> 
                                     <small class="txt-line-clamp1">規格：香檳金</small> 
                                     <div class="products-quantity">
@@ -188,7 +190,7 @@
                                             <div class="input-group-btn data-dwn">
                                                 <button class="btn btn-default btn-outline-secondary" data-dir="dwn"><i class="fas fa-minus"></i></button>
                                             </div>
-                                            <div><input type="text" class="form-control text-center" value="1" min="0" max="3"></div>
+                                            <div><input type="number" class="form-control text-center" value="1" min="0" max="3"  required="required"></div>
                                             <div class="input-group-btn data-up">
                                                 <button class="btn btn-default btn-outline-info" data-dir="up"><i class="fas fa-plus"></i></button>
                                             </div>
@@ -197,24 +199,25 @@
                                 </div>
                             </div>  
                         </div>                    
-                        <div class="col-3">
-                            <div class="price-asking">$30,320 </div> 
+                        <div class="col-3 col-lg-1">
+                            <button class="store2 products-delbtn">刪除</button>
+                            <div class="store2 price-asking p-3">$30,320 </div> 
                         </div>  
                     </div>                    
                 </li>
                 <li>      
                     <div class="row">                
-                        <div class="col-9"> 
+                        <div class="col-9 col-lg-11"> 
                             <div class="products-sitem d-flex align-items-start bd-highlight">
                                 <div class="sitem-checkbox">
                                     <div class="checkbox checkbox-primary">
                                         <input id="products004" type="checkbox" class="checkedall store02"><label for="products004"></label>  
                                     </div>  
                                 </div>
-                                <div class="sitem-img bd-highlight">
+                                <div class="sitem-img bd-highlight py-1">
                                     <div class="rwdimg" style="background-image: url('../img/shopping/products/p00002.jpg');"></div>
                                 </div>
-                                <div class="sitem-title bd-highlight">
+                                <div class="sitem-title bd-highlight py-1">
                                     <p class="txt-line-clamp1">Apple iPhone XS 128GB Apple iPhone XS 128GB</p> 
                                     <small class="txt-line-clamp1">規格：黑色</small> 
                                     <div class="products-quantity">
@@ -222,7 +225,7 @@
                                             <div class="input-group-btn data-dwn">
                                                 <button class="btn btn-default btn-outline-secondary" data-dir="dwn"><i class="fas fa-minus"></i></button>
                                             </div>
-                                            <div><input type="text" class="form-control text-center" value="1" min="0" max="3"></div>
+                                            <div><input type="number" class="form-control text-center" value="1" min="0" max="3"  required="required"></div>
                                             <div class="input-group-btn data-up">
                                                 <button class="btn btn-default btn-outline-info" data-dir="up"><i class="fas fa-plus"></i></button>
                                             </div>
@@ -231,25 +234,26 @@
                                 </div>
                             </div>  
                         </div>                    
-                        <div class="col-3">
-                            <div class="price-asking">$27,320 </div> 
+                        <div class="col-3 col-lg-1">
+                            <button class="store2 products-delbtn">刪除</button>
+                            <div class="store2 price-asking p-3">$27,320 </div> 
                         </div>  
                     </div>                    
                 </li>
                 
                 <li>      
                     <div class="row">                
-                        <div class="col-9"> 
+                        <div class="col-9 col-lg-11"> 
                             <div class="products-sitem d-flex align-items-start bd-highlight">
                                 <div class="sitem-checkbox">
                                     <div class="checkbox checkbox-primary">
                                         <input id="products005" type="checkbox" class="checkedall store02"><label for="products005"></label>  
                                     </div>  
                                 </div>
-                                <div class="sitem-img bd-highlight">
+                                <div class="sitem-img bd-highlight py-1">
                                     <div class="rwdimg" style="background-image: url('../img/shopping/products/p00002.jpg');"></div>
                                 </div>
-                                <div class="sitem-title bd-highlight">
+                                <div class="sitem-title bd-highlight py-1">
                                     <p class="txt-line-clamp1">Apple iPhone XS 128GB Apple iPhone XS 128GB</p> 
                                     <small class="txt-line-clamp1">規格：黑色</small> 
                                     <div class="products-quantity">
@@ -257,7 +261,7 @@
                                             <div class="input-group-btn data-dwn">
                                                 <button class="btn btn-default btn-outline-secondary" data-dir="dwn"><i class="fas fa-minus"></i></button>
                                             </div>
-                                            <div><input type="text" class="form-control text-center" value="1" min="0" max="3"></div>
+                                            <div><input type="number" class="form-control text-center" value="1" min="0" max="3"  required="required"></div>
                                             <div class="input-group-btn data-up">
                                                 <button class="btn btn-default btn-outline-info" data-dir="up"><i class="fas fa-plus"></i></button>
                                             </div>
@@ -266,8 +270,9 @@
                                 </div>
                             </div>  
                         </div>                    
-                        <div class="col-3">
-                            <div class="price-asking">$27,320 </div> 
+                        <div class="col-3 col-lg-1">
+                            <button class="store2 products-delbtn">刪除</button>
+                            <div class="store2 price-asking p-3">$27,320 </div> 
                         </div>  
                     </div>                    
                 </li>
@@ -279,12 +284,14 @@
         <div id="loginhtml"></div>
     </main>
 
-    <footer class="fixed-bottom container">
-        <div class="shopping-cartfooter">                
-            <div class="flex-inline-between">
-                <div>使用優惠券、折扣碼</div>
+    <footer class="shopping-cartfooter">
+        <div class="shopping-coupon container">
+            <div class="flex-inline-between coupon-box">
+                <div><img src="../img/shopping/icon_coupon.svg">使用優惠券、折扣碼</div>
                 <div><i class="fas fa-chevron-right"></i></div>
             </div>
+        </div>
+        <div class="fixed-bottom container">        
             <div class="row subtotal-info">
                 <div class="col-8 col-lg-9 text-right">
                     <small>小計</small><span class="price-subtotal">$ 6,980</span>
@@ -339,6 +346,53 @@
             $.each($(this).parents('ul').find('input.store02'), function(i, item){
             $(item).prop('checked', $this.checked);
             });
+        });
+
+        //footer coupon
+        $('.shopping-coupon').addClass('fixed-bottom').slideDown(2000);
+
+
+        //modify button control
+        $('.s1-modifybtn').on('click', function() {            
+            if($(this).text()=='完成'){
+                $(this).text('編輯');
+                $('.store1.products-delbtn').hide();
+                $('.store1.price-asking').show(); 
+            }else{
+                $(this).text('完成');         
+                $('.store1.products-delbtn').show();  
+                $('.store1.price-asking').hide();      
+            }
+        });
+        $('.s2-modifybtn').on('click', function() {            
+            if($(this).text()=='完成'){
+                $(this).text('編輯');
+                $('.store2.products-delbtn').hide();
+                $('.store2.price-asking').show(); 
+            }else{
+                $(this).text('完成');         
+                $('.store2.products-delbtn').show();  
+                $('.store2.price-asking').hide();      
+            }
+        });
+        $('.all-modifybtn').on('click', function() {            
+            if($(this).text()=='完成'){  
+                $('.s1-modifybtn').show();     
+                $('.s2-modifybtn').show(); 
+                $(this).text('編輯全部');
+                $('.store1.products-delbtn').hide();
+                $('.store1.price-asking').show();                 
+                $('.store2.products-delbtn').hide();
+                $('.store2.price-asking').show(); 
+            }else{
+                $(this).text('完成');       
+                $('.s1-modifybtn').hide();     
+                $('.s2-modifybtn').hide(); 
+                $('.store1.products-delbtn').show();  
+                $('.store1.price-asking').hide();   
+                $('.store2.products-delbtn').show();  
+                $('.store2.price-asking').hide();      
+            }
         });
     </script>
     <script src="../js/index.js"></script>
