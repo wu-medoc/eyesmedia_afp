@@ -526,7 +526,7 @@ body.is-open-country .country-box {
   -webkit-transition: .5s color;
   transition: .5s color;
   border: none;
-  margin-right: 20px;
+  margin-right: 14px;
   margin-bottom: 10px;
   display: inline-block;
   flex-grow: 1;
@@ -1814,12 +1814,14 @@ td.linebt-td,
 
 .for-pc .popup-box {
     z-index: 1000;
-    overflow-y: hidden;
+    overflow: hidden;
+    padding: 0;
 }
 
 .for-pc  .popup-box .popup-messages {
   background: #fff none repeat scroll 0 0;
   height: 380px;
+  overflow-y: auto;
 }
 .for-pc .direct-chat-messages {
   height: 100%;

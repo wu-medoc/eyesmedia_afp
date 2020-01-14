@@ -53,6 +53,7 @@
 .member-item-group{
     position: relative;
     background-color: $default-white;
+    min-height: 58vh;
     .member-item-bg{
         position: absolute;
         left: 0;

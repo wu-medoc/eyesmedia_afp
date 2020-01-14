@@ -28,52 +28,74 @@
     <link rel="stylesheet" href="../dist/style/global.min.css">
     <link rel="stylesheet" href="../dist/style/index.min.css">
     <link rel="stylesheet" href="../dist/style/member.min.css">
+    <link rel="stylesheet" href="../dist/style/animate.min.css">
 
-    <title>艾斯移動 - 我的帳戶 - 檔案</title>
+    <title>艾斯移動 - 我的帳戶</title>
 </head>
 
-<body class="hasBg">
-    <div class="wrap container">
+<body>
+    <div class="wrap container slideInRight animated">
         <div class="title-box">
-            <div class="item icon-btn"><i class="material-icons">&#xE314;</i></div>
-            <div class="item title-name">我的檔案</div>
-            <div class="item ctrl-btn">編輯</div>
-        </div>
-        <div class="my-info-box">
-            <div class="info-box info-img">
-                <div class="info-item">
-                    <img src="https://picsum.photos/300/300/?random=1">
-                </div>
+            <div class="item icon-btn">
+                <button onclick="history.back();" data-toggle="tooltip" data-placement="bottom" title="回上一頁">
+                    <i class="material-icons">&#xE314;</i>
+                </button>
             </div>
-            <div class="info-box info-email">
-                jaso****56@gmail.com
-            </div>
+            <div class="item title-name">我的</div>
+            <div class="item icon-btn"></div>
         </div>
         <div class="my-list-box">
+            <p>我的帳號</p>
+            <ul>
+                <li onclick="location.href='member_myfile.html'">
+                    <div class="item">我的檔案</div>
+                    <div class="item auto-left"><i class="material-icons">&#xE315;</i></div>
+                </li>
+                <li>
+                    <div class="item">我的地址</div>
+                    <div class="item auto-left"><i class="material-icons">&#xE315;</i></div>
+                </li>
+                <li>
+                    <div class="item">付款設定</div>
+                    <div class="item auto-left"><i class="material-icons">&#xE315;</i></div>
+                </li>
+                <li>
+                    <div class="item">變更密碼</div>
+                    <div class="item auto-left"><i class="material-icons">&#xE315;</i></div>
+                </li>
+                <li>
+                    <div class="item">社群帳號綁定</div>
+                    <div class="item auto-left"><i class="material-icons">&#xE315;</i></div>
+                </li>
+            </ul>
+            <p>我的語言</p>
+            <ul class="my-language">
+                <li>
+                    <div class="item">語言</div>
+                    <div class="item">繁體中文</div>
+                </li>
+                <li>
+                    <div class="item">幣別</div>
+                    <div class="item">TWD</div>
+                </li>
+            </ul>
+            <p>我的小幫手</p>
             <ul>
                 <li>
-                    <div class="item">名稱</div>
-                    <div class="item auto-left">李曉龍</div>
+                    <div class="item">常見問題</div>
+                    <div class="item auto-left"><i class="material-icons">&#xE315;</i></div>
                 </li>
                 <li>
-                    <div class="item">生日</div>
-                    <div class="item auto-left"></div>
+                    <div class="item">使用者規範</div>
+                    <div class="item auto-left"><i class="material-icons">&#xE315;</i></div>
                 </li>
                 <li>
-                    <div class="item">手機號碼</div>
-                    <div class="item auto-left"></div>
+                    <div class="item">隱私權政策</div>
+                    <div class="item auto-left"><i class="material-icons">&#xE315;</i></div>
                 </li>
                 <li>
-                    <div class="item">E-mail</div>
-                    <div class="item auto-left"></div>
-                </li>
-                <li>
-                    <div class="item">上傳護照</div>
-                    <div class="item auto-left"></div>
-                </li>
-                <li>
-                    <div class="item">上傳台胞證</div>
-                    <div class="item auto-left"></div>
+                    <div class="item">關於</div>
+                    <div class="item auto-left"><i class="material-icons">&#xE315;</i></div>
                 </li>
             </ul>
         </div>
@@ -96,7 +118,7 @@
     <script src="../js/vendor/swiper/js/swiper.min.js"></script>
     <script src="../js/vendor/imgLiquid.js"></script>
 
-    <!-- custom js -->
+    <!-- custom js -->    
     <script src="../js/index.js"></script>
 </body>
 

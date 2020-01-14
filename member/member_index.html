@@ -28,17 +28,18 @@
     <link rel="stylesheet" href="../dist/style/global.min.css">
     <link rel="stylesheet" href="../dist/style/index.min.css">
     <link rel="stylesheet" href="../dist/style/member.min.css">
+    <link rel="stylesheet" href="../dist/style/animate.min.css">
 
     <title>艾斯移動 - 我的首頁</title>
 </head>
 
-<body class="hasBg">
+<body>
     <div class="wrap container">
         <div class="member-top-box">
             <div class="title-box">
                 <div class="item icon-btn">
                     <div class="img-box">
-                        <img src="../img/member/member-icon-setting.svg" alt="">
+                        <a href="member_setting.html"><img src="../img/member/member-icon-setting.svg" alt=""></a>
                     </div>
                 </div>
                 <div class="item title-name"></div>
@@ -127,34 +128,66 @@
 
         </div>
     </div>
-    <footer class="mobile-footer for-mobile">
-        <div class="menu-bar">
-            <a href="javascript:;" class="bar-item">
-                <img class="default-img" src="../img/index/icons/footer_1_1.svg" alt="">
-                <img class="active-img" src="../img/index/icons/footer_1_2.svg" alt="">
-                首頁
-            </a>
-            <a href="javascript:;" class="bar-item">
-                <img class="default-img" src="../img/index/icons/footer_2_1.svg" alt="">
-                <img class="active-img" src="../img/index/icons/footer_2_2.svg" alt="">
-                路線規劃
-            </a>
-            <a href="javascript:;" class="bar-item customer-itemm">
-                <img src="../img/index/icons/footer_3.png" alt="">
-                客服
-            </a>
-            <a href="javascript:;" class="bar-item">
-                <img class="default-img" src="../img/index/icons/footer_4_1.svg" alt="">
-                <img class="active-img" src="../img/index/icons/footer_4_2.svg" alt="">
-                任務
-            </a>
-            <a href="member_index.html" class="bar-item active">
-                <img class="default-img" src="../img/index/icons/footer_5_1.svg" alt="">
-                <img class="active-img" src="../img/index/icons/footer_5_2.svg" alt="">
-                我的
-            </a>
+    <div class="addheight container"></div>
+    <div id="loginhtml"></div>
+
+<footer class="for-pc"> 
+    <div class="container">
+    <div class="row d-flex">
+        <div class="col-4 col-md-3">
+        <h6>關於亞洲好玩卡</h6>
+        <ul>
+            <li><a href="#">關於我們</a></li>
+        </ul>            
         </div>
-    </footer>
+        <div class="col-4 col-md-3">
+        <h6>追蹤我們</h6>
+        <ul>
+            <li><a href="#"><i class="fab fa-facebook-f fa-fw"></i> Facebook</a></li>
+            <li><a href="#"><i class="fab fa-line fa-fw"></i> Line</a></li>
+            <li><a href="#"><i class="fab fa-instagram fa-fw"></i> Instagram</a></li>
+        </ul>            
+        </div>  
+        <div class="w-100"></div>
+        <div class="col-12 border-t">
+        <div class="f-left">
+            <object data="../img/index/logo-s.svg" width="30" type="image/svg+xml"></object><span> Designed by Asia Fun Pass</span>
+        </div>
+        <div class="f-right">
+            Ⓒ2020 Asia Fun Pass. All Right Reserved          
+        </div>
+        </div>
+    </div>  
+    </div>
+</footer>
+<footer class="mobile-footer for-mobile">
+    <div class="menu-bar">
+        <a href="javascript:;" class="bar-item active">
+            <img class="default-img" src="../img/index/icons/footer_1_1.svg" alt="">
+            <img class="active-img" src="../img/index/icons/footer_1_2.svg" alt="">
+            首頁
+        </a>
+        <a href="javascript:;" class="bar-item">
+            <img class="default-img" src="../img/index/icons/footer_2_1.svg" alt="">
+            <img class="active-img" src="../img/index/icons/footer_2_2.svg" alt="">
+            周邊
+        </a>
+        <a href="javascript:;" class="bar-item customer-item">
+            <img src="../img/index/icons/footer_3.png" alt="">
+            客服
+        </a>
+        <a href="javascript:;" class="bar-item">
+            <img class="default-img" src="../img/index/icons/footer_4_1.svg" alt="">
+            <img class="active-img" src="../img/index/icons/footer_4_2.svg" alt="">
+            任務
+        </a>
+        <a href="member_index.html" class="bar-item">
+            <img class="default-img" src="../img/index/icons/footer_5_1.svg" alt="">
+            <img class="active-img" src="../img/index/icons/footer_5_2.svg" alt="">
+            我的
+        </a>
+    </div>
+</footer>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -174,6 +207,9 @@
     <script src="../js/vendor/imgLiquid.js"></script>
 
     <!-- custom js -->
+    <script>    
+        $("#loginhtml").load("../login.html");
+    </script>
     <script src="../js/index.js"></script>
 </body>
 

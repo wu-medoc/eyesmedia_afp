@@ -511,7 +511,7 @@ h6 {
             vertical-align: baseline;
             border-radius: 0.5em;
             background-color: #eee;
-            opacity: 0.7;
+            opacity: 0.7;     
         }
     }
     .add-favorite {
@@ -758,7 +758,10 @@ h6 {
         vertical-align: baseline;
         border-radius: 0.5em;
         background-color: #eee;
-        opacity: 0.7;
+        opacity: 0.7;       
+        @media (min-width: 992px) {
+            bottom: 7.5em;
+        }
     }
     .store-container {
         height: auto;

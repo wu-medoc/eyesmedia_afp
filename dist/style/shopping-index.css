@@ -883,6 +883,12 @@ h6 {
   opacity: 0.7;
 }
 
+@media (min-width: 992px) {
+  .shopping-storedetail .swiper-pagination-fraction {
+    bottom: 7.5em;
+  }
+}
+
 .shopping-storedetail .store-container {
   height: auto;
   position: relative;
