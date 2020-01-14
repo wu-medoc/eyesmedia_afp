@@ -19,6 +19,7 @@ body.open-popup .wrap {
 
 body.open-popup .popup-box, body.open-popup .overlay, body.open-popup .search-taxi-wave {
   display: block;
+  overflow: initial;
 }
 
 .call-car-box {
@@ -57,12 +58,12 @@ body.open-popup .popup-box, body.open-popup .overlay, body.open-popup .search-ta
 
 .call-car-box .call-car-bg:before {
   left: -15px;
-  background: url("../../img/callcar/kv_mask_left_car.svg") 0 0 no-repeat;
+  background: url("../img/callcar/kv_mask_left_car.svg") 0 0 no-repeat;
 }
 
 .call-car-box .call-car-bg:after {
   right: -15px;
-  background: url("../../img/callcar/kv_mask_right_car.svg") 0 0 no-repeat;
+  background: url("../img/callcar/kv_mask_right_car.svg") 0 0 no-repeat;
 }
 
 .call-car-box .call-car-input {

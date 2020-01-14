@@ -22,6 +22,7 @@ body{
         }
         .popup-box, .overlay, .search-taxi-wave{
             display: block;
+            overflow: initial;
         }
     }
 }
@@ -54,11 +55,11 @@ body{
         }
         &:before{
             left: -15px;
-            background: url('../../img/callcar/kv_mask_left_car.svg') 0 0 no-repeat;
+            background: url('../img/callcar/kv_mask_left_car.svg') 0 0 no-repeat;
         }
         &:after{
             right: -15px;
-            background: url('../../img/callcar/kv_mask_right_car.svg') 0 0 no-repeat;
+            background: url('../img/callcar/kv_mask_right_car.svg') 0 0 no-repeat;
         }
     }
     .call-car-input{

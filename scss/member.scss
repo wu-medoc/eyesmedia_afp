@@ -1,0 +1,282 @@
+@import "../dist/style/module/mixin";
+@import "../dist/style/module/variable";
+@import "../dist/style/module/global";
+
+.member-top-box{
+    position: relative;
+    background-color: $member-default;
+    .title-box{
+        .material-icons{
+            color: $default-white;
+        }
+    }
+    .member-info-box{
+        display: flex;
+        align-items: center;
+        padding: 30px;
+        .info-coin{
+            text-align: center;
+        }
+        .info-item{
+            display: flex;
+            align-items: center;
+            color: $default-white;
+            font-size: 16px;
+            &.info-name, &.info-coin{
+                font-size: 18px;
+                font-weight: 700;
+            }
+            &.info-coin{
+                justify-content: center;
+            }
+            img{
+                margin-right: 3px;
+            }
+        }
+    }
+}
+
+.info-img{
+    flex: none;
+    width: 75px;
+    height: 75px;
+    border-radius: 100%;
+    overflow: hidden;
+    margin-right: 15px;
+    img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+.member-item-group{
+    position: relative;
+    background-color: $default-white;
+    .member-item-bg{
+        position: absolute;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 100px;
+        /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#f4246a+0,ffffff+100&1+0,0+100 */
+        background: -moz-linear-gradient(top,  rgba(244,36,106,1) 0%, rgba(255,255,255,0) 100%); /* FF3.6-15 */
+        background: -webkit-linear-gradient(top,  rgba(244,36,106,1) 0%,rgba(255,255,255,0) 100%); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to bottom,  rgba(244,36,106,1) 0%,rgba(255,255,255,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f4246a', endColorstr='#00ffffff',GradientType=0 ); /* IE6-9 */
+
+
+    }
+    .member-item-list{
+        position: relative;
+        z-index: 50;
+        padding: 0 15px;
+        background-color: $default-white;
+        box-shadow: 0px 1px 4px rgba(174, 165, 165, 0.5);
+        border-radius: 10px;
+        .member-items{
+            display: flex;
+            &:first-child{
+                border-bottom: 1px #eee solid;
+            }
+            .member-item{
+                flex: 1;
+                text-align: center;
+                padding: 15px;
+                color: #333;
+                p{
+                    font-size: 14px;
+                }
+            }
+            .img-box{
+                margin-bottom: 5px;
+            }
+        }
+    }
+}
+
+// 我的帳戶
+.my-list-box{
+    &.edit-list{
+        ul{
+            li{
+                border-bottom: none;
+                .item{
+                    &:first-child{
+                        flex: 1;
+                    }
+                    &:last-child{
+                        flex: none;
+                        width: 30px;
+                        .material-icons{
+                            color: $gray-color;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    p{
+        padding: 2px 15px;
+        box-shadow: 0px -0.5px 0px rgba(0, 0, 0, 0.15);
+        background-color: #F8F8F8;
+    }
+    ul{
+        &.my-language{
+            li{
+                flex-direction: column;
+                align-items: flex-start;
+                .item{
+                    &:last-child{
+                        color: $gray-color;
+                    }
+                }
+            }
+        }
+        li{
+            color: $blue-dark;
+            display: flex;
+            align-items: center;
+            padding: 15px;
+            border-bottom: 1px $gray-light solid;
+            .input-box{
+                flex: 1;
+                input{
+                    width: 100%;
+                    border: none;
+                    border-bottom: 1px $gray-light solid;
+                    text-align: right;
+                    color: $blue-dark;
+                }
+            }
+        }
+    }
+}
+
+// 我的帳戶 - 檔案
+.my-info-box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 30px 15px;
+    border-top: 1px $gray-light solid;
+    border-bottom: 1px $gray-light solid;
+    .info-email{
+        margin-top: 5px;
+        color: $blue-dark;
+        font-size: 15px;
+    }
+    .upload-box{
+        position: relative;
+        .add-btn, .change-btn{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .change-btn{
+            width: 60px;
+            height: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: $default-white;
+            background-color: #F4246A;
+            border-radius: 100%;
+            box-shadow: 0 0 10px rgba(0,0,0,.5);
+        }
+    }
+    .passport-status{
+        margin-top: 3px;
+        color: $gray-color;
+        .material-icons{
+            font-size: 18px;
+            vertical-align: sub;
+        }
+    }
+}
+
+// 上傳護照提示
+.upload-passport-noti{
+    height: calc(100vh - 54px);
+    display: flex;
+    flex-direction: column;
+    padding: 30px 15px;
+    .noti-text{
+        color: $blue-dark;
+    }
+    .img-box{
+        margin: auto;
+    }
+}
+
+// 照片確認
+.passport-pic{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 60%;
+    background-color: rgba(0,0,0,.5);
+    padding: 30px;
+    .passport-box{
+        width: 100%;
+        height: 60%;
+        background-color: $default-white;
+    }
+}
+.passport-pic-status{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    color: $blue-dark;
+    background-color: $default-white;
+    .btn-group{
+        margin-top: auto;
+        .btn{
+            margin: 0 5px;
+            border-radius: 30px !important;
+        }
+        .outline-btn{
+            border-color: #F4246A;
+            color: #F4246A;
+        }
+    }
+}
+
+.overlay{
+    display: block;
+}
+
+.overlay-choice{
+    position: absolute;
+    left: 15px;
+    right: 15px;
+    bottom: 15px;
+    z-index: 600;
+    .choice-list, .choice-status{
+        background-color: $default-white;
+        border-radius: 12px;
+    }
+    .choice-list{
+        margin-bottom: 15px;
+        li{
+            padding: 10px 15px;
+            border-bottom: 1px $gray-light solid;
+            font-weight: 600;
+            &:last-child{
+                border-bottom: none;
+            }
+        }
+    }
+    .choice-status{
+        padding: 10px 15px;
+        font-weight: 600;
+        text-align: center;
+        color: #4A90E2;
+    }
+}

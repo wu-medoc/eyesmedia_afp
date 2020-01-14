@@ -10,8 +10,8 @@ html, body {
   word-break: normal;
 }
 
-html i, body i {
-  vertical-align: middle;
+body {
+  overflow-x: hidden;
 }
 
 * {
@@ -24,18 +24,19 @@ html i, body i {
           box-sizing: border-box;
 }
 
-::-webkit-scrollbar-track {
+// scroll ui
+.wrap::-webkit-scrollbar-track {
 	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
 	background-color: #F5F5F5;
 	border-radius: 10px;
 }
 
-::-webkit-scrollbar {
+.wrap::-webkit-scrollbar {
 	width: 8px;
 	background-color: #F5F5F5;
 }
 
-::-webkit-scrollbar-thumb {
+.wrap::-webkit-scrollbar-thumb {
 	border-radius: 10px;
 	background-image: -webkit-gradient(linear,
 									   left bottom,
@@ -45,8 +46,28 @@ html i, body i {
 									   color-stop(0.86, rgb(116, 125, 150)));
 }
 
-body {
-  overflow-x: hidden;
+// 電腦版顯示
+.for-pc {
+  @media screen and (max-width: 767px) {
+      display: none;
+  }
+}
+
+// 手機版顯示
+.for-mobile {
+  display: none;
+
+  @media screen and (max-width: 570px) {
+      display: block;
+  }
+}
+
+.container{
+  @media screen and (max-width: 570px){
+      width: 100%;
+      padding-right: 0;
+      padding-left: 0;
+  }
 }
 
 .wrap {
@@ -54,14 +75,12 @@ body {
   margin-right: auto;
   margin-left: auto;
 }
-
 .hasBg {
   background-color: #F8F8F8;
   height: 100%;
   min-height: 100vh;
 }
 .container {
-  background-color: #fff;
   padding-right: 0;
   padding-left: 0;
   margin-right: auto;
@@ -73,25 +92,47 @@ body {
   padding-right: 0;
 }
 
-.for-mobile {
+// 全站遮罩
+.overlay {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, .53);
+  z-index: 500;
   display: none;
 }
-@media screen and (max-width: 570px) {
-  .for-mobile {
-    display: block;
+
+// 彈跳視窗
+.popup-box {
+  width: 100%;
+  max-width: 70%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 20px 15px;
+  border-radius: 10px;
+  z-index: 700;
+  display: none;
+
+  small {
+      display: block;
   }
-  .for-pc {
-    display: none;
-  }
-  .container {
-    width: 100%;     
-    padding-right: 0;
-    padding-left: 0;
-    margin-right: auto;
-    margin-left: auto;
+
+  .default-btn {
+      &.btn-sm {
+          width: 50%;
+      }
   }
 }
 
+
+//全站共用標籤
 div, span, object, iframe, img, table, caption, thead, tbody,
 tfoot, tr, tr, td, article, aside, canvas, details, figure, hgroup, menu,
 nav, footer, header, section, summary, mark, audio, video {
@@ -114,18 +155,20 @@ footer, header, nav, section, audio, video {
   display: block;
 }
 
-.row {
-  margin-right: 0px;
-  margin-left: 0px;
+a {
+  &:hover,
+  &:focus,
+  &:visited {
+      text-decoration: none;
+  }
+  img {
+    border: 0;
+  }
 }
-.w-5 {
-  width: 5%!important;
-}
-.w-20 {
-  width: 20%!important;
-}
-.w-80 {
-  width: 80%!important;
+
+a[href^=tel] {
+  color: inherit;
+  text-decoration: none;
 }
 
 table {
@@ -145,17 +188,24 @@ button {
   cursor: pointer;
 }
 
-a img {
-  border: 0;
+i {
+  vertical-align: middle;
 }
 
-a:hover, a:focus, a:visited {
-  text-decoration: none;
-}
 
-a[href^=tel] {
-  color: inherit;
-  text-decoration: none;
+//全站共用class
+.row {
+  margin-right: 0px;
+  margin-left: 0px;
+}
+.w-5 {
+  width: 5%!important;
+}
+.w-20 {
+  width: 20%!important;
+}
+.w-80 {
+  width: 80%!important;
 }
 
 ul, ol {
@@ -166,10 +216,6 @@ ul, ol {
   outline: 0;
 }
 
-i {
-  vertical-align: middle;
-}
-
 .form-control {
   -webkit-box-shadow: none;
           box-shadow: none;
@@ -177,6 +223,28 @@ i {
 
 .addheight{
   height: 5em;
+}
+// 全站 btn
+.disabled-btn {
+  background-color: #DDDDDF;
+  color: #fff;
+}
+
+.cancel-btn {
+  width: 100%;
+  color: #333;
+  background: #fff;
+  margin-top: 15px;
+  box-shadow: inset 0 0px 0px 1px #333;
+}
+
+.next-btn {
+  background-color: #F4246A;
+  color: #fff;
+}
+
+.outline-btn{
+  border-width: 1px;
 }
 
 .default-btn {
@@ -217,7 +285,52 @@ i {
   }
 }
 
+// 上方標題 & 控制列
+.title-box {
+  display: flex;
+  align-items: center;
+  padding: 15px;
 
+  .item {
+      min-width: 30px;
+      text-align: center;
+
+      &.icon-btn {
+          .material-icons {
+              font-size: 30px;
+          }
+      }
+
+      &.ctrl-btn {
+          color: #182B56;
+      }
+  }
+
+  .title-name {
+      font-size: 18px;
+      font-weight: 700;
+      margin: auto;
+  }
+}
+
+.nav-tabs {
+  .nav-item {
+      margin-bottom: 0;
+  }
+
+  .nav-link {
+      border: none;
+      border-radius: 0;
+      color: #182B56;
+
+      &.active {
+          border: none;
+          color: #4A90E2;
+      }
+  }
+}
+
+// 共用 footer
 footer.for-mobile {
   position: fixed;
   width: 101%;
