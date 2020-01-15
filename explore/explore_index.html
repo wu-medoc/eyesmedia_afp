@@ -1,0 +1,650 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=1, user-scalable=no">
+    <!-- Material Design for Bootstrap fonts and icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../js/vendor/bs4/css/bootstrap.min.css">
+    <!-- vendor css -->
+    <link rel="stylesheet" href="../js/vendor/jquery-editable-select-master/dist/jquery-editable-select.min.css">
+    <link rel="stylesheet" href="../js/vendor/swiper/css/swiper.min.css">
+    <!-- fontawesome css -->
+    <link rel="stylesheet" href="../js/vendor/fontawesome/css/fontawesome.css">
+    <link rel="stylesheet" href="../js/vendor/fontawesome/css/brands.css">
+    <link rel="stylesheet" href="../js/vendor/fontawesome/css/solid.css">
+    <!-- custom css -->
+    <link rel="stylesheet" href="../dist/style/css.min.css">
+    <link rel="stylesheet" href="../dist/style/global.min.css">
+    <link rel="stylesheet" href="../dist/style/index.min.css">
+    <link rel="stylesheet" href="../dist/style/explore.min.css">
+    <link rel="stylesheet" href="../dist/style/animate.min.css">
+    <title>艾斯移動 - 探索週邊</title>
+</head>
+
+<body>
+    <div class="wrap container">
+        <div class="explore-top-box bg-white">
+            <div class="title-box">
+                <div class="item icon-btn"><i class="material-icons">&#xE314;</i></div>
+                <div class="item title-name">探索週邊</div>
+                <div class="item icon-btn">
+                    <button  onclick="location.href='explore_page_02.html'" data-toggle="tooltip" data-placement="bottom" title="查看地圖">
+                        <img src="../img/explore/icon/open-map.svg">
+                    </button>
+                </div>
+            </div>
+            <div class="input-box">
+                <div class="form-group">
+                    <div class="input">
+                        <div class="item">
+                            <button><i class="material-icons">&#xE8B6;</i></button>
+                            <input type="text" placeholder="搜尋" class="form-control" id="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="flex-inline-between px-3">
+                    <div class="pr-2">選擇分類
+                        <span>
+                            <button class="filter-item" data-filter="type"><i class="material-icons">&#xE313;</i></button>
+                        </span>
+                    </div>
+                    <div class="text-right">                        
+                        <div class="sub-img">
+                            <button class="open-page">
+                                <img src="../img/shopping/icon_sort.png">
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="explore-container">
+            <div class="explore-card-list">
+                <div class="mask-container w-100 h-100"></div>
+                <a href="explore_page_03.html" class="stretched-link">
+                    <div class="card-item">
+                        <div class="img-box">
+                            <img src="https://picsum.photos/300/300/?random=1">
+                        </div>
+                        <div class="info-box">
+                            <ul class="info-list">
+                                <li class="info-name">瑞豐夜市</li>
+                                <li>
+                                    <div class="shopping-store-badge">                        
+                                        <span class="badge badge-pill badge-light text-info"><img src="../img/explore/icon/icon_explore_food.svg" alt="">美食</span> 
+                                        <span class="badge badge-pill badge-light text-success">折價券</span>      
+                                    </div>
+                                </li>
+                                <li class="info-near">
+                                    <div class="item">近高雄巨蛋捷運站</div>
+                                    <div class="item auto-left">距離<span>33</span>km</div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </a>
+                <a href>
+                    <div class="card-item">
+                        <div class="img-box">
+                            <img src="https://picsum.photos/300/300/?random=2">
+                        </div>
+                        <div class="info-box">
+                            <ul class="info-list">
+                                <li class="info-name">蓮池潭</li>
+                                <li>
+                                    <div class="shopping-store-badge">                        
+                                        <span class="badge badge-pill badge-light text-info"><img src="../img/explore/icon/icon_explore_mark.svg" alt="">景點</span> 
+                                        <span class="badge badge-pill badge-light text-success">折價券</span>      
+                                    </div>
+                                </li>
+                                <li class="info-near">
+                                    <div class="item">近左營捷運站</div>
+                                    <div class="item auto-left">距離<span>33</span>km</div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </a>
+                <a href>
+                    <div class="card-item">
+                        <div class="img-box">
+                            <img src="https://picsum.photos/300/300/?random=3">
+                        </div>
+                        <div class="info-box">
+                            <ul class="info-list">
+                                <li class="info-name">左營新光三越彩虹市集</li>
+                                <li>
+                                    <div class="shopping-store-badge">                        
+                                        <span class="badge badge-pill badge-light text-info"><img src="../img/explore/icon/icon_explore_shopping.svg" alt="">購物</span> 
+                                        <span class="badge badge-pill badge-light text-success">折價券</span>      
+                                    </div>
+                                </li>
+                                <li class="info-near">
+                                    <div class="item">近左營捷運站</div>
+                                    <div class="item auto-left">距離<span>0.8</span>km</div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </a>
+                <a href>
+                    <div class="card-item">
+                        <div class="img-box">
+                            <img src="https://picsum.photos/300/300/?random=1">
+                        </div>
+                        <div class="info-box">
+                            <ul class="info-list">
+                                <li class="info-name">瑞豐夜市</li>
+                                <li>
+                                    <div class="shopping-store-badge">                        
+                                        <span class="badge badge-pill badge-light text-info"><img src="../img/explore/icon/icon_explore_play.svg" alt="">遊樂</span> 
+                                        <span class="badge badge-pill badge-light text-success">折價券</span>      
+                                    </div>
+                                </li>
+                                <li class="info-near">
+                                    <div class="item">近高雄巨蛋捷運站</div>
+                                    <div class="item auto-left">距離<span>33</span>km</div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </a>
+                <a href>
+                    <div class="card-item">
+                        <div class="img-box">
+                            <img src="https://picsum.photos/300/300/?random=2">
+                        </div>
+                        <div class="info-box">
+                            <ul class="info-list">
+                                <li class="info-name">蓮池潭</li>
+                                <li>
+                                    <div class="shopping-store-badge">                        
+                                        <span class="badge badge-pill badge-light text-info"><img src="../img/explore/icon/icon_explore_stay.svg" alt="">住宿</span> 
+                                        <span class="badge badge-pill badge-light text-success">折價券</span>      
+                                    </div>
+                                </li>
+                                <li class="info-near">
+                                    <div class="item">近左營捷運站</div>
+                                    <div class="item auto-left">距離<span>33</span>km</div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </a>
+                <a href>
+                    <div class="card-item">
+                        <div class="img-box">
+                            <img src="https://picsum.photos/300/300/?random=3">
+                        </div>
+                        <div class="info-box">
+                            <ul class="info-list">
+                                <li class="info-name">左營新光三越彩虹市集</li>
+                                <li>
+                                    <div class="shopping-store-badge">                        
+                                        <span class="badge badge-pill badge-light text-info"><img src="../img/explore/icon/icon_explore_shopping.svg" alt="">購物</span> 
+                                        <span class="badge badge-pill badge-light text-success">折價券</span>      
+                                    </div>
+                                </li>
+                                <li class="info-near">
+                                    <div class="item">近左營捷運站</div>
+                                    <div class="item auto-left">距離<span>0.8</span>km</div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </a>         
+            </div>   
+            <div id="type" class="explore-filter-content">
+                <ul class="open-page-ul">
+                    <li class="flex-inline-between">                
+                            <div class="">
+                                <button class="active">全部顯示</button>
+                            </div>
+                            <div class="">
+                                <button class="active"><i class="fas fa-check"></i></button>
+                            </div>   
+                    </li>
+                    <li class="flex-inline-between">
+                        <div class="">
+                            <button>熱門</button>
+                        </div>
+                        <div class="">
+                            13274
+                        </div>                
+                    </li>
+                    <li class="flex-inline-between">
+                        <div class="">
+                            <button>美食</button>
+                        </div>
+                        <div class="">
+                            1231
+                        </div>                
+                    </li>
+                    <li class="flex-inline-between">
+                        <div class="">
+                            <button>購物</button>
+                        </div>
+                        <div class="">
+                            274
+                        </div>                
+                    </li>
+                    <li class="flex-inline-between">
+                        <div class="">
+                            <button>景點</button>
+                        </div>
+                        <div class="">
+                            1374
+                        </div>                
+                    </li>
+                    <li class="flex-inline-between">
+                        <div class="">
+                            <button>遊樂</button>
+                        </div>
+                        <div class="">
+                            1327
+                        </div>                
+                    </li>
+                </ul>
+            </div>
+            
+            </div>
+        </div>
+    </div>
+
+    <div class="close-left" id="open-mask"></div>
+    <!-- shopping right-menu (open-pagebox) -->
+    <div class="">
+        <div class="slideInRight animated d-none" id="open-pagebox">
+            <div class="open-page-title flex-inline-between">
+                <div class="title-icon">
+                </div>
+                <div class="title-txt">
+                    篩選與排序
+                </div>
+                <div class="title-txt">
+                    <button class="active">確定</button>
+                </div>
+            </div>
+            <ul class="open-page-ul">
+                <label>篩選</label>
+                <li class="flex-inline-between">
+                    <div class="">
+                        捷運紅線
+                    </div>
+                    <div class="">
+                        <button>全部顯示<i class="fas fa-chevron-right fa-fw"></i></button>
+                    </div>                
+                </li>
+                <li class="flex-inline-between">
+                    <div class="">
+                        捷運橘線
+                    </div>
+                    <div class="">
+                        <button>全部顯示<i class="fas fa-chevron-right fa-fw"></i></button>
+                    </div>                
+                </li>
+                <li class="flex-inline-between">
+                    <div class="">
+                        高捷輕軌
+                    </div>
+                    <div class="">
+                        <button href class="active open-page1">夢時代<i class="fas fa-chevron-right fa-fw"></i></button>
+                    </div>                
+                </li>
+                <li class="flex-inline-between">
+                    <div class="">
+                        藍色公路
+                    </div>
+                    <div class="">
+                        <button>全部顯示<i class="fas fa-chevron-right fa-fw"></i></button>
+                    </div>                
+                </li>
+                <li class="flex-inline-between">
+                    <div class="">
+                        往山上走
+                    </div>
+                    <div class="">
+                        <button>全部顯示<i class="fas fa-chevron-right fa-fw"></i></button>
+                    </div>                
+                </li>
+            </ul>
+            <ul class="open-page-ul">
+                <label>排序</label>
+                <li class="flex-inline-between">
+                    <div class="">
+                        <button>最新上架優先</button>
+                    </div>
+                    <div class="">                    
+                    </div>                
+                </li>
+                <li class="flex-inline-between">                
+                        <div class="">
+                            <button class="active">熱門程度優先</button>
+                        </div>
+                        <div class="">
+                            <button class="active"><i class="fas fa-check"></i></button>
+                        </div>   
+                </li>
+                <li class="flex-inline-between">
+                    <div class="">
+                        <button>距離由近而遠</button>
+                    </div>
+                    <div class="">
+                        
+                    </div>                
+                </li>
+                <li class="flex-inline-between">
+                    <div class="">
+                        <button>距離由遠而近</button>
+                    </div>
+                    <div class="">
+                        
+                    </div>                
+                </li>
+            </ul>
+            <button class="btn all-reset">
+                全部重設
+            </button>
+        </div>
+    </div>
+     <!-- shopping right-menu (open-pagebox1) -->
+     <div class="">
+        <div class="slideInRight animated d-none" id="open-pagebox1">
+            <div class="open-page-title flex-inline-between">                
+                <div class="close-btn">
+                    <button class="close-left1">
+                        <i class="material-icons">&#xE314;</i>
+                    </button>
+                </div>
+                <div class="title-txt">
+                    周邊         分類
+                </div>
+                <div class="title-txt">
+                    <button class="active">確定</button>
+                </div>
+            </div>
+            <ul class="open-page-ul">
+                <li class="flex-inline-between">
+                    <div class="">
+                        全部顯示
+                    </div>
+                    <div class="">
+                        
+                    </div>                
+                </li>
+                <li class="flex-inline-between">
+                    <div class="">
+                        籬仔內C1
+                    </div>
+                    <div class="">
+                        13274
+                    </div>                
+                </li>
+                <li class="flex-inline-between">
+                    <div class="">
+                        凱旋瑞田C2
+                    </div>
+                    <div class="">
+                        1231
+                    </div>                
+                </li>
+                <li class="flex-inline-between">
+                    <div class="">
+                        前鎮之星C3
+                    </div>
+                    <div class="">
+                        274
+                    </div>                
+                </li>
+                <li class="flex-inline-between">
+                    <div class="">
+                        凱旋中華C4
+                    </div>
+                    <div class="">
+                        1374
+                    </div>                
+                </li>
+                <li class="flex-inline-between">
+                    <div class="active">
+                        夢時代C5
+                    </div>
+                    <div class="">
+                        <button class="active">1327<i class="fas fa-check"></i></button>
+                    </div>                
+                </li>
+            </ul>
+        </div>
+    </div> 
+
+    <footer class="for-pc"> 
+        <!--web service-->
+        <div class="bearservice">            
+            <div class="scroll-top-wrapper">
+                <span class="scroll-top-inner">
+                    <button type="button" id="webservice"><img src="img/index/icons/for-pc/icon_service.png"></button>
+                    <button type="button" id="webservice_close" class="d-none"><img src="img/index/icons/for-pc/icon_close.png"></button>
+                </span>
+            </div>
+            <div class="popup-box chat-popup" id="qnimate">
+                <div class="popup-head">
+                    <div class="popup-head-left pull-left"><img src="img/index/icons/for-pc/icon_bear.png" alt="service"> 熊客服</div>
+                </div>
+                <div class="hr-100"></div>
+                <div class="popup-messages">          
+                    <div class="direct-chat-messages">
+                        <div class="chat-box-single-line">
+                                <abbr class="timestamp">Sun, Dec 11 1:20 PM</abbr>
+                        </div>
+                        
+                        <!-- Message. Default to the left -->
+                        <div class="direct-chat-msg">
+                            <!-- direct-chat-info -->
+                            <div class="direct-chat-text">
+                            Hey你好, 我是熊, 很高興為您服務
+                            </div>                  
+                            <ul class="direct-info">
+                                來看看有什麼熱門問題吧!
+                                <li><a href="">亞洲好玩卡網站是什麼?</a></li>
+                                <li><a href="">我想問如何快速取貨?</a></li>
+                                <li><a href="">想要退換貨怎麼辦?</a></li>
+                                <li><a href="">最近有什麼最新優惠?</a></li>
+                                <li><a href="">我該如何購買網路商品?</a></li>
+                            </ul>
+                        </div>          
+                        <!-- Message. Default to the right -->
+                        <div class="guests-chat-msg">
+                            <!-- direct-chat-info -->
+                            <div class="guests-chat-text">
+                            請幫我轉真人服務
+                            </div> 
+                            <div class="guests-chat-name">
+                            guests
+                            </div> 
+                        </div>          
+                                
+                    </div>
+                </div>
+                <div class="hr-100"></div>
+                <div class="popup-messages-footer">
+                    <input type="text" placeholder="請輸入問題">
+                </div>
+            </div>
+        </div>
+        <!--footer content-->
+        <div class="container">
+        <div class="row d-flex">
+            <div class="col-4 col-md-3">
+            <h6>關於亞洲好玩卡</h6>
+            <ul>
+                <li><a href="#">關於我們</a></li>
+            </ul>            
+            </div>
+            <div class="col-4 col-md-3">
+            <h6>追蹤我們</h6>
+            <ul>
+                <li><a href="#"><i class="fab fa-facebook-f fa-fw"></i> Facebook</a></li>
+                <li><a href="#"><i class="fab fa-line fa-fw"></i> Line</a></li>
+                <li><a href="#"><i class="fab fa-instagram fa-fw"></i> Instagram</a></li>
+            </ul>            
+            </div>  
+            <div class="w-100"></div>
+            <div class="col-12 border-t">
+            <div class="f-left">
+                <object data="img/index/logo-s.svg" width="30" type="image/svg+xml"></object><span> Designed by Asia Fun Pass</span>
+            </div>
+            <div class="f-right">
+                Ⓒ2020 Asia Fun Pass. All Right Reserved          
+            </div>
+            </div>
+        </div>  
+        </div>
+    </footer>
+    <footer class="mobile-footer for-mobile">
+        <div class="menu-bar">
+            <a href="../index.html" class="bar-item active">
+                <img class="default-img" src="../img/index/icons/footer_1_1.svg" alt="">
+                <img class="active-img" src="../img/index/icons/footer_1_2.svg" alt="">
+                首頁
+            </a>
+            <a href="../explore/explore_index.html" class="bar-item">
+                <img class="default-img" src="../img/index/icons/footer_2_1.svg" alt="">
+                <img class="active-img" src="../img/index/icons/footer_2_2.svg" alt="">
+                周邊
+            </a>
+            <a href="../bearservice.html" class="bar-item customer-item">
+                <img src="../img/index/icons/footer_3.png" alt="">
+                客服
+            </a>
+            <a href="javascript:;" class="bar-item">
+                <img class="default-img" src="../img/index/icons/footer_4_1.svg" alt="">
+                <img class="active-img" src="../img/index/icons/footer_4_2.svg" alt="">
+                任務
+            </a>
+            <a href="../member/member_index.html" class="bar-item">
+                <img class="default-img" src="../img/index/icons/footer_5_1.svg" alt="">
+                <img class="active-img" src="../img/index/icons/footer_5_2.svg" alt="">
+                我的
+            </a>
+        </div>
+    </footer>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="../js/vendor/bs4/js/jquery-3.2.1.slim.min.js"></script>
+    <!-- Latest compiled and minified JavaScript -->    
+    <script src="../js/vendor/bs4/js/bootstrap.min.js"></script>
+
+    <!-- owlcarousel JS -->
+    <script src="../js/vendor/owlcarousel/vendors/jquery.min.js"></script>
+    <script src="../js/vendor/owlcarousel/owlcarousel/owl.carousel.js"></script>
+    <script src="../js/vendor/owlcarousel/vendors/highlight.js"></script>
+    <script src="../js/vendor/owlcarousel/js/app.js"></script>   
+    <script src="../js/vendor/jquery-editable-select-master/dist/jquery-editable-select.js"></script>
+
+    <!-- vendor js -->
+    <script src="../js/vendor/swiper/js/swiper.min.js"></script>
+    <script src="../js/vendor/imgLiquid.js"></script>
+    <script src="../js/masonry.pkgd.min.js"></script>
+    
+    <script>
+        $(document).ready(function(){
+            var topBox = $('.explore-top-box');
+            // console.log(topBox.height());
+            var mainBox = $('.explore-container');
+            // console.log(mainBox.height());
+            $(window).on('resize', function(){
+                mainBox.css({ 'height': 'calc(100vh - ' + topBox.height() + 'px)' });
+            }).trigger('resize');
+
+            // 開啟篩選清單
+            $('.filter-item').on('click', function(){
+                $(this).toggleClass('active').siblings().removeClass('active');
+                var filter = $(this).data('filter');
+                $('#' + filter).toggleClass('is-open');
+                $('#' + filter).siblings().removeClass('is-open');
+                $( ".mask-container" ).removeClass("blur-bk d-none");
+                if ($( "button.filter-item" ).hasClass("active")) {
+                    $( ".mask-container" ).addClass("blur-bk d-block");
+                }
+            })
+            
+            // 篩選清單層級樣式
+            $('.nav-container .levelOne > li').on('click', function(){
+                $('.nav-container .levelOne > li').removeClass('active');
+                $(this).addClass('active');
+            })
+
+            $('.nav-container .levelTwo > li').on('click', function(){
+                console.log('here');
+                $('.nav-container .levelTwo > li').removeClass('active');
+                $(this).addClass('active');
+            })
+
+
+            // open-page
+            $( ".open-page" ).on('click', function () {
+                if ($( "#open-pagebox" ).hasClass("slideOutRight animated")) {
+                    $( "#open-pagebox" ).removeClass('slideOutRight animated');
+                    $( "#open-pagebox" ).addClass('slideInRight animated');
+                    $( "#open-pagebox" ).removeClass('d-block');
+                    $( "#open-pagebox" ).addClass('d-none');
+                }
+                $( "#open-pagebox" ).removeClass('d-none');
+                $( "#open-pagebox" ).addClass('d-block');
+                $( "#open-mask" ).addClass("modal-backdrop fade show");
+                $( ".wrap" ).addClass("blur");
+            });
+            $( ".close-left" ).on('click', function () {
+                $( "#open-pagebox" ).removeClass('slideInRight animated');
+                $( "#open-pagebox" ).addClass('slideOutRight animated');
+                $( "#open-pagebox1" ).removeClass('slideInRight animated');
+                $( "#open-pagebox1" ).addClass('slideOutRight animated');
+                $( "#open-mask" ).removeClass("modal-backdrop fade show");
+                $( ".wrap" ).removeClass("blur");
+            });
+            if($('#open-pagebox').length>0) {
+                var wrapheight = $('#products-list').innerHeight();
+                var openheight = $('#open-pagebox').outerHeight();  
+                var openheight1 = (wrapheight-openheight)/3.5;
+                if (openheight < wrapheight) {
+                    $('#open-pagebox').css({'padding-bottom': openheight1});
+                }  
+            }
+            // open-page1
+            $( ".open-page1" ).on('click', function () {
+                if ($( "#open-pagebox1" ).hasClass("slideOutRight animated")) {
+                    $( "#open-pagebox1" ).removeClass('slideOutRight animated');
+                    $( "#open-pagebox1" ).addClass('slideInRight animated');
+                    $( "#open-pagebox1" ).removeClass('d-block');
+                    $( "#open-pagebox1" ).addClass('d-none');
+                }
+                $( "#open-pagebox1" ).removeClass('d-none');
+                $( "#open-pagebox1" ).addClass('d-block');
+                $( "#open-mask" ).addClass("modal-backdrop fade show");
+                $( ".wrap" ).addClass("blur");
+            });
+            $( ".close-left1" ).on('click', function () {
+                $( "#open-pagebox1" ).removeClass('slideInRight animated');
+                $( "#open-pagebox1" ).addClass('slideOutRight animated');
+            });
+            if($('#open-pagebox1').length>0) {
+                var wrapheight = $('#products-list').innerHeight();
+                var openheight = $('#open-pagebox1').outerHeight();  
+                var openheight1 = (wrapheight-openheight)/3.5;
+                if (openheight < wrapheight) {
+                    $('#open-pagebox1').css({'padding-bottom': openheight1});
+                }  
+            }
+
+        })
+    </script>
+</body>
+
+</html>
