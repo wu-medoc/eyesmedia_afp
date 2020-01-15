@@ -185,6 +185,9 @@ i {
 ul, ol {
   list-style: none;
 }
+li {
+  cursor: pointer;
+}
 
 :focus {
   outline: 0;
