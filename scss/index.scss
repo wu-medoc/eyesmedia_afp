@@ -1754,7 +1754,7 @@ td.linebt-td,
       overflow-y: auto;        
       .direct-chat-messages {
         height: 100%;
-        overflow: auto;
+        overflow-y: auto; 
         padding: 10px;
         transform: translate(0px, 0px);    
         .chat-box-single-line {
@@ -1779,6 +1779,24 @@ td.linebt-td,
     width: 100%;
     height: 1px;
     background-color: #cccccc;
+  }
+  
+  .popup-messages-footer {
+    overflow-x: hidden; 
+    overflow-y: hidden; 
+    background: #fff none repeat scroll 0 0;
+    bottom: 0;
+    position: sticky;
+    width: 100%;
+    border-radius: 16px;
+    padding: 4px;
+    input{
+      border: 1px solid #ccc;
+      border-radius: 16px;
+      padding: 4px 8px;
+      width: 100%;
+      margin-bottom: 0px;
+    }
   }
 } 
 .bearservice-lg {
@@ -1812,7 +1830,7 @@ td.linebt-td,
       overflow-y: auto;        
       .direct-chat-messages {
         height: 100%;
-        overflow: auto;
+        overflow-y: auto; 
         padding: 10px;
         transform: translate(0px, 0px);    
         .chat-box-single-line {
@@ -1838,37 +1856,27 @@ td.linebt-td,
     height: 1px;
     background-color: #cccccc;
   }
+  
+  .popup-messages-footer {
+    overflow-x: hidden; 
+    overflow-y: hidden; 
+    background: #fff none repeat scroll 0 0;
+    bottom: -5px;
+    position: inherit;
+    width: 100%;
+    border-radius: 16px;
+    padding: 4px;
+    input{
+      border: 1px solid #ccc;
+      border-radius: 16px;
+      padding: 4px 8px;
+      width: 100%;
+      margin-bottom: 0px;
+    }
+  }
 } 
 .bearservice-lg, 
 .bearservice{
-  .popup-messages-footer > textarea {
-    border-bottom: 1px solid #b2b2b2 !important;
-    height: 34px !important;
-    margin: 7px;
-    padding: 5px !important;
-    border: medium none;
-    width: 95% !important;
-  }
-  .popup-messages-footer {
-    background: #fff none repeat scroll 0 0;
-    bottom: 0;
-    position: absolute;
-    width: 100%;
-    border-radius: 16px;
-    padding: 6px;
-  }
-  .popup-messages-footer .btn-footer {
-    overflow: hidden;
-    padding: 2px 5px 10px 6px;
-    width: 100%;
-  }     
-  .popup-messages-footer input{
-    border: 1px solid #ccc;
-    border-radius: 16px;
-    padding: 4px 8px;
-    width: 100%;
-    margin-bottom: 0px;
-  }
   .simple_round {
     background: #d1d1d1 none repeat scroll 0 0;
     border-radius: 50%;
@@ -1905,9 +1913,6 @@ td.linebt-td,
     height: 100%;
     overflow-y: scroll;
     padding: 0 0.5em 3em 0.5em;
-    .direct-chat-messages {
-      height: auto;
-    }
     .direct-chat-text {
       background: #C1DCFF none repeat scroll 0 0;
       border: 1px solid #C1DCFF;
