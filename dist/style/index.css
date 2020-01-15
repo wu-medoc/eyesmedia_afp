@@ -1860,6 +1860,11 @@ td.linebt-td,
   margin-bottom: 0px;
 }
 
+.bearservice-lg {
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+}
+
 .bearservice-lg .chat-box {
   overflow: hidden;
   background-color: #ffffff;
