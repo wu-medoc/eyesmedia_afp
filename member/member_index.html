@@ -35,11 +35,12 @@
 
 <body>
     <div class="wrap container">
+        <!--我的主頁-->
         <div class="member-top-box">
             <div class="title-box">
                 <div class="item icon-btn">
                     <div class="img-box">
-                        <a href="member_setting.html"><img src="../img/member/member-icon-setting.svg" alt=""></a>
+                        <button class="btn animated-btn" value="slideInRight animated"><img src="../img/member/member-icon-setting.svg" alt="設定"></button>
                     </div>
                 </div>
                 <div class="item title-name"></div>
@@ -75,7 +76,7 @@
             </div>
         </div>
         <div class="member-item-group">
-            <div class="member-item-bg"></div>
+            <div class="member-item-bg">
                 <div class="container">
                     <div class="row">
                         <div class="col-md-12">
@@ -125,11 +126,77 @@
                     </div>
                 </div>
             </div>
-
+        </div>        
+        <!--我的設定選單-->
+        <div id="animate-wrap">
+                <div class="title-box">
+                    <div class="item icon-btn">
+                        <button class="btn animated-btn" value="slideOutRight animated" data-toggle="tooltip" data-placement="bottom" title="回上一頁">
+                            <i class="material-icons">&#xE314;</i>
+                        </button>
+                    </div>
+                    <div class="item title-name">我的</div>
+                    <div class="item icon-btn"></div>
+                </div>
+                <div class="my-list-box">
+                    <p>我的帳號</p>
+                    <ul>
+                        <li onclick="location.href='member_myfile.html'">
+                            <div class="item">我的檔案</div>
+                            <div class="item auto-left"><i class="material-icons">&#xE315;</i></div>
+                        </li>
+                        <li>
+                            <div class="item">我的地址</div>
+                            <div class="item auto-left"><i class="material-icons">&#xE315;</i></div>
+                        </li>
+                        <li>
+                            <div class="item">付款設定</div>
+                            <div class="item auto-left"><i class="material-icons">&#xE315;</i></div>
+                        </li>
+                        <li>
+                            <div class="item">變更密碼</div>
+                            <div class="item auto-left"><i class="material-icons">&#xE315;</i></div>
+                        </li>
+                        <li>
+                            <div class="item">社群帳號綁定</div>
+                            <div class="item auto-left"><i class="material-icons">&#xE315;</i></div>
+                        </li>
+                    </ul>
+                    <p>我的語言</p>
+                    <ul class="my-language">
+                        <li>
+                            <div class="item">語言</div>
+                            <div class="item">繁體中文</div>
+                        </li>
+                        <li>
+                            <div class="item">幣別</div>
+                            <div class="item">TWD</div>
+                        </li>
+                    </ul>
+                    <p>我的小幫手</p>
+                    <ul>
+                        <li>
+                            <div class="item">常見問題</div>
+                            <div class="item auto-left"><i class="material-icons">&#xE315;</i></div>
+                        </li>
+                        <li>
+                            <div class="item">使用者規範</div>
+                            <div class="item auto-left"><i class="material-icons">&#xE315;</i></div>
+                        </li>
+                        <li>
+                            <div class="item">隱私權政策</div>
+                            <div class="item auto-left"><i class="material-icons">&#xE315;</i></div>
+                        </li>
+                        <li>
+                            <div class="item">關於</div>
+                            <div class="item auto-left"><i class="material-icons">&#xE315;</i></div>
+                        </li>
+                    </ul>
+                </div>
         </div>
     </div>
     <div class="addheight container"></div>
-    <div id="loginhtml"></div>
+
 
 <footer class="for-pc"> 
     <div class="container">
@@ -208,7 +275,14 @@
 
     <!-- custom js -->
     <script>    
-        $("#loginhtml").load("../login.html");
+       
+    $( ".animated-btn" ).on('click', function () {
+        var anim = $(this).val();        
+        testAnim(anim);
+    });
+    function testAnim(x) {
+        $('#animate-wrap').removeClass().addClass(x + ' animated d-block');
+    };
     </script>
     <script src="../js/index.js"></script>
 </body>
