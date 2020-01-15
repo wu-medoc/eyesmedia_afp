@@ -40,7 +40,7 @@
             <div class="title-box">
                 <div class="item icon-btn">
                     <div class="img-box">
-                        <button class="btn animated-btn" value="slideInRight animated"><img src="../img/member/member-icon-setting.svg" alt="設定"></button>
+                        <button class="btn animated-btn" value="my-setting slideInRight animated"><img src="../img/member/member-icon-setting.svg" alt="設定"></button>
                     </div>
                 </div>
                 <div class="item title-name"></div>
@@ -127,8 +127,10 @@
                 </div>
             </div>
         </div>        
-        <!--我的設定選單-->
+        <!--次頁-->
         <div id="animate-wrap">
+            <!--我的設定選單-->
+            <div id="my-setting" class="d-none">
                 <div class="title-box">
                     <div class="item icon-btn">
                         <button class="btn animated-btn" value="slideOutRight animated" data-toggle="tooltip" data-placement="bottom" title="回上一頁">
@@ -193,6 +195,57 @@
                         </li>
                     </ul>
                 </div>
+            </div>
+            <!--我的檔案-->
+            <div id="my-file" class="d-none">
+                <div class="title-box">
+                    <div class="item icon-btn">
+                        <button onclick="history.back();" data-toggle="tooltip" data-placement="bottom" title="回上一頁">
+                            <i class="material-icons">&#xE314;</i>
+                        </button>
+                    </div>
+                    <div class="item title-name">我的檔案</div>
+                    <div class="item ctrl-btn">編輯</div>
+                </div>
+                <div class="my-info-box">
+                    <div class="info-box info-img">
+                        <div class="info-item">
+                            <img src="https://picsum.photos/300/300/?random=1">
+                        </div>
+                    </div>
+                    <div class="info-box info-email">
+                        jaso****56@gmail.com
+                    </div>
+                </div>
+                <div class="my-list-box">
+                    <ul>
+                        <li>
+                            <div class="item">名稱</div>
+                            <div class="item auto-left">李曉龍</div>
+                        </li>
+                        <li>
+                            <div class="item">生日</div>
+                            <div class="item auto-left"></div>
+                        </li>
+                        <li>
+                            <div class="item">手機號碼</div>
+                            <div class="item auto-left"></div>
+                        </li>
+                        <li>
+                            <div class="item">E-mail</div>
+                            <div class="item auto-left"></div>
+                        </li>
+                        <li>
+                            <div class="item">上傳護照</div>
+                            <div class="item auto-left"></div>
+                        </li>
+                        <li>
+                            <div class="item">上傳台胞證</div>
+                            <div class="item auto-left"></div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </div>
     <div class="addheight container"></div>
@@ -277,11 +330,13 @@
     <script>    
        
     $( ".animated-btn" ).on('click', function () {
-        var anim = $(this).val();        
-        testAnim(anim);
+        var anim = $(this).val();       
+        var subpage = anim.split(" ",1);   
+        testAnim(anim,subpage);
     });
-    function testAnim(x) {
-        $('#animate-wrap').removeClass().addClass(x + ' animated d-block');
+    function testAnim(x,y) {
+        $('#'+ y).removeClass().addClass('d-block');
+        $('#animate-wrap').removeClass().addClass(x + ' d-block');        
     };
     </script>
     <script src="../js/index.js"></script>

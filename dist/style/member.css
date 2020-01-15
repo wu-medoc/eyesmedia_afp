@@ -775,4 +775,9 @@ footer .menu-bar .bar-item.customer-item img {
   background-color: #fff;
   z-index: 51;
 }
+
+#animate-wrap #my-setting,
+#animate-wrap #my-file {
+  display: none;
+}
 /*# sourceMappingURL=member.css.map */

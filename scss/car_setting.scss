@@ -2,7 +2,6 @@
 @import '../dist/style/module/variable';
 @import '../dist/style/module/mixin';
 @import '../dist/style/module/global';
-@import url('https://fonts.googleapis.com/css?family=Noto+Sans+TC:400,900&display=swap&subset=chinese-traditional');
 
 .search-taxi-wave{
     position: absolute;
@@ -166,7 +165,7 @@
 .status-ok{
     .material-icons{
         background: -webkit-linear-gradient(270deg, #568EE3 0%, #36D1DB 100%);
-        -webkit-background-clip: text;
+        background-clip: text;
         -webkit-text-fill-color: transparent;
     }
 }
@@ -297,3 +296,27 @@ footer{
     }
 }
 
+// 彈跳視窗
+.popup-box {
+  width: 100%;
+  max-width: 70%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 20px 15px;
+  border-radius: 10px;
+  z-index: 700;
+  display: none;
+
+  small {
+      display: block;
+  }
+
+  .default-btn {
+      &.btn-sm {
+          width: 50%;
+      }
+  }
+}

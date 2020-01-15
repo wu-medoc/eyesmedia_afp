@@ -1,5 +1,4 @@
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css?family=Noto+Sans+TC:400,900&display=swap&subset=chinese-traditional");
 html, body {
   border: 0;
   font-family: 'Helvetica Neue', 'Helvetica', 'Arial', 'PingFang TC', '微软雅黑', 'Microsoft YaHei', '华文细黑', 'STHeiti', sans-serif;
@@ -622,7 +621,7 @@ footer .menu-bar .bar-item.customer-item img {
 
 .status-ok .material-icons {
   background: -webkit-linear-gradient(270deg, #568EE3 0%, #36D1DB 100%);
-  -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
@@ -779,5 +778,28 @@ footer .menu-bar .bar-item.active .active-img {
 footer .menu-bar .bar-item.customer-item img {
   width: 80%;
   margin-top: -20px;
+}
+
+.popup-box {
+  width: 100%;
+  max-width: 70%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 20px 15px;
+  border-radius: 10px;
+  z-index: 700;
+  display: none;
+}
+
+.popup-box small {
+  display: block;
+}
+
+.popup-box .default-btn.btn-sm {
+  width: 50%;
 }
 /*# sourceMappingURL=car_setting.css.map */
