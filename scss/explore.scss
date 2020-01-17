@@ -455,7 +455,11 @@ button.active{
         .info-list {
             height: 100%;
             display: flex;
-            flex-direction: column;
+            flex-direction: column;            
+            .badge {
+                line-height: 2;
+                margin-right: 5px;
+            }
         }
 
         .info-name {

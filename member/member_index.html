@@ -1,11 +1,11 @@
 <!doctype html>
 <html lang="en">
 
-<head>    <!-- Required meta tags -->
+<head>
+    <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=1, user-scalable=no">
-    <!-- Material Design for Bootstrap fonts and icons -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons">
+    
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="../js/vendor/bs4/css/bootstrap.min.css">
     <link rel="stylesheet" href="../js/vendor/jquery-editable-select-master/dist/jquery-editable-select.min.css">
@@ -40,7 +40,7 @@
             <div class="title-box">
                 <div class="item icon-btn">
                     <div class="img-box">
-                        <button class="btn animated-btn" value="my-setting slideInRight animated"><img src="../img/member/member-icon-setting.svg" alt="設定"></button>
+                        <button class="btn animated-btn" onclick="levelAnim('1,mysetting,mysetting');"><img src="../img/member/member-icon-setting.svg" alt="設定"></button >
                     </div>
                 </div>
                 <div class="item title-name"></div>
@@ -128,12 +128,12 @@
             </div>
         </div>        
         <!--次頁-->
-        <div id="animate-wrap">
+        <div id="1">
             <!--我的設定選單-->
-            <div id="my-setting" class="d-none">
+            <div id="mysetting" class="d-none">
                 <div class="title-box">
                     <div class="item icon-btn">
-                        <button class="btn animated-btn" value="slideOutRight animated" data-toggle="tooltip" data-placement="bottom" title="回上一頁">
+                        <button class="btn animated-btn" onclick="levelAnim('1,mysetting,mysetting');" data-toggle="tooltip" data-placement="bottom" title="回上一頁">
                             <i class="material-icons">&#xE314;</i>
                         </button>
                     </div>
@@ -143,13 +143,11 @@
                 <div class="my-list-box">
                     <p>我的帳號</p>
                     <ul>
-                        <li onclick="location.href='member_myfile.html'">
-                            <div class="item">我的檔案</div>
-                            <div class="item auto-left"><i class="material-icons">&#xE315;</i></div>
+                        <li>
+                            <button class="btn animated-btn w-100" onclick="levelAnim('2,mysetting,myfile');">我的檔案 <i class="material-icons">&#xE315;</i></button>
                         </li>
                         <li>
-                            <div class="item">我的地址</div>
-                            <div class="item auto-left"><i class="material-icons">&#xE315;</i></div>
+                            <button class="btn animated-btn w-100" onclick="levelAnim('2,mysetting,mytest');">我的地址 <i class="material-icons">&#xE315;</i></button>
                         </li>
                         <li>
                             <div class="item">付款設定</div>
@@ -196,11 +194,13 @@
                     </ul>
                 </div>
             </div>
+        </div>
+        <div id="2">           
             <!--我的檔案-->
-            <div id="my-file" class="d-none">
+            <div id="myfile" class="d-none">
                 <div class="title-box">
                     <div class="item icon-btn">
-                        <button onclick="history.back();" data-toggle="tooltip" data-placement="bottom" title="回上一頁">
+                        <button class="btn animated-btn" onclick="levelAnim('2,mysetting,myfile');" data-toggle="tooltip" data-placement="bottom" title="回上一頁">
                             <i class="material-icons">&#xE314;</i>
                         </button>
                     </div>
@@ -246,6 +246,12 @@
                     </ul>
                 </div>
             </div>
+            <!--我的測試-->
+            <div id="mytest" class="d-none">
+                <button class="btn animated-btn" onclick="levelAnim('2,mysetting,mytest');" data-toggle="tooltip" data-placement="bottom" title="回上一頁">
+                    <i class="material-icons">&#xE314;</i>
+                </button>
+            </div>
         </div>
     </div>
     <div class="addheight container"></div>
@@ -282,7 +288,7 @@
 </footer>
 <footer class="mobile-footer for-mobile">
     <div class="menu-bar">
-        <a href="../index.html" class="bar-item active">
+        <a href="../index.html" class="bar-item">
             <img class="default-img" src="../img/index/icons/footer_1_1.svg" alt="">
             <img class="active-img" src="../img/index/icons/footer_1_2.svg" alt="">
             首頁
@@ -301,7 +307,7 @@
             <img class="active-img" src="../img/index/icons/footer_4_2.svg" alt="">
             任務
         </a>
-        <a href="member_index.html" class="bar-item">
+        <a href="member_index.html" class="bar-item active">
             <img class="default-img" src="../img/index/icons/footer_5_1.svg" alt="">
             <img class="active-img" src="../img/index/icons/footer_5_2.svg" alt="">
             我的
@@ -328,15 +334,23 @@
 
     <!-- custom js -->
     <script>    
-       
-    $( ".animated-btn" ).on('click', function () {
-        var anim = $(this).val();       
-        var subpage = anim.split(" ",1);   
-        testAnim(anim,subpage);
-    });
-    function testAnim(x,y) {
-        $('#'+ y).removeClass().addClass('d-block');
-        $('#animate-wrap').removeClass().addClass(x + ' d-block');        
+    function levelAnim(obj){
+        var anim = obj.split(",");
+        var sublevel = anim[0];
+        var subpa = anim[1];
+        var subchild = anim[2];        
+        var i = parseInt(sublevel);        
+        $('#'+sublevel).addClass('sildeInRight animated d-block');            
+        $('#'+subpa).addClass('sildeInRight animated d-block');
+
+        for(let index=1;index<i;index++){
+            $('#'+index).addClass('sildeOutRight animated d-block');
+            if (subpa!=subchild){
+                $('#'+sublevel).removeClass();
+                $('#'+sublevel).addClass('sildeOutRight'); 
+            }
+        };
+        //console.log(anim[1]);
     };
     </script>
     <script src="../js/index.js"></script>

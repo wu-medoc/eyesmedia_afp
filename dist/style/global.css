@@ -366,20 +366,20 @@ footer .menu-bar .bar-item img.active-img {
   display: none;
 }
 
-footer .menu-bar .bar-item.active {
+footer .menu-bar .active {
   color: #182B56;
 }
 
-footer .menu-bar .bar-item.active .default-img {
+footer .menu-bar .active img.default-img {
   display: none;
 }
 
-footer .menu-bar .bar-item.active .active-img {
+footer .menu-bar .active img.active-img {
   display: block;
 }
 
-footer .menu-bar .bar-item.customer-item img {
-  width: 80%;
+footer .menu-bar .customer-item img {
+  width: 90%;
   margin-top: -20px;
 }
 /*# sourceMappingURL=global.css.map */

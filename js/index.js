@@ -13,6 +13,14 @@ var swiper = new Swiper('.kv-box .swiper-container', {
         },
 });
 
+
+$( document ).ready(function() {
+    var windowHight = $(window).height();
+    var bearhight = windowHight-70;
+    $('.bearservice-lg').css('height',bearhight);
+});
+
+
 // ad
 // 超過一張才執行 swiper，並且顯示 pagination
 if ($('.ad-box .swiper-slide').length>1) {
@@ -128,7 +136,7 @@ $(function(){
 });
 
 
-// footer
+// footer menu-bar
 $('.bar-item').on('click', function() {
     $('.bar-item').removeClass('active');
     $(this).addClass('active');
