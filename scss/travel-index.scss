@@ -201,6 +201,15 @@
   width: 100%;
   border-bottom: 1px solid #ccc;
 }
+#nav-tab-featured.nav.nav-tabs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 0.5em;
+  padding: 15px 0 0 0;
+  border-bottom: none;
+  font-size: 0.9em;
+}
 .travel-featured .item-body {
   border-top-left-radius: .5em;
   border-top-right-radius: .5em;
