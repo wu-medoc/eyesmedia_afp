@@ -190,7 +190,7 @@ if ($( ".tablist-swiper" ).hasClass("swiper-container")) {
 if ($( ".travel-featuredbox" ).hasClass("swiper-container"))  {
     var swiper = new Swiper('.travel-featuredbox.swiper-container', {
         paginationClickable: true,
-        slidesPerView: 2,
+        slidesPerView: 1.5,
         spaceBetween: 10,
         breakpoints: {
           1024: {

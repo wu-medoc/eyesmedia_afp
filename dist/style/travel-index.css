@@ -184,7 +184,7 @@
 
 /* travel featured */
 .travel-featured {
-  overflow-x: visible;
+  overflow-x: auto;
   width: auto;
   height: 480px;
 }
@@ -195,9 +195,9 @@
 
 @media screen and (max-width: 570px) {
   .travel-featured {
-    overflow-x: visible;
-    width: 110vw;
-    height: 480px;
+    overflow-x: auto;
+    width: 105vw;
+    height: 390px;
   }
 }
 
