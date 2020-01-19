@@ -404,21 +404,22 @@ function levelAnim(obj){
     var subchild = anim[3];      
     if (thislevel < sublevel) {      
         if (subpa!==subchild){
+            $('#s'+sublevel+'>div').removeClass().addClass('slideOutRight animated d-none'); 
             $('#s'+thislevel).removeClass().addClass('slideOutRight animated d-block'); 
             $('#'+subpa).removeClass().addClass('slideOutRight animated d-block'); 
         };   
         $('#s'+sublevel).removeClass().addClass('slideInRight animated d-block');   
         $('#'+subchild).removeClass().addClass('slideInRight animated d-block');   
-        } else {                         
+    } else {                         
         $('#s'+thislevel).removeClass().addClass('slideOutRight animated d-block'); 
         $('#'+subchild).removeClass().addClass('slideOutRight animated d-block');  
         $('#s'+sublevel).removeClass().addClass('slideInRight animated d-block');   
         $('#'+subpa).removeClass().addClass('slideInRight animated d-block');   
+        if (sublevel == 0){               
+            $('#s'+thislevel).removeClass().addClass('slideOutRight animated d-block'); 
+            $('#'+subchild).removeClass().addClass('slideInRight animated');  
+            $('#s'+sublevel).removeClass().addClass('slideInRight animated');   
+            $('#'+subpa).removeClass().addClass('slideInRight animated');   
+        }
     };
-    if (sublevel == 0){               
-        $('#s'+thislevel).removeClass().addClass('slideOutRight animated d-block'); 
-        $('#'+subchild).removeClass().addClass('slideInRight animated');  
-        $('#s'+sublevel).removeClass().addClass('slideInRight animated');   
-        $('#'+subpa).removeClass().addClass('slideInRight animated');   
-    }
 };
