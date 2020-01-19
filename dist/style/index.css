@@ -2824,10 +2824,11 @@ button.open-page img {
   color: #182B56;
 }
 
-#s1, #s2, #s3 > div {
+#s1 > div,
+#s2 > div,
+#s3 > div {
   display: none;
   background-color: #fff;
   min-height: 100vh;
-  display: none;
 }
 /*# sourceMappingURL=index.css.map */
