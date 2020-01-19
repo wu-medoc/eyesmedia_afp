@@ -28,6 +28,7 @@
     <link rel="stylesheet" href="dist/style/global.min.css">
     <link rel="stylesheet" href="dist/style/index.min.css">
     <link rel="stylesheet" href="dist/style/travel-index.min.css">
+    <link rel="stylesheet" href="../dist/style/animate.min.css">
     <title>eyemedia - afp</title>
 </head>
 
@@ -293,12 +294,13 @@
                                 </div>
                                 <p>線上商城</p>
                             </a>
-                            <a href="javascript:;" class="link-item more-btn">
-                                <div class="img-box">
-                                    <img src="img/index/icons/icon_more.svg" alt="">
+                            <!-- <a href="javascript:;" class="link-item more-btn"> -->
+                            <div class="link-item">
+                                <div class="img-box"><button class="btn animated-btn" onclick="levelAnim('0,1,setting,setting');">
+                                    <img src="img/index/icons/icon_more.svg" alt=""></button> 
                                 </div>
-                                <p>更多</p>
-                            </a>
+                                <p>更多</p>                          
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -952,12 +954,17 @@
             </div>
         </div>
     
-        <!-- 自訂功能側邊欄 -->
-        <aside>
-            <div class="more-link-aside">
+        <!-- 自訂功能側邊欄 class="more-link-aside" -->
+        <div id="s1" class="slideInRight animated">
+            <div id="setting" class="slideInRight animated">
                 <div class="aside-header">
-                    <div class="close-btn">
+                    <!-- <div class="close-btn">
                         <i class="material-icons">&#xE314;</i>首頁
+                    </div> -->
+                    <div>
+                    <button class="btn animated-btn close-btn" onclick="levelAnim('1,0,setting,setting');" data-toggle="tooltip" data-placement="bottom" title="回上一頁">
+                        <i class="material-icons">&#xE314;</i>首頁
+                    </button>
                     </div>
                     <div class="edit-title-box">
                         <div class="edit-item edit-title-cancel">取消</div>
@@ -1114,7 +1121,7 @@
                     </div>
                 </div>
             </div>
-        </aside>
+        </div>
 
         
         <div class="addheight container"></div>

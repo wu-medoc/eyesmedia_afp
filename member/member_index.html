@@ -333,35 +333,6 @@
     <script src="../js/vendor/imgLiquid.js"></script>
 
     <!-- custom js -->
-    <script> 
-    // animated control
-    function levelAnim(obj){
-        var anim = obj.split(",");
-        var thislevel = anim[0];
-        var sublevel = anim[1];
-        var subpa = anim[2];
-        var subchild = anim[3];      
-        if (thislevel < sublevel) {      
-            if (subpa!==subchild){
-                $('#s'+thislevel).removeClass().addClass('slideOutRight animated d-block'); 
-                $('#'+subpa).removeClass().addClass('slideOutRight animated d-block'); 
-            };   
-            $('#s'+sublevel).removeClass().addClass('slideInRight animated d-block');   
-            $('#'+subchild).removeClass().addClass('slideInRight animated d-block');   
-         } else {                         
-            $('#s'+thislevel).removeClass().addClass('slideOutRight animated d-block'); 
-            $('#'+subchild).removeClass().addClass('slideOutRight animated d-block');  
-            $('#s'+sublevel).removeClass().addClass('slideInRight animated d-block');   
-            $('#'+subpa).removeClass().addClass('slideInRight animated d-block');   
-        };
-        if (sublevel == 0){               
-            $('#s'+thislevel).removeClass().addClass('slideOutRight animated d-block'); 
-            $('#'+subchild).removeClass().addClass('slideInRight animated');  
-            $('#s'+sublevel).removeClass().addClass('slideInRight animated');   
-            $('#'+subpa).removeClass().addClass('slideInRight animated');   
-        }
-    };
-    </script>
     <script src="../js/index.js"></script>
 </body>
 

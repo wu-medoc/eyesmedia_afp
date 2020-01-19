@@ -746,28 +746,4 @@ footer .menu-bar .customer-item img {
   text-align: center;
   color: #4A90E2;
 }
-
-#s1, #s2, #s3 {
-  width: 100%;
-  position: absolute;
-  top: 0;
-  display: none;
-  background-color: #fff;
-  z-index: 51;
-  height: 100%;
-  min-height: 100vh;
-}
-
-#s1 button, #s2 button, #s3 button {
-  text-align: left;
-  padding: 0;
-  color: #182B56;
-}
-
-#s1, #s2, #s3 > div {
-  display: none;
-  background-color: #fff;
-  min-height: 100vh;
-  display: none;
-}
 /*# sourceMappingURL=member.css.map */

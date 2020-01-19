@@ -186,7 +186,7 @@
 .travel-featured {
   overflow-x: visible;
   width: auto;
-  height: 430px;
+  height: 480px;
 }
 
 .travel-featured h6 {
@@ -197,7 +197,7 @@
   .travel-featured {
     overflow-x: visible;
     width: 110vw;
-    height: 430px;
+    height: 480px;
   }
 }
 

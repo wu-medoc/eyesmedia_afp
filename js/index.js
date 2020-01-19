@@ -74,22 +74,16 @@ if ($('.for-sub').length>0) {
         $('.for-sub .top-item.more-horiz.has-info').addClass('ml-auto');
     }
 }
-// 自訂連結更多按鈕 - 開啟側欄
-$('.more-btn').on('click', function(){
-    body.addClass('is-open-aside');
-})
-// 側欄 header - 關閉側欄
-$('.aside-header .close-btn').on('click', function(){
-    body.removeClass('is-open-aside');
-    $('.more-link-aside').removeClass('edit-mode')
-})
 
-// aside 編輯鍵
+// 側欄 - 關閉編輯
+$('.animated-btn.close-btn').on('click', function(){
+    $('#setting').removeClass('edit-mode')
+})
 $('.edit-btn').on('click', function(){
-    $(this).closest('.more-link-aside').addClass('edit-mode');
+    $(this).closest('#setting').addClass('edit-mode');
 })
 $('.aside-header .edit-title-cancel').on('click', function(){
-    $(this).closest('.more-link-aside').removeClass('edit-mode');
+    $(this).closest('#setting').removeClass('edit-mode');
 })
 
 
@@ -400,3 +394,31 @@ if($('.number-spinner').length>0) {
         btn.closest('.number-spinner').find('input').val(newVal);
     });
 }
+
+// animated control
+function levelAnim(obj){
+    var anim = obj.split(",");
+    var thislevel = anim[0];
+    var sublevel = anim[1];
+    var subpa = anim[2];
+    var subchild = anim[3];      
+    if (thislevel < sublevel) {      
+        if (subpa!==subchild){
+            $('#s'+thislevel).removeClass().addClass('slideOutRight animated d-block'); 
+            $('#'+subpa).removeClass().addClass('slideOutRight animated d-block'); 
+        };   
+        $('#s'+sublevel).removeClass().addClass('slideInRight animated d-block');   
+        $('#'+subchild).removeClass().addClass('slideInRight animated d-block');   
+        } else {                         
+        $('#s'+thislevel).removeClass().addClass('slideOutRight animated d-block'); 
+        $('#'+subchild).removeClass().addClass('slideOutRight animated d-block');  
+        $('#s'+sublevel).removeClass().addClass('slideInRight animated d-block');   
+        $('#'+subpa).removeClass().addClass('slideInRight animated d-block');   
+    };
+    if (sublevel == 0){               
+        $('#s'+thislevel).removeClass().addClass('slideOutRight animated d-block'); 
+        $('#'+subchild).removeClass().addClass('slideInRight animated');  
+        $('#s'+sublevel).removeClass().addClass('slideInRight animated');   
+        $('#'+subpa).removeClass().addClass('slideInRight animated');   
+    }
+};
