@@ -40,7 +40,7 @@
             <div class="title-box">
                 <div class="item icon-btn">
                     <div class="img-box">
-                        <button class="btn animated-btn" onclick="levelAnim('1,mysetting,mysetting');"><img src="../img/member/member-icon-setting.svg" alt="設定"></button >
+                        <button class="btn animated-btn" onclick="levelAnim('0,1,mysetting,mysetting');"><img src="../img/member/member-icon-setting.svg" alt="設定"></button >
                     </div>
                 </div>
                 <div class="item title-name"></div>
@@ -128,12 +128,12 @@
             </div>
         </div>        
         <!--次頁-->
-        <div id="1">
+        <div id="s1" class="slideInRight animated">
             <!--我的設定選單-->
-            <div id="mysetting" class="d-none">
+            <div id="mysetting" class="slideInRight animated">
                 <div class="title-box">
                     <div class="item icon-btn">
-                        <button class="btn animated-btn" onclick="levelAnim('1,mysetting,mysetting');" data-toggle="tooltip" data-placement="bottom" title="回上一頁">
+                        <button class="btn animated-btn" onclick="levelAnim('1,0,mysetting,mysetting');" data-toggle="tooltip" data-placement="bottom" title="回上一頁">
                             <i class="material-icons">&#xE314;</i>
                         </button>
                     </div>
@@ -144,10 +144,10 @@
                     <p>我的帳號</p>
                     <ul>
                         <li>
-                            <button class="btn animated-btn w-100" onclick="levelAnim('2,mysetting,myfile');">我的檔案 <i class="material-icons">&#xE315;</i></button>
+                            <button class="btn animated-btn w-100" onclick="levelAnim('1,2,mysetting,myfile');">我的檔案 <i class="material-icons">&#xE315;</i></button>
                         </li>
                         <li>
-                            <button class="btn animated-btn w-100" onclick="levelAnim('2,mysetting,mytest');">我的地址 <i class="material-icons">&#xE315;</i></button>
+                            <button class="btn animated-btn w-100" onclick="levelAnim('1,2,mysetting,mytest');">我的地址 <i class="material-icons">&#xE315;</i></button>
                         </li>
                         <li>
                             <div class="item">付款設定</div>
@@ -195,12 +195,12 @@
                 </div>
             </div>
         </div>
-        <div id="2">           
+        <div id="s2" class="slideInRight animated">           
             <!--我的檔案-->
-            <div id="myfile" class="d-none">
+            <div id="myfile" class="slideInRight animated">
                 <div class="title-box">
                     <div class="item icon-btn">
-                        <button class="btn animated-btn" onclick="levelAnim('2,mysetting,myfile');" data-toggle="tooltip" data-placement="bottom" title="回上一頁">
+                        <button class="btn animated-btn" onclick="levelAnim('2,1,mysetting,myfile');" data-toggle="tooltip" data-placement="bottom" title="回上一頁">
                             <i class="material-icons">&#xE314;</i>
                         </button>
                     </div>
@@ -247,8 +247,8 @@
                 </div>
             </div>
             <!--我的測試-->
-            <div id="mytest" class="d-none">
-                <button class="btn animated-btn" onclick="levelAnim('2,mysetting,mytest');" data-toggle="tooltip" data-placement="bottom" title="回上一頁">
+            <div id="mytest" class="slideInRight animated">
+                <button class="btn animated-btn" onclick="levelAnim('2,1,mysetting,mytest');" data-toggle="tooltip" data-placement="bottom" title="回上一頁">
                     <i class="material-icons">&#xE314;</i>
                 </button>
             </div>
@@ -333,24 +333,33 @@
     <script src="../js/vendor/imgLiquid.js"></script>
 
     <!-- custom js -->
-    <script>    
+    <script> 
+    // animated control
     function levelAnim(obj){
         var anim = obj.split(",");
-        var sublevel = anim[0];
-        var subpa = anim[1];
-        var subchild = anim[2];        
-        var i = parseInt(sublevel);        
-        $('#'+sublevel).addClass('sildeInRight animated d-block');            
-        $('#'+subpa).addClass('sildeInRight animated d-block');
-
-        for(let index=1;index<i;index++){
-            $('#'+index).addClass('sildeOutRight animated d-block');
-            if (subpa!=subchild){
-                $('#'+sublevel).removeClass();
-                $('#'+sublevel).addClass('sildeOutRight'); 
-            }
+        var thislevel = anim[0];
+        var sublevel = anim[1];
+        var subpa = anim[2];
+        var subchild = anim[3];      
+        if (thislevel < sublevel) {      
+            if (subpa!==subchild){
+                $('#s'+thislevel).removeClass().addClass('slideOutRight animated d-block'); 
+                $('#'+subpa).removeClass().addClass('slideOutRight animated d-block'); 
+            };   
+            $('#s'+sublevel).removeClass().addClass('slideInRight animated d-block');   
+            $('#'+subchild).addClass('slideInRight animated d-block');   
+         } else {                         
+            $('#s'+thislevel).removeClass().addClass('slideOutRight animated d-block'); 
+            $('#'+subchild).removeClass().addClass('slideOutRight animated d-block');  
+            $('#s'+sublevel).removeClass().addClass('slideInRight animated d-block');   
+            $('#'+subpa).removeClass().addClass('slideInRight animated d-block');   
         };
-        //console.log(anim[1]);
+        if (sublevel == 0){               
+            $('#s'+thislevel).removeClass().addClass('slideOutRight animated d-block'); 
+            $('#'+subchild).removeClass().addClass('slideInRight animated');  
+            $('#s'+sublevel).removeClass().addClass('slideInRight animated');   
+            $('#'+subpa).removeClass().addClass('slideInRight animated');   
+        }
     };
     </script>
     <script src="../js/index.js"></script>

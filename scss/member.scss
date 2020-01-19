@@ -281,8 +281,7 @@
         color: #4A90E2;
     }
 }
-
-#animate-wrap{
+#s1,#s2,#s3 {
     width: 100%;
     position: absolute;
     top: 0;
@@ -297,7 +296,8 @@
         color: #182B56;
     }
 }
-#animate-wrap > div {
+
+#s1,#s2,#s3 > div {
     display: none;    
     background-color: #fff;
     min-height: 100vh;
