@@ -570,9 +570,9 @@ footer .menu-bar .customer-item img {
 }
 
 .my-list-box ul li .input-box input {
+  display: none;
   width: 100%;
   border: none;
-  border-bottom: 1px #eee solid;
   text-align: right;
   color: #182B56;
 }

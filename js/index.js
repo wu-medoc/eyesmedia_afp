@@ -243,7 +243,7 @@ if ($( ".travel-box" ).hasClass("swiper-container")) {
         slidesPerGroup: 5,
         slidesPerColumn:2,
         slidesPerColumnFill : 'row',
-        direction: 'horizontal',
+        // direction: 'horizontal',
         paginationClickable: true,
         spaceBetween: 0,
         loop: false        

@@ -1,0 +1,236 @@
+/* line 3, travel-index.scss */
+.travel h6 {
+  font-weight: bold;
+  margin: 0.5em 0; }
+
+/* travel-icon */
+/* line 8, travel-index.scss */
+.travel-boxoutsize {
+  width: 78%;
+  max-width: 800px;
+  height: auto;
+  background-color: #fff;
+  top: -3em;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 10px;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  box-shadow: 0px 1px 5px 0px #b0b0b0;
+  z-index: 10;
+  font-size: 0.9em; }
+
+/* line 26, travel-index.scss */
+.travel-box.swiper-container .swiper-wrapper {
+  display: -webkit-box; }
+/* line 29, travel-index.scss */
+.travel-box.swiper-container .swiper-slide {
+  height: 6.5em;
+  text-align: center;
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center; }
+  /* line 45, travel-index.scss */
+  .travel-box.swiper-container .swiper-slide .travel-bgbox {
+    width: 4em;
+    height: 4em;
+    border-radius: 50%;
+    padding: 0.5em;
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center; }
+    /* line 63, travel-index.scss */
+    .travel-box.swiper-container .swiper-slide .travel-bgbox img {
+      height: 3em; }
+  /* line 67, travel-index.scss */
+  .travel-box.swiper-container .swiper-slide .travel-txt {
+    color: #212529;
+    padding-bottom: 0.5em; }
+
+/* travel-hot */
+/* line 120, travel-index.scss */
+.travel-hot {
+  overflow-x: visible;
+  width: 100%; }
+  /* line 123, travel-index.scss */
+  .travel-hot .col-12 {
+    padding-right: 0px;
+    padding-left: 0px; }
+  /* line 127, travel-index.scss */
+  .travel-hot .hot-body {
+    width: 100%;
+    text-align: left; }
+    /* line 130, travel-index.scss */
+    .travel-hot .hot-body a.txt-line-clamp2 {
+      font-size: 0.9em;
+      font-weight: 700;
+      color: #343a40; }
+    /* line 135, travel-index.scss */
+    .travel-hot .hot-body a.txt-line-clamp3 {
+      font-size: 0.8em;
+      color: #343a40;
+      font-weight: 400; }
+
+@media screen and (max-width: 570px) {
+  /* line 143, travel-index.scss */
+  .travel-hot {
+    overflow-x: visible;
+    width: 110vw; }
+
+  /* line 147, travel-index.scss */
+  .travel-topic {
+    overflow-x: visible;
+    width: auto; } }
+/* travel topic */
+/* line 154, travel-index.scss */
+.travel-topic {
+  background-color: #1E4067;
+  color: #fff;
+  overflow-x: visible;
+  width: auto; }
+
+@media screen and (max-width: 570px) {
+  /* line 161, travel-index.scss */
+  .travel-topic {
+    background-color: #1E4067;
+    color: #fff;
+    overflow-x: visible;
+    width: 110vw; } }
+/* line 168, travel-index.scss */
+.topic-body {
+  text-align: left; }
+  /* line 170, travel-index.scss */
+  .topic-body a.txt-line-clamp1 {
+    font-size: 0.9em;
+    font-weight: 700;
+    color: #fff; }
+    /* line 174, travel-index.scss */
+    .topic-body a.txt-line-clamp1:last-child {
+      font-size: 0.8em;
+      color: #fff;
+      font-weight: 400; }
+
+/* line 182, travel-index.scss */
+.topic-img-top {
+  border-radius: .4rem;
+  overflow: hidden;
+  position: relative;
+  padding-left: 0;
+  padding-right: 0; }
+
+/* line 189, travel-index.scss */
+.topic-img-top label {
+  font-size: 1.3em;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-shadow: 0 1px 10px #333; }
+
+/* travel featured */
+/* line 200, travel-index.scss */
+.travel-featured {
+  overflow-x: auto;
+  overflow-y: hidden;
+  width: auto;
+  height: 550px; }
+  /* line 201, travel-index.scss */
+  .travel-featured h6 {
+    font-weight: bold; }
+  @media (min-width: 481px) and (max-width: 768px) {
+    /* line 200, travel-index.scss */
+    .travel-featured {
+      height: 480px; } }
+  @media (max-width: 480px) {
+    /* line 200, travel-index.scss */
+    .travel-featured {
+      height: 450px; } }
+
+/* line 215, travel-index.scss */
+.travel-featured .swiper-wrapper {
+  padding-bottom: 15px; }
+
+/* line 222, travel-index.scss */
+.travel-featured .tab-pane {
+  position: absolute; }
+
+/* line 228, travel-index.scss */
+.travel-featuredbox .item-body {
+  border-top-left-radius: .5em;
+  border-top-right-radius: .5em;
+  text-align: left; }
+/* line 233, travel-index.scss */
+.travel-featuredbox .item-img {
+  border-top-left-radius: .5em;
+  border-top-right-radius: .5em;
+  width: 100%;
+  height: auto; }
+/* line 239, travel-index.scss */
+.travel-featuredbox .item-title {
+  font-weight: bold;
+  color: #1E4067; }
+/* line 243, travel-index.scss */
+.travel-featuredbox .item-info {
+  border: 1px solid #ccc;
+  border-bottom-left-radius: .5em;
+  border-bottom-right-radius: .5em;
+  line-height: 1.6em;
+  margin-bottom: 10px;
+  font-size: 0.8em; }
+/* line 251, travel-index.scss */
+.travel-featuredbox .item-title {
+  border-bottom: 1px solid #ccc;
+  padding: 2px 10px;
+  font-weight: bold;
+  font-size: 0.9em; }
+/* line 257, travel-index.scss */
+.travel-featuredbox .item-location,
+.travel-featuredbox .item-price,
+.travel-featuredbox .item-date {
+  border-bottom: 1px solid #ccc;
+  padding: 1px 10px;
+  font-weight: bold; }
+/* line 264, travel-index.scss */
+.travel-featuredbox a .item-day {
+  color: #6c757d; }
+/* line 267, travel-index.scss */
+.travel-featuredbox .item-keyword {
+  border-bottom: 1px solid #ccc;
+  padding: 2px 5px;
+  font-weight: bold;
+  overflow: hidden;
+  height: 45px; }
+  /* line 273, travel-index.scss */
+  .travel-featuredbox .item-keyword span {
+    white-space: nowrap;
+    color: #48A2DE;
+    border: 1px #48A2DE solid;
+    border-radius: 3px;
+    padding: 0 2px;
+    font-size: 12px;
+    margin: 5px;
+    border-bottom: 1px solid #ccc; }
+
+/*# sourceMappingURL=travel-index.css.map */

@@ -200,12 +200,13 @@
             <div id="myfile" class="slideInRight animated">
                 <div class="title-box">
                     <div class="item icon-btn">
-                        <button class="btn animated-btn" onclick="levelAnim('2,1,mysetting,myfile');" data-toggle="tooltip" data-placement="bottom" title="回上一頁">
+                        <button class="btn animated-btn back-btn" onclick="levelAnim('2,1,mysetting,myfile');" data-toggle="tooltip" data-placement="bottom" title="回上一頁">
                             <i class="material-icons">&#xE314;</i>
                         </button>
+                        <button class="btn clear-btn d-none">取消</button>
                     </div>
                     <div class="item title-name">我的檔案</div>
-                    <div class="item ctrl-btn">編輯</div>
+                    <div class="item ctrl-btn"><button class="btn edit-btn">編輯</button><button class="btn submit-btn d-none">確定</button></div>
                 </div>
                 <div class="my-info-box">
                     <div class="info-box info-img">
@@ -225,23 +226,38 @@
                         </li>
                         <li>
                             <div class="item">生日</div>
+                            <div class="item input-box">
+                                <input type="text" value="" placeholder="請輸入">
+                            </div>
                             <div class="item auto-left"></div>
                         </li>
                         <li>
                             <div class="item">手機號碼</div>
+                            <div class="item input-box">
+                                <input type="text" value="" placeholder="請輸入">
+                            </div>
                             <div class="item auto-left"></div>
                         </li>
                         <li>
                             <div class="item">E-mail</div>
+                            <div class="item input-box">
+                                <input type="text" value="" placeholder="請輸入">
+                            </div>
                             <div class="item auto-left"></div>
                         </li>
                         <li>
                             <div class="item">上傳護照</div>
-                            <div class="item auto-left"></div>
+                            <div class="item input-box">
+                                <input type="text" value="" placeholder="請設定">
+                            </div>
+                            <div class="item auto-left"><i class="material-icons">&#xE315;</i></div>
                         </li>
                         <li>
                             <div class="item">上傳台胞證</div>
-                            <div class="item auto-left"></div>
+                            <div class="item input-box">
+                                <input type="text" value="" placeholder="請設定">
+                            </div>
+                            <div class="item auto-left"><i class="material-icons">&#xE315;</i></div>
                         </li>
                     </ul>
                 </div>
@@ -251,6 +267,12 @@
                 <button class="btn animated-btn" onclick="levelAnim('2,1,mysetting,mytest');" data-toggle="tooltip" data-placement="bottom" title="回上一頁">
                     <i class="material-icons">&#xE314;</i>
                 </button>
+            </div>
+        </div>
+        
+        <div id="s3" class="slideInRight animated">           
+            <!--上傳護照-->
+            <div id="mypassport" class="slideInRight animated">
             </div>
         </div>
     </div>
@@ -332,7 +354,29 @@
     <script src="../js/vendor/swiper/js/swiper.min.js"></script>
     <script src="../js/vendor/imgLiquid.js"></script>
 
-    <!-- custom js -->
+    <!-- custom js -->    
+    <script>
+        $('.edit-btn').on('click',function(){
+            $('.edit-btn').removeClass('d-block').addClass('d-none');
+            $('.submit-btn').removeClass('d-none').addClass('d-block');
+            $('.clear-btn').removeClass('d-none').addClass('d-block');
+            $('.back-btn').addClass('d-none');
+            $('.my-list-box input').css('display','block');
+        });
+        $('.clear-btn').on('click',function(){
+            close_myfile();
+        });
+        $('.submit-btn').on('click',function(){
+            close_myfile();
+        });
+        function close_myfile(){
+            $('.edit-btn').removeClass('d-none').addClass('d-block');
+            $('.submit-btn').removeClass('d-block').addClass('d-none');
+            $('.clear-btn').removeClass('d-block').addClass('d-none');
+            $('.back-btn').removeClass('d-none').addClass('d-block');
+            $('.my-list-box input').css('display','none');
+        }
+    </script>
     <script src="../js/index.js"></script>
 </body>
 

@@ -143,13 +143,13 @@
             .input-box{
                 flex: 1;
                 input{
+                    display: none;
                     width: 100%;
                     border: none;
-                    border-bottom: 1px $gray-light solid;
                     text-align: right;
                     color: $blue-dark;
                 }
-            }
+            }  
         }
     }
 }
