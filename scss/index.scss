@@ -2539,7 +2539,7 @@ button.open-page {
 
 
 /* animated control */
-  #s1,#s2,#s3 {
+  #s1,#s2,#s3,#s4 {
     width: 100%;
     position: absolute;
     top: 0;
@@ -2557,7 +2557,8 @@ button.open-page {
 
 #s1 > div,
 #s2 > div,
-#s3 > div {
+#s3 > div,
+#s4 > div {
     display: none;    
     background-color: #fff;
     min-height: 100vh;

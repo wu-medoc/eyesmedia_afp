@@ -2807,7 +2807,7 @@ button.open-page img {
 }
 
 /* animated control */
-#s1, #s2, #s3 {
+#s1, #s2, #s3, #s4 {
   width: 100%;
   position: absolute;
   top: 0;
@@ -2818,7 +2818,7 @@ button.open-page img {
   min-height: 100vh;
 }
 
-#s1 button, #s2 button, #s3 button {
+#s1 button, #s2 button, #s3 button, #s4 button {
   text-align: left;
   padding: 0;
   color: #182B56;
@@ -2826,7 +2826,8 @@ button.open-page img {
 
 #s1 > div,
 #s2 > div,
-#s3 > div {
+#s3 > div,
+#s4 > div {
   display: none;
   background-color: #fff;
   min-height: 100vh;

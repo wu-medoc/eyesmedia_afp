@@ -185,19 +185,24 @@
 /* travel featured */
 .travel-featured {
   overflow-x: auto;
+  overflow-y: hidden;
   width: auto;
-  height: 480px;
+  height: 550px;
 }
 
 .travel-featured h6 {
   font-weight: bold;
 }
 
-@media screen and (max-width: 570px) {
+@media (min-width: 481px) and (max-width: 768px) {
   .travel-featured {
-    overflow-x: auto;
-    width: 105vw;
-    height: 390px;
+    height: 480px;
+  }
+}
+
+@media (max-width: 480px) {
+  .travel-featured {
+    height: 450px;
   }
 }
 
@@ -270,6 +275,8 @@
   border-bottom: 1px solid #ccc;
   padding: 2px 5px;
   font-weight: bold;
+  overflow: hidden;
+  height: 45px;
 }
 
 .travel-featured .item-keyword span {

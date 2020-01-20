@@ -190,13 +190,17 @@ if ($( ".tablist-swiper" ).hasClass("swiper-container")) {
 if ($( ".travel-featuredbox" ).hasClass("swiper-container"))  {
     var swiper = new Swiper('.travel-featuredbox.swiper-container', {
         paginationClickable: true,
-        slidesPerView: 1.5,
+        slidesPerView: 1.6,
         spaceBetween: 10,
         breakpoints: {
-          1024: {
-            slidesPerView: 3,
+          768: {
+            slidesPerView: 2,
             spaceBetween: 20,
           },
+          1024: {
+            slidesPerView: 2.7,
+            spaceBetween: 20,
+          }
         },
         loop: true
         //建議資料多時,關閉loop
