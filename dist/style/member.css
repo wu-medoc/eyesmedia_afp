@@ -575,6 +575,7 @@ footer .menu-bar .customer-item img {
   border: none;
   text-align: right;
   color: #182B56;
+  border-bottom: 1px #eee solid;
 }
 
 .my-info-box {

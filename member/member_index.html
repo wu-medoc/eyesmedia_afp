@@ -206,7 +206,7 @@
                         <button class="btn clear-btn d-none">取消</button>
                     </div>
                     <div class="item title-name">我的檔案</div>
-                    <div class="item ctrl-btn"><button class="btn edit-btn">編輯</button><button class="btn submit-btn d-none">確定</button></div>
+                    <div class="item ctrl-btn"><button class="btn edit-btn d-block">編輯</button><button class="btn submit-btn d-none">確定</button></div>
                 </div>
                 <div class="my-info-box">
                     <div class="info-box info-img">
@@ -250,7 +250,9 @@
                             <div class="item input-box">
                                 <input type="text" value="" placeholder="請設定">
                             </div>
-                            <div class="item auto-left"><i class="material-icons">&#xE315;</i></div>
+                            <div class="item auto-left">
+                                <button class="btn animated-btn w-100" onclick="levelAnim('2,3,myfile,mypassport');"><i class="material-icons">&#xE315;</i></button>
+                            </div>
                         </li>
                         <li>
                             <div class="item">上傳台胞證</div>
@@ -273,6 +275,35 @@
         <div id="s3" class="slideInRight animated">           
             <!--上傳護照-->
             <div id="mypassport" class="slideInRight animated">
+                <div class="title-box">
+                    <div class="item icon-btn"><i class="material-icons">&#xE314;</i></div>
+                    <div class="item title-name">上傳護照</div>
+                    <div class="item ctrl-btn">儲存</div>
+                </div>
+                <div class="my-info-box">
+                    <div class="upload-box">
+                        <button type="button">
+                            <img src="../img/member/passport.svg">
+                            <div class="add-btn">
+                                <img src="../img/member/add-passport.svg" alt="">
+                            </div>
+                        </button>
+                    </div>
+                    <div class="passport-status">
+                        未上傳
+                    </div>
+                </div>
+                <div class="my-list-box edit-list">
+                    <ul>
+                        <li>
+                            <div class="item">有效期限</div>
+                            <div class="item input-box">
+                                <input type="text" value="" placeholder="請輸入">
+                            </div>
+                            <div class="item auto-left"></div>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>

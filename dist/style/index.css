@@ -57,7 +57,8 @@ body.is-open-country .country-box {
     left: 0;
     right: 0;
     top: 0;
-    height: 90px;
+    max-height: 90px;
+    min-height: 45px;
     background-color: #fff;
     z-index: 100;
     -webkit-box-shadow: -1px 8px 12px #444;
@@ -517,37 +518,47 @@ body.is-open-country .country-box {
 }
 
 /* afp-tab-box */
-.afp-tab-box .afp-tab .col-6,
-.afp-tab-box .afp-tab .col-md-12 {
-  padding-right: .5em;
-  padding-left: .5em;
+.afp-tab-box #nav-tab-featured {
+  display: block;
+  overflow: visible;
+  white-space: nowrap;
 }
 
-.afp-tab-box {
-  margin-top: .5em;
-}
-
-.afp-tab-box .nav-tabs {
-  display: table-cell;
-  margin-top: .5em;
-  padding: 15px 0;
-  border-bottom: none;
+.afp-tab-box #nav-tab-featured li {
   font-size: .9em;
-  overflow-x: auto;
-  overflow-y: hidden;
+  text-align: center;
+  list-style: none;
+  display: inline-block;
+  white-space: nowrap;
 }
 
-.afp-tab-box .nav-tabs li {
+.afp-tab-box .tablist-panes {
+  position: relative;
+  display: block;
+}
+
+.afp-tab-box #nav-tab.nav-tabs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: inherit;
+      flex-wrap: inherit;
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+  text-align: center;
+  border-bottom: 0px;
+}
+
+.afp-tab-box #nav-tab.nav-tabs li {
+  font-size: .9em;
   color: #8E8E93;
   text-decoration: none;
   position: relative;
   -webkit-transition: .5s color;
   transition: .5s color;
   border: none;
-  margin-bottom: 10px;
-  padding-right: 10px;
-  padding-left: 10px;
-  display: inherit;
+  display: block;
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
@@ -557,26 +568,7 @@ body.is-open-country .country-box {
   white-space: nowrap;
 }
 
-.afp-tab-box #nav-tab.nav-tabs {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  padding-left: 0;
-  margin-bottom: 0;
-  list-style: none;
-  text-align: center;
-}
-
-.afp-tab-box #nav-tab.nav-tabs li {
-  display: inline-block;
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 auto;
-          flex: 1 1 auto;
-}
-
-.afp-tab-box .nav-tabs li a {
+.afp-tab-box #nav-tab.nav-tabs li a {
   color: #182B56;
   border: none;
   font-size: 1em;
@@ -584,14 +576,14 @@ body.is-open-country .country-box {
   cursor: pointer;
 }
 
-.tablist-link {
+.afp-tab-box .tablist-link {
   display: inline-block;
   color: #182B56;
 }
 
-a.tablist-link.active:hover::after,
-a.tablist-link.active.show::after,
-.tablist-link::after {
+.afp-tab-box a.tablist-link.active:hover::after,
+.afp-tab-box a.tablist-link.active.show::after,
+.afp-tab-box .tablist-link::after {
   content: '';
   display: block;
   width: 0;
@@ -607,10 +599,10 @@ a.tablist-link.active.show::after,
   transition: .5s width;
 }
 
-a.tablist-link.active::after,
-a.tablist-link.active.show::after,
-a.tablist-link.active.show:hover::after,
-.tablist-link:hover::after {
+.afp-tab-box a.tablist-link.active::after,
+.afp-tab-box a.tablist-link.active.show::after,
+.afp-tab-box a.tablist-link.active.show:hover::after,
+.afp-tab-box .tablist-link:hover::after {
   width: 100%;
   -webkit-transition: width .5s;
   transition: width .5s;
@@ -628,10 +620,6 @@ a.tablist-link.active.show:hover::after,
   border: none;
   background: transparent;
   font-weight: 700;
-}
-
-.tablist-panes {
-  position: relative;
 }
 
 .afp-tab-box .tab-content .content-list {
@@ -2826,7 +2814,7 @@ button.open-page img {
 }
 
 /* animated control */
-#s1, #s2, #s3, #s4 {
+#s1, #s2, #s3, #s4, #s5, #s6 {
   width: 100%;
   position: absolute;
   top: 0;
@@ -2835,9 +2823,10 @@ button.open-page img {
   z-index: 201;
   height: 100%;
   min-height: 100vh;
+  padding-right: 0;
 }
 
-#s1 button, #s2 button, #s3 button, #s4 button {
+#s1 button, #s2 button, #s3 button, #s4 button, #s5 button, #s6 button {
   text-align: left;
   padding: 0;
   color: #182B56;
@@ -2846,7 +2835,9 @@ button.open-page img {
 #s1 > div,
 #s2 > div,
 #s3 > div,
-#s4 > div {
+#s4 > div,
+#s5 > div,
+#s6 > div {
   display: none;
   background-color: #fff;
   min-height: 100vh;

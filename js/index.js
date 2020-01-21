@@ -178,13 +178,24 @@ if ($( ".index-icon" ).hasClass("swiper-container"))  {
         loop: false
     });
 }
+
+
 // swiper JS for travel
 if ($( ".tablist-swiper" ).hasClass("swiper-container")) {
     var swiper = new Swiper('.tablist-swiper.swiper-container', {
         paginationClickable: true,
-        slidesPerView: 1,
+        slidesPerView: 5,
         spaceBetween: 10,
-        freeMode: true
+        breakpoints: {
+          768: {
+            slidesPerView: 8,
+            spaceBetween: 10,
+          },
+          1024: {
+            slidesPerView: 10,
+            spaceBetween: 20,
+          }
+        }
     });
 }
 if ($( ".travel-featuredbox" ).hasClass("swiper-container"))  {
@@ -409,21 +420,21 @@ function levelAnim(obj){
     if (thislevel < sublevel) {      
         if (subpa!==subchild){
             $('#s'+sublevel+'>div').removeClass().addClass('slideOutRight animated d-none'); 
-            $('#s'+thislevel).removeClass().addClass('slideOutRight animated d-block'); 
-            $('#'+subpa).removeClass().addClass('slideOutRight animated d-block'); 
+            $('#s'+thislevel).removeClass().addClass('slideOutRight animated d-block container'); 
+            $('#'+subpa).removeClass().addClass('slideOutRight animated d-block container'); 
         };   
-        $('#s'+sublevel).removeClass().addClass('slideInRight animated d-block');   
-        $('#'+subchild).removeClass().addClass('slideInRight animated d-block');   
+        $('#s'+sublevel).removeClass().addClass('slideInRight animated d-block container');   
+        $('#'+subchild).removeClass().addClass('slideInRight animated d-block container');   
     } else {                         
-        $('#s'+thislevel).removeClass().addClass('slideOutRight animated d-block'); 
-        $('#'+subchild).removeClass().addClass('slideOutRight animated d-block');  
-        $('#s'+sublevel).removeClass().addClass('slideInRight animated d-block');   
-        $('#'+subpa).removeClass().addClass('slideInRight animated d-block');   
+        $('#s'+thislevel).removeClass().addClass('slideOutRight animated d-block container'); 
+        $('#'+subchild).removeClass().addClass('slideOutRight animated d-block container');  
+        $('#s'+sublevel).removeClass().addClass('slideInRight animated d-block container');   
+        $('#'+subpa).removeClass().addClass('slideInRight animated d-block container');   
         if (sublevel == 0){               
-            $('#s'+thislevel).removeClass().addClass('slideOutRight animated d-block'); 
-            $('#'+subchild).removeClass().addClass('slideInRight animated');  
-            $('#s'+sublevel).removeClass().addClass('slideInRight animated');   
-            $('#'+subpa).removeClass().addClass('slideInRight animated');   
+            $('#s'+thislevel).removeClass().addClass('slideOutRight animated d-block container'); 
+            $('#'+subchild).removeClass().addClass('slideInRight animated container');  
+            $('#s'+sublevel).removeClass().addClass('slideInRight animated container');   
+            $('#'+subpa).removeClass().addClass('slideInRight animated container');   
         }
     };
 };
