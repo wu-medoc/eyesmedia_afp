@@ -34,103 +34,167 @@
 </head>
 
 <body>
+    
+<div id="s0">
     <div class="wrap container">
         <!--我的主頁-->
-        <div class="member-top-box">
-            <div class="title-box">
-                <div class="item icon-btn">
-                    <div class="img-box">
-                        <button class="btn animated-btn" onclick="levelAnim('0,1,mysetting,mysetting');"><img src="../img/member/member-icon-setting.svg" alt="設定"></button >
+            <div class="member-top-box">
+                <div class="title-box">
+                    <div class="item icon-btn">
+                        <div class="img-box">
+                            <button class="btn animated-btn" onclick="levelAnim('0,1,mysetting,mysetting');"><img src="../img/member/member-icon-setting.svg" alt="設定"></button >
+                        </div>
+                    </div>
+                    <div class="item title-name"></div>
+                    <div class="item icon-btn">
+                        <div class="img-box">
+                            <img src="../img/member/member-icon-noti.svg" alt="">
+                        </div>
                     </div>
                 </div>
-                <div class="item title-name"></div>
-                <div class="item icon-btn">
-                    <div class="img-box">
-                        <img src="../img/member/member-icon-noti.svg" alt="">
+                <div class="member-info-box">
+                    <div class="info-box info-img">
+                        <div class="info-item">
+                            <img src="https://picsum.photos/300/300/?random=1">
+                        </div>
+                    </div>
+                    <div class="info-box">
+                        <div class="info-item info-name">
+                            李曉龍
+                        </div>
+                        <div class="info-item info-country">
+                            台灣
+                        </div>
+                    </div>
+                    <div class="info-box auto-left">
+                        <div class="info-item info-coin">
+                            100
+                        </div>
+                        <div class="info-item">
+                            <img src="../img/member/member-coin.svg" alt="">
+                            我的魔幣
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="member-info-box">
-                <div class="info-box info-img">
-                    <div class="info-item">
-                        <img src="https://picsum.photos/300/300/?random=1">
-                    </div>
-                </div>
-                <div class="info-box">
-                    <div class="info-item info-name">
-                        李曉龍
-                    </div>
-                    <div class="info-item info-country">
-                        台灣
-                    </div>
-                </div>
-                <div class="info-box auto-left">
-                    <div class="info-item info-coin">
-                        100
-                    </div>
-                    <div class="info-item">
-                        <img src="../img/member/member-coin.svg" alt="">
-                        我的魔幣
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="member-item-group">
-            <div class="member-item-bg">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="member-item-list">
-                                <div class="member-items">
-                                    <a href="#" class="member-item">
-                                        <div class="img-box">
-                                            <img src="../img/member/member-icon-card.svg" alt="">
-                                        </div>
-                                        <p>我的卡片</p>
-                                    </a>
-                                    <a href="#" class="member-item">
-                                        <div class="img-box">
-                                            <img src="../img/member/member-icon-ticket.svg" alt="">
-                                        </div>
-                                        <p>我的票券</p>
-                                    </a>
-                                    <a href="#" class="member-item">
-                                        <div class="img-box">
-                                            <img src="../img/member/member-icon-coin.svg" alt="">
-                                        </div>
-                                        <p>我的魔幣</p>
-                                    </a>
-                                </div>
-                                <div class="member-items">
-                                    <a href="#" class="member-item">
-                                        <div class="img-box">
-                                            <img src="../img/member/member-icon-discount.svg" alt="">
-                                        </div>
-                                        <p>我的優惠券</p>
-                                    </a>
-                                    <a href="#" class="member-item">
-                                        <div class="img-box">
-                                            <img src="../img/member/member-icon-favorite.svg" alt="">
-                                        </div>
-                                        <p>我的收藏</p>
-                                    </a>
-                                    <a href="#" class="member-item">
-                                        <div class="img-box">
-                                            <img src="../img/member/member-icon-order.svg" alt="">
-                                        </div>
-                                        <p>我的訂單</p>
-                                    </a>
+            <div class="member-item-group">
+                <div class="member-item-bg">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="member-item-list">
+                                    <div class="member-items">
+                                        <a href="#" class="member-item">
+                                            <div class="img-box">
+                                                <img src="../img/member/member-icon-card.svg" alt="">
+                                            </div>
+                                            <p>我的卡片</p>
+                                        </a>
+                                        <a href="#" class="member-item">
+                                            <div class="img-box">
+                                                <img src="../img/member/member-icon-ticket.svg" alt="">
+                                            </div>
+                                            <p>我的票券</p>
+                                        </a>
+                                        <a href="#" class="member-item">
+                                            <div class="img-box">
+                                                <img src="../img/member/member-icon-coin.svg" alt="">
+                                            </div>
+                                            <p>我的魔幣</p>
+                                        </a>
+                                    </div>
+                                    <div class="member-items">
+                                        <a href="#" class="member-item">
+                                            <div class="img-box">
+                                                <img src="../img/member/member-icon-discount.svg" alt="">
+                                            </div>
+                                            <p>我的優惠券</p>
+                                        </a>
+                                        <a href="#" class="member-item">
+                                            <div class="img-box">
+                                                <img src="../img/member/member-icon-favorite.svg" alt="">
+                                            </div>
+                                            <p>我的收藏</p>
+                                        </a>
+                                        <a href="#" class="member-item">
+                                            <div class="img-box">
+                                                <img src="../img/member/member-icon-order.svg" alt="">
+                                            </div>
+                                            <p>我的訂單</p>
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+            </div>            
+    </div>
+
+    <footer class="for-pc"> 
+        <div class="container">
+        <div class="row d-flex">
+            <div class="col-4 col-md-3">
+            <h6>關於亞洲好玩卡</h6>
+            <ul>
+                <li><a href="#">關於我們</a></li>
+            </ul>            
             </div>
-        </div>        
+            <div class="col-4 col-md-3">
+            <h6>追蹤我們</h6>
+            <ul>
+                <li><a href="#"><i class="fab fa-facebook-f fa-fw"></i> Facebook</a></li>
+                <li><a href="#"><i class="fab fa-line fa-fw"></i> Line</a></li>
+                <li><a href="#"><i class="fab fa-instagram fa-fw"></i> Instagram</a></li>
+            </ul>            
+            </div>  
+            <div class="w-100"></div>
+            <div class="col-12 border-t">
+            <div class="f-left">
+                <object data="../img/index/logo-s.svg" width="30" type="image/svg+xml"></object><span> Designed by Asia Fun Pass</span>
+            </div>
+            <div class="f-right">
+                Ⓒ2020 Asia Fun Pass. All Right Reserved          
+            </div>
+            </div>
+        </div>  
+        </div>
+    </footer>
+    <footer class="mobile-footer for-mobile">
+        <div class="menu-bar">
+            <a href="../index.html" class="bar-item">
+                <img class="default-img" src="../img/index/icons/footer_1_1.svg" alt="">
+                <img class="active-img" src="../img/index/icons/footer_1_2.svg" alt="">
+                首頁
+            </a>
+            <a href="../explore/explore_index.html" class="bar-item">
+                <img class="default-img" src="../img/index/icons/footer_2_1.svg" alt="">
+                <img class="active-img" src="../img/index/icons/footer_2_2.svg" alt="">
+                周邊
+            </a>
+            <a href="../bearservice.html" class="bar-item customer-item">
+                <img src="../img/index/icons/footer_3.png" alt="">
+                客服
+            </a>
+            <a href="javascript:;" class="bar-item">
+                <img class="default-img" src="../img/index/icons/footer_4_1.svg" alt="">
+                <img class="active-img" src="../img/index/icons/footer_4_2.svg" alt="">
+                任務
+            </a>
+            <a href="member_index.html" class="bar-item active">
+                <img class="default-img" src="../img/index/icons/footer_5_1.svg" alt="">
+                <img class="active-img" src="../img/index/icons/footer_5_2.svg" alt="">
+                我的
+            </a>
+        </div>
+    </footer>
+</div>  
+
+    <div class="wrap container">
         <!--次頁-->
-        <div id="s1" class="slideInRight animated">
+        <div id="s1" class="slideInRight animated fast">
             <!--我的設定選單-->
-            <div id="mysetting" class="slideInRight animated">
+            <div id="mysetting" class="slideInRight animated faster">
                 <div class="title-box">
                     <div class="item icon-btn">
                         <button class="btn animated-btn" onclick="levelAnim('1,0,mysetting,mysetting');" data-toggle="tooltip" data-placement="bottom" title="回上一頁">
@@ -206,7 +270,10 @@
                         <button class="btn clear-btn d-none">取消</button>
                     </div>
                     <div class="item title-name">我的檔案</div>
-                    <div class="item ctrl-btn"><button class="btn edit-btn d-block">編輯</button><button class="btn submit-btn d-none">確定</button></div>
+                    <div class="item ctrl-btn">
+                        <button class="btn submit-btn d-none">確定</button>
+                        <button class="btn edit-btn d-block">編輯</button>
+                    </div>
                 </div>
                 <div class="my-info-box">
                     <div class="info-box info-img">
@@ -227,28 +294,28 @@
                         <li>
                             <div class="item">生日</div>
                             <div class="item input-box">
-                                <input type="text" value="" placeholder="請輸入">
+                                <input type="text" value="" class="d-none" placeholder="請輸入">
                             </div>
                             <div class="item auto-left"></div>
                         </li>
                         <li>
                             <div class="item">手機號碼</div>
                             <div class="item input-box">
-                                <input type="text" value="" placeholder="請輸入">
+                                <input type="text" value="" class="d-none" placeholder="請輸入">
                             </div>
                             <div class="item auto-left"></div>
                         </li>
                         <li>
                             <div class="item">E-mail</div>
                             <div class="item input-box">
-                                <input type="text" value="" placeholder="請輸入">
+                                <input type="text" value="" class="d-none" placeholder="請輸入">
                             </div>
                             <div class="item auto-left"></div>
                         </li>
                         <li>
                             <div class="item">上傳護照</div>
                             <div class="item input-box">
-                                <input type="text" value="" placeholder="請設定">
+                                <input type="text" value="" class="d-none" placeholder="請設定">
                             </div>
                             <div class="item auto-left">
                                 <button class="btn animated-btn w-100" onclick="levelAnim('2,3,myfile,mypassport');"><i class="material-icons">&#xE315;</i></button>
@@ -257,7 +324,7 @@
                         <li>
                             <div class="item">上傳台胞證</div>
                             <div class="item input-box">
-                                <input type="text" value="" placeholder="請設定">
+                                <input type="text" value="" class="d-none" placeholder="請設定">
                             </div>
                             <div class="item auto-left"><i class="material-icons">&#xE315;</i></div>
                         </li>
@@ -270,8 +337,7 @@
                     <i class="material-icons">&#xE314;</i>
                 </button>
             </div>
-        </div>
-        
+        </div>        
         <div id="s3" class="slideInRight animated">           
             <!--上傳護照-->
             <div id="mypassport" class="slideInRight animated">
@@ -282,7 +348,11 @@
                         </button>
                     </div>
                     <div class="item title-name">上傳護照</div>
-                    <div class="item ctrl-btn">儲存</div>
+                    <div class="item ctrl-btn">
+                        <button class="btn animated-btn" onclick="levelAnim('3,4,mypassport,mypassportnote');" data-toggle="tooltip" data-placement="bottom" title="回上一頁">
+                            儲存
+                        </button>
+                    </div>
                 </div>
                 <div class="my-info-box">
                     <label for="file-upload" class="custom-file-upload">                        
@@ -311,68 +381,56 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class="addheight container"></div>
-
-
-<footer class="for-pc"> 
-    <div class="container">
-    <div class="row d-flex">
-        <div class="col-4 col-md-3">
-        <h6>關於亞洲好玩卡</h6>
-        <ul>
-            <li><a href="#">關於我們</a></li>
-        </ul>            
+        <div id="s4" class="slideInRight animated">           
+            <!--提示護照-->
+            <div id="mypassportnote" class="slideInRight animated">
+                <div class="title-box">
+                    <div class="item ctrl-btn">
+                        <button class="btn animated-btn" onclick="levelAnim('4,0,mysetting,mypassportnote');" data-toggle="tooltip" data-placement="bottom" title="回上一頁">
+                            關閉
+                        </button>
+                    </div>
+                    <div class="item title-name"></div>
+                    <div class="item ctrl-btn"></div>
+                </div>
+                <div class="upload-passport-noti">
+                    <div class="noti-text">
+                        <strong>提示：</strong>
+                        <p>對準護照的資料頁面拍攝，請注意內容是否清晰</p>
+                        <small>備註：護照資料僅供核對使用</small>
+                    </div>
+                    <div class="img-box">
+                        <img src="../../img/member/passport-noti.svg" alt="">
+                    </div>
+                    <div class="btn next-btn open-overlay-choice">
+                        下一步
+                    </div>
+                </div>
+                <div class="overlay-choice" style="display: none;">
+                    <div class="choice-list">
+                        <ul>
+                            <li>
+                                <div class="item">Take Photo or Video</div>
+                                <div class="item"></div>
+                            </li>
+                            <li>
+                                <div class="item">Photo Library</div>
+                                <div class="item"></div>
+                            </li>
+                            <li>
+                                <div class="item">Browse</div>
+                                <div class="item"></div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="choice-status">
+                        Cancel
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="col-4 col-md-3">
-        <h6>追蹤我們</h6>
-        <ul>
-            <li><a href="#"><i class="fab fa-facebook-f fa-fw"></i> Facebook</a></li>
-            <li><a href="#"><i class="fab fa-line fa-fw"></i> Line</a></li>
-            <li><a href="#"><i class="fab fa-instagram fa-fw"></i> Instagram</a></li>
-        </ul>            
-        </div>  
-        <div class="w-100"></div>
-        <div class="col-12 border-t">
-        <div class="f-left">
-            <object data="../img/index/logo-s.svg" width="30" type="image/svg+xml"></object><span> Designed by Asia Fun Pass</span>
-        </div>
-        <div class="f-right">
-            Ⓒ2020 Asia Fun Pass. All Right Reserved          
-        </div>
-        </div>
-    </div>  
-    </div>
-</footer>
-<footer class="mobile-footer for-mobile">
-    <div class="menu-bar">
-        <a href="../index.html" class="bar-item">
-            <img class="default-img" src="../img/index/icons/footer_1_1.svg" alt="">
-            <img class="active-img" src="../img/index/icons/footer_1_2.svg" alt="">
-            首頁
-        </a>
-        <a href="../explore/explore_index.html" class="bar-item">
-            <img class="default-img" src="../img/index/icons/footer_2_1.svg" alt="">
-            <img class="active-img" src="../img/index/icons/footer_2_2.svg" alt="">
-            周邊
-        </a>
-        <a href="../bearservice.html" class="bar-item customer-item">
-            <img src="../img/index/icons/footer_3.png" alt="">
-            客服
-        </a>
-        <a href="javascript:;" class="bar-item">
-            <img class="default-img" src="../img/index/icons/footer_4_1.svg" alt="">
-            <img class="active-img" src="../img/index/icons/footer_4_2.svg" alt="">
-            任務
-        </a>
-        <a href="member_index.html" class="bar-item active">
-            <img class="default-img" src="../img/index/icons/footer_5_1.svg" alt="">
-            <img class="active-img" src="../img/index/icons/footer_5_2.svg" alt="">
-            我的
-        </a>
-    </div>
-</footer>
-
+    </div> 
+    
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="../js/vendor/bs4/js/jquery-3.2.1.slim.min.js"></script>
@@ -392,23 +450,24 @@
 
     <!-- custom js -->    
     <script>
+        // (edit, clear, back, submit) button & input control
         $('.edit-btn').on('click',function(){
             var btn = $(this).parents(".title-box");
             $(btn).find(".submit-btn, .clear-btn").removeClass('d-none').addClass('d-block');
             $(btn).find(".edit-btn, .back-btn").removeClass('d-block').addClass('d-none');
-            $('.my-list-box input').css('display','block');
+            $(btn).siblings(".my-list-box").find("div.input-box>input").removeClass('d-none').addClass('d-block');
         });
-        $('.clear-btn').on('click',function(){
-            close_myfile();
+        $('.clear-btn, .submit-btn').on('click',function(){
+            var btn = $(this).parents(".title-box");
+            $(btn).find('.edit-btn, .back-btn').removeClass('d-none').addClass('d-block');
+            $(btn).find('.submit-btn, .clear-btn').removeClass('d-block').addClass('d-none');
+            $(btn).siblings(".my-list-box").find("div.input-box>input").removeClass('d-block').addClass('d-none');
         });
-        $('.submit-btn').on('click',function(){
-            close_myfile();
+
+        //
+        $('.open-overlay-choice').on("click", function () {
+            $('.overlay-choice').toggle();
         });
-        function close_myfile(){
-            $('.edit-btn, .back-btn').removeClass('d-none').addClass('d-block');
-            $('.submit-btn, .clear-btn').removeClass('d-block').addClass('d-none');
-            $('.my-list-box input').css('display','none');
-        }
     </script>
     <script src="../js/index.js"></script>
 </body>

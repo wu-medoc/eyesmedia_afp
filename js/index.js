@@ -417,14 +417,17 @@ function levelAnim(obj){
     var sublevel = anim[1];
     var subpa = anim[2];
     var subchild = anim[3];      
-    if (thislevel < sublevel) {      
+    if (thislevel < sublevel) {   
         if (subpa!==subchild){
             $('#s'+sublevel+'>div').removeClass().addClass('slideOutRight animated d-none'); 
             $('#s'+thislevel).removeClass().addClass('slideOutRight animated d-block container'); 
             $('#'+subpa).removeClass().addClass('slideOutRight animated d-block container'); 
         };   
         $('#s'+sublevel).removeClass().addClass('slideInRight animated d-block container');   
-        $('#'+subchild).removeClass().addClass('slideInRight animated d-block container');   
+        $('#'+subchild).removeClass().addClass('slideInRight animated d-block container');    
+        if (thislevel==0){
+            $('#s0').removeClass().addClass('fadeOut animated d-none');
+        }     
     } else {                         
         $('#s'+thislevel).removeClass().addClass('slideOutRight animated d-block container'); 
         $('#'+subchild).removeClass().addClass('slideOutRight animated d-block container');  
@@ -433,7 +436,7 @@ function levelAnim(obj){
         if (sublevel == 0){               
             $('#s'+thislevel).removeClass().addClass('slideOutRight animated d-block container'); 
             $('#'+subchild).removeClass().addClass('slideInRight animated container');  
-            $('#s'+sublevel).removeClass().addClass('slideInRight animated container');   
+            $('#s'+sublevel).removeClass().addClass('fadeIn animated');   
             $('#'+subpa).removeClass().addClass('slideInRight animated container');   
         }
     };
