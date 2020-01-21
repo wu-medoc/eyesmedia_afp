@@ -276,19 +276,24 @@
             <!--上傳護照-->
             <div id="mypassport" class="slideInRight animated">
                 <div class="title-box">
-                    <div class="item icon-btn"><i class="material-icons">&#xE314;</i></div>
+                    <div class="item icon-btn">                        
+                        <button class="btn animated-btn" onclick="levelAnim('3,2,myfile,mypassport');" data-toggle="tooltip" data-placement="bottom" title="回上一頁">
+                            <i class="material-icons">&#xE314;</i>
+                        </button>
+                    </div>
                     <div class="item title-name">上傳護照</div>
                     <div class="item ctrl-btn">儲存</div>
                 </div>
                 <div class="my-info-box">
-                    <div class="upload-box">
-                        <button type="button">
+                    <label for="file-upload" class="custom-file-upload">                        
+                        <div class="upload-box">
                             <img src="../img/member/passport.svg">
                             <div class="add-btn">
                                 <img src="../img/member/add-passport.svg" alt="">
                             </div>
-                        </button>
-                    </div>
+                        </div>
+                    </label>
+                    <input id="file-upload" type="file"/>
                     <div class="passport-status">
                         未上傳
                     </div>
@@ -388,10 +393,9 @@
     <!-- custom js -->    
     <script>
         $('.edit-btn').on('click',function(){
-            $('.edit-btn').removeClass('d-block').addClass('d-none');
-            $('.submit-btn').removeClass('d-none').addClass('d-block');
-            $('.clear-btn').removeClass('d-none').addClass('d-block');
-            $('.back-btn').addClass('d-none');
+            var btn = $(this).parents(".title-box");
+            $(btn).find(".submit-btn, .clear-btn").removeClass('d-none').addClass('d-block');
+            $(btn).find(".edit-btn, .back-btn").removeClass('d-block').addClass('d-none');
             $('.my-list-box input').css('display','block');
         });
         $('.clear-btn').on('click',function(){
@@ -401,10 +405,8 @@
             close_myfile();
         });
         function close_myfile(){
-            $('.edit-btn').removeClass('d-none').addClass('d-block');
-            $('.submit-btn').removeClass('d-block').addClass('d-none');
-            $('.clear-btn').removeClass('d-block').addClass('d-none');
-            $('.back-btn').removeClass('d-none').addClass('d-block');
+            $('.edit-btn, .back-btn').removeClass('d-none').addClass('d-block');
+            $('.submit-btn, .clear-btn').removeClass('d-block').addClass('d-none');
             $('.my-list-box input').css('display','none');
         }
     </script>
