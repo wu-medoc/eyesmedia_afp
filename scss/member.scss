@@ -134,6 +134,16 @@
                 }
             }
         }
+        &.social-account{
+            .item-img{
+                width: 35px;
+                height: 35px;
+                margin-right: 10px;
+            }
+            .auto-left{
+                color: #F4246A;
+            }
+        }
         li{
             color: $blue-dark;
             display: flex;
@@ -272,7 +282,7 @@ input[type="file"] {
     position: absolute;
     left: 15px;
     right: 15px;
-    bottom: 15px;
+    bottom: 60px;
     z-index: 600;
     .choice-list, .choice-status{
         background-color: $default-white;

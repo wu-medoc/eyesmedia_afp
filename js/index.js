@@ -428,16 +428,20 @@ function levelAnim(obj){
         if (thislevel==0){
             $('#s0').removeClass().addClass('fadeOut animated d-none');
         }     
-    } else {                         
-        $('#s'+thislevel).removeClass().addClass('slideOutRight animated d-block container'); 
-        $('#'+subchild).removeClass().addClass('slideOutRight animated d-block container');  
-        $('#s'+sublevel).removeClass().addClass('slideInRight animated d-block container');   
-        $('#'+subpa).removeClass().addClass('slideInRight animated d-block container');   
+    } else {            
         if (sublevel == 0){               
             $('#s'+thislevel).removeClass().addClass('slideOutRight animated d-block container'); 
             $('#'+subchild).removeClass().addClass('slideInRight animated container');  
             $('#s'+sublevel).removeClass().addClass('fadeIn animated');   
             $('#'+subpa).removeClass().addClass('slideInRight animated container');   
-        }
+        }else{
+            for(let i=thislevel;i>=sublevel;i--){            
+                $('#s'+i).removeClass().addClass('slideOutRight animated d-none container'); 
+                $('#s'+i).children().removeClass().addClass('slideOutRight animated d-none container'); 
+            }   
+        }     
+        $('#'+subchild).removeClass().addClass('slideOutRight animated d-block container');               
+        $('#s'+sublevel).removeClass().addClass('slideInRight animated d-block container');   
+        $('#'+subpa).removeClass().addClass('slideInRight animated d-block container');   
     };
 };
