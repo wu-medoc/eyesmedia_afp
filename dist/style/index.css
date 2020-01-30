@@ -2831,7 +2831,8 @@ button.open-page img {
 }
 
 #s1, #s2, #s3, #s4, #s5, #s6 {
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
   width: 100%;
   position: absolute;
   top: 0;
