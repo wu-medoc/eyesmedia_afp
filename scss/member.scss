@@ -29,9 +29,6 @@
             &.info-coin{
                 justify-content: center;
             }
-            img{
-                margin-right: 3px;
-            }
         }
     }
 }
@@ -53,7 +50,7 @@
 .member-item-group{
     position: relative;
     background-color: $default-white;
-    min-height: 58vh;
+    min-height: 50vh;
     .member-item-bg{
         position: absolute;
         left: 0;

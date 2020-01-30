@@ -420,8 +420,8 @@ function levelAnim(obj){
     if (thislevel < sublevel) {   
         if (subpa!==subchild){
             $('#s'+sublevel+'>div').removeClass().addClass('slideOutRight animated d-none'); 
-            $('#s'+thislevel).removeClass().addClass('slideOutRight animated d-block container'); 
-            $('#'+subpa).removeClass().addClass('slideOutRight animated d-block container'); 
+            $('#s'+thislevel).removeClass().addClass('slideOutRight animated d-none container'); 
+            $('#'+subpa).removeClass().addClass('slideOutRight animated d-none container'); 
         };   
         $('#s'+sublevel).removeClass().addClass('slideInRight animated d-block container');   
         $('#'+subchild).removeClass().addClass('slideInRight animated d-block container');    
@@ -430,7 +430,7 @@ function levelAnim(obj){
         }     
     } else {            
         if (sublevel == 0){               
-            $('#s'+thislevel).removeClass().addClass('slideOutRight animated d-block container'); 
+            $('#s'+thislevel).removeClass().addClass('slideOutRight animated d-none container'); 
             $('#'+subchild).removeClass().addClass('slideInRight animated container');  
             $('#s'+sublevel).removeClass().addClass('fadeIn animated');   
             $('#'+subpa).removeClass().addClass('slideInRight animated container');   
@@ -440,7 +440,7 @@ function levelAnim(obj){
                 $('#s'+i).children().removeClass().addClass('slideOutRight animated d-none container'); 
             }   
         }     
-        $('#'+subchild).removeClass().addClass('slideOutRight animated d-block container');               
+        $('#'+subchild).removeClass().addClass('slideOutRight animated d-none container');               
         $('#s'+sublevel).removeClass().addClass('slideInRight animated d-block container');   
         $('#'+subpa).removeClass().addClass('slideInRight animated d-block container');   
     };

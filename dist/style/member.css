@@ -432,10 +432,6 @@ footer .menu-bar .customer-item img {
           justify-content: center;
 }
 
-.member-top-box .member-info-box .info-item img {
-  margin-right: 3px;
-}
-
 .info-img {
   -webkit-box-flex: 0;
       -ms-flex: none;
@@ -457,7 +453,7 @@ footer .menu-bar .customer-item img {
 .member-item-group {
   position: relative;
   background-color: #fff;
-  min-height: 58vh;
+  min-height: 50vh;
 }
 
 .member-item-group .member-item-bg {
