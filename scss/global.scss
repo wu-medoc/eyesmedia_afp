@@ -49,15 +49,15 @@ body {
 
 // 電腦版顯示
 .for-pc {
-  @media screen and (max-width: 767px) {
-      display: none;
+  display: block;
+  @media screen and (max-width: 570px) {
+    display: none;
   }
 }
 
 // 手機版顯示
 .for-mobile {
   display: none;
-
   @media screen and (max-width: 570px) {
       display: block;
   }
