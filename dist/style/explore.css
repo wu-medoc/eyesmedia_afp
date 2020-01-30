@@ -888,6 +888,8 @@ button.active {
 .card-item .info-box .info-list .badge {
   line-height: 2;
   margin-right: 5px;
+  padding-left: 2px;
+  padding-right: 2px;
 }
 
 .card-item .info-box .info-name {

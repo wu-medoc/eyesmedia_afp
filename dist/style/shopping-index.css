@@ -338,14 +338,13 @@ h6 {
 
 .other-discount-list .discount-item .discount-text p:first-child {
   color: #182B56;
-  font-size: 18px;
   font-weight: 700;
 }
 
 .other-discount-list .discount-item .discount-text p:last-child {
   color: #48A2DE;
   width: 100%;
-  font-size: 13px;
+  font-size: 70%;
 }
 
 /* shopping products */
@@ -1218,6 +1217,10 @@ h6 {
   color: #fff;
 }
 
+.store-container .store-tab-box .store-group .store-item .item {
+  word-break: break-all;
+}
+
 .store-container .store-tab-box .products-listbox {
   background-color: #eee;
   padding-top: 5px;
@@ -1395,14 +1398,13 @@ h6 {
 
 .store-container .other-discount-list .discount-item .discount-text p:first-child {
   color: #182B56;
-  font-size: 18px;
   font-weight: 700;
 }
 
 .store-container .other-discount-list .discount-item .discount-text p:last-child {
   color: #182B56;
   width: 100%;
-  font-size: 13px;
+  font-size: 70%;
 }
 
 /* shopping cart */

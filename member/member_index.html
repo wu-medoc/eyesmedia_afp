@@ -209,10 +209,10 @@
                     <p>我的帳號</p>
                     <ul>
                         <li>
-                            <button class="btn animated-btn w-100 text-left p-0" onclick="levelAnim('1,2,mysetting,myfile');">我的檔案 <i class="material-icons">&#xE315;</i></button>
+                            <button class="btn animated-btn w-100 text-left p-0" onclick="levelAnim('1,2,mysetting,myfile');">我的檔案 <span class="auto-left"><i class="material-icons">&#xE315;</i></span></button>
                         </li>
                         <li>
-                            <button class="btn animated-btn w-100 text-left p-0" onclick="levelAnim('1,2,mysetting,mytest');">我的地址 <i class="material-icons">&#xE315;</i></button>
+                            <button class="btn animated-btn w-100 text-left p-0" onclick="levelAnim('1,2,mysetting,myaddress');">我的地址 <span class="auto-left"><i class="material-icons">&#xE315;</i></span></button>
                         </li>
                         <li>
                             <div class="item">付款設定</div>
@@ -284,7 +284,7 @@
                         </div>
                     </div>
                     <div class="info-box info-email">
-                        jaso****56@gmail.com
+                        mo***@eyesmedia.com
                     </div>
                 </div>
                 <div class="my-list-box">
@@ -298,48 +298,79 @@
                             <div class="item input-box">
                                 <input type="text" value="" class="d-none" placeholder="請輸入">
                             </div>
-                            <div class="item auto-left"></div>
+                            <div class="item auto-left infohas">1990/05/10</div>
                         </li>
                         <li>
                             <div class="item">手機號碼</div>
                             <div class="item input-box">
                                 <input type="text" value="" class="d-none" placeholder="請輸入">
                             </div>
-                            <div class="item auto-left"></div>
+                            <div class="item auto-left infohas">09******78</div>
                         </li>
                         <li>
                             <div class="item">E-mail</div>
                             <div class="item input-box">
                                 <input type="text" value="" class="d-none" placeholder="請輸入">
                             </div>
-                            <div class="item auto-left"></div>
+                            <div class="item auto-left infohas">mo***@eyesmedia.com</div>
                         </li>
                         <li>
-                            <div class="item">上傳護照</div>
-                            <div class="item input-box">
-                                <input type="text" value="" class="d-none" placeholder="請設定">
-                            </div>
-                            <div class="item auto-left">
-                                <button class="btn animated-btn w-100" onclick="levelAnim('2,3,myfile,mypassport');"><i class="material-icons">&#xE315;</i></button>
+                            <div class="item">
+                                <button class="btn animated-btn w-100 p-0" onclick="levelAnim('2,3,myfile,mypassport');">
+                                    上傳護照 <span class="auto-left"><i class="material-icons">&#xE315;</i></span>
+                                </button>
                             </div>
                         </li>
                         <li>
-                            <div class="item">上傳台胞證</div>
-                            <div class="item input-box">
-                                <input type="text" value="" class="d-none" placeholder="請設定">
-                            </div>
-                            <div class="item auto-left">
-                                <button class="btn animated-btn w-100" onclick="levelAnim('2,3,myfile,mymtps');"><i class="material-icons">&#xE315;</i></button>
+                            <div class="item">
+                                <button class="btn animated-btn w-100 p-0" onclick="levelAnim('2,3,myfile,mymtps');">
+                                    上傳台胞證 <span class="auto-left"><i class="material-icons">&#xE315;</i></span>
+                                </button>                                
                             </div>
                         </li>
                     </ul>
                 </div>
             </div>
-            <!--我的測試-->
-            <div id="mytest" class="slideInRight animated">
-                <button class="btn animated-btn" onclick="levelAnim('2,1,mysetting,mytest');" data-toggle="tooltip" data-placement="bottom" title="回上一頁">
-                    <i class="material-icons">&#xE314;</i>
-                </button>
+            <!--我的地址-->
+            <div id="myaddress" class="slideInRight animated">
+                <div class="title-box">
+                    <div class="item icon-btn">                        
+                        <button class="btn animated-btn" onclick="levelAnim('2,1,mysetting,myaddress');" data-toggle="tooltip" data-placement="bottom" title="回上一頁">
+                            <i class="material-icons">&#xE314;</i>
+                        </button>
+                    </div>
+                    <div class="item title-name">我的地址</div>
+                    <div class="item ctrl-btn"></div>
+                </div>
+                <div class="my-address-list">
+                    <ul>
+                        <li class="is-default">
+                            <div class="item">
+                                <button class="btn animated-btn text-left p-0" onclick="levelAnim('2,3,myaddress,myaddressedit');">艾斯移動</button>
+                                <p class="tel">0227078600</p>
+                                <p class="small">106 台北市大安區敦化南路2段76號5樓</p>
+                            </div>
+                            <div class="item default-item auto-left">
+                                <p class="t-nowrap">[預設]</p>
+                            </div>
+                        </li>
+                        <li class="">
+                            <div class="item">
+                                <button class="btn animated-btn text-left p-0" onclick="levelAnim('2,3,myaddress,myaddressedit');">Jason Yang</button>
+                                <p class="tel">0912345678</p>
+                                <p class="small">106 台北市大安區敦化南路2段76號5樓</p>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="add-address-btn">
+                        <button class="btn animated-btn" onclick="levelAnim('2,3,myaddress,myaddressadd');">
+                            新增地址<i class="material-icons">&#xE145;</i>
+                        </button>
+                    </div>
+                </div>
+                <div class="fixed-btn">
+                    <button class="btn next-btn w-100">確認</button>
+                </div>
             </div>
         </div>     
 
@@ -501,6 +532,144 @@
                             </div>
                         </li>
                     </ul>
+                </div>
+            </div>                   
+            <!--新增地址-->
+            <div id="myaddressadd" class="slideInRight animated">
+                <div class="title-box">
+                    <div class="item icon-btn">                                          
+                        <button class="btn animated-btn" onclick="levelAnim('3,2,myaddress,myaddressadd');" data-toggle="tooltip" data-placement="bottom" title="回上一頁">
+                            <i class="material-icons">&#xE314;</i>
+                        </button>
+                    </div>
+                    <div class="item title-name">新增地址</div>
+                    <div class="item ctrl-btn"></div>
+                </div>
+                <div class="my-address-list">
+                    <ul>
+                        <li>
+                            <div class="item w-84">
+                                <p>姓名 / 公司名稱</p>
+                            </div>
+                            <div class="item auto-left">
+                                <input type="text" placeholder="請輸入">
+                            </div>
+                        </li>
+                        <li>
+                            <div class="item w-84">
+                                <p>手機號碼</p>
+                            </div>
+                            <div class="item auto-left">
+                                <input type="text" placeholder="請輸入">
+                            </div>
+                        </li>
+                        <li>
+                            <div class="item w-84">
+                                <p>城市</p>
+                            </div>
+                            <div class="item auto-left">
+                                <p>台北市<i class="material-icons">&#xE315;</i></p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="item w-84">
+                                <p>行政區</p>
+                            </div>
+                            <div class="item auto-left">
+                                <p>大安區<i class="material-icons">&#xE315;</i></p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="item w-84">
+                                <p>詳細地址</p>
+                                <p class="small-70">里道路或街名，巷弄號</p>
+                            </div>
+                            <div class="item auto-left">
+                                <input type="text" placeholder="請輸入地址">
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="flex-inline-between">
+                        <div class="p-3">設定為預設地址</div>
+                        <div class="checkbox checkbox-pink">
+                            <input id="i2" type="checkbox">
+                            <label for="i2"></label>
+                        </div>
+                    </div>
+                </div>
+                <div class="addheight"></div>
+                <div class="fixed-btn">
+                    <button class="btn next-btn w-100">確認</button>
+                </div>
+            </div>                        
+            <!--修改地址-->
+            <div id="myaddressedit" class="slideInRight animated">
+                <div class="title-box">
+                    <div class="item icon-btn">                                          
+                        <button class="btn animated-btn" onclick="levelAnim('3,2,myaddress,myaddressedit');" data-toggle="tooltip" data-placement="bottom" title="回上一頁">
+                            <i class="material-icons">&#xE314;</i>
+                        </button>
+                    </div>
+                    <div class="item title-name">修改地址</div>
+                    <div class="item del-btn">
+                        <button type="button" class="btn msg-myaddressdelete" data-toggle="modal" data-target="#messageModal" data-dismiss="modal" aria-label="Close">刪除</button>
+                    </div>
+                </div>
+                <div class="my-address-list">
+                    <ul>
+                        <li>
+                            <div class="item w-84">
+                                <p>姓名 / 公司名稱</p>
+                            </div>
+                            <div class="item auto-left">
+                                <input type="text"  value="艾斯移動">
+                            </div>
+                        </li>
+                        <li>
+                            <div class="item w-84">
+                                <p>手機號碼</p>
+                            </div>
+                            <div class="item auto-left">
+                                <input type="text"  value="02 27078600">
+                            </div>
+                        </li>
+                        <li>
+                            <div class="item w-84">
+                                <p>城市</p>
+                            </div>
+                            <div class="item auto-left">
+                                <p>台北市<i class="material-icons">&#xE315;</i></p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="item w-84">
+                                <p>行政區</p>
+                            </div>
+                            <div class="item auto-left">
+                                <p>大安區<i class="material-icons">&#xE315;</i></p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="item w-84">
+                                <p>詳細地址</p>
+                                <p class="small-70">里道路或街名，巷弄號</p>
+                            </div>
+                            <div class="item auto-left">
+                                <input type="text" value="敦化南路2段76號5樓">
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="flex-inline-between">
+                        <div class="p-3">設定為預設地址</div>
+                        <div class="checkbox checkbox-pink">
+                            <input id="i2" type="checkbox" checked>
+                            <label for="i2"></label>
+                        </div>
+                    </div>
+                </div>
+                <div class="addheight"></div>
+                <div class="fixed-btn">
+                    <button class="btn next-btn w-100">確認</button>
                 </div>
             </div>
         </div>
@@ -692,7 +861,7 @@
         </div> 
 
     </div> 
-
+    <div id="loginhtml"></div>
     
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -719,12 +888,14 @@
             $(btn).find(".submit-btn, .clear-btn").removeClass('d-none').addClass('d-block');
             $(btn).find(".edit-btn, .back-btn").removeClass('d-block').addClass('d-none');
             $(btn).siblings(".my-list-box").find("div.input-box>input").removeClass('d-none').addClass('d-block');
+            $(btn).siblings(".my-list-box").find("div.infohas").removeClass('d-block').addClass('d-none');
         });
         $('.clear-btn, .submit-btn').on('click',function(){
             var btn = $(this).parents(".title-box");
             $(btn).find('.edit-btn, .back-btn').removeClass('d-none').addClass('d-block');
             $(btn).find('.submit-btn, .clear-btn').removeClass('d-block').addClass('d-none');
             $(btn).siblings(".my-list-box").find("div.input-box>input").removeClass('d-block').addClass('d-none');
+            $(btn).siblings(".my-list-box").find("div.infohas").removeClass('d-none').addClass('d-block');
         });
 
         // overlay-choice open close control
@@ -736,6 +907,10 @@
             $('.overlay-choice').toggle();
             $('.mask-bk.fade.show').addClass("d-none");
         });
+    </script>
+
+    <script>    
+        $("#loginhtml").load("../login.html");
     </script>
     <script src="../js/index.js"></script>
 </body>

@@ -2275,6 +2275,10 @@ td.linebt-td,
 }
 
 /* txt-line-clamp */
+.t-nowrap {
+  white-space: nowrap;
+}
+
 .txt-line-clamp1 {
   overflow: hidden;
   white-space: nowrap;
@@ -2627,7 +2631,7 @@ button.open-page img {
 }
 
 .checkbox input[type="checkbox"]:checked + label::after {
-  content: "∨";
+  content: "✔";
 }
 
 .checkbox input[type="checkbox"]:disabled + label {
@@ -2662,6 +2666,15 @@ button.open-page img {
 }
 
 .checkbox-danger input[type="checkbox"]:checked + label::after {
+  color: #fff;
+}
+
+.checkbox-pink input[type="checkbox"]:checked + label::before {
+  background-color: #F4246A;
+  border-color: #F4246A;
+}
+
+.checkbox-pink input[type="checkbox"]:checked + label::after {
   color: #fff;
 }
 

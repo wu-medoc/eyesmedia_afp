@@ -110,7 +110,7 @@
                             color: $gray-color;
                         }
                     }
-                }
+                }      
             }
         }
     }
@@ -157,7 +157,7 @@
                     color: $blue-dark;
                     border-bottom: 1px $gray-light solid;
                 }
-            }  
+            }      
         }
     }
 }
@@ -174,7 +174,6 @@
     .info-email{
         margin-top: 5px;
         color: $blue-dark;
-        font-size: 15px;
     }
     .upload-box{
         position: relative;
@@ -303,4 +302,85 @@ input[type="file"] {
         text-align: center;
         color: #4A90E2;
     }
+}
+
+// 我的地址
+.my-address-list{
+    ul{
+        li{
+            padding: 15px;
+            border-bottom: 1px $gray-light solid;
+            display: flex;
+            align-items: center;
+            &:first-child{
+                border-top: 1px $gray-light solid;
+            }
+            .item{
+                &.w-84{
+                    width: auto;
+                    @media screen and (max-width: 570px) {
+                        width: 84px;
+                    }
+                }
+                &.default-item{
+                    p{
+                        color: #F4246A;
+                        margin-top: -10px;
+                    }
+                }
+            }
+            p{
+                color: $blue-dark;
+                &.small{
+                    color: $gray-color;
+                }
+                &.small-70{
+                    color: $gray-color;
+                    font-size: 70%;
+                }
+                small{
+                    margin-left: 5px;
+                    color: $gray-color;
+                }
+            }
+            input{
+                background-color: #fff;
+                width: 100%;
+                border: none;
+                text-align: right;
+                color: $blue-dark;
+                border-bottom: 1px $gray-light solid;
+            }
+        }
+    }
+    .add-address-btn{
+        text-align: center;
+        padding: 15px;
+        color: $blue-dark;
+        cursor: pointer;
+    }
+    .material-icons{
+        font-size: 18px;
+        vertical-align: sub;
+    }
+}
+
+// fixed button bottom
+.fixed-btn{
+    position: fixed;
+    width: 100%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 15px;
+    background-color: $default-white;
+    box-shadow: 0 -5px 8px rgba(0,0,0,.2);
+}
+
+      
+.auto-left{
+    margin-left: auto;
+    text-align: right;
+    right: 10px;
+    position: absolute; 
 }

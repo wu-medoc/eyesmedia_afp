@@ -610,7 +610,6 @@ footer .menu-bar .customer-item img {
 .my-info-box .info-email {
   margin-top: 5px;
   color: #182B56;
-  font-size: 15px;
 }
 
 .my-info-box .upload-box {
@@ -773,5 +772,93 @@ input[type="file"] {
   font-weight: 600;
   text-align: center;
   color: #4A90E2;
+}
+
+.my-address-list ul li {
+  padding: 15px;
+  border-bottom: 1px #eee solid;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.my-address-list ul li:first-child {
+  border-top: 1px #eee solid;
+}
+
+.my-address-list ul li .item.w-84 {
+  width: auto;
+}
+
+@media screen and (max-width: 570px) {
+  .my-address-list ul li .item.w-84 {
+    width: 84px;
+  }
+}
+
+.my-address-list ul li .item.default-item p {
+  color: #F4246A;
+  margin-top: -10px;
+}
+
+.my-address-list ul li p {
+  color: #182B56;
+}
+
+.my-address-list ul li p.small {
+  color: #8E8E93;
+}
+
+.my-address-list ul li p.small-70 {
+  color: #8E8E93;
+  font-size: 70%;
+}
+
+.my-address-list ul li p small {
+  margin-left: 5px;
+  color: #8E8E93;
+}
+
+.my-address-list ul li input {
+  background-color: #fff;
+  width: 100%;
+  border: none;
+  text-align: right;
+  color: #182B56;
+  border-bottom: 1px #eee solid;
+}
+
+.my-address-list .add-address-btn {
+  text-align: center;
+  padding: 15px;
+  color: #182B56;
+  cursor: pointer;
+}
+
+.my-address-list .material-icons {
+  font-size: 18px;
+  vertical-align: sub;
+}
+
+.fixed-btn {
+  position: fixed;
+  width: 100%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 15px;
+  background-color: #fff;
+  -webkit-box-shadow: 0 -5px 8px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 -5px 8px rgba(0, 0, 0, 0.2);
+}
+
+.auto-left {
+  margin-left: auto;
+  text-align: right;
+  right: 10px;
+  position: absolute;
 }
 /*# sourceMappingURL=member.css.map */

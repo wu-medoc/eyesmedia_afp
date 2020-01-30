@@ -101,21 +101,22 @@ $(function(){
             $(".vcode-mail").text("貼心小提醒：有時驗證信可能會被放到垃圾郵件喔！");
         }     
     });
-    $('.msg-loginerror').on('click', function(){
-        $('#msg-loginok, #msg-psw, #msg-noselected').hide();  
+    //#messageModal message control
+    $('#messageModal .modal-body > div').hide();
+    $('.msg-loginerror').on('click', function(){  
         $('#msg-loginerror').show();    
     });
-    $('.msg-loginok').on('click', function(){
-        $('#msg-loginerror, #msg-psw, #msg-noselected').hide(); 
+    $('.msg-loginok').on('click', function(){; 
         $('#msg-loginok').show();         
     });
-    $('.msg-psw').on('click', function(){
-        $('#msg-loginok, #msg-loginerror, #msg-noselected').hide();     
+    $('.msg-psw').on('click', function(){    
         $('#msg-psw').show();     
     });
-    $('.msg-noselected').on('click', function(){
-        $('#msg-loginok, #msg-loginerror, #msg-psw').hide();     
+    $('.msg-noselected').on('click', function(){  
         $('#msg-noselected').show();     
+    });
+    $('.msg-myaddressdelete').on('click', function(){  
+        $('#msg-myaddressdelete').show();     
     });
     // 密碼
     $(".toggle-password").on('click', function() {
