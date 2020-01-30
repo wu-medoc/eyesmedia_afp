@@ -501,12 +501,12 @@ footer .menu-bar .customer-item img {
       -ms-flex: 1;
           flex: 1;
   text-align: center;
-  padding: 15px;
+  padding: 15px 10px;
   color: #333;
 }
 
 .member-item-group .member-item-list .member-items .member-item p {
-  font-size: 14px;
+  font-size: 13px;
 }
 
 .member-item-group .member-item-list .member-items .img-box {
