@@ -2175,13 +2175,11 @@ td.linebt-td,
 .t-nowrap {
   white-space: nowrap;
 }
-
 .txt-line-clamp1 {
   overflow:hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
 }
-
 .txt-line-clamp2 {
   width:auto;
   overflow: hidden;
@@ -2191,7 +2189,6 @@ td.linebt-td,
   -webkit-line-clamp: 2;
  
 }
-
 .txt-line-clamp3 {
   width:auto;
   overflow: hidden;
@@ -2199,6 +2196,12 @@ td.linebt-td,
   display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
+}
+.small-70{
+  font-size: 70%;
+}
+.small-80{
+  font-size: 80%;
 }
 
 /* open page */
@@ -2408,7 +2411,7 @@ button.open-page {
   width: 2em;
   height: auto;
   color: #fff;
-  top: 50%;
+  top: 55%;
   right:1%;
   transform: translate(-50%, -65%);
   -webkit-transform: translate(-50%, -65%);

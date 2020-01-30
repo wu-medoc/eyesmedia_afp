@@ -459,13 +459,13 @@ button.active{
             .badge {
                 line-height: 2;
                 margin-right: 5px;
-                padding-left: 2px;
-                padding-right: 2px;
+                padding-left: 8px;
+                padding-right: 8px;
+                font-size: 70%;
             }
         }
 
         .info-name {
-            font-size: 18px;
             font-weight: 600;
         }
 
@@ -476,6 +476,10 @@ button.active{
             .shopping-store-badge {
                 .badge {
                     line-height: 2;
+                    margin-right: 5px;
+                    padding-left: 8px;
+                    padding-right: 8px;
+                    font-size: 70%;
                 }
             }
             &.info-near {

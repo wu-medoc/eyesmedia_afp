@@ -2344,6 +2344,14 @@ td.linebt-td,
   -webkit-box-orient: vertical;
 }
 
+.small-70 {
+  font-size: 70%;
+}
+
+.small-80 {
+  font-size: 80%;
+}
+
 /* open page */
 .blur {
   -webkit-filter: blur(5px);
@@ -2605,7 +2613,7 @@ button.open-page img {
   width: 2em;
   height: auto;
   color: #fff;
-  top: 50%;
+  top: 55%;
   right: 1%;
   transform: translate(-50%, -65%);
   -webkit-transform: translate(-50%, -65%);
