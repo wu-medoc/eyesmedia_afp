@@ -565,6 +565,41 @@ body.is-open-country .country-box {
   }
 }
 
+.afp-tab-box {
+  #nav-tab-storedetail.nav-tabs {
+    display: flex;
+    flex-wrap: inherit;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+    text-align: center;
+    border-bottom: 0px;
+    line-height: 3em;
+    background-color: #fff;
+    li {
+      font-size: .9em;  
+      color: #8E8E93;
+      text-decoration: none;
+      position: relative;
+      -webkit-transition: .5s color;
+      transition: .5s color;
+      border: none;
+      display: block;
+      flex-grow: 1;
+      flex-basis: 0;
+      text-align: center;
+      white-space:nowrap;
+      a {
+        color: #182B56;
+        border: none;
+        font-size: 1em;
+        padding: 0;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
 .afp-tab-box{
   .tablist-link {
     display: inline-block;
