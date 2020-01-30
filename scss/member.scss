@@ -52,7 +52,8 @@
     background-color: $default-white;
     min-height: 37vh;
     .member-item-bg{
-        position: absolute;
+        position: absolute;        
+        top: -1px;
         left: 0;
         right: 0;
         width: 100%;
