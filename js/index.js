@@ -102,7 +102,7 @@ $(function(){
         }     
     });
     //#messageModal message control
-    $('#messageModal .modal-body > div').hide();
+    $('#messageModal').next('.modal-body').next('div').hide();
     $('.msg-loginerror').on('click', function(){  
         $('#msg-loginerror').show();    
     });
