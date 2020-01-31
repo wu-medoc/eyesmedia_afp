@@ -2935,5 +2935,6 @@ button.open-page img {
   display: none;
   background-color: #fff;
   min-height: 100vh;
+  position: absolute;
 }
 /*# sourceMappingURL=index.css.map */

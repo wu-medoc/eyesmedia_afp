@@ -417,23 +417,26 @@ function levelAnim(obj){
     var thislevel = anim[0];
     var sublevel = anim[1];
     var subpa = anim[2];
-    var subchild = anim[3];    
+    var subchild = anim[3];   
     if (thislevel < sublevel) { 
         //in thislevel < sublevel                   
         $('.multilayer').removeClass('slideOutRight slideInRight fast animated d-block container'); 
-        $('.multilayer>div').removeClass('slideInRight slideOutRight animated d-block container');        
+        $('.multilayer>div').removeClass('slideInRight slideOutRight animated d-block container');         
         $('.multilayer').addClass('slideInRight animated fast d-block container');   
         $('.'+subchild).addClass('slideInRight animated d-block container');   
+        if (sublevel >1) { 
+            $('.'+subpa).addClass('slideOutRight animated d-block container'); 
+        };  
     } else { 
         //out thislevel > sublevel
         $('.multilayer>div').removeClass('slideInRight slideOutRight animated d-block container');
         $('.'+subchild).addClass('slideOutRight animated d-block container'); 
-        $('.'+subpa).addClass('slideInRight animated d-block container');
+        $('.'+subpa).addClass('slideInRight animated d-block container');   
         if (sublevel == 0){  //out multilayer
             $('.multilayer').removeClass('slideInRight animated fast d-block container');
             $('.multilayer').addClass('slideOutRight animated fast d-block container');
-        }
-    };
+        };
+    };    
 };
 // function levelAnim(obj){
 //     var anim = obj.split(",");
