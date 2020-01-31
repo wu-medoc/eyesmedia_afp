@@ -1088,11 +1088,12 @@
             var pos=strFullPath.indexOf(strPath); 
             var prePath=strFullPath.substring(0,pos); 
             var postPath=strPath.substring(0,strPath.substr(1).indexOf('/')+1); 
-            return(postPath); 
+            return(strPath); 
         } 
         if (getRootPath().toLowerCase().indexOf("member")>0){
             $('footer.for-pc').css('position','absolute');
-        };
+        };        
+        $('footer.for-pc').css('position','absolute'); //github use(正式可刪除)
     </script>
 
     <script>    
