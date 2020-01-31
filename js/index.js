@@ -434,7 +434,13 @@ function levelAnim(obj){
             $('.multilayer').addClass('slideOutRight animated slow d-block container');
         }     
     };
-
+};
+// function levelAnim(obj){
+//     var anim = obj.split(",");
+//     var thislevel = anim[0];
+//     var sublevel = anim[1];
+//     var subpa = anim[2];
+//     var subchild = anim[3];   
 //     if (thislevel < sublevel) {   
 //         if (subpa!==subchild){
 //             $('#s'+sublevel+'>div').removeClass().addClass('slideOutRight animated d-none'); 
@@ -462,4 +468,4 @@ function levelAnim(obj){
 //         $('#s'+sublevel).removeClass().addClass('slideInRight animated d-block container');   
 //         $('#'+subpa).removeClass().addClass('slideInRight animated d-block container');   
 //     };
-};
+// };
