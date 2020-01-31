@@ -844,6 +844,215 @@ input[type="file"] {
   vertical-align: sub;
 }
 
+.my-creditcard-list .main-list {
+  border-top: 1px #eee solid;
+  color: #182B56;
+}
+
+.my-creditcard-list .main-list > li a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 15px;
+  color: #182B56;
+}
+
+.my-creditcard-list .main-list > li a.collapsed .material-icons {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.my-creditcard-list .main-list > li .item-img, .my-creditcard-list .main-list > li .item-icon {
+  width: 32px;
+  margin-right: 15px;
+}
+
+.my-creditcard-list .main-list > li .item-img img, .my-creditcard-list .main-list > li .item-icon img {
+  vertical-align: sub;
+}
+
+.my-creditcard-list .main-list > li .item-icon {
+  width: 26px;
+  height: 26px;
+  border: 1px #ccc dotted;
+  text-align: center;
+  border-radius: 2px;
+}
+
+.my-creditcard-list .main-list > li .item-icon .material-icons {
+  font-size: 18px;
+  vertical-align: text-top;
+}
+
+.my-creditcard-list .main-list > li .card-type {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.my-creditcard-list .main-list > li .item-card-num {
+  margin-right: 40px;
+}
+
+.my-creditcard-list .main-list > li .item-default {
+  min-width: 40px;
+  color: #F4246A;
+  font-size: 14px;
+}
+
+.my-creditcard-list .main-list > li .sub-list {
+  -webkit-box-flex: 0;
+      -ms-flex: none;
+          flex: none;
+  width: 100%;
+  padding-left: 55px;
+}
+
+.my-creditcard-list .main-list > li .sub-list li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 15px 15px 15px 0;
+  border-top: 1px #eee solid;
+}
+
+.my-creditcard-list .main-list > li .sub-list li:last-child {
+  border-bottom: 1px #eee solid;
+}
+
+.my-creditcard-list .main-list > li .sub-list li .item-dates {
+  -webkit-box-flex: 0;
+      -ms-flex: none;
+          flex: none;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.my-creditcard-list .main-list > li .sub-list li .item-dates .item-date {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding-left: 45px;
+}
+
+.my-creditcard-list .setting-default {
+  margin-top: 0;
+}
+
+.my-creditcard-info {
+  padding: 30px 0;
+  border-top: 1px #eee solid;
+  border-bottom: 1px #eee solid;
+}
+
+.my-creditcard-info .container {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.my-creditcard-info label {
+  color: #273D52;
+  margin-bottom: 5px;
+}
+
+.my-creditcard-info input {
+  border-radius: 10px;
+}
+
+.my-creditcard-info .setting-default {
+  border: none;
+}
+
+.neweb-pay {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 30px;
+}
+
+.neweb-pay img {
+  margin: 20px 0;
+}
+
+.fixed-btn {
+  position: fixed;
+  width: 100%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 15px;
+  background-color: #fff;
+  -webkit-box-shadow: 0 -5px 8px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 -5px 8px rgba(0, 0, 0, 0.2);
+}
+
+.change-password-list {
+  padding: 35px 15px 0;
+  border-top: 1px #eee solid;
+}
+
+.change-password-list ul {
+  padding: 0 15px;
+  margin-bottom: 60px;
+}
+
+.change-password-list ul li {
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.change-password-list ul li.is-open .material-icons.visibility {
+  display: none;
+}
+
+.change-password-list ul li.is-open .material-icons.visibility-off {
+  display: block;
+}
+
+.change-password-list ul li input {
+  width: 100%;
+  border: none;
+  border-bottom: 1px #eee solid;
+}
+
+.change-password-list ul li .text-muted {
+  position: absolute;
+  top: 100%;
+  color: #FF3B30 !important;
+}
+
+.change-password-list ul li .material-icons {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  color: rgba(24, 43, 86, 0.5);
+}
+
+.change-password-list ul li .material-icons.visibility-off {
+  display: none;
+}
+
 .fixed-btn {
   position: fixed;
   width: 100%;

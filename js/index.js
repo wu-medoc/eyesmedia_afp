@@ -423,7 +423,7 @@ function levelAnim(obj){
         $('.multilayer').removeClass('slideOutRight slideInRight fast animated d-block container'); 
         $('.multilayer>div').removeClass('slideInRight slideOutRight animated d-block container');        
         $('.multilayer').addClass('slideInRight animated fast d-block container');   
-        $('.'+subchild).addClass('slideInRight animated d-block container');
+        $('.'+subchild).addClass('slideInRight animated d-block container');   
     } else { 
         //out thislevel > sublevel
         $('.multilayer>div').removeClass('slideInRight slideOutRight animated d-block container');
