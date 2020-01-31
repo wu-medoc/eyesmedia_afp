@@ -417,32 +417,49 @@ function levelAnim(obj){
     var thislevel = anim[0];
     var sublevel = anim[1];
     var subpa = anim[2];
-    var subchild = anim[3];      
-    if (thislevel < sublevel) {   
+    var subchild = anim[3];    
+    if (thislevel < sublevel) { 
+        $('.multilayer').removeClass('slideOutRight animated slow d-block container')
+        $('.multilayer').addClass('slideInRight animated d-block container');
+        $('.'+subchild).addClass('slideInRight animated d-block container');
         if (subpa!==subchild){
-            $('#s'+sublevel+'>div').removeClass().addClass('slideOutRight animated d-none'); 
-            $('#s'+thislevel).removeClass().addClass('slideOutRight animated d-none container'); 
-            $('#'+subpa).removeClass().addClass('slideOutRight animated d-none container'); 
-        };   
-        $('#s'+sublevel).removeClass().addClass('slideInRight animated d-block container');   
-        $('#'+subchild).removeClass().addClass('slideInRight animated d-block container');    
-        if (thislevel==0){
-            $('#s0').removeClass().addClass('fadeOut animated d-none');
+            $('.'+subpa).removeClass('slideInRight animated d-block container');
+        };
+    } else { 
+        $('.'+subchild).addClass('slideOutRight animated d-block container');
+        $('.'+subpa).addClass('slideInRight animated d-block container');
+        $('.'+subchild).removeClass('slideOutRight animated d-block container');  
+        if (sublevel==0){
+            $('.multilayer').removeClass('slideInRight animated d-block container')
+            $('.multilayer').addClass('slideOutRight animated slow d-block container');
         }     
-    } else {            
-        if (sublevel == 0){               
-            $('#s'+thislevel).removeClass().addClass('slideOutRight animated d-none container'); 
-            $('#'+subchild).removeClass().addClass('slideInRight animated container');  
-            $('#s'+sublevel).removeClass().addClass('fadeIn animated');   
-            $('#'+subpa).removeClass().addClass('slideInRight animated container');   
-        }else{
-            for(let i=thislevel;i>=sublevel;i--){            
-                $('#s'+i).removeClass().addClass('slideOutRight animated d-none container'); 
-                $('#s'+i).children().removeClass().addClass('slideOutRight animated d-none container'); 
-            }   
-        }     
-        $('#'+subchild).removeClass().addClass('slideOutRight animated d-none container');               
-        $('#s'+sublevel).removeClass().addClass('slideInRight animated d-block container');   
-        $('#'+subpa).removeClass().addClass('slideInRight animated d-block container');   
     };
+
+//     if (thislevel < sublevel) {   
+//         if (subpa!==subchild){
+//             $('#s'+sublevel+'>div').removeClass().addClass('slideOutRight animated d-none'); 
+//             $('#s'+thislevel).removeClass().addClass('slideOutRight animated d-none container'); 
+//             $('#'+subpa).removeClass().addClass('slideOutRight animated d-none container'); 
+//         };   
+//         $('#s'+sublevel).removeClass().addClass('slideInRight animated d-block container');   
+//         $('#'+subchild).removeClass().addClass('slideInRight animated d-block container');    
+//         if (thislevel==0){
+//             $('#s0').removeClass().addClass('fadeOut animated d-none');
+//         }     
+//     } else {            
+//         if (sublevel == 0){               
+//             $('#s'+thislevel).removeClass().addClass('slideOutRight animated d-none container'); 
+//             $('#'+subchild).removeClass().addClass('slideInRight animated container');  
+//             $('#s'+sublevel).removeClass().addClass('fadeIn animated');   
+//             $('#'+subpa).removeClass().addClass('slideInRight animated container');   
+//         }else{
+//             for(let i=thislevel;i>=sublevel;i--){            
+//                 $('#s'+i).removeClass().addClass('slideOutRight animated d-none container'); 
+//                 $('#s'+i).children().removeClass().addClass('slideOutRight animated d-none container'); 
+//             }   
+//         }     
+//         $('#'+subchild).removeClass().addClass('slideOutRight animated d-none container');               
+//         $('#s'+sublevel).removeClass().addClass('slideInRight animated d-block container');   
+//         $('#'+subpa).removeClass().addClass('slideInRight animated d-block container');   
+//     };
 };
