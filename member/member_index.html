@@ -810,7 +810,7 @@
                         </a>
                         <div class="collapse" id="collapseExample">
                             <ul class="sub-list">
-                                <li>
+                                <li onclick="levelAnim('2,3,mypay,mypaycardinfo');">
                                     <div class="item item-img">
                                         <img src="../img/member/creditcard-01.svg" alt="">
                                     </div>
@@ -818,7 +818,7 @@
                                     <div class="item item-card-num">*1234</div>
                                     <div class="item item-default auto-left">[預設]</div>
                                 </li>
-                                <li>
+                                <li onclick="levelAnim('2,3,mypay,mypaycardinfo');">
                                     <div class="item item-img">
                                         <img src="../img/member/creditcard-02.svg" alt="">
                                     </div>
@@ -826,7 +826,7 @@
                                     <div class="item item-card-num">*1234</div>
                                     <div class="item item-default auto-left"></div>
                                 </li>
-                                <li>
+                                <li onclick="levelAnim('2,3,mypay,mypaycardinfo');">
                                     <div class="item item-img">
                                         <img src="../img/member/creditcard-03.svg" alt="">
                                     </div>
@@ -906,6 +906,61 @@
                 <img src="../img/member/logo_neweb.svg" alt="">
                 <small>Powered by Neweb Technologies Co., Ltd.</small>
             </div>
+        </div>
+        <!--信用卡資訊3-->
+        <div class="mypaycardinfo">
+            <div class="title-box">
+                <div class="item icon-btn">                        
+                    <button class="btn animated-btn" onclick="levelAnim('3,2,mypay,mypaycardinfo');" data-toggle="tooltip" data-placement="bottom" title="回上一頁">
+                        <i class="material-icons">&#xE314;</i>
+                    </button>
+                </div>
+                <div class="item title-name">信用卡資訊</div>
+                <div class="item del-btn">
+                    <button type="button" class="btn msg-myaddressdelete" data-toggle="modal" data-target="#messageModal" data-dismiss="modal" aria-label="Close">刪除</button>
+                </div>
+            </div>
+            <form action="">
+                <div class="my-creditcard-list">
+                    <ul class="main-list">
+                        <li>
+                            <a class="collapsed" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                                <div class="item item-img">
+                                    <img src="../img/member/member-creditcard.svg" alt="">
+                                </div>
+                                <div class="item">鑽金卡/元大</div>
+                                <div class="item auto-left">
+                                    <i class="material-icons">&#xE316;</i>
+                                </div>
+                            </a>
+                            <div class="collapse" id="collapseExample">
+                                <ul class="sub-list">
+                                    <li>
+                                        <div class="item item-img">
+                                            <img src="../img/member/creditcard-01.svg" alt="">
+                                        </div>
+                                        <div class="item card-type">mastercard</div>
+                                        <div class="item">*1234</div>
+                                        <!-- <div class="item item-default auto-left"></div> -->
+                                        <div class="item item-dates">
+                                            <div class="item item-date">有效日期</div>
+                                            <div class="item item-date-txt">02／2025</div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                    
+                    <div class="flex-inline-between setting-default">
+                        <div class="p-3">設定為預設地址</div>
+                        <div class="checkbox checkbox-pink">
+                            <input id="i2" type="checkbox" checked>
+                            <label for="i2"></label>
+                        </div>
+                    </div>
+                </div>
+            </form>
         </div>
 
         <!--變更密碼2-->

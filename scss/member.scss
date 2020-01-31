@@ -422,9 +422,9 @@ input[type="file"] {
                     align-items: center;
                     padding: 15px 15px 15px 0;
                     border-top: 1px $gray-light solid;
-                    &:last-child{
-                        border-bottom: 1px $gray-light solid;
-                    }
+                    // &:last-child{
+                    //     border-bottom: 1px $gray-light solid;
+                    // }
                     .item-dates{
                         flex: none;
                         width: 100%;
@@ -439,7 +439,8 @@ input[type="file"] {
         }
     }
     .setting-default{
-        margin-top: 0;
+        border-top: 1px $gray-light solid;
+        border-bottom: 1px $gray-light solid;
     }
 }
 

@@ -926,10 +926,6 @@ input[type="file"] {
   border-top: 1px #eee solid;
 }
 
-.my-creditcard-list .main-list > li .sub-list li:last-child {
-  border-bottom: 1px #eee solid;
-}
-
 .my-creditcard-list .main-list > li .sub-list li .item-dates {
   -webkit-box-flex: 0;
       -ms-flex: none;
@@ -948,7 +944,8 @@ input[type="file"] {
 }
 
 .my-creditcard-list .setting-default {
-  margin-top: 0;
+  border-top: 1px #eee solid;
+  border-bottom: 1px #eee solid;
 }
 
 .my-creditcard-info {
