@@ -2917,6 +2917,7 @@ button.open-page img {
   min-height: 100vh;
 }
 
+.multilayer1,
 .multilayer {
   overflow-x: hidden;
   overflow-y: auto;
@@ -2931,6 +2932,7 @@ button.open-page img {
   padding: 0;
 }
 
+.multilayer1 > div,
 .multilayer > div {
   display: none;
   background-color: #fff;

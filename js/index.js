@@ -411,7 +411,7 @@ if($('.number-spinner').length>0) {
     });
 }
 
-// animated control
+// animated control slideInRight slideOutRight
 function levelAnim(obj){
     var anim = obj.split(",");
     var thislevel = anim[0];
@@ -435,6 +435,33 @@ function levelAnim(obj){
         if (sublevel == 0){  //out multilayer
             $('.multilayer').removeClass('slideInRight animated fast d-block container');
             $('.multilayer').addClass('slideOutRight animated fast d-block container');
+        };
+    };    
+};
+// animated control slideInUp slideOutDown
+function levelAnim1(obj){
+    var anim = obj.split(",");
+    var thislevel = anim[0];
+    var sublevel = anim[1];
+    var subpa = anim[2];
+    var subchild = anim[3];   
+    if (thislevel < sublevel) { 
+        //in thislevel < sublevel                   
+        $('.multilayer1').removeClass('slideOutDown slideInUp fast animated d-block container'); 
+        $('.multilayer1>div').removeClass('slideInUp slideOutDown animated d-block container');         
+        $('.multilayer1').addClass('slideInUp animated fast d-block container');   
+        $('.'+subchild).addClass('slideInUp animated d-block container');   
+        if (sublevel >1) {  //out Previous layer
+            $('.'+subpa).addClass('slideOutDown animated d-block container'); 
+        };  
+    } else { 
+        //out thislevel > sublevel
+        $('.multilayer1>div').removeClass('slideInUp slideOutDown animated d-block container');
+        $('.'+subchild).addClass('slideOutDown animated d-block container'); 
+        $('.'+subpa).addClass('slideInUp animated d-block container');   
+        if (sublevel == 0){  //out multilayer
+            $('.multilayer1').removeClass('slideInUp animated fast d-block container');
+            $('.multilayer1').addClass('slideOutDown animated fast d-block container');
         };
     };    
 };
