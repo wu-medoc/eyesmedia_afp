@@ -424,7 +424,7 @@ function levelAnim(obj){
         $('.multilayer>div').removeClass('slideInRight slideOutRight animated d-block container');         
         $('.multilayer').addClass('slideInRight animated fast d-block container');   
         $('.'+subchild).addClass('slideInRight animated d-block container');   
-        if (sublevel >1) { 
+        if (sublevel >1) {  //out Previous layer
             $('.'+subpa).addClass('slideOutRight animated d-block container'); 
         };  
     } else { 
