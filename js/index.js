@@ -87,47 +87,54 @@ $('.aside-header .edit-title-cancel').on('click', function(){
 })
 
 
-// vcode&msg modal control
-$(function(){
-    
-    // registeredSelectState
-    $('.registeredSelectState-btn').on('click', function () {
-        $('#registeredSelectState').editableSelect({ effects: 'default' });
-    });
-    $('.btn-vcode').on('click', function(){
-        var id=$('#vcode').val();
-        $(".vcode-val").text(id);    
-        if(id.indexOf("@") >= 0 ) { 
-            $(".vcode-mail").text("貼心小提醒：有時驗證信可能會被放到垃圾郵件喔！");
-        }     
-    });
-    //#messageModal message control
-    $('#messageModal').next('.modal-body').next('div').hide();
-    $('.msg-loginerror').on('click', function(){  
-        $('#msg-loginerror').show();    
-    });
-    $('.msg-loginok').on('click', function(){; 
-        $('#msg-loginok').show();         
-    });
-    $('.msg-psw').on('click', function(){    
-        $('#msg-psw').show();     
-    });
-    $('.msg-noselected').on('click', function(){  
-        $('#msg-noselected').show();     
-    });
-    $('.msg-myaddressdelete').on('click', function(){  
-        $('#msg-myaddressdelete').show();     
-    });
-    // 密碼
-    $(".toggle-password").on('click', function() {
-        $(this).parent().toggleClass("toggle-visibility");
-        var input = $($(this).attr("toggle"));
-        if (input.attr("type") == "password") {
-        input.attr("type", "text");
-        } else {
-        input.attr("type", "password");
-        }
-    });
+// registeredSelectState
+$('.registeredSelectState-btn').on('click', function () {
+    $('#registeredSelectState').editableSelect({ effects: 'default' });
+});
+$('.btn-vcode').on('click', function(){
+    var id=$('#vcode').val();
+    $(".vcode-val").text(id);    
+    if(id.indexOf("@") >= 0 ) { 
+        $(".vcode-mail").text("貼心小提醒：有時驗證信可能會被放到垃圾郵件喔！");
+    }     
+});
+//#messageModal message control
+$('.msg-loginerror').on('click', function(){   
+    megModalsubhide();
+    $('#msg-loginerror').show();    
+});
+$('.msg-loginok').on('click', function(){ 
+    megModalsubhide(); 
+    $('#msg-loginok').show();         
+});
+$('.msg-psw').on('click', function(){     
+    megModalsubhide();
+    $('#msg-psw').show();      
+});
+$('.msg-noselected').on('click', function(){   
+    megModalsubhide();
+    $('#msg-noselected').show();    
+});
+$('.msg-myaddressdelete').on('click', function(){   
+    megModalsubhide();
+    $('#msg-myaddressdelete').show();    
+});
+$('.msg-mycarddelete').on('click', function(){   
+    megModalsubhide();
+    $('#msg-mycarddelete').show();    
+});
+function megModalsubhide(){
+    $('#messageModal .modal-body > div').hide();
+}
+// 密碼
+$(".toggle-password").on('click', function() {
+    $(this).parent().toggleClass("toggle-visibility");
+    var input = $($(this).attr("toggle"));
+    if (input.attr("type") == "password") {
+    input.attr("type", "text");
+    } else {
+    input.attr("type", "password");
+    }
 });
 
 
