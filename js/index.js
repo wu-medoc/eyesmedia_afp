@@ -435,11 +435,16 @@ $(document).ready(function(){
         input.attr("type", "password");
         }
     });
-    //memberclause 
-    
+    //gotop 
+    $('.gotop').on('click', function(){  
+        $('div').animate({
+        scrollTop:0
+        },1000);
+    }); 
 });
 
 window.onload = function(){   
+    //memberclause & memberprivate
     $('.memberclause').on('click', function(){  
         $('#open-mask').addClass("modal-backdrop fade show");
         $('.memberclause-box').slideToggle();   
