@@ -1080,4 +1080,24 @@ input[type="file"] {
 #open-mask.modal-backdrop {
   z-index: 1040;
 }
+
+.member-body {
+  padding: .5em;
+  text-align: justify;
+  text-justify: auto;
+}
+
+.member-body ul {
+  padding: .5em 0 .25em 0;
+  font-weight: 700;
+}
+
+.member-body li {
+  font-weight: 400;
+}
+
+.member-body h6 {
+  padding: .5em 0 .25em 0;
+  font-weight: 700;
+}
 /*# sourceMappingURL=member.css.map */
