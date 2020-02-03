@@ -435,21 +435,25 @@ $(document).ready(function(){
         input.attr("type", "password");
         }
     });
-    //memberclause    
+    //memberclause 
+    
+});
+
+window.onload = function(){   
     $('.memberclause').on('click', function(){  
         $('#open-mask').addClass("modal-backdrop fade show");
-        $('.memberclause-box').slideToggle().show();   
+        $('.memberclause-box').slideToggle();   
+    });    
+    $('.memberprivate').on('click', function(){  
+        $('#open-mask').addClass("modal-backdrop fade show");
+        $('.memberprivate-box').slideToggle();
     });   
     $('.memberclause-close').on('click', function(){  
         $('#open-mask').removeClass("modal-backdrop fade show"); 
-        $('.memberclause-box').slideToggle().hide();
-    });     
-    $('.memberprivate').on('click', function(){  
-        $('#open-mask').addClass("modal-backdrop fade show");
-        $('.memberprivate-box').slideToggle().show();
-    });   
+        $('.memberclause-box').slideToggle();
+    });    
     $('.memberprivate-close').on('click', function(){  
         $('#open-mask').removeClass("modal-backdrop fade show");      
-        $('.memberprivate-box').slideToggle().hide();
+        $('.memberprivate-box').slideToggle();
     });
-});
+};
