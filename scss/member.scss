@@ -559,3 +559,6 @@ input[type="file"] {
     right: 10px;
     position: absolute; 
 }
+#open-mask.modal-backdrop {
+    z-index: 1040;
+}

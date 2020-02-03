@@ -14,12 +14,6 @@ var swiper = new Swiper('.kv-box .swiper-container', {
 });
 
 
-$( document ).ready(function() {
-    var windowHight = $(window).height();
-    var bearhight = windowHight-70;
-    $('.bearservice-lg').css('height',bearhight);
-});
-
 
 // ad
 // 超過一張才執行 swiper，並且顯示 pagination
@@ -85,52 +79,6 @@ $('.edit-btn').on('click', function(){
 $('.aside-header .edit-title-cancel').on('click', function(){
     $(this).closest('#setting').removeClass('edit-mode');
 })
-
-
-// vcode&msg modal control
-$(function(){
-    
-    // registeredSelectState
-    $('.registeredSelectState-btn').on('click', function () {
-        $('#registeredSelectState').editableSelect({ effects: 'default' });
-    });
-    $('.btn-vcode').on('click', function(){
-        var id=$('#vcode').val();
-        $(".vcode-val").text(id);    
-        if(id.indexOf("@") >= 0 ) { 
-            $(".vcode-mail").text("貼心小提醒：有時驗證信可能會被放到垃圾郵件喔！");
-        }     
-    });
-    //#messageModal message control
-    $('.msg-loginerror').on('click', function(){  
-        $('#messageModal .modal-body>div').hide();
-        $('#msg-loginerror').show();    
-    });
-    $('.msg-loginok').on('click', function(){; 
-        $('#messageModal .modal-body>div').hide();
-        $('#msg-loginok').show();         
-    });
-    $('.msg-psw').on('click', function(){    
-        $('#messageModal .modal-body>div').hide();
-        $('#msg-psw').show();     
-    });
-    $('.msg-open').on('click', function(){  
-        var msgval = $(this).val();
-        $('#messageModal .modal-body>div').hide();
-        $('#'+msgval).show();      
-    });
-    // 密碼
-    $(".toggle-password").on('click', function() {
-        $(this).parent().toggleClass("toggle-visibility");
-        var input = $($(this).attr("toggle"));
-        if (input.attr("type") == "password") {
-        input.attr("type", "text");
-        } else {
-        input.attr("type", "password");
-        }
-    });
-});
-
 
 
 // footer menu-bar
@@ -318,7 +266,7 @@ $( ".open-page" ).on('click', function () {
     }
     $( "#open-pagebox" ).removeClass('d-none');
     $( "#open-pagebox" ).addClass('d-block');
-    $( "#open-mask" ).addClass("modal-backdrop fade show");
+    $('#open-mask').addClass("modal-backdrop fade show");
     $( ".wrap" ).addClass("blur");
 });
 $( ".close-left" ).on('click', function () {
@@ -326,7 +274,7 @@ $( ".close-left" ).on('click', function () {
     $( "#open-pagebox" ).addClass('slideOutRight animated');
     $( "#open-pagebox1" ).removeClass('slideInRight animated');
     $( "#open-pagebox1" ).addClass('slideOutRight animated');
-    $( "#open-mask" ).removeClass("modal-backdrop fade show");
+    $('#open-mask').removeClass("modal-backdrop fade show");
     $( ".wrap" ).removeClass("blur");
 });
 if($('#open-pagebox').length>0) {
@@ -347,7 +295,7 @@ $( ".open-page1" ).on('click', function () {
     }
     $( "#open-pagebox1" ).removeClass('d-none');
     $( "#open-pagebox1" ).addClass('d-block');
-    $( "#open-mask" ).addClass("modal-backdrop fade show");
+    $('#open-mask').addClass("modal-backdrop fade show");
     $( ".wrap" ).addClass("blur");
 });
 $( ".close-left1" ).on('click', function () {
@@ -366,11 +314,11 @@ if($('#open-pagebox1').length>0) {
 $( ".open-uppage" ).on('click', function () {
     $( "#open-pageupbox" ).removeClass('d-none');
     $( "#open-pageupbox" ).addClass('d-block');
-    $( "#open-mask" ).addClass("modal-backdrop fade show");
+    $('#open-mask').addClass("modal-backdrop fade show");
     $( ".wrap" ).addClass("blur");
 });
 $( ".close-up" ).on('click', function () {
-    $( "#open-mask" ).removeClass("modal-backdrop fade show");
+    $('#open-mask').removeClass("modal-backdrop fade show");
     $( ".wrap" ).removeClass("blur");    
     $( "#open-pageupbox" ).removeClass('d-block');
     $( "#open-pageupbox" ).addClass('d-none');
@@ -440,30 +388,68 @@ function levelAnim(obj){
         };
     };    
 };
-// animated control slideInUp slideOutDown
-function levelAnim1(obj){
-    var anim = obj.split(",");
-    var thislevel = anim[0];
-    var sublevel = anim[1];
-    var subpa = anim[2];
-    var subchild = anim[3];   
-    if (thislevel < sublevel) { 
-        //in thislevel < sublevel                   
-        $('.multilayer1').removeClass('slideOutDown slideInUp fast animated d-block container'); 
-        $('.multilayer1>div').removeClass('slideInUp slideOutDown animated d-block container');         
-        $('.multilayer1').addClass('slideInUp animated fast d-block container');   
-        $('.'+subchild).addClass('slideInUp animated d-block container');   
-        if (sublevel >1) {  //out Previous layer
-            $('.'+subpa).addClass('slideOutDown animated d-block container'); 
-        };  
-    } else { 
-        //out thislevel > sublevel
-        $('.multilayer1>div').removeClass('slideInUp slideOutDown animated d-block container');
-        $('.'+subchild).addClass('slideOutDown animated d-block container'); 
-        $('.'+subpa).addClass('slideInUp animated d-block container');   
-        if (sublevel == 0){  //out multilayer
-            $('.multilayer1').removeClass('slideInUp animated fast d-block container');
-            $('.multilayer1').addClass('slideOutDown animated fast d-block container');
-        };
-    };    
-};
+
+
+$(document).ready(function(){
+    // bear service
+    var windowHight = $(window).height();
+    var bearhight = windowHight-70;
+    $('.bearservice-lg').css('height',bearhight);
+
+    // registeredSelectState
+    $('.registeredSelectState-btn').on('click', function () {
+        $('#registeredSelectState').editableSelect({ effects: 'default' });
+    });
+    $('.btn-vcode').on('click', function(){
+        var id=$('#vcode').val();
+        $(".vcode-val").text(id);    
+        if(id.indexOf("@") >= 0 ) { 
+            $(".vcode-mail").text("貼心小提醒：有時驗證信可能會被放到垃圾郵件喔！");
+        }     
+    });
+    //#messageModal message control
+    $('.msg-loginerror').on('click', function(){  
+        $('#messageModal .modal-body>div').hide();
+        $('#msg-loginerror').show();    
+    });
+    $('.msg-loginok').on('click', function(){; 
+        $('#messageModal .modal-body>div').hide();
+        $('#msg-loginok').show();         
+    });
+    $('.msg-psw').on('click', function(){    
+        $('#messageModal .modal-body>div').hide();
+        $('#msg-psw').show();     
+    });
+    $('.msg-open').on('click', function(){  
+        var msgval = $(this).val();
+        $('#messageModal .modal-body>div').hide();
+        $('#'+msgval).show();      
+    });
+    // password visiblity
+    $(".toggle-password").on('click', function() {
+        $(this).parent().toggleClass("toggle-visibility");
+        var input = $($(this).attr("toggle"));
+        if (input.attr("type") == "password") {
+        input.attr("type", "text");
+        } else {
+        input.attr("type", "password");
+        }
+    });
+    //memberclause    
+    $('.memberclause').on('click', function(){  
+        $('#open-mask').addClass("modal-backdrop fade show");
+        $('.memberclause-box').slideToggle().show();   
+    });   
+    $('.memberclause-close').on('click', function(){  
+        $('#open-mask').removeClass("modal-backdrop fade show"); 
+        $('.memberclause-box').slideToggle().hide();
+    });     
+    $('.memberprivate').on('click', function(){  
+        $('#open-mask').addClass("modal-backdrop fade show");
+        $('.memberprivate-box').slideToggle().show();
+    });   
+    $('.memberprivate-close').on('click', function(){  
+        $('#open-mask').removeClass("modal-backdrop fade show");      
+        $('.memberprivate-box').slideToggle().hide();
+    });
+});

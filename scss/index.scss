@@ -2239,7 +2239,7 @@ td.linebt-td,
   width: 80%;
   height: auto;
   min-height: 100%;
-  z-index: 1050;
+  z-index: 1040;
   background-color: #fff;
   border-top-left-radius: 20px;
   .open-page-title {
@@ -2305,7 +2305,7 @@ td.linebt-td,
   width: 100%;
   height: auto;
   min-height: 50%;
-  z-index: 1050;
+  z-index: 1040;
   line-height: 3em;
   background-color: #fff;
   border-top-left-radius: 20px;
@@ -2610,7 +2610,6 @@ button.open-page {
 .radio-success input[type="radio"]:checked + label::after {
   background-color: #5cb85c; }
 
-
 /* animated control */
   .s0{
     overflow: hidden;
@@ -2642,7 +2641,6 @@ button.open-page {
     min-height: 100vh;
 }
 
-.multilayer1, 
 .multilayer{
   overflow-x:hidden;
   overflow-y:auto;
@@ -2651,16 +2649,39 @@ button.open-page {
   top:0;
   display:none;
   background-color:#fff;
-  z-index:1050;
+  z-index:1040;
   height:100%;
   min-height:100vh;
   padding:0
 }
-
-.multilayer1>div, 
 .multilayer>div{
   display:none;
   background-color:#fff;
   min-height:100vh;
   position: absolute;
+}
+.memberprivate-box, 
+.memberclause-box {
+  display: none;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  width: 100%;
+  height: 95%;
+  padding: 0;
+  position: absolute;
+  background-color:#fff;
+  z-index: 1041;
+  border-radius: .5rem;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 5%);
+  -webkit-transform: translate(-50%, 5%);
+  .member-title {
+    background-color:#f8f9fa;
+  }
+  .member-body {
+    padding: .5em;
+    text-align: justify;
+    text-justify: auto;
+  }
 }
