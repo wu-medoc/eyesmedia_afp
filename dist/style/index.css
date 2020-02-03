@@ -1007,6 +1007,10 @@ body.is-open-country .country-box {
   display: none;
 }
 
+.popup-box.password-box .password-item .visibility-off {
+  display: none;
+}
+
 .popup-box.password-box .password-item .form-group .material-icons {
   position: absolute;
   right: 10px;
@@ -1015,10 +1019,6 @@ body.is-open-country .country-box {
   transform: translateY(-50%);
   z-index: 2;
   color: rgba(24, 43, 86, 0.5);
-}
-
-.popup-box.password-box .password-item .visibility-off {
-  display: none;
 }
 
 .popup-box.country-box .popup-content {
@@ -1391,6 +1391,10 @@ footer.for-pc li {
   border-top-right-radius: .1rem;
   background: -webkit-gradient(linear, left top, right bottom, from(#36D1DB), to(#568EE3));
   background: linear-gradient(to bottom right, #36D1DB, #568EE3);
+}
+
+#messageModal .modal-body > div {
+  display: none;
 }
 
 .modal-body {

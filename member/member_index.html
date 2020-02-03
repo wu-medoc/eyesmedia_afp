@@ -724,7 +724,7 @@
                 </div>
                 <div class="item title-name">修改地址</div>
                 <div class="item del-btn">
-                    <button type="button" class="btn msg-myaddressdelete" data-toggle="modal" data-target="#messageModal" data-dismiss="modal" aria-label="Close">刪除</button>
+                    <button type="button" class="btn msg-open" value="msg-myaddressdelete" data-toggle="modal" data-target="#messageModal" data-dismiss="modal" aria-label="Close">刪除</button>
                 </div>
             </div>
             <div class="my-address-list">
@@ -774,8 +774,8 @@
                 <div class="flex-inline-between">
                     <div class="p-3">設定為預設地址</div>
                     <div class="checkbox checkbox-pink">
-                        <input id="i2" type="checkbox" checked>
-                        <label for="i2"></label>
+                        <input id="i3" type="checkbox" checked>
+                        <label for="i3"></label>
                     </div>
                 </div>
             </div>
@@ -887,8 +887,8 @@
                         </div>
                         <div class="setting-default pl-3">                        
                             <div class="checkbox checkbox-pink">
-                                <input id="i2" type="checkbox" checked>
-                                <label for="i2">設定為預設地址</label>
+                                <input id="i4" type="checkbox" checked>
+                                <label for="i4">設定為預設地址</label>
                             </div>
                         </div>
                     </div>
@@ -917,7 +917,7 @@
                 </div>
                 <div class="item title-name">信用卡資訊</div>
                 <div class="item del-btn">
-                    <button type="button" class="btn msg-myaddressdelete" data-toggle="modal" data-target="#messageModal" data-dismiss="modal" aria-label="Close">刪除</button>
+                    <button type="button" class="btn msg-open" value="msg-myaddressdelete" data-toggle="modal" data-target="#messageModal" data-dismiss="modal" aria-label="Close">刪除</button>
                 </div>
             </div>
             <form action="">
@@ -955,8 +955,8 @@
                     <div class="flex-inline-between setting-default">
                         <div class="p-3">設定為預設地址</div>
                         <div class="checkbox checkbox-pink">
-                            <input id="i2" type="checkbox" checked>
-                            <label for="i2"></label>
+                            <input id="i5" type="checkbox" checked>
+                            <label for="i5"></label>
                         </div>
                     </div>
                 </div>
@@ -965,10 +965,110 @@
 
         <!--變更密碼2-->
         <div class="mypsw">
+            <div class="title-box">
+                <div class="item icon-btn">                        
+                    <button class="btn animated-btn" onclick="levelAnim('2,1,mysetting,mysocial');" data-toggle="tooltip" data-placement="bottom" title="回上一頁">
+                        <i class="material-icons">&#xE314;</i>
+                    </button>
+                </div>
+                <div class="item title-name">變更密碼</div>
+                <div class="item icon-btn"></div>
+            </div>
+            <form action="">
+                <div class="change-password-list">
+                    <ul>
+                        <li class="is-open">
+                            <input type="password" placeholder="舊密碼">
+                            <i class="toggle-password material-icons visibility">&#xE8F5;</i>
+                            <i class="toggle-password material-icons visibility-off">&#xE8F4;</i>
+                        </li>
+                        <li>
+                            <div class="password-item">
+                                <input id="password-field-1" type="text" placeholder="輸入新密碼"> 
+                                <small id="emailHelp" class="form-text text-muted">字元至少8位，需包含英文字母及數字</small>
+                                <span toggle="#password-field-1" class="toggle-password"> 
+                                    <i class="material-icons visibility ">&#xE8F4;</i>
+                                    <i class="material-icons visibility-off">&#xE8F5;</i>
+                                </span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="password-item">
+                                <input id="password-field-2" type="text" placeholder="再次輸入新密碼">
+                                <small id="emailHelp" class="form-text text-muted">兩個密碼不相符</small>
+                                <span toggle="#password-field-2" class="toggle-password"> 
+                                    <i class="material-icons visibility ">&#xE8F4;</i>
+                                    <i class="material-icons visibility-off">&#xE8F5;</i>
+                                </span>
+                            </div>
+                        </li>
+                    </ul>
+                    <button type="button" class="btn next-btn w-100">保存</button>
+                </div>
+            </form>
         </div>
 
         <!--社群帳號綁定2-->
         <div class="mysocial">
+            <div class="title-box">
+                <div class="item icon-btn">                        
+                    <button class="btn animated-btn" onclick="levelAnim('2,1,mysetting,mysocial');" data-toggle="tooltip" data-placement="bottom" title="回上一頁">
+                        <i class="material-icons">&#xE314;</i>
+                    </button>
+                </div>
+                <div class="item title-name">社群帳號綁定</div>
+                <div class="item icon-btn"></div>
+            </div>
+            <div class="my-list-box">
+                <p>社群帳號</p>
+                <ul class="social-account">
+                    <li>
+                        <div class="item item-img">
+                            <img src="../img/index/social/wechat.svg" alt="">
+                        </div>
+                        <div class="item">微信</div>
+                        <div class="item auto-left">
+                            <button type="button" class="btn msg-open" value="msg-mysocialremove" data-toggle="modal" data-target="#messageModal" data-dismiss="modal" aria-label="Close">綁定</button>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item item-img">
+                            <img src="../img/index/social/wechat.svg" alt="">
+                        </div>
+                        <div class="item">李曉龍</div>
+                        <div class="item auto-left">
+                            <button type="button" class="btn msg-open" value="msg-mysocialbind" data-toggle="modal" data-target="#messageModal" data-dismiss="modal" aria-label="Close">解除綁定</button>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item item-img">
+                            <img src="../img/index/social/facebook.svg" alt="">
+                        </div>
+                        <div class="item">Facebook</div>
+                        <div class="item auto-left">
+                            <button type="button" class="btn msg-open" value="msg-mysocialremove" data-toggle="modal" data-target="#messageModal" data-dismiss="modal" aria-label="Close">綁定</button>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item item-img">
+                            <img src="../img/index/social/line.svg" alt="">
+                        </div>
+                        <div class="item">LINE</div>
+                        <div class="item auto-left">
+                            <button type="button" class="btn msg-open" value="msg-mysocialremove" data-toggle="modal" data-target="#messageModal" data-dismiss="modal" aria-label="Close">綁定</button>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item item-img">
+                            <img src="../img/index/social/google.svg" alt="">
+                        </div>
+                        <div class="item">Google</div>
+                        <div class="item auto-left">
+                            <button type="button" class="btn msg-open" value="msg-mysocialremove" data-toggle="modal" data-target="#messageModal" data-dismiss="modal" aria-label="Close">綁定</button>
+                        </div>
+                    </li>
+                </ul>
+            </div>
         </div>
            
     
@@ -1094,6 +1194,7 @@
             $('footer.for-pc').css('position','absolute');
         };        
         $('footer.for-pc').css('position','absolute'); //github use(正式可刪除)
+
     </script>
 
     <script>    

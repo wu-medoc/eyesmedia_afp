@@ -562,6 +562,10 @@ footer .menu-bar .customer-item img {
   color: #F4246A;
 }
 
+.my-list-box ul.social-account button.msg-open {
+  color: #F4246A;
+}
+
 .my-list-box ul li {
   color: #182B56;
   display: -webkit-box;
@@ -1047,6 +1051,10 @@ input[type="file"] {
 }
 
 .change-password-list ul li .material-icons.visibility-off {
+  display: block;
+}
+
+.change-password-list ul li .password-item.toggle-visibility .material-icons.visibility-off {
   display: none;
 }
 
