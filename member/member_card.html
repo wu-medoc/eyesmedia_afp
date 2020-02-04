@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=1, user-scalable=no">
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../js/vendor/bs4/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../js/vendor/jquery-editable-select-master/dist/jquery-editable-select.min.css">
+    <!-- owl.carousel core CSS -->
+    <link rel="stylesheet" href="../js/vendor/owlcarousel/owlcarousel/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="../js/vendor/owlcarousel/owlcarousel/assets/owl.theme.default.min.css">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+    <!-- vendor css -->
+    <link rel="stylesheet" href="../js/vendor/swiper/css/swiper.min.css">
+    <!-- fontawesome css -->
+    <link rel="stylesheet" href="../js/vendor/fontawesome/css/fontawesome.css">
+    <link rel="stylesheet" href="../js/vendor/fontawesome/css/brands.css">
+    <link rel="stylesheet" href="../js/vendor/fontawesome/css/solid.css">
+    <!-- custom css -->
+    <link rel="stylesheet" href="../dist/style/css.min.css">
+    <link rel="stylesheet" href="../dist/style/global.min.css">
+    <link rel="stylesheet" href="../dist/style/index.min.css">
+    <link rel="stylesheet" href="../dist/style/member.min.css">
+    <link rel="stylesheet" href="../dist/style/animate.min.css">
+
+    <title>艾斯移動 - 我的首頁</title>
+</head>
+
+<body>    
+<div class="wrap container">
+    <!--我的卡片1-->
+    <div class="mycard slideInRight animated">
+        <div class="title-box">
+            <div class="item icon-btn">                        
+                <button class="btn animated-btn" onclick="countdown('member_index.html');" data-toggle="tooltip" data-placement="bottom" title="回上一頁">
+                    <i class="material-icons">&#xE314;</i>
+                </button>
+            </div>
+            <div class="item title-name">我的卡片</div>                
+            <div class="item icon-btn btn-img">  
+            </div>
+        </div>
+        <div class="my-info-box border-bottom-0">
+            <div class="py-3 text-left">
+                <p class="font-bold">尚未新增會員卡</p>
+                <p>快加入指定會員卡，可提升會員等級，還有一堆好禮優惠可以拿喔～</p>
+            </div>
+            <label class="custom-file-upload" onclick="callLayer('.mycardadd');">                        
+                <div class="upload-box">
+                    <img class="add-btnbg" src="../img/member/mycard.svg">
+                    <div class="add-btn">
+                        <img src="../img/member/add-passport.svg" alt="">
+                    </div>
+                </div>
+            </label>
+            <div class="passport-status">
+                立即新增卡片
+            </div>
+        </div>
+    </div>
+     
+
+    <!--次頁-->
+    <div class="multilayer">
+        <!--新增卡片2-->
+        <div class="mycardadd">
+            <div class="title-box">
+                <div class="item icon-btn">                        
+                    <button class="btn animated-btn" onclick="backLayer();" data-toggle="tooltip" data-placement="bottom" title="回上一頁">
+                        <i class="material-icons">&#xE314;</i>
+                    </button>
+                </div>
+                <div class="item title-name">新增會員片</div>                
+                <div class="item">     
+                </div>
+            </div>
+            <div class="my-list-box">
+                <div class="item">
+                    <ul>
+                        <li>
+                            <div class="item">名稱</div>
+                            <div class="item input-box">
+                                <input type="text" value="" placeholder="自訂卡片名稱">
+                            </div>
+                            <div class="item auto-left infohas d-none">MoBii好玩卡</div>
+                        </li>
+                        <li>
+                            <div class="item">卡片號碼</div>
+                            <div class="item input-box">
+                                <input type="text" value="" placeholder="請輸入">
+                            </div>
+                            <div class="item auto-left infohas d-none">123456789</div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="item note-box">
+                    <div class="note-item">不知道卡片號碼在哪裡？<span class="text-pink" onclick="callLayerUp('.mycardprompt');open_mask('uplayer');">請看這裡</span></div>
+                </div> 
+                <div class="fixed-btn container">
+                    <button type="button" class="btn next-btn w-100">確認</button>
+                </div>                 
+                <div class="mask-bk fade show d-none"></div>
+            </div>
+        </div> 
+        
+        <!--卡片圖示-->
+        <div class="mycardprompt uplayer">
+            <div class="p-4">
+                <img src="../img/member/mycard-prompt.svg">
+                <button type="button" class="btn outline-btn w-100" onclick="backLayerUp();close_mask('uplayer');">關閉</button>
+            </div>
+        </div>
+    </div> 
+
+</div> 
+<div id="loginhtml"></div>
+
+    <!--頁尾-->
+    <footer class="for-pc"> 
+        <div class="container">
+            <div class="row d-flex">
+                <div class="col-4 col-md-3">
+                <h6>關於亞洲好玩卡</h6>
+                <ul>
+                    <li><a href="#">關於我們</a></li>
+                </ul>            
+                </div>
+                <div class="col-4 col-md-3">
+                <h6>追蹤我們</h6>
+                <ul>
+                    <li><a href="#"><i class="fab fa-facebook-f fa-fw"></i> Facebook</a></li>
+                    <li><a href="#"><i class="fab fa-line fa-fw"></i> Line</a></li>
+                    <li><a href="#"><i class="fab fa-instagram fa-fw"></i> Instagram</a></li>
+                </ul>            
+                </div>  
+                <div class="w-100"></div>
+                <div class="col-12 border-t">
+                <div class="f-left">
+                    <object data="../img/index/logo-s.svg" width="30" type="image/svg+xml"></object><span> Designed by Asia Fun Pass</span>
+                </div>
+                <div class="f-right">
+                    Ⓒ2020 Asia Fun Pass. All Right Reserved          
+                </div>
+                </div>
+            </div>  
+        </div>
+    </footer>
+    <footer class="mobile-footer for-mobile">
+        <div class="menu-bar">
+            <a href="../index.html" class="bar-item">
+                <img class="default-img" src="../img/index/icons/footer_1_1.svg" alt="">
+                <img class="active-img" src="../img/index/icons/footer_1_2.svg" alt="">
+                首頁
+            </a>
+            <a href="../explore/explore_index.html" class="bar-item">
+                <img class="default-img" src="../img/index/icons/footer_2_1.svg" alt="">
+                <img class="active-img" src="../img/index/icons/footer_2_2.svg" alt="">
+                周邊
+            </a>
+            <a href="../bearservice.html" class="bar-item customer-item">
+                <img src="../img/index/icons/footer_3.png" alt="">
+                客服
+            </a>
+            <a href="javascript:;" class="bar-item">
+                <img class="default-img" src="../img/index/icons/footer_4_1.svg" alt="">
+                <img class="active-img" src="../img/index/icons/footer_4_2.svg" alt="">
+                任務
+            </a>
+            <a href="member_index.html" class="bar-item active">
+                <img class="default-img" src="../img/index/icons/footer_5_1.svg" alt="">
+                <img class="active-img" src="../img/index/icons/footer_5_2.svg" alt="">
+                我的
+            </a>
+        </div>
+    </footer>      
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="../js/vendor/bs4/js/jquery-3.2.1.slim.min.js"></script>
+    <!-- Latest compiled and minified JavaScript -->    
+    <script src="../js/vendor/bs4/js/bootstrap.min.js"></script>
+
+    <!-- owlcarousel JS -->
+    <script src="../js/vendor/owlcarousel/vendors/jquery.min.js"></script>
+    <script src="../js/vendor/owlcarousel/owlcarousel/owl.carousel.js"></script>
+    <script src="../js/vendor/owlcarousel/vendors/highlight.js"></script>
+    <script src="../js/vendor/owlcarousel/js/app.js"></script>   
+    <script src="../js/vendor/jquery-editable-select-master/dist/jquery-editable-select.js"></script>
+
+    <!-- vendor js -->
+    <script src="../js/vendor/swiper/js/swiper.min.js"></script>
+    <script src="../js/vendor/imgLiquid.js"></script>
+
+    <!-- custom js -->    
+    <script src="../js/animateCss.js"></script>
+    <script>
+        // footer control
+        function getRootPath(){ 
+            var strFullPath=window.document.location.href; 
+            var strPath=window.document.location.pathname; 
+            var pos=strFullPath.indexOf(strPath); 
+            var prePath=strFullPath.substring(0,pos); 
+            var postPath=strPath.substring(0,strPath.substr(1).indexOf('/')+1); 
+            return(strPath); 
+        };
+        if (getRootPath().toLowerCase().indexOf("member")>0){
+            $('footer.for-pc').css('position','absolute');
+        };        
+        $('footer.for-pc').css('position','absolute'); //github use(正式可刪除)
+
+
+        // Leave Forwarding
+        function countdown(e) {
+            $('.mycard').removeClass('slideInRight').addClass('slideOutRight');
+            setTimeout(function(){ window.location = e ; }, 500);            
+        };
+
+        // black mask
+        function open_mask(e) {
+            $('.mask-bk').removeClass('d-none').addClass('d-block');
+            $('.'+e).css('display','block');
+        };
+        function close_mask(e) {
+            $('.mask-bk').removeClass('d-block').addClass('d-none');
+            $('.'+e).css('display','none');
+        };
+    </script>
+
+    <script>    
+        $("#loginhtml").load("../login.html");
+    </script>
+    <script src="../js/index.js"></script>
+</body>
+
+</html>

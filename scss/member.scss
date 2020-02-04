@@ -47,6 +47,12 @@
     }
 }
 
+.btn-img{
+    img{
+        height: 24px;
+    }
+}
+
 .member-item-group{
     position: relative;
     background-color: $default-white;
@@ -94,8 +100,9 @@
     }
 }
 
-// 我的帳戶
+// 我的帳戶 & mycard
 .my-list-box{
+    border-top: 1px $gray-light solid;
     &.edit-list{
         ul{
             li{
@@ -163,7 +170,7 @@
                 }
             }      
         }
-    }
+    }    
 }
 
 // 我的帳戶 - 檔案
@@ -198,9 +205,12 @@
             border-radius: 100%;
             box-shadow: 0 0 10px rgba(0,0,0,.5);
         }
+        .add-btnbg {
+            width: 130px;
+        }
     }
     .passport-status{
-        margin-top: 3px;
+        margin-top: -6px;
         color: $gray-color;
         .material-icons{
             font-size: 18px;
@@ -517,7 +527,7 @@ input[type="file"] {
             .text-muted{
                 position: absolute;
                 top: 100%;
-                color: #FF3B30 !important;
+                color: #F4246A !important;
             }
             .material-icons{
                 position: absolute;
@@ -552,7 +562,20 @@ input[type="file"] {
     box-shadow: 0 -5px 8px rgba(0,0,0,.2);
 }
 
-      
+// other sharing
+.text-pink{
+    color: #F4246A;
+}   
+.note-box{    
+    border-top: 5px #eee solid;
+    .note-item{
+        border-top: 1px $gray-light solid;
+        border-bottom: 1px $gray-light solid;
+        padding: 15px;
+        background-color: #fff;
+        font-size: 90%;
+    }
+}   
 .auto-left{
     margin-left: auto;
     text-align: right;
@@ -562,7 +585,12 @@ input[type="file"] {
 #open-mask.modal-backdrop {
     z-index: 1040;
 }
+.outline-btn{
+    border-color: #F4246A;
+    color: #F4246A;
+}
 
+// member clause&private
 .member-body {
     padding: .5em;
     text-align: justify;
@@ -579,3 +607,4 @@ input[type="file"] {
         font-weight: 700;
     }
 }
+

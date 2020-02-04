@@ -41,7 +41,7 @@
             <div class="title-box">
                 <div class="item icon-btn">
                     <div class="img-box">
-                        <button class="btn animated-btn" onclick="levelAnim('0,1,mymember,mysetting');"><img src="../img/member/member-icon-setting.svg" alt="設定"></button >
+                        <button class="btn animated-btn" onclick="callLayer('.mysetting');"><img src="../img/member/member-icon-setting.svg" alt="設定"></button >
                     </div>
                 </div>
                 <div class="item title-name"></div>
@@ -65,7 +65,7 @@
                         台灣
                     </div>
                 </div>
-                <div class="info-box auto-left">
+                <div class="info-box auto-left pr-3">
                     <div class="info-item info-coin">
                         100
                     </div>
@@ -83,7 +83,7 @@
                         <div class="col-md-12">
                             <div class="member-item-list">
                                 <div class="member-items">
-                                    <a href="#" class="member-item">
+                                    <a href="member_card.html" class="member-item">
                                         <div class="img-box">
                                             <img src="../img/member/member-icon-card.svg" alt="">
                                         </div>
@@ -127,7 +127,7 @@
                     </div>
                 </div>
             </div>
-        </div>   
+        </div>           
     </div>  
      
 
@@ -137,7 +137,7 @@
         <div class="mysetting">
             <div class="title-box">
                 <div class="item icon-btn">
-                    <button class="btn animated-btn" onclick="levelAnim('1,0,mymember,mysetting');" data-toggle="tooltip" data-placement="bottom" title="回上一頁">
+                    <button class="btn animated-btn" onclick="backLayer();" data-toggle="tooltip" data-placement="bottom" title="回上一頁">
                         <i class="material-icons">&#xE314;</i>
                     </button>
                 </div>
@@ -147,19 +147,19 @@
             <div class="my-list-box">
                 <p>我的帳號</p>
                 <ul>
-                    <li onclick="levelAnim('1,2,mysetting,myfile');">
+                    <li onclick="callLayer('.myfile');">
                         <button class="btn animated-btn w-100 text-left p-0">我的檔案 <span class="auto-left"><i class="material-icons">&#xE315;</i></span></button>
                     </li>
-                    <li onclick="levelAnim('1,2,mysetting,myaddress');">
+                    <li onclick="callLayer('.myaddress');">
                         <button class="btn animated-btn w-100 text-left p-0">我的地址 <span class="auto-left"><i class="material-icons">&#xE315;</i></span></button>
                     </li>
-                    <li onclick="levelAnim('1,2,mysetting,mypay');">
+                    <li onclick="callLayer('.mypay');">
                         <button class="btn animated-btn w-100 text-left p-0">付款設定 <span class="auto-left"><i class="material-icons">&#xE315;</i></span></button>
                     </li>
-                    <li onclick="levelAnim('1,2,mysetting,mypsw');">
+                    <li onclick="callLayer('.mypsw');">
                         <button class="btn animated-btn w-100 text-left p-0">變更密碼 <span class="auto-left"><i class="material-icons">&#xE315;</i></span></button>
                     </li>
-                    <li onclick="levelAnim('1,2,mysetting,mysocial');">
+                    <li onclick="callLayer('.mysocial');">
                         <button class="btn animated-btn w-100 text-left p-0">社群帳號綁定 <span class="auto-left"><i class="material-icons">&#xE315;</i></span></button>
                     </li>
                 </ul>
@@ -176,19 +176,19 @@
                 </ul>
                 <p>我的小幫手</p>
                 <ul>
-                    <li onclick="levelAnim('1,2,mysetting,myfaq');">
+                    <li onclick="callLayer('.myfaq');">
                         <div class="item">常見問題</div>
                         <div class="item auto-left"><i class="material-icons">&#xE315;</i></div>
                     </li>
-                    <li onclick="levelAnim('1,2,mysetting,myclause');">
+                    <li onclick="callLayer('.myclause');">
                         <div class="item">使用者規範</div>
                         <div class="item auto-left"><i class="material-icons">&#xE315;</i></div>
                     </li>
-                    <li onclick="levelAnim('1,2,mysetting,myprivate');">
+                    <li onclick="callLayer('.myprivate');">
                         <div class="item">隱私權政策</div>
                         <div class="item auto-left"><i class="material-icons">&#xE315;</i></div>
                     </li>
-                    <li onclick="levelAnim('1,2,mysetting,myabout');">
+                    <li onclick="callLayer('.myabout');">
                         <div class="item">關於</div>
                         <div class="item auto-left"><i class="material-icons">&#xE315;</i></div>
                     </li>
@@ -200,7 +200,7 @@
         <div class="myfile">
             <div class="title-box">
                 <div class="item icon-btn">
-                    <button class="btn animated-btn back-btn" onclick="levelAnim('2,1,mysetting,myfile');" data-toggle="tooltip" data-placement="bottom" title="回上一頁">
+                    <button class="btn animated-btn back-btn" onclick="backLayer();" data-toggle="tooltip" data-placement="bottom" title="回上一頁">
                         <i class="material-icons">&#xE314;</i>
                     </button>
                     <button class="btn clear-btn d-none">取消</button>
@@ -250,14 +250,14 @@
                     </li>
                     <li>
                         <div class="item">
-                            <button class="btn animated-btn w-100 p-0" onclick="levelAnim('2,3,myfile,mypassport');">
+                            <button class="btn animated-btn w-100 p-0" onclick="callLayer('.mypassport');">
                                 上傳護照 <span class="auto-left"><i class="material-icons">&#xE315;</i></span>
                             </button>
                         </div>
                     </li>
                     <li>
                         <div class="item">
-                            <button class="btn animated-btn w-100 p-0" onclick="levelAnim('2,3,myfile,mymtps');">
+                            <button class="btn animated-btn w-100 p-0" onclick="callLayer('.mymtps');">
                                 上傳台胞證 <span class="auto-left"><i class="material-icons">&#xE315;</i></span>
                             </button>                                
                         </div>
@@ -269,13 +269,13 @@
         <div class="mypassport">
             <div class="title-box">
                 <div class="item icon-btn">                        
-                    <button class="btn animated-btn" onclick="levelAnim('3,2,myfile,mypassport');" data-toggle="tooltip" data-placement="bottom" title="回上一頁">
+                    <button class="btn animated-btn" onclick="backLayer();" data-toggle="tooltip" data-placement="bottom" title="回上一頁">
                         <i class="material-icons">&#xE314;</i>
                     </button>
                 </div>
                 <div class="item title-name">上傳護照</div>
                 <div class="item ctrl-btn">
-                    <button class="btn animated-btn" onclick="levelAnim('3,4,mypassport,mypassportnote');" data-toggle="tooltip" data-placement="bottom" title="儲存">
+                    <button class="btn animated-btn" onclick="callLayer('.mypassportnote');" data-toggle="tooltip" data-placement="bottom" title="儲存">
                         儲存
                     </button>
                 </div>
@@ -310,19 +310,19 @@
         <div class="mypassportok">
             <div class="title-box">
                 <div class="item icon-btn">                        
-                    <button class="btn animated-btn" onclick="levelAnim('3,2,myfile,mypassportok');" data-toggle="tooltip" data-placement="bottom" title="回上一頁">
+                    <button class="btn animated-btn" onclick="backLayer();" data-toggle="tooltip" data-placement="bottom" title="回上一頁">
                         <i class="material-icons">&#xE314;</i>
                     </button>
                 </div>
                 <div class="item title-name">上傳護照</div>
                 <div class="item ctrl-btn">
-                    <button class="btn animated-btn" onclick="levelAnim('3,4,mypassport,mypassportnote');" data-toggle="tooltip" data-placement="bottom" title="變更">
+                    <button class="btn animated-btn" onclick="callLayer('.mypassportnote');" data-toggle="tooltip" data-placement="bottom" title="變更">
                         變更
                     </button>
                 </div>
             </div>
             <div class="my-info-box">                    
-                <label for="file-upload" class="custom-file-upload">                        
+                <label for="file-upload2" class="custom-file-upload">                        
                     <div class="upload-box">
                         <img src="../img/member/passport.svg">
                         <div class="change-btn">
@@ -330,7 +330,7 @@
                         </div>
                     </div>
                 </label>
-                <input id="file-upload" type="file"/>
+                <input id="file-upload2" type="file"/>
                 <div class="passport-status">
                     <i class="material-icons">&#xE5CA;</i>已上傳
                 </div>
@@ -350,13 +350,13 @@
         <div class="mymtps">
             <div class="title-box">
                 <div class="item icon-btn">                                             
-                    <button class="btn animated-btn" onclick="levelAnim('3,2,myfile,mymtps');" data-toggle="tooltip" data-placement="bottom" title="回上一頁">
+                    <button class="btn animated-btn" onclick="backLayer();" data-toggle="tooltip" data-placement="bottom" title="回上一頁">
                         <i class="material-icons">&#xE314;</i>
                     </button>
                 </div>
                 <div class="item title-name">上傳台胞證</div>
                 <div class="item ctrl-btn">                        
-                    <button class="btn animated-btn" onclick="levelAnim('3,4,mymtps,mymtpsnote');" data-toggle="tooltip" data-placement="bottom" title="儲存">
+                    <button class="btn animated-btn" onclick="callLayer('.mymtpsnote');" data-toggle="tooltip" data-placement="bottom" title="儲存">
                         儲存
                     </button>
                 </div>
@@ -391,13 +391,13 @@
         <div class="mymtpsok">
             <div class="title-box">
                 <div class="item icon-btn">                                             
-                    <button class="btn animated-btn" onclick="levelAnim('3,2,myfile,mymtpsok');" data-toggle="tooltip" data-placement="bottom" title="回上一頁">
+                    <button class="btn animated-btn" onclick="backLayer();" data-toggle="tooltip" data-placement="bottom" title="回上一頁">
                         <i class="material-icons">&#xE314;</i>
                     </button>
                 </div>
                 <div class="item title-name">上傳台胞證</div>
                 <div class="item ctrl-btn">                        
-                    <button class="btn animated-btn" onclick="levelAnim('3,4,mymtpsok,mymtpsnote');" data-toggle="tooltip" data-placement="bottom" title="變更">
+                    <button class="btn animated-btn" onclick="callLayer('.mymtpsnote');" data-toggle="tooltip" data-placement="bottom" title="變更">
                         變更
                     </button>
                 </div>
@@ -428,7 +428,7 @@
         <div class="mypassportnote">
             <div class="title-box">
                 <div class="item ctrl-btn">
-                    <button class="btn animated-btn" onclick="levelAnim('4,2,myfile,mypassportnote');" data-toggle="tooltip" data-placement="bottom" title="關閉">
+                    <button class="btn animated-btn" onclick="backLayer();" data-toggle="tooltip" data-placement="bottom" title="關閉">
                         關閉
                     </button>
                 </div>
@@ -454,12 +454,12 @@
                     <ul>
                         <li class="flex-inline-between">
                             <div class="item">
-                                <button class="btn animated-btn close-overlay-choice" onclick="levelAnim('4,5,mypassportnote,mypassportphoto');" data-toggle="tooltip" data-placement="bottom" title="Take Photo or Video">
+                                <button class="btn animated-btn close-overlay-choice" onclick="callLayer('.mypassportphoto');" data-toggle="tooltip" data-placement="bottom" title="Take Photo or Video">
                                     拍照或攝影
                                 </button>
                             </div>
                             <div class="item">
-                                <button class="btn animated-btn close-overlay-choice" onclick="levelAnim('4,5,mypassportnote,mypassportphoto');" data-toggle="tooltip" data-placement="bottom" title="Take Photo or Video">
+                                <button class="btn animated-btn close-overlay-choice" onclick="callLayer('.mypassportphoto');" data-toggle="tooltip" data-placement="bottom" title="Take Photo or Video">
                                     <img src="../img/member/icon_camera.png">
                                 </button>
                             </div>
@@ -500,7 +500,7 @@
         <div class="mymtpsnote">
             <div class="title-box">
                 <div class="item ctrl-btn">                        
-                    <button class="btn animated-btn" onclick="levelAnim('4,2,myfile,mymtpsnote');" data-toggle="tooltip" data-placement="bottom" title="關閉">
+                    <button class="btn animated-btn" onclick="backLayer();" data-toggle="tooltip" data-placement="bottom" title="關閉">
                         關閉
                     </button>
                 </div>
@@ -526,12 +526,12 @@
                     <ul>
                         <li class="flex-inline-between">
                             <div class="item">
-                                <button class="btn animated-btn close-overlay-choice" onclick="levelAnim('4,5,mymtpsnote,mymtpsphoto');" data-toggle="tooltip" data-placement="bottom" title="Take Photo or Video">
+                                <button class="btn animated-btn close-overlay-choice" onclick="callLayer('.mymtpsphoto');" data-toggle="tooltip" data-placement="bottom" title="Take Photo or Video">
                                     拍照或攝影
                                 </button>
                             </div>
                             <div class="item">
-                                <button class="btn animated-btn close-overlay-choice" onclick="levelAnim('4,5,mymtpsnote,mymtpsphoto');" data-toggle="tooltip" data-placement="bottom" title="Take Photo or Video">
+                                <button class="btn animated-btn close-overlay-choice" onclick="callLayer('.mymtpsphoto');" data-toggle="tooltip" data-placement="bottom" title="Take Photo or Video">
                                     <img src="../img/member/icon_camera.png">
                                 </button>
                             </div>
@@ -577,10 +577,10 @@
                 <strong>這張護照資料是否清楚？</strong>
                 <p>此照片應包含所有的資料，並且確定沒有任何模糊或被切除的部分</p>
                 <div class="btn-group">                     
-                    <button class="btn next-btn w-50 animated-btn" onclick="levelAnim('5,3,mypassport,mypassportphoto');" data-toggle="tooltip" data-placement="bottom" title="確定上傳">
+                    <button class="btn next-btn w-50 animated-btn" onclick="backLayer();" data-toggle="tooltip" data-placement="bottom" title="重新拍照">
                         重新拍照
                     </button>                  
-                    <button class="btn next-btn w-50 animated-btn" onclick="levelAnim('5,3,mypassportok,mypassportphoto');" data-toggle="tooltip" data-placement="bottom" title="確定上傳">
+                    <button class="btn next-btn w-50 animated-btn" data-toggle="tooltip" data-placement="bottom" title="確定上傳">
                         確定上傳
                     </button>
                 </div>
@@ -595,10 +595,10 @@
                 <strong>這張台胞證資料是否清楚？</strong>
                 <p>此照片應包含所有的資料，並且確定沒有任何模糊或被切除的部分</p>
                 <div class="btn-group">                    
-                    <button class="btn next-btn w-50 animated-btn" onclick="levelAnim('5,3,mymtps,mymtpsphoto');" data-toggle="tooltip" data-placement="bottom" title="確定上傳">
+                    <button class="btn next-btn w-50 animated-btn" onclick="backLayer();" data-toggle="tooltip" data-placement="bottom" title="重新拍照">
                         重新拍照
                     </button>                  
-                    <button class="btn next-btn w-50 animated-btn" onclick="levelAnim('5,3,mymtpsok,mymtpsphoto');" data-toggle="tooltip" data-placement="bottom" title="確定上傳">
+                    <button class="btn next-btn w-50 animated-btn" data-toggle="tooltip" data-placement="bottom" title="確定上傳">
                         確定上傳
                     </button>
                 </div>
@@ -609,7 +609,7 @@
         <div class="myaddress">
             <div class="title-box">
                 <div class="item icon-btn">                        
-                    <button class="btn animated-btn" onclick="levelAnim('2,1,mysetting,myaddress');" data-toggle="tooltip" data-placement="bottom" title="回上一頁">
+                    <button class="btn animated-btn" onclick="backLayer();" data-toggle="tooltip" data-placement="bottom" title="回上一頁">
                         <i class="material-icons">&#xE314;</i>
                     </button>
                 </div>
@@ -618,7 +618,7 @@
             </div>
             <div class="my-address-list">
                 <ul>
-                    <li class="is-default" onclick="levelAnim('2,3,myaddress,myaddressedit');">
+                    <li class="is-default" onclick="callLayer('.myaddressedit');">
                         <div class="item">
                             <p>艾斯移動</p>
                             <p class="tel">0227078600</p>
@@ -628,7 +628,7 @@
                             <p class="t-nowrap">[預設]</p>
                         </div>
                     </li>
-                    <li class="" onclick="levelAnim('2,3,myaddress,myaddressedit');">
+                    <li class="" onclick="callLayer('.myaddressedit');">
                         <div class="item">
                             <p>Jason Yang</p>
                             <p class="tel">0912345678</p>
@@ -637,7 +637,7 @@
                     </li>
                 </ul>
                 <div class="add-address-btn">
-                    <button class="btn animated-btn" onclick="levelAnim('2,3,myaddress,myaddressadd');">
+                    <button class="btn animated-btn" onclick="callLayer('.myaddressadd');">
                         新增地址<i class="material-icons">&#xE145;</i>
                     </button>
                 </div>
@@ -650,7 +650,7 @@
         <div class="myaddressadd">
             <div class="title-box">
                 <div class="item icon-btn">                                          
-                    <button class="btn animated-btn" onclick="levelAnim('3,2,myaddress,myaddressadd');" data-toggle="tooltip" data-placement="bottom" title="回上一頁">
+                    <button class="btn animated-btn" onclick="backLayer();" data-toggle="tooltip" data-placement="bottom" title="回上一頁">
                         <i class="material-icons">&#xE314;</i>
                     </button>
                 </div>
@@ -718,7 +718,7 @@
         <div class="myaddressedit">
             <div class="title-box">
                 <div class="item icon-btn">                                          
-                    <button class="btn animated-btn" onclick="levelAnim('3,2,myaddress,myaddressedit');" data-toggle="tooltip" data-placement="bottom" title="回上一頁">
+                    <button class="btn animated-btn" onclick="backLayer();" data-toggle="tooltip" data-placement="bottom" title="回上一頁">
                         <i class="material-icons">&#xE314;</i>
                     </button>
                 </div>
@@ -789,7 +789,7 @@
         <div class="mypay">
             <div class="title-box">
                 <div class="item icon-btn">                        
-                    <button class="btn animated-btn" onclick="levelAnim('2,1,mysetting,mypay');" data-toggle="tooltip" data-placement="bottom" title="回上一頁">
+                    <button class="btn animated-btn" onclick="backLayer();" data-toggle="tooltip" data-placement="bottom" title="回上一頁">
                         <i class="material-icons">&#xE314;</i>
                     </button>
                 </div>
@@ -810,7 +810,7 @@
                         </a>
                         <div class="collapse" id="collapseExample">
                             <ul class="sub-list">
-                                <li onclick="levelAnim('2,3,mypay,mypaycardinfo');">
+                                <li onclick="callLayer('.mypaycardinfo');">
                                     <div class="item item-img">
                                         <img src="../img/member/creditcard-01.svg" alt="">
                                     </div>
@@ -818,7 +818,7 @@
                                     <div class="item item-card-num">*1234</div>
                                     <div class="item item-default auto-left">[預設]</div>
                                 </li>
-                                <li onclick="levelAnim('2,3,mypay,mypaycardinfo');">
+                                <li onclick="callLayer('.mypaycardinfo');">
                                     <div class="item item-img">
                                         <img src="../img/member/creditcard-02.svg" alt="">
                                     </div>
@@ -826,7 +826,7 @@
                                     <div class="item item-card-num">*1234</div>
                                     <div class="item item-default auto-left"></div>
                                 </li>
-                                <li onclick="levelAnim('2,3,mypay,mypaycardinfo');">
+                                <li onclick="callLayer('.mypaycardinfo');">
                                     <div class="item item-img">
                                         <img src="../img/member/creditcard-03.svg" alt="">
                                     </div>
@@ -839,7 +839,7 @@
                                         <i class="material-icons">&#xE145;</i>
                                     </div>
                                     <div class="item add-card">
-                                        <button class="btn animated-btn text-left p-0" onclick="levelAnim('2,3,mypay,mypayaddcard');">新增信用卡</button>
+                                        <button class="btn animated-btn text-left p-0" onclick="callLayer('.mypayaddcard');">新增信用卡</button>
                                     </div>
                                 </li>
                             </ul>
@@ -855,7 +855,7 @@
         <div class="mypayaddcard">
             <div class="title-box">
                 <div class="item icon-btn">                        
-                    <button class="btn animated-btn" onclick="levelAnim('3,2,mypay,mypayaddcard');" data-toggle="tooltip" data-placement="bottom" title="回上一頁">
+                    <button class="btn animated-btn" onclick="backLayer();" data-toggle="tooltip" data-placement="bottom" title="回上一頁">
                         <i class="material-icons">&#xE314;</i>
                     </button>
                 </div>
@@ -911,7 +911,7 @@
         <div class="mypaycardinfo">
             <div class="title-box">
                 <div class="item icon-btn">                        
-                    <button class="btn animated-btn" onclick="levelAnim('3,2,mypay,mypaycardinfo');" data-toggle="tooltip" data-placement="bottom" title="回上一頁">
+                    <button class="btn animated-btn" onclick="backLayer();" data-toggle="tooltip" data-placement="bottom" title="回上一頁">
                         <i class="material-icons">&#xE314;</i>
                     </button>
                 </div>
@@ -967,7 +967,7 @@
         <div class="mypsw">
             <div class="title-box">
                 <div class="item icon-btn">                        
-                    <button class="btn animated-btn" onclick="levelAnim('2,1,mysetting,mypsw');" data-toggle="tooltip" data-placement="bottom" title="回上一頁">
+                    <button class="btn animated-btn" onclick="backLayer();" data-toggle="tooltip" data-placement="bottom" title="回上一頁">
                         <i class="material-icons">&#xE314;</i>
                     </button>
                 </div>
@@ -1012,7 +1012,7 @@
         <div class="mysocial">
             <div class="title-box">
                 <div class="item icon-btn">                        
-                    <button class="btn animated-btn" onclick="levelAnim('2,1,mysetting,mysocial');" data-toggle="tooltip" data-placement="bottom" title="回上一頁">
+                    <button class="btn animated-btn" onclick="backLayer();" data-toggle="tooltip" data-placement="bottom" title="回上一頁">
                         <i class="material-icons">&#xE314;</i>
                     </button>
                 </div>
@@ -1075,7 +1075,7 @@
         <div class="myfaq">
             <div class="title-box">
                 <div class="item icon-btn">                        
-                    <button class="btn animated-btn" onclick="levelAnim('2,1,mysetting,myfaq');" data-toggle="tooltip" data-placement="bottom" title="回上一頁">
+                    <button class="btn animated-btn" onclick="backLayer();" data-toggle="tooltip" data-placement="bottom" title="回上一頁">
                         <i class="material-icons">&#xE314;</i>
                     </button>
                 </div>
@@ -1088,12 +1088,11 @@
                 </p>
             </div>
         </div>
-
         <!--使用者規範2-->
         <div class="myclause">
             <div class="title-box">
                 <div class="item icon-btn">                        
-                    <button class="btn animated-btn" onclick="levelAnim('2,1,mysetting,myclause');" data-toggle="tooltip" data-placement="bottom" title="回上一頁">
+                    <button class="btn animated-btn" onclick="backLayer();" data-toggle="tooltip" data-placement="bottom" title="回上一頁">
                         <i class="material-icons">&#xE314;</i>
                     </button>
                 </div>
@@ -1231,12 +1230,11 @@
                     </div>
             </div>
         </div>
-
         <!--隱私權政策2-->
         <div class="myprivate">
             <div class="title-box">
                 <div class="item icon-btn">                        
-                    <button class="btn animated-btn" onclick="levelAnim('2,1,mysetting,myprivate');" data-toggle="tooltip" data-placement="bottom" title="回上一頁">
+                    <button class="btn animated-btn" onclick="backLayer();" data-toggle="tooltip" data-placement="bottom" title="回上一頁">
                         <i class="material-icons">&#xE314;</i>
                     </button>
                 </div>
@@ -1298,13 +1296,12 @@
                             </div>
                         </div>
             </div>
-        </div>
-    
+        </div>    
         <!--關於2-->
         <div class="myabout">
             <div class="title-box">
                 <div class="item icon-btn">                        
-                    <button class="btn animated-btn" onclick="levelAnim('2,1,mysetting,myabout');" data-toggle="tooltip" data-placement="bottom" title="回上一頁">
+                    <button class="btn animated-btn" onclick="backLayer();" data-toggle="tooltip" data-placement="bottom" title="回上一頁">
                         <i class="material-icons">&#xE314;</i>
                     </button>
                 </div>
@@ -1317,7 +1314,7 @@
                 </p>
             </div>
         </div>
-
+ 
     </div> 
 
 </div> 
@@ -1401,6 +1398,7 @@
     <script src="../js/vendor/imgLiquid.js"></script>
 
     <!-- custom js -->    
+    <script src="../js/animateCss.js"></script>
     <script>
         // (edit, clear, back, submit) button & input control
         $('.edit-btn').on('click',function(){

@@ -450,6 +450,10 @@ footer .menu-bar .customer-item img {
      object-fit: cover;
 }
 
+.btn-img img {
+  height: 24px;
+}
+
 .member-item-group {
   position: relative;
   background-color: #fff;
@@ -508,6 +512,10 @@ footer .menu-bar .customer-item img {
 
 .member-item-group .member-item-list .member-items .img-box {
   margin-bottom: 5px;
+}
+
+.my-list-box {
+  border-top: 1px #eee solid;
 }
 
 .my-list-box.edit-list ul li {
@@ -648,8 +656,12 @@ footer .menu-bar .customer-item img {
           box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
+.my-info-box .upload-box .add-btnbg {
+  width: 130px;
+}
+
 .my-info-box .passport-status {
-  margin-top: 3px;
+  margin-top: -6px;
   color: #8E8E93;
 }
 
@@ -1038,7 +1050,7 @@ input[type="file"] {
 .change-password-list ul li .text-muted {
   position: absolute;
   top: 100%;
-  color: #FF3B30 !important;
+  color: #F4246A !important;
 }
 
 .change-password-list ul li .material-icons {
@@ -1070,6 +1082,22 @@ input[type="file"] {
           box-shadow: 0 -5px 8px rgba(0, 0, 0, 0.2);
 }
 
+.text-pink {
+  color: #F4246A;
+}
+
+.note-box {
+  border-top: 5px #eee solid;
+}
+
+.note-box .note-item {
+  border-top: 1px #eee solid;
+  border-bottom: 1px #eee solid;
+  padding: 15px;
+  background-color: #fff;
+  font-size: 90%;
+}
+
 .auto-left {
   margin-left: auto;
   text-align: right;
@@ -1079,6 +1107,11 @@ input[type="file"] {
 
 #open-mask.modal-backdrop {
   z-index: 1040;
+}
+
+.outline-btn {
+  border-color: #F4246A;
+  color: #F4246A;
 }
 
 .member-body {

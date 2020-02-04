@@ -2610,56 +2610,7 @@ button.open-page {
 .radio-success input[type="radio"]:checked + label::after {
   background-color: #5cb85c; }
 
-/* animated control */
-  .s0{
-    overflow: hidden;
-    width: 100%;
-    height:100vh;
-  }
-  #s1,#s2,#s3,#s4,#s5,#s6 {
-    overflow-x: hidden;
-    overflow-y: auto;
-    width: 100%;
-    height: 100%;
-    min-height: 100vh;
-    position: absolute;
-    top: 0;
-    display: none;
-    background-color: #fff;
-    z-index: 301;
-    padding: 0;
-}
-
-#s1 > div,
-#s2 > div,
-#s3 > div,
-#s4 > div,
-#s5 > div,
-#s6 > div {
-    display: none;    
-    background-color: #fff;
-    min-height: 100vh;
-}
-
-.multilayer{
-  overflow-x:hidden;
-  overflow-y:auto;
-  width:100%;
-  position:absolute;
-  top:0;
-  display:none;
-  background-color:#fff;
-  z-index:1040;
-  height:100%;
-  min-height:100vh;
-  padding:0
-}
-.multilayer>div{
-  display:none;
-  background-color:#fff;
-  min-height:100vh;
-  position: absolute;
-}
+/* member private & clause */
 .memberprivate-box, 
 .memberclause-box {
   display: none;
@@ -2686,5 +2637,66 @@ button.open-page {
     ul{
       padding: .5em 0;
     }
+  }
+}
+
+/* animated control */
+.s0{
+  overflow: hidden;
+  width: 100%;
+  height:100vh;
+}
+#s1,#s2,#s3,#s4,#s5,#s6 {
+  overflow-x: hidden;
+  overflow-y: auto;
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  position: absolute;
+  top: 0;
+  display: none;
+  background-color: #fff;
+  z-index: 301;
+  padding: 0;
+}
+
+#s1 > div,
+#s2 > div,
+#s3 > div,
+#s4 > div,
+#s5 > div,
+#s6 > div {
+    display: none;    
+    background-color: #fff;
+    min-height: 100vh;
+}
+.multilayer{
+  width:100%;
+  position:absolute;
+  top:0;
+  display:none;
+  z-index:1040;
+  height:100%;
+  min-height:100vh;
+  padding:0
+}
+.multilayer>div{
+  overflow-x:hidden;
+  overflow-y:auto;
+  display:none;
+  background-color:#fff;
+  min-height:100vh;
+  position: absolute;  
+  &.uplayer{   
+    overflow-x:hidden; 
+    overflow-y:hidden;
+    position: absolute;
+    background-color:#fff;
+    z-index:1041;
+    display:none;
+    bottom: 0;
+    min-height:50vh;
+    border-top-left-radius: .5em;
+    border-top-right-radius: .5em;
   }
 }
