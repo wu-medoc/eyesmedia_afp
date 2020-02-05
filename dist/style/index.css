@@ -2925,6 +2925,45 @@ button.open-page img {
   padding: .5em 0;
 }
 
+/* overlay menu*/
+.overlay {
+  display: block;
+}
+
+.overlay-choice {
+  position: absolute;
+  left: 15px;
+  right: 15px;
+  bottom: 85px;
+  z-index: 600;
+}
+
+.overlay-choice .choice-list, .overlay-choice .choice-status {
+  background-color: #fff;
+  border-radius: 12px;
+}
+
+.overlay-choice .choice-list {
+  margin-bottom: 15px;
+}
+
+.overlay-choice .choice-list li {
+  padding: 10px 15px;
+  border-bottom: 1px #eee solid;
+  font-weight: 600;
+}
+
+.overlay-choice .choice-list li:last-child {
+  border-bottom: none;
+}
+
+.overlay-choice .choice-status {
+  padding: 10px 15px;
+  font-weight: 600;
+  text-align: center;
+  color: #4A90E2;
+}
+
 /* animated control */
 .s0 {
   overflow: hidden;

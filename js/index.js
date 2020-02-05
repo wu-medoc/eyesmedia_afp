@@ -424,6 +424,13 @@ function close_mask(e) {
     $('.'+e).css('display','none');
 };
 
+// div switch
+function div_switch() {
+    $('.div-switch.d-block').removeClass('d-block').addClass('d-none1');
+    $('.div-switch.d-none').removeClass('d-none').addClass('d-block');    
+    $('.div-switch.d-none1').removeClass('d-none1').addClass('d-none');
+};
+
 //memberclause & memberprivate
 window.onload = function(){   
     $('.memberclause').on('click', function(){  

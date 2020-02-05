@@ -285,38 +285,6 @@ input[type="file"] {
     }
 }
 
-.overlay{
-    display: block;
-}
-
-.overlay-choice{
-    position: absolute;
-    left: 15px;
-    right: 15px;
-    bottom: 60px;
-    z-index: 600;
-    .choice-list, .choice-status{
-        background-color: $default-white;
-        border-radius: 12px;
-    }
-    .choice-list{
-        margin-bottom: 15px;
-        li{
-            padding: 10px 15px;
-            border-bottom: 1px $gray-light solid;
-            font-weight: 600;
-            &:last-child{
-                border-bottom: none;
-            }
-        }
-    }
-    .choice-status{
-        padding: 10px 15px;
-        font-weight: 600;
-        text-align: center;
-        color: #4A90E2;
-    }
-}
 
 // 我的地址
 .my-address-list{
