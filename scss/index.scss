@@ -696,16 +696,16 @@ body.is-open-country .country-box {
 
 
 /* more-link */
-#setting.edit-mode .close-btn {
+.setting.edit-mode .close-btn {
   display: none;
 }
 
-#setting.edit-mode .service-box .service-title {
+.setting.edit-mode .service-box .service-title {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
 
-#setting.edit-mode .service-box .service-title .main-link {
+.setting.edit-mode .service-box .service-title .main-link {
   width: 100%;
   margin-top: 10px;
   display: -webkit-box;
@@ -713,18 +713,18 @@ body.is-open-country .country-box {
   display: flex;
 }
 
-#setting.edit-mode .edit-title-box {
+.setting.edit-mode .edit-title-box {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-#setting.edit-mode .link-item {
+.setting.edit-mode .link-item {
   background-color: #eee;
   border-radius: 5px;
 }
 
-#setting.edit-mode .link-item:before, #setting.edit-mode .link-item:after {
+.setting.edit-mode .link-item:before, .setting.edit-mode .link-item:after {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -733,65 +733,65 @@ body.is-open-country .country-box {
           justify-content: center;
 }
 
-#setting.edit-mode .link-item.add-item:before {
+.setting.edit-mode .link-item.add-item:before {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-#setting.edit-mode .link-item.remove-item:after {
+.setting.edit-mode .link-item.remove-item:after {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-#setting.edit-mode .title-group.no-edit {
+.setting.edit-mode .title-group.no-edit {
   display: none;
 }
 
-#setting.edit-mode .title-group.yes-edit {
+.setting.edit-mode .title-group.yes-edit {
   display: block;
 }
 
-#setting .aside-header {
+.setting .aside-header {
   padding: 10px 15px;
   border-bottom: 1px #eee solid;
 }
 
-#setting .close-btn {
+.setting .close-btn {
   font-size: 18px;
   font-weight: 700;
 }
 
-#setting .close-btn .material-icons {
+.setting .close-btn .material-icons {
   vertical-align: bottom;
 }
 
-#setting .edit-title-box {
+.setting .edit-title-box {
   display: none;
 }
 
-#setting .edit-title-box .edit-item {
+.setting .edit-title-box .edit-item {
   color: #0091FF;
   font-size: 16px;
 }
 
-#setting .edit-title-box .edit-item.edit-title {
+.setting .edit-title-box .edit-item.edit-title {
   font-size: 18px;
   font-weight: 700;
   margin: 0 auto;
   color: #333;
 }
 
-#setting .service-box {
+.setting .service-box {
   padding: 0 15px;
 }
 
-#setting .service-box.my-service {
+.setting .service-box.my-service {
   border-bottom: 3px #eee solid;
 }
 
-#setting .service-box .service-title {
+.setting .service-box .service-title {
   padding: 15px 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -801,34 +801,34 @@ body.is-open-country .country-box {
           align-items: center;
 }
 
-#setting .service-box .service-title .title-box {
+.setting .service-box .service-title .title-box {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   margin: 0 10px;
 }
 
-#setting .service-box .service-title .title-box .title-item {
+.setting .service-box .service-title .title-box .title-item {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
   margin-right: 10px;
 }
 
-#setting .service-box .service-title .title-box .title-item:last-child {
+.setting .service-box .service-title .title-box .title-item:last-child {
   margin-right: 0;
 }
 
-#setting .service-box .service-title .title-box .title-item .material-icons {
+.setting .service-box .service-title .title-box .title-item .material-icons {
   color: #8E8E93;
   vertical-align: text-top;
 }
 
-#setting .service-box .service-title .title-box img {
+.setting .service-box .service-title .title-box img {
   width: 30px;
 }
 
-#setting .service-box .service-title .edit-btn {
+.setting .service-box .service-title .edit-btn {
   margin-left: auto;
   background: -webkit-gradient(linear, right top, left top, from(#568EE3), to(#36D1DB));
   background: linear-gradient(270deg, #568EE3 0%, #36D1DB 100%);
@@ -841,17 +841,17 @@ body.is-open-country .country-box {
       align-self: center;
 }
 
-#setting .service-box .service-title .main-link {
+.setting .service-box .service-title .main-link {
   display: none;
 }
 
-#setting .service-box .main-link {
+.setting .service-box .main-link {
   margin: 0;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
 
-#setting .service-box .link-item {
+.setting .service-box .link-item {
   display: block;
   padding: 5px;
   width: 18%;
@@ -861,7 +861,7 @@ body.is-open-country .country-box {
   position: relative;
 }
 
-#setting .service-box .link-item:before, #setting .service-box .link-item:after {
+.setting .service-box .link-item:before, .setting .service-box .link-item:after {
   position: absolute;
   top: 3px;
   right: 3px;
@@ -874,19 +874,19 @@ body.is-open-country .country-box {
   font-size: 12px;
 }
 
-#setting .service-box .link-item:before {
+.setting .service-box .link-item:before {
   content: '\e145';
   background-color: #F8E71C;
   color: #273D52;
 }
 
-#setting .service-box .link-item:after {
+.setting .service-box .link-item:after {
   content: '\e15b';
   background: #FF0000;
   color: #fff;
 }
 
-#setting .title-group {
+.setting .title-group {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -895,11 +895,11 @@ body.is-open-country .country-box {
           flex: 1;
 }
 
-#setting .title-group.yes-edit {
+.setting .title-group.yes-edit {
   display: none;
 }
 
-#setting .title-group.yes-edit p {
+.setting .title-group.yes-edit p {
   color: #7688B0;
   font-size: 14px;
   margin-left: 15px;
