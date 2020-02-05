@@ -1095,4 +1095,17 @@ input[type="file"] {
   padding: .5em 0 .25em 0;
   font-weight: 700;
 }
+
+.coin-box {
+  margin: .25em 2em;
+  padding: 1em;
+  color: #fff;
+  border-radius: 1em;
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.coin-box img.coinimg-m {
+  width: 20px;
+  margin: 4px;
+}
 /*# sourceMappingURL=member.css.map */

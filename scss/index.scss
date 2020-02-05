@@ -1496,6 +1496,12 @@ footer.for-pc li{
     font-size: .8em;
   }
 }
+.lineargradient-purple {
+  background: -webkit-linear-gradient(top,#7787FE,#70B8FE);
+  background: -o-linear-gradient(bottom,#7787FE,#70B8FE);
+  background: -moz-linear-gradient(bottom,#7787FE,#70B8FE);
+  background: linear-gradient(to bottom,#7787FE,#70B8FE);
+}
 .lineargradient-blue {
   background: -webkit-linear-gradient(left top,#36D1DB,#568EE3);
   background: -o-linear-gradient(bottom right,#36D1DB,#568EE3);
