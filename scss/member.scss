@@ -588,3 +588,29 @@ input[type="file"] {
         margin: 4px;
     }
 }
+.member-bnbox{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    div{  
+        flex: 1;      
+        border-radius: 1rem;
+        padding-bottom: .5em;
+        img{
+            border-radius: .5em;
+        }
+    }
+}
+@media screen and (min-width: 571px) {
+    .member-bnbox{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+            div{  
+                flex: 0 50%; 
+                border-radius: 1rem;
+                padding-right: .5em;
+            }
+    }
+}

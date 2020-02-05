@@ -2510,6 +2510,14 @@ td.linebt-td,
   margin: .25em;
 }
 
+.btn-outline-white {
+  border: #fff 1px solid;
+  color: #fff;
+  border-radius: 30px;
+  padding: 4px 8px;
+  line-height: 1em;
+}
+
 button.open-page img {
   height: 2em;
 }
