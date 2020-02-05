@@ -532,6 +532,10 @@ body.is-open-country .country-box {
   white-space: nowrap;
 }
 
+.afp-tab-box #nav-tab-featured.nav-tabs {
+  border-bottom: 0px;
+}
+
 .afp-tab-box .tablist-panes {
   position: relative;
   display: block;

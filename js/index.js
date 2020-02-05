@@ -150,7 +150,7 @@ if ($( ".tablist-swiper" ).hasClass("swiper-container")) {
 if ($( ".travel-featuredbox" ).hasClass("swiper-container"))  {
     var swiper = new Swiper('.travel-featuredbox.swiper-container', {
         paginationClickable: true,
-        slidesPerView: 1.6,
+        slidesPerView: 1.5,
         spaceBetween: 10,
         breakpoints: {
           768: {
@@ -158,7 +158,7 @@ if ($( ".travel-featuredbox" ).hasClass("swiper-container"))  {
             spaceBetween: 20,
           },
           1024: {
-            slidesPerView: 2.7,
+            slidesPerView: 3,
             spaceBetween: 20,
           }
         },

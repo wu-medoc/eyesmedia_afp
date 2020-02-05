@@ -608,9 +608,12 @@ input[type="file"] {
         flex-direction: row;
         flex-wrap: wrap;
             div{  
-                flex: 0 50%; 
+                flex: 32% 32% 32%; 
                 border-radius: 1rem;
                 padding-right: .5em;
+                &:nth-child(3n+0){
+                    padding-right: 0;
+                }
             }
     }
 }

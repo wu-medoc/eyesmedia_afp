@@ -150,6 +150,7 @@
 
 .travel-featured h6 {
   font-weight: bold;
+  padding: .25em 0;
 }
 
 @media (min-width: 991px) and (max-width: 1024px) {

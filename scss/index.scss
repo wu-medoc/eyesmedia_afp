@@ -525,6 +525,9 @@ body.is-open-country .country-box {
       display: inline-block;
       white-space: nowrap;    
     }
+    &.nav-tabs{
+      border-bottom: 0px;
+    }
   }
   .tablist-panes {
     position: relative;
