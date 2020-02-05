@@ -36,7 +36,7 @@
 <body>    
 <div class="wrap container">
     <!--我的卡片1-->
-    <div class="mycard slideInRight animated">
+    <div class="mycard slideInRight animated div-switch d-block">
         <div class="title-box">
             <div class="item icon-btn">                        
                 <button class="btn animated-btn" onclick="countdown('member_index.html');" data-toggle="tooltip" data-placement="bottom" title="回上一頁">
@@ -44,7 +44,7 @@
                 </button>
             </div>
             <div class="item title-name">我的卡片</div>                
-            <div class="item icon-btn btn-img">  
+            <div class="item icon-btn btn-img">   
             </div>
         </div>
         <div class="my-info-box border-bottom-0">
@@ -62,13 +62,69 @@
             </label>
             <div class="passport-status">
                 立即新增卡片
-            </div>
+            </div>    
+            <button type="button" class="btn outline-btn w-100 mt-4" onclick="div_switch('.mycard','.mycardlist');">卡片列表(如有卡片時的顯示畫面)</button>   
         </div>
     </div>
-     
+  
+    <!--卡片列表-->
+    <div class="mycardlist div-switch d-none">
+        <div class="title-box">
+            <div class="item icon-btn">                        
+                <button class="btn animated-btn" onclick="countdown('member_index.html');" data-toggle="tooltip" data-placement="bottom" title="回上一頁">
+                    <i class="material-icons">&#xE314;</i>
+                </button>
+            </div>
+            <div class="item title-name">我的卡片</div>                
+            <div class="item icon-btn btn-img">                       
+                <button class="btn animated-btn" onclick="callLayer('.mycardadd');" data-toggle="tooltip" data-placement="bottom" title="新增卡片">
+                    <i class="material-icons">&#xe145;</i>
+                </button>
+            </div>
+        </div>
+        <div class="my-list-box border-bottom-0">       
+            <ul>
+                <li>                                                  
+                    <button class="btn open-overlay-choice w-100"> 
+                        <div class="flex-inline-between">
+                            <div class="item item-img">
+                                <img src="../img/member/mycard-ipass.svg" alt="">
+                            </div>
+                            <div class="item">
+                                <div class="item card-type">Mobii好玩卡</div>
+                                <div class="item item-card-num">123 456890 1</div>
+                            </div>
+                        </div>     
+                    </button>
+                </li>
+            </ul>
+        </div>
+        <!--修改卡片選單-->
+        <div class="overlay-choice" style="display: none;">
+            <div class="choice-list">
+                <ul>
+                    <li>
+                        <button class="btn close-overlay-choice w-100" onclick="callLayer('.mycardedit');">
+                            編輯此卡
+                        </button>
+                    </li>
+                    <li>
+                        <button class="btn close-overlay-choice w-100 msg-open" value="msg-mycard" data-toggle="modal" data-target="#messageModal" data-dismiss="modal" aria-label="Close">
+                            解除此卡
+                        </button>
+                    </li>
+                </ul>
+            </div>
+            <div class="choice-status close-overlay-choice">
+                取消
+            </div>
+        </div>
+        <div class="mask-bk fade show d-none"></div>
+    </div>    
 
     <!--次頁-->
-    <div class="multilayer">
+    <div class="multilayer">       
+
         <!--新增卡片2-->
         <div class="mycardadd">
             <div class="title-box">
@@ -77,7 +133,7 @@
                         <i class="material-icons">&#xE314;</i>
                     </button>
                 </div>
-                <div class="item title-name">新增會員片</div>                
+                <div class="item title-name">新增會員卡</div>                
                 <div class="item">     
                 </div>
             </div>
@@ -89,14 +145,12 @@
                             <div class="item input-box">
                                 <input type="text" value="" placeholder="自訂卡片名稱">
                             </div>
-                            <div class="item auto-left infohas d-none">MoBii好玩卡</div>
                         </li>
                         <li>
                             <div class="item">卡片號碼</div>
                             <div class="item input-box">
                                 <input type="text" value="" placeholder="請輸入">
                             </div>
-                            <div class="item auto-left infohas d-none">123456789</div>
                         </li>
                     </ul>
                 </div>
@@ -104,12 +158,50 @@
                     <div class="note-item">不知道卡片號碼在哪裡？<span class="text-pink" onclick="callLayerUp('.mycardprompt');open_mask('uplayer');">請看這裡</span></div>
                 </div> 
                 <div class="fixed-btn container">
-                    <button type="button" class="btn next-btn w-100">確認</button>
-                </div>                 
+                    <button type="button" class="btn next-btn w-100 msg-open" value="msg-mycard" data-toggle="modal" data-target="#messageModal" data-dismiss="modal" aria-label="Close">確認</button>
+                </div>          
                 <div class="mask-bk fade show d-none"></div>
             </div>
         </div> 
-        
+         <!--修改卡片2-->
+         <div class="mycardedit">
+            <div class="title-box">
+                <div class="item icon-btn">                        
+                    <button class="btn animated-btn" onclick="backLayer();" data-toggle="tooltip" data-placement="bottom" title="回上一頁">
+                        <i class="material-icons">&#xE314;</i>
+                    </button>
+                </div>
+                <div class="item title-name">修改會員卡</div>                
+                <div class="item">     
+                </div>
+            </div>
+            <div class="my-list-box">
+                <div class="item">
+                    <ul>
+                        <li>
+                            <div class="item">名稱</div>
+                            <div class="item input-box">
+                                <input type="text" value="MoBii好玩卡" placeholder="自訂卡片名稱">
+                            </div>
+                        </li>
+                        <li>
+                            <div class="item">卡片號碼</div>
+                            <div class="item input-box">
+                                <input type="text" value="123 456890 1" placeholder="請輸入">
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="item note-box">
+                    <div class="note-item">不知道卡片號碼在哪裡？<span class="text-pink" onclick="callLayerUp('.mycardprompt');open_mask('uplayer');">請看這裡</span></div>
+                </div> 
+                <div class="fixed-btn container">
+                    <button type="button" class="btn next-btn w-100 msg-open" value="msg-mycard" data-toggle="modal" data-target="#messageModal" data-dismiss="modal" aria-label="Close">完成</button>
+                </div>          
+                <div class="mask-bk fade show d-none"></div>
+            </div>
+        </div> 
+
         <!--卡片圖示-->
         <div class="mycardprompt uplayer">
             <div class="p-4">
@@ -217,7 +309,7 @@
             $('footer.for-pc').css('position','absolute');
         };        
         $('footer.for-pc').css('position','absolute'); //github use(正式可刪除)
-
+        
 
         // Leave Forwarding
         function countdown(e) {
@@ -225,15 +317,12 @@
             $('.mycard').removeClass('slideInRight').addClass('slideOutRight');
         };
 
-        // black mask
-        function open_mask(e) {
-            $('.mask-bk').removeClass('d-none').addClass('d-block');
-            $('.'+e).css('display','block');
+        // div switch
+        function div_switch(x,y) {
+            $(x).removeClass('d-block').addClass('d-none');
+            $(y).removeClass('d-none').addClass('d-block');
         };
-        function close_mask(e) {
-            $('.mask-bk').removeClass('d-block').addClass('d-none');
-            $('.'+e).css('display','none');
-        };
+
     </script>
 
     <script>    

@@ -13,8 +13,6 @@ var swiper = new Swiper('.kv-box .swiper-container', {
         },
 });
 
-
-
 // ad
 // 超過一張才執行 swiper，並且顯示 pagination
 if ($('.ad-box .swiper-slide').length>1) {
@@ -87,7 +85,6 @@ $('.bar-item').on('click', function() {
     $(this).addClass('active');
 })
 
-
 // web service JS 
 $(document).on( 'scroll', function(){        
     if ($(window).scrollTop() > 100) {
@@ -104,6 +101,8 @@ $("#webservice_close").on('click', function(){
     $('#webservice_close').addClass('d-none');
     $('#webservice').removeClass();
 });
+
+/******** swiper begin**********/ 
 // swiper JS for index
 if ($( ".index-gowhere" ).hasClass("swiper-container")) {
     var swiper = new Swiper('.index-gowhere.swiper-container', {
@@ -129,7 +128,6 @@ if ($( ".index-icon" ).hasClass("swiper-container"))  {
         loop: false
     });
 }
-
 
 // swiper JS for travel
 if ($( ".tablist-swiper" ).hasClass("swiper-container")) {
@@ -255,6 +253,8 @@ var swiper = new Swiper('.shopping-productsimg.swiper-container', {
       },
     });
 }
+/******** swiper end**********/ 
+
 
 // open-page
 $( ".open-page" ).on('click', function () {
@@ -361,57 +361,6 @@ if($('.number-spinner').length>0) {
     });
 }
 
-// animated control slideInRight slideOutRight
-// function levelAnim(obj){
-//     var anim = obj.split(",");
-//     var thislevel = anim[0];
-//     var sublevel = anim[1];
-//     var subpa = anim[2];
-//     var subchild = anim[3];   
-//     if (thislevel < sublevel) { 
-//         //in thislevel < sublevel                   
-//         $('.multilayer').removeClass('slideOutRight slideInRight fast animated d-block container'); 
-//         $('.multilayer>div').removeClass('slideInRight slideOutRight animated d-block container');         
-//         $('.multilayer').addClass('slideInRight animated fast d-block container');   
-//         $('.'+subchild).addClass('slideInRight animated d-block container');   
-//         if (sublevel >1) {  //out Previous layer
-//             $('.'+subpa).addClass('slideOutRight animated d-block container'); 
-//         };  
-//     } else { 
-//         //out thislevel > sublevel
-//         $('.multilayer>div').removeClass('slideInRight slideOutRight animated d-block container');
-//         $('.'+subchild).addClass('slideOutRight animated d-block container'); 
-//         $('.'+subpa).addClass('slideInRight animated d-block container');   
-//         if (sublevel == 0){  //out multilayer
-//             $('.multilayer').removeClass('slideInRight animated fast d-block container');
-//             $('.multilayer').addClass('slideOutRight animated fast d-block container');
-//         };
-//     };    
-// };
-
-// multilayer animateCss
-var tLayer = [];
-function callLayer(nextLayer) {
-	if (tLayer.length === 0) { $('.multilayer').animateCss('slideInRight', '+d-block container'); }
-	if (tLayer[tLayer.length - 1] !== nextLayer) { tLayer.push(nextLayer); }
-	$(nextLayer).animateCss('slideInRight', '+d-block container');
-}
-function backLayer() {
-	$(tLayer.pop()).animateCss('slideOutRight', '-d-block container');
-	if (tLayer.length === 0) { $('.multilayer').animateCss('slideOutRight', '-d-block container'); }
-}
-var tLayerUp = [];
-function callLayerUp(nextLayerUp) {
-	if (tLayerUp.length === 0) { $('.uplayer').animateCss('slideInUp', '+d-block container'); }
-	if (tLayerUp[tLayerUp.length - 1] !== nextLayerUp) { tLayerUp.push(nextLayerUp); }
-	$(nextLayerUp).animateCss('slideInUp', '+d-block container');
-}
-function backLayerUp() {
-	$(tLayerUp.pop()).animateCss('slideOutDown', '-d-block container');
-	if (tLayerUp.length === 0) { $('.uplayer').animateCss('slideOutDown', '-d-block container'); }
-}
-
-
 $(document).ready(function(){
     // bear service
     var windowHight = $(window).height();
@@ -465,8 +414,18 @@ $(document).ready(function(){
     }); 
 });
 
+// black mask
+function open_mask(e) {
+    $('.mask-bk').removeClass('d-none').addClass('d-block');
+    $('.'+e).css('display','block');
+};
+function close_mask(e) {
+    $('.mask-bk').removeClass('d-block').addClass('d-none');
+    $('.'+e).css('display','none');
+};
+
+//memberclause & memberprivate
 window.onload = function(){   
-    //memberclause & memberprivate
     $('.memberclause').on('click', function(){  
         openMask();
         $('.memberclause-box').slideToggle();   
@@ -490,3 +449,66 @@ function openMask(e) {
         $('#open-mask').removeClass();
     };
 };
+
+
+        
+// overlay-choice open close control
+$('.open-overlay-choice').on("click", function () {
+    $('.overlay-choice').toggle();
+    $('.mask-bk.fade.show').removeClass("d-none");
+});
+$('.close-overlay-choice').on("click", function () {
+    $('.overlay-choice').toggle();
+    $('.mask-bk.fade.show').addClass("d-none");
+});
+
+// animated control slideInRight slideOutRight
+// function levelAnim(obj){
+//     var anim = obj.split(",");
+//     var thislevel = anim[0];
+//     var sublevel = anim[1];
+//     var subpa = anim[2];
+//     var subchild = anim[3];   
+//     if (thislevel < sublevel) { 
+//         //in thislevel < sublevel                   
+//         $('.multilayer').removeClass('slideOutRight slideInRight fast animated d-block container'); 
+//         $('.multilayer>div').removeClass('slideInRight slideOutRight animated d-block container');         
+//         $('.multilayer').addClass('slideInRight animated fast d-block container');   
+//         $('.'+subchild).addClass('slideInRight animated d-block container');   
+//         if (sublevel >1) {  //out Previous layer
+//             $('.'+subpa).addClass('slideOutRight animated d-block container'); 
+//         };  
+//     } else { 
+//         //out thislevel > sublevel
+//         $('.multilayer>div').removeClass('slideInRight slideOutRight animated d-block container');
+//         $('.'+subchild).addClass('slideOutRight animated d-block container'); 
+//         $('.'+subpa).addClass('slideInRight animated d-block container');   
+//         if (sublevel == 0){  //out multilayer
+//             $('.multilayer').removeClass('slideInRight animated fast d-block container');
+//             $('.multilayer').addClass('slideOutRight animated fast d-block container');
+//         };
+//     };    
+// };
+
+// multilayer animateCss
+var tLayer = [];
+function callLayer(nextLayer) {
+	if (tLayer.length === 0) { $('.multilayer').animateCss('slideInRight', '+d-block container'); }
+	if (tLayer[tLayer.length - 1] !== nextLayer) { tLayer.push(nextLayer); }
+	$(nextLayer).animateCss('slideInRight', '+d-block container');
+}
+function backLayer() {
+	$(tLayer.pop()).animateCss('slideOutRight', '-d-block container');
+	if (tLayer.length === 0) { $('.multilayer').animateCss('slideOutRight', '-d-block container'); }
+}
+var tLayerUp = [];
+function callLayerUp(nextLayerUp) {
+	if (tLayerUp.length === 0) { $('.uplayer').animateCss('slideInUp', '+d-block container'); }
+	if (tLayerUp[tLayerUp.length - 1] !== nextLayerUp) { tLayerUp.push(nextLayerUp); }
+	$(nextLayerUp).animateCss('slideInUp', '+d-block container');
+}
+function backLayerUp() {
+	$(tLayerUp.pop()).animateCss('slideOutDown', '-d-block container');
+	if (tLayerUp.length === 0) { $('.uplayer').animateCss('slideOutDown', '-d-block container'); }
+}
+
