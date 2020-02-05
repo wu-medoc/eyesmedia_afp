@@ -502,7 +502,7 @@ var tLayer = [];
 function callLayer(nextLayer) {
 	if (tLayer.length === 0) { $('.multilayer').animateCss('slideInRight', '+d-block container fast'); }
 	if (tLayer[tLayer.length - 1] !== nextLayer) { tLayer.push(nextLayer); }
-	$(nextLayer).animateCss('slideInRight', '+d-block container fast');
+    $(nextLayer).animateCss('slideInRight', '+d-block container fast');
 }
 function backLayer() {
 	$(tLayer.pop()).animateCss('slideOutRight', '-d-block container fast');
