@@ -518,12 +518,14 @@ body.is-open-country .country-box {
 }
 
 /* afp-tab-box */
+.afp-tab-box #nav-tab-coupon,
 .afp-tab-box #nav-tab-featured {
-  display: block;
+  display: inline-table;
   overflow: visible;
   white-space: nowrap;
 }
 
+.afp-tab-box #nav-tab-coupon li,
 .afp-tab-box #nav-tab-featured li {
   font-size: .9em;
   text-align: center;
@@ -532,6 +534,7 @@ body.is-open-country .country-box {
   white-space: nowrap;
 }
 
+.afp-tab-box #nav-tab-coupon.nav-tabs,
 .afp-tab-box #nav-tab-featured.nav-tabs {
   border-bottom: 0px;
 }
@@ -621,6 +624,7 @@ body.is-open-country .country-box {
   cursor: pointer;
 }
 
+/* all tablist-link */
 .afp-tab-box .tablist-link {
   display: inline-block;
   color: #182B56;
@@ -642,6 +646,12 @@ body.is-open-country .country-box {
   bottom: -5px;
   -webkit-transition: .5s width;
   transition: .5s width;
+}
+
+.afp-tab-box a.tablist-link.link-pink.active:hover::after,
+.afp-tab-box a.tablist-link.link-pink.active.show::after,
+.afp-tab-box .tablist-link.link-pink::after {
+  background-color: #E473FF;
 }
 
 .afp-tab-box a.tablist-link.active::after,
@@ -667,6 +677,7 @@ body.is-open-country .country-box {
   font-weight: 700;
 }
 
+/* index 周邊推薦 */
 .afp-tab-box .tab-content .content-list {
   display: -webkit-box;
   display: -ms-flexbox;

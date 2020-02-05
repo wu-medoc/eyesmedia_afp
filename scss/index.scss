@@ -514,8 +514,9 @@ body.is-open-country .country-box {
 
 /* afp-tab-box */
 .afp-tab-box {
+  #nav-tab-coupon, 
   #nav-tab-featured {
-    display: block;
+    display: inline-table;
     overflow: visible;
     white-space:nowrap;
     li{
@@ -603,11 +604,12 @@ body.is-open-country .country-box {
   }
 }
 
+/* all tablist-link */
 .afp-tab-box{
   .tablist-link {
     display: inline-block;
     color: #182B56;
-  }
+  }  
   a.tablist-link.active:hover::after, 
   a.tablist-link.active.show::after,
   .tablist-link::after {
@@ -624,6 +626,11 @@ body.is-open-country .country-box {
     bottom: -5px;
     -webkit-transition: .5s width;
     transition: .5s width;
+  }  
+  a.tablist-link.link-pink.active:hover::after, 
+  a.tablist-link.link-pink.active.show::after,
+  .tablist-link.link-pink::after {
+    background-color: #E473FF;
   }
   a.tablist-link.active::after, 
   a.tablist-link.active.show::after, 
@@ -648,6 +655,7 @@ body.is-open-country .country-box {
   }
 }
 
+/* index 周邊推薦 */
 .afp-tab-box{
   .tab-content {
     .content-list {
