@@ -2292,7 +2292,7 @@ td.linebt-td,
   overflow: hidden;
   background-position: center center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
 }
 
 .rwdimg-h65 {
@@ -2620,6 +2620,15 @@ button.open-page img {
   line-height: 3em;
 }
 
+.border-radius30 {
+  border-radius: 30px;
+}
+
+.border-radius5 {
+  border-radius: .5em;
+}
+
+/* badge */
 .badge-img {
   position: relative;
   display: inline-block;
@@ -2641,6 +2650,7 @@ button.open-page img {
   height: 2.3em;
 }
 
+/* add favorite */
 .item-favorite {
   position: absolute;
   width: 2em;

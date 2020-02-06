@@ -2,6 +2,11 @@
 @import "../dist/style/module/variable";
 @import "../dist/style/module/global";
 
+.mymember {
+    position: relative;
+    height: 71vh;
+    display: block;
+}
 .member-top-box{
     position: relative;
     background-color: $member-default;
@@ -534,6 +539,20 @@ input[type="file"] {
 .text-pink{
     color: #F4246A;
 }   
+.bg-pink{
+    color: #fff;
+    background-color: #F4246A;
+}  
+.text-lightpink{
+    color: #E473FF;
+}   
+.bg-lightpink{
+    color: #fff;
+    background-color: #E473FF;
+}   
+.bg-lightpink-1{
+    background-color: rgba(228, 115, 255, 0.1);
+}   
 .note-box{    
     border-top: 5px #eee solid;
     .note-item{
@@ -583,83 +602,54 @@ input[type="file"] {
     color: #fff;
     border-radius: 1em;
     background: rgba(255, 255, 255, 0.3);
-    img.coinimg-m{
-        width: 20px;
-        margin: 4px;
+}
+.mycoin-couponbox{    
+    &.card-columns {
+        background-color: #fff;
+        .card{
+            margin-top: .25em;
+            box-shadow: 0 0 3px rgba(0,0,0,.2);
+            -webkit-column-break-inside: avoid;
+        }
+        column-count: 1;
+        @media screen and (min-width: 767px) {
+            column-count: 2;
+            flex-wrap: wrap;
+        }
     }
 }
-.couponbox-item {
-    border: #eee 1px solid;
-    .item{
-        &:first-child{
-            border-top-left-radius: .5em;
-            border-top-right-radius: .5em;
-        }
+img.coinimg-m{
+    width: 1.2em;
+    margin: 4px;
+}
+/* member-flex */
+.member-flex{
+    width: 100%;
+    display: flex;      
+    align-items: center;
+    div.item{  
+        flex: 1;      
+        padding-bottom: .5em;
+        padding-right: .5em;
         &:last-child{
-            border-bottom-left-radius: .5em;
-            border-bottom-right-radius: .5em;
+            padding-right: 0;
         }
-    }
-}
-
-/* flex-box 3 column */
-.member-flex3{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    div{  
-        flex: 1;      
-        border-radius: 1rem;
-        padding-bottom: .5em;
-        img{
-            border-radius: .5em;
+        &.one{
+            flex-grow: 1; 
         }
-    }
-}
-@media screen and (min-width: 571px) {
-    .member-flex3{
-        width: 100%;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-            div{  
-                flex: 32% 32% 32%; 
-                border-radius: 1rem;
-                padding-right: .5em;
-                &:nth-child(3n+0){
-                    padding-right: 0;
-                }
-            }
-    }
-}
-
-/* flex-box 2 column */
-.member-flex2{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    div{  
-        flex: 1;      
-        border-radius: 1rem;
-        padding-bottom: .5em;
-        img{
-            border-radius: .5em;
+        &.two{
+            flex-grow: 2; 
         }
-    }
-}
-@media screen and (min-width: 571px) {
-    .member-flex2{
-        width: 100%;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-            div{  
-                flex: 0 50%; 
-                border-radius: 1rem;
-                padding-right: .5em;
-                &:nth-child(2n+0){
-                    padding-right: 0;
-                }
-            }
-    }
+        &.three{
+            flex-grow: 3; 
+        }
+        &.four{
+            flex-grow: 4; 
+        }
+    }   
+    &.flex-coinbn{        
+        @media screen and (max-width: 571px) {
+            flex-direction: column;
+        }        
+    } 
 }

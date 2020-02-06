@@ -201,13 +201,7 @@ li {
 
 .addheight {
   background-color: #fff;
-  height: 180px;
-}
-
-@media screen and (max-width: 570px) {
-  .addheight {
-    height: 5em;
-  }
+  height: 90px;
 }
 
 .disabled-btn {
@@ -333,10 +327,17 @@ footer.for-pc {
   background: #f8f8f8;
   width: 100%;
   position: relative;
+  display: inline-block;
   bottom: 0;
   margin-top: -180px;
   height: 180px;
   clear: both;
+}
+
+@media screen and (max-width: 570px) {
+  footer.for-pc {
+    display: none;
+  }
 }
 
 footer .menu-bar {
