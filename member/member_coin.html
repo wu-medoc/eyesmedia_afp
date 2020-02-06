@@ -65,7 +65,7 @@
         </div>
         <div class="p-3">
             <h6 class="py-2 font-bold">魔幣遊樂園</h6>
-            <div class="member-bnbox">
+            <div class="member-flex3">
                 <div class="item">                    
                     <img src="../img/member/member-bn-01.jpg" class="img-fluid" alt="">
                 </div>
@@ -113,17 +113,37 @@
                 <!-- Tab panes -->
                 <div class="tablist-panes border-t pt-2">
                     <div role="tabpanel" class="tab-pane fade active show w-100" id="tag01">
-                        <div class="mycoin-couponbox swiper-container">
-                            <div class="swiper-wrapper">
-                                <div class="swiper-slide">
-                                    <div class="item-body">
-                                        1
+                        <div class="mycoin-couponbox">
+                            <div class="member-flex2">
+                                <div class="item">         
+                                    <div class="couponbox-item"> 
+                                        <div class="item">
+                                            <div style="background-image: url('../img/shopping/store/store-logo2.png');height:5em;width:5em;" class="rwdimg"></div>
+                                        </div>
+                                        <div class="item">
+                                            <p>7-11</p>
+                                            <p>關東煮9折 兌換券</p>
+                                            <p>2019/11/15 ~ 2019/12/31</p>
+                                        </div>
+                                        <div class="item">
+                                            <button class="default-btn">領取</button>
+                                            <div class="m-quantity"><img src="../img/shopping/icon_m.svg"> 1</div>
+                                        </div>
+                                    </div>       
+                                    <div class="couponbox-item flex-inline-between">    
+                                        <div class="shopping-store-badge">                        
+                                            <span class="badge badge-pill badge-light text-info"><img src="../img/explore/icon/icon_explore_food.svg" alt="">美食</span>     
+                                        </div>                                        
+                                        <div class="item txt-line-clamp1">
+                                            近高雄巨蛋捷運站
+                                        </div>                                
+                                        <div class="item">
+                                            距離33km
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="swiper-slide">
-                                    <div class="item-body">
-                                        1
-                                    </div>
+                                <div class="item">
+
                                 </div>
                             </div>
                         </div>
@@ -263,11 +283,11 @@
                 </div>  
                 <div class="w-100"></div>
                 <div class="col-12 border-t">
-                <div class="f-left">
-                    <object data="../img/index/logo-s.svg" width="30" type="image/svg+xml"></object><span> Designed by Asia Fun Pass</span>
+                <div class="f-left small-70">
+                <object data="../img/index/logo-s.svg" width="30" type="image/svg+xml"></object><span> Designed by Asia Fun Pass</span>
                 </div>
-                <div class="f-right">
-                    Ⓒ2020 Asia Fun Pass. All Right Reserved          
+                <div class="f-right small-70">
+                Ⓒ2020 Asia Fun Pass. All Right Reserved          
                 </div>
                 </div>
             </div>  
@@ -323,18 +343,18 @@
     <script src="../js/animateCss.js"></script>
     <script>
         // footer control
-        function getRootPath(){ 
-            var strFullPath=window.document.location.href; 
-            var strPath=window.document.location.pathname; 
-            var pos=strFullPath.indexOf(strPath); 
-            var prePath=strFullPath.substring(0,pos); 
-            var postPath=strPath.substring(0,strPath.substr(1).indexOf('/')+1); 
-            return(strPath); 
-        };
-        if (getRootPath().toLowerCase().indexOf("member")>0){
-            $('footer.for-pc').css('position','absolute');
-        };        
-        $('footer.for-pc').css('position','absolute'); //github use(正式可刪除)
+        // function getRootPath(){ 
+        //     var strFullPath=window.document.location.href; 
+        //     var strPath=window.document.location.pathname; 
+        //     var pos=strFullPath.indexOf(strPath); 
+        //     var prePath=strFullPath.substring(0,pos); 
+        //     var postPath=strPath.substring(0,strPath.substr(1).indexOf('/')+1); 
+        //     return(strPath); 
+        // };
+        // if (getRootPath().toLowerCase().indexOf("member")>0){
+        //     $('footer.for-pc').css('position','absolute');
+        // };        
+        //$('footer.for-pc').css('position','absolute'); //github use(正式可刪除)
         
 
         // Leave Forwarding

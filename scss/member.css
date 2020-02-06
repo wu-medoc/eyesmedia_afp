@@ -1,21 +1,21 @@
 /*
 Error: Invalid CP950 character "\xE6"
-        on line 99 of D:\eyesmedia\ASIAfunPASS\github\afp\eyesmedia_afp\scss\member.scss
+        on line 103 of D:\eyesmedia\ASIAfunPASS\github\afp\eyesmedia_afp\scss\member.scss
 
-94:             }
-95:         }
-96:     }
-97: }
-98: 
-99: // 我的帳戶
-100: .my-list-box{
-101:     &.edit-list{
-102:         ul{
-103:             li{
-104:                 border-bottom: none;
+98:             }
+99:         }
+100:     }
+101: }
+102: 
+103: // 我的帳戶 & mycard
+104: .my-list-box{
+105:     border-top: 1px $gray-light solid;
+106:     &.edit-list{
+107:         ul{
+108:             li{
 
 Backtrace:
-D:\eyesmedia\ASIAfunPASS\github\afp\eyesmedia_afp\scss\member.scss:99
+D:\eyesmedia\ASIAfunPASS\github\afp\eyesmedia_afp\scss\member.scss:103
 C:/Program Files/Adobe/Adobe Dreamweaver CC 2018/ruby/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/util.rb:1325:in `rescue in block in find_encoding_error'
 C:/Program Files/Adobe/Adobe Dreamweaver CC 2018/ruby/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/util.rb:1322:in `block in find_encoding_error'
 C:/Program Files/Adobe/Adobe Dreamweaver CC 2018/ruby/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/util.rb:1321:in `each'
@@ -37,4 +37,4 @@ C:/Program Files/Adobe/Adobe Dreamweaver CC 2018/ruby/bin/sass:22:in `<main>'
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Invalid CP950 character \"\xE6\"\A         on line 99 of D:\eyesmedia\ASIAfunPASS\github\afp\eyesmedia_afp\scss\member.scss\A \A 94:             }\A 95:         }\A 96:     }\A 97: }\A 98: \A 99: // 我的帳戶\A 100: .my-list-box{\A 101:     &.edit-list{\A 102:         ul{\A 103:             li{\A 104:                 border-bottom: none;"; }
+  content: "Error: Invalid CP950 character \"\xE6\"\A         on line 103 of D:\eyesmedia\ASIAfunPASS\github\afp\eyesmedia_afp\scss\member.scss\A \A 98:             }\A 99:         }\A 100:     }\A 101: }\A 102: \A 103: // 我的帳戶 & mycard\A 104: .my-list-box{\A 105:     border-top: 1px $gray-light solid;\A 106:     &.edit-list{\A 107:         ul{\A 108:             li{"; }

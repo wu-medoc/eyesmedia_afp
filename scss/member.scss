@@ -588,7 +588,22 @@ input[type="file"] {
         margin: 4px;
     }
 }
-.member-bnbox{
+.couponbox-item {
+    border: #eee 1px solid;
+    .item{
+        &:first-child{
+            border-top-left-radius: .5em;
+            border-top-right-radius: .5em;
+        }
+        &:last-child{
+            border-bottom-left-radius: .5em;
+            border-bottom-right-radius: .5em;
+        }
+    }
+}
+
+/* flex-box 3 column */
+.member-flex3{
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -602,7 +617,7 @@ input[type="file"] {
     }
 }
 @media screen and (min-width: 571px) {
-    .member-bnbox{
+    .member-flex3{
         width: 100%;
         display: flex;
         flex-direction: row;
@@ -612,6 +627,37 @@ input[type="file"] {
                 border-radius: 1rem;
                 padding-right: .5em;
                 &:nth-child(3n+0){
+                    padding-right: 0;
+                }
+            }
+    }
+}
+
+/* flex-box 2 column */
+.member-flex2{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    div{  
+        flex: 1;      
+        border-radius: 1rem;
+        padding-bottom: .5em;
+        img{
+            border-radius: .5em;
+        }
+    }
+}
+@media screen and (min-width: 571px) {
+    .member-flex2{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+            div{  
+                flex: 0 50%; 
+                border-radius: 1rem;
+                padding-right: .5em;
+                &:nth-child(2n+0){
                     padding-right: 0;
                 }
             }

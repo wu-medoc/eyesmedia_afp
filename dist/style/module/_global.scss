@@ -200,7 +200,10 @@ li {
 
 .addheight{
   background-color: #fff;
-  height: 5em;
+  height: 180px;
+  @media screen and (max-width: 570px) {
+    height: 5em;
+  }
 }
 // 全站 btn
 .disabled-btn {
@@ -326,6 +329,9 @@ footer.for-pc{
   width: 100%;
   position: relative;
   bottom: 0;
+  margin-top: -180px;
+  height: 180px;
+  clear:both;
 }
 
 footer .menu-bar {
