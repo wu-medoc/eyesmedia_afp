@@ -629,8 +629,10 @@ img.coinimg-m{
     align-items: center;
     div.item{  
         flex: 1;      
-        padding-bottom: .5em;
-        padding-right: .5em;
+        padding-bottom: .5em;    
+        @media screen and (min-width: 570px) {            
+            padding-right: .5em;
+        }   
         &:last-child{
             padding-right: 0;
         }

@@ -1181,7 +1181,12 @@ img.coinimg-m {
       -ms-flex: 1;
           flex: 1;
   padding-bottom: .5em;
-  padding-right: .5em;
+}
+
+@media screen and (min-width: 570px) {
+  .member-flex div.item {
+    padding-right: .5em;
+  }
 }
 
 .member-flex div.item:last-child {

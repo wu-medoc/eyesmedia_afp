@@ -537,6 +537,7 @@ body.is-open-country .country-box {
 }
 
 .afp-tab-box {
+  .nav-tab-list,  
   #nav-tab.nav-tabs {
     display: flex;
     flex-wrap: inherit;
@@ -1308,7 +1309,7 @@ body.is-open-country .country-box {
   border-top: 1px solid #ccc;
 }
 .border-b{
-  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
 }
 .f-left{
   float: left;

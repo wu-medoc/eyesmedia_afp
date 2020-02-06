@@ -67,13 +67,13 @@
             <h6 class="py-2 font-bold">魔幣遊樂園</h6>
             <div class="member-flex flex-coinbn">
                 <div class="item">                    
-                    <img src="../img/member/member-bn-01.jpg" class="img-fluid" alt="">
+                    <img src="../img/member/member-bn-01.jpg" class="img-fluid border-radius5" alt="">
                 </div>
                 <div class="item">                    
-                    <img src="../img/member/member-bn-02.jpg" class="img-fluid" alt="">
+                    <img src="../img/member/member-bn-02.jpg" class="img-fluid border-radius5" alt="">
                 </div>
                 <div class="item">                    
-                    <img src="../img/member/member-bn-03.jpg" class="img-fluid" alt="">
+                    <img src="../img/member/member-bn-03.jpg" class="img-fluid border-radius5" alt="">
                 </div>
             </div>            
         </div>
@@ -809,9 +809,128 @@
     <!--次頁-->
     <div class="multilayer">       
 
-        <!---->
+        <!--魔幣紀錄-->
         <div class="mycoinrecord">
-
+            <div class="title-box">
+                <div class="item icon-btn">                        
+                    <button class="btn animated-btn" onclick="backLayer();" data-toggle="tooltip" data-placement="bottom" title="回上一頁">
+                        <i class="material-icons">&#xE314;</i>
+                    </button>
+                </div>
+                <div class="item title-name">魔幣紀錄</div>
+                <div class="item icon-btn"></div>
+            </div>
+            <div class="lineargradient-purple">
+                <div class="text-white p-3 member-flex">
+                    <div class="item three">
+                        <h5><img src="../img/shopping/icon_m.svg" class="coinimg-m">2,366</h5>                        
+                        <p class="small-80">即將到期魔幣：23點（2020/06/10）</p>
+                    </div>
+                    <div class="item one text-right">                                          
+                        <button class="btn-outline-white small-80" onclick="">
+                            賺取魔幣
+                        </button>
+                    </div>     
+                </div>            
+            </div>
+            <!-- tab content for record-->
+            <div class="afp-tab-box">
+                <div class="afp-tab mb-5">
+                    <div class="nav-tabs-box mt-3">
+                        <!-- Nav tabs -->                                
+                        <ul class="nav-tab-list nav nav-tabs nav-line mb-2 d-flex justify-content-around" role="tablist">
+                                <li role="presentation" class="active">
+                                    <a href="#recordtag01" class="tablist-link link-pink active" aria-controls="recordtag01" role="tab" data-toggle="tab" aria-selected="true">待入帳</a>
+                                </li>
+                                <li role="presentation">
+                                    <a href="#recordtag02" class="tablist-link link-pink" aria-controls="recordtag02" role="tab" data-toggle="tab" aria-selected="false">獲得紀錄</a>
+                                </li>
+                                <li role="presentation">
+                                    <a href="#recordtag03" class="tablist-link link-pink" aria-controls="recordtag03" role="tab" data-toggle="tab" aria-selected="false">使用紀錄</a>
+                                </li>
+                        </ul>     
+                    </div>
+                    <!-- Tab panes -->
+                    <div class="tab-content border-t pt-2 mb-5">
+                        <div role="tabpanel" class="tab-pane fade active show w-100" id="recordtag01">
+                            <div class="member-flex border-b p-3">                            
+                                <div class="item three">
+                                    <h6 class="font-bold">喜鴻假期</h6>
+                                    <p class="text-muted small-80 txt-line-clamp1">B12345678</p>
+                                    <p class="text-muted small-80 txt-line-clamp1">2020/06/10 08:33:27</p>
+                                </div>                         
+                                <div class="item one">
+                                    <p class="text-lightpink text-right font-bold">+100</p>
+                                </div>
+                            </div>
+                            <div class="member-flex border-b p-3">                            
+                                <div class="item three">
+                                    <h6 class="font-bold">喜鴻假期</h6>
+                                    <p class="text-muted small-80 txt-line-clamp1">B12345678</p>
+                                    <p class="text-muted small-80 txt-line-clamp1">2020/06/10 08:33:27</p>
+                                </div>                         
+                                <div class="item one">
+                                    <p class="text-lightpink text-right font-bold">+100</p>
+                                </div>
+                            </div>
+                        </div>                    
+                        <div role="tabpanel" class="tab-pane" id="recordtag02">
+                            <div class="member-flex border-b p-3">                            
+                                <div class="item three">
+                                    <h6 class="font-bold">每日簽到</h6>
+                                    <p class="text-muted small-80 txt-line-clamp1">每日任務</p>
+                                    <p class="text-muted small-80 txt-line-clamp1">2020/06/10 08:33:27</p>
+                                </div>                         
+                                <div class="item one">
+                                    <p class="text-lightpink text-right font-bold">+100</p>
+                                </div>
+                            </div>
+                            <div class="member-flex border-b p-3">                            
+                                <div class="item three">
+                                    <h6 class="font-bold">收藏行程</h6>
+                                    <p class="text-muted small-80 txt-line-clamp1">【九州雙鐵道之旅】～升等希望之旅，包山包海包健康的九州雙鐵道之旅</p>
+                                    <p class="text-muted small-80 txt-line-clamp1">2020/06/10 08:33:27</p>
+                                </div>                         
+                                <div class="item one">
+                                    <p class="text-lightpink text-right font-bold">+100</p>
+                                </div>
+                            </div>
+                            <div class="member-flex border-b p-3">                            
+                                <div class="item three">
+                                    <h6 class="font-bold">喜鴻假期</h6>
+                                    <p class="text-muted small-80 txt-line-clamp1">B12345678</p>
+                                    <p class="text-muted small-80 txt-line-clamp1">2020/06/10 08:33:27</p>
+                                </div>                         
+                                <div class="item one">
+                                    <p class="text-lightpink text-right font-bold">+100</p>
+                                </div>
+                            </div>
+                            <div class="member-flex border-b p-3">                            
+                                <div class="item three">
+                                    <h6 class="font-bold">喜鴻假期</h6>
+                                    <p class="text-muted small-80 txt-line-clamp1">B12345678</p>
+                                    <p class="text-muted small-80 txt-line-clamp1">2020/06/10 08:33:27</p>
+                                </div>                         
+                                <div class="item one">
+                                    <p class="text-lightpink text-right font-bold">+100</p>
+                                </div>
+                            </div>
+                        </div>                    
+                        <div role="tabpanel" class="tab-pane" id="recordtag03">
+                            <div class="member-flex border-b p-3">                            
+                                <div class="item three">
+                                    <h6 class="font-bold">幸福大轉盤</h6>
+                                    <p class="text-muted small-80 txt-line-clamp1">每日任務</p>
+                                    <p class="text-muted small-80 txt-line-clamp1">2020/06/10 08:33:27</p>
+                                </div>                         
+                                <div class="item one">
+                                    <p class="text-lightpink text-right font-bold">-100</p>
+                                </div>
+                            </div>
+                        </div>   
+                    </div>
+                </div>                        
+            </div>   
         </div> 
 
     </div> 
