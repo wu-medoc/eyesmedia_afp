@@ -740,13 +740,10 @@ h6 {
         flex: 1;
         text-align: right;
     }
-    .swiper-container {
-        width: auto;
-        height: 100%;
-        min-width: 100%;
-        max-height: 320px;
-        margin-left: auto;
-        margin-right: auto;
+    .img-fluid {
+        background-repeat:no-repeat;
+        background-size:cover;
+        height: 350px;
     }
     .swiper-pagination-fraction {
         bottom: 1.5em;
@@ -905,20 +902,6 @@ h6 {
         .store-distance {
             padding: 0 1.5em 0 2em;
             font-size: 0.7em;
-        }
-        .img-box{
-            width: 4.5em;
-            height: 4.5em;
-            border: 1px #eee solid;
-            padding: 10px 5px;
-            border-radius: 50%;    
-            img {                
-                width: 100%;
-                height: auto;
-                vertical-align: middle;
-                top:50%;
-                transform:translateY(50%);
-            }
         }
         .store-title {
             font-weight: bold;
