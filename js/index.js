@@ -500,22 +500,28 @@ $('.close-overlay-choice').on("click", function () {
 // multilayer animateCss
 var tLayer = [];
 function callLayer(nextLayer) {
-	if (tLayer.length === 0) { $('.multilayer').animateCss('slideInRight', '+d-block container fast'); }
+    if (tLayer.length === 0) { 
+        $('.multilayer').attr('style','position:fixed ; height:10vh; overflow-y:auto;'); 
+        $('.multilayer').animateCss('slideInRight', '+d-block container fast'); 
+    }
 	if (tLayer[tLayer.length - 1] !== nextLayer) { tLayer.push(nextLayer); }
     $(nextLayer).animateCss('slideInRight', '+d-block container fast');
 }
 function backLayer() {
 	$(tLayer.pop()).animateCss('slideOutRight', '-d-block container fast');
-	if (tLayer.length === 0) { $('.multilayer').animateCss('slideOutRight', '-d-block container fast'); }
+    if (tLayer.length === 0) {
+        $('.multilayer').animateCss('slideOutRight', '-d-block container fast');
+        $('.multilayer').removeAttr('style');
+    }
 }
 var tLayerUp = [];
 function callLayerUp(nextLayerUp) {
-	if (tLayerUp.length === 0) { $('.uplayer').animateCss('slideInUp', '+d-block container fast'); }
+	if (tLayerUp.length === 0) { $('.uplayer').animateCss('slideInUp', '+d-block container fast');}
 	if (tLayerUp[tLayerUp.length - 1] !== nextLayerUp) { tLayerUp.push(nextLayerUp); }
 	$(nextLayerUp).animateCss('slideInUp', '+d-block container fast');
 }
 function backLayerUp() {
 	$(tLayerUp.pop()).animateCss('slideOutDown', '-d-block container fast');
-	if (tLayerUp.length === 0) { $('.uplayer').animateCss('slideOutDown', '-d-block container fast'); }
+	if (tLayerUp.length === 0) { $('.uplayer').animateCss('slideOutDown', '-d-block container fast');}
 }
 
