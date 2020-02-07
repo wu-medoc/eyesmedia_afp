@@ -1376,6 +1376,10 @@ footer.for-pc li{
   background: -moz-linear-gradient(bottom right,#36D1DB,#568EE3);
   background: linear-gradient(to bottom right,#36D1DB,#568EE3);
 }
+#registeredModalCenter, #loginModalCenter{
+  overflow-x: hidden;
+  overflow-y: auto;
+}
 #messageModal{
   .modal-body>div {
     display: none;
@@ -1530,11 +1534,11 @@ footer.for-pc li{
 #login-form 
 {
   .form-group.form-inline label {
-    width: 30%;
+    width: 32%;
     text-align: justify;
   }
   .form-group.form-inline input{
-    width: 70%;
+    width: 68%;
     border: 0;
   }
 }
@@ -1621,6 +1625,7 @@ td.linebt-td,
 @media screen and (max-width: 570px) {
   .modal-full {
       margin: 0;
+      
     .modal-body {
       width: 100%;
       height: 100vh;

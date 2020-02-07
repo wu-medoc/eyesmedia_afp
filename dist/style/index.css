@@ -1409,6 +1409,11 @@ footer.for-pc li {
   background: linear-gradient(to bottom right, #36D1DB, #568EE3);
 }
 
+#registeredModalCenter, #loginModalCenter {
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
 #messageModal .modal-body > div {
   display: none;
 }
@@ -1579,12 +1584,12 @@ footer.for-pc li {
 }
 
 #login-form .form-group.form-inline label {
-  width: 30%;
+  width: 32%;
   text-align: justify;
 }
 
 #login-form .form-group.form-inline input {
-  width: 70%;
+  width: 68%;
   border: 0;
 }
 
