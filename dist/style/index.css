@@ -560,7 +560,6 @@ body.is-open-country .country-box {
 
 .afp-tab-box .nav-tab-list li,
 .afp-tab-box #nav-tab.nav-tabs li {
-  font-size: .9em;
   color: #8E8E93;
   text-decoration: none;
   position: relative;
@@ -581,7 +580,6 @@ body.is-open-country .country-box {
 .afp-tab-box #nav-tab.nav-tabs li a {
   color: #182B56;
   border: none;
-  font-size: 1em;
   padding: 0;
   cursor: pointer;
 }
@@ -1413,6 +1411,10 @@ footer.for-pc li {
 
 #messageModal .modal-body > div {
   display: none;
+}
+
+#messageModal .modal-body {
+  padding: 0;
 }
 
 .modal-body {
@@ -2629,6 +2631,24 @@ button.open-page img {
 
 .border-radius5 {
   border-radius: .5em;
+}
+
+.left-mline {
+  padding-left: 15px;
+  position: relative;
+}
+
+.left-mline:before {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 1px;
+  height: 100%;
+  top: 50%;
+  left: 7px;
+  background-color: #ccc;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
 }
 
 /* badge */

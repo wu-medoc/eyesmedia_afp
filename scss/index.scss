@@ -547,7 +547,6 @@ body.is-open-country .country-box {
     text-align: center;
     border-bottom: 0px;
     li {
-      font-size: .9em;  
       color: #8E8E93;
       text-decoration: none;
       position: relative;
@@ -562,7 +561,6 @@ body.is-open-country .country-box {
       a {
         color: #182B56;
         border: none;
-        font-size: 1em;
         padding: 0;
         cursor: pointer;
       }
@@ -1381,6 +1379,9 @@ footer.for-pc li{
 #messageModal{
   .modal-body>div {
     display: none;
+  }
+  .modal-body {
+    padding: 0;
   }
 }
 .modal-body {
@@ -2423,6 +2424,22 @@ button.open-page {
 .border-radius5{
   border-radius: .5em;
 }
+.left-mline{
+  padding-left: 15px;
+  position: relative;
+  &:before{
+      content: '';
+      display: block;
+      position: absolute;
+      width: 1px;
+      height: 100%;
+      top: 50%;
+      left: 7px;
+      background-color: #ccc;
+      transform: translateY(-50%);
+  }
+}
+
 /* badge */
 .badge-img {
   position:relative;

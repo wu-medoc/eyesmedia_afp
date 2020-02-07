@@ -523,6 +523,37 @@ input[type="file"] {
     }
 }
 
+// 我的優惠
+.discount-card{
+    .item-img{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex: none;
+        width: 100px;
+        padding: 5px;
+        border: 1px $gray-light solid;
+        img{
+            width: 100%;
+        }
+    }
+    .item-info{
+        flex: 1;
+        margin: 0 10px;
+        .info-title{
+            color: $blue-dark;
+            font-weight: 600;
+        }
+        .info-sub-title{
+            color: $default-black;
+        }
+        .info-date, .info-status{
+            font-size: 13px;
+            color: $blue-dark;
+        }
+    }
+}
+
 // fixed button bottom
 .fixed-btn{
     position: fixed;
@@ -536,6 +567,13 @@ input[type="file"] {
 }
 
 // other sharing
+.text-lakeblue{
+    color: #22C2D3;
+}   
+.bg-lakeblue{
+    color: #fff;
+    background-color: #22C2D3;
+}  
 .text-pink{
     color: #F4246A;
 }   
@@ -576,6 +614,29 @@ input[type="file"] {
     border-color: #F4246A;
     color: #F4246A;
 }
+.choice-filter-box{
+    width: 100%;
+    display: flex;
+    padding: 15px;
+    border-top: 1px $gray-light solid;
+    border-bottom: 1px $gray-light solid;
+    margin-top: 10px;
+    .filter-box{
+        padding-left: 15px;
+        position: relative;
+        &:before{
+            content: '';
+            display: block;
+            position: absolute;
+            width: 1px;
+            height: 100%;
+            top: 50%;
+            left: 7px;
+            background-color: $gray-light;
+            transform: translateY(-50%);
+        }
+    }
+}
 
 // member clause&private
 .member-body {
@@ -612,15 +673,38 @@ input[type="file"] {
             -webkit-column-break-inside: avoid;
         }
         column-count: 1;
-        @media screen and (min-width: 767px) {
+        @media screen and (min-width: 1023px) {
             column-count: 2;
             flex-wrap: wrap;
-        }
+        }    
     }
 }
 img.coinimg-m{
     width: 1.2em;
     margin: 4px;
+}
+.item-btn{
+    display: flex;
+    text-align: center;
+    padding: 3px 15px;
+    border-radius: 100px;
+    align-self: center;
+    &.not-use{
+        color: $gray-color;
+        border-color: $gray-light;
+    }
+    &.small{
+        font-size: small;
+    }
+}
+.rwdimg.logo-img{
+    border: 1px $gray-light solid;
+    width: 80px;
+    height: 80px;
+    @media screen and (max-width: 571px) {            
+        width: 60px;
+        height: 60px;
+    }   
 }
 /* member-flex */
 .member-flex{

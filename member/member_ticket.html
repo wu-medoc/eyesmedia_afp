@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=1, user-scalable=no">
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../js/vendor/bs4/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../js/vendor/jquery-editable-select-master/dist/jquery-editable-select.min.css">
+    <!-- owl.carousel core CSS -->
+    <link rel="stylesheet" href="../js/vendor/owlcarousel/owlcarousel/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="../js/vendor/owlcarousel/owlcarousel/assets/owl.theme.default.min.css">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+    <!-- vendor css -->
+    <link rel="stylesheet" href="../js/vendor/swiper/css/swiper.min.css">
+    <!-- fontawesome css -->
+    <link rel="stylesheet" href="../js/vendor/fontawesome/css/fontawesome.css">
+    <link rel="stylesheet" href="../js/vendor/fontawesome/css/brands.css">
+    <link rel="stylesheet" href="../js/vendor/fontawesome/css/solid.css">
+    <!-- custom css -->
+    <link rel="stylesheet" href="../dist/style/css.min.css">
+    <link rel="stylesheet" href="../dist/style/global.min.css">
+    <link rel="stylesheet" href="../dist/style/index.min.css">
+    <link rel="stylesheet" href="../dist/style/member.min.css">
+    <link rel="stylesheet" href="../dist/style/animate.min.css">
+
+    <title>艾斯移動 - 我的首頁</title>
+</head>
+
+<body>    
+<div class="wrap container">
+    <!--我的票券-->
+    <div class="myticket slideInRight animated">
+        <div class="title-box">
+            <div class="item icon-btn">                        
+                <button class="btn" onclick="countdown('member_index.html');" data-toggle="tooltip" data-placement="bottom" title="回上一頁">
+                    <i class="material-icons">&#xE314;</i>
+                </button>
+            </div>
+            <div class="item title-name">我的票券</div>                
+            <div class="item">        
+                <button class="btn msg-open" value="msg-myticket" data-toggle="modal" data-target="#messageModal" data-dismiss="modal" aria-label="Close">
+                    <i class="material-icons">&#xE145;</i>
+                </button>
+            </div>
+        </div>        
+                 
+            <!-- tab content for record-->
+            <div class="afp-tab-box">
+                <div class="afp-tab mb-5">
+                    <div class="nav-tabs-box mt-3">
+                        <!-- Nav tabs -->                                
+                        <ul class="nav-tab-list nav nav-tabs nav-line mb-2 d-flex justify-content-around" role="tablist">
+                                <li role="presentation" class="active">
+                                    <a href="#tickettag01" class="tablist-link link-pink active" aria-controls="tickettag01" role="tab" data-toggle="tab" aria-selected="true">可用票券</a>
+                                </li>
+                                <li role="presentation">
+                                    <a href="#tickettag02" class="tablist-link link-pink" aria-controls="tickettag02" role="tab" data-toggle="tab" aria-selected="false">歷史票券</a>
+                                </li>
+                        </ul>     
+                    </div>
+                    <!-- Tab panes -->
+                    <div class="tab-content border-t pt-2 mb-5">
+                        <div role="tabpanel" class="tab-pane fade active show w-100" id="tickettag01">                            
+                            <div class="row">
+                                <div class="choice-filter-box">
+                                    <div class="flex-inline-between">
+                                        <div class="item">選擇分類</div>
+                                        <div class="item pr-2"><i class="material-icons">&#xE313;</i></div>
+                                    </div>
+                                    <div class="filter-box auto-left">
+                                        <i class="material-icons">&#xE152;</i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row px-3">
+                                content-1
+                            </div>
+                        </div>                    
+                        <div role="tabpanel" class="tab-pane" id="tickettag02">
+                            <div class="member-flex border-b p-3">                            
+                                content-2
+                            </div>
+                        </div>    
+                    </div>
+                </div>                        
+            </div>   
+    </div>
+  
+
+    <!--次頁-->
+    <div class="multilayer">       
+
+        <!--魔幣紀錄-->
+        <div class="myticket1">
+        </div> 
+
+    </div> 
+
+</div> 
+<div class="addheight"></div>
+<div id="loginhtml"></div>
+
+    <!--頁尾-->
+    <footer class="for-pc"> 
+        <div class="container">
+            <div class="row d-flex">
+                <div class="col-4 col-md-3">
+                <h6>關於亞洲好玩卡</h6>
+                <ul>
+                    <li><a href="#">關於我們</a></li>
+                </ul>            
+                </div>
+                <div class="col-4 col-md-3">
+                <h6>追蹤我們</h6>
+                <ul>
+                    <li><a href="#"><i class="fab fa-facebook-f fa-fw"></i> Facebook</a></li>
+                    <li><a href="#"><i class="fab fa-line fa-fw"></i> Line</a></li>
+                    <li><a href="#"><i class="fab fa-instagram fa-fw"></i> Instagram</a></li>
+                </ul>            
+                </div>  
+                <div class="w-100"></div>
+                <div class="col-12 border-t">
+                <div class="f-left small-70">
+                <object data="../img/index/logo-s.svg" width="30" type="image/svg+xml"></object><span> Designed by Asia Fun Pass</span>
+                </div>
+                <div class="f-right small-70">
+                Ⓒ2020 Asia Fun Pass. All Right Reserved          
+                </div>
+                </div>
+            </div>  
+        </div>
+    </footer>
+    <footer class="mobile-footer for-mobile">
+        <div class="menu-bar">
+            <a href="../index.html" class="bar-item">
+                <img class="default-img" src="../img/index/icons/footer_1_1.svg" alt="">
+                <img class="active-img" src="../img/index/icons/footer_1_2.svg" alt="">
+                首頁
+            </a>
+            <a href="../explore/explore_index.html" class="bar-item">
+                <img class="default-img" src="../img/index/icons/footer_2_1.svg" alt="">
+                <img class="active-img" src="../img/index/icons/footer_2_2.svg" alt="">
+                周邊
+            </a>
+            <a href="../bearservice.html" class="bar-item customer-item">
+                <img src="../img/index/icons/footer_3.png" alt="">
+                客服
+            </a>
+            <a href="javascript:;" class="bar-item">
+                <img class="default-img" src="../img/index/icons/footer_4_1.svg" alt="">
+                <img class="active-img" src="../img/index/icons/footer_4_2.svg" alt="">
+                任務
+            </a>
+            <a href="member_index.html" class="bar-item active">
+                <img class="default-img" src="../img/index/icons/footer_5_1.svg" alt="">
+                <img class="active-img" src="../img/index/icons/footer_5_2.svg" alt="">
+                我的
+            </a>
+        </div>
+    </footer>      
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="../js/vendor/bs4/js/jquery-3.2.1.slim.min.js"></script>
+    <!-- Latest compiled and minified JavaScript -->    
+    <script src="../js/vendor/bs4/js/bootstrap.min.js"></script>
+
+    <!-- owlcarousel JS -->
+    <script src="../js/vendor/owlcarousel/vendors/jquery.min.js"></script>
+    <script src="../js/vendor/owlcarousel/owlcarousel/owl.carousel.js"></script>
+    <script src="../js/vendor/owlcarousel/vendors/highlight.js"></script>
+    <script src="../js/vendor/owlcarousel/js/app.js"></script>   
+    <script src="../js/vendor/jquery-editable-select-master/dist/jquery-editable-select.js"></script>
+
+    <!-- vendor js -->
+    <script src="../js/vendor/swiper/js/swiper.min.js"></script>
+    <script src="../js/vendor/imgLiquid.js"></script>
+
+    <!-- custom js -->    
+    <script src="../js/animateCss.js"></script>
+    <script>
+        // Leave Forwarding
+        function countdown(e) {
+            setTimeout(function(){ window.location = e ; }, 500);            
+            $('.mycard').removeClass('slideInRight').addClass('slideOutRight');
+        };
+
+    </script>
+
+    <script>    
+        $("#loginhtml").load("../login.html");
+    </script>
+    <script src="../js/index.js"></script>
+</body>
+
+</html>

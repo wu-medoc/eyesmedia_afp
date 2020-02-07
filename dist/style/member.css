@@ -1048,6 +1048,49 @@ input[type="file"] {
   display: none;
 }
 
+.discount-card .item-img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-flex: 0;
+      -ms-flex: none;
+          flex: none;
+  width: 100px;
+  padding: 5px;
+  border: 1px #eee solid;
+}
+
+.discount-card .item-img img {
+  width: 100%;
+}
+
+.discount-card .item-info {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  margin: 0 10px;
+}
+
+.discount-card .item-info .info-title {
+  color: #182B56;
+  font-weight: 600;
+}
+
+.discount-card .item-info .info-sub-title {
+  color: #333;
+}
+
+.discount-card .item-info .info-date, .discount-card .item-info .info-status {
+  font-size: 13px;
+  color: #182B56;
+}
+
 .fixed-btn {
   position: fixed;
   width: 100%;
@@ -1058,6 +1101,15 @@ input[type="file"] {
   background-color: #fff;
   -webkit-box-shadow: 0 -5px 8px rgba(0, 0, 0, 0.2);
           box-shadow: 0 -5px 8px rgba(0, 0, 0, 0.2);
+}
+
+.text-lakeblue {
+  color: #22C2D3;
+}
+
+.bg-lakeblue {
+  color: #fff;
+  background-color: #22C2D3;
 }
 
 .text-pink {
@@ -1110,6 +1162,35 @@ input[type="file"] {
   color: #F4246A;
 }
 
+.choice-filter-box {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 15px;
+  border-top: 1px #eee solid;
+  border-bottom: 1px #eee solid;
+  margin-top: 10px;
+}
+
+.choice-filter-box .filter-box {
+  padding-left: 15px;
+  position: relative;
+}
+
+.choice-filter-box .filter-box:before {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 1px;
+  height: 100%;
+  top: 50%;
+  left: 7px;
+  background-color: #eee;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
 .member-body {
   padding: .5em;
   text-align: justify;
@@ -1151,7 +1232,7 @@ input[type="file"] {
   -webkit-column-break-inside: avoid;
 }
 
-@media screen and (min-width: 767px) {
+@media screen and (min-width: 1023px) {
   .mycoin-couponbox.card-columns {
     -webkit-column-count: 2;
             column-count: 2;
@@ -1163,6 +1244,39 @@ input[type="file"] {
 img.coinimg-m {
   width: 1.2em;
   margin: 4px;
+}
+
+.item-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+  padding: 3px 15px;
+  border-radius: 100px;
+  -ms-flex-item-align: center;
+      align-self: center;
+}
+
+.item-btn.not-use {
+  color: #8E8E93;
+  border-color: #eee;
+}
+
+.item-btn.small {
+  font-size: small;
+}
+
+.rwdimg.logo-img {
+  border: 1px #eee solid;
+  width: 80px;
+  height: 80px;
+}
+
+@media screen and (max-width: 571px) {
+  .rwdimg.logo-img {
+    width: 60px;
+    height: 60px;
+  }
 }
 
 /* member-flex */

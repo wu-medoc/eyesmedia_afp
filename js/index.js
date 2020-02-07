@@ -13,6 +13,13 @@ var swiper = new Swiper('.kv-box .swiper-container', {
         },
 });
 
+// footer.for-pc setting
+var bodyheight = document.body.clientHeight-90;
+var wrapheight = $('.wrap:first').outerHeight();
+if( wrapheight < bodyheight ){
+    $('footer.for-pc').css('position','absolute');
+}
+
 // ad
 // 超過一張才執行 swiper，並且顯示 pagination
 if ($('.ad-box .swiper-slide').length>1) {
@@ -505,10 +512,10 @@ function callLayer(nextLayer) {
         $('.multilayer').animateCss('slideInRight', '+d-block container fast'); 
     }
 	if (tLayer[tLayer.length - 1] !== nextLayer) { tLayer.push(nextLayer); }
-    $(nextLayer).animateCss('slideInRight', '+d-block container fast');
+    $(nextLayer).animateCss('slideInRight', '+d-block container fast').attr('style','position:fixed ; height:10vh; overflow-y:auto;');;
 }
 function backLayer() {
-	$(tLayer.pop()).animateCss('slideOutRight', '-d-block container fast');
+	$(tLayer.pop()).animateCss('slideOutRight', '-d-block container fast').removeAttr('style');
     if (tLayer.length === 0) {
         $('.multilayer').animateCss('slideOutRight', '-d-block container fast');
         $('.multilayer').removeAttr('style');
@@ -516,12 +523,17 @@ function backLayer() {
 }
 var tLayerUp = [];
 function callLayerUp(nextLayerUp) {
-	if (tLayerUp.length === 0) { $('.uplayer').animateCss('slideInUp', '+d-block container fast');}
+    if (tLayerUp.length === 0) {         
+        $('.uplayer').attr('style','position:fixed ; height:10vh; overflow-y:auto;'); 
+        $('.uplayer').animateCss('slideInUp', '+d-block container fast');
+    }
 	if (tLayerUp[tLayerUp.length - 1] !== nextLayerUp) { tLayerUp.push(nextLayerUp); }
-	$(nextLayerUp).animateCss('slideInUp', '+d-block container fast');
+	$(nextLayerUp).animateCss('slideInUp', '+d-block container fast').attr('style','position:fixed ; height:10vh; overflow-y:auto;');
 }
 function backLayerUp() {
-	$(tLayerUp.pop()).animateCss('slideOutDown', '-d-block container fast');
-	if (tLayerUp.length === 0) { $('.uplayer').animateCss('slideOutDown', '-d-block container fast');}
+	$(tLayerUp.pop()).animateCss('slideOutDown', '-d-block container fast').removeAttr('style');;
+    if (tLayerUp.length === 0) { $('.uplayer').animateCss('slideOutDown', '-d-block container fast');
+    $('.uplayer').removeAttr('style');
+    }
 }
 
