@@ -2350,6 +2350,11 @@ td.linebt-td,
 }
 
 /* txt-line-clamp */
+.d-grid {
+  display: -ms-grid;
+  display: grid;
+}
+
 .t-nowrap {
   white-space: nowrap;
 }
