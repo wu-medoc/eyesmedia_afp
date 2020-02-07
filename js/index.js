@@ -13,12 +13,6 @@ var swiper = new Swiper('.kv-box .swiper-container', {
         },
 });
 
-// footer.for-pc setting
-var bodyheight = document.body.clientHeight-90;
-var wrapheight = $('.wrap:first').outerHeight();
-if( wrapheight < bodyheight ){
-    $('footer.for-pc').css('position','absolute');
-}
 
 // ad
 // 超過一張才執行 swiper，並且顯示 pagination
@@ -419,6 +413,9 @@ $(document).ready(function(){
         scrollTop:0
         },1000);
     }); 
+    
+    // footer.for-pc setting
+    $('footer.for-pc').css('position','relative'); 
 });
 
 // black mask
