@@ -61,7 +61,7 @@
 .member-item-group{
     position: relative;
     background-color: $default-white;
-    min-height: 37vh;
+    // min-height: 37vh;
     .member-item-bg{
         position: absolute;        
         top: -1px;
@@ -553,7 +553,75 @@ input[type="file"] {
         }
     }
 }
+// myfavorite
+.favorite-explore{
+    padding: 15px;    
+    .item-explore {
+        border-bottom: 1px #eee solid;
+    }
+    color: $explore-default;
+    .img-box {
+        width: 80px;
+        height: 80px;
+        border-radius: 5px;
+        overflow: hidden;
 
+        img {
+            width: 100%;
+        }
+    }
+
+    .info-box {
+        flex: 1;
+        padding-left: 15px;
+
+        .info-list {
+            height: 100%;
+            display: flex;
+            flex-direction: column;            
+        }
+
+        .info-name {
+            font-weight: 600;
+            font-size: 1em;
+        }
+
+        li {
+            font-size: small;
+        }          
+        .item-tag{
+            margin: 5px 5px 5px 0;
+            margin-right: 5px;
+            color: #22C2D3;
+            border-color: #22C2D3;
+        }
+        .item-ticket {
+            padding: 1px 10px;
+            background: #f2f5fa;
+            border-radius: 5px;
+
+            .material-icons {
+                font-size: 18px;
+            }
+        }        
+        .price-asking{
+            color: tomato;
+            font-size: 1.2em;
+        }
+        .price-original{
+            color: gray;
+            text-decoration: line-through;
+        }
+        .info-province{
+            display: inline-block;
+            padding: 5px 15px;
+            margin-top: auto;
+            align-self: flex-start;
+            border: 2px $blue-dark solid;
+            border-radius: 5px;
+        }
+    }
+}
 // fixed button bottom
 .fixed-btn{
     position: fixed;

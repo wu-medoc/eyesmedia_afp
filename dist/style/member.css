@@ -473,7 +473,6 @@ footer .menu-bar .customer-item img {
 .member-item-group {
   position: relative;
   background-color: #fff;
-  min-height: 37vh;
 }
 
 .member-item-group .member-item-bg {
@@ -1089,6 +1088,90 @@ input[type="file"] {
 .discount-card .item-info .info-date, .discount-card .item-info .info-status {
   font-size: 13px;
   color: #182B56;
+}
+
+.favorite-explore {
+  padding: 15px;
+  color: #182B56;
+}
+
+.favorite-explore .item-explore {
+  border-bottom: 1px #eee solid;
+}
+
+.favorite-explore .img-box {
+  width: 80px;
+  height: 80px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.favorite-explore .img-box img {
+  width: 100%;
+}
+
+.favorite-explore .info-box {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding-left: 15px;
+}
+
+.favorite-explore .info-box .info-list {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.favorite-explore .info-box .info-name {
+  font-weight: 600;
+  font-size: 1em;
+}
+
+.favorite-explore .info-box li {
+  font-size: small;
+}
+
+.favorite-explore .info-box .item-tag {
+  margin: 5px 5px 5px 0;
+  margin-right: 5px;
+  color: #22C2D3;
+  border-color: #22C2D3;
+}
+
+.favorite-explore .info-box .item-ticket {
+  padding: 1px 10px;
+  background: #f2f5fa;
+  border-radius: 5px;
+}
+
+.favorite-explore .info-box .item-ticket .material-icons {
+  font-size: 18px;
+}
+
+.favorite-explore .info-box .price-asking {
+  color: tomato;
+  font-size: 1.2em;
+}
+
+.favorite-explore .info-box .price-original {
+  color: gray;
+  text-decoration: line-through;
+}
+
+.favorite-explore .info-box .info-province {
+  display: inline-block;
+  padding: 5px 15px;
+  margin-top: auto;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  border: 2px #182B56 solid;
+  border-radius: 5px;
 }
 
 .fixed-btn {

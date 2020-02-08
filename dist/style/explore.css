@@ -905,6 +905,7 @@ button.active {
 
 .card-item .info-box .info-name {
   font-weight: 600;
+  font-size: 1em;
 }
 
 .card-item .info-box li {
