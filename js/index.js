@@ -1,6 +1,6 @@
 var body = $('body');
 var wrap = $('.wrap');
-var windowWidth = 570;
+var windowWidth = 480;
 var windowsize = $('body').width();
 
 $(".imgLiquidFill").imgLiquid();
@@ -69,14 +69,14 @@ if ($('.for-sub').length>0) {
 }
 
 // 側欄 - 關閉編輯
-$('.animated-btn.close-btn').on('click', function(){
-    $('#setting').removeClass('edit-mode')
+$('.setting .close-btn').on('click', function(){
+    $('.multilayer>.setting').removeClass('edit-mode')
 })
-$('.edit-btn').on('click', function(){
-    $(this).closest('#setting').addClass('edit-mode');
+$('.title-item.edit-btn').on('click', function(){
+    $(this).closest('.multilayer>.setting').addClass('edit-mode');
 })
-$('.aside-header .edit-title-cancel').on('click', function(){
-    $(this).closest('#setting').removeClass('edit-mode');
+$('.setting .edit-title-cancel').on('click', function(){
+    $(this).closest('.multilayer>.setting').removeClass('edit-mode');
 })
 
 

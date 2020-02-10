@@ -47,7 +47,7 @@ body {
   display: block;
 }
 
-@media screen and (max-width: 570px) {
+@media (max-width: 767px) {
   .for-pc {
     display: none;
   }
@@ -57,24 +57,21 @@ body {
   display: none;
 }
 
-@media screen and (max-width: 570px) {
+@media (max-width: 767px) {
   .for-mobile {
     display: block;
   }
 }
 
-.container {
-  padding-right: 0;
-  padding-left: 0;
-  margin-right: auto;
-  margin-left: auto;
-}
-
-@media screen and (max-width: 570px) {
+@media (max-width: 767px) {
   .container {
     width: 100%;
     padding-right: 0;
     padding-left: 0;
+    padding-right: 0;
+    padding-left: 0;
+    margin-right: auto;
+    margin-left: auto;
   }
 }
 
@@ -287,7 +284,7 @@ li {
 }
 
 .title-box .item.ctrl-btn {
-  color: #182B56;
+  color: #13334C;
 }
 
 .title-box .title-name {
@@ -303,7 +300,7 @@ li {
 .nav-tabs .nav-link {
   border: none;
   border-radius: 0;
-  color: #182B56;
+  color: #13334C;
 }
 
 .nav-tabs .nav-link.active {
@@ -334,7 +331,7 @@ footer.for-pc {
   clear: both;
 }
 
-@media screen and (max-width: 570px) {
+@media (max-width: 767px) {
   footer.for-pc {
     display: none;
   }
@@ -381,7 +378,7 @@ footer .menu-bar .bar-item img.active-img {
 }
 
 footer .menu-bar .active {
-  color: #182B56;
+  color: #13334C;
 }
 
 footer .menu-bar .active img.default-img {

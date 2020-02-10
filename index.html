@@ -33,7 +33,7 @@
 </head>
 
 <body>
-    <div class="wrap">
+    <div class="wrap container">
 
     <header>
         <!-- header top -->
@@ -43,26 +43,40 @@
                   <div class="pc-top-box container">
                     <div class="for-pc">
                         <div class="login-top">
-                            <div class="kv-small">
+                            <div class="kv-small pt-1">
                             <!-- login trigger modal -->
-                            <button type="button" id="kv-btn-log" class="btn btn-login btn-sm py-0" data-toggle="modal" data-target="#loginModalCenter">
+                            <button type="button" id="kv-btn-log" class="btn btn-login btn-sm p-0" data-toggle="modal" data-target="#loginModalCenter">
                                 登入
                             </button>
                             <span>|</span>               
-                            <button type="button" id="kv-btn-reg" class="btn btn-login btn-sm py-0" data-toggle="modal" data-target="#registeredModalCenter">
+                            <button type="button" id="kv-btn-reg" class="btn btn-login btn-sm p-0" data-toggle="modal" data-target="#registeredModalCenter">
                                 註冊
                             </button> 
+                            你好，曉龍！
                             </div>
                         </div>          
                     </div>
-                    <div class="kv-top">
+                    <div class="kv-top d-flex align-items-baseline">
                         <div class="top-item logo">
                             <a href="">
                                 <img src="img/index/logo.svg" alt="">
                             </a>
                         </div>
-                        <div class="top-item climate">
-                            <p>台北<i class="material-icons">&#xE313;</i><small>32度C</small></p>
+                        <div class="top-item climate for-mobile">
+                            <ul>
+                                <li>
+                                    <p>台北<i class="material-icons">&#xE313;</i><small>32度C</small></p>
+                                </li>
+                                <li class="small pt-3">
+                                    你好，曉龍！
+                                </li>
+                                <li class="small pt-2">
+                                    <img src="img/index/icons/icon_mycoin.svg" alt="" class="mr-2">8284 點
+                                </li>
+                                <li class="small pt-1">
+                                    <img src="img/index/icons/icon_myticket.svg" alt="" class="mr-2">23 張
+                                </li>
+                            </ul>                            
                         </div>
                         <div class="top-item input-box">
                             <button><i class="material-icons">&#xE8B6;</i></button>
@@ -80,28 +94,49 @@
                             </div>
                         </div>
                     </div>
+                    <div class="kv-iconbox">
+                        <div class="kv-icon">
+                            <img src="img/index/icons/icon_scan.svg"><br>
+                            掃碼
+                        </div>
+                        <div class="kv-icon">
+                            <img src="img/index/icons/icon_code.svg"><br>
+                            乘車碼
+                        </div>
+                        <div class="kv-icon">
+                            <img src="img/index/icons/icon_wallet.svg"><br>
+                            付款
+                        </div>
+                    </div>
+                   </div>
+                </div>          
+                <div class="kv-mask"></div>         
+            </nav>
+            <!-- Swiper for kv banner-->            
+            <div class="kvbn-box kv-mt">
+                <div class="for-pc">
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div style="background-image: url('img/index/kv_01.png');" class="kvbn-img"></div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div style="background-image: url('img/index/kv_02.png');" class="kvbn-img"></div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div style="background-image: url('img/index/kv_03.png');" class="kvbn-img"></div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="kv-mask"></div>   
-            </nav>
-            <!-- Swiper for kv banner-->
-            <div class="swiper-container">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <img src="img/index/kv_01.png">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="img/index/kv_02.png">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="img/index/kv_03.png">
-                    </div>
+                <div class="for-mobile">
+                    <div style="background-image: url('img/index/kv_bnbg.gif');" class="kvbn-img"></div>
                 </div>
             </div>
         </div>
     </header>  
     <main>     
-        <div class="container">
+        <div class="main-content container">
             <div class="row">
                 <!-- 主要連結 -->                
                 <div class="col-12 for-pc">                    
@@ -113,7 +148,7 @@
                                     <div class="item">
                                         <a href="">
                                             <div class="img-box">
-                                                <img src="img/index/icons/icon_taxicode_2.svg" alt="">
+                                                <img src="img/index/icons/category3_qrcode.svg" alt="">
                                             </div>乘車碼
                                         </a>
                                     </div>                             
@@ -122,7 +157,7 @@
                                     <div class="item">
                                         <a href="">
                                             <div class="img-box">
-                                                <img src="img/index/icons/icon_booking.svg" alt="">
+                                                <img src="img/index/icons/category3_transport.svg" alt="">
                                             </div>交通訂票
                                         </a>
                                     </div>                              
@@ -131,7 +166,7 @@
                                     <div class="item">
                                         <a href="callcar/car_page_01.html">
                                             <div class="img-box">
-                                                <img src="img/index/icons/icon_taxi.svg" alt="">
+                                                <img src="img/index/icons/category3_taxi.svg" alt="">
                                             </div>叫車
                                         </a>
                                     </div>                              
@@ -140,7 +175,7 @@
                                     <div class="item">                                
                                         <a href="">
                                             <div class="img-box">
-                                                <img src="img/index/icons/icon_info.svg" alt="">
+                                                <img src="img/index/icons/category3_info.svg" alt="">
                                             </div>交通資訊
                                         </a>
                                     </div>                             
@@ -149,8 +184,8 @@
                                     <div class="item">
                                         <a href="explore/explore_index.html">
                                             <div class="img-box">
-                                                <img src="img/index/icons/icon_router.svg" alt="">
-                                            </div>周邊
+                                                <img src="img/index/icons/category3_planning.svg" alt="">
+                                            </div>路線規劃
                                         </a>
                                     </div>                            
                                 </div>
@@ -158,7 +193,7 @@
                                     <div class="item">
                                         <a href="">
                                             <div class="img-box">
-                                                <img src="img/index/icons/icon_food_2.svg" alt="">
+                                                <img src="img/index/icons/category3_fooddrink.svg" alt="">
                                             </div>美食
                                         </a>
                                     </div>                             
@@ -167,7 +202,7 @@
                                     <div class="item">
                                         <a href="">
                                             <div class="img-box">
-                                                <img src="img/index/icons/icon_shopping_2.svg" alt="">
+                                                <img src="img/index/icons/category3_shopping.svg" alt="">
                                             </div>購物
                                         </a>
                                     </div>                              
@@ -176,8 +211,8 @@
                                     <div class="item">
                                         <a href="">
                                             <div class="img-box">
-                                                <img src="img/index/icons/icon_location_2.svg" alt="">
-                                            </div>景點/門票
+                                                <img src="img/index/icons/category3_sightseeing.svg" alt="">
+                                            </div>景點門票
                                         </a>
                                     </div>                              
                                 </div>
@@ -185,7 +220,7 @@
                                     <div class="item">
                                         <a href="travel/index.html">
                                             <div class="img-box">
-                                                <img src="img/index/icons/icon_travel_2.svg" alt="">
+                                                <img src="img/index/icons/category3_travel.svg" alt="">
                                             </div>去旅行
                                         </a>
                                     </div>                             
@@ -194,7 +229,7 @@
                                     <div class="item">
                                         <a href="shopping/index.html">
                                             <div class="img-box">
-                                                <img src="img/index/icons/icon_shop.svg" alt="">
+                                                <img src="img/index/icons/category3_onlineshopping.svg" alt="">
                                             </div>線上商城
                                         </a>
                                     </div>                            
@@ -203,7 +238,7 @@
                                     <div class="item">
                                         <a href="">
                                             <div class="img-box">
-                                                <img src="img/index/icons/icon_ticket_2.svg" alt="">
+                                                <img src="img/index/icons/category3_coupon.svg" alt="">
                                             </div>優惠券
                                         </a>
                                     </div>                              
@@ -212,7 +247,7 @@
                                     <div class="item">
                                         <a href="">
                                             <div class="img-box">
-                                                <img src="img/index/icons/icon_pay.svg" alt="">
+                                                <img src="img/index/icons/category3_payment.svg" alt="">
                                             </div>繳費
                                         </a>
                                     </div>                             
@@ -221,7 +256,7 @@
                                     <div class="item">
                                         <a href="">
                                             <div class="img-box">
-                                                <img src="img/index/icons/icon_takeaway.svg" alt="">
+                                                <img src="img/index/icons/category3_takeaway.svg" alt="">
                                             </div>外賣
                                         </a>
                                     </div>                            
@@ -234,73 +269,73 @@
                 </div>
                 <div class="for-mobile w-100">
                     <div class="col-12">
-                        <div class="main-link default-link">
+                        <div class="mainicon-link default-link">
                             <a href="" class="link-item">
-                                <div class="img-box food">
-                                    <img src="img/index/icons/icon_food.svg" alt="">
+                                <div class="img-box">
+                                    <img src="img/index/icons/category1_fooddrink.svg" alt="">
                                 </div>
                                 <p>美食</p>
                             </a>
                             <a href="" class="link-item">
-                                <div class="img-box shopping">
-                                    <img src="img/index/icons/icon_shopping.svg" alt="">
+                                <div class="img-box">
+                                    <img src="img/index/icons/category1_sightseeting.svg" alt="">
+                                </div>
+                                <p>景點門票</p>
+                            </a>
+                            <a href="" class="link-item">
+                                <div class="img-box">
+                                    <img src="img/index/icons/category1_shopping.svg" alt="">
                                 </div>
                                 <p>購物</p>
                             </a>
-                            <a href="" class="link-item">
-                                <div class="img-box location">
-                                    <img src="img/index/icons/icon_location.svg" alt="">
-                                </div>
-                                <p>景點/門票</p>
-                            </a>
-                            <a href="" class="link-item">
-                                <div class="img-box ticket">
-                                    <img src="img/index/icons/icon_ticket.svg" alt="">
-                                </div>
-                                <p>優惠券</p>
-                            </a>
                             <a href="travel/index.html" class="link-item">
-                                <div class="img-box travel">
-                                    <img src="img/index/icons/icon_travel.svg" alt="">
+                                <div class="img-box">
+                                    <img src="img/index/icons/category1_travel.svg" alt="">
                                 </div>
                                 <p>去旅行</p>
+                            </a>
+                            <a href="" class="link-item">
+                                <div class="img-box">
+                                    <img src="img/index/icons/category1_coupon.svg" alt="">
+                                </div>
+                                <p>優惠券</p>
                             </a>
                         </div>
                     </div>
                     <!-- 自訂連結 -->
                     <div class="col-12">
-                        <div class="main-link edit-link">
+                        <div class="mainicon-link edit-link">
                             <a href="" class="link-item">
                                 <div class="img-box">
-                                    <img src="img/index/icons/icon_booking.svg" alt="">
+                                    <img src="img/index/icons/category2_transport.svg" alt="">
                                 </div>
                                 <p>交通訂票</p>
                             </a>
                             <a href="" class="link-item">
                                 <div class="img-box">
-                                    <img src="img/index/icons/icon_info.svg" alt="">
+                                    <img src="img/index/icons/category2_info.svg" alt="">
                                 </div>
                                 <p>交通資訊</p>
                             </a>
                             <a href="callcar/car_page_01.html" class="link-item">
                                 <div class="img-box">
-                                    <img src="img/index/icons/icon_taxi.svg" alt="">
+                                    <img src="img/index/icons/category2_taxi.svg" alt="">
                                 </div>
                                 <p>叫車</p>
                             </a>
                             <a href="shopping/index.html" class="link-item">
                                 <div class="img-box">
-                                    <img src="img/index/icons/icon_shop.svg" alt="">
+                                    <img src="img/index/icons/category2_onlineshopping.svg" alt="">
                                 </div>
                                 <p>線上商城</p>
                             </a>
                             <!-- <a href="javascript:;" class="link-item more-btn"> -->
-                            <div class="link-item">
-                                <div class="img-box"><button class="btn animated-btn" onclick="callLayer('.setting');">
-                                    <img src="img/index/icons/icon_more.svg" alt=""></button> 
-                                </div>
-                                <p>更多</p>                          
-                            </div>
+                            <a class="link-item">
+                                <div class="img-box" onclick="callLayer('.setting');">
+                                    <img src="img/index/icons/category2_more.svg" alt=""> 
+                                </div>         
+                                <p>更多</p>                 
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -988,7 +1023,11 @@
                 </div>
             </div>
         </div>
-    
+
+        
+        <div class="addheight container"></div>
+        <div id="loginhtml"></div>
+            
         <!-- 自訂功能側邊欄 -->
         <div class="multilayer">
             <div class="setting">
@@ -1014,16 +1053,16 @@
                         <div class="title-group no-edit">
                             <div class="title-box">
                                 <div class="title-item">
-                                    <img src="img/index/icons/icon_booking.svg" alt="">
+                                    <img src="img/index/icons/category3_transport.svg" alt="">
                                 </div>
                                 <div class="title-item">
-                                    <img src="img/index/icons/icon_info.svg" alt="">
+                                    <img src="img/index/icons/category3_info.svg" alt="">
                                 </div>
                                 <div class="title-item">
-                                    <img src="img/index/icons/icon_taxi.svg" alt="">
+                                    <img src="img/index/icons/category3_taxi.svg" alt="">
                                 </div>
                                 <div class="title-item">
-                                    <img src="img/index/icons/icon_shop.svg" alt="">
+                                    <img src="img/index/icons/category3_onlineshopping.svg" alt="">
                                 </div>
                                 <div class="title-item">
                                     <i class="material-icons">&#xE5D3;</i>
@@ -1038,25 +1077,25 @@
                         <div class="main-link edit-link">
                             <a href="" class="link-item remove-item">
                                 <div class="img-box">
-                                    <img src="img/index/icons/icon_booking.svg" alt="">
+                                    <img src="img/index/icons/category3_transport.svg" alt="">
                                 </div>
                                 <p>交通訂票</p>
                             </a>
                             <a href="" class="link-item remove-item">
                                 <div class="img-box">
-                                    <img src="img/index/icons/icon_info.svg" alt="">
+                                    <img src="img/index/icons/category3_info.svg" alt="">
                                 </div>
                                 <p>交通資訊</p>
                             </a>
                             <a href="callcar/car_page_01.html" class="link-item remove-item">
                                 <div class="img-box">
-                                    <img src="img/index/icons/icon_taxi.svg" alt="">
+                                    <img src="img/index/icons/category3_taxi.svg" alt="">
                                 </div>
                                 <p>叫車</p>
                             </a>
                             <a href="shopping/index.html" class="link-item remove-item">
                                 <div class="img-box">
-                                    <img src="img/index/icons/icon_shop.svg" alt="">
+                                    <img src="img/index/icons/category3_onlineshopping.svg" alt="">
                                 </div>
                                 <p>線上商城</p>
                             </a>
@@ -1070,73 +1109,73 @@
                     <div class="main-link edit-link">
                         <a href="javascript:;" data-num="0" data-item="乘車碼" class="link-item add-item">
                             <div class="img-box">
-                                <img src="img/index/icons/icon_taxicode_2.svg" alt="">
+                                <img src="img/index/icons/category3_qrcode.svg" alt="">
                             </div>
                             <p>乘車碼</p>
                         </a>
                         <a href="javascript:;" data-num="1" data-item="交通訂票" class="link-item remove-item">
                             <div class="img-box">
-                                <img src="img/index/icons/icon_booking.svg" alt="">
+                                <img src="img/index/icons/category3_transport.svg" alt="">
                             </div>
                             <p>交通訂票</p>
                         </a>
                         <a href="callcar/car_page_01.html" data-num="2" data-item="叫車" class="link-item add-item">
                             <div class="img-box">
-                                <img src="img/index/icons/icon_taxi.svg" alt="">
+                                <img src="img/index/icons/category3_taxi.svg" alt="">
                             </div>
                             <p>叫車</p>
                         </a>
                         <a href="" data-num="3" data-item="交通資訊" class="link-item add-item">
                             <div class="img-box">
-                                <img src="img/index/icons/icon_info.svg" alt="">
+                                <img src="img/index/icons/category3_info.svg" alt="">
                             </div>
                             <p>交通資訊</p>
                         </a>
-                        <a href="explore/explore_index.html" data-num="4" data-item="周邊" class="link-item remove-item">
+                        <a href="explore/explore_index.html" data-num="4" class="link-item remove-item">
                             <div class="img-box">
-                                <img src="img/index/icons/icon_router.svg" alt="">
+                                <img src="img/index/icons/category3_planning.svg" alt="">
                             </div>
-                            <p>周邊</p>
+                            <p>路線規劃</p>
                         </a>
                         <a href="" data-num="5" data-item="美食" class="link-item add-item">
                             <div class="img-box">
-                                <img src="img/index/icons/icon_food_2.svg" alt="">
+                                <img src="img/index/icons/category3_fooddrink.svg" alt="">
                             </div>
                             <p>美食</p>
                         </a>
                         <a href="" data-num="6" data-item="購物" class="link-item remove-item">
                             <div class="img-box">
-                                <img src="img/index/icons/icon_shopping_2.svg" alt="">
+                                <img src="img/index/icons/category3_shopping.svg" alt="">
                             </div>
                             <p>購物</p>
                         </a>
-                        <a href="" data-num="7" data-item="景點/門票" class="link-item add-item">
+                        <a href="" data-num="7" data-item="景點門票" class="link-item add-item">
                             <div class="img-box">
-                                <img src="img/index/icons/icon_location_2.svg" alt="">
+                                <img src="img/index/icons/category3_sightseeing.svg" alt="">
                             </div>
-                            <p>景點/門票</p>
+                            <p>景點門票</p>
                         </a>
                         <a href="travel/index.html" data-num="8" data-item="去旅行" class="link-item remove-item">
                             <div class="img-box">
-                                <img src="img/index/icons/icon_travel_2.svg" alt="">
+                                <img src="img/index/icons/category3_travel.svg" alt="">
                             </div>
                             <p>去旅行</p>
                         </a>
                         <a href="shopping/index.html" data-num="9" data-item="線上商城" class="link-item add-item">
                             <div class="img-box">
-                                <img src="img/index/icons/icon_shop.svg" alt="">
+                                <img src="img/index/icons/category3_onlineshopping.svg" alt="">
                             </div>
                             <p>線上商城</p>
                         </a>
                         <a href="" data-num="10" data-item="優惠券" class="link-item add-item">
                             <div class="img-box">
-                                <img src="img/index/icons/icon_ticket_2.svg" alt="">
+                                <img src="img/index/icons/category3_coupon.svg" alt="">
                             </div>
                             <p>優惠券</p>
                         </a>
                         <a href="" data-num="11" data-item="繳費" class="link-item remove-item">
                             <div class="img-box">
-                                <img src="img/index/icons/icon_pay.svg" alt="">
+                                <img src="img/index/icons/category3_payment.svg" alt="">
                             </div>
                             <p>繳費</p>
                         </a>
@@ -1149,7 +1188,7 @@
                     <div class="main-link edit-link">
                         <a href="" data-num="12" data-item="外賣" class="link-item add-item">
                             <div class="img-box">
-                                <img src="img/index/icons/icon_takeaway.svg" alt="">
+                                <img src="img/index/icons/category3_takeaway.svg" alt="">
                             </div>
                             <p>外賣</p>
                         </a>
@@ -1157,9 +1196,6 @@
                 </div>
             </div>
         </div>
-        
-        <div class="addheight container"></div>
-        <div id="loginhtml"></div>
     </main>
     <footer class="for-pc"> 
         <!--web service-->
@@ -1244,7 +1280,7 @@
         </div>  
         </div>
     </footer>
-    <footer class="mobile-footer for-mobile">
+    <footer class="mobile-footer for-mobile container container">
         <div class="menu-bar">
             <a href="index.html" class="bar-item active">
                 <img class="default-img" src="img/index/icons/footer_1_1.svg" alt="">
