@@ -430,7 +430,12 @@ body.is-open-country .country-box {
   border-top-left-radius: 1em;
   border-top-right-radius: 1em;
 }
-
+@media screen and (min-width: 768px) {
+  .main-content{
+    top:0;  
+    position: absoute;
+  }
+}
 /* mainicon-link icon*/
 .mainicon-link {
   display: -webkit-box;
@@ -1749,9 +1754,6 @@ td.linebt-td,
 
 /* swiper for gowhere */
 .go-where-link {
-  .swiper-container img{
-    width: 50%;
-  }
   .item{
     padding: .5em;
     a.link-item{
@@ -1761,15 +1763,6 @@ td.linebt-td,
       padding: .25em;
       display: grid;
       grid-template-columns: 100%;
-      p{
-        text-align: right;
-        font-size: .9em;
-        color: #39393E;
-        &:last-child{
-          font-size: .7em;
-          color: #8E8E93;
-        }
-      }
     }
   }
 } 
