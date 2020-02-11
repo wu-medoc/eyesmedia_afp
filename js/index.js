@@ -325,7 +325,7 @@ $( ".close-up" ).on('click', function () {
 if($('.products-listbox .grid').length>0) {
     $('.products-listbox .grid').masonry({
         itemSelector: '.products-item',
-        gutter: 10
+        gutter: 12
     });
 }
 

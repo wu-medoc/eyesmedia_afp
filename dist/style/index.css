@@ -2736,6 +2736,7 @@ button.open-page img {
 .badge-img {
   position: relative;
   display: inline-block;
+  border: 0;
 }
 
 .badge-on {
