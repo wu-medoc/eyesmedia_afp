@@ -63,7 +63,7 @@ body {
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 767px) {
   .container {
     width: 100%;
     padding-right: 0;
@@ -152,8 +152,6 @@ table caption, table th, table td {
 }
 
 button {
-  border: 0;
-  padding: 0;
   background-color: transparent;
   cursor: pointer;
 }
@@ -1225,6 +1223,29 @@ input[type="file"] {
   outline: none;
 }
 
+.member-select {
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  background: url("/img/member/forward.svg") no-repeat right center transparent;
+  width: 100%;
+  border: none;
+  border-bottom: 1px #eee solid;
+  height: 2em;
+  padding: .25em 2em;
+  color: #182B56;
+}
+
+.member-select::-ms-expand {
+  display: none;
+}
+
+.member-select:focus {
+  -webkit-box-shadow: 0 0 5px 2px #eee;
+          box-shadow: 0 0 5px 2px #eee;
+  border-radius: .25em;
+}
+
 .text-lakeblue {
   color: #22C2D3;
 }
@@ -1386,6 +1407,15 @@ img.coinimg-m {
 
 .item-btn.small {
   font-size: small;
+}
+
+.btn-outline-white {
+  color: #fff;
+  border: 1px solid #fff;
+  background-color: transparent;
+  background-image: none;
+  border-color: #fff;
+  border-radius: 30px;
 }
 
 .rwdimg.logo-img {

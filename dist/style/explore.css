@@ -63,7 +63,7 @@ body {
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 767px) {
   .container {
     width: 100%;
     padding-right: 0;
@@ -152,8 +152,6 @@ table caption, table th, table td {
 }
 
 button {
-  border: 0;
-  padding: 0;
   background-color: transparent;
   cursor: pointer;
 }

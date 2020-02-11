@@ -1,6 +1,8 @@
 
 @import '../dist/style/module/variable';
-
+// @media screen and (min-width: 768px) - lg use
+// @media (max-width: 767px) - md use
+// @media (max-width: 480px) - sm use
 body.is-open-aside {
   overflow-y: hidden;
 }
@@ -80,9 +82,7 @@ body.is-open-country .country-box {
   background-repeat: no-repeat;
   background-size:cover;
 }
-// screen and (min-width: 768px) - lg use
-// (max-width: 767px) - md use
-// (max-width: 480px) - sm use
+
 @media (max-width: 767px) {
   .kv-iconbox{
     font-size: 1em;
@@ -146,7 +146,7 @@ body.is-open-country .country-box {
     box-shadow: -1px 8px 12px #444;
   }
   .kv-mt{
-    padding-top: 90px;
+    padding-top: 85px;
   }
   .kv-iconbox{
     display: none;
@@ -307,6 +307,23 @@ body.is-open-country .country-box {
 }
 
 /* more-horiz & drop-menu */
+.more-dot {
+  -webkit-box-flex: 0;
+      -ms-flex: none;
+          flex: none;
+  position: relative;
+  &:after {
+    content: '';
+    position: absolute;
+    top: 3px;
+    right: 20%;
+    width: 8px;
+    height: 8px;
+    background-color: #C10E24;
+    border: 1px #fff solid;
+    border-radius: 100%;
+  }
+}
 .kv-box .kv-top .top-item.more-horiz {
   -webkit-box-flex: 0;
       -ms-flex: none;
@@ -333,6 +350,7 @@ body.is-open-country .country-box {
     right: 0;
     top: 0;
     bottom: 0;
+    border: 0;
     margin: 0 auto;
     z-index: 10;
     outline: none;
@@ -1790,7 +1808,12 @@ td.linebt-td,
     }
   } 
 }
-
+/* ad-box */
+.ad-box{
+  .swiper-container img{
+    border-radius: .5em;
+  }
+}
 /* web service */
 .bearservice .scroll-top-wrapper {
   position: fixed;
@@ -2390,13 +2413,6 @@ td.linebt-td,
   border: 1px solid #eee;
   border-radius: .25em;
   margin: .25em;
-}
-.btn-outline-white{
-  border: #fff 1px solid;
-  color: #fff;
-  border-radius: 30px;
-  padding: 4px 8px;
-  line-height: 1em;
 }
 button.open-page {
   img {

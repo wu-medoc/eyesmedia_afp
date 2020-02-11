@@ -233,12 +233,8 @@ var swiper = new Swiper('.shopping-ad.swiper-container', {
 }
 if ($( ".shopping-products" ).hasClass("swiper-container")) {
 var swiper = new Swiper('.shopping-products.swiper-container', {
-    slidesPerView: 3,
+    slidesPerView: 2.7,
     spaceBetween: 20,
-    pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-    },
     loop: true
     });
 }

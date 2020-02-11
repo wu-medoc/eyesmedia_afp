@@ -23,7 +23,7 @@
   text-align: center;
   .swiper-container {
     padding: 1em 2em;
-    @media screen and (max-width: 570px) {      
+    @media (max-width: 480px) {      
       padding: 0.4em;
       font-size: 0.6em;
       white-space: nowrap;
@@ -34,7 +34,7 @@
   }
   .travel-bgbox {
     padding: 0.5em;
-    @media screen and (min-width: 571px) {
+    @media screen and (min-width: 768px) {
       padding: 1em 3em;
     }
   }
@@ -63,7 +63,7 @@
     }        
   }
 }
-@media screen and (max-width: 570px) {
+@media (max-width: 480px) {
   .travel-hot {
     overflow-x: visible;
     width: 110vw;
@@ -81,7 +81,7 @@
     overflow-x: visible;
     width: auto;
 }
-@media screen and (max-width: 570px) {
+@media (max-width: 480px) {
     .travel-topic {
         background-color: #1E4067;
         color: #fff;
@@ -196,7 +196,7 @@
     font-weight: bold;
     overflow: hidden;
     height: 45px;
-    @media (min-width: 571px){      
+    @media screen and (min-width: 768px){      
       height: 26px;
     }
     span {
