@@ -68,8 +68,6 @@ body {
     width: 100%;
     padding-right: 0;
     padding-left: 0;
-    padding-right: 0;
-    padding-left: 0;
     margin-right: auto;
     margin-left: auto;
   }
@@ -398,6 +396,10 @@ footer .menu-bar .customer-item img {
   display: block;
 }
 
+.title-box button.btn {
+  color: #182B56;
+}
+
 .member-top-box {
   position: relative;
   background-color: #F4246A;
@@ -609,6 +611,10 @@ footer .menu-bar .customer-item img {
   text-align: right;
   color: #182B56;
   border-bottom: 1px #eee solid;
+}
+
+.my-list-box ul li button {
+  color: #182B56;
 }
 
 .my-info-box {
@@ -1278,7 +1284,7 @@ input[type="file"] {
 }
 
 .note-box {
-  border-top: 5px #eee solid;
+  border-top: 5px #f8f8f8 solid;
 }
 
 .note-box .note-item {

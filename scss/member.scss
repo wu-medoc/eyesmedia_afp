@@ -7,6 +7,11 @@
     height: 71vh;
     display: block;
 }
+.title-box{
+    button.btn{
+        color: $blue-dark;
+    }
+}
 .member-top-box{
     position: relative;
     background-color: $member-default;
@@ -173,6 +178,9 @@
                     color: $blue-dark;
                     border-bottom: 1px $gray-light solid;
                 }
+            }
+            button{
+                color: $blue-dark;
             }      
         }
     }    
@@ -715,7 +723,7 @@ input[type="file"] {
     background-color: rgba(228, 115, 255, 0.1);
 }   
 .note-box{    
-    border-top: 5px #eee solid;
+    border-top: 5px #f8f8f8 solid;
     .note-item{
         border-top: 1px $gray-light solid;
         border-bottom: 1px $gray-light solid;
