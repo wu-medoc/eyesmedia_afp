@@ -2526,12 +2526,12 @@ button.open-page {
   width: 2em;
   height: auto;
   color: #fff;
-  top: 55%;
+  top: 54%;
   right:1%;
   transform: translate(-50%, -65%);
   -webkit-transform: translate(-50%, -65%);
 }
-@media (max-width: 767px) {
+@media (max-width: 480px) {
   .item-favorite{
     position:absolute;
     width: 1.5em;
