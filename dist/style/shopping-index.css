@@ -447,6 +447,11 @@ a:hover {
   width: auto;
 }
 
+.shopping-products .products-img .img-box {
+  border-radius: .5em;
+  border: 1px solid #eee;
+}
+
 .shopping-products .products-img .img-box .rwdimg {
   border-radius: .5em;
 }
@@ -495,6 +500,10 @@ a:hover {
   width: 31.3%;
   background-color: #fff;
   margin-bottom: 12px;
+}
+
+.products-listbox .products-item .products-img .img-box {
+  border: 1px solid #eee;
 }
 
 .products-listbox .products-item .products-title {
@@ -567,6 +576,10 @@ a:hover {
   .products-recently .products-item {
     width: 49%;
   }
+}
+
+.products-recently .products-item .products-img .img-box {
+  border: 1px solid #eee;
 }
 
 .products-recently .products-item .products-title {

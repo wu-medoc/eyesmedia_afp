@@ -371,6 +371,8 @@ a {
     padding: 1em .2em;
     width: auto;
     .products-img .img-box{
+        border-radius: .5em;
+        border: 1px solid $gray-light;
         .rwdimg{
             border-radius: .5em;
         }
@@ -420,6 +422,9 @@ a {
         width: 31.3%;   
         background-color: #fff; 
         margin-bottom: 12px;
+        .products-img .img-box{
+            border: 1px solid $gray-light;
+        }
         .products-title {
             color: $blue-dark;
             font-weight: bold;
@@ -477,6 +482,9 @@ a {
         width: 48%;  
         @media (min-width: 768px) {
             width: 49%;
+        }
+        .products-img .img-box{
+            border: 1px solid $gray-light;
         }
         .products-title {
             color: $blue-dark;
