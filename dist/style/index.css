@@ -1409,6 +1409,7 @@ footer.for-pc object {
 }
 
 footer.for-pc ul {
+  margin-top: 10px;
   margin-bottom: 20px;
 }
 
@@ -2756,9 +2757,33 @@ button.open-page img {
 }
 
 /* add favorite */
+.back-go, .add-favorite {
+  padding: .5em;
+}
+
+.back-go button, .add-favorite button {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 100%;
+  padding: 0px 3px;
+  border: 0;
+}
+
+.back-go button i, .add-favorite button i {
+  font-size: 1.3em;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.back-go button.active, .add-favorite button.active {
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.back-go button.active i, .add-favorite button.active i {
+  font-size: 1.3em;
+  color: #f4246a;
+}
+
 .item-favorite {
   position: absolute;
-  width: 2em;
   height: auto;
   color: #fff;
   top: 54%;
@@ -2769,15 +2794,29 @@ button.open-page img {
 
 @media (max-width: 480px) {
   .item-favorite {
-    position: absolute;
-    width: 1.5em;
-    height: auto;
-    color: #fff;
     top: 38%;
-    right: 1%;
-    transform: translate(-50%, -65%);
-    -webkit-transform: translate(-50%, -65%);
   }
+}
+
+.item-favorite button {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 100%;
+  padding: 0px 4px;
+  border: 0;
+}
+
+.item-favorite button i {
+  font-size: 1.1em;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.item-favorite button.active {
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.item-favorite button.active i {
+  font-size: 1.1em;
+  color: #f4246a;
 }
 
 /* check ui */

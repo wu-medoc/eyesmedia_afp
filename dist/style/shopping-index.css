@@ -724,12 +724,8 @@ a:hover {
   float: right;
   position: absolute;
   right: 1em;
-  top: 1em;
+  top: .5em;
   z-index: 10;
-}
-
-.shopping-productsdetail .add-favorite img {
-  width: 2.5em;
 }
 
 .shopping-productsdetail .item {

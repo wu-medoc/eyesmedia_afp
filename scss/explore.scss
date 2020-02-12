@@ -30,6 +30,11 @@ body {
         }
     }
 }
+#open-pagebox .open-page-ul{
+        li.active>div{
+            color: $blue-middle;
+        }
+}
 
 .explore-top-box {
     border-bottom: 1px #eee solid;
@@ -139,7 +144,7 @@ button.active{
             line-height: 3em;
             font-size: 0.9em;
             font-weight: 400;
-            border-top: 1px #C4C2C2 solid;
+            border-top: 1px #C4C2C2 solid;       
         }
         .open-page-ul li a:not(.active){
             color: #212529;

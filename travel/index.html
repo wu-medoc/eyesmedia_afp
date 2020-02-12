@@ -300,14 +300,14 @@
             </div>  
 
             <!-- travel featured -->
-            <div class="travel-featured px-3 py-4 mb-3">
+            <div class="travel-featured container px-3 py-4 mb-3">
                 <h6>本月主打</h6>
                     <!-- tab content -->
                     <div class="afp-tab-box">
                         <div class="afp-tab mb-5">
                             <div class="nav-tabs-box tablist-swiper swiper-container">
                                 <!-- Nav tabs -->                                
-                                <ul id="nav-tab-featured" class="swiper-wrapper nav nav-tabs" role="tablist">
+                                <ul id="nav-tab-featured" class="swiper-wrapper nav nav-tabs nav-line mb-2" role="tablist">
                                         <li role="presentation" class="active swiper-slide">
                                             <a href="#jp" class="tablist-link active" aria-controls="jp" role="tab" data-toggle="tab" aria-selected="true">日本</a>
                                         </li>
@@ -323,17 +323,29 @@
                                         <li role="presentation" class="swiper-slide">
                                             <a href="#er" class="tablist-link" aria-controls="er" role="tab" data-toggle="tab" aria-selected="false">歐洲</a>
                                         </li>  
+                                        <li role="presentation" class="swiper-slide">
+                                            <a href="#kr" class="tablist-link" aria-controls="kr" role="tab" data-toggle="tab" aria-selected="false">韓國</a>
+                                        </li>
+                                        <li role="presentation" class="swiper-slide">
+                                            <a href="#ch" class="tablist-link" aria-controls="ch" role="tab" data-toggle="tab" aria-selected="false">中國</a>
+                                        </li>
+                                        <li role="presentation" class="swiper-slide">
+                                            <a href="#as" class="tablist-link" aria-controls="as" role="tab" data-toggle="tab" aria-selected="false">東南亞</a>
+                                        </li>
+                                        <li role="presentation" class="swiper-slide">
+                                            <a href="#er" class="tablist-link" aria-controls="er" role="tab" data-toggle="tab" aria-selected="false">歐洲</a>
+                                        </li>  
                                 </ul>     
                             </div>
                             <!-- Tab panes -->
-                            <div class="tablist-panes">
+                            <div class="tablist-panes border-t pt-2">
                                 <div role="tabpanel" class="tab-pane fade active show w-100" id="jp">
                                     <div class="travel-featuredbox swiper-container">
                                         <div class="swiper-wrapper">
                                             <div class="swiper-slide">
                                                 <div class="item-body">
                                                     <div class="item-img rwdimg-h65" style="background-image: url('../img/travel/travel-featured01.jpg');"></div>
-                                                    <div class="item-favorite"><button class="btn p-0" type="button" data-toggle="modal" data-target=".bd-example-modal-sm"><img src="../img/shopping/icon_favorite_gray.svg" data-toggle="tooltip" data-placement="top" title="加入收藏"></button></div>
+                                                    <div class="item-favorite"><button type="button" class="active" data-toggle="modal" data-target=".bd-example-modal-sm" data-toggle="tooltip" data-placement="top" title="加入收藏"><i class="material-icons">&#xe87d;</i></button></div>
                                                     <a href>
                                                         <div class="item-info">
                                                             <div class="item-title txt-line-clamp2">
@@ -342,14 +354,21 @@
                                                             <div class="item-price text-right">
                                                                 5天 $38,800 元起
                                                             </div>
-                                                            <div class="item-date flex-inline-between">
+                                                            <!-- <div class="item-date flex-inline-between">
                                                                 <div class="item-day">10/11 10/16 10/25</div>
                                                                 <div class="item-more">
                                                                     <a href="" class="text-right">更多 > </a>                                                      
                                                                 </div>
+                                                            </div> -->
+                                                            <div class="item-location">
+                                                                <i class="fas fa-map-marker-alt fa-fw"></i>日本 東北                                                                        
                                                             </div>
                                                             <div class="item-keyword">
-                                                                <i class="fas fa-map-marker-alt fa-fw"></i>日本 東北                                                                        
+                                                                <span _ngcontent-une-c1="">送Wi-Fi&nbsp;</span>
+                                                                <span _ngcontent-une-c1="">無自費&nbsp;</span>
+                                                                <span _ngcontent-une-c1="">無購物&nbsp;</span>
+                                                                <span _ngcontent-une-c1="">遊船&nbsp;</span>
+                                                                <span _ngcontent-une-c1="">直飛&nbsp;</span>                                                                     
                                                             </div>
                                                         </div>
                                                     </a>
@@ -358,7 +377,7 @@
                                             <div class="swiper-slide">
                                                 <div class="item-body">
                                                     <div class="item-img rwdimg-h65" style="background-image: url('../img/travel/travel-featured01.jpg');"></div>
-                                                    <div class="item-favorite"><button class="btn p-0" type="button" data-toggle="modal" data-target=".bd-example-modal-sm"><img src="../img/shopping/icon_favorite_gray.svg" data-toggle="tooltip" data-placement="top" title="加入收藏"></button></div>
+                                                    <div class="item-favorite"><button type="button" data-toggle="modal" data-target=".bd-example-modal-sm" data-toggle="tooltip" data-placement="top" title="加入收藏"><i class="material-icons">&#xe87d;</i></button></div>
                                                     <a href>
                                                         <div class="item-info">
                                                             <div class="item-title txt-line-clamp2">
@@ -367,14 +386,21 @@
                                                             <div class="item-price text-right">
                                                                 5天 $38,800 元起
                                                             </div>
-                                                            <div class="item-date flex-inline-between">
+                                                            <!-- <div class="item-date flex-inline-between">
                                                                 <div class="item-day">10/11 10/16 10/25</div>
                                                                 <div class="item-more">
                                                                     <a href="" class="text-right">更多 > </a>                                                      
                                                                 </div>
+                                                            </div> -->
+                                                            <div class="item-location">
+                                                                <i class="fas fa-map-marker-alt fa-fw"></i>日本 東北                                                                        
                                                             </div>
                                                             <div class="item-keyword">
-                                                                <i class="fas fa-map-marker-alt fa-fw"></i>日本 東北                                                                        
+                                                                <span _ngcontent-une-c1="">送Wi-Fi&nbsp;</span>
+                                                                <span _ngcontent-une-c1="">無自費&nbsp;</span>
+                                                                <span _ngcontent-une-c1="">無購物&nbsp;</span>
+                                                                <span _ngcontent-une-c1="">遊船&nbsp;</span>
+                                                                <span _ngcontent-une-c1="">直飛&nbsp;</span>                                                                      
                                                             </div>
                                                         </div>
                                                     </a>
@@ -389,7 +415,7 @@
                                             <div class="swiper-slide">
                                                 <div class="item-body">
                                                     <div class="item-img rwdimg-h65" style="background-image: url('../img/travel/travel-featured02.jpg');"></div>
-                                                    <div class="item-favorite"><button class="btn p-0" type="button" data-toggle="modal" data-target=".bd-example-modal-sm"><img src="../img/shopping/icon_favorite_gray.svg" data-toggle="tooltip" data-placement="top" title="加入收藏"></button></div>
+                                                    <div class="item-favorite"><button type="button" data-toggle="modal" data-target=".bd-example-modal-sm" data-toggle="tooltip" data-placement="top" title="加入收藏"><i class="material-icons">&#xe87d;</i></button></div>
                                                     <a href>
                                                         <div class="item-info">
                                                             <div class="item-title txt-line-clamp2">
@@ -398,14 +424,21 @@
                                                             <div class="item-price text-right">
                                                                 5天 $38,800 元起
                                                             </div>
-                                                            <div class="item-date flex-inline-between">
+                                                            <!-- <div class="item-date flex-inline-between">
                                                                 <div class="item-day">10/11 10/16 10/25</div>
                                                                 <div class="item-more">
                                                                     <a href="" class="text-right">更多 > </a>                                                      
                                                                 </div>
+                                                            </div> -->
+                                                            <div class="item-location">
+                                                                <i class="fas fa-map-marker-alt fa-fw"></i>日本 東北                                                                        
                                                             </div>
                                                             <div class="item-keyword">
-                                                                <i class="fas fa-map-marker-alt fa-fw"></i>日本 東北                                                                        
+                                                                <span _ngcontent-une-c1="">送Wi-Fi&nbsp;</span>
+                                                                <span _ngcontent-une-c1="">無自費&nbsp;</span>
+                                                                <span _ngcontent-une-c1="">無購物&nbsp;</span>
+                                                                <span _ngcontent-une-c1="">遊船&nbsp;</span>
+                                                                <span _ngcontent-une-c1="">直飛&nbsp;</span>                                                                      
                                                             </div>
                                                         </div>
                                                     </a>
@@ -414,7 +447,7 @@
                                             <div class="swiper-slide">
                                                 <div class="item-body">
                                                     <div class="item-img rwdimg-h65" style="background-image: url('../img/travel/travel-featured02.jpg');"></div>
-                                                    <div class="item-favorite"><button class="btn p-0" type="button" data-toggle="modal" data-target=".bd-example-modal-sm"><img src="../img/shopping/icon_favorite_gray.svg" data-toggle="tooltip" data-placement="top" title="加入收藏"></button></div>
+                                                    <div class="item-favorite"><button type="button" data-toggle="modal" data-target=".bd-example-modal-sm" data-toggle="tooltip" data-placement="top" title="加入收藏"><i class="material-icons">&#xe87d;</i></button></div>
                                                     <a href>
                                                         <div class="item-info">
                                                             <div class="item-title txt-line-clamp2">
@@ -423,14 +456,18 @@
                                                             <div class="item-price text-right">
                                                                 5天 $38,800 元起
                                                             </div>
-                                                            <div class="item-date flex-inline-between">
+                                                            <!-- <div class="item-date flex-inline-between">
                                                                 <div class="item-day">10/11 10/16 10/25</div>
                                                                 <div class="item-more">
                                                                     <a href="" class="text-right">更多 > </a>                                                      
                                                                 </div>
+                                                            </div> -->
+                                                            <div class="item-location">
+                                                                <i class="fas fa-map-marker-alt fa-fw"></i>日本 東北                                                                        
                                                             </div>
                                                             <div class="item-keyword">
-                                                                <i class="fas fa-map-marker-alt fa-fw"></i>日本 東北                                                                        
+                                                                <span _ngcontent-une-c1="">遊船&nbsp;</span>
+                                                                <span _ngcontent-une-c1="">直飛&nbsp;</span>                                                                    
                                                             </div>
                                                         </div>
                                                     </a>
@@ -445,7 +482,7 @@
                                             <div class="swiper-slide">
                                                 <div class="item-body">
                                                     <div class="item-img rwdimg-h65" style="background-image: url('../img/travel/travel-featured03.jpg');"></div>
-                                                    <div class="item-favorite"><button class="btn p-0" type="button" data-toggle="modal" data-target=".bd-example-modal-sm"><img src="../img/shopping/icon_favorite_gray.svg" data-toggle="tooltip" data-placement="top" title="加入收藏"></button></div>
+                                                    <div class="item-favorite"><button type="button" data-toggle="modal" data-target=".bd-example-modal-sm" data-toggle="tooltip" data-placement="top" title="加入收藏"><i class="material-icons">&#xe87d;</i></button></div>
                                                     <a href>
                                                         <div class="item-info">
                                                             <div class="item-title txt-line-clamp2">
@@ -470,7 +507,7 @@
                                             <div class="swiper-slide">
                                                 <div class="item-body">
                                                     <div class="item-img rwdimg-h65" style="background-image: url('../img/travel/travel-featured03.jpg');"></div>
-                                                    <div class="item-favorite"><button class="btn p-0" type="button" data-toggle="modal" data-target=".bd-example-modal-sm"><img src="../img/shopping/icon_favorite_gray.svg" data-toggle="tooltip" data-placement="top" title="加入收藏"></button></div>
+                                                    <div class="item-favorite"><button type="button" data-toggle="modal" data-target=".bd-example-modal-sm" data-toggle="tooltip" data-placement="top" title="加入收藏"><i class="material-icons">&#xe87d;</i></button></div>
                                                     <a href>
                                                         <div class="item-info">
                                                             <div class="item-title txt-line-clamp2">
@@ -501,7 +538,7 @@
                                             <div class="swiper-slide">
                                                 <div class="item-body">
                                                     <div class="item-img rwdimg-h65" style="background-image: url('../img/travel/travel-featured04.jpg');"></div>
-                                                    <div class="item-favorite"><button class="btn p-0" type="button" data-toggle="modal" data-target=".bd-example-modal-sm"><img src="../img/shopping/icon_favorite_gray.svg" data-toggle="tooltip" data-placement="top" title="加入收藏"></button></div>
+                                                    <div class="item-favorite"><button type="button" data-toggle="modal" data-target=".bd-example-modal-sm" data-toggle="tooltip" data-placement="top" title="加入收藏"><i class="material-icons">&#xe87d;</i></button></div>
                                                     <a href>
                                                         <div class="item-info">
                                                             <div class="item-title txt-line-clamp2">
@@ -526,7 +563,7 @@
                                             <div class="swiper-slide">
                                                 <div class="item-body">
                                                     <div class="item-img rwdimg-h65" style="background-image: url('../img/travel/travel-featured04.jpg');"></div>
-                                                    <div class="item-favorite"><button class="btn p-0" type="button" data-toggle="modal" data-target=".bd-example-modal-sm"><img src="../img/shopping/icon_favorite_gray.svg" data-toggle="tooltip" data-placement="top" title="加入收藏"></button></div>
+                                                    <div class="item-favorite"><button type="button" data-toggle="modal" data-target=".bd-example-modal-sm" data-toggle="tooltip" data-placement="top" title="加入收藏"><i class="material-icons">&#xe87d;</i></button></div>
                                                     <a href>
                                                         <div class="item-info">
                                                             <div class="item-title txt-line-clamp2">
@@ -557,7 +594,7 @@
                                             <div class="swiper-slide">
                                                 <div class="item-body">
                                                     <div class="item-img rwdimg-h65" style="background-image: url('../img/travel/travel-featured05.jpg');"></div>
-                                                    <div class="item-favorite"><button class="btn p-0" type="button" data-toggle="modal" data-target=".bd-example-modal-sm"><img src="../img/shopping/icon_favorite_gray.svg" data-toggle="tooltip" data-placement="top" title="加入收藏"></button></div>
+                                                    <div class="item-favorite"><button type="button" data-toggle="modal" data-target=".bd-example-modal-sm" data-toggle="tooltip" data-placement="top" title="加入收藏"><i class="material-icons">&#xe87d;</i></button></div>
                                                     <a href>
                                                         <div class="item-info">
                                                             <div class="item-title txt-line-clamp2">
@@ -582,7 +619,7 @@
                                             <div class="swiper-slide">
                                                 <div class="item-body">
                                                     <div class="item-img rwdimg-h65" style="background-image: url('../img/travel/travel-featured05.jpg');"></div>
-                                                    <div class="item-favorite"><button class="btn p-0" type="button" data-toggle="modal" data-target=".bd-example-modal-sm"><img src="../img/shopping/icon_favorite_gray.svg" data-toggle="tooltip" data-placement="top" title="加入收藏"></button></div>
+                                                    <div class="item-favorite"><button type="button" data-toggle="modal" data-target=".bd-example-modal-sm" data-toggle="tooltip" data-placement="top" title="加入收藏"><i class="material-icons">&#xe87d;</i></button></div>
                                                     <a href>
                                                         <div class="item-info">
                                                             <div class="item-title txt-line-clamp2">
@@ -613,7 +650,6 @@
             </div>
         </section>
         <div class="addheight container"></div>
-        <div class="h-50 d-inline-block"></div>
         <div id="loginhtml"></div>
     </main>
     

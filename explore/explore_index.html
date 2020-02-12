@@ -28,7 +28,7 @@
     <div class="wrap container">
         <div class="explore-top-box bg-white">
             <div class="title-box">
-                <div class="item icon-btn"><i class="material-icons">&#xE314;</i></div>
+                <div class="item icon-btn" onclick="history.back()"><i class="material-icons">&#xE314;</i></div>
                 <div class="item title-name">探索週邊</div>
                 <div class="item icon-btn">
                     <button  onclick="location.href='explore_page_02.html'" data-toggle="tooltip" data-placement="bottom" title="查看地圖">
@@ -65,7 +65,7 @@
         </div>
         <div class="explore-container">
             <div class="explore-card-list">
-                <div class="mask-container w-100 h-100"></div>
+                <div class="mask-container d-none w-100 h-100"></div>
                 <a href="explore_page_03.html" class="stretched-link">
                     <div class="card-item">
                         <div class="img-box">
@@ -203,15 +203,15 @@
                 <ul class="open-page-ul">
                     <li class="flex-inline-between">                
                             <div class="">
-                                <button class="active">全部顯示</button>
+                                全部顯示
                             </div>
                             <div class="">
-                                <button class="active"><i class="fas fa-check"></i></button>
+                                <button class="btn active"><i class="fas fa-check"></i></button>
                             </div>   
                     </li>
                     <li class="flex-inline-between">
                         <div class="">
-                            <button>熱門</button>
+                            熱門
                         </div>
                         <div class="">
                             13274
@@ -219,7 +219,7 @@
                     </li>
                     <li class="flex-inline-between">
                         <div class="">
-                            <button>美食</button>
+                            美食
                         </div>
                         <div class="">
                             1231
@@ -227,7 +227,7 @@
                     </li>
                     <li class="flex-inline-between">
                         <div class="">
-                            <button>購物</button>
+                            購物
                         </div>
                         <div class="">
                             274
@@ -235,7 +235,7 @@
                     </li>
                     <li class="flex-inline-between">
                         <div class="">
-                            <button>景點</button>
+                            景點
                         </div>
                         <div class="">
                             1374
@@ -243,7 +243,7 @@
                     </li>
                     <li class="flex-inline-between">
                         <div class="">
-                            <button>遊樂</button>
+                            遊樂
                         </div>
                         <div class="">
                             1327
@@ -266,8 +266,8 @@
                 <div class="title-txt">
                     篩選與排序
                 </div>
-                <div class="title-txt">
-                    <button class="active">確定</button>
+                <div class="title-txt active">
+                    確定
                 </div>
             </div>
             <ul class="open-page-ul">
@@ -277,7 +277,7 @@
                         捷運紅線
                     </div>
                     <div class="">
-                        <button>全部顯示<i class="fas fa-chevron-right fa-fw"></i></button>
+                        全部顯示<i class="fas fa-chevron-right fa-fw"></i>
                     </div>                
                 </li>
                 <li class="flex-inline-between">
@@ -285,15 +285,15 @@
                         捷運橘線
                     </div>
                     <div class="">
-                        <button>全部顯示<i class="fas fa-chevron-right fa-fw"></i></button>
+                        全部顯示<i class="fas fa-chevron-right fa-fw"></i>
                     </div>                
                 </li>
-                <li class="flex-inline-between">
+                <li class="flex-inline-between active open-page1">
                     <div class="">
                         高捷輕軌
                     </div>
                     <div class="">
-                        <button href class="active open-page1">夢時代<i class="fas fa-chevron-right fa-fw"></i></button>
+                        夢時代<i class="fas fa-chevron-right fa-fw"></i>
                     </div>                
                 </li>
                 <li class="flex-inline-between">
@@ -301,7 +301,7 @@
                         藍色公路
                     </div>
                     <div class="">
-                        <button>全部顯示<i class="fas fa-chevron-right fa-fw"></i></button>
+                        全部顯示<i class="fas fa-chevron-right fa-fw"></i>
                     </div>                
                 </li>
                 <li class="flex-inline-between">
@@ -309,7 +309,7 @@
                         往山上走
                     </div>
                     <div class="">
-                        <button>全部顯示<i class="fas fa-chevron-right fa-fw"></i></button>
+                        全部顯示<i class="fas fa-chevron-right fa-fw"></i>
                     </div>                
                 </li>
             </ul>
@@ -317,22 +317,22 @@
                 <label>排序</label>
                 <li class="flex-inline-between">
                     <div class="">
-                        <button>最新上架優先</button>
+                        最新上架優先
                     </div>
                     <div class="">                    
                     </div>                
                 </li>
-                <li class="flex-inline-between">                
+                <li class="flex-inline-between active">                
                         <div class="">
-                            <button class="active">熱門程度優先</button>
+                            熱門程度優先
                         </div>
                         <div class="">
-                            <button class="active"><i class="fas fa-check"></i></button>
+                            <i class="fas fa-check"></i>
                         </div>   
                 </li>
                 <li class="flex-inline-between">
                     <div class="">
-                        <button>距離由近而遠</button>
+                        距離由近而遠
                     </div>
                     <div class="">
                         
@@ -340,7 +340,7 @@
                 </li>
                 <li class="flex-inline-between">
                     <div class="">
-                        <button>距離由遠而近</button>
+                        距離由遠而近
                     </div>
                     <div class="">
                         
@@ -357,15 +357,15 @@
         <div class="slideInRight animated d-none" id="open-pagebox1">
             <div class="open-page-title flex-inline-between">                
                 <div class="close-btn">
-                    <button class="close-left1">
+                    <button class="btn close-left1">
                         <i class="material-icons">&#xE314;</i>
                     </button>
                 </div>
                 <div class="title-txt">
-                    周邊         分類
+                    周邊分類
                 </div>
                 <div class="title-txt">
-                    <button class="active">確定</button>
+                    <button class="btn active">確定</button>
                 </div>
             </div>
             <ul class="open-page-ul">
@@ -409,12 +409,12 @@
                         1374
                     </div>                
                 </li>
-                <li class="flex-inline-between">
-                    <div class="active">
+                <li class="flex-inline-between active">
+                    <div class="">
                         夢時代C5
                     </div>
                     <div class="">
-                        <button class="active">1327<i class="fas fa-check"></i></button>
+                        1327<i class="fas fa-check"></i>
                     </div>                
                 </li>
             </ul>
@@ -569,7 +569,7 @@
                 var filter = $(this).data('filter');
                 $('#' + filter).toggleClass('is-open');
                 $('#' + filter).siblings().removeClass('is-open');
-                $( ".mask-container" ).removeClass("blur-bk d-none");
+                $( ".mask-container" ).removeClass("blur-bk d-block");
                 if ($( "button.filter-item" ).hasClass("active")) {
                     $( ".mask-container" ).addClass("blur-bk d-block");
                 }

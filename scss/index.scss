@@ -1357,6 +1357,7 @@ footer.for-pc object{
 }
 
 footer.for-pc ul{  
+  margin-top: 10px;
   margin-bottom: 20px;
 }
 footer.for-pc li{  
@@ -2521,26 +2522,53 @@ button.open-page {
 }
 
 /* add favorite */
+.back-go, .add-favorite {
+  padding: .5em;
+  button{
+    background-color: rgba(0,0,0, 0.2);
+    border-radius: 100%;
+    padding: 0px 3px;
+    border: 0;
+    i{
+      font-size: 1.3em;
+      color: rgba(255,255,255, 0.8);
+    }  
+    &.active{
+    background-color: rgba(0,0,0, 0);
+      i{
+        font-size: 1.3em;
+        color: rgba(244, 36, 106, 1);
+      }
+    }  
+  }
+}
 .item-favorite{
   position:absolute;
-  width: 2em;
   height: auto;
   color: #fff;
   top: 54%;
   right:1%;
+  @media (max-width: 480px) {
+    top: 38%;
+  }
   transform: translate(-50%, -65%);
   -webkit-transform: translate(-50%, -65%);
-}
-@media (max-width: 480px) {
-  .item-favorite{
-    position:absolute;
-    width: 1.5em;
-    height: auto;
-    color: #fff;
-    top: 38%;
-    right:1%;
-    transform: translate(-50%, -65%);
-    -webkit-transform: translate(-50%, -65%);
+  button{
+    background-color: rgba(0,0,0, 0.2);
+    border-radius: 100%;
+    padding: 0px 4px;
+    border: 0;
+    i{
+      font-size: 1.1em;
+      color: rgba(255,255,255, 0.8);
+    }  
+    &.active{
+    background-color: rgba(0,0,0, 0);
+      i{
+        font-size: 1.1em;
+        color: rgba(244, 36, 106, 1);
+      }
+    }  
   }
 }
 

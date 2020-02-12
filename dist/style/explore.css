@@ -414,6 +414,10 @@ body.store-info-page .title-box .favorite {
   font-size: 24px !important;
 }
 
+#open-pagebox .open-page-ul li.active > div {
+  color: #0091FF;
+}
+
 .explore-top-box {
   border-bottom: 1px #eee solid;
 }
