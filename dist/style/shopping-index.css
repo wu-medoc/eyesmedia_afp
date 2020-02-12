@@ -40,6 +40,18 @@ a:hover {
   color: #FD5F00;
 }
 
+.onlineshopping-sort.multilayer {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.onlineshopping-sort.multilayer > div {
+  background-color: transparent;
+}
+
+.onlineshopping-sort.multilayer > div li.active > div {
+  color: #FD5F00;
+}
+
 /* shopping-bigbnbox header height*/
 #shopping-bigbnbox {
   padding-top: 70px;
@@ -478,19 +490,26 @@ a:hover {
 .shopping-products .products-price .price-asking {
   color: tomato;
   font-weight: bold;
-  font-size: 0.9em;
+  font-size: 1.1em;
 }
 
 .shopping-products .products-price .price-original {
   color: gray;
   text-decoration: line-through;
   text-align: bottom;
-  font-size: 0.75em;
+  font-size: 0.8em;
   text-align: right;
 }
 
-/* products-listbox use masonry*/
+@media (max-width: 767px) {
+  .shopping-products .products-price .price-original {
+    display: none;
+  }
+}
+
+/* products-list.html (masonry) */
 .products-listbox {
+  background: #f8f8f8;
   padding-top: 1em;
   padding-left: 4%;
   margin: 0 auto;
@@ -500,10 +519,6 @@ a:hover {
   width: 31.3%;
   background-color: #fff;
   margin-bottom: 12px;
-}
-
-.products-listbox .products-item .products-img .img-box {
-  border: 1px solid #eee;
 }
 
 .products-listbox .products-item .products-title {
@@ -557,7 +572,7 @@ a:hover {
   }
 }
 
-/* products-recently use masonry */
+/* shopping-index (masonry) */
 .products-recently {
   padding-top: 1em;
   margin: 0 auto;

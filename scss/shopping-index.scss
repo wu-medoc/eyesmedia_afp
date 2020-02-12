@@ -38,6 +38,15 @@ a {
         color: $onlineshopping-default;
     }
 }
+.onlineshopping-sort.multilayer{
+    background-color: rgba(0,0,0, 0.5);
+    &>div{
+        background-color:transparent;
+        li.active>div{
+            color: $onlineshopping-default;
+        }
+    }
+}
 /* shopping-bigbnbox header height*/
 #shopping-bigbnbox {
     padding-top:70px;
@@ -394,14 +403,17 @@ a {
         .price-asking {
             color: tomato;
             font-weight: bold;
-            font-size: 0.9em;
+            font-size: 1.1em;
         }
         .price-original {
             color: gray;
             text-decoration: line-through;
             text-align: bottom;
-            font-size: 0.75em; 
+            font-size: 0.8em; 
             text-align: right;
+            @media (max-width: 767px){
+                display: none;
+            }
         }
     }
   }
@@ -413,8 +425,9 @@ a {
 //   }
 
 
-/* products-listbox use masonry*/
+/* products-list.html (masonry) */
 .products-listbox {
+    background: $gray-light8;
     padding-top: 1em;  
     padding-left: 4%; 
     margin: 0 auto;
@@ -422,9 +435,6 @@ a {
         width: 31.3%;   
         background-color: #fff; 
         margin-bottom: 12px;
-        .products-img .img-box{
-            border: 1px solid $gray-light;
-        }
         .products-title {
             color: $blue-dark;
             font-weight: bold;
@@ -470,7 +480,7 @@ a {
         }
     }
 }
-/* products-recently use masonry */
+/* shopping-index (masonry) */
 .products-recently {
     padding-top: 1em;  
     margin: 0 auto;
