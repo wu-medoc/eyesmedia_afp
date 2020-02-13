@@ -759,12 +759,13 @@ a:hover {
   color: tomato;
   font-weight: bold;
   font-size: 1em;
+  text-align: right;
 }
 
 .shopping-productsdetail .products-price .price-asking span {
   color: gray;
   font-size: 0.75em;
-  text-align: right;
+  white-space: nowrap;
 }
 
 .shopping-productsdetail .products-price .price-original {

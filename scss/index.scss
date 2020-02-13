@@ -458,7 +458,7 @@ body.is-open-country .country-box {
 @media screen and (min-width: 768px) {
   .main-content{
     top:0;  
-    position: absolute;
+    position: inherit;
   }
 }
 /* mainicon-link icon*/
