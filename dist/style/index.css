@@ -923,6 +923,12 @@ body.is-open-country .country-box {
   background-color: #E473FF;
 }
 
+.afp-tab-box a.tablist-link.link-org.active:hover::after,
+.afp-tab-box a.tablist-link.link-orange.active.show::after,
+.afp-tab-box .tablist-link.link-orange::after {
+  background-color: #FD5F00;
+}
+
 .afp-tab-box a.tablist-link.active::after,
 .afp-tab-box a.tablist-link.active.show::after,
 .afp-tab-box a.tablist-link.active.show:hover::after,
@@ -2423,17 +2429,6 @@ td.linebt-td,
   background-size: cover;
 }
 
-.rwdimg-h40 {
-  display: block;
-  width: 100%;
-  height: auto;
-  padding-bottom: 40%;
-  overflow: hidden;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
 .rwdimg-h20 {
   display: block;
   width: 100%;
@@ -2487,6 +2482,47 @@ td.linebt-td,
   font-size: 80%;
 }
 
+/* color ui */
+.text-eblue {
+  color: #4A90E2;
+}
+
+.bg-eblue {
+  color: #fff;
+  background-color: #4A90E2;
+}
+
+.text-lakeblue {
+  color: #22C2D3;
+}
+
+.bg-lakeblue {
+  color: #fff;
+  background-color: #22C2D3;
+}
+
+.text-pink {
+  color: #F4246A;
+}
+
+.bg-pink {
+  color: #fff;
+  background-color: #F4246A;
+}
+
+.text-lightpink {
+  color: #E473FF;
+}
+
+.bg-lightpink {
+  color: #fff;
+  background-color: #E473FF;
+}
+
+.bg-lightpink-1 {
+  background-color: rgba(228, 115, 255, 0.1);
+}
+
 /* open page */
 .blur {
   -webkit-filter: blur(5px);
@@ -2512,7 +2548,7 @@ td.linebt-td,
   left: 0;
   background-color: #000;
   opacity: .6;
-  z-index: 301;
+  z-index: 1030;
 }
 
 #open-pagebox1,
@@ -2606,28 +2642,6 @@ td.linebt-td,
   text-align: center;
   font-weight: bold;
   color: #979797;
-}
-
-#open-pageupbox {
-  width: 100%;
-  height: auto;
-  min-height: 50%;
-  z-index: 1040;
-  line-height: 3em;
-  background-color: #fff;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
-}
-
-#open-pageupbox .open-page-body {
-  padding: 0 0.5em;
-}
-
-#open-pageupbox .open-page-title {
-  font-weight: bold;
-  background-color: #eee;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
 }
 
 .btn-gray {
@@ -3118,7 +3132,7 @@ button.open-page img {
   left: 15px;
   right: 15px;
   bottom: 85px;
-  z-index: 600;
+  z-index: 1031;
 }
 
 .overlay-choice .choice-list, .overlay-choice .choice-status {
@@ -3200,14 +3214,15 @@ button.open-page img {
   position: absolute;
 }
 
-.multilayer > div.uplayer {
+.uplayer {
   overflow-x: hidden;
-  overflow-y: hidden;
+  overflow-y: auto;
   position: absolute;
   background-color: #fff;
   z-index: 1041;
   display: none;
   bottom: 0;
+  padding: 0;
   min-height: 50vh;
   border-top-left-radius: .5em;
   border-top-right-radius: .5em;

@@ -82,11 +82,11 @@
             </div>
             <div class="linebt-row"></div>
             <div class="products-info p-3">
-                <div class="item flex-inline-between">
-                    <div class="products-title">
+                <div class="item shopping-flex">
+                    <div class="item three products-title">
                         Apple iPhone XS 256GB                                
                     </div>
-                    <div class="products-price d-block border-left">
+                    <div class="item one products-price d-block border-left">
                         <div class="price-original">$37,000</div>
                         <div class="price-asking">$30,320 <span>/ 組</span></div>
                     </div>
@@ -95,8 +95,8 @@
                     <div class="products-title">
                         商品規格                                
                     </div>
-                    <div class="products-norm">
-                        <button class="btn active open-uppage">A款 - 黑色<i class="material-icons">&#xE315;</i></button>
+                    <div class="products-norm" onclick="callLayerUp('.productsformat');open_mask('uplayer');">
+                        <button class="btn active">A款 - 黑色<i class="material-icons">&#xE315;</i></button>
                     </div>
                 </div>
                 <div class="item flex-inline-between">
@@ -110,17 +110,17 @@
                             </div>
                             <div><input type="text" class="form-control text-center" value="1" min="0" max="3"></div>
                             <div class="input-group-btn data-up">
-                                <button class="btn btn-default btn-outline-info" data-dir="up"><i class="fas fa-plus"></i></button>
+                                <button class="btn btn-default btn-outline-dark" data-dir="up"><i class="fas fa-plus"></i></button>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="item flex-inline-between">
-                    <div class="products-btn-addcart w-50 pr-1">
-                        <button type="button" class="btn default-outline-btn">加入購物車</button>                           
+                <div class="item shopping-flex">
+                    <div class="item products-btn-addcart pt-0 mr-2">
+                        <button type="button" class="btn onlineshopping-obtn w-100">加入購物車</button>                           
                     </div>
-                    <div class="products-btn-buynow w-50">                        
-                        <button type="button" class="btn default-btn">直接購買</button>      
+                    <div class="item products-btn-buynow pt-0">                        
+                        <button type="button" class="btn onlineshopping-btn w-100">直接購買</button>      
                     </div>
                 </div>
             </div>            
@@ -133,7 +133,7 @@
                         <div class="store-title">昇恆昌免稅購物網站</div>                         
                     </div>
                     <div class="products-store-btn">                        
-                        <button type="button" class="btn default-outline-btn" onclick="location.href='store-info.html'">查看賣場</button>      
+                        <button type="button" class="btn onlineshopping-obtn" onclick="location.href='store-info.html'">查看賣場</button>      
                     </div>
                 </div>
             </div>         
@@ -143,7 +143,7 @@
                         <div class="storecoupon-title">商場優惠券</div>                         
                     </div>
                     <div class="products-storecoupon-btn">                        
-                        <button type="button" class="btn default-outline-btn">現折$60</button><i class="material-icons">&#xE315;</i>      
+                        <button type="button" class="btn onlineshopping-o5btn py-0">現折$60</button><i class="material-icons">&#xE315;</i>      
                     </div>
                 </div>
             </div>
@@ -156,13 +156,13 @@
                                     <!-- Nav tabs -->
                                     <ul id="nav-tab-storedetail" class="nav nav-tabs" role="tablist">
                                             <li class="">
-                                                <a href="#tag01" class="tablist-link active" id="tab-tag01" onClick="javascript:ScrollTo('tag01')">關於商品</a>
+                                                <a href="#tag01" class="tablist-link link-orange active" id="tab-tag01" onClick="javascript:ScrollTo('tag01')">關於商品</a>
                                             </li>
                                             <li class="">
-                                                <a href="#tag02" class="tablist-link" id="tab-tag02" onClick="javascript:ScrollTo('tag02')">付款交貨</a>
+                                                <a href="#tag02" class="tablist-link link-orange" id="tab-tag02" onClick="javascript:ScrollTo('tag02')">付款交貨</a>
                                             </li>
                                             <li class="">
-                                                <a href="#tag03" class="tablist-link" id="tab-tag03" onClick="javascript:ScrollTo('tag03')">訂購須知</a>
+                                                <a href="#tag03" class="tablist-link link-orange" id="tab-tag03" onClick="javascript:ScrollTo('tag03')">訂購須知</a>
                                             </li>
                                     </ul>        
                                 </div>
@@ -263,20 +263,19 @@
         <div class="h-50 d-inline-block"></div>
         <div id="loginhtml"></div>
     </main>
-        
-    </div>
 
-    <div class="close-up" id="open-mask"></div>
+    <div class="mask-bk fade show d-none"></div>
+    <!-- <div class="close-up" id="open-mask"></div> -->
     <!-- shopping up-menu (open-pageupbox) -->
-    <div class="">
-        <div class="slideInUp animated d-none fixed-bottom" id="open-pageupbox">
+    <div class="uplayer productsformat">
+        <div class="open-pageupbox">
             <div class="open-page-title text-center">
                 選擇商品規格
             </div>
             <div class="open-page-body">
                 <h6>尺寸</h6>
                 <div class="row px-3">
-                    <button type="button" class="btn btn-gray col">A款</button>
+                    <button type="button" class="btn btn-gray active col">A款</button>
                     <button type="button" class="btn btn-gray col">B款</button>
                     <button type="button" class="btn btn-gray col">C款</button>
                     <button type="button" class="btn btn-gray col">D款</button>
@@ -286,16 +285,19 @@
                     <button type="button" class="btn btn-gray col">黑色</button>
                     <button type="button" class="btn btn-gray col">白色</button>
                     <button type="button" class="btn btn-gray col">粉紅色</button>
-                    <button type="button" class="btn btn-gray col">藍色</button>
+                    <button type="button" class="btn btn-gray active col">藍色</button>
                     <button type="button" class="btn btn-gray col">紫色</button>
                     <button type="button" class="btn btn-gray col">桃色</button>
                     <button type="button" class="btn btn-gray col">金色</button>
                     <button type="button" class="btn btn-gray col">湖水綠</button>
                 </div>
-                <button type="button" class="btn mb-3 default-btn close-up msg-noselected" data-toggle="modal" data-target="#messageModal" data-dismiss="modal" aria-label="Close">確定</button>
+                <button type="button" onclick="backLayerUp();close_mask('uplayer');" class="btn default-btn msg-open" value="msg-noselected" data-toggle="modal" data-target="#messageModal">確定</button>
             </div>
         </div>
+    </div>    
+
     </div>
+
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -314,10 +316,38 @@
     <script src="../js/vendor/swiper/js/swiper.min.js"></script>
     <script src="../js/vendor/imgLiquid.js"></script>
     <script src="../js/masonry.pkgd.min.js"></script>
+    <script src="../js/animateCss.js"></script>
 
     <!-- custom js -->
     <script>    
-        $("#loginhtml").load("../login.html");
+        // products-detail quantity min max control
+        if($('.number-spinner').length>0) {    
+            $(document).on('click', '.number-spinner button', function () {    
+                var btn = $(this),
+                    oldValue = btn.closest('.number-spinner').find('input').val().trim(),
+                    input = btn.closest('.number-spinner').find('input'),
+                    newVal = 0;
+                
+                $('[data-dir=dwn]').addClass('btn-outline-dark').removeClass('btn-outline-secondary');
+                if (btn.attr('data-dir') == 'up') {            
+                    if (oldValue < input.attr('max')) {
+                        newVal = parseInt(oldValue) + 1;
+                    } else {
+                        newVal = input.val();
+                        $('[data-dir=up]').addClass('btn-outline-secondary').removeClass('btn-outline-dark');
+                    }
+                } else {
+                    if (oldValue > 1) {
+                        newVal = parseInt(oldValue) - 1;
+                        $('[data-dir=up]').addClass('btn-outline-dark').removeClass('btn-outline-secondary');
+                    } else {
+                        newVal = 1;
+                        $('[data-dir=dwn]').addClass('btn-outline-secondary').removeClass('btn-outline-dark');
+                    }
+                }
+                btn.closest('.number-spinner').find('input').val(newVal);
+            });
+        };
 
         /* products-detail href nav-tag */        
         function ScrollTo(id_name) {
@@ -336,6 +366,8 @@
                 $('.nav-tabs-box').addClass('tag-top'); 
             }
         });
+        
+        $("#loginhtml").load("../login.html");
     </script>
     <script src="../js/index.js"></script>
 </body>

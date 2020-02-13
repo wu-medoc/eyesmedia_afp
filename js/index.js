@@ -326,35 +326,6 @@ $( ".close-up" ).on('click', function () {
 });
 
 
-// products-detail quantity min max control
-if($('.number-spinner').length>0) {    
-    $(document).on('click', '.number-spinner button', function () {    
-        var btn = $(this),
-            oldValue = btn.closest('.number-spinner').find('input').val().trim(),
-            input = btn.closest('.number-spinner').find('input'),
-            newVal = 0;
-        
-        $('[data-dir=dwn]').addClass('btn-outline-info').removeClass('btn-outline-secondary');
-        if (btn.attr('data-dir') == 'up') {            
-            if (oldValue < input.attr('max')) {
-                newVal = parseInt(oldValue) + 1;
-            } else {
-                newVal = input.val();
-                $('[data-dir=up]').addClass('btn-outline-secondary').removeClass('btn-outline-info');
-            }
-        } else {
-            if (oldValue > 1) {
-                newVal = parseInt(oldValue) - 1;
-                $('[data-dir=up]').addClass('btn-outline-info').removeClass('btn-outline-secondary');
-            } else {
-                newVal = 1;
-                $('[data-dir=dwn]').addClass('btn-outline-secondary').removeClass('btn-outline-info');
-            }
-        }
-        btn.closest('.number-spinner').find('input').val(newVal);
-    });
-}
-
 $(document).ready(function(){
     // bear service
     var windowHight = $(window).height();

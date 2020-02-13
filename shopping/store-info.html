@@ -34,13 +34,13 @@
                     <div class="shopping-storeimg swiper-container">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
-                                <img src="../img/shopping/store/store-001.jpg">
+                                <div style="background-image: url('../img/shopping/store/store-001.jpg');" class="img-fluid"></div>
                             </div>
-                            <div class="swiper-slide">                
-                                <img src="../img/shopping/store/store-002.jpg">
-                            </div>   
-                            <div class="swiper-slide">         
-                                <img src="../img/shopping/store/store-003.jpg">
+                            <div class="swiper-slide">
+                                <div style="background-image: url('../img/shopping/store/store-002.jpg');" class="img-fluid"></div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div style="background-image: url('../img/shopping/store/store-003.jpg');" class="img-fluid"></div>
                             </div>
                         </div>
                         <!-- Add Pagination -->
@@ -58,13 +58,13 @@
             </div>
             <div class="store-container">
                 <div class="store-info-box">
-                    <div class="d-flex">
+                    <div class="shopping-flex">
                         <div class="item three">
-                            <div class="shopping-storebox d-flex d-inline-block center-v">
-                                <div class="img-box mr-2 w-25">
+                            <div class="shopping-storebox d-flex flex-row d-inline-block">
+                                <div class="img-box mr-2">
                                     <div style="background-image: url('../img/shopping/store/everrich.png');" class="rwdimg logo-img"></div>
                                 </div>
-                                <div class="store-title w-75">昇恆昌免稅購物網站</div>   
+                                <div class="store-title center-v">昇恆昌免稅購物網站</div>   
                             </div>
                         </div>
                         <div class="item one center-v">
@@ -263,41 +263,65 @@
                             </div>
                             <!-- 優惠券 -->
                             <div class="tab-pane fade" id="ticket" role="tabpanel" aria-labelledby="ticket-tab">
-                                <div class="container mb-2 other-discount-list">
-                                    <div class="discount-item">
-                                        <div class="item">
-                                            <div class="img-box">
-                                                <img src="../img/shopping/store/everrich.png" alt="">
+                                <!-- discout -->
+                                <div class="container other-discount-list">
+                                    <div class="row p-3">
+                                        <div class="col-sm-12 col-md-6 discount-box">
+                                            <div class="discount-item">
+                                                <div class="item">
+                                                    <div class="img-box">
+                                                        <img src="../img/shopping/store/everrich.png" alt="">
+                                                    </div>
+                                                </div>
+                                                <div class="item discount-text">
+                                                    <p>昇恆昌</p>
+                                                    <p><i class="material-icons offer"></i> <span>9折</span> 折扣券</p>
+                                                </div>
+                                                <div class="item ">
+                                                    <div class="line-box"></div>
+                                                    <div class="circle circle-top"></div>
+                                                    <div class="circle circle-bottom"></div>
+                                                    <button class="btn onlineshopping-btn small-80">領取</button>
+                                                </div>
                                             </div>
                                         </div>
-                                        <div class="item discount-text">
-                                            <p>9折 折扣券</p>
-                                            <p>2019/11/15 ~ 2019/12/31</p>
-                                        </div>
-                                        <div class="item ">
-                                            <div class="line-box"></div>
-                                            <div class="circle circle-top"></div>
-                                            <div class="circle circle-bottom"></div>
-                                            <button class="btn default-btn">領取</button>
-                                            <div class="m-quantity"><img src="../img/shopping/icon_m.svg"> 1</div>
-                                        </div>
-                                    </div>
-                                    <div class="discount-item">
-                                        <div class="item">
-                                            <div class="img-box">
-                                                <img src="../img/shopping/store/everrich.png" alt="">
+                                        <div class="col-sm-12 col-md-6 discount-box">
+                                            <div class="discount-item">
+                                                <div class="item">
+                                                    <div class="img-box">
+                                                        <img src="../img/shopping/store/everrich.png" alt="">
+                                                    </div>
+                                                </div>
+                                                <div class="item discount-text">
+                                                    <p>昇恆昌</p>
+                                                    <p><i class="material-icons offer"></i> <span>9折</span> 折扣券</p>
+                                                </div>
+                                                <div class="item ">
+                                                    <div class="line-box"></div>
+                                                    <div class="circle circle-top"></div>
+                                                    <div class="circle circle-bottom"></div>
+                                                    <button class="btn onlineshopping-btn small-80">領取</button>
+                                                </div>
                                             </div>
                                         </div>
-                                        <div class="item discount-text">
-                                            <p>9折 折扣券</p>
-                                            <p>2019/11/15 ~ 2019/12/31</p>
-                                        </div>
-                                        <div class="item ">
-                                            <div class="line-box"></div>
-                                            <div class="circle circle-top"></div>
-                                            <div class="circle circle-bottom"></div>
-                                            <button class="btn default-btn">領取</button>
-                                            <div class="m-quantity"><img src="../img/shopping/icon_m.svg"> 1</div>
+                                        <div class="col-sm-12 col-md-6 discount-box">
+                                            <div class="discount-item">
+                                                <div class="item">
+                                                    <div class="img-box">
+                                                        <img src="../img/shopping/store/everrich.png" alt="">
+                                                    </div>
+                                                </div>
+                                                <div class="item discount-text">
+                                                    <p>昇恆昌</p>
+                                                    <p><i class="material-icons offer"></i> <span>9折</span> 折扣券</p>
+                                                </div>
+                                                <div class="item ">
+                                                    <div class="line-box"></div>
+                                                    <div class="circle circle-top"></div>
+                                                    <div class="circle circle-bottom"></div>
+                                                    <button class="btn onlineshopping-btn small-80">領取</button>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>

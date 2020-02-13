@@ -617,6 +617,10 @@ footer .menu-bar .customer-item img {
   color: #182B56;
 }
 
+div.mycardprompt {
+  min-height: 50vh;
+}
+
 .my-info-box {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1250,37 +1254,6 @@ input[type="file"] {
   -webkit-box-shadow: 0 0 5px 2px #eee;
           box-shadow: 0 0 5px 2px #eee;
   border-radius: .25em;
-}
-
-.text-lakeblue {
-  color: #22C2D3;
-}
-
-.bg-lakeblue {
-  color: #fff;
-  background-color: #22C2D3;
-}
-
-.text-pink {
-  color: #F4246A;
-}
-
-.bg-pink {
-  color: #fff;
-  background-color: #F4246A;
-}
-
-.text-lightpink {
-  color: #E473FF;
-}
-
-.bg-lightpink {
-  color: #fff;
-  background-color: #E473FF;
-}
-
-.bg-lightpink-1 {
-  background-color: rgba(228, 115, 255, 0.1);
 }
 
 .note-box {

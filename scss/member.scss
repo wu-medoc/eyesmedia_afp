@@ -185,7 +185,9 @@
         }
     }    
 }
-
+div.mycardprompt{
+    min-height: 50vh;
+}
 // 我的帳戶 - 檔案
 .my-info-box{
     display: flex;
@@ -698,30 +700,6 @@ input[type="file"] {
     border-radius: .25em;
   }
 
-.text-lakeblue{
-    color: #22C2D3;
-}   
-.bg-lakeblue{
-    color: #fff;
-    background-color: #22C2D3;
-}  
-.text-pink{
-    color: #F4246A;
-}   
-.bg-pink{
-    color: #fff;
-    background-color: #F4246A;
-}  
-.text-lightpink{
-    color: #E473FF;
-}   
-.bg-lightpink{
-    color: #fff;
-    background-color: #E473FF;
-}   
-.bg-lightpink-1{
-    background-color: rgba(228, 115, 255, 0.1);
-}   
 .note-box{    
     border-top: 5px #f8f8f8 solid;
     .note-item{
