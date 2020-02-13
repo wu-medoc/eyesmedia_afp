@@ -1,6 +1,4 @@
 var body = $('body');
-var wrap = $('.wrap');
-var windowWidth = 480;
 var windowsize = $('body').width();
 
 $(".imgLiquidFill").imgLiquid();
@@ -58,7 +56,7 @@ body.on('click', '.drop_menu_toggle', function(){
 
 //header taipei
 if ($('.for-sub').length>0) {
-    if (windowsize > 570) {
+    if (windowsize > 767) {
         $('.for-sub .top-item.climate').show();
         $('.for-sub .top-item.input-box').show();
     }else{
