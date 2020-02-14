@@ -850,10 +850,13 @@ a {
         flex: 1;
         text-align: right;
     }
+    .shopping-storeimgbox{
+        overflow: hidden;
+        height: 45vh;
+    }
     .img-fluid {
-        background-repeat:no-repeat;
-        background-size:cover;
-        height: 40vh;
+        background-size: cover;
+        height: 60vh;
     }
     .swiper-pagination-fraction {
         bottom: 1.5em;

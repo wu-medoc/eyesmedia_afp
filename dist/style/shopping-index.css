@@ -999,10 +999,14 @@ a:hover {
   text-align: right;
 }
 
+.shopping-storedetail .shopping-storeimgbox {
+  overflow: hidden;
+  height: 45vh;
+}
+
 .shopping-storedetail .img-fluid {
-  background-repeat: no-repeat;
   background-size: cover;
-  height: 40vh;
+  height: 60vh;
 }
 
 .shopping-storedetail .swiper-pagination-fraction {

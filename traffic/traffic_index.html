@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=1, user-scalable=no">
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../js/vendor/bs4/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../js/vendor/jquery-editable-select-master/dist/jquery-editable-select.min.css">
+    <!-- owl.carousel core CSS -->
+    <link rel="stylesheet" href="../js/vendor/owlcarousel/owlcarousel/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="../js/vendor/owlcarousel/owlcarousel/assets/owl.theme.default.min.css">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+    <!-- vendor css -->
+    <link rel="stylesheet" href="../js/vendor/swiper/css/swiper.min.css">
+    <!-- fontawesome css -->
+    <link rel="stylesheet" href="../js/vendor/fontawesome/css/fontawesome.css">
+    <link rel="stylesheet" href="../js/vendor/fontawesome/css/brands.css">
+    <link rel="stylesheet" href="../js/vendor/fontawesome/css/solid.css">
+    <!-- custom css -->
+    <link rel="stylesheet" href="../dist/style/css.min.css">
+    <link rel="stylesheet" href="../dist/style/global.min.css">
+    <link rel="stylesheet" href="../dist/style/index.min.css">
+    <link rel="stylesheet" href="../dist/style/traffic.min.css">
+    <title>艾斯移動 - 交通資訊</title> 
+</head>
+
+<body>
+    <div class="wrap container">
+        <div class="traffic-box">
+            <div class="title-box">
+                <div class="item icon-btn">
+                    <button type="button" onclick="history.back()" data-toggle="tooltip" data-placement="top" title="回上一頁"><i class="material-icons">&#xe5cb;</i></button>
+                </div>
+                <div class="item title-name">交通資訊</div>
+                <div class="item icon-btn"></div>
+            </div>
+            <div class="traffic-btn-box">
+                <ul>
+                    <li>
+                         <a href="" target="_blank">
+                            <div class="img-box">
+                                <img src="../img/traffic/traffic_bus.svg" alt="">
+                            </div>
+                            公車
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://tip.railway.gov.tw/tra-tip-web/tip/tip001/tip112/gobytime" target="_blank">
+                            <div class="img-box">
+                                <img src="../img/traffic/traffic_tram.svg" alt="">
+                            </div>
+                            台鐵
+                        </a>
+                    </li>
+                    <li>
+                         <a href="https://m.thsrc.com.tw/tw/TimeTable/SearchResult" target="_blank">
+                            <div class="img-box">
+                                <img src="../img/traffic/traffic_railway.svg" alt="">
+                            </div>
+                            高鐵
+                        </a>
+                    </li>
+                    <li>
+                         <a href="" target="_blank">
+                            <div class="img-box">
+                                <img src="../img/traffic/traffic_boat.svg" alt="">
+                            </div>
+                            渡輪
+                        </a>
+                    </li>
+                    <li>
+                        <a data-toggle="collapse" href="#collapseMrt" role="button" aria-expanded="false" aria-controls="collapseMrt">
+                            <div class="img-box">
+                                <img src="../img/traffic/traffic_mrt.svg" alt="">
+                            </div>
+                            捷運
+                        </a>
+                        <div class="collapse" id="collapseMrt">
+                            <div class="row mt-2 mb-4">
+                                <div class="col-4 p-1">
+                                    <a href="https://www.metro.taipei/cp.aspx?n=91974F2B13D997F1" target="_blank" class="item-link">台北</a>
+                                </div>
+                                <div class="col-4 p-1">
+                                    <a href="https://www.krtc.com.tw/Guide/guide_map" target="_blank" class="item-link">高雄</a>
+                                </div>
+                                <div class="col-4 p-1">
+                                    <a href="https://www.tymetro.com.tw/tymetro-new/tw/index.php" target="_blank" class="item-link">桃園</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <a data-toggle="collapse" href="#collapseTrain" role="button" aria-expanded="false" aria-controls="collapseTrain">
+                            <div class="img-box">
+                                <img src="../img/traffic/traffic_train.svg" alt="">
+                            </div>
+                            輕軌
+                        </a>
+                        <div class="collapse" id="collapseTrain">
+                            <div class="row mt-2 mb-4">
+                                <div class="col-6 p-1">
+                                    <a href="https://www.ntmetro.com.tw/content/?parent_id=10425&type_id=10425" target="_blank" class="item-link">淡海</a>
+                                </div>
+                                <div class="col-6 p-1">
+                                    <a href="https://www.krtc.com.tw/KLRT/guide_map" target="_blank" class="item-link">高雄</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                         <a href="" target="_blank">
+                            <div class="img-box">
+                                <img src="../img/traffic/traffic_bike.svg" alt="">
+                            </div>
+                            腳踏車
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="addheight container"></div>
+
+    <footer class="for-pc"> 
+        <!--web service-->
+        <div class="bearservice">            
+            <div class="scroll-top-wrapper">
+                <span class="scroll-top-inner">
+                    <button type="button" id="webservice"><img src="../img/index/icons/for-pc/icon_service.png"></button>
+                    <button type="button" id="webservice_close" class="d-none"><img src="../img/index/icons/for-pc/icon_close.png"></button>
+                </span>
+            </div>
+            <div class="popup-box chat-popup" id="qnimate">
+                <div class="popup-head">
+                    <div class="popup-head-left pull-left"><img src="../img/index/icons/for-pc/icon_bear.png" alt="service"> 熊客服</div>
+                </div>
+                <div class="hr-100"></div>
+                <div class="popup-messages">          
+                    <div class="direct-chat-messages">
+                        <div class="chat-box-single-line">
+                                <abbr class="timestamp">Sun, Dec 11 1:20 PM</abbr>
+                        </div>
+                        
+                        <!-- Message. Default to the left -->
+                        <div class="direct-chat-msg">
+                            <!-- direct-chat-info -->
+                            <div class="direct-chat-text">
+                            Hey你好, 我是熊, 很高興為您服務
+                            </div>                  
+                            <ul class="direct-info">
+                                來看看有什麼熱門問題吧!
+                                <li><a href="">亞洲好玩卡網站是什麼?</a></li>
+                                <li><a href="">我想問如何快速取貨?</a></li>
+                                <li><a href="">想要退換貨怎麼辦?</a></li>
+                                <li><a href="">最近有什麼最新優惠?</a></li>
+                                <li><a href="">我該如何購買網路商品?</a></li>
+                            </ul>
+                        </div>          
+                        <!-- Message. Default to the right -->
+                        <div class="guests-chat-msg">
+                            <!-- direct-chat-info -->
+                            <div class="guests-chat-text">
+                            請幫我轉真人服務
+                            </div> 
+                            <div class="guests-chat-name">
+                            guests
+                            </div> 
+                        </div>          
+                                
+                    </div>
+                </div>
+                <div class="hr-100"></div>
+                <div class="popup-messages-footer">
+                    <input type="text" placeholder="請輸入問題">
+                </div>
+            </div>
+        </div>
+        <!--footer content-->
+        <div class="container">
+        <div class="row d-flex">
+            <div class="col-4 col-md-3">
+            <h6>關於亞洲好玩卡</h6>
+            <ul>
+                <li><a href="#">關於我們</a></li>
+            </ul>            
+            </div>
+            <div class="col-4 col-md-3">
+            <h6>追蹤我們</h6>
+            <ul>
+                <li><a href="#"><i class="fab fa-facebook-f fa-fw"></i> Facebook</a></li>
+                <li><a href="#"><i class="fab fa-line fa-fw"></i> Line</a></li>
+                <li><a href="#"><i class="fab fa-instagram fa-fw"></i> Instagram</a></li>
+            </ul>            
+            </div>  
+            <div class="w-100"></div>
+            <div class="col-12 border-t">
+            <div class="f-left small-70">
+                <object data="../img/index/logo-s.svg" width="30" type="image/svg+xml"></object><span> Designed by Asia Fun Pass</span>
+            </div>
+            <div class="f-right small-70">
+                Ⓒ2020 Asia Fun Pass. All Right Reserved          
+            </div>
+            </div>
+        </div>  
+        </div>
+    </footer>
+    <footer class="mobile-footer for-mobile container">
+        <div class="menu-bar">
+            <a href="../index.html" class="bar-item active">
+                <img class="default-img" src="../img/index/tabbar/home.svg" alt="">
+                <img class="active-img" src="../img/index/tabbar/home_choosen.svg" alt="">
+                首頁
+            </a>
+            <a href="../explore/explore_index.html" class="bar-item">
+                <img class="default-img" src="../img/index/tabbar/nearby.svg" alt="">
+                <img class="active-img" src="../img/index/tabbar/nearby_choosen.svg" alt="">
+                周邊
+            </a>
+            <a href="javascript:;" class="bar-item">
+                <div class="more-dot"></div>
+                <img class="default-img more-dot" src="../img/index/tabbar/mission.svg" alt="">
+                <img class="active-img" src="../img/index/tabbar/mission_choosen.svg" alt="">
+                任務
+            </a>
+            <a href="javascript:;" class="bar-item">
+                <div class="more-dot d-none"></div>
+                <img class="default-img" src="../img/index/tabbar/notification.svg" alt="">
+                <img class="active-img" src="../img/index/tabbar/notification_choosen.svg" alt="">
+                通知
+            </a>
+            <a href="../member/member_index.html" class="bar-item">
+                <img class="default-img" src="../img/index/tabbar/my.svg" alt="">
+                <img class="active-img" src="../img/index/tabbar/my_choosen.svg" alt="">
+                我的
+            </a>
+        </div>
+    </footer>
+    
+
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="../js/vendor/bs4/js/jquery-3.2.1.slim.min.js"></script>
+    <!-- Latest compiled and minified JavaScript -->    
+    <script src="../js/vendor/bs4/js/bootstrap.min.js"></script>
+    <!-- owlcarousel JS -->
+    <script src="../js/vendor/owlcarousel/vendors/jquery.min.js"></script>
+    <script src="../js/vendor/owlcarousel/owlcarousel/owl.carousel.js"></script>
+    <script src="../js/vendor/owlcarousel/vendors/highlight.js"></script>
+    <script src="../js/vendor/owlcarousel/js/app.js"></script>   
+    <script src="../js/vendor/jquery-editable-select-master/dist/jquery-editable-select.js"></script>
+
+</body>
+
+</html>

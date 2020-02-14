@@ -414,6 +414,14 @@ body.store-info-page .title-box .favorite {
   font-size: 24px !important;
 }
 
+button {
+  border: 0;
+}
+
+button.filter-item {
+  border: 0;
+}
+
 #open-pagebox .open-page-ul li.active > div {
   color: #0091FF;
 }

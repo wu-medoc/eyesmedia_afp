@@ -332,10 +332,11 @@ $(document).ready(function(){
     var bearhight = windowHight-70;
     $('.bearservice-lg').css('height',bearhight);
 
-    // registeredSelectState
-    $('.registeredSelectState-btn').on('click', function () {
-        $('#registeredSelectState').editableSelect({ effects: 'default' });
-    });
+    // registeredSelectState for phone select
+    // $('.registeredSelectState-btn').on('click', function () {
+    //     $('#registeredSelectState').editableSelect({ effects: 'default' });
+    // });
+    
     $('.btn-vcode').on('click', function(){
         var id=$('#vcode').val();
         $(".vcode-val").text(id);    
@@ -397,6 +398,7 @@ function div_switch() {
     $('.div-switch.d-none').removeClass('d-none').addClass('d-block');    
     $('.div-switch.d-none1').removeClass('d-none1').addClass('d-none');
 };
+
 
 //memberclause & memberprivate
 window.onload = function(){   
