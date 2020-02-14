@@ -64,17 +64,6 @@
   font-weight: 400;
 }
 
-@media (max-width: 480px) {
-  .travel-hot {
-    overflow-x: visible;
-    width: 110vw;
-  }
-  .travel-topic {
-    overflow-x: visible;
-    width: auto;
-  }
-}
-
 /* travel topic */
 .travel-topic {
   background-color: #1E4067;
@@ -183,20 +172,16 @@
 
 .travel-featuredbox .item-title {
   font-weight: bold;
-  color: #1E4067;
+  color: #333;
 }
 
 .travel-featuredbox .item-info {
-  border: 1px solid #ccc;
-  border-bottom-left-radius: .5em;
-  border-bottom-right-radius: .5em;
   line-height: 1.6em;
   margin-bottom: 10px;
   font-size: 0.8em;
 }
 
 .travel-featuredbox .item-title {
-  border-bottom: 1px solid #ccc;
   padding: 2px 10px;
   font-weight: bold;
   font-size: 0.9em;
@@ -205,9 +190,16 @@
 .travel-featuredbox .item-location,
 .travel-featuredbox .item-price,
 .travel-featuredbox .item-date {
-  border-bottom: 1px solid #ccc;
   padding: 1px 10px;
+  color: #333;
+}
+
+.travel-featuredbox .item-location .price-asking,
+.travel-featuredbox .item-price .price-asking,
+.travel-featuredbox .item-date .price-asking {
+  color: tomato;
   font-weight: bold;
+  font-size: medium;
 }
 
 .travel-featuredbox a .item-day {
@@ -215,9 +207,7 @@
 }
 
 .travel-featuredbox .item-keyword {
-  border-bottom: 1px solid #ccc;
   padding: 2px 5px;
-  font-weight: bold;
   overflow: hidden;
   height: 45px;
 }
@@ -230,12 +220,11 @@
 
 .travel-featuredbox .item-keyword span {
   white-space: nowrap;
-  color: #48A2DE;
-  border: 1px #48A2DE solid;
+  color: #333;
+  border: 1px #8E8E93 solid;
   border-radius: 3px;
   padding: 0 2px;
   font-size: 12px;
   margin: 5px;
-  border-bottom: 1px solid #ccc;
 }
 /*# sourceMappingURL=travel-index.css.map */

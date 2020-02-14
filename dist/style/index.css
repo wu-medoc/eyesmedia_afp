@@ -549,7 +549,7 @@ body.is-open-country .country-box {
   .mainicon-link .link-item {
     width: 16.5%;
     margin: .5em;
-    color: #13334C;
+    color: #182B56;
   }
   .mainicon-link .link-item img {
     width: 70px;
@@ -565,7 +565,7 @@ body.is-open-country .country-box {
   .mainicon-link .link-item {
     width: 17%;
     margin: .4em;
-    color: #13334C;
+    color: #182B56;
   }
   .mainicon-link .link-item img {
     width: 57px;
@@ -581,7 +581,7 @@ body.is-open-country .country-box {
   .mainicon-link .link-item {
     width: 18%;
     margin: .25em;
-    color: #13334C;
+    color: #182B56;
   }
   .mainicon-link .link-item img {
     width: 48px;
@@ -597,7 +597,7 @@ body.is-open-country .country-box {
 
 .main-link a, .main-link a.link-item {
   text-align: center;
-  color: #13334C;
+  color: #182B56;
   font-size: .8em;
 }
 
@@ -909,7 +909,6 @@ body.is-open-country .country-box {
 
 .afp-tab-box .nav-tab-list li a,
 .afp-tab-box #nav-tab.nav-tabs li a {
-  color: #13334C;
   border: none;
   padding: 0;
   cursor: pointer;
@@ -949,7 +948,6 @@ body.is-open-country .country-box {
 }
 
 .afp-tab-box #nav-tab-storedetail.nav-tabs li a {
-  color: #13334C;
   border: none;
   font-size: 1em;
   padding: 0;
@@ -959,7 +957,7 @@ body.is-open-country .country-box {
 /* all tablist-link */
 .afp-tab-box .tablist-link {
   display: inline-block;
-  color: #13334C;
+  color: #8E8E93;
 }
 
 .afp-tab-box a.tablist-link.active:hover::after,
@@ -969,7 +967,7 @@ body.is-open-country .country-box {
   display: block;
   width: 0;
   height: 3px;
-  background-color: #3391FF;
+  background-color: #FD5F00;
   border-radius: 1px;
   position: absolute;
   left: 50%;
@@ -1006,6 +1004,7 @@ body.is-open-country .country-box {
   border: none;
   background: transparent;
   font-weight: 700;
+  color: #FD5F00;
 }
 
 .afp-tab-box .nav-tabs li a.tablist-link:hover.active.show,
@@ -1013,6 +1012,7 @@ body.is-open-country .country-box {
   border: none;
   background: transparent;
   font-weight: 700;
+  color: #FD5F00;
 }
 
 /* index 周邊推薦 */
@@ -1045,8 +1045,23 @@ body.is-open-country .country-box {
 }
 
 .afp-tab-box .tab-content .content-list .item-title {
-  font-size: 16px;
-  color: #13334C;
+  color: #182B56;
+  font-size: .9em;
+}
+
+.afp-tab-box .tab-content .content-list .price-asking {
+  font-size: medium;
+  color: tomato;
+  font-weight: bold;
+  text-align: right;
+}
+
+.afp-tab-box .tab-content .content-list .price-original {
+  color: gray;
+  text-decoration: line-through;
+  text-align: bottom;
+  font-size: 0.75em;
+  text-align: right;
 }
 
 .afp-tab-box .tab-content .content-list .tag-list {
@@ -1055,11 +1070,11 @@ body.is-open-country .country-box {
 
 .afp-tab-box .tab-content .content-list .tag-list li {
   float: left;
-  color: #48A2DE;
-  border: 1px #48A2DE solid;
+  color: #22C2D3;
+  border: 1px #22C2D3 solid;
   border-radius: 3px;
   padding: 0 3px;
-  font-size: 12px;
+  font-size: .7em;
   margin-right: 5px;
   margin-bottom: 5px;
 }
@@ -1093,7 +1108,7 @@ body.is-open-country .country-box {
   margin: auto;
   font-size: 18px;
   font-weight: 700;
-  color: #13334C;
+  color: #182B56;
 }
 
 .popup-box.verification-box .popup-content, .popup-box.password-box .popup-content, .popup-box.country-box .popup-content {
@@ -1131,7 +1146,7 @@ body.is-open-country .country-box {
 
 .popup-box.verification-box .re-box span {
   font-weight: 700;
-  color: #13334C;
+  color: #182B56;
 }
 
 .popup-box.password-box .password-item {
@@ -1222,7 +1237,7 @@ body.is-open-country .country-box {
 }
 
 .popup-box.country-box .popup-content .country-code-list li span:first-child {
-  color: #13334C;
+  color: #182B56;
 }
 
 .modal-content .close-btn,
@@ -1285,7 +1300,7 @@ body.is-open-country .country-box {
   margin-top: 5%;
   text-align: center;
   font-size: 22px;
-  color: #13334C;
+  color: #182B56;
   font-weight: 600;
 }
 
@@ -1311,7 +1326,7 @@ body.is-open-country .country-box {
 }
 
 .popup-box .login-method p {
-  color: #13334C;
+  color: #182B56;
   font-size: 14px;
 }
 
@@ -1431,7 +1446,7 @@ body.is-open-country .country-box {
 }
 
 .popup-box .form-check a {
-  color: #13334C;
+  color: #182B56;
   font-weight: 700;
 }
 
@@ -1648,7 +1663,7 @@ footer.for-pc li {
 }
 
 .modal-body .login-method p {
-  color: #13334C;
+  color: #182B56;
   font-size: 14px;
 }
 
@@ -1865,7 +1880,6 @@ td.linebt-td,
   margin-right: auto;
   border-radius: 10px;
   padding: 0.5em;
-  border: 1px solid #b0b0b0;
 }
 
 .index-iconbox .swiper-wrapper {
@@ -1902,16 +1916,8 @@ td.linebt-td,
   }
 }
 
-.index-iconbox .swiper-slide:nth-child(n) {
-  border-left: 1px solid #b0b0b0;
-}
-
-.index-iconbox .swiper-slide:nth-child(1) {
-  border-left: 0px;
-}
-
 .index-iconbox .swiper-slide a {
-  color: #13334C;
+  color: #182B56;
 }
 
 .index-iconbox .swiper-button-next {
@@ -1919,7 +1925,6 @@ td.linebt-td,
   right: 10px;
   width: 1.2em;
   height: 1.2em;
-  border: 1px solid #b0b0b0;
   border-radius: 50%;
   background-color: #fff;
 }
@@ -1929,7 +1934,6 @@ td.linebt-td,
   left: 10px;
   width: 1.2em;
   height: 1.2em;
-  border: 1px solid #b0b0b0;
   border-radius: 50%;
   background-color: #fff;
 }
