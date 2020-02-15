@@ -373,11 +373,11 @@ $(document).ready(function(){
         }
     });
     //gotop 
-    $('.gotop').on('click', function(){  
-        $('div').animate({
-        scrollTop:0
-        },1000);
-    }); 
+    // $('.gotop').on('click', function(){  
+    //     $('div').animate({
+    //     scrollTop:0
+    //     },1000);
+    // }); 
     //footer.pc 
     (($('.wrap').height()) < ($(window).height())) ? ($('footer.for-pc').css('position','absolute')):($('footer.for-pc').css('position','relative'));
 });

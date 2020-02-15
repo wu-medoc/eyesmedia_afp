@@ -5,31 +5,31 @@
   margin: 0.5em 0;
 }
 /* travel-icon */
-.travel-boxoutsize {
-  background-color: #fff;
-  margin: 0 auto;
-  border-radius: 10px;  
-  padding-left: 0.5em;
-  padding-right: 0.5em;
-  padding-top: 1em;
-  padding-bottom: 1em;
-  font-size: 0.8em;
-  text-align: center;
-  .swiper-container {
-    padding: 1em 2em;
-    @media (max-width: 480px) {      
-      padding: 0.4em;
-      font-size: 0.6em;
-      white-space: nowrap;
-    }
-  }
-  a {
-    color: #212529;
-    img{
-      max-height: 80px;
-    }
-  }
-}
+// .travel-boxoutsize {
+//   background-color: #fff;
+//   margin: 0 auto;
+//   border-radius: 10px;  
+//   padding-left: 0.5em;
+//   padding-right: 0.5em;
+//   padding-top: 1em;
+//   padding-bottom: 1em;
+//   font-size: 0.8em;
+//   text-align: center;
+//   // .swiper-container {
+//   //   padding: 1em 2em;
+//   //   @media (max-width: 480px) {      
+//   //     padding: 0.4em;
+//   //     font-size: 0.6em;
+//   //     white-space: nowrap;
+//   //   }
+//   // }
+//   // a {
+//   //   color: #212529;
+//   //   img{
+//   //     max-height: 80px;
+//   //   }
+//   // }
+// }
 
 /* travel-hot */
 .travel-hot {
@@ -72,14 +72,14 @@
     overflow-x: visible;
     width: auto;
 }
-@media (max-width: 480px) {
-    .travel-topic {
-        background-color: #1E4067;
-        color: #fff;
-        overflow-x: visible;
-        width: 110vw;
-    }
-}
+// @media (max-width: 480px) {
+//     .travel-topic {
+//         background-color: #1E4067;
+//         color: #fff;
+//         overflow-x: visible;
+//         width: 110vw;
+//     }
+// }
 .topic-body {
     text-align: left;
     a.txt-line-clamp1 {

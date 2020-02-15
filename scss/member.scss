@@ -566,10 +566,10 @@ input[type="file"] {
 // myfavorite
 .favorite-explore{
     padding: 15px;    
-    .item-explore {
+    a.item-explore .d-flex.py-3 {
         border-bottom: 1px #eee solid;
+        color: $explore-default;
     }
-    color: $explore-default;
     .img-box {
         width: 80px;
         height: 80px;

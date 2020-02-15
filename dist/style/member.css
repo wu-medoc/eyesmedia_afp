@@ -1097,11 +1097,11 @@ input[type="file"] {
 
 .favorite-explore {
   padding: 15px;
-  color: #182B56;
 }
 
-.favorite-explore .item-explore {
+.favorite-explore a.item-explore .d-flex.py-3 {
   border-bottom: 1px #eee solid;
+  color: #182B56;
 }
 
 .favorite-explore .img-box {
