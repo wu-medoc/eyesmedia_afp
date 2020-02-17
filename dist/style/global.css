@@ -217,11 +217,6 @@ li {
           box-shadow: inset 0 0px 0px 1px #333;
 }
 
-.next-btn {
-  background-color: #F4246A;
-  color: #fff;
-}
-
 .outline-btn {
   border-width: 1px;
 }
@@ -307,7 +302,7 @@ li {
 
 .nav-tabs .nav-link.active {
   border: none;
-  color: #4A90E2;
+  color: #FD5F00;
 }
 
 footer.for-mobile {

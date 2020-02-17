@@ -1,10 +1,9 @@
 @import "../dist/style/module/mixin";
 @import "../dist/style/module/variable";
-@import "../dist/style/module/global";
 
 .mymember {
     position: relative;
-    height: 71vh;
+    height: 80vh;
     display: block;
 }
 .title-box{
@@ -14,7 +13,7 @@
 }
 .member-top-box{
     position: relative;
-    background-color: $member-default;
+    background-color: #F4246A;
     .title-box{
         .material-icons{
             color: $default-white;
@@ -74,11 +73,11 @@
         right: 0;
         width: 100%;
         height: 100px;
-        /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#f4246a+0,ffffff+100&1+0,0+100 */
+        /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/$member-default+0,ffffff+100&1+0,0+100 */
         background: -moz-linear-gradient(top,  rgba(244,36,106,1) 0%, rgba(255,255,255,0) 100%); /* FF3.6-15 */
         background: -webkit-linear-gradient(top,  rgba(244,36,106,1) 0%,rgba(255,255,255,0) 100%); /* Chrome10-25,Safari5.1-6 */
         background: linear-gradient(to bottom,  rgba(244,36,106,1) 0%,rgba(255,255,255,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f4246a', endColorstr='#00ffffff',GradientType=0 ); /* IE6-9 */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$member-default', endColorstr='#00ffffff',GradientType=0 ); /* IE6-9 */
 
 
     }
@@ -156,10 +155,10 @@
                 margin-right: 10px;
             }
             .auto-left{
-                color: #F4246A;
+                color: $member-default;
             }
             button.msg-open{
-                color: #F4246A;
+                color: $member-default;
             }
         }
         li{
@@ -216,7 +215,7 @@ div.mycardprompt{
             justify-content: center;
             align-items: center;
             color: $default-white;
-            background-color: #F4246A;
+            background-color: $member-default;
             border-radius: 100%;
             box-shadow: 0 0 10px rgba(0,0,0,.5);
         }
@@ -294,8 +293,8 @@ input[type="file"] {
             border-radius: 30px !important;
         }
         .outline-btn{
-            border-color: #F4246A;
-            color: #F4246A;
+            border-color: $member-default;
+            color: $member-default;
         }
     }
 }
@@ -321,7 +320,7 @@ input[type="file"] {
                 }
                 &.default-item{
                     p{
-                        color: #F4246A;
+                        color: $member-default;
                         margin-top: -10px;
                     }
                 }
@@ -405,7 +404,7 @@ input[type="file"] {
             }
             .item-default{
                 min-width: 40px;
-                color: #F4246A;
+                color: $member-default;
                 font-size: 14px;
             }
             .sub-list{
@@ -510,7 +509,7 @@ input[type="file"] {
             .text-muted{
                 position: absolute;
                 top: 100%;
-                color: #F4246A !important;
+                color: $member-default !important;
             }
             .material-icons{
                 position: absolute;
@@ -663,7 +662,7 @@ input[type="file"] {
 	width: 18px;
 	height: 5px;
 	border-radius: 3px;
-	background: #F4246A;
+	background: $member-default;
 	position: absolute;
     content: "";
     top:50%;
@@ -720,8 +719,8 @@ input[type="file"] {
     z-index: 1040;
 }
 .outline-btn{
-    border-color: #F4246A;
-    color: #F4246A;
+    border-color: $member-default;
+    color: $member-default;
 }
 
 // member clause&private
@@ -755,7 +754,7 @@ input[type="file"] {
         background-color: #fff;
         .card{
             margin-top: .25em;
-            box-shadow: 0 0 3px rgba(0,0,0,.2);
+            //box-shadow: 0 0 3px rgba(0,0,0,.2);
             -webkit-column-break-inside: avoid;
         }
         column-count: 1;
@@ -763,6 +762,15 @@ input[type="file"] {
             column-count: 2;
             flex-wrap: wrap;
         }    
+        .item.three p{
+            color: $cardfooter-color;
+            font-size: .9em;
+            font-weight: 700;
+            &:last-child{
+                font-size: .7em;
+                color: $gray-color;
+            }
+        }
     }
 }
 img.coinimg-m{
