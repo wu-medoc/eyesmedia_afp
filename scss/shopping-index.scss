@@ -347,13 +347,14 @@ a {
             align-items: flex-start;
             justify-content: center;
             color: $blue-dark;
+            font-size: .9em;
             p{
                 &:first-child{
                     font-weight: 700;
                 }
                 &:last-child{
                     width: 100%;
-                    font-size: small;
+                    font-size: x-small;
                     color: $gray-color;
                 }
                 .material-icons{
@@ -674,7 +675,7 @@ a {
             padding: 0.5em 1em 0 1em;
         }
         .products-store-btn button{
-            font-size: 0.9em;
+            font-size: 0.8em;
             margin-top: 0px;
             width: 80px;
         }       

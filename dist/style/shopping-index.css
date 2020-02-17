@@ -353,6 +353,7 @@ a:hover {
       -ms-flex-pack: center;
           justify-content: center;
   color: #182B56;
+  font-size: .9em;
 }
 
 .other-discount-list .discount-item .discount-text p:first-child {
@@ -361,7 +362,7 @@ a:hover {
 
 .other-discount-list .discount-item .discount-text p:last-child {
   width: 100%;
-  font-size: small;
+  font-size: x-small;
   color: #8E8E93;
 }
 
@@ -724,7 +725,7 @@ a:hover {
 }
 
 .shopping-productsdetail .products-store .products-store-btn button {
-  font-size: 0.9em;
+  font-size: 0.8em;
   margin-top: 0px;
   width: 80px;
 }
