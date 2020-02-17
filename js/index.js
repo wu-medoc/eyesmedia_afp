@@ -257,73 +257,73 @@ var swiper = new Swiper('.shopping-productsimg.swiper-container', {
 
 
 
-// open-page
-$( ".open-page" ).on('click', function () {
-    if ($( "#open-pagebox" ).hasClass("slideOutRight animated")) {
-        $( "#open-pagebox" ).removeClass('slideOutRight animated');
-        $( "#open-pagebox" ).addClass('slideInRight animated');
-        $( "#open-pagebox" ).removeClass('d-block');
-        $( "#open-pagebox" ).addClass('d-none');
-    }
-    $( "#open-pagebox" ).removeClass('d-none');
-    $( "#open-pagebox" ).addClass('d-block');
-    $('#open-mask').addClass("modal-backdrop fade show");
-    $( ".wrap" ).addClass("blur");
-});
-$( ".close-left" ).on('click', function () {
-    $( "#open-pagebox" ).removeClass('slideInRight animated');
-    $( "#open-pagebox" ).addClass('slideOutRight animated');
-    $( "#open-pagebox1" ).removeClass('slideInRight animated');
-    $( "#open-pagebox1" ).addClass('slideOutRight animated');
-    $('#open-mask').removeClass("modal-backdrop fade show");
-    $( ".wrap" ).removeClass("blur");
-});
-if($('#open-pagebox').length>0) {
-    var wrapheight = $('#products-list').innerHeight();
-    var openheight = $('#open-pagebox').outerHeight();  
-    var openheight1 = (wrapheight-openheight)/3.5;
-    if (openheight < wrapheight) {
-        $('#open-pagebox').css({'padding-bottom': openheight1});
-    }  
-}
-// open-page1
-$( ".open-page1" ).on('click', function () {
-    if ($( "#open-pagebox1" ).hasClass("slideOutRight animated")) {
-        $( "#open-pagebox1" ).removeClass('slideOutRight animated');
-        $( "#open-pagebox1" ).addClass('slideInRight animated');
-        $( "#open-pagebox1" ).removeClass('d-block');
-        $( "#open-pagebox1" ).addClass('d-none');
-    }
-    $( "#open-pagebox1" ).removeClass('d-none');
-    $( "#open-pagebox1" ).addClass('d-block');
-    $('#open-mask').addClass("modal-backdrop fade show");
-    $( ".wrap" ).addClass("blur");
-});
-$( ".close-left1" ).on('click', function () {
-    $( "#open-pagebox1" ).removeClass('slideInRight animated');
-    $( "#open-pagebox1" ).addClass('slideOutRight animated');
-});
-if($('#open-pagebox1').length>0) {
-    var wrapheight = $('#products-list').innerHeight();
-    var openheight = $('#open-pagebox1').outerHeight();  
-    var openheight1 = (wrapheight-openheight)/3.5;
-    if (openheight < wrapheight) {
-        $('#open-pagebox1').css({'padding-bottom': openheight1});
-    }  
-}
-// open-uppage
-$( ".open-uppage" ).on('click', function () {
-    $( "#open-pageupbox" ).removeClass('d-none');
-    $( "#open-pageupbox" ).addClass('d-block');
-    $('#open-mask').addClass("modal-backdrop fade show");
-    $( ".wrap" ).addClass("blur");
-});
-$( ".close-up" ).on('click', function () {
-    $('#open-mask').removeClass("modal-backdrop fade show");
-    $( ".wrap" ).removeClass("blur");    
-    $( "#open-pageupbox" ).removeClass('d-block');
-    $( "#open-pageupbox" ).addClass('d-none');
-});
+// // open-page
+// $( ".open-page" ).on('click', function () {
+//     if ($( "#open-pagebox" ).hasClass("slideOutRight animated")) {
+//         $( "#open-pagebox" ).removeClass('slideOutRight animated');
+//         $( "#open-pagebox" ).addClass('slideInRight animated');
+//         $( "#open-pagebox" ).removeClass('d-block');
+//         $( "#open-pagebox" ).addClass('d-none');
+//     }
+//     $( "#open-pagebox" ).removeClass('d-none');
+//     $( "#open-pagebox" ).addClass('d-block');
+//     $('#open-mask').addClass("modal-backdrop fade show");
+//     $( ".wrap" ).addClass("blur");
+// });
+// $( ".close-left" ).on('click', function () {
+//     $( "#open-pagebox" ).removeClass('slideInRight animated');
+//     $( "#open-pagebox" ).addClass('slideOutRight animated');
+//     $( "#open-pagebox1" ).removeClass('slideInRight animated');
+//     $( "#open-pagebox1" ).addClass('slideOutRight animated');
+//     $('#open-mask').removeClass("modal-backdrop fade show");
+//     $( ".wrap" ).removeClass("blur");
+// });
+// if($('#open-pagebox').length>0) {
+//     var wrapheight = $('#products-list').innerHeight();
+//     var openheight = $('#open-pagebox').outerHeight();  
+//     var openheight1 = (wrapheight-openheight)/3.5;
+//     if (openheight < wrapheight) {
+//         $('#open-pagebox').css({'padding-bottom': openheight1});
+//     }  
+// }
+// // open-page1
+// $( ".open-page1" ).on('click', function () {
+//     if ($( "#open-pagebox1" ).hasClass("slideOutRight animated")) {
+//         $( "#open-pagebox1" ).removeClass('slideOutRight animated');
+//         $( "#open-pagebox1" ).addClass('slideInRight animated');
+//         $( "#open-pagebox1" ).removeClass('d-block');
+//         $( "#open-pagebox1" ).addClass('d-none');
+//     }
+//     $( "#open-pagebox1" ).removeClass('d-none');
+//     $( "#open-pagebox1" ).addClass('d-block');
+//     $('#open-mask').addClass("modal-backdrop fade show");
+//     $( ".wrap" ).addClass("blur");
+// });
+// $( ".close-left1" ).on('click', function () {
+//     $( "#open-pagebox1" ).removeClass('slideInRight animated');
+//     $( "#open-pagebox1" ).addClass('slideOutRight animated');
+// });
+// if($('#open-pagebox1').length>0) {
+//     var wrapheight = $('#products-list').innerHeight();
+//     var openheight = $('#open-pagebox1').outerHeight();  
+//     var openheight1 = (wrapheight-openheight)/3.5;
+//     if (openheight < wrapheight) {
+//         $('#open-pagebox1').css({'padding-bottom': openheight1});
+//     }  
+// }
+// // open-uppage
+// $( ".open-uppage" ).on('click', function () {
+//     $( "#open-pageupbox" ).removeClass('d-none');
+//     $( "#open-pageupbox" ).addClass('d-block');
+//     $('#open-mask').addClass("modal-backdrop fade show");
+//     $( ".wrap" ).addClass("blur");
+// });
+// $( ".close-up" ).on('click', function () {
+//     $('#open-mask').removeClass("modal-backdrop fade show");
+//     $( ".wrap" ).removeClass("blur");    
+//     $( "#open-pageupbox" ).removeClass('d-block');
+//     $( "#open-pageupbox" ).addClass('d-none');
+// });
 
 
 $(document).ready(function(){

@@ -46,15 +46,15 @@
                     </div>
                 </div>
             </div>
-            <div>
-                <div class="choice-filter-box">
-                    <div class="flex-inline-between filter-item" date-filter="type">
-                        <div class="item">選擇分類</div>
-                        <div class="item pr-2 open-btn"><i class="material-icons">&#xE313;</i></div>
+            <div class="choice-filter-box py-1">
+                <div class="flex-inline-between">
+                    <div class="item center-v">選擇分類</div>
+                    <div class="item pr-2">
+                        <button class="btn filter-item" data-filter="type"><i class="material-icons">&#xE313;</i></button>
                     </div>
-                    <div class="filter-box auto-left open-page">
-                        <i class="material-icons">&#xE152;</i>
-                    </div>
+                </div>
+                <div class="filter-box auto-left">
+                    <button class="btn open-page"><i class="material-icons">&#xE152;</i></button>
                 </div>
             </div>
         </div>
@@ -194,7 +194,7 @@
                     </div>
                 </a>         
             </div>   
-            <div id="type" class="slideInRight animated explore-filter-content">
+            <div id="type" class="explore-filter-content">
                 <ul class="open-page-ul">
                     <li class="flex-inline-between">                
                             <div class="">
@@ -247,6 +247,7 @@
                 </ul>
             </div>
             
+            </div>
         </div>
         <div class="close-left" id="open-mask"></div>
         <!-- shopping right-menu (open-pagebox) -->
@@ -254,6 +255,9 @@
             <div class="slideInRight animated d-none" id="open-pagebox">
                 <div class="open-page-title flex-inline-between">
                     <div class="title-icon">
+                        <button class="btn close-left">
+                            <i class="material-icons">&#xE314;</i>
+                        </button>
                     </div>
                     <div class="title-txt">
                         篩選與排序
@@ -557,93 +561,66 @@
             $(window).on('resize', function(){
                 mainBox.css({ 'height': 'calc(100vh - ' + topBox.height() + 'px)' });
             }).trigger('resize');
-            // 開啟分類清單
-            // $('.open-btn').on('click', function(){
-            //     $(this).parent().toggleClass('is-open');
-            // })
-            // 開啟分類清單
+
+            // 開啟篩選清單
             $('.filter-item').on('click', function(){
                 $(this).toggleClass('active').siblings().removeClass('active');
                 var filter = $(this).data('filter');
-                //alert(filter);
                 $('#' + filter).toggleClass('is-open');
                 $('#' + filter).siblings().removeClass('is-open');
                 $( ".mask-container" ).removeClass("d-block");
-                if ($( ".filter-item" ).hasClass("active")) {
+                if ($( "button.filter-item" ).hasClass("active")) {
                     $( ".mask-container" ).addClass("d-block");
                 }
             })
             
             // 篩選清單層級樣式
-            // $('.nav-container .levelOne > li').on('click', function(){
-            //     $('.nav-container .levelOne > li').removeClass('active');
-            //     $(this).addClass('active');
-            // })
+            $('.nav-container .levelOne > li').on('click', function(){
+                $('.nav-container .levelOne > li').removeClass('active');
+                $(this).addClass('active');
+            })
 
-            // $('.nav-container .levelTwo > li').on('click', function(){
-            //     console.log('here');
-            //     $('.nav-container .levelTwo > li').removeClass('active');
-            //     $(this).addClass('active');
-            // })
-
+            $('.nav-container .levelTwo > li').on('click', function(){
+                console.log('here');
+                $('.nav-container .levelTwo > li').removeClass('active');
+                $(this).addClass('active');
+            })
 
 
             // open-page
-            // $( ".open-page" ).on('click', function () {
-            //     if ($( "#open-pagebox" ).hasClass("slideOutRight animated")) {
-            //         $( "#open-pagebox" ).removeClass('slideOutRight animated');
-            //         $( "#open-pagebox" ).addClass('slideInRight animated');
-            //         $( "#open-pagebox" ).removeClass('d-block');
-            //         $( "#open-pagebox" ).addClass('d-none');
-            //     }
-            //     $( "#open-pagebox" ).removeClass('d-none');
-            //     $( "#open-pagebox" ).addClass('d-block');
-            //     $( "#open-mask" ).addClass("modal-backdrop fade show");
-            //     $( ".wrap" ).addClass("blur");
-            // });
-            // $( ".close-left" ).on('click', function () {
-            //     $( "#open-pagebox" ).removeClass('slideInRight animated');
-            //     $( "#open-pagebox" ).addClass('slideOutRight animated');
-            //     $( "#open-pagebox1" ).removeClass('slideInRight animated');
-            //     $( "#open-pagebox1" ).addClass('slideOutRight animated');
-            //     $( "#open-mask" ).removeClass("modal-backdrop fade show");
-            //     $( ".wrap" ).removeClass("blur");
-            // });
-            // if($('#open-pagebox').length>0) {
-            //     var wrapheight = $('#products-list').innerHeight();
-            //     var openheight = $('#open-pagebox').outerHeight();  
-            //     var openheight1 = (wrapheight-openheight)/3.5;
-            //     if (openheight < wrapheight) {
-            //         $('#open-pagebox').css({'padding-bottom': openheight1});
-            //     }  
-            // }
-            // // open-page1
-            // $( ".open-page1" ).on('click', function () {
-            //     if ($( "#open-pagebox1" ).hasClass("slideOutRight animated")) {
-            //         $( "#open-pagebox1" ).removeClass('slideOutRight animated');
-            //         $( "#open-pagebox1" ).addClass('slideInRight animated');
-            //         $( "#open-pagebox1" ).removeClass('d-block');
-            //         $( "#open-pagebox1" ).addClass('d-none');
-            //     }
-            //     $( "#open-pagebox1" ).removeClass('d-none');
-            //     $( "#open-pagebox1" ).addClass('d-block');
-            //     $( "#open-mask" ).addClass("modal-backdrop fade show");
-            //     $( ".wrap" ).addClass("blur");
-            // });
-            // $( ".close-left1" ).on('click', function () {
-            //     $( "#open-pagebox1" ).removeClass('slideInRight animated');
-            //     $( "#open-pagebox1" ).addClass('slideOutRight animated');
-            // });
-            // if($('#open-pagebox1').length>0) {
-            //     var wrapheight = $('#products-list').innerHeight();
-            //     var openheight = $('#open-pagebox1').outerHeight();  
-            //     var openheight1 = (wrapheight-openheight)/3.5;
-            //     if (openheight < wrapheight) {
-            //         $('#open-pagebox1').css({'padding-bottom': openheight1});
-            //     }  
-            // }
+            $( ".open-page" ).on('click', function () {
+                if ($( "#open-pagebox" ).hasClass("slideOutRight animated")) {
+                    $( "#open-pagebox" ).removeClass('slideOutRight animated').addClass('slideInRight animated');
+                    $( "#open-pagebox" ).removeClass('d-block').addClass('d-none');
+                }
+                $( "#open-pagebox" ).removeClass('d-none').addClass('d-block');
+                $( "#open-mask" ).addClass("modal-backdrop fade show");
+                $( ".wrap" ).addClass("blur");
+            });
+            $( ".close-left" ).on('click', function () {
+                $( "#open-pagebox" ).removeClass('slideInRight animated').addClass('slideOutRight animated');
+                $( "#open-pagebox1" ).removeClass('slideInRight animated').addClass('slideOutRight animated');
+                $( "#open-mask" ).removeClass("modal-backdrop fade show");
+                $( ".wrap" ).removeClass("blur");
+            });
+            if($('#open-pagebox').length>0) {
+                $('#open-pagebox').attr('style','position:fixed ; height:10vh; overflow-y:auto;'); 
+            }
+            // open-page1
+            $( ".open-page1" ).on('click', function () {
+                if ($( "#open-pagebox1" ).hasClass("slideOutRight animated")) {
+                    $( "#open-pagebox1" ).removeClass('slideOutRight animated').addClass('slideInRight animated');
+                    $( "#open-pagebox1" ).removeClass('d-block').addClass('d-none');
+                }
+                $( "#open-pagebox1" ).removeClass('d-none').addClass('d-block');
+                $( "#open-mask" ).addClass("modal-backdrop fade show");
+                $( ".wrap" ).addClass("blur");
+            });
+            $( ".close-left1" ).on('click', function () {
+                $( "#open-pagebox1" ).removeClass('slideInRight animated').addClass('slideOutRight animated');
+            });
 
-        });
+        })
     </script>
 </body>
 

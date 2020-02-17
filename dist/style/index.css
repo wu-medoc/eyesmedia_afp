@@ -2748,7 +2748,7 @@ td.linebt-td,
 
 #open-pagebox1 .open-page-title .title-txt button.active,
 #open-pagebox .open-page-title .title-txt button.active {
-  color: #0056b3;
+  color: #FD5F00;
   font-size: 0.9em;
   font-weight: bold;
 }
@@ -2793,7 +2793,7 @@ td.linebt-td,
 
 #open-pagebox1 .open-page-ul li button.active,
 #open-pagebox .open-page-ul li button.active {
-  color: #0056b3;
+  color: #FD5F00;
   font-size: 0.9em;
   font-weight: bold;
 }
@@ -3068,7 +3068,7 @@ button.open-page img {
           transform: translateY(-50%);
 }
 
-.choice-filter-box .filter-item.is-open .open-btn i.material-icons {
+.choice-filter-box .filter-item.active i.material-icons {
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
 }

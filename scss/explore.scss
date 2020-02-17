@@ -39,7 +39,7 @@ button{
 }
 #open-pagebox .open-page-ul{
         li.active>div{
-            color: $blue-middle;
+            color: $index-default;
         }
 }
 
@@ -88,7 +88,7 @@ button{
             color: $explore-default;
 
             &.active {
-                color: #48a2de;
+                color: $index-default;
 
                 .material-icons {
                     transform: rotate(180deg);
@@ -160,7 +160,7 @@ button.active{
             font-size: 0.9em;
         }  
         .open-page-ul li button.active{
-            color: #0056b3;
+            color: $index-default;
             font-size: 0.9em;
             font-weight: bold;
         }

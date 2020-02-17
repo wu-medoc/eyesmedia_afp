@@ -423,7 +423,7 @@ button.filter-item {
 }
 
 #open-pagebox .open-page-ul li.active > div {
-  color: #0091FF;
+  color: #FD5F00;
 }
 
 .explore-top-box {
@@ -480,7 +480,7 @@ button.filter-item {
 }
 
 .explore-top-box .filter-item-box .filter-item.active {
-  color: #48a2de;
+  color: #FD5F00;
 }
 
 .explore-top-box .filter-item-box .filter-item.active .material-icons {
@@ -560,7 +560,7 @@ button.active {
 }
 
 .explore-container .explore-filter-content .open-page-ul li button.active {
-  color: #0056b3;
+  color: #FD5F00;
   font-size: 0.9em;
   font-weight: bold;
 }
