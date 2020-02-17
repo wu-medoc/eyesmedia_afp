@@ -491,6 +491,8 @@ button.filter-item {
 .mask-container {
   position: absolute;
   display: none;
+  background-color: #000;
+  opacity: .6;
 }
 
 .active {

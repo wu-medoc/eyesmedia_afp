@@ -194,7 +194,13 @@ li {
 
 .addheight {
   background-color: #fff;
-  height: 90px;
+  height: 57px;
+}
+
+@media (min-width: 768px) {
+  .addheight {
+    height: 0px;
+  }
 }
 
 .disabled-btn {
@@ -313,6 +319,8 @@ footer.for-mobile {
   bottom: 0;
   z-index: 300;
   background-color: #fff;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
 }
 
 footer.for-pc {

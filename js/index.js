@@ -471,15 +471,15 @@ var tLayer = [];
 function callLayer(nextLayer) {
     if (tLayer.length === 0) { 
         $('.multilayer').attr('style','position:fixed ; height:10vh; overflow-y:auto;'); 
-        $('.multilayer').animateCss('slideInRight', '+d-block container fast');         
+        $('.multilayer').animateCss('slideInRight', '+d-block container faster');         
     }
 	if (tLayer[tLayer.length - 1] !== nextLayer) { tLayer.push(nextLayer); }
-    $(nextLayer).animateCss('slideInRight', '+d-block container fast').attr('style','position:fixed ; height:10vh; overflow-y:auto;');;
+    $(nextLayer).animateCss('slideInRight', '+d-block container faster').attr('style','position:fixed ; height:10vh; overflow-y:auto;');;
 }
 function backLayer() {
-	$(tLayer.pop()).animateCss('slideOutRight', '-d-block container fast').removeAttr('style');
+	$(tLayer.pop()).animateCss('slideOutRight', '-d-block container faster').removeAttr('style');
     if (tLayer.length === 0) {
-        $('.multilayer').animateCss('slideOutRight', '-d-block container fast');
+        $('.multilayer').animateCss('slideOutRight', '-d-block container faster');
         $('.multilayer').removeAttr('style');
     }
 }
@@ -487,14 +487,14 @@ var tLayerUp = [];
 function callLayerUp(nextLayerUp) {
     if (tLayerUp.length === 0) {         
         $('.uplayer').attr('style','position:fixed ; height:10vh; overflow-y:auto;'); 
-        $('.uplayer').animateCss('slideInUp', '+d-block container fast');
+        $('.uplayer').animateCss('slideInUp', '+d-block container faster');
     }
 	if (tLayerUp[tLayerUp.length - 1] !== nextLayerUp) { tLayerUp.push(nextLayerUp); }
-	$(nextLayerUp).animateCss('slideInUp', '+d-block container fast').attr('style','position:fixed ; height:10vh; overflow-y:auto;');
+	$(nextLayerUp).animateCss('slideInUp', '+d-block container faster').attr('style','position:fixed ; height:10vh; overflow-y:auto;');
 }
 function backLayerUp() {
-	$(tLayerUp.pop()).animateCss('slideOutDown', '-d-block container fast').removeAttr('style');;
-    if (tLayerUp.length === 0) { $('.uplayer').animateCss('slideOutDown', '-d-block container fast');
+	$(tLayerUp.pop()).animateCss('slideOutDown', '-d-block container faster').removeAttr('style');;
+    if (tLayerUp.length === 0) { $('.uplayer').animateCss('slideOutDown', '-d-block container faster');
     $('.uplayer').removeAttr('style');
     }
 }

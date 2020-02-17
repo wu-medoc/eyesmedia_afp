@@ -3038,6 +3038,41 @@ button.open-page img {
   color: #f4246a;
 }
 
+/* choice-filter-box bar */
+.choice-filter-box {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 15px;
+  border-top: 1px #eee solid;
+  border-bottom: 1px #eee solid;
+  margin-top: 10px;
+}
+
+.choice-filter-box .filter-box {
+  padding-left: 15px;
+  position: relative;
+}
+
+.choice-filter-box .filter-box:before {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 1px;
+  height: 100%;
+  top: 50%;
+  left: 7px;
+  background-color: #eee;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.choice-filter-box .filter-item.is-open .open-btn i.material-icons {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
 /* check ui */
 .checkbox label {
   display: inline-block;

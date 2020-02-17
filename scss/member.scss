@@ -723,29 +723,6 @@ input[type="file"] {
     border-color: #F4246A;
     color: #F4246A;
 }
-.choice-filter-box{
-    width: 100%;
-    display: flex;
-    padding: 15px;
-    border-top: 1px $gray-light solid;
-    border-bottom: 1px $gray-light solid;
-    margin-top: 10px;
-    .filter-box{
-        padding-left: 15px;
-        position: relative;
-        &:before{
-            content: '';
-            display: block;
-            position: absolute;
-            width: 1px;
-            height: 100%;
-            top: 50%;
-            left: 7px;
-            background-color: $gray-light;
-            transform: translateY(-50%);
-        }
-    }
-}
 
 // member clause&private
 .member-body {

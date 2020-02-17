@@ -1284,35 +1284,6 @@ input[type="file"] {
   color: #F4246A;
 }
 
-.choice-filter-box {
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  padding: 15px;
-  border-top: 1px #eee solid;
-  border-bottom: 1px #eee solid;
-  margin-top: 10px;
-}
-
-.choice-filter-box .filter-box {
-  padding-left: 15px;
-  position: relative;
-}
-
-.choice-filter-box .filter-box:before {
-  content: '';
-  display: block;
-  position: absolute;
-  width: 1px;
-  height: 100%;
-  top: 50%;
-  left: 7px;
-  background-color: #eee;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-}
-
 .member-body {
   padding: .5em;
   text-align: justify;
