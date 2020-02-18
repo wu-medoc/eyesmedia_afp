@@ -3060,6 +3060,27 @@ button.open-page {
     }
   }
 }
+/* index flex */
+.index-flex{
+  width: 100%;
+  display: flex;      
+  align-items: center;
+  div.item{  
+      flex: 1; 
+      &.one{
+          flex-grow: 1; 
+      }
+      &.two{
+          flex-grow: 2; 
+      }
+      &.three{
+          flex-grow: 3; 
+      }
+      &.four{
+          flex-grow: 4; 
+      }
+  } 
+}
 /* member-flex */
 .member-flex{
   width: 100%;
@@ -3193,6 +3214,7 @@ button.open-page {
   padding:0;
   overflow:hidden;
 }
+.sortlayer, 
 .multilayer>div{
   overflow-x:hidden;
   overflow-y:auto;

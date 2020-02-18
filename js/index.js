@@ -474,29 +474,39 @@ $('.close-overlay-choice').on("click", function () {
 
 // multilayer animateCss
 var tLayer = [];
-function callLayer(nextLayer) {
+function callsortLayer(nextLayer) {
     if (tLayer.length === 0) { 
-        $('.multilayer').attr('style','position:fixed ; height:10vh; overflow-y:auto;'); 
-        $('.multilayer').animateCss('slideInRight', '+d-block container faster');         
+        $('.member-sort').attr('style','position:fixed ; height:1vh; overflow-y:auto;').animateCss('slideInRight', '+d-block container faster');
     }
 	if (tLayer[tLayer.length - 1] !== nextLayer) { tLayer.push(nextLayer); }
-    $(nextLayer).animateCss('slideInRight', '+d-block container faster').attr('style','position:fixed ; height:10vh; overflow-y:auto;');;
+    $(nextLayer).animateCss('slideInRight', '+d-block container faster').attr('style','position:fixed ; height:1vh; overflow-y:auto;');;
+}
+function backsortLayer() {
+	$(tLayer.pop()).animateCss('slideOutRight', '-d-block container faster').removeAttr('style');
+    if (tLayer.length === 0) {
+        $('.member-sort').animateCss('slideOutRight', '-d-block container faster').removeAttr('style');
+    }
+}
+function callLayer(nextLayer) {
+    if (tLayer.length === 0) { 
+        $('.multilayer').attr('style','position:fixed ; height:1vh; overflow-y:auto;').animateCss('slideInRight', '+d-block container faster');
+    }
+	if (tLayer[tLayer.length - 1] !== nextLayer) { tLayer.push(nextLayer); }
+    $(nextLayer).animateCss('slideInRight', '+d-block container faster').attr('style','position:fixed ; height:1vh; overflow-y:auto;');;
 }
 function backLayer() {
 	$(tLayer.pop()).animateCss('slideOutRight', '-d-block container faster').removeAttr('style');
     if (tLayer.length === 0) {
-        $('.multilayer').animateCss('slideOutRight', '-d-block container faster');
-        $('.multilayer').removeAttr('style');
+        $('.multilayer').animateCss('slideOutRight', '-d-block container faster').removeAttr('style');
     }
 }
-var tLayerUp = [];
 function callLayerUp(nextLayerUp) {
     if (tLayerUp.length === 0) {         
-        $('.uplayer').attr('style','position:fixed ; height:10vh; overflow-y:auto;'); 
+        $('.uplayer').attr('style','position:fixed ; height:1vh; overflow-y:auto;'); 
         $('.uplayer').animateCss('slideInUp', '+d-block container faster');
     }
 	if (tLayerUp[tLayerUp.length - 1] !== nextLayerUp) { tLayerUp.push(nextLayerUp); }
-	$(nextLayerUp).animateCss('slideInUp', '+d-block container faster').attr('style','position:fixed ; height:10vh; overflow-y:auto;');
+	$(nextLayerUp).animateCss('slideInUp', '+d-block container faster').attr('style','position:fixed ; height:1vh; overflow-y:auto;');
 }
 function backLayerUp() {
 	$(tLayerUp.pop()).animateCss('slideOutDown', '-d-block container faster').removeAttr('style');;

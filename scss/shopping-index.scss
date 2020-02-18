@@ -146,27 +146,6 @@ a {
 //         }
 //     }
 // }
-/* shopping flex */
-.shopping-flex{
-    width: 100%;
-    display: flex;      
-    align-items: center;
-    div.item{  
-        flex: 1; 
-        &.one{
-            flex-grow: 1; 
-        }
-        &.two{
-            flex-grow: 2; 
-        }
-        &.three{
-            flex-grow: 3; 
-        }
-        &.four{
-            flex-grow: 4; 
-        }
-    } 
-}
 
 /* shopping-adbn */
 .shopping-adimgbox .rwdimg-h20{

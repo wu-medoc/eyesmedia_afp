@@ -3474,6 +3474,47 @@ button.open-page img {
   padding: .5em 0;
 }
 
+/* index flex */
+.index-flex {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.index-flex div.item {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.index-flex div.item.one {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+.index-flex div.item.two {
+  -webkit-box-flex: 2;
+      -ms-flex-positive: 2;
+          flex-grow: 2;
+}
+
+.index-flex div.item.three {
+  -webkit-box-flex: 3;
+      -ms-flex-positive: 3;
+          flex-grow: 3;
+}
+
+.index-flex div.item.four {
+  -webkit-box-flex: 4;
+      -ms-flex-positive: 4;
+          flex-grow: 4;
+}
+
 /* member-flex */
 .member-flex {
   width: 100%;
@@ -3650,6 +3691,7 @@ button.open-page img {
   overflow: hidden;
 }
 
+.sortlayer,
 .multilayer > div {
   overflow-x: hidden;
   overflow-y: auto;

@@ -1001,15 +1001,15 @@ img.coinimg-m {
   }
 }
 
-.member-sort.multilayer {
+.sortlayer {
   background-color: transparent;
 }
 
-.member-sort.multilayer > div {
+.sortlayer > div {
   background-color: transparent;
 }
 
-.member-sort.multilayer > div li.active > div {
+.sortlayer > div li.active > div {
   color: #FD5F00;
 }
 
