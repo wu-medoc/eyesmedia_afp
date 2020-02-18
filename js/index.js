@@ -473,20 +473,21 @@ $('.close-overlay-choice').on("click", function () {
 // };
 
 // multilayer animateCss
-var tLayer = [];
+var sLayer = [];
 function callsortLayer(nextLayer) {
-    if (tLayer.length === 0) { 
-        $('.member-sort').attr('style','position:fixed ; height:1vh; overflow-y:auto;').animateCss('slideInRight', '+d-block container faster');
+    if (sLayer.length === 0) { 
+        $('.sortlayer').attr('style','position:fixed ; height:1vh; overflow-y:auto;').animateCss('slideInRight', '+d-block container faster');
     }
-	if (tLayer[tLayer.length - 1] !== nextLayer) { tLayer.push(nextLayer); }
+	if (sLayer[tLayer.length - 1] !== nextLayer) { sLayer.push(nextLayer); }
     $(nextLayer).animateCss('slideInRight', '+d-block container faster').attr('style','position:fixed ; height:1vh; overflow-y:auto;');;
 }
 function backsortLayer() {
-	$(tLayer.pop()).animateCss('slideOutRight', '-d-block container faster').removeAttr('style');
-    if (tLayer.length === 0) {
-        $('.member-sort').animateCss('slideOutRight', '-d-block container faster').removeAttr('style');
+	$(sLayer.pop()).animateCss('slideOutRight', '-d-block container faster').removeAttr('style');
+    if (sLayer.length === 0) {
+        $('.sortlayer').animateCss('slideOutRight', '-d-block container faster').removeAttr('style');
     }
 }
+var Layer = [];
 function callLayer(nextLayer) {
     if (tLayer.length === 0) { 
         $('.multilayer').attr('style','position:fixed ; height:1vh; overflow-y:auto;').animateCss('slideInRight', '+d-block container faster');
@@ -500,6 +501,7 @@ function backLayer() {
         $('.multilayer').animateCss('slideOutRight', '-d-block container faster').removeAttr('style');
     }
 }
+var tLayer = [];
 function callLayerUp(nextLayerUp) {
     if (tLayerUp.length === 0) {         
         $('.uplayer').attr('style','position:fixed ; height:1vh; overflow-y:auto;'); 
