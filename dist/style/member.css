@@ -990,7 +990,6 @@ img.coinimg-m {
 }
 
 .rwdimg.logo-img {
-  border: 1px #eee solid;
   width: 80px;
   height: 80px;
 }
@@ -1000,5 +999,25 @@ img.coinimg-m {
     width: 60px;
     height: 60px;
   }
+}
+
+.member-sort.multilayer {
+  background-color: transparent;
+}
+
+.member-sort.multilayer > div {
+  background-color: transparent;
+}
+
+.member-sort.multilayer > div li.active > div {
+  color: #FD5F00;
+}
+
+.w-10 {
+  width: 10%;
+}
+
+.w-90 {
+  width: 90%;
 }
 /*# sourceMappingURL=member.css.map */

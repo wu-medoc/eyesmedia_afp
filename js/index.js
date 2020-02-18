@@ -391,6 +391,12 @@ function close_mask(e) {
     $('.mask-bk').removeClass('d-block').addClass('d-none');
     $('.'+e).css('display','none');
 };
+$('.masklayer').on("click", function () {
+    $('body').append("<div class='mask-bk container'></div>");
+});
+$('.masklayer-close').on("click", function () {
+    $('.mask-bk').remove();
+});
 
 // div switch
 function div_switch() {

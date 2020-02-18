@@ -794,7 +794,7 @@ img.coinimg-m{
     border-radius: 30px;
   }
 .rwdimg.logo-img{
-    border: 1px $gray-light solid;
+    //border: 1px $gray-light solid;
     width: 80px;
     height: 80px;
     @media screen and (max-width: 571px) {            
@@ -802,3 +802,20 @@ img.coinimg-m{
         height: 60px;
     }   
 }
+
+.member-sort.multilayer{
+    background-color:transparent;
+    &>div{
+        background-color:transparent;
+        li.active>div{
+            color: $onlineshopping-default;
+        }
+    }
+}
+
+.w-10{
+    width: 10%;
+  }
+  .w-90{
+    width: 90%;
+  }
