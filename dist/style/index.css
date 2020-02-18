@@ -1824,7 +1824,7 @@ footer.for-pc li {
   border: 0;
   background-color: #fff;
   border-radius: .5em;
-  padding: 0 1.2em 0 0.5em;
+  padding: 0 1.5em 0 0.5em;
   font-size: .9em;
 }
 
@@ -1918,7 +1918,7 @@ td.linebt-td,
   .modal-full .modal-body {
     background-color: #fff;
     width: 100%;
-    height: 100vh;
+    height: 75vh;
   }
   .modal-full .modal-body h5 {
     padding: .7em 0;
