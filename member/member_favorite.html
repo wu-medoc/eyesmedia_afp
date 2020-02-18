@@ -45,9 +45,8 @@
             </div>
             <div class="item title-name">我的收藏</div>                
             <div class="item">        
-                <button class="btn msg-open" value="msg-myticket" data-toggle="modal" data-target="#messageModal" data-dismiss="modal" aria-label="Close">
-                    <i class="material-icons">&#xE145;</i>
-                </button>
+                <button class="btn item-edit div-switch d-block" onclick="div_switch();">編輯</button>
+                <button class="btn item-editok div-switch d-none" onclick="div_switch();">完成</button>
             </div>
         </div>        
                  
@@ -61,13 +60,13 @@
                                 <a href="#favoritetag01" class="tablist-link active" aria-controls="favoritetag01" role="tab" data-toggle="tab" aria-selected="true">探索週邊</a>
                             </li>
                             <li role="presentation">
-                                <a href="#favoritetag02" class="tablist-link" aria-controls="favoritetag02" role="tab" data-toggle="tab" aria-selected="false">旅遊行程</a>
-                            </li>
-                            <li role="presentation">
                                 <a href="#favoritetag03" class="tablist-link" aria-controls="favoritetag03" role="tab" data-toggle="tab" aria-selected="false">按讚好物</a>
                             </li>
                             <li role="presentation">
                                 <a href="#favoritetag04" class="tablist-link" aria-controls="favoritetag04" role="tab" data-toggle="tab" aria-selected="false">線上商店</a>
+                            </li>
+                            <li role="presentation">
+                                <a href="#favoritetag02" class="tablist-link" aria-controls="favoritetag02" role="tab" data-toggle="tab" aria-selected="false">旅遊行程</a>
                             </li>
                         </ul>     
                     </div>
@@ -88,19 +87,39 @@
                             <div class="filter-outbox">
                                 <div class="filter-main">
                                     <div class="mask-container d-none w-100 h-100"></div>
-                                    <div class="favorite-explore">
-                                        <a href class="item-explore">
-                                            <div class="d-flex py-3">
+                                    <div class="favorite-explore p-0">
+                                        <div class="d-flex">
+                                            <a href class="item-explore">
                                                 <div class="img-box">
                                                     <img src="https://picsum.photos/300/300/?random=1">
                                                 </div>
+                                            </a>
+                                            <a href class="item-explore w-100">
                                                 <div class="info-box">
                                                     <ul class="info-list">
                                                         <li class="info-name">瑞豐夜市</li>
-                                                        <li class="flex-inline-between">
-                                                            <div class="item item-ticket">折價券</div>
-                                                            <div class="item">
-                                                                <span class="badge badge-pill badge-light text-info"><img src="../img/explore/icon/icon_explore_food.svg" alt="">美食</span> 
+                                                        <li class="d-flex align-content-start flex-wrap">
+                                                            <div class="item-ticket">折價券</div>
+                                                            <div class="item-ticket">
+                                                                <img src="../img/member/category_food.svg" alt="">美食
+                                                            </div>
+                                                            <div class="item-ticket">
+                                                                <img src="../img/member/category_shopping.svg" alt="">購物
+                                                            </div>
+                                                            <div class="item-ticket">
+                                                                <img src="../img/member/category_sightseeing.svg" alt="">景點
+                                                            </div>
+                                                            <div class="item-ticket">
+                                                                <img src="../img/member/category_entertainment.svg" alt="">遊樂
+                                                            </div>
+                                                            <div class="item-ticket">
+                                                                <img src="../img/member/category_booking.svg" alt="">訂票
+                                                            </div>
+                                                            <div class="item-ticket">
+                                                                <img src="../img/member/category_healthcare.svg" alt="">保健
+                                                            </div>
+                                                            <div class="item-ticket">
+                                                                <img src="../img/member/category_transportation.svg" alt="">交通
                                                             </div>
                                                         </li>
                                                         <li class="flex-inline-between">
@@ -109,32 +128,41 @@
                                                         </li>
                                                     </ul>
                                                 </div>
+                                            </a>
+                                            <div class="item-del div-switch d-none">
+                                                刪除
                                             </div>
-                                        </a>
-                                        <a href class="item-explore">
-                                            <div class="d-flex py-3">
+                                        </div>
+                                        <div class="d-flex">
+                                            <a href class="item-explore">
                                                 <div class="img-box">
                                                     <img src="https://picsum.photos/300/300/?random=2">
                                                 </div>
+                                            </a>
+                                            <a href class="item-explore w-100">
                                                 <div class="info-box">
                                                     <ul class="info-list">
-                                                        <li class="info-name">蓮池潭</li>
-                                                        <li class="flex-inline-between">
-                                                            <div class="item">
-        
+                                                        <li class="info-name">蓮花池</li>
+                                                        <li class="d-flex align-content-start flex-wrap">
+                                                            <div class="item-ticket">折價券</div>
+                                                            <div class="item-ticket">
+                                                                <img src="../img/member/category_sightseeing.svg" alt="">景點
                                                             </div>
-                                                            <div class="item">
-                                                                <span class="badge badge-pill badge-light text-info"><img src="../img/explore/icon/icon_explore_food.svg" alt="">美食</span>
+                                                            <div class="item-ticket">
+                                                                <img src="../img/member/category_entertainment.svg" alt="">遊樂
                                                             </div>
                                                         </li>
                                                         <li class="flex-inline-between">
-                                                            <div class="item">近左營捷運站</div>
+                                                            <div class="item">近高雄捷運站</div>
                                                             <div class="item">距離<span>33</span>km</div>
                                                         </li>
                                                     </ul>
                                                 </div>
+                                            </a>
+                                            <div class="item-del div-switch d-none">
+                                                刪除
                                             </div>
-                                        </a>
+                                        </div>
                                     </div>
                                 </div>
                                 <div id="type" class="filter-content">
@@ -191,71 +219,111 @@
                                 </div>
                             </div>
                             
-                        </div>                    
-                        <div role="tabpanel" class="tab-pane" id="favoritetag02">
-                            <div class="favorite-explore">
-                                <a href class="item-explore">
-                                    <div class="d-flex py-3">
-                                        <div class="img-box">
-                                            <img src="https://picsum.photos/300/300/?random=1">
-                                        </div>
-                                        <div class="info-box">
-                                            <ul class="info-list">
-                                                <li class="info-name">【櫻浪太強】東北深度賞櫻全覽、北上展櫻花、角館垂櫻、足利</li>
-                                                <li>
-                                                    <div class="badge badge-pill border border-info text-info item-tag">櫻花</div>
-                                                    <div class="badge badge-pill border border-info text-info item-tag">送 wifi</div>
-                                                </li>
-                                                <li class="flex-inline-between">
-                                                    <div class="item">
-                                                        <i class="material-icons text-info">&#xE0C8;</i>
-                                                        <span>日本 東北</span>
-                                                    </div>
-                                                    <div class="item auto-left text-info">5 天 $35,900 元起</div>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>                      
+                        </div>                       
                         <div role="tabpanel" class="tab-pane" id="favoritetag03">
-                            <div class="favorite-explore">
-                                <a href class="item-explore">
-                                    <div class="d-flex py-3">
-                                        <div class="img-box">
-                                            <img src="https://picsum.photos/300/300/?random=1">
-                                        </div>
-                                        <div class="info-box">
-                                            <ul class="info-list">
-                                                <li class="info-name">Thecoopidea BEANS Pro真無線藍牙耳機</li>
-                                                <li class="text-right pt-2">
-                                                    <span class="price-asking">$4880</span>
-                                                    <span class="price-original">$6100</span>
-                                                </li>
-                                            </ul>
+                            <div class="favorite-explore p-0">
+                                    <div class="d-flex">
+                                        <a href class="item-explore">
+                                            <div class="img-box">
+                                                <img src="https://picsum.photos/300/300/?random=1">
+                                            </div>
+                                        </a>
+                                        <a href class="item-explore w-100">
+                                            <div class="info-box">
+                                                <ul class="info-list">
+                                                    <li class="info-name">Thecoopidea BEANS Pro真無線藍牙耳機</li>
+                                                    <li class="text-right pt-2">
+                                                        <span class="price-asking">$4880</span>
+                                                        <span class="price-original">$6100</span>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </a>
+                                        <div class="item-del div-switch d-none">
+                                            刪除
                                         </div>
                                     </div>
-                                </a>
+                                    <div class="d-flex">
+                                        <a href class="item-explore">
+                                            <div class="img-box">
+                                                <img src="https://picsum.photos/300/300/?random=3">
+                                            </div>
+                                        </a>
+                                        <a href class="item-explore w-100">
+                                            <div class="info-box">
+                                                <ul class="info-list">
+                                                    <li class="info-name">Thecoopidea BEANS Pro真無線藍牙耳機</li>
+                                                    <li class="text-right pt-2">
+                                                        <span class="price-asking">$4880</span>
+                                                        <span class="price-original">$6100</span>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </a>
+                                        <div class="item-del div-switch d-none">
+                                            刪除
+                                        </div>
+                                    </div>
                             </div>
-                        </div>                      
+                        </div>                       
                         <div role="tabpanel" class="tab-pane" id="favoritetag04">
-                            <div class="favorite-explore">
-                                <a href class="item-explore">
-                                    <div class="d-flex py-3">
+                            <div class="favorite-explore p-0">
+                                <div class="d-flex">
+                                        <a href class="item-explore">
                                         <div class="img-box">
                                             <img src="https://picsum.photos/300/300/?random=1">
                                         </div>
+                                    </a>
+                                        <a href class="item-explore">
                                         <div class="info-box">
                                             <ul class="info-list">
                                                 <li class="info-name">昇恆昌免稅購物網站</li>
-                                                <li class="info-province">現折$60</li>
+                                                <li class="info-province">優惠券：現折60元</li>
                                             </ul>
                                         </div>
+                                    </a>
+                                    <div class="item-del div-switch d-none">
+                                        刪除
                                     </div>
-                                </a>
+                                </div>
                             </div>
-                        </div>    
+                        </div>                    
+                        <div role="tabpanel" class="tab-pane" id="favoritetag02">
+                            <div class="favorite-explore p-0">
+                                <div class="d-flex">
+                                    <a href class="item-explore">
+                                        <div class="img-box">
+                                            <img src="https://picsum.photos/300/300/?random=1">
+                                        </div>
+                                    </a>
+                                    <a href class="item-explore">
+                                        <div class="info-box">
+                                            <ul class="info-list">
+                                                <li class="info-name">【櫻浪太強】東北深度賞櫻全覽、北上展櫻花、角館垂櫻、足利</li>
+                                                <li class="d-flex align-content-start flex-wrap">
+                                                    <div class="item-ticket">
+                                                        <img src="../img/member/category_food.svg" alt="">櫻花
+                                                    </div>
+                                                    <div class="item-ticket">
+                                                        <img src="../img/member/category_food.svg" alt="">送 wifi
+                                                    </div>
+                                                </li>
+                                                <li class="flex-inline-between">
+                                                    <div class="item">
+                                                        <i class="material-icons text-member">&#xE0C8;</i>
+                                                        <span>日本 東北</span>
+                                                    </div>
+                                                    <div class="item auto-left">5 天 <span class="price-asking">$35,900 </span>元起</div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </a>
+                                    <div class="item-del div-switch d-none">
+                                        刪除
+                                    </div>
+                                </div>
+                            </div>
+                        </div>  
                     </div>
                 </div>                        
             </div>   
@@ -355,13 +423,18 @@
     <!-- custom js -->    
     <script src="../js/animateCss.js"></script>
     <script>
+        //item-del
+        $('.item-del').on('click', function(){
+            $(this).parent().remove();
+        });
+
         // Leave Forwarding
         function countdown(e) {
             setTimeout(function(){ window.location = e ; }, 500);            
             $('.mycard').removeClass('slideInRight').addClass('slideOutRight');
         };
 
-    $(document).ready(function(){
+        $(document).ready(function(){
 
             // 開啟分類清單
             $('.filter-item').on('click', function(){

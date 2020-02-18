@@ -565,7 +565,7 @@ input[type="file"] {
 // myfavorite
 .favorite-explore{
     padding: 15px;    
-    a.item-explore .d-flex.py-3 {
+    a.item-explore {
         border-bottom: 1px #eee solid;
         color: $explore-default;
     }
@@ -574,16 +574,28 @@ input[type="file"] {
         height: 80px;
         border-radius: 5px;
         overflow: hidden;
-
+        margin: .5em;
         img {
             width: 100%;
         }
     }
-
+    .item-del{
+        font-size: small;
+        white-space: nowrap;
+        padding: 1em;
+        color: #fff;
+        background: $member-default;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-bottom: 1px solid #fff;
+    }
     .info-box {
         flex: 1;
-        padding-left: 15px;
-
+        margin: .5em;
+        .text-member {
+            color: $member-default;
+        }
         .info-list {
             height: 100%;
             display: flex;
@@ -601,33 +613,39 @@ input[type="file"] {
         .item-tag{
             margin: 5px 5px 5px 0;
             margin-right: 5px;
-            color: #22C2D3;
-            border-color: #22C2D3;
+            color: $member-default;
+            border-color: $member-default;
         }
         .item-ticket {
-            padding: 1px 10px;
-            background: #f2f5fa;
-            border-radius: 5px;
-
-            .material-icons {
-                font-size: 18px;
+            font-size: xx-small;
+            color: $member-default;
+            padding: 0 6px;
+            background: transparent;
+            border-radius: 10rem;
+            border-top: 1px solid $member-default;
+            border-bottom: 1px solid $member-default;
+            border-left: 1px solid $member-default;
+            border-right: 1px solid $member-default;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 1px;
+            img {
+                height: 2.3em;
             }
         }        
         .price-asking{
             color: tomato;
             font-size: 1.2em;
+            font-weight: 700;
         }
         .price-original{
             color: gray;
             text-decoration: line-through;
         }
         .info-province{
-            display: inline-block;
-            padding: 5px 15px;
-            margin-top: auto;
-            align-self: flex-start;
-            border: 2px $blue-dark solid;
-            border-radius: 5px;
+            font-size: small;
+            color: gray;
         }
     }
 }

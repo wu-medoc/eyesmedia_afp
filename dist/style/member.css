@@ -707,7 +707,7 @@ input[type="file"] {
   padding: 15px;
 }
 
-.favorite-explore a.item-explore .d-flex.py-3 {
+.favorite-explore a.item-explore {
   border-bottom: 1px #eee solid;
   color: #182B56;
 }
@@ -717,17 +717,40 @@ input[type="file"] {
   height: 80px;
   border-radius: 5px;
   overflow: hidden;
+  margin: .5em;
 }
 
 .favorite-explore .img-box img {
   width: 100%;
 }
 
+.favorite-explore .item-del {
+  font-size: small;
+  white-space: nowrap;
+  padding: 1em;
+  color: #fff;
+  background: #FD5F00;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-bottom: 1px solid #fff;
+}
+
 .favorite-explore .info-box {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  padding-left: 15px;
+  margin: .5em;
+}
+
+.favorite-explore .info-box .text-member {
+  color: #FD5F00;
 }
 
 .favorite-explore .info-box .info-list {
@@ -753,23 +776,40 @@ input[type="file"] {
 .favorite-explore .info-box .item-tag {
   margin: 5px 5px 5px 0;
   margin-right: 5px;
-  color: #22C2D3;
-  border-color: #22C2D3;
+  color: #FD5F00;
+  border-color: #FD5F00;
 }
 
 .favorite-explore .info-box .item-ticket {
-  padding: 1px 10px;
-  background: #f2f5fa;
-  border-radius: 5px;
+  font-size: xx-small;
+  color: #FD5F00;
+  padding: 0 6px;
+  background: transparent;
+  border-radius: 10rem;
+  border-top: 1px solid #FD5F00;
+  border-bottom: 1px solid #FD5F00;
+  border-left: 1px solid #FD5F00;
+  border-right: 1px solid #FD5F00;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 1px;
 }
 
-.favorite-explore .info-box .item-ticket .material-icons {
-  font-size: 18px;
+.favorite-explore .info-box .item-ticket img {
+  height: 2.3em;
 }
 
 .favorite-explore .info-box .price-asking {
   color: tomato;
   font-size: 1.2em;
+  font-weight: 700;
 }
 
 .favorite-explore .info-box .price-original {
@@ -778,13 +818,8 @@ input[type="file"] {
 }
 
 .favorite-explore .info-box .info-province {
-  display: inline-block;
-  padding: 5px 15px;
-  margin-top: auto;
-  -ms-flex-item-align: start;
-      align-self: flex-start;
-  border: 2px #182B56 solid;
-  border-radius: 5px;
+  font-size: small;
+  color: gray;
 }
 
 .fixed-btn {
