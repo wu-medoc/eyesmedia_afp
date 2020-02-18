@@ -36,7 +36,7 @@
 <body>    
 <div class="wrap container">
     <!--我的收藏-->
-    <div class="myticket slideInRight animated">
+    <div class="iconpage slideInRight animated">
         <div class="title-box">
             <div class="item icon-btn">                        
                 <button class="btn" onclick="countdown('member_index.html');" data-toggle="tooltip" data-placement="bottom" title="回上一頁">
@@ -80,8 +80,8 @@
                                         <button class="btn px-0 filter-item" data-filter="type"><i class="material-icons">&#xE313;</i></button>
                                     </div>
                                 </div>
-                                <div class="filter-box">
-                                    <button class="btn px-0 open-page"><i class="material-icons">&#xE152;</i></button>
+                                <div class="filter-box masklayer" onclick="callLayer('.sortpage1');">
+                                    <button class="btn px-0"><i class="material-icons">&#xE152;</i></button>
                                 </div>
                             </div>
                             <div class="filter-outbox">
@@ -331,17 +331,74 @@
   
 
     <!--次頁-->
-    <div class="multilayer">       
-
-        <!--魔幣紀錄-->
-        <div class="myticket1">
-        </div> 
-
+    <div class="member-sort multilayer">       
+        <div class="sortpage1">
+            <div id="open-pagebox">
+                <div class="open-page-title flex-inline-between">
+                    <button class="btn masklayer-close" onclick="backLayer();">
+                        <i class="material-icons">&#xE314;</i>
+                    </button>
+                    <div class="title-txt">
+                        商品分類
+                    </div>
+                    <button class="btn active">確定</button>
+                </div>
+                <ul class="open-page-ul">
+                    <li class="flex-inline-between">
+                        <div class="">
+                            全部顯示
+                        </div>
+                        <div class="">
+                            
+                        </div>                
+                    </li>
+                    <li class="flex-inline-between">
+                        <div class="">
+                            內容文字
+                        </div>
+                        <div class="">
+                            13274
+                        </div>                
+                    </li>
+                    <li class="flex-inline-between">
+                        <div class="">
+                            內容文字
+                        </div>
+                        <div class="">
+                            1231
+                        </div>                
+                    </li>
+                    <li class="flex-inline-between">
+                        <div class="">
+                            內容文字
+                        </div>
+                        <div class="">
+                            274
+                        </div>                
+                    </li>
+                    <li class="flex-inline-between">
+                        <div class="">
+                            內容文字
+                        </div>
+                        <div class="">
+                            1374
+                        </div>                
+                    </li>
+                    <li class="flex-inline-between active">
+                        <div class="">
+                            內容文字
+                        </div>
+                        <div class="">
+                            1327<i class="fas fa-check"></i>
+                        </div>                
+                    </li>
+                </ul>
+            </div>
+        </div>    
     </div> 
 
 </div> 
 <div id="loginhtml"></div>
-<div id="openpagehtml"></div>
 
     <!--頁尾-->
     <footer class="for-pc"> 
@@ -430,62 +487,24 @@
 
         // Leave Forwarding
         function countdown(e) {
-            setTimeout(function(){ window.location = e ; }, 500);            
-            $('.mycard').removeClass('slideInRight').addClass('slideOutRight');
+            setTimeout(function(){ window.location = e ; }, 200);            
+            $('.iconpage').removeClass('slideInRight').addClass('slideOutRight');
         };
 
-        $(document).ready(function(){
-
-            // 開啟分類清單
-            $('.filter-item').on('click', function(){
-                $(this).toggleClass('active').siblings().removeClass('active');
-                var filter = $(this).data('filter');
-                $('#' + filter).toggleClass('is-open');
-                $('#' + filter).siblings().removeClass('is-open');
-                $( ".mask-container" ).removeClass("d-block");
-                if ($( "button.filter-item" ).hasClass("active")) {
-                    $( ".mask-container" ).addClass("d-block");
-                }
-            })
-
-            // 開啟篩選清單
-            $( ".open-page" ).on('click', function () {
-                if ($( "#open-pagebox" ).hasClass("slideOutRight animated")) {
-                    $( "#open-pagebox" ).removeClass('slideOutRight animated').addClass('slideInRight animated');
-                    $( "#open-pagebox" ).removeClass('d-block').addClass('d-none');
-                }
-                $( "#open-pagebox" ).removeClass('d-none').addClass('d-block');
-                $( "#open-mask" ).addClass("modal-backdrop fade show");
-                $( ".wrap" ).addClass("blur");
-            });
-            $( ".close-left" ).on('click', function () {
-                $( "#open-pagebox" ).removeClass('slideInRight animated').addClass('slideOutRight animated');
-                $( "#open-pagebox1" ).removeClass('slideInRight animated').addClass('slideOutRight animated');
-                $( "#open-mask" ).removeClass("modal-backdrop fade show");
-                $( ".wrap" ).removeClass("blur");
-            });
-            if($('#open-pagebox').length>0) {
-                $('#open-pagebox').attr('style','position:fixed ; height:10vh; overflow-y:auto;'); 
+        // 開啟分類清單
+        $('.filter-item').on('click', function(){
+            $(this).toggleClass('active').siblings().removeClass('active');
+            var filter = $(this).data('filter');
+            $('#' + filter).toggleClass('is-open');
+            $('#' + filter).siblings().removeClass('is-open');
+            $( ".mask-container" ).removeClass("d-block");
+            if ($( "button.filter-item" ).hasClass("active")) {
+                $( ".mask-container" ).addClass("d-block");
             }
-            // open-page1
-            $( ".open-page1" ).on('click', function () {
-                if ($( "#open-pagebox1" ).hasClass("slideOutRight animated")) {
-                    $( "#open-pagebox1" ).removeClass('slideOutRight animated').addClass('slideInRight animated');
-                    $( "#open-pagebox1" ).removeClass('d-block').addClass('d-none');
-                }
-                $( "#open-pagebox1" ).removeClass('d-none').addClass('d-block');
-                $( "#open-mask" ).addClass("modal-backdrop fade show");
-                $( ".wrap" ).addClass("blur");
-            });
-            $( ".close-left1" ).on('click', function () {
-                $( "#open-pagebox1" ).removeClass('slideInRight animated').addClass('slideOutRight animated');
-            });
-
         });
     </script>
 
     <script>    
-        $("#openpagehtml").load("../openpage.html");
         $("#loginhtml").load("../login.html"); 
     </script>
     <script src="../js/index.js"></script>

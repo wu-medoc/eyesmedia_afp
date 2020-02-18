@@ -36,7 +36,7 @@
 <body>    
 <div class="wrap container">
     <!--我的卡片1-->
-    <div class="mycard slideInRight animated">
+    <div class="iconpage slideInRight animated">
         <div class="title-box">
             <div class="item icon-btn">                        
                 <button class="btn animated-btn" onclick="countdown('member_index.html');" data-toggle="tooltip" data-placement="bottom" title="回上一頁">
@@ -291,26 +291,36 @@
     <script src="../js/animateCss.js"></script>
     <script>
         // footer control
-        function getRootPath(){ 
-            var strFullPath=window.document.location.href; 
-            var strPath=window.document.location.pathname; 
-            var pos=strFullPath.indexOf(strPath); 
-            var prePath=strFullPath.substring(0,pos); 
-            var postPath=strPath.substring(0,strPath.substr(1).indexOf('/')+1); 
-            return(strPath); 
-        };
-        if (getRootPath().toLowerCase().indexOf("member")>0){
-            $('footer.for-pc').css('position','absolute');
-        };        
-        $('footer.for-pc').css('position','absolute'); //github use(正式可刪除)
+        // function getRootPath(){ 
+        //     var strFullPath=window.document.location.href; 
+        //     var strPath=window.document.location.pathname; 
+        //     var pos=strFullPath.indexOf(strPath); 
+        //     var prePath=strFullPath.substring(0,pos); 
+        //     var postPath=strPath.substring(0,strPath.substr(1).indexOf('/')+1); 
+        //     return(strPath); 
+        // };
+        // if (getRootPath().toLowerCase().indexOf("member")>0){
+        //     $('footer.for-pc').css('position','absolute');
+        // };        
         
 
         // Leave Forwarding
         function countdown(e) {
-            setTimeout(function(){ window.location = e ; }, 500);            
-            $('.mycard').removeClass('slideInRight').addClass('slideOutRight');
+            setTimeout(function(){ window.location = e ; }, 200);            
+            $('.iconpage').removeClass('slideInRight').addClass('slideOutRight');
         };
 
+        // 開啟分類清單
+        $('.filter-item').on('click', function(){
+            $(this).toggleClass('active').siblings().removeClass('active');
+            var filter = $(this).data('filter');
+            $('#' + filter).toggleClass('is-open');
+            $('#' + filter).siblings().removeClass('is-open');
+            $( ".mask-container" ).removeClass("d-block");
+            if ($( "button.filter-item" ).hasClass("active")) {
+                $( ".mask-container" ).addClass("d-block");
+            }
+        });
     </script>
 
     <script>    

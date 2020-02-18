@@ -36,7 +36,7 @@
 <body>    
 <div class="wrap container">
     <!--我的優惠-->
-    <div class="mydiscount slideInRight animated">
+    <div class="iconpage slideInRight animated">
         <div class="title-box">
             <div class="item icon-btn">                        
                 <button class="btn" onclick="countdown('member_index.html');" data-toggle="tooltip" data-placement="bottom" title="回上一頁">
@@ -517,8 +517,8 @@
 
         // Leave Forwarding
         function countdown(e) {
-            setTimeout(function(){ window.location = e ; }, 500);            
-            $('.mycard').removeClass('slideInRight').addClass('slideOutRight');
+            setTimeout(function(){ window.location = e ; }, 200);            
+            $('.iconpage').removeClass('slideInRight').addClass('slideOutRight');
         };
 
         // 開啟分類清單
