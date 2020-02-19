@@ -379,18 +379,11 @@ $(document).ready(function(){
     //     },1000);
     // }); 
     //footer.pc 
-    (($('.wrap').height()) < ($(window).height())) ? ($('footer.for-pc').css('position','absolute')):($('footer.for-pc').css('position','relative'));
+    (($('.wrap').height()+50) < ($(window).height())) ? ($('footer.for-pc').css('position','absolute')):($('footer.for-pc').css('position','relative'));
 });
 
-// black mask
-function open_mask(e) {
-    $('.mask-bk').removeClass('d-none').addClass('d-block');
-    $('.'+e).css('display','block');
-};
-function close_mask(e) {
-    $('.mask-bk').removeClass('d-block').addClass('d-none');
-    $('.'+e).css('display','none');
-};
+
+// black mask sortLayer use
 $('.masklayer').on("click", function () {
     $('body').append("<div class='mask-bk container'></div>");
 });
@@ -473,47 +466,51 @@ $('.close-overlay-choice').on("click", function () {
 // };
 
 // multilayer animateCss
-var sLayer = [];
-function callsortLayer(nextLayer) {
-    if (sLayer.length === 0) { 
-        $('.sortlayer').attr('style','position:fixed ; height:1vh; overflow-y:auto;').animateCss('slideInRight', '+d-block container faster');
-    }
-	if (sLayer[tLayer.length - 1] !== nextLayer) { sLayer.push(nextLayer); }
-    $(nextLayer).animateCss('slideInRight', '+d-block container faster').attr('style','position:fixed ; height:1vh; overflow-y:auto;');;
-}
-function backsortLayer() {
-	$(sLayer.pop()).animateCss('slideOutRight', '-d-block container faster').removeAttr('style');
-    if (sLayer.length === 0) {
-        $('.sortlayer').animateCss('slideOutRight', '-d-block container faster').removeAttr('style');
-    }
-}
-var Layer = [];
+var tLayer = [];
 function callLayer(nextLayer) {
     if (tLayer.length === 0) { 
-        $('.multilayer').attr('style','position:fixed ; height:1vh; overflow-y:auto;').animateCss('slideInRight', '+d-block container faster');
+        $('.multilayer').animateCss('slideInRight', '+d-block container faster');
     }
-	if (tLayer[tLayer.length - 1] !== nextLayer) { tLayer.push(nextLayer); }
-    $(nextLayer).animateCss('slideInRight', '+d-block container faster').attr('style','position:fixed ; height:1vh; overflow-y:auto;');;
-}
+    if (tLayer[tLayer.length - 1] !== nextLayer) { tLayer.push(nextLayer); }
+    (($('.wrap').height()) < ($(nextLayer).height())) ? ($('.multilayer').css('position','absolute')):($('.multilayer').css('position','fixed').css('overflow-y','auto'));
+    $(nextLayer).animateCss('slideInRight', '+d-block container faster');
+};
 function backLayer() {
 	$(tLayer.pop()).animateCss('slideOutRight', '-d-block container faster').removeAttr('style');
     if (tLayer.length === 0) {
         $('.multilayer').animateCss('slideOutRight', '-d-block container faster').removeAttr('style');
+        tLayer.length=0;
     }
-}
-var tLayer = [];
+};
+//sortlayer use animateCss
+var sLayer = [];
+function callsortLayer(nextLayer) {
+    if (sLayer.length === 0) { 
+        $('.sortlayer').animateCss('slideInRight', '+d-block container faster');
+    }
+	if (sLayer[sLayer.length - 1] !== nextLayer) { sLayer.push(nextLayer); }
+    (($('.wrap').height()) < ($(nextLayer).height())) ? ($('.sortlayer').css('position','absolute')):($('.sortlayer').css('position','fixed').css('overflow-y','auto'));
+    $(nextLayer).animateCss('slideInRight', '+d-block container faster');
+};
+function backsortLayer() {
+	$(sLayer.pop()).animateCss('slideOutRight', '-d-block container faster').removeAttr('style');
+    if (sLayer.length === 0) {
+        $('.sortlayer').animateCss('slideOutRight', '-d-block container faster').removeAttr('style');
+        sLayer.length=0;
+    }
+};
+//uplayer use animateCss
+var tLayerUp = [];
 function callLayerUp(nextLayerUp) {
     if (tLayerUp.length === 0) {         
-        $('.uplayer').attr('style','position:fixed ; height:1vh; overflow-y:auto;'); 
         $('.uplayer').animateCss('slideInUp', '+d-block container faster');
     }
 	if (tLayerUp[tLayerUp.length - 1] !== nextLayerUp) { tLayerUp.push(nextLayerUp); }
-	$(nextLayerUp).animateCss('slideInUp', '+d-block container faster').attr('style','position:fixed ; height:1vh; overflow-y:auto;');
-}
+	$(nextLayerUp).animateCss('slideInUp', '+d-block container faster');
+};
 function backLayerUp() {
-	$(tLayerUp.pop()).animateCss('slideOutDown', '-d-block container faster').removeAttr('style');;
-    if (tLayerUp.length === 0) { $('.uplayer').animateCss('slideOutDown', '-d-block container faster');
-    $('.uplayer').removeAttr('style');
+	$(tLayerUp.pop()).animateCss('slideOutDown', '-d-block container faster').removeAttr('style');
+    if (tLayerUp.length === 0) { $('.uplayer').animateCss('slideOutDown', '-d-block container faster').removeAttr('style');
+    tLayerUp.length=0;
     }
-}
-
+};

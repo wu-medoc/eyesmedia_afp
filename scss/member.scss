@@ -184,9 +184,7 @@
         }
     }    
 }
-div.mycardprompt{
-    min-height: 50vh;
-}
+
 // 我的帳戶 - 檔案
 .my-info-box{
     display: flex;
@@ -616,24 +614,6 @@ input[type="file"] {
             color: $member-default;
             border-color: $member-default;
         }
-        .item-ticket {
-            font-size: xx-small;
-            color: $member-default;
-            padding: 0 6px;
-            background: transparent;
-            border-radius: 10rem;
-            border-top: 1px solid $member-default;
-            border-bottom: 1px solid $member-default;
-            border-left: 1px solid $member-default;
-            border-right: 1px solid $member-default;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin: 1px;
-            img {
-                height: 2.3em;
-            }
-        }        
         .price-asking{
             color: tomato;
             font-size: 1.2em;
@@ -649,6 +629,111 @@ input[type="file"] {
         }
     }
 }
+.item-ticket {
+    font-size: xx-small;
+    color: $member-default;
+    padding: 0 6px;
+    background: transparent;
+    border-radius: 10rem;
+    border-top: 1px solid $member-default;
+    border-bottom: 1px solid $member-default;
+    border-left: 1px solid $member-default;
+    border-right: 1px solid $member-default;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1px;
+    img {
+        height: 2.3em;
+    }
+}    
+
+// ticket
+.main-ticket-box{
+    position: relative;
+    padding: 15px;
+    .ticket-top-bg{
+        height: 26px;
+        background: #D9A77A;
+        box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.25);
+        border-radius: 5px;
+        padding: 8px;
+        margin: 0 -10px;
+        .line{
+            height: 10px;
+            background: #828282;
+            border-radius: 5px;
+        }
+    }
+    .ticket-content{
+        margin-top: -12px;
+        background-color: $default-white;
+        border-radius: 5px;
+        box-shadow: 0px 0px 5px rgba(0,0,0,.2);
+        padding: 0;
+        position: relative;
+        .circle{
+            position: absolute;
+            width: 17px;
+            height: 17px;
+            background-color: $gray-light8;
+            left: -8px;
+        }
+        &:after{
+            content: "";
+            width: 17px;
+            height: 10px;
+            background: $gray-light8;
+            border-bottom: none;
+            border-radius: 8px 8px 0 0;
+            position: absolute;
+            z-index: 50;
+            bottom: -2px;
+            left: 10px;
+            box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.15);
+        }
+        .img-box {
+            padding: .5em;
+            img{
+                width: 100%;
+                border: 1px solid #eee;
+            }
+        }
+        .ticket-mark{
+            position: absolute;
+            top: .5em;
+            left: .5em;
+            background: radial-gradient(50% 50% at 50% 50%, #E44D26 0%, #F06428 100%);
+            padding: 2px 5px;
+            color: $default-white;
+            &:before, &:after{
+                content: '';
+                display: block;
+                position: absolute;
+                width: 0;
+                height: 0;
+                border-style: solid;
+                right: -10px;
+            }
+            &:before{
+                border-width: 14px 10px 0 0;
+                border-color: #F06428 transparent transparent transparent;
+                top: 0;
+            }
+            &:after{
+                border-width: 14px 0 0 10px;
+                border-color: transparent transparent transparent #F06428;
+                bottom: 0;
+            }
+        }
+        .ticket-detailrow{
+            color: $blue-dark;
+            border-top: 1px solid #eee;
+            font-size: .9em;
+        }
+    }
+}
+
 // fixed button bottom
 .fixed-btn{
     position: fixed;
@@ -803,15 +888,6 @@ img.coinimg-m{
     }   
 }
 
-.sortlayer{
-    background-color:transparent;
-    &>div{
-        background-color:transparent;
-        li.active>div{
-            color: $onlineshopping-default;
-        }
-    }
-}
 
 .w-10{
     width: 10%;
@@ -819,3 +895,4 @@ img.coinimg-m{
   .w-90{
     width: 90%;
   }
+

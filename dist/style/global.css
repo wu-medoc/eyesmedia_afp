@@ -40,7 +40,7 @@ body {
 
 ::-webkit-scrollbar-thumb {
   border-radius: 10px;
-  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.44, #e6e6e7), color-stop(0.72, #acb1b8), color-stop(0.86, #9c9ea5));
+  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.44, #f1f1f1), color-stop(0.72, #e0e1e2), color-stop(0.86, #e7e6e6));
 }
 
 .for-pc {

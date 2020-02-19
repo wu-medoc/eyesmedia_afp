@@ -44,10 +44,7 @@
                 </button>
             </div>
             <div class="item title-name">我的票券</div>                
-            <div class="item">        
-                <button class="btn msg-open" value="msg-myticket" data-toggle="modal" data-target="#messageModal" data-dismiss="modal" aria-label="Close">
-                    <i class="material-icons">&#xE145;</i>
-                </button>
+            <div class="item">    
             </div>
         </div>        
                  
@@ -168,7 +165,7 @@
                                                         <p>2019/11/15 ~ 2019/12/31</p>
                                                     </div>                                 
                                                     <div class="item one">
-                                                        <button class="btn index-outline-btn small-80">使用</button>
+                                                        <button class="btn index-outline-btn small-80" onclick="callLayer('.useticket')">使用</button>
                                                         <div class="m-quantity small pl-1"><img src="../img/shopping/icon_m.svg" class="coinimg-m"> 1</div>
                                                     </div>
                                                 </div>
@@ -279,7 +276,7 @@
     <!--篩選-->
     <div class="sortlayer">       
         <div class="sortpage1">
-            <!-- <div id="open-pagebox"> -->
+            <div id="open-pagebox">
                 <div class="open-page-title flex-inline-between">
                     <button class="btn masklayer-close" onclick="backsortLayer();">
                         <i class="material-icons">&#xE314;</i>
@@ -339,7 +336,7 @@
                         </div>                
                     </li>
                 </ul>
-            <!-- </div> -->
+            </div>
         </div>    
     </div> 
 
@@ -354,15 +351,96 @@
                 </div>
                 <div class="item title-name">使用票券</div>
                 <div class="item icon-btn">
-                    <button class="btn">優惠詳情</button>
+                    <button class="bluedk-outline-btn small-80" onclick="callLayer('.ticketdetail')">優惠詳情</button>
                 </div>
             </div>
-            <div class="">
+            <div class="text-bluedk text-center">
                 高雄捷運股份有限公司
-                捷運一日效期QRCODE票
-                使用期限：2019/11/12 ~ 2019/11/29
-                <img src="../img/member/QRcode.svg">
-                可使用次數：1次
+                <h6>捷運一日效期QRCODE票</h6>
+                <small>使用期限：2019/11/12 ~ 2019/11/29</small>
+                <div class="border rounded p-3 m-3"><img src="../img/member/QRcode.svg"></div>
+                <div class="bg-light p-2">可使用次數：1次</div>
+            </div>
+        </div>     
+        <div class="ticketdetail">
+            <div class="title-box">
+                <div class="item icon-btn">
+                    <button class="btn animated-btn" onclick="backLayer();" data-toggle="tooltip" data-placement="bottom" title="回上一頁">
+                        <i class="material-icons">&#xE314;</i>
+                    </button>
+                </div>
+                <div class="item title-name">票券詳情</div>
+                <div class="item icon-btn">
+                </div>
+            </div>
+            <div class="main-ticket-box">
+                <div class="ticket-top-bg">
+                    <div class="line"></div>
+                </div>
+                <div class="ticket-content">
+                    <div class="ticket-mark">
+                        限量
+                    </div>
+                    <div class="img-box">
+                        <img src="../img/callcar/sogo.png" alt="">
+                    </div>
+                    <div class="index-flex p-3">
+                        <div class="item three font-bold text-bluedk">
+                            <p>高雄捷運股份有限公司</p>
+                            <p>捷運一日效期QRCODE票</p>
+                        </div>
+                        <div class="item one">
+                            <div class="item-ticket">
+                                <img src="../img/member/category_shopping.svg" alt="">購物
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ticket-detailrow">
+                        <div class="p-3">
+                            <p class="font-bold">優惠內容:</p>
+                            <p>捷運一日效期QRCODE票</p>
+                        </div>
+                    </div>
+                    <div class="ticket-detailrow">
+                        <div class="d-flex p-3">
+                            <div class="item item-icon">
+                                <i class="material-icons"></i>
+                            </div>
+                            <div class="item">
+                                SOGO復興館12Ｆ、復興館9F、敦化館5Ｆ
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ticket-detailrow">
+                        <div class="d-flex p-3">
+                            <div class="item item-icon">
+                                <i class="material-icons"></i>
+                            </div>
+                            <div class="item">
+                                10/9(三)～11/3(日)
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ticket-detailrow">
+                        <div class="p-3">
+                            <p class="font-bold">注意事項：</p>
+                            <small>
+                            折價券可適用範圍為於本公司的Web網頁下單e-catalog刊載的商品時使用。(傳真或電話訂購恕無法使用)<br>
+                            ・同時訂購多樣商品時，使用折價券折抵的金額，會依折價券的對象商品價格按比例平均做折扣。依比例所折扣的結果，實際折抵的金額會與折價券上記載的折扣金額有所差異。訂購時請注意顯示的折扣金額。<br>
+                            ・1張訂單只能使用1張折價券，恕無法同時使用2張以上的折價券。<br>
+                            ・折價券請在有效期間內使用。<br>
+                            ・折價券的使用以訂單成立為前提要件。另，敬請留意以下情況將無法使用折價券：(1)單次下單商品單價未達100元(未稅)，數量1000個以上時(2)出貨日顯示”需另行確認”時(3)其他本公司另行定義無法使用折價券的交易。<br>
+                            ・由顧客輸入的訂單內容，如在日後需要修改時，變更後的訂單有可能不適用折價券，敬請見諒。<br>
+                            ・使用折價券所購買的商品，若有退款的事由發生，退款金額的上限為客戶實際支付本公司的金額。<br>
+                            ・折價券如有遺失，恕無法另行補發。<br>
+                            ・折價券恕無法折換現金。<br>
+                            ・如發現使用偽造或具有取得疑慮的折價券，本公司有權拒絕折價券的使用。<br>
+                            ・本公司得於沒有告知的情況下變更折價券的使用方式，敬請見諒並請隨時留意本公司之網頁公告。
+                            </small>
+                        </div>
+                    </div>
+                </div>
+                <div class="circle"></div>
             </div>
         </div>  
     </div>

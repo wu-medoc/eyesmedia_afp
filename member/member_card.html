@@ -148,7 +148,7 @@
                     </ul>
                 </div>
                 <div class="item note-box">
-                    <div class="note-item">不知道卡片號碼在哪裡？<span class="text-pink" onclick="callLayerUp('.mycardprompt');open_mask('uplayer');">請看這裡</span></div>
+                    <div class="note-item">不知道卡片號碼在哪裡？<span class="text-pink masklayer" onclick="callLayerUp('.mycardprompt');">請看這裡</span></div>
                 </div> 
                 <div class="fixed-btn container">
                     <button type="button" class="btn next-btn w-100 msg-open" value="msg-mycard" data-toggle="modal" data-target="#messageModal" data-dismiss="modal" aria-label="Close">確認</button>
@@ -186,7 +186,7 @@
                     </ul>
                 </div>
                 <div class="item note-box">
-                    <div class="note-item">不知道卡片號碼在哪裡？<span class="text-pink" onclick="callLayerUp('.mycardprompt');open_mask('uplayer');">請看這裡</span></div>
+                    <div class="note-item">不知道卡片號碼在哪裡？<span class="text-pink masklayer" onclick="callLayerUp('.mycardprompt');">請看這裡</span></div>
                 </div> 
                 <div class="fixed-btn container">
                     <button type="button" class="btn next-btn w-100 msg-open" value="msg-mycard" data-toggle="modal" data-target="#messageModal" data-dismiss="modal" aria-label="Close">完成</button>
@@ -194,19 +194,18 @@
                 <div class="mask-bk fade show d-none"></div>
             </div>
         </div> 
-
-        <!--卡片圖示-->
-        <div class="mycardprompt uplayer">
-            <div class="p-4">
-                <div class="d-flex justify-content-center bd-highlight">
-                    <img class="bd-highlight" src="../img/member/mycard-prompt.svg">
-                    <div class="bd-highlight align-self-end pb-2 text-pink">卡片號碼位置</div>
-                </div>
-                <button type="button" class="btn outline-btn w-100 mt-4" onclick="backLayerUp();close_mask('uplayer');">關閉</button>
-            </div>
-        </div>
     </div> 
 
+    <!--卡片圖示-->
+    <div class="uplayer">
+        <div class="mycardprompt p-3">
+            <div class="d-flex justify-content-center bd-highlight">
+                <img class="bd-highlight" src="../img/member/mycard-prompt.svg">
+                <div class="bd-highlight align-self-end pb-2 text-pink">卡片號碼位置</div>
+            </div>
+            <button type="button" class="btn outline-btn w-100 mt-4 masklayer-close" onclick="backLayerUp();">關閉</button>
+        </div>
+    </div>
 </div> 
 <div id="loginhtml"></div>
 
