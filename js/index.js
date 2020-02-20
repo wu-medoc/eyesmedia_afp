@@ -384,13 +384,6 @@ $(document).ready(function(){
 });
 
 
-// black mask sortLayer use
-$('.masklayer').on("click", function () {
-    $('body').append("<div class='mask-bk container'></div>");
-});
-$('.masklayer-close').on("click", function () {
-    $('.mask-bk').remove();
-});
 
 function msg_sub(e) {
     $(e).siblings('div').hide();
@@ -469,6 +462,14 @@ $('.close-overlay-choice').on("click", function () {
 //     };    
 // };
 
+// black mask sortLayer use
+$('.masklayer').on("click", function () {
+    $('body').append("<div class='mask-bk container'></div>");
+});
+$('.masklayer-close').on("click", function () {
+    $('.mask-bk').remove();
+});
+
 // multilayer animateCss
 var tLayer = [];
 function callLayer(nextLayer) {
@@ -491,6 +492,7 @@ var sLayer = [];
 function callsortLayer(nextLayer) {
     if (sLayer.length === 0) { 
         $('.sortlayer').animateCss('slideInRight', '+d-block container faster');
+        $('body').append("<div class='mask-bk container'></div>");
     }
 	if (sLayer[sLayer.length - 1] !== nextLayer) { sLayer.push(nextLayer); }
     (($('.wrap').height()) < ($(nextLayer).height())) ? ($('.sortlayer').css('position','absolute')):($('.sortlayer').css('position','fixed').css('overflow-y','auto'));
@@ -500,6 +502,7 @@ function backsortLayer() {
 	$(sLayer.pop()).animateCss('slideOutRight', '-d-block container faster').removeAttr('style');
     if (sLayer.length === 0) {
         $('.sortlayer').animateCss('slideOutRight', '-d-block container faster').removeAttr('style');
+        $('.mask-bk').remove();
         sLayer.length=0;
     }
 };
@@ -508,13 +511,17 @@ var tLayerUp = [];
 function callLayerUp(nextLayerUp) {
     if (tLayerUp.length === 0) {         
         $('.uplayer').animateCss('slideInUp', '+d-block container faster');
-    }
+        $('body').append("<div class='mask-bk container'></div>");
+     }
 	if (tLayerUp[tLayerUp.length - 1] !== nextLayerUp) { tLayerUp.push(nextLayerUp); }
+    (($('.wrap').height()) < ($(nextLayerUp).height())) ? ($('.uplayer').css('position','absolute')):($('.uplayer').css('position','fixed').css('overflow-y','auto'));
 	$(nextLayerUp).animateCss('slideInUp', '+d-block container faster');
 };
 function backLayerUp() {
 	$(tLayerUp.pop()).animateCss('slideOutDown', '-d-block container faster').removeAttr('style');
-    if (tLayerUp.length === 0) { $('.uplayer').animateCss('slideOutDown', '-d-block container faster').removeAttr('style');
-    tLayerUp.length=0;
+    if (tLayerUp.length === 0) { 
+        $('.uplayer').animateCss('slideOutDown', '-d-block container faster').removeAttr('style');
+        tLayerUp.length=0;
+        $('.mask-bk').remove();
     }
 };

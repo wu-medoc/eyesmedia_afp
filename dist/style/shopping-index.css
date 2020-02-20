@@ -817,17 +817,6 @@ a:hover {
   }
 }
 
-.productsformat {
-  width: 100%;
-  height: auto;
-  min-height: 65vh;
-  z-index: 1040;
-  line-height: 3em;
-  background-color: #fff;
-  border-top-left-radius: .5em;
-  border-top-right-radius: .5em;
-}
-
 .productsformat .open-page-body {
   padding: 0 0.5em;
 }

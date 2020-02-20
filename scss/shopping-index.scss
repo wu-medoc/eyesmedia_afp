@@ -52,15 +52,7 @@ a {
         color: $onlineshopping-default;
     }
 }
-// .onlineshopping-sort.multilayer{
-//     background-color:transparent;
-//     &>div{
-//         background-color:transparent;
-//         li.active>div{
-//             color: $onlineshopping-default;
-//         }
-//     }
-// }
+
 /* shopping-bigbnbox header height*/
 #shopping-bigbnbox {
     padding-top:70px;
@@ -791,14 +783,6 @@ a {
     
 }
 .productsformat {
-    width: 100%;
-    height: auto;
-    min-height: 65vh;
-    z-index: 1040;
-    line-height: 3em;
-    background-color: #fff;
-    border-top-left-radius: .5em;
-    border-top-right-radius: .5em;
     .open-page-body {
       padding: 0 0.5em;
       bottom.active{
