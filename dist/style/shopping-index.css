@@ -57,6 +57,12 @@ a:hover {
   color: #FD5F00;
 }
 
+.material-icons.offer {
+  padding-right: 2px;
+  -webkit-transform: scaleX(-1);
+          transform: scaleX(-1);
+}
+
 /* shopping-bigbnbox header height*/
 #shopping-bigbnbox {
   padding-top: 70px;

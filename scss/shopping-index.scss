@@ -52,7 +52,10 @@ a {
         color: $onlineshopping-default;
     }
 }
-
+.material-icons.offer{
+    padding-right: 2px;
+    transform:scaleX(-1);
+}
 /* shopping-bigbnbox header height*/
 #shopping-bigbnbox {
     padding-top:70px;

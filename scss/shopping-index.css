@@ -1,21 +1,21 @@
 /*
 Error: Invalid CP950 character "\xE5"
-        on line 211 of D:\eyesmedia\ASIAfunPASS\github\afp\eyesmedia_afp\scss\shopping-index.scss
+        on line 214 of D:\eyesmedia\ASIAfunPASS\github\afp\eyesmedia_afp\scss\shopping-index.scss
 
-206:             }
-207:         }
-208:     }
-209: }
-210: 
-211: /* 優惠券 *\/
-212: .other-discount-list{
-213:     background: $gray-light8;
-214:     padding: 0;
-215:     .discount-more{
-216:         color: $blue-dark;
+209:             }
+210:         }
+211:     }
+212: }
+213: 
+214: /* 優惠券 *\/
+215: .other-discount-list{
+216:     background: $gray-light8;
+217:     padding: 0;
+218:     .discount-more{
+219:         color: $blue-dark;
 
 Backtrace:
-D:\eyesmedia\ASIAfunPASS\github\afp\eyesmedia_afp\scss\shopping-index.scss:211
+D:\eyesmedia\ASIAfunPASS\github\afp\eyesmedia_afp\scss\shopping-index.scss:214
 C:/Program Files/Adobe/Adobe Dreamweaver CC 2018/ruby/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/util.rb:1325:in `rescue in block in find_encoding_error'
 C:/Program Files/Adobe/Adobe Dreamweaver CC 2018/ruby/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/util.rb:1322:in `block in find_encoding_error'
 C:/Program Files/Adobe/Adobe Dreamweaver CC 2018/ruby/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/util.rb:1321:in `each'
@@ -37,4 +37,4 @@ C:/Program Files/Adobe/Adobe Dreamweaver CC 2018/ruby/bin/sass:22:in `<main>'
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Invalid CP950 character \"\xE5\"\A         on line 211 of D:\eyesmedia\ASIAfunPASS\github\afp\eyesmedia_afp\scss\shopping-index.scss\A \A 206:             }\A 207:         }\A 208:     }\A 209: }\A 210: \A 211: /* 優惠券 */\A 212: .other-discount-list{\A 213:     background: $gray-light8;\A 214:     padding: 0;\A 215:     .discount-more{\A 216:         color: $blue-dark;"; }
+  content: "Error: Invalid CP950 character \"\xE5\"\A         on line 214 of D:\eyesmedia\ASIAfunPASS\github\afp\eyesmedia_afp\scss\shopping-index.scss\A \A 209:             }\A 210:         }\A 211:     }\A 212: }\A 213: \A 214: /* 優惠券 */\A 215: .other-discount-list{\A 216:     background: $gray-light8;\A 217:     padding: 0;\A 218:     .discount-more{\A 219:         color: $blue-dark;"; }
