@@ -362,6 +362,7 @@ $(document).ready(function(){
         $('#messageModal .modal-body>div').hide();
         $('#'+msgval).show();      
     });
+
     // password visiblity
     $(".toggle-password").on('click', function() {
         $(this).parent().toggleClass("toggle-visibility");
@@ -391,6 +392,9 @@ $('.masklayer-close').on("click", function () {
     $('.mask-bk').remove();
 });
 
+function msg_sub(e) {
+    $(e).siblings('div').hide();
+}
 // div switch
 function div_switch() {
     $('.div-switch.d-block').removeClass('d-block').addClass('d-none1');

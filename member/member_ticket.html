@@ -67,14 +67,14 @@
                         <div role="tabpanel" class="tab-pane fade active show w-100" id="tickettag01">  
                             <div class="div-switch d-none">
                                 <div class="d-flex py-1">
-                                    <div class="w-90">
+                                    <div class="w-80 pl-1">
                                         <div class="input-box border border-radius5">
                                             <button class="btn"><i class="material-icons">&#xE8B6;</i></button>
                                             <input type="text" placeholder="搜尋" class="border-0">
                                         </div>
                                     </div>
-                                    <div class="w-10">
-                                        <button class="btn" onclick="div_switch();">取消</button>
+                                    <div class="w-20">
+                                        <button class="btn w-100" onclick="div_switch();">取消</button>
                                     </div>
                                 </div>
                             </div>     
@@ -284,7 +284,6 @@
                     <div class="title-txt">
                         商品分類
                     </div>
-                    <button class="btn active">確定</button>
                 </div>
                 <ul class="open-page-ul">
                     <li class="flex-inline-between">
@@ -439,8 +438,11 @@
                             </small>
                         </div>
                     </div>
+                    <div class="circle">.</div>
                 </div>
-                <div class="circle"></div>
+                <div class="fixed-btn container">
+                    <button type="button" class="btn next-btn w-100 msg-open" value="msg-mycard" data-toggle="modal" data-target="#messageModal" data-dismiss="modal" aria-label="Close">完成</button>
+                </div>
             </div>
         </div>  
     </div>

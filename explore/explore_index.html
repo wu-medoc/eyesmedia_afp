@@ -53,8 +53,8 @@
                         <button class="btn px-0 filter-item" data-filter="type"><i class="material-icons">&#xE313;</i></button>
                     </div>
                 </div>
-                <div class="filter-box">
-                    <button class="btn px-0 open-page"><i class="material-icons">&#xE152;</i></button>
+                <div class="filter-box masklayer" onclick="callsortLayer('.sortpage1');">
+                    <button class="btn px-0"><i class="material-icons">&#xE152;</i></button>
                 </div>
             </div>
         </div>
@@ -249,13 +249,14 @@
             
             </div>
         </div>
-        <div class="close-left" id="open-mask"></div>
-        <!-- shopping right-menu (open-pagebox) -->
-        <div class="">
-            <div class="slideInRight animated d-none" id="open-pagebox">
+
+    <!--篩選-->
+    <div class="sortlayer">       
+        <div class="sortpage1">
+            <div id="open-pagebox">
                 <div class="open-page-title flex-inline-between">
                     <div class="title-icon">
-                        <button class="btn close-left">
+                        <button class="btn masklayer-close" onclick="backsortLayer();">
                             <i class="material-icons">&#xE314;</i>
                         </button>
                     </div>
@@ -263,7 +264,6 @@
                         篩選與排序
                     </div>
                     <div class="title-txt active">
-                        確定
                     </div>
                 </div>
                 <ul class="open-page-ul">
@@ -284,7 +284,7 @@
                             全部顯示<i class="fas fa-chevron-right fa-fw"></i>
                         </div>                
                     </li>
-                    <li class="flex-inline-between active open-page1">
+                    <li class="flex-inline-between active" onclick="callsortLayer('.sortpage2');">
                         <div class="">
                             高捷輕軌
                         </div>
@@ -349,11 +349,11 @@
             </div>
         </div>
          <!-- shopping right-menu (open-pagebox1) -->
-         <div class="">
-            <div class="slideInRight animated d-none" id="open-pagebox1">
+         <div class="sortpage2">
+            <div id="open-pagebox1">
                 <div class="open-page-title flex-inline-between">                
                     <div class="close-btn">
-                        <button class="btn close-left1">
+                        <button class="btn" onclick="backsortLayer();">
                             <i class="material-icons">&#xE314;</i>
                         </button>
                     </div>
@@ -361,7 +361,6 @@
                         周邊分類
                     </div>
                     <div class="title-txt">
-                        <button class="btn active">確定</button>
                     </div>
                 </div>
                 <ul class="open-page-ul">
@@ -416,7 +415,8 @@
                 </ul>
             </div>
         </div> 
-    
+    </div>
+
     </div>
 
 
@@ -551,6 +551,7 @@
     <script src="../js/vendor/swiper/js/swiper.min.js"></script>
     <script src="../js/vendor/imgLiquid.js"></script>
     <script src="../js/masonry.pkgd.min.js"></script>
+    <script src="../js/animateCss.js"></script>
     
     <script>
         $(document).ready(function(){
@@ -587,41 +588,9 @@
             })
 
 
-            // open-page
-            $( ".open-page" ).on('click', function () {
-                if ($( "#open-pagebox" ).hasClass("slideOutRight animated")) {
-                    $( "#open-pagebox" ).removeClass('slideOutRight animated').addClass('slideInRight animated');
-                    $( "#open-pagebox" ).removeClass('d-block').addClass('d-none');
-                }
-                $( "#open-pagebox" ).removeClass('d-none').addClass('d-block');
-                $( "#open-mask" ).addClass("modal-backdrop fade show");
-                $( ".wrap" ).addClass("blur");
-            });
-            $( ".close-left" ).on('click', function () {
-                $( "#open-pagebox" ).removeClass('slideInRight animated').addClass('slideOutRight animated');
-                $( "#open-pagebox1" ).removeClass('slideInRight animated').addClass('slideOutRight animated');
-                $( "#open-mask" ).removeClass("modal-backdrop fade show");
-                $( ".wrap" ).removeClass("blur");
-            });
-            if($('#open-pagebox').length>0) {
-                $('#open-pagebox').attr('style','position:fixed ; height:10vh; overflow-y:auto;'); 
-            }
-            // open-page1
-            $( ".open-page1" ).on('click', function () {
-                if ($( "#open-pagebox1" ).hasClass("slideOutRight animated")) {
-                    $( "#open-pagebox1" ).removeClass('slideOutRight animated').addClass('slideInRight animated');
-                    $( "#open-pagebox1" ).removeClass('d-block').addClass('d-none');
-                }
-                $( "#open-pagebox1" ).removeClass('d-none').addClass('d-block');
-                $( "#open-mask" ).addClass("modal-backdrop fade show");
-                $( ".wrap" ).addClass("blur");
-            });
-            $( ".close-left1" ).on('click', function () {
-                $( "#open-pagebox1" ).removeClass('slideInRight animated').addClass('slideOutRight animated');
-            });
-
         })
     </script>
+    <script src="../js/index.js"></script>
 </body>
 
 </html>
