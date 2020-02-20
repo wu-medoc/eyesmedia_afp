@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=1, user-scalable=no">
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../js/vendor/bs4/css/bootstrap.min.css">
+    <!-- vendor css -->
+    <link rel="stylesheet" href="../js/vendor/jquery-editable-select-master/dist/jquery-editable-select.min.css">
+    <link rel="stylesheet" href="../js/vendor/swiper/css/swiper.min.css">
+    <!-- fontawesome css -->
+    <link rel="stylesheet" href="../js/vendor/fontawesome/css/fontawesome.css">
+    <link rel="stylesheet" href="../js/vendor/fontawesome/css/brands.css">
+    <link rel="stylesheet" href="../js/vendor/fontawesome/css/solid.css">
+    <!-- custom css -->
+    <link rel="stylesheet" href="../dist/style/css.min.css">
+    <link rel="stylesheet" href="../dist/style/global.min.css">
+    <link rel="stylesheet" href="../dist/style/index.min.css">
+    <link rel="stylesheet" href="../dist/style/shopping-index.min.css">
+    <link rel="stylesheet" href="../dist/style/animate.min.css">
+    <title>eyemedia - afp</title>
+</head>
+
+<body>
+    <div class="wrap container">
+        <div class="shopping-discount">     
+            <div class="header-secondary linebt-row">
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <div class="title-name fs-16">選擇優惠券或輸入折扣碼</div>
+                    </div>
+                </div>
+            </div>   
+            <div class="input-box">
+                <input type="text" placeholder="輸入優惠碼">
+                 <button type="button">新增</button>
+            </div>
+            <div class="or-box text-center">
+                <span>或者</span>
+            </div>
+            <p class="canuse-discount-txt font-bold">可使用的優惠券</p>
+            <!-- 可使用的優惠券 -->
+            <form id="store1-discount">
+                <div class="can-use-discount-list">
+                    <p class="can-use-title"><span>昇恆昌</span> 可選擇<span>二</span>張</p>
+                    <ul>
+                        <li>
+                            <div class="item item-img">
+                                <img src="https://picsum.photos/id/684/600/400" alt="">
+                            </div>
+                            <div class="item discount-text item-middle">
+                                <p>昇恆昌</p>
+                                <p>9折 折扣券</p>
+                                <p>2019/11/15 ~ 2019/12/31</p>
+                            </div>
+                            <div class="item item-checkbox">
+                                <div class="sitem-checkbox">
+                                    <div class="checkbox checkbox-primary">
+                                        <input id="products001" type="checkbox" class="checkedall store01"><label for="products001"></label>  
+                                    </div>  
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="item item-img">
+                                <img src="https://picsum.photos/id/684/600/400" alt="">
+                            </div>
+                            <div class="item discount-text item-middle">
+                                <p>昇恆昌</p>
+                                <p>9折 折扣券</p>
+                                <p>2019/11/15 ~ 2019/12/31</p>
+                            </div>
+                            <div class="item item-checkbox">
+                                <div class="sitem-checkbox">
+                                    <div class="checkbox checkbox-primary">
+                                        <input id="products002" type="checkbox" class="checkedall store01"><label for="products002"></label>  
+                                    </div>  
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </form>            
+            <form id="store2-discount">
+                <div class="can-use-discount-list">
+                    <p class="can-use-title"><span>新光三越</span> 可選擇<span>一</span>張</p>
+                    <ul>
+                        <li>
+                            <div class="item item-img">
+                                <img src="https://picsum.photos/id/684/600/400" alt="">
+                            </div>
+                            <div class="item discount-text item-middle">
+                                <p>昇恆昌</p>
+                                <p>9折 折扣券</p>
+                                <p>2019/11/15 ~ 2019/12/31</p>
+                            </div>
+                            <div class="item item-checkbox">
+                                <div class="sitem-checkbox">
+                                    <div class="checkbox checkbox-primary">
+                                        <input id="products002" type="checkbox" class="checkedall store01"><label for="products002"></label>  
+                                    </div>  
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </form>
+            <!-- 本次結帳無法用的優惠券 -->
+            <p class="canuse-discount-txt font-bold mt-0">本次結帳無法用的優惠券</p>
+            <div class="can-use-discount-list">
+                <ul>
+                    <li>
+                        <div class="item item-img">
+                            <img src="https://picsum.photos/id/684/600/400" alt="">
+                        </div>
+                        <div class="item item-middle">
+                            <p>昇恆昌</p>
+                            <p>滿萬送千 折價券</p>
+                            <p class="can-use-date">使用期限 2019/11/15 ~ 2019/12/31</p>
+                        </div>
+                        <div class="item item-see-more">
+                            <a href="store-info.html">
+                                去逛逛<i class="material-icons">&#xE315;</i>
+                            </a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- total price -->
+            <div class="total-price-box">
+                <div class="total-header">
+                    <div class="item-group small">
+                        <div class="item">昇恆昌優惠券</div>
+                        <div class="item"><span>88</span>元</div>
+                    </div>
+                    <div class="item-group small">
+                        <div class="item">昇恆昌優惠券</div>
+                        <div class="item"><span>88</span>元</div>
+                    </div>
+                </div>
+                <div class="total-body">
+                    <div class="item-group">
+                        <div class="item">總共優惠金額</div>
+                        <div class="item"><span>148</span>元</div>
+                    </div>
+                </div>
+                <div class="total-footer">
+                    <div class="item-group">
+                        <div class="item">
+                             <button type="button" class="cancel-btn" onclick="history.back();">取消</button>
+                        </div>
+                        <div class="item">
+                             <button type="button" class="submit-btn" onclick="location.href='#'">確定</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="../js/vendor/bs4/js/jquery-3.2.1.slim.min.js"></script>
+    <!-- Latest compiled and minified JavaScript -->    
+    <script src="../js/vendor/bs4/js/bootstrap.min.js"></script>
+
+    <!-- owlcarousel JS -->
+    <script src="../js/vendor/owlcarousel/vendors/jquery.min.js"></script>
+    <script src="../js/vendor/owlcarousel/owlcarousel/owl.carousel.js"></script>
+    <script src="../js/vendor/owlcarousel/vendors/highlight.js"></script>
+    <script src="../js/vendor/owlcarousel/js/app.js"></script>   
+    <script src="../js/vendor/jquery-editable-select-master/dist/jquery-editable-select.js"></script>
+
+    <!-- vendor js -->
+    <script src="../js/vendor/swiper/js/swiper.min.js"></script>
+    <script src="../js/vendor/imgLiquid.js"></script>
+    
+    <!-- custom js -->
+    <script src="../js/animateCss.js"></script>
+</body>
+
+</html>
