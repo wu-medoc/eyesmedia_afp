@@ -57,18 +57,6 @@ a:hover {
   color: #FD5F00;
 }
 
-.onlineshopping-sort.multilayer {
-  background-color: transparent;
-}
-
-.onlineshopping-sort.multilayer > div {
-  background-color: transparent;
-}
-
-.onlineshopping-sort.multilayer > div li.active > div {
-  color: #FD5F00;
-}
-
 /* shopping-bigbnbox header height*/
 #shopping-bigbnbox {
   padding-top: 70px;

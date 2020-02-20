@@ -52,7 +52,7 @@
                 </div>
             </div>
             <div class="header-sort">            
-                <div class="flex-inline-between masklayer" onclick="callLayer('.productslistsort');">
+                <div class="flex-inline-between masklayer" onclick="callsortLayer('.productslistsort');">
                     <div class="sub-title">
                             篩選與排序
                     </div>
@@ -410,12 +410,12 @@
             <div id="loginhtml"></div>
         </main >
     </div>
-    <div class="onlineshopping-sort multilayer">
+    <div class="sortlayer">
         <div class="productslistsort">
             <div id="open-pagebox">
                 <div class="open-page-title flex-inline-between">
                     <div class="title-icon">
-                        <button class="btn masklayer-close" onclick="backLayer();">
+                        <button class="btn masklayer-close" onclick="backsortLayer();">
                             <i class="material-icons">&#xE314;</i>
                         </button>
                     </div>
@@ -423,12 +423,11 @@
                         篩選與排序
                     </div>
                     <div class="title-txt">
-                        <button class="btn">確定</button>
                     </div>
                 </div>
                 <ul class="open-page-ul">
                     <label>篩選</label>
-                    <li class="flex-inline-between active" onclick="callLayer('.productslistsort1');">
+                    <li class="flex-inline-between active" onclick="callsortLayer('.productslistsort1');">
                         <div class="">
                             商品分類
                         </div>
@@ -518,7 +517,7 @@
             <div id="open-pagebox1">
                 <div class="open-page-title flex-inline-between">                
                     <div class="close-btn">
-                        <button class="btn" onclick="backLayer();">
+                        <button class="btn" onclick="backsortLayer();">
                             <i class="material-icons">&#xE314;</i>
                         </button>
                     </div>
@@ -526,7 +525,6 @@
                         商品分類
                     </div>
                     <div class="title-txt">
-                        <button class="btn">確定</button>
                     </div>
                 </div>
                 <ul class="open-page-ul">

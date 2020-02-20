@@ -52,15 +52,15 @@ a {
         color: $onlineshopping-default;
     }
 }
-.onlineshopping-sort.multilayer{
-    background-color:transparent;
-    &>div{
-        background-color:transparent;
-        li.active>div{
-            color: $onlineshopping-default;
-        }
-    }
-}
+// .onlineshopping-sort.multilayer{
+//     background-color:transparent;
+//     &>div{
+//         background-color:transparent;
+//         li.active>div{
+//             color: $onlineshopping-default;
+//         }
+//     }
+// }
 /* shopping-bigbnbox header height*/
 #shopping-bigbnbox {
     padding-top:70px;
