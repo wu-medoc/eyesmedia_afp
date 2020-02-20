@@ -1,21 +1,21 @@
 /*
 Error: Invalid CP950 character "\xE5"
-        on line 1014 of D:\eyesmedia\ASIAfunPASS\github\afp\eyesmedia_afp\scss\index.scss
+        on line 1018 of D:\eyesmedia\ASIAfunPASS\github\afp\eyesmedia_afp\scss\index.scss
 
-1009:       color: #E473FF;
-1010:     }
-1011:   }
-1012: }
-1013: 
-1014: /* index 周邊推薦 *\/
-1015: .afp-tab-box{
-1016:   .tab-content {
-1017:     .content-list {
-1018:       display: -webkit-box;
-1019:       display: -ms-flexbox;
+1013:       color: #E473FF;
+1014:     }
+1015:   }
+1016: }
+1017: 
+1018: /* index 周邊推薦 *\/
+1019: .afp-tab-box{
+1020:   .tab-content {
+1021:     .content-list {
+1022:       display: -webkit-box;
+1023:       display: -ms-flexbox;
 
 Backtrace:
-D:\eyesmedia\ASIAfunPASS\github\afp\eyesmedia_afp\scss\index.scss:1014
+D:\eyesmedia\ASIAfunPASS\github\afp\eyesmedia_afp\scss\index.scss:1018
 C:/Program Files/Adobe/Adobe Dreamweaver CC 2018/ruby/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/util.rb:1325:in `rescue in block in find_encoding_error'
 C:/Program Files/Adobe/Adobe Dreamweaver CC 2018/ruby/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/util.rb:1322:in `block in find_encoding_error'
 C:/Program Files/Adobe/Adobe Dreamweaver CC 2018/ruby/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/util.rb:1321:in `each'
@@ -37,4 +37,4 @@ C:/Program Files/Adobe/Adobe Dreamweaver CC 2018/ruby/bin/sass:22:in `<main>'
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Invalid CP950 character \"\xE5\"\A         on line 1014 of D:\eyesmedia\ASIAfunPASS\github\afp\eyesmedia_afp\scss\index.scss\A \A 1009:       color: #E473FF;\A 1010:     }\A 1011:   }\A 1012: }\A 1013: \A 1014: /* index 周邊推薦 */\A 1015: .afp-tab-box{\A 1016:   .tab-content {\A 1017:     .content-list {\A 1018:       display: -webkit-box;\A 1019:       display: -ms-flexbox;"; }
+  content: "Error: Invalid CP950 character \"\xE5\"\A         on line 1018 of D:\eyesmedia\ASIAfunPASS\github\afp\eyesmedia_afp\scss\index.scss\A \A 1013:       color: #E473FF;\A 1014:     }\A 1015:   }\A 1016: }\A 1017: \A 1018: /* index 周邊推薦 */\A 1019: .afp-tab-box{\A 1020:   .tab-content {\A 1021:     .content-list {\A 1022:       display: -webkit-box;\A 1023:       display: -ms-flexbox;"; }

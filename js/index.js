@@ -1,6 +1,6 @@
 var body = $('body');
 var windowsize = $('body').width();
-
+//index ad
 $(".imgLiquidFill").imgLiquid();
 var swiper = new Swiper('.kv-box .swiper-container', {
     effect: 'fade',
@@ -210,6 +210,14 @@ if ($( ".travel-box" ).hasClass("swiper-container")) {
 }
 
 // swiper JS for shopping
+if ($( ".shoppingkv" ).hasClass("swiper-container")) {
+    var swiper = new Swiper('.shoppingkv.swiper-container', {
+        slidesPerView: 1,
+        autoplay: {
+            delay: 3000,
+        },
+    });
+}
 if ($( ".shopping-icon" ).hasClass("swiper-container")) {
     var swiper = new Swiper('.shopping-icon.swiper-container', {
         slidesPerView: 5,

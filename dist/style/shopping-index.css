@@ -821,7 +821,7 @@ a:hover {
   padding: 0 0.5em;
 }
 
-.productsformat .open-page-body bottom.active {
+.productsformat .open-page-body button.active {
   border: 1px solid #FD5F00;
 }
 
@@ -1366,7 +1366,7 @@ a:hover {
 }
 
 .shopping-cartfooter .subtotal-info .price-subtotal {
-  color: #22C2D3;
+  color: #FD5F00;
   font-weight: bold;
   font-size: 1.1em;
 }

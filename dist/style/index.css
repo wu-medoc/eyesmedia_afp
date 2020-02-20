@@ -80,6 +80,10 @@ body.is-open-country .country-box {
   padding-top: 0px;
 }
 
+.shoppingkv-mt {
+  padding-top: 73px;
+}
+
 .kvbn-img {
   min-height: 180px;
   max-width: 100%;
@@ -193,6 +197,7 @@ body.is-open-country .country-box {
     -webkit-box-shadow: 0px 0px 12px #444;
             box-shadow: 0px 0px 12px #444;
   }
+  .shoppingkv-mt,
   .kv-mt {
     padding-top: 85px;
   }
