@@ -61,13 +61,14 @@
                         </label>
                     </div>
                     <div class="w-50 text-right p-1">
-                         <button type="button" class="btn all-modifybtn text-info">
+                         <button type="button" class="btn modifybtn text-info" value="store0">
                             編輯全部
                         </button>
                     </div>
                 </li>
                 <form id="store1">
-                <li class="linebt-row10"></li>
+                <ul class="store1ul">
+                    <li class="linebt-row10"></li>
                     <li class="flex-inline-between">      
                         <div class="store-title center-v p-1">                                                
                             <div class="checkbox checkbox-primary">
@@ -78,7 +79,7 @@
                             </div>         
                         </div>                
                         <div class="text-right p-1">
-                             <button type="button" class="btn text-info s1-modifybtn">
+                             <button type="button" class="btn text-info modifybtn" value="store1">
                                 編輯
                             </button>
                         </div>
@@ -113,8 +114,8 @@
                                 </div>  
                             </div>                    
                             <div class=" col-3 col-lg-1 text-right">
-                                  <button type="button" class="btn store1 products-delbtn">刪除</button>
-                                <div class="store1 price-asking p-2">$30,320 </div> 
+                                  <button type="button" class="btn products-delbtn" value="store1">刪除</button>
+                                <div class="price-asking p-2">$30,320 </div> 
                             </div>  
                         </div>                    
                     </li>
@@ -148,13 +149,15 @@
                                 </div>  
                             </div>                    
                             <div class=" col-3 col-lg-1 text-right">
-                                  <button type="button" class="btn store1 products-delbtn">刪除</button>
-                                <div class="store1 price-asking p-2">$27,320 </div> 
+                                  <button type="button" class="btn products-delbtn" value="store1">刪除</button>
+                                <div class="price-asking p-2">$27,320 </div> 
                             </div>  
                         </div>                    
                     </li>
+                </ul>
                 </form>
                 <form id="store2">
+                <ul class="store2ul">
                     <li class="linebt-row10"></li>
                     <li class="flex-inline-between">      
                         <div class="store-title center-v p-1">                                                
@@ -166,7 +169,7 @@
                             </div>         
                         </div>                
                         <div class="text-right p-1">
-                             <button type="button" class="btn text-info s2-modifybtn">
+                             <button type="button" class="btn text-info modifybtn" value="store2">
                                 編輯
                             </button>
                         </div>
@@ -201,8 +204,8 @@
                                 </div>  
                             </div>                    
                             <div class=" col-3 col-lg-1 text-right">
-                                  <button type="button" class="btn store2 products-delbtn">刪除</button>
-                                <div class="store2 price-asking p-2">$30,320 </div> 
+                                  <button type="button" class="btn products-delbtn" value="store2">刪除</button>
+                                <div class="price-asking p-2">$30,320 </div> 
                             </div>  
                         </div>                    
                     </li>
@@ -236,8 +239,8 @@
                                 </div>  
                             </div>                    
                             <div class=" col-3 col-lg-1 text-right">
-                                  <button type="button" class="btn store2 products-delbtn">刪除</button>
-                                <div class="store2 price-asking p-2">$27,320 </div> 
+                                  <button type="button" class="btn products-delbtn" value="store2">刪除</button>
+                                <div class="price-asking p-2">$27,320 </div> 
                             </div>  
                         </div>                    
                     </li>  
@@ -271,17 +274,17 @@
                                 </div>  
                             </div>                    
                             <div class=" col-3 col-lg-1 text-right">
-                                  <button type="button" class="btn store2 products-delbtn">刪除</button>
-                                <div class="store2 price-asking p-2">$27,320 </div> 
+                                  <button type="button" class="btn products-delbtn" value="store2">刪除</button>
+                                <div class="price-asking p-2">$27,320 </div> 
                             </div>  
                         </div>                    
-                    </li>                                      
+                    </li>   
+                </ul>                                   
                 </form>
             </ul>
             
         </div> 
-        <div class="addheight container"></div>
-        <div class="h-50 d-inline-block"></div>
+        <div class="addheight container mb-5"></div>
         <div id="loginhtml"></div>
     </main>
 
@@ -356,46 +359,51 @@
 
 
         //modify button control
-        $('.s1-modifybtn').on('click', function() {            
-            if($(this).text()=='完成'){
-                $(this).text('編輯');
-                $('.store1.products-delbtn').hide();
-                $('.store1.price-asking').show(); 
-            }else{
-                $(this).text('完成');         
-                $('.store1.products-delbtn').show();  
-                $('.store1.price-asking').hide();      
-            }
-        });
-        $('.s2-modifybtn').on('click', function() {            
-            if($(this).text()=='完成'){
-                $(this).text('編輯');
-                $('.store2.products-delbtn').hide();
-                $('.store2.price-asking').show(); 
-            }else{
-                $(this).text('完成');         
-                $('.store2.products-delbtn').show();  
-                $('.store2.price-asking').hide();      
-            }
-        });
-        $('.all-modifybtn').on('click', function() {            
-            if($(this).text()=='完成'){  
-                $('.s1-modifybtn').show();     
-                $('.s2-modifybtn').show(); 
-                $(this).text('編輯全部');
-                $('.store1.products-delbtn').hide();
-                $('.store1.price-asking').show();                 
-                $('.store2.products-delbtn').hide();
-                $('.store2.price-asking').show(); 
-            }else{
-                $(this).text('完成');       
-                $('.s1-modifybtn').hide();     
-                $('.s2-modifybtn').hide(); 
-                $('.store1.products-delbtn').show();  
-                $('.store1.price-asking').hide();   
-                $('.store2.products-delbtn').show();  
-                $('.store2.price-asking').hide();      
-            }
+        $('.modifybtn').on('click', function() {           
+            var storebnval =  $(this).val();
+            var btn_text = $(this).text();
+            var modifybtnlen = $('.modifybtn').length;
+            //edit branch store
+            if (($(this).text().indexOf('編輯')>0)||(btn_text=='編輯')){
+                $(this).text('完成');
+                $('#'+storebnval+' .products-delbtn').show();
+                $('#'+storebnval+' .price-asking').hide();
+            };
+            if (($(this).text().indexOf('完成')>0)||(btn_text=='完成')){
+                if(storebnval != 'store0'){
+                    $(this).text('編輯');
+                    $('#'+storebnval+' .products-delbtn').hide();
+                    $('#'+storebnval+' .price-asking').show();
+                }
+            };
+
+            //edit all store
+            if(storebnval == 'store0'){
+                $(this).text('完成').val('ok');  
+                $('.modifybtn').not($(this)).text('刪除全部');
+                $('.products-delbtn').show();  
+                $('.price-asking').hide(); 
+            };
+            //editok 
+            if( (storebnval=='ok')){
+                if(modifybtnlen=='1'){
+                    $(this).hide();
+                    $('.shopping-cartlist').html("<div class='mt-5 text-center'>購物車是空的?<br><a href='index.html'>現在就去逛逛</a></div>");
+                }else{
+                    $(this).text('編輯全部').val('store0'); 
+                    $('.modifybtn').not($(this)).text('編輯');
+                    $('.products-delbtn').hide();  
+                    $('.price-asking').show();   
+                };
+            };              
+            //del
+            if (btn_text=='刪除全部'){
+                $(this).parents('form').remove();
+            };
+            $('.products-delbtn').on('click', function() { 
+                $(this).parents('li').remove();
+            });
+
         });
     </script>
     <script src="../js/index.js"></script>
