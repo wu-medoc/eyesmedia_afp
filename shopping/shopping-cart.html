@@ -55,8 +55,8 @@
             <ul class="list-unstyled w-100">
                 <li class="flex-inline-between center-v">
                     <div class="checkbox checkbox-primary w-50 p-1">
-                        <input id="checked-all" type="checkbox">
-                        <label for="checked-all">
+                        <input id="checkedall" type="checkbox" class="store-chk">
+                        <label for="checkedall">
                             選擇全部
                         </label>
                     </div>
@@ -66,13 +66,13 @@
                         </button>
                     </div>
                 </li>
-                <form id="store1">
+                <form id="store1" class="product">
                 <ul class="store1ul">
                     <li class="linebt-row10"></li>
                     <li class="flex-inline-between">      
                         <div class="store-title center-v p-1">                                                
                             <div class="checkbox checkbox-primary">
-                                <input id="store01-all" type="checkbox" class="checkedall store01">
+                                <input id="store01-all" type="checkbox" class="checkedall store-chk">
                                 <label for="store01-all">
                                     <img src="../img/shopping/icon_store.svg">昇恆昌免稅購物網站 
                                 </label>
@@ -90,7 +90,7 @@
                                 <div class="products-sitem d-flex align-items-start bd-highlight">
                                     <div class="sitem-checkbox">
                                         <div class="checkbox checkbox-primary">
-                                            <input id="products001" type="checkbox" class="checkedall store01" checked="checked"><label for="products001" class="p-0"></label>  
+                                            <input id="products001" type="checkbox" class="checkedall store01-all"><label for="products001" class="p-0"></label>  
                                         </div>  
                                     </div>
                                     <div class="sitem-img bd-highlight py-1">
@@ -104,7 +104,7 @@
                                                 <div class="input-group-btn data-dwn">
                                                       <button type="button" class="btn btn-default btn-outline-secondary" data-dir="dwn"><i class="fas fa-minus"></i></button>
                                                 </div>
-                                                <div><input type="number" class="form-control text-center" value="1" min="0" max="3"  required="required"></div>
+                                                <div><input type="number" class="form-control text-center product-quantity" value="1" min="0" max="3"  required="required"></div>
                                                 <div class="input-group-btn data-up">
                                                       <button type="button" class="btn btn-default btn-outline-info" data-dir="up"><i class="fas fa-plus"></i></button>
                                                 </div>
@@ -115,7 +115,7 @@
                             </div>                    
                             <div class=" col-3 col-lg-1 text-right">
                                   <button type="button" class="btn products-delbtn" value="store1">刪除</button>
-                                <div class="price-asking p-2">$30,320 </div> 
+                                <div class="store01-all price-asking p-2" value="30320">$30,320 </div> 
                             </div>  
                         </div>                    
                     </li>
@@ -125,7 +125,7 @@
                                 <div class="products-sitem d-flex align-items-start bd-highlight">
                                     <div class="sitem-checkbox">
                                         <div class="checkbox checkbox-primary">
-                                            <input id="products002" type="checkbox" class="checkedall store01"><label for="products002" class="p-0"></label>  
+                                            <input id="products002" type="checkbox" class="checkedall store01-all"><label for="products002" class="p-0"></label>  
                                         </div>  
                                     </div>
                                     <div class="sitem-img bd-highlight py-1">
@@ -139,7 +139,7 @@
                                                 <div class="input-group-btn data-dwn">
                                                       <button type="button" class="btn btn-default btn-outline-secondary" data-dir="dwn"><i class="fas fa-minus"></i></button>
                                                 </div>
-                                                <div><input type="number" class="form-control text-center" value="1" min="0" max="3"  required="required"></div>
+                                                <div><input type="number" class="form-control text-center product-quantity" value="1" min="0" max="3"  required="required"></div>
                                                 <div class="input-group-btn data-up">
                                                       <button type="button" class="btn btn-default btn-outline-info" data-dir="up"><i class="fas fa-plus"></i></button>
                                                 </div>
@@ -150,19 +150,19 @@
                             </div>                    
                             <div class=" col-3 col-lg-1 text-right">
                                   <button type="button" class="btn products-delbtn" value="store1">刪除</button>
-                                <div class="price-asking p-2">$27,320 </div> 
+                                <div class="store01-all price-asking p-2" value="27320">$27,320 </div> 
                             </div>  
                         </div>                    
                     </li>
                 </ul>
                 </form>
-                <form id="store2">
+                <form id="store2" class="product">
                 <ul class="store2ul">
                     <li class="linebt-row10"></li>
                     <li class="flex-inline-between">      
                         <div class="store-title center-v p-1">                                                
                             <div class="checkbox checkbox-primary">
-                                <input id="store02-all" type="checkbox" class="checkedall store02">
+                                <input id="store02-all" type="checkbox" class="checkedall store-chk">
                                 <label for="store02-all">
                                     <img src="../img/shopping/icon_store.svg">新光三越線上商城 
                                 </label>
@@ -180,7 +180,7 @@
                                 <div class="products-sitem d-flex align-items-start bd-highlight">
                                     <div class="sitem-checkbox">
                                         <div class="checkbox checkbox-primary">
-                                            <input id="products003" type="checkbox" class="checkedall store02"><label for="products003" class="p-0"></label>  
+                                            <input id="products003" type="checkbox" class="checkedall store02-all"><label for="products003" class="p-0"></label>  
                                         </div>  
                                     </div>
                                     <div class="sitem-img bd-highlight py-1">
@@ -194,7 +194,7 @@
                                                 <div class="input-group-btn data-dwn">
                                                       <button type="button" class="btn btn-default btn-outline-secondary" data-dir="dwn"><i class="fas fa-minus"></i></button>
                                                 </div>
-                                                <div><input type="number" class="form-control text-center" value="1" min="0" max="3"  required="required"></div>
+                                                <div><input type="number" class="form-control text-center product-quantity" value="1" min="0" max="3"  required="required"></div>
                                                 <div class="input-group-btn data-up">
                                                       <button type="button" class="btn btn-default btn-outline-info" data-dir="up"><i class="fas fa-plus"></i></button>
                                                 </div>
@@ -205,7 +205,7 @@
                             </div>                    
                             <div class=" col-3 col-lg-1 text-right">
                                   <button type="button" class="btn products-delbtn" value="store2">刪除</button>
-                                <div class="price-asking p-2">$30,320 </div> 
+                                <div class="store02-all price-asking p-2" value="30320">$30,320 </div> 
                             </div>  
                         </div>                    
                     </li>
@@ -215,7 +215,7 @@
                                 <div class="products-sitem d-flex align-items-start bd-highlight">
                                     <div class="sitem-checkbox">
                                         <div class="checkbox checkbox-primary">
-                                            <input id="products004" type="checkbox" class="checkedall store02"><label for="products004" class="p-0"></label>  
+                                            <input id="products004" type="checkbox" class="checkedall store02-all"><label for="products004" class="p-0"></label>  
                                         </div>  
                                     </div>
                                     <div class="sitem-img bd-highlight py-1">
@@ -229,7 +229,7 @@
                                                 <div class="input-group-btn data-dwn">
                                                       <button type="button" class="btn btn-default btn-outline-secondary" data-dir="dwn"><i class="fas fa-minus"></i></button>
                                                 </div>
-                                                <div><input type="number" class="form-control text-center" value="1" min="0" max="3"  required="required"></div>
+                                                <div><input type="number" class="form-control text-center product-quantity" value="1" min="0" max="3"  required="required"></div>
                                                 <div class="input-group-btn data-up">
                                                       <button type="button" class="btn btn-default btn-outline-info" data-dir="up"><i class="fas fa-plus"></i></button>
                                                 </div>
@@ -240,7 +240,7 @@
                             </div>                    
                             <div class=" col-3 col-lg-1 text-right">
                                   <button type="button" class="btn products-delbtn" value="store2">刪除</button>
-                                <div class="price-asking p-2">$27,320 </div> 
+                                <div class="store02-all price-asking p-2" value="27320">$27,320 </div> 
                             </div>  
                         </div>                    
                     </li>  
@@ -250,7 +250,7 @@
                                 <div class="products-sitem d-flex align-items-start bd-highlight">
                                     <div class="sitem-checkbox">
                                         <div class="checkbox checkbox-primary">
-                                            <input id="products005" type="checkbox" class="checkedall store02" checked="checked"><label for="products005" class="p-0"></label>  
+                                            <input id="products005" type="checkbox" class="checkedall store02-all"><label for="products005" class="p-0"></label>  
                                         </div>  
                                     </div>
                                     <div class="sitem-img bd-highlight py-1">
@@ -264,7 +264,7 @@
                                                 <div class="input-group-btn data-dwn">
                                                       <button type="button" class="btn btn-default btn-outline-secondary" data-dir="dwn"><i class="fas fa-minus"></i></button>
                                                 </div>
-                                                <div><input type="number" class="form-control text-center" value="1" min="0" max="3"  required="required"></div>
+                                                <div><input type="number" class="form-control text-center product-quantity" value="1" min="0" max="3"  required="required"></div>
                                                 <div class="input-group-btn data-up">
                                                       <button type="button" class="btn btn-default btn-outline-info" data-dir="up"><i class="fas fa-plus"></i></button>
                                                 </div>
@@ -275,7 +275,7 @@
                             </div>                    
                             <div class=" col-3 col-lg-1 text-right">
                                   <button type="button" class="btn products-delbtn" value="store2">刪除</button>
-                                <div class="price-asking p-2">$27,320 </div> 
+                                <div class="store02-all price-asking p-2" value="27320">$27,320 </div> 
                             </div>  
                         </div>                    
                     </li>   
@@ -300,11 +300,11 @@
         <div class="fixed-bottom container">        
             <div class="row subtotal-info">
                 <div class="col-8 col-lg-9 text-right">
-                    <small>小計</small><span class="price-subtotal">$ 6,980</span>
+                    <small>小計</small><span class="price-subtotal">$ 0</span>
                     <p class="small text-secondary">未含運費</p>
                 </div>
                 <div class="col-4 col-lg-3 pl-0">
-                     <button type="button" class="btn onlineshopping-btn mt-2 py-1 w-100">下一步</button>
+                     <button type="button" class="btn onlineshopping-btn mt-2 py-1 w-100 cart-next">下一步</button>
                 </div>
             </div>
         </div>
@@ -333,27 +333,60 @@
     <!-- custom js -->
     <script>    
         $("#loginhtml").load("../login.html");
-
-        //checked control
-        $('#checked-all').on('click', function(e){
-            $this = this;  
-            $.each($(this).parents('ul').find('input.checkedall'), function(i, item){
-            $(item).prop('checked', $this.checked);
-            });
-        });        
-        $('#store01-all').on('click', function(e){
-            $this = this;  
-            $.each($(this).parents('ul').find('input.store01'), function(i, item){
-            $(item).prop('checked', $this.checked);
-            });
-        });     
-        $('#store02-all').on('click', function(e){
-            $this = this;  
-            $.each($(this).parents('ul').find('input.store02'), function(i, item){
-            $(item).prop('checked', $this.checked);
-            });
+        //Subtotal 
+        var subtotal=0;
+        $('input.store01-all, input.store02-all').click(function(){
+            if($(this).is(":checked")){
+                var parentsli = $(this).parents('li');
+                subtotal += parseInt($(parentsli).find('.price-asking').attr('value'));
+            }else{
+                var parentsli = $(this).parents('li');
+                subtotal -= parseInt($(parentsli).find('.price-asking').attr('value'));
+            }
+        $('.price-subtotal').text('$'+formatPrice(subtotal));
         });
 
+        //checked control
+        $('.store-chk').on('click', function(){
+            var chkid = $(this)[0].id;
+            $this = this;  
+            $.each($(this).parents('ul').find('input.'+chkid), function(i, item){
+            $(item).prop('checked', $this.checked);
+            });
+            if(chkid=='checkedall'){
+                subtotal =0;
+                if($(this).is(':checked')){
+                    subtotal += pask(chkid);
+                }else{
+                    subtotal = 0;
+                }
+            }else{
+                if($(this).is(':checked')){
+                    subtotal += pask(chkid);
+                }else{
+                    subtotal -= pask(chkid);
+                }
+            }
+            $('.price-subtotal').text('$'+formatPrice(subtotal));
+        });     
+
+        //price-asking
+        function pask(e){
+            var pasktotal=0;
+            if(e=='checkedall'){
+                $('.price-asking').each(function() {
+                    pasktotal += parseInt($(this).attr('value'));
+                });
+            }else{
+                $('.'+e+'.price-asking').each(function() {
+                    pasktotal += parseInt($(this).attr('value'));
+                });
+            };
+            return pasktotal;
+        }
+
+
+        
         //footer coupon
         $('.shopping-coupon').addClass('fixed-bottom').slideDown(2000);
 
@@ -406,7 +439,15 @@
 
         });
 
-        //Subtotal 
+
+        
+        //Currency formatting
+        function formatPrice(n) {
+        var t = parseInt(n), i, r;
+        for (t = t.toString().replace(/^(\d*)$/, "$1."), t = (t + "00").replace(/(\d*\.\d\d)\d*/, "$1"), t = t.replace(".", ","), i = /(\d)(\d{3},)/; i.test(t); )
+            t = t.replace(i, "$1,$2");
+        return t = t.replace(/,(\d\d)$/, ".$1"), r = t.split("."), r[1] == "00" && (t = r[0]), t
+        }
 
     </script>
     <script src="../js/index.js"></script>
