@@ -341,9 +341,9 @@
                 subtotal += parseInt($(parentsli).find('.price-asking').attr('value'));
             }else{
                 var parentsli = $(this).parents('li');
-                subtotal -= parseInt($(parentsli).find('.price-asking').attr('value'));
+                subtotal -= parseInt($(parentsli).find('.price-asking').attr('value'));  
             }
-        $('.price-subtotal').text('$'+formatPrice(subtotal));
+            sumtotal(subtotal);
         });
 
         //checked control
@@ -363,21 +363,24 @@
             }else{
                 if($(this).is(':checked')){
                     subtotal += pask(chkid);
+                    $('input.'+chkid).attr('disabled', true);
                 }else{
                     subtotal -= pask(chkid);
+                    $('input.'+chkid).attr('disabled', false);
                 }
             }
-            $('.price-subtotal').text('$'+formatPrice(subtotal));
+            sumtotal(subtotal);
         });     
 
         //price-asking
         function pask(e){
-            var pasktotal=0;
             if(e=='checkedall'){
+                var pasktotal=0;
                 $('.price-asking').each(function() {
                     pasktotal += parseInt($(this).attr('value'));
                 });
             }else{
+                var pasktotal=0;
                 $('.'+e+'.price-asking').each(function() {
                     pasktotal += parseInt($(this).attr('value'));
                 });
@@ -385,8 +388,11 @@
             return pasktotal;
         }
 
+        function sumtotal(e){
+            $('.price-subtotal').text('$'+formatPrice(e));
+        }
 
-        
+
         //footer coupon
         $('.shopping-coupon').addClass('fixed-bottom').slideDown(2000);
 
