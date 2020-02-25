@@ -31,7 +31,7 @@
             <div class="header-secondary linebt-row">
                 <div class="row">
                     <div class="col-3">
-                        <div class="close-btn">
+                        <div class="close-btn" onclick="history.back();">
                             <i class="material-icons">&#xE314;</i>
                         </div>
                     </div>
@@ -64,21 +64,21 @@
                     訂購人資料
                 </div>
                 <ul class="order-list">
-                    <li>
-                        <div class="item">姓名</div>
-                        <div class="item auto-left">
+                    <li class="index-flex">
+                        <div class="item one">姓名</div>
+                        <div class="item three">
                             <input type="text" placeholder="請輸入">
                         </div>
                     </li>
-                    <li>
-                        <div class="item">手機號碼</div>
-                        <div class="item auto-left">
+                    <li class="index-flex">
+                        <div class="item one">手機號碼</div>
+                        <div class="item three">
                             <input type="text" placeholder="請輸入">
                         </div>
                     </li>
-                    <li>
-                        <div class="item">Email</div>
-                        <div class="item auto-left">
+                    <li class="index-flex">
+                        <div class="item one">Email</div>
+                        <div class="item three">
                             <input type="text" placeholder="請輸入">
                         </div>
                     </li>
@@ -118,33 +118,33 @@
                 </ul>
                 <div class="order-method-box">
                     <ul class="method-list">
-                        <li>
-                            <div class="item"><i class="material-icons reverse">&#xE54E;</i>使用優惠券、折扣碼</div>
-                            <div class="item discount-price auto-left">-$148<i class="material-icons">&#xE315;</i></div>
+                        <li class="index-flex">
+                            <div class="item three"><i class="material-icons reverse">&#xE54E;</i>使用優惠券、折扣碼</div>
+                            <div class="item one discount-price text-right"><a href>-$148<i class="material-icons">&#xE315;</i></a></div>
                         </li>
                         <!-- 寄送方式 - 選擇寄送方式 -->
-                        <li>
+                        <li class="index-flex">
                             <div class="item"><i class="material-icons">&#xE558;</i>寄送方式</div>
-                            <div class="item discount-price auto-left">請選擇寄送方式<i class="material-icons">&#xE315;</i></div>
+                            <div class="item discount-price text-right"><a href>請選擇寄送方式<i class="material-icons">&#xE315;</i></a></div>
                         </li>
                         <!-- 寄送方式 - 選擇後 -->
-                        <li>
+                        <li class="index-flex">
                             <div class="item"><i class="material-icons">&#xE558;</i>寄送方式</div>
-                            <div class="item auto-left">宅配通 $100</div>
+                            <div class="item delivery-txt text-right">宅配通 $100</div>
                             <div class="item-group">
                                 <div class="item item-address">106 台北市大安區敦化南路2段76號5樓</div>
                                 <div class="item item-date">預計到貨日期 12月5日～12月9日</div>
                             </div>
                         </li>
-                        <li>
-                            <div class="item">留言</div>
-                            <div class="item auto-left">
+                        <li class="index-flex">
+                            <div class="item one">留言</div>
+                            <div class="item three">
                                 <input type="text" placeholder="請留言...">
                             </div>
                         </li>
-                        <li>
-                            <div class="item">此賣場訂單金額 (<span>2</span>件商品)</div>
-                            <div class="item item-total-price auto-left">
+                        <li class="index-flex">
+                            <div class="item three">此賣場訂單金額 (<span>2</span>件商品)</div>
+                            <div class="item one item-total-price text-right">
                                 $6,832
                             </div>
                         </li>
@@ -181,33 +181,33 @@
                 </ul>
                 <div class="order-method-box">
                     <ul class="method-list">
-                        <li>
-                            <div class="item"><i class="material-icons reverse">&#xE54E;</i>使用優惠券、折扣碼</div>
-                            <div class="item discount-price auto-left">-$148<i class="material-icons">&#xE315;</i></div>
+                        <li class="index-flex">
+                            <div class="item three"><i class="material-icons reverse">&#xE54E;</i>使用優惠券、折扣碼</div>
+                            <div class="item one discount-price text-right"><a href>-$148<i class="material-icons">&#xE315;</i></a></div>
                         </li>
                         <!-- 寄送方式 - 選擇寄送方式 -->
-                        <li>
+                        <li class="index-flex">
                             <div class="item"><i class="material-icons">&#xE558;</i>寄送方式</div>
-                            <div class="item discount-price auto-left">請選擇寄送方式<i class="material-icons">&#xE315;</i></div>
+                            <div class="item discount-price text-right"><a href>請選擇寄送方式<i class="material-icons">&#xE315;</i></a></div>
                         </li>
                         <!-- 寄送方式 - 選擇後 -->
-                        <li>
+                        <li class="index-flex">
                             <div class="item"><i class="material-icons">&#xE558;</i>寄送方式</div>
-                            <div class="item auto-left">宅配通 $100</div>
+                            <div class="item delivery-txt text-right">宅配通 $100</div>
                             <div class="item-group">
                                 <div class="item item-address">106 台北市大安區敦化南路2段76號5樓</div>
                                 <div class="item item-date">預計到貨日期 12月5日～12月9日</div>
                             </div>
                         </li>
-                        <li>
-                            <div class="item">留言</div>
-                            <div class="item auto-left">
+                        <li class="index-flex">
+                            <div class="item one">留言</div>
+                            <div class="item three">
                                 請幫我在三天後再寄出，謝謝
                             </div>
                         </li>
-                        <li>
-                            <div class="item">此賣場訂單金額 (<span>2</span>件商品)</div>
-                            <div class="item item-total-price auto-left">
+                        <li class="index-flex">
+                            <div class="item three">此賣場訂單金額 (<span>2</span>件商品)</div>
+                            <div class="item one item-total-price text-right">
                                 $6,832
                             </div>
                         </li>
@@ -220,45 +220,48 @@
             <div class="order-box">
                 <div class="order-method-box">
                     <ul class="method-list">
-                        <li>
-                            <div class="item"><i class="material-icons">&#xE8B0;</i>電子發票</div>
-                            <div class="item discount-price auto-left">請選擇發票樣式<i class="material-icons">&#xE315;</i></div>
+                        <li class="index-flex">
+                            <div class="item d-flex d-inline"><div class="invo-box"><i class="material-icons">&#xE8B0;</i></div>電子發票</div>
+                            <div class="item discount-price text-right"><a href>請選擇發票樣式<i class="material-icons">&#xE315;</i></a></div>
                         </li>
                     </ul>
                 </div>
                 <div class="total-price-box">
                     <ul>
-                        <li>
+                        <li class="index-flex">
                             <div class="item">商品總金額</div>
-                            <div class="item auto-left">$13,664</div>
+                            <div class="item text-right">$13,664</div>
                         </li>
-                        <li>
+                        <li class="index-flex">
                             <div class="item">運費總金額</div>
-                            <div class="item auto-left">$250</div>
+                            <div class="item text-right">$250</div>
                         </li>
-                        <li>
+                        <li class="index-flex">
                             <div class="item">優惠折抵</div>
-                            <div class="item auto-left">-$148</div>
+                            <div class="item text-right">-$148</div>
                         </li>
-                        <li class="total-pay">
+                        <li class="total-pay index-flex">
                             <div class="item">付款總金額</div>
-                            <div class="item auto-left">$13,766</div>
+                            <div class="item text-right">$13,766</div>
                         </li>
                     </ul>
                 </div>
             </div>
         </main>
-
-        <footer class="order-go-pay">
-            <div class="item">
-                <p>小計：<span class="small-price">$6,980</span></p>
-                <p class="mobi">此筆訂單可賺<span>0</span>魔幣</p>
-            </div>
-            <div class="item">
-                <button>去結帳</button>
+        <footer class="shopping-cartfooter order-go-pay">
+            <div class="fixed-bottom container fixed-shadow">        
+                <div class="row subtotal-info">
+                    <div class="col-8 col-lg-9 text-right">
+                        <small>小計</small><span class="price-subtotal">$ 0</span>
+                        <p class="mobi">此筆訂單可賺<span>0</span>魔幣</p>
+                    </div>
+                    <div class="col-4 col-lg-3 pl-0">
+                         <button type="button" class="btn onlineshopping-btn mt-2 py-1 w-100 cart-next" onclick="location.href='shopping-discount.html'">去結帳</button>
+                    </div>
+                </div>
             </div>
         </footer>
-    
+   
     </div>
 
     <!-- Optional JavaScript -->
