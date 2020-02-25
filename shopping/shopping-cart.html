@@ -299,7 +299,7 @@
         <div class="fixed-bottom container">        
             <div class="row subtotal-info">
                 <div class="col-8 col-lg-9 text-right">
-                    <small>小計</small><span class="price-subtotal">$ 0</span>
+                    <small>小計</small><span class="price-subtotal" value="0">$ 0</span>
                     <p class="small text-secondary">未含運費</p>
                 </div>
                 <div class="col-4 col-lg-3 pl-0">
@@ -333,8 +333,9 @@
     <script>    
         $("#loginhtml").load("../login.html");
         //Subtotal 
-        var subtotal = 0;
+        var subtotal = parseInt($('.price-subtotal').attr('value'));
         $('input.store01-all, input.store02-all').click(function(){
+            var sid = $(this).attr('class').split(/\s+/)[1];
             if($(this).is(":checked")){
                 var parentsli = $(this).parents('li');
                 subtotal += parseInt($(parentsli).find('.price-asking').attr('value'));
@@ -343,6 +344,13 @@
                 var parentsli = $(this).parents('li');
                 subtotal -= parseInt($(parentsli).find('.price-asking').removeClass('chk').attr('value'));  
             }
+            //parent checked
+            if($('.'+sid+'.price-asking.chk').length == $('.'+sid+'.price-asking').length){
+                $('#'+sid).attr('checked',true);
+            };
+            if($('.'+sid+'.price-asking.chk').length < $('.'+sid+'.price-asking').length){
+                $('#'+sid).attr('checked',false);
+            };
             sumtotal(subtotal);
         });
 
@@ -364,34 +372,37 @@
                     $('.price-asking').removeClass('chk');
                 }
             }else{
+                if($('#checkedall').is(':checked')){$('#checkedall').prop('checked', $this.checked);}
                 if($(this).is(':checked')){
                     subtotal = subtotal + pask(chkid);
                     $('input.'+chkid).attr('disabled', true);
                 }else{
                     subtotal = subtotal - pask(chkid);
                     $('input.'+chkid).attr('disabled', false);
+                    //alert(subtotal+','+pask(chkid)+','+cktotal+','+pasktotal);
                     cktotal =0;
                 }
-                //alert(subtotal+','+pask(chkid)+','+cktotal);
             }
             sumtotal(subtotal);
         });     
-
+        var pasktotal=0;
         //price-asking
         function pask(e){
             if(e=='checkedall'){
-                var pasktotal=0;
+                // all check
+                pasktotal=0;
                 $('.price-asking').each(function() {
                     pasktotal += parseInt($(this).attr('value'));
                 });
             }else{
-                var pasktotal=0;
-                $('.'+e+'.price-asking').each(function() {
-                    if ($(this).hasClass('chk')){
+                pasktotal=0;
+                // check
+                $('.'+e+'.price-asking.chk').each(function() {
                         cktotal += parseInt($(this).removeClass('chk').attr('value'));
-                    }else{
+                });
+                // all check
+                $('.'+e+'.price-asking').each(function() {
                         pasktotal += parseInt($(this).attr('value'));
-                    }
                 });
             };
             return pasktotal;
