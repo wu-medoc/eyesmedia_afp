@@ -115,7 +115,7 @@
                             </div>                    
                             <div class=" col-3 col-lg-1 text-right">
                                   <button type="button" class="btn products-delbtn" value="store1">刪除</button>
-                                <div class="store01-all price-asking p-2" value="30320">$30,320 </div> 
+                                <div class="store01-all price-asking" value="30320">$30,320 </div> 
                             </div>  
                         </div>                    
                     </li>
@@ -150,7 +150,7 @@
                             </div>                    
                             <div class=" col-3 col-lg-1 text-right">
                                   <button type="button" class="btn products-delbtn" value="store1">刪除</button>
-                                <div class="store01-all price-asking p-2" value="27320">$27,320 </div> 
+                                <div class="store01-all price-asking" value="27320">$27,320 </div> 
                             </div>  
                         </div>                    
                     </li>
@@ -205,7 +205,7 @@
                             </div>                    
                             <div class=" col-3 col-lg-1 text-right">
                                   <button type="button" class="btn products-delbtn" value="store2">刪除</button>
-                                <div class="store02-all price-asking p-2" value="30320">$30,320 </div> 
+                                <div class="store02-all price-asking" value="30320">$30,320 </div> 
                             </div>  
                         </div>                    
                     </li>
@@ -240,7 +240,7 @@
                             </div>                    
                             <div class=" col-3 col-lg-1 text-right">
                                   <button type="button" class="btn products-delbtn" value="store2">刪除</button>
-                                <div class="store02-all price-asking p-2" value="27320">$27,320 </div> 
+                                <div class="store02-all price-asking" value="27320">$27,320 </div> 
                             </div>  
                         </div>                    
                     </li>  
@@ -275,7 +275,7 @@
                             </div>                    
                             <div class=" col-3 col-lg-1 text-right">
                                   <button type="button" class="btn products-delbtn" value="store2">刪除</button>
-                                <div class="store02-all price-asking p-2" value="27320">$27,320 </div> 
+                                <div class="store02-all price-asking" value="27320">$27,320 </div> 
                             </div>  
                         </div>                    
                     </li>   
@@ -334,18 +334,20 @@
     <script>    
         $("#loginhtml").load("../login.html");
         //Subtotal 
-        var subtotal=0;
+        var subtotal = 0;
         $('input.store01-all, input.store02-all').click(function(){
             if($(this).is(":checked")){
                 var parentsli = $(this).parents('li');
                 subtotal += parseInt($(parentsli).find('.price-asking').attr('value'));
+                $(parentsli).find('.price-asking').addClass('chk');
             }else{
                 var parentsli = $(this).parents('li');
-                subtotal -= parseInt($(parentsli).find('.price-asking').attr('value'));  
+                subtotal -= parseInt($(parentsli).find('.price-asking').removeClass('chk').attr('value'));  
             }
             sumtotal(subtotal);
         });
 
+            var cktotal=0;
         //checked control
         $('.store-chk').on('click', function(){
             var chkid = $(this)[0].id;
@@ -362,12 +364,14 @@
                 }
             }else{
                 if($(this).is(':checked')){
-                    subtotal += pask(chkid);
+                    subtotal = subtotal + pask(chkid);
                     $('input.'+chkid).attr('disabled', true);
                 }else{
-                    subtotal -= pask(chkid);
+                    subtotal = subtotal - pask(chkid);
                     $('input.'+chkid).attr('disabled', false);
+                    cktotal =0;
                 }
+                //alert(subtotal+','+pask(chkid)+','+cktotal);
             }
             sumtotal(subtotal);
         });     
@@ -382,7 +386,11 @@
             }else{
                 var pasktotal=0;
                 $('.'+e+'.price-asking').each(function() {
-                    pasktotal += parseInt($(this).attr('value'));
+                    if ($(this).hasClass('chk')){
+                        cktotal += parseInt($(this).removeClass('chk').attr('value'));
+                    }else{
+                        pasktotal += parseInt($(this).attr('value'));
+                    }
                 });
             };
             return pasktotal;
@@ -437,9 +445,17 @@
             };              
             //del
             if (btn_text=='刪除全部'){
+                ($(this).parents('form').find('.price-asking.chk')).each(function() {
+                    subtotal -= parseInt($(this).attr('value'));
+                });
+                    sumtotal(subtotal);
                 $(this).parents('form').remove();
             };
             $('.products-delbtn').on('click', function() { 
+                if (subtotal>0){
+                    subtotal -= parseInt($(this).parents('li').find('.price-asking').removeClass('chk').attr('value')); 
+                    sumtotal(subtotal);
+                }
                 $(this).parents('li').remove();
             });
 
