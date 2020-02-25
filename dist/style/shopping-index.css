@@ -1305,6 +1305,7 @@ a:hover {
   color: tomato;
   font-weight: bold;
   text-align: right;
+  padding: .25em;
 }
 
 .shopping-cartlist ul.list-unstyled li .price-original {
