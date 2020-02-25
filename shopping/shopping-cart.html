@@ -358,8 +358,10 @@
                 subtotal =0;
                 if($(this).is(':checked')){
                     subtotal += pask(chkid);
+                    $('.price-asking').addClass('chk');
                 }else{
                     subtotal = 0;
+                    $('.price-asking').removeClass('chk');
                 }
             }else{
                 if($(this).is(':checked')){
@@ -434,7 +436,7 @@
             if( (storebnval=='ok')){
                 if(modifybtnlen=='1'){
                     $(this).hide();
-                    $('.shopping-cartlist').html("<div class='mt-5 text-center'>購物車是空的?<br><a href='index.html'>現在就去逛逛</a></div>");
+                    $('.shopping-cartlist').html("<div class='d-flex flex-column justify-content-center align-items-center' style='height:300px'><p class='p-2 w-100 text-center'>喔喔！購物車內沒有商品</p><button type='button' class='btn onlineshopping-btn m-2 w-75 cart-next' onclick='location.href=index.html'>馬上去逛逛</button></div>");
                 }else{
                     $(this).text('編輯全部').val('store0'); 
                     $('.modifybtn').not($(this)).text('編輯');
@@ -447,7 +449,7 @@
                 ($(this).parents('form').find('.price-asking.chk')).each(function() {
                     subtotal -= parseInt($(this).attr('value'));
                 });
-                    sumtotal(subtotal);
+                sumtotal(subtotal);
                 $(this).parents('form').remove();
             };
             $('.products-delbtn').on('click', function() { 
