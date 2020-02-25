@@ -59,7 +59,7 @@
                             <div class="item item-checkbox">
                                 <div class="sitem-checkbox">
                                     <div class="checkbox checkbox-primary">
-                                        <input id="products001" type="checkbox" class="checkedall store01" checked="checked"><label for="products001"></label>  
+                                        <input id="discount001" type="checkbox" class="checkedall store01"><label for="discount001"></label>  
                                     </div>  
                                 </div>
                             </div>
@@ -70,13 +70,13 @@
                             </div>
                             <div class="item discount-text item-middle">
                                 <p>昇恆昌</p>
-                                <p>9折 折扣券</p>
+                                <p>8折 折扣券</p>
                                 <p>2019/11/15 ~ 2019/12/31</p>
                             </div>
                             <div class="item item-checkbox">
                                 <div class="sitem-checkbox">
                                     <div class="checkbox checkbox-primary">
-                                        <input id="products002" type="checkbox" class="checkedall store01"><label for="products002"></label>  
+                                        <input id="discount002" type="checkbox" class="checkedall store01" checked><label for="discount002"></label>  
                                     </div>  
                                 </div>
                             </div>
@@ -93,14 +93,14 @@
                                 <img src="https://picsum.photos/id/684/600/400" alt="">
                             </div>
                             <div class="item discount-text item-middle">
-                                <p>昇恆昌</p>
+                                <p>新光三越</p>
                                 <p>9折 折扣券</p>
                                 <p>2019/11/15 ~ 2019/12/31</p>
                             </div>
                             <div class="item item-checkbox">
                                 <div class="sitem-checkbox">
                                     <div class="checkbox checkbox-primary">
-                                        <input id="products003" type="checkbox" class="checkedall store02" checked="checked"><label for="products003"></label>  
+                                        <input id="discount003" type="checkbox" class="checkedall store02"><label for="discount003"></label>  
                                     </div>  
                                 </div>
                             </div>
@@ -133,19 +133,29 @@
             <!-- total price -->
             <div class="total-price-box">
                 <div class="total-header">
-                    <div class="item-group small">
-                        <div class="item">昇恆昌優惠券</div>
-                        <div class="item"><span>88</span>元</div>
+                    <div class="discount001" style="display:none;">
+                        <div class="item-group small">
+                            <div class="item"><p class="txt-line-clamp1">昇恆昌 9折 折扣券</p></div>
+                            <div class="item discount-price" value="88">88 元</div>
+                        </div>
                     </div>
-                    <div class="item-group small">
-                        <div class="item">昇恆昌優惠券</div>
-                        <div class="item"><span>88</span>元</div>
+                    <div class="discount002" style="display:block;">
+                        <div class="item-group small">
+                            <div class="item"><p class="txt-line-clamp1">昇恆昌 8折 折扣券</p></div>
+                            <div class="item discount-price" value="288">288 元</div>
+                        </div>
+                    </div>
+                    <div class="discount003" style="display:none;">
+                        <div class="item-group small">
+                            <div class="item"><p class="txt-line-clamp1">新光三越 9折 折扣券</p></div>
+                            <div class="item discount-price" value="188">188 元</div>
+                        </div>
                     </div>
                 </div>
                 <div class="total-body">
                     <div class="item-group">
                         <div class="item">總共優惠金額</div>
-                        <div class="item"><span>148</span>元</div>
+                        <div class="item price-subtotal" value="288">288 元</div>
                     </div>
                 </div>
                 <div class="total-footer">
@@ -182,6 +192,38 @@
     
     <!-- custom js -->
     <script src="../js/animateCss.js"></script>
+    <script>    
+    var distotal=$('.price-subtotal').attr('value');
+    $('.checkedall').on('click', function() { 
+        var ckid=$(this).attr('id');  
+        if($(this).is(':checked')){
+            $('.'+ckid).attr("style","display:block");
+        }else{
+            $('.'+ckid).attr("style","display:none");
+        }
+        $('.'+ckid).each(function() {
+            if(($(this).attr("style"))=="display:block"){
+                distotal += parseInt($(this).find('.discount-price').attr('value'));
+            }else{
+                distotal -= parseInt($(this).find('.discount-price').attr('value'));
+            }
+        });
+        sumtotal(distotal); 
+    });
+
+    //total display
+    function sumtotal(e){
+        $('.price-subtotal').text('$'+formatPrice(e)+'元');
+    }
+
+    //Currency formatting
+    function formatPrice(n) {
+    var t = parseInt(n), i, r;
+    for (t = t.toString().replace(/^(\d*)$/, "$1."), t = (t + "00").replace(/(\d*\.\d\d)\d*/, "$1"), t = t.replace(".", ","), i = /(\d)(\d{3},)/; i.test(t); )
+        t = t.replace(i, "$1,$2");
+    return t = t.replace(/,(\d\d)$/, ".$1"), r = t.split("."), r[1] == "00" && (t = r[0]), t
+    }
+    </script>
 </body>
 
 </html>
