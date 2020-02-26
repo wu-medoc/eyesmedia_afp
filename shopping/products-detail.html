@@ -104,11 +104,11 @@
                         數量                                
                     </div>
                     <div class="products-quantity">
-                        <div class="flex-inline-between number-spinner">
+                        <div class="flex-inline-between p-quantity products001">
                             <div class="input-group-btn data-dwn">
-                                <button class="btn btn-default btn-outline-secondary" data-dir="dwn"><i class="fas fa-minus"></i></button>
+                                <button class="btn btn-default btn-outline-dark" data-dir="dwn"><i class="fas fa-minus"></i></button>
                             </div>
-                            <div><input type="text" class="form-control text-center" value="1" min="0" max="3"></div>
+                            <div><input type="text" class="form-control text-center products001 bg-white" value="1" min="0" max="3"></div>
                             <div class="input-group-btn data-up">
                                 <button class="btn btn-default btn-outline-dark" data-dir="up"><i class="fas fa-plus"></i></button>
                             </div>
@@ -321,33 +321,19 @@
     <!-- custom js -->
     <script>    
         // products-detail quantity min max control
-        if($('.number-spinner').length>0) {    
-            $(document).on('click', '.number-spinner button', function () {    
-                var btn = $(this),
-                    oldValue = btn.closest('.number-spinner').find('input').val().trim(),
-                    input = btn.closest('.number-spinner').find('input'),
-                    newVal = 0;
-                
-                $('[data-dir=dwn]').addClass('btn-outline-dark').removeClass('btn-outline-secondary');
-                if (btn.attr('data-dir') == 'up') {            
-                    if (oldValue < input.attr('max')) {
-                        newVal = parseInt(oldValue) + 1;
-                    } else {
-                        newVal = input.val();
-                        $('[data-dir=up]').addClass('btn-outline-secondary').removeClass('btn-outline-dark');
-                    }
-                } else {
-                    if (oldValue > 1) {
-                        newVal = parseInt(oldValue) - 1;
-                        $('[data-dir=up]').addClass('btn-outline-dark').removeClass('btn-outline-secondary');
-                    } else {
-                        newVal = 1;
-                        $('[data-dir=dwn]').addClass('btn-outline-secondary').removeClass('btn-outline-dark');
-                    }
-                }
-                btn.closest('.number-spinner').find('input').val(newVal);
-            });
-        };
+        $(document).on('click', '.p-quantity button', function () { 
+        var btn = $(this),
+            qid=$(this).closest('.p-quantity').find('input').attr('class').split(/\s+/)[2];
+            oldValue = $('input.'+qid).val().trim(),
+            input = $('input.'+qid),
+            newVal = 0;
+            if (btn.attr('data-dir') == 'up') {            
+                (oldValue < input.attr('max')) ? (newVal = parseInt(oldValue) + 1) : (newVal = input.val());
+            } else {
+                (oldValue > 1) ? (newVal = parseInt(oldValue) - 1) : (newVal = 1);
+            }
+            input.val(newVal);
+        });
 
         /* products-detail href nav-tag TOP */        
         function ScrollTo(id_name) {
