@@ -42,6 +42,11 @@ body.is-open-country .country-box {
   padding-right: 0; 
   padding-left: 0; 
 }
+input[type='date'] {
+  display: block;
+  text-align: right;
+  text-align: -webkit-right;
+}
 
 /* Center middle & center-v vertically */
 .center{
@@ -115,6 +120,7 @@ body.is-open-country .country-box {
       border: 4px solid #fff;
       border-radius: 1em;
       height: 84px;
+      max-width: 84px;
       text-align: center;
       img{
         height: 2.5em;
@@ -141,6 +147,7 @@ body.is-open-country .country-box {
       border: 3px solid #fff;
       border-radius: 1em;
       height: 70px;
+      max-width: 70px;
       text-align: center;
       img{
         height: 2.6em;
@@ -164,6 +171,7 @@ body.is-open-country .country-box {
       border: 3px solid #fff;
       border-radius: 1em;
       height: 60px;
+      max-width: 60px;
       text-align: center;
       img{
         height: 2.5em;
@@ -608,6 +616,10 @@ body.is-open-country .country-box {
     color: $blue-dark;
     font-size: .8em;
   }
+}
+.setting{  
+  width: 100%;
+  background-color: #fff;
 }
 .setting.edit-mode {
   .close-btn {
@@ -1477,6 +1489,7 @@ body.is-open-country .country-box {
 }
 .f-right{
   float: right;
+  line-height: 3em;
 }
 footer.for-pc object{
   vertical-align: middle;
@@ -2549,7 +2562,7 @@ td.linebt-td,
       button.active {
         color: $index-default;
         font-size: 0.9em;
-        font-weight: bold;        
+        font-weight: bold;  
       }
     }
   }
@@ -2579,6 +2592,14 @@ td.linebt-td,
     &.active{
       color: $index-default;
     }
+    .active {
+      color: $index-default;
+      font-size: 0.9em;
+      font-weight: bold;  
+      .material-icons{
+        color: #212529;
+      }
+    }
   }
   .open-page-ul li a:not(.active){
     color: #212529;
@@ -2588,6 +2609,9 @@ td.linebt-td,
     color: $index-default;
     font-size: 0.9em;
     font-weight: bold;
+    .material-icons{
+      color: #212529;
+    }
   }
   .open-page-ul img{
     height: 2em;
@@ -2624,7 +2648,7 @@ button.open-page {
 .filter-main{
   height: 100%;
   overflow: auto;
-  min-height: 65vh;
+  min-height: 67vh;
 }
 .filter-content {
   position: absolute;
@@ -2657,7 +2681,12 @@ button.open-page {
       line-height: 3em;
       font-size: 0.9em;
       font-weight: 400;
-      border-top: 1px #C4C2C2 solid;       
+      border-top: 1px #C4C2C2 solid;      
+      .active{
+        color: $index-default;
+        font-size: 0.9em;
+        font-weight: bold;
+    } 
   }
   .open-page-ul li a:not(.active){
       color: #212529;
@@ -2759,7 +2788,9 @@ button.open-page {
 }
 
 /* add favorite */
-.back-go, .add-favorite {
+.back-go, 
+.add-favorite, 
+.del-favorite {
   padding: .5em;
   button{
     background-color: rgba(0,0,0, 0.2);
@@ -2770,6 +2801,7 @@ button.open-page {
     i{
       font-size: 1.5m;
       display: flex;
+      padding-right: 0px;
       justify-content: center;
       color: rgba(255,255,255, 0.8);
     }  
@@ -2778,6 +2810,9 @@ button.open-page {
       i{
         font-size: 1.5em;        
         display: flex;
+        position: absolute;
+        top:11px;
+        right: 25px;
         justify-content: center;
         color: rgba(244, 36, 106, 1);
       }

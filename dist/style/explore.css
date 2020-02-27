@@ -551,6 +551,12 @@ button.active {
   border-top: 1px #C4C2C2 solid;
 }
 
+.explore-container .explore-filter-content .open-page-ul li .active {
+  color: #FD5F00;
+  font-size: 0.9em;
+  font-weight: bold;
+}
+
 .explore-container .explore-filter-content .open-page-ul li a:not(.active) {
   color: #212529;
   font-size: 0.9em;

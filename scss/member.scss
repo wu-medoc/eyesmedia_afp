@@ -562,7 +562,10 @@ input[type="file"] {
 }
 // myfavorite
 .favorite-explore{
-    padding: 15px;    
+    padding: 15px;  
+    a.d-flex{
+        color: $blue-dark;
+    }   
     a.item-explore {
         border-bottom: 1px #eee solid;
         color: $explore-default;
@@ -884,3 +887,6 @@ img.coinimg-m{
     width: 90%;
   }
 
+.mysetting{
+    height: 100vh;
+}

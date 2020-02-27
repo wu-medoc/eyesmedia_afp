@@ -148,7 +148,12 @@ button.active{
             line-height: 3em;
             font-size: 0.9em;
             font-weight: 400;
-            border-top: 1px #C4C2C2 solid;       
+            border-top: 1px #C4C2C2 solid;     
+            .active{
+                color: $index-default;
+                font-size: 0.9em;
+                font-weight: bold;
+            }  
         }
         .open-page-ul li a:not(.active){
             color: #212529;

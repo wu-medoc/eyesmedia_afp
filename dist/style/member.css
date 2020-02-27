@@ -703,6 +703,10 @@ input[type="file"] {
   padding: 15px;
 }
 
+.favorite-explore a.d-flex {
+  color: #182B56;
+}
+
 .favorite-explore a.item-explore {
   border-bottom: 1px #eee solid;
   color: #182B56;
@@ -1089,5 +1093,9 @@ img.coinimg-m {
 
 .w-90 {
   width: 90%;
+}
+
+.mysetting {
+  height: 100vh;
 }
 /*# sourceMappingURL=member.css.map */
