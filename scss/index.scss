@@ -2591,9 +2591,6 @@ td.linebt-td,
     color: #212529;
     &.active{
       color: $index-default;
-    }
-    .active {
-      color: $index-default;
       font-size: 0.9em;
       font-weight: bold;  
       .material-icons{

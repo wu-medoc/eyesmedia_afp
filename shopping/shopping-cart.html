@@ -368,11 +368,21 @@
 
 
         //begin check all & Subtotal 
-        var subtotal = 0;
+        var subtotal = parseInt($('.price-subtotal').attr('value'));
         var sid = 0;
-        $('.price-asking.chk').each(function() {
-            subtotal += parseInt($(this).attr('value'));
-        });
+        if($('.price-asking.chk').length==$('.price-asking').length) { 
+            $('input#checkedall').attr('checked',true);
+            $('.price-asking.chk').each(function() {
+                subtotal += parseInt($(this).attr('value'));
+            });
+        };
+        if($('.price-asking.chk').length==0){
+            $('input#checkedall').attr('checked',false);
+            $("input[type='checkbox']").each(function() {
+                $(this).attr('checked',false);
+            });
+            subtotal =0;
+        }
         sumtotal(subtotal);
 
         //stroe Subtotal
@@ -412,7 +422,7 @@
             if(nochklen==chklen){
                 $('input#'+sid).attr('checked',true); 
             }
-            //$('.addheight').last().html(alllen+','+allchklen+','+chklen+','+nochklen+','+parentlen+','+ sid);
+            $('.addheight').last().html(alllen+','+allchklen+','+chklen+','+nochklen+','+parentlen+','+ sid);
         });
          
         //stroe parent Subtotal
@@ -420,9 +430,9 @@
             // all checked
             var chkid = $(this)[0].id;
             $this = this;  
-            $.each($(this).parents('ul').find('input.'+chkid), function(i, item){
-            $(item).prop('checked', $this.checked);
-            });
+            // $.each($(this).parents('ul').find('input.'+chkid), function(i, item){
+            // $(item).prop('checked', $this.checked);
+            // });
             if(chkid=='checkedall'){
                 subtotal =0;
                 if($(this).is(':checked')){
@@ -538,7 +548,7 @@
 
         //total display
         function sumtotal(e){
-            $('.price-subtotal').text('$'+formatPrice(e));
+            $('.price-subtotal').text('$'+formatPrice(e)).attr('value',e);
         }
 
         //footer coupon

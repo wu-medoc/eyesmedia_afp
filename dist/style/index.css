@@ -2853,17 +2853,12 @@ td.linebt-td,
 #open-pagebox1 .open-page-ul li.active,
 #open-pagebox .open-page-ul li.active {
   color: #FD5F00;
-}
-
-#open-pagebox1 .open-page-ul li .active,
-#open-pagebox .open-page-ul li .active {
-  color: #FD5F00;
   font-size: 0.9em;
   font-weight: bold;
 }
 
-#open-pagebox1 .open-page-ul li .active .material-icons,
-#open-pagebox .open-page-ul li .active .material-icons {
+#open-pagebox1 .open-page-ul li.active .material-icons,
+#open-pagebox .open-page-ul li.active .material-icons {
   color: #212529;
 }
 
