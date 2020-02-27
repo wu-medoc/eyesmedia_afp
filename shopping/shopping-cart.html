@@ -61,7 +61,7 @@
                         </label>
                     </div>
                     <div class="w-50 text-right p-1">
-                         <button type="button" class="btn modifybtn text-info" value="store0">
+                         <button type="button" class="btn modifybtn text-info store0" value="store0">
                             編輯全部
                         </button>
                     </div>
@@ -304,11 +304,11 @@
         <div class="fixed-bottom container">        
             <div class="row subtotal-info">
                 <div class="col-8 col-lg-9 text-right">
-                    <small>小計</small><span class="price-subtotal" value="0">$ 0</span>
+                    <small>小計</small><span class="price-subtotal" value="142600">$ 142,600</span>
                     <p class="small text-secondary">未含運費</p>
                 </div>
                 <div class="col-4 col-lg-3 pl-0">
-                     <button type="button" class="btn onlineshopping-btn mt-2 py-1 w-100 cart-next" onclick="location.href='shopping-discount.html'">下一步</button>
+                     <button type="button" class="btn onlineshopping-btn mt-2 py-1 w-100 cart-next btnext" onclick="location.href='shopping-discount.html'">下一步</button>
                 </div>
             </div>
         </div>
@@ -368,22 +368,17 @@
 
 
         //begin check all & Subtotal 
-        var subtotal = parseInt($('.price-subtotal').attr('value'));
+        var subtotal = 0;
         var sid = 0;
-        if($('.price-asking.chk').length==$('.price-asking').length) { 
-            $('input#checkedall').attr('checked',true);
+        $(document).ready(function(){
+            $('input[type=checkbox]').prop('checked',true);
             $('.price-asking.chk').each(function() {
                 subtotal += parseInt($(this).attr('value'));
-            });
-        };
-        if($('.price-asking.chk').length==0){
-            $('input#checkedall').attr('checked',false);
-            $("input[type='checkbox']").each(function() {
-                $(this).attr('checked',false);
-            });
-            subtotal =0;
-        }
-        sumtotal(subtotal);
+            }); 
+            sumtotal(subtotal);
+            $('button.btnext').removeAttr("disabled");  
+        });
+
 
         //stroe Subtotal
         $('input.store01-all, input.store02-all').click(function(){
@@ -405,22 +400,19 @@
             chklen = $('.'+sid+'.price-asking.chk').length,
             nochklen = $('.'+sid+'.price-asking').length,
             parentlen = $('.store-chk').length,
-            asking = $('.price-asking'),
-            stroeask = $('.'+sid+'.price-asking'),
-            stroeaskchk = $('.'+sid+'.price-asking.chk');
-            stroeasknochk = $('.'+sid+'.price-asking');
+            asking = $('.price-asking');
             if(alllen==allchklen){
-                $('input#checkedall').attr('checked',true);  
+                $('input#checkedall').prop('checked',true);  
             }
-            if(alllen>allchklen){
-                $('input#'+sid).attr('checked',false);    
+            if(alllen>allchklen || chklen==0){
+                $('input#'+sid).prop('checked',false);    
             }
             if(nochklen>chklen){
-                $('input#'+sid).attr('checked',false);     
-                $('input#checkedall').attr('checked',false);             
+                $('input#'+sid).prop('checked',false);     
+                $('input#checkedall').prop('checked',false);             
             }
             if(nochklen==chklen){
-                $('input#'+sid).attr('checked',true); 
+                $('input#'+sid).prop('checked',true); 
             }
             $('.addheight').last().html(alllen+','+allchklen+','+chklen+','+nochklen+','+parentlen+','+ sid);
         });
@@ -430,9 +422,9 @@
             // all checked
             var chkid = $(this)[0].id;
             $this = this;  
-            // $.each($(this).parents('ul').find('input.'+chkid), function(i, item){
-            // $(item).prop('checked', $this.checked);
-            // });
+            $.each($(this).parents('ul').find('input.'+chkid), function(i, item){
+                $(item).prop('checked', $this.checked);
+            });
             if(chkid=='checkedall'){
                 subtotal =0;
                 if($(this).is(':checked')){
@@ -443,7 +435,6 @@
                     $('.price-asking').removeClass('chk');
                 }
             }else{
-                //if($('#checkedall').is(':checked')){$('#checkedall').prop('checked', $this.checked);}
                 if($(this).is(':checked')){
                     $('.'+chkid+'.price-asking').addClass('chk');
                     subtotal = pask(chkid);
@@ -518,7 +509,7 @@
             if( (storebnval=='ok')){
                 if(modifybtnlen=='1'){
                     $(this).hide();
-                    $('.shopping-cartlist').html("<div class='d-flex flex-column justify-content-center align-items-center' style='height:300px'><p class='p-2 w-100 text-center'>喔喔！購物車內沒有商品</p><button type='button' class='btn onlineshopping-btn m-2 w-75 cart-next' onclick='location.href=index.html'>馬上去逛逛</button></div>");
+                    $('.shopping-cartlist').html("<div class='d-flex flex-column justify-content-center align-items-center' style='height:300px'><p class='p-2 w-100 text-center'>喔喔！購物車內沒有商品</p><button type='button' class='btn onlineshopping-btn m-2 w-75 cart-next' onclick='javascript:location.href=\"index.html\"'>馬上去逛逛</button></div>");
                 }else{
                     $(this).text('編輯全部').val('store0'); 
                     $('.modifybtn').not($(this)).text('編輯');
@@ -542,6 +533,13 @@
                     sumtotal(subtotal);
                 }
                 $(this).parents('li').remove();
+                if($('button[value='+storebnval+']').length==1){                    
+                    $('form#'+storebnval).remove();
+                    if($('button.modifybtn').length==1){
+                        $('button.store0').text('完成').val('ok');
+                        $('button.btnext').attr('disabled','disabled');                        
+                    }
+                }
             });
 
         });
