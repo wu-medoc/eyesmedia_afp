@@ -31,7 +31,7 @@
             <div class="header-secondary linebt-row">
                 <div class="row">
                     <div class="col-3">
-                        <div class="close-btn">
+                        <div class="close-btn" onclick="history.back()">
                             <i class="material-icons">&#xE314;</i>
                         </div>
                     </div>
@@ -45,66 +45,197 @@
             </div>
         </header>
 
-        <main>        
-            <div class="add-address-list">
-                <ul>
-                    <li>
-                        <div class="item">姓名/公司名稱</div>
-                        <div class="item auto-left">
-                            <input type="text" placeholder="請輸入">
+        <form>
+            <main>        
+                <div class="add-address-list">
+                    <ul>
+                        <li class="index-flex">
+                            <div class="item one">姓名/公司名稱</div>
+                            <div class="item two auto-left">
+                                <input type="text" class="form-control" id="validationDefault01" placeholder="請輸入" required>
+                            </div>
+                        </li>
+                        <li class="index-flex">
+                            <div class="item one">手機號碼</div>
+                            <div class="item two auto-left">
+                                <input type="tel" class="form-control" id="validationDefault02" placeholder="請輸入" required>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="item">城市</div>
+                            <div class="item auto-left" onclick="callsortLayer('.city');">
+                                臺北市<i class="material-icons">&#xE315;</i>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="item">行政區</div>
+                            <div class="item auto-left" onclick="callsortLayer('.dist');">
+                                中山區<i class="material-icons">&#xE315;</i>
+                            </div>
+                        </li>
+                        <li class="index-flex">
+                            <div class="item one">郵遞區號</div>
+                            <div class="item two auto-left">
+                                <input type="number" value="106" id="validationDefault05" required>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="item">詳細地址<small>里道路或街名，巷弄號</small></div>
+                            <div class="item w100 auto-left">
+                                <input type="text" placeholder="請輸入地址" id="validationDefault06" required>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="default-setting index-flex note-box">
+                        <div class="item">
+                            設定為預設地址
                         </div>
-                    </li>
-                    <li>
-                        <div class="item">手機號碼</div>
-                        <div class="item auto-left">
-                            <input type="text" placeholder="請輸入">
-                        </div>
-                    </li>
-                    <li>
-                        <div class="item">城市</div>
-                        <div class="item auto-left">
-                            <span class="place">台北市</span><i class="material-icons">&#xE315;</i>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="item">行政區</div>
-                        <div class="item auto-left">
-                            <span class="place">大安區</span><i class="material-icons">&#xE315;</i>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="item">郵遞區號</div>
-                        <div class="item auto-left">
-                            106
-                        </div>
-                    </li>
-                    <li>
-                        <div class="item">詳細地址<small>里道路或街名，巷弄號</small></div>
-                        <div class="item w100 auto-left">
-                            <input type="text" placeholder="請輸入地址">
-                        </div>
-                    </li>
-                </ul>
-                <div class="default-setting">
-                    <div class="item">
-                        設定為預設地址
-                    </div>
-                    <div class="item auto-left item-checkbox">
-                        <div class="sitem-checkbox">
-                            <div class="checkbox checkbox-primary">
-                                <input id="products002" type="checkbox" class="checkedall">
-                                <label for="products002"></label>  
-                            </div>  
+                        <div class="item auto-left item-checkbox">
+                            <div class="sitem-checkbox text-right">
+                                <div class="checkbox checkbox-primary">
+                                    <input id="products002" type="checkbox" checked>
+                                    <label for="products002"></label>  
+                                </div>  
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </main>
+            </main>
 
-        <footer class="success-mode">
-            <button class="btn-ok">完成</button>
-        </footer>
-    
+            <footer class="success-mode container">
+                <button type="submit" class="btn-ok">完成</button>
+            </footer>
+        </form>
+        <div class="sortlayer">
+            <div class="city">
+                <div id="open-pagebox">
+                    <div class="open-page-title flex-inline-between">
+                        <div class="title-icon">
+                            <button class="btn" onclick="backsortLayer();">
+                                <i class="material-icons">&#xE314;</i>
+                            </button>
+                        </div>
+                        <div class="title-txt">
+                            城市
+                        </div>
+                        <div class="title-txt">
+                        </div>
+                    </div>
+                    <ul class="open-page-ul">
+                        <label>北北基宜</label>
+                        <li class="flex-inline-between active" onclick="callsortLayer('.dist');">
+                            <div class="item">
+                                臺北市
+                            </div>
+                            <div class="item">
+                                <i class="fas fa-check"></i>
+                            </div>    
+                        </li>
+                        <li class="flex-inline-between" onclick="callsortLayer('.dist');">
+                            <div class="item">
+                                新北市
+                            </div>
+                            <div class="item">
+                                <i class="fas fa-check"></i>
+                            </div>    
+                        </li>
+                        <li class="flex-inline-between" onclick="callsortLayer('.dist');">
+                            <div class="item">
+                                基隆市
+                            </div>
+                            <div class="item">
+                                <i class="fas fa-check"></i>
+                            </div>    
+                        </li>
+                        <li class="flex-inline-between" onclick="callsortLayer('.dist');">
+                            <div class="item">
+                                宜蘭縣
+                            </div>
+                            <div class="item">
+                                <i class="fas fa-check"></i>
+                            </div>    
+                        </li>
+                        <label>桃竹苗</label>
+                        <li class="flex-inline-between" onclick="callsortLayer('.dist');">
+                            <div class="item">
+                                桃園市
+                            </div>
+                            <div class="item">
+                                <i class="fas fa-check"></i>
+                            </div>    
+                        </li>
+                        <li class="flex-inline-between" onclick="callsortLayer('.dist');">
+                            <div class="item">
+                                新竹市
+                            </div>
+                            <div class="item">
+                                <i class="fas fa-check"></i>
+                            </div>    
+                        </li>
+                        <li class="flex-inline-between" onclick="callsortLayer('.dist');">
+                            <div class="item">
+                                新竹縣
+                            </div>
+                            <div class="item">
+                                <i class="fas fa-check"></i>
+                            </div>    
+                        </li>
+                        <li class="flex-inline-between" onclick="callsortLayer('.dist');">
+                            <div class="item">
+                                苗栗縣
+                            </div>
+                            <div class="item">
+                                <i class="fas fa-check"></i>
+                            </div>    
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+            <div class="dist">
+                <div id="open-pagebox1">
+                    <div class="open-page-title flex-inline-between">                
+                        <div class="close-btn">
+                            <button class="btn" onclick="backsortLayer();">
+                                <i class="material-icons">&#xE314;</i>
+                            </button>
+                        </div>
+                        <div class="title-txt">
+                            行政區
+                        </div>
+                        <div class="title-txt">
+                        </div>
+                    </div>
+                    <ul class="open-page-ul">
+                        <li class="flex-inline-between active" onclick="backsortLayer()">
+                            <div class="item">
+                                中山區
+                            </div>
+                            <div class="item">
+                                <i class="fas fa-check"></i>
+                            </div>    
+                        </li>
+                        <li class="flex-inline-between" onclick="backsortLayer()">
+                            <div class="item">
+                                松山區
+                            </div>
+                            <div class="item">
+                                <i class="fas fa-check"></i>
+                            </div>    
+                        </li>
+                        <li class="flex-inline-between" onclick="backsortLayer()">
+                            <div class="item">
+                                士林區
+                            </div>
+                            <div class="item">
+                                <i class="fas fa-check"></i>
+                            </div>    
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div> 
+
     </div>
 
     <!-- Optional JavaScript -->
@@ -124,6 +255,38 @@
     <script src="../js/vendor/swiper/js/swiper.min.js"></script>
     <script src="../js/vendor/imgLiquid.js"></script>
     <script src="../js/masonry.pkgd.min.js"></script>
+
+    <!-- custom js -->
+    <script src="../js/animateCss.js"></script>
+    <script>  
+        //bootstrap validation
+        (function () {
+            "use strict";
+            window.addEventListener(
+                "load",
+                function () {
+                    // Fetch all the forms we want to apply custom Bootstrap validation styles to
+                    var forms = document.getElementsByClassName("needs-validation");
+                    // Loop over them and prevent submission
+                    var validation = Array.prototype.filter.call(forms, function (form) {
+                        form.addEventListener(
+                            "submit",
+                            function (event) {
+                                if (form.checkValidity() === false) {
+                                    event.preventDefault();
+                                    event.stopPropagation();
+                                }
+                                form.classList.add("was-validated");
+                            },
+                            false
+                        );
+                    });
+                },
+                false
+            );
+        })();
+    </script>
+    <script src="../js/index.js"></script>
 </body>
 
 </html>

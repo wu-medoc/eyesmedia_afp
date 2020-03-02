@@ -1699,6 +1699,9 @@ a {
             color: #FD5F00;
         }
     }
+    .auto-left{
+        margin-left: auto;
+    }
 }
 
 .address-list-box{
@@ -1736,6 +1739,7 @@ a {
         padding: 10px 15px;
         border-bottom: 1px #eee solid;
         input{
+            border: 0;
             width: 100%;
             text-align: right;
         }
@@ -1752,10 +1756,23 @@ a {
         .w100{
             flex: none;
             width: 100%;
+        }        
+        .auto-left{
+            margin-left: auto;
         }
     }
 }
 
+.note-box{    
+    border-top: 5px #f8f8f8 solid;
+    .note-item{
+        border-top: 1px $gray-light solid;
+        border-bottom: 1px $gray-light solid;
+        padding: 15px;
+        background-color: #fff;
+        font-size: 90%;
+    }
+}  
 .default-setting{
     display: flex;
     align-items: center;

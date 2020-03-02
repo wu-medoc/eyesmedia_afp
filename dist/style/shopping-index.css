@@ -1903,6 +1903,10 @@ a:hover {
   color: #FD5F00;
 }
 
+.is-choose-method .auto-left {
+  margin-left: auto;
+}
+
 .address-list-box li {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1948,6 +1952,7 @@ a:hover {
 }
 
 .add-address-list li input {
+  border: 0;
   width: 100%;
   text-align: right;
 }
@@ -1970,6 +1975,22 @@ a:hover {
       -ms-flex: none;
           flex: none;
   width: 100%;
+}
+
+.add-address-list li .auto-left {
+  margin-left: auto;
+}
+
+.note-box {
+  border-top: 5px #f8f8f8 solid;
+}
+
+.note-box .note-item {
+  border-top: 1px #eee solid;
+  border-bottom: 1px #eee solid;
+  padding: 15px;
+  background-color: #fff;
+  font-size: 90%;
 }
 
 .default-setting {

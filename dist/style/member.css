@@ -967,11 +967,11 @@ input[type="file"] {
   -moz-appearance: none;
   -webkit-appearance: none;
   background: url("/img/member/forward.svg") no-repeat right center transparent;
-  width: 100%;
+  width: 130px;
   border: none;
   border-bottom: 1px #eee solid;
   height: 2em;
-  padding: .25em 2em;
+  padding-left: 2em;
   color: #182B56;
 }
 

@@ -778,20 +778,20 @@ input[type="file"] {
     -moz-appearance:none;
     -webkit-appearance:none;  
     background: url("/img/member/forward.svg") no-repeat right center transparent;
-    width: 100%;
+    width: 130px;
     border: none;
     border-bottom: 1px #eee solid;
     height: 2em;
-    padding: .25em 2em;
+    padding-left: 2em;
     color:#182B56;
-  }
-  .member-select::-ms-expand { 
+}
+.member-select::-ms-expand { 
     display: none; 
-  }
-  .member-select:focus{
+}
+.member-select:focus{
     box-shadow: 0 0 5px 2px #eee;    
     border-radius: .25em;
-  }
+}
 
 .note-box{    
     border-top: 5px #f8f8f8 solid;

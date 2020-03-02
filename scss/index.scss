@@ -2605,6 +2605,12 @@ td.linebt-td,
       .material-icons{
         color: #212529;
       }
+      i{
+        visibility: visible;
+      }
+    }
+    i{
+      visibility: hidden;
     }
     .active{
       color: $index-default;
@@ -2696,7 +2702,8 @@ button.open-page {
       font-size: 0.9em;
       font-weight: 400;
       border-top: 1px #C4C2C2 solid;      
-      .active{
+      &.active,
+      .active {
         color: $index-default;
         font-size: 0.9em;
         font-weight: bold;
@@ -2716,6 +2723,14 @@ button.open-page {
   }
   &.is-open {
       display: block;
+  }
+  .active{
+    color: $index-default;
+    font-size: 0.9em;
+    font-weight: bold;  
+    .material-icons{
+      color: #212529;
+    }
   }
 }
 
@@ -2779,7 +2794,21 @@ button.open-page {
       transform: translateY(-50%);
   }
 }
-
+.left-line{
+  padding-left: 15px;
+  position: relative;
+  &:before{
+      content: '';
+      display: block;
+      position: absolute;
+      width: 1px;
+      height: 100%;
+      top: 50%;
+      left: 6px;
+      background-color: #ccc;
+      transform: translateY(-50%);
+  }
+}
 /* badge */
 .badge-img {
   position:relative;

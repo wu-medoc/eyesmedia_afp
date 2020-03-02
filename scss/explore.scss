@@ -149,6 +149,7 @@ button.active{
             font-size: 0.9em;
             font-weight: 400;
             border-top: 1px #C4C2C2 solid;     
+            &.active,
             .active{
                 color: $index-default;
                 font-size: 0.9em;
