@@ -1278,6 +1278,15 @@ input[type='date'] {
 .modal-content .popup-banner > img, 
 .popup-box .popup-banner > img {
   width: 100%;
+  @media (max-width: 767px) {
+    max-width: 767px;
+  }
+  @media (max-width: 480px) {
+    max-width: 480px;
+  }
+  @media (max-width: 320px) {
+    max-width: 320px;
+  }
 }
 
 .modal-content .popup-banner .logo-box, 

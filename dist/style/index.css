@@ -1378,6 +1378,27 @@ input[type='date'] {
   width: 100%;
 }
 
+@media (max-width: 767px) {
+  .modal-content .popup-banner > img,
+  .popup-box .popup-banner > img {
+    max-width: 767px;
+  }
+}
+
+@media (max-width: 480px) {
+  .modal-content .popup-banner > img,
+  .popup-box .popup-banner > img {
+    max-width: 480px;
+  }
+}
+
+@media (max-width: 320px) {
+  .modal-content .popup-banner > img,
+  .popup-box .popup-banner > img {
+    max-width: 320px;
+  }
+}
+
 .modal-content .popup-banner .logo-box,
 .popup-box .popup-banner .logo-box {
   width: 78px;
