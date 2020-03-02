@@ -1,0 +1,167 @@
+﻿<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=1, user-scalable=no">
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="js/vendor/bs4/css/bootstrap.min.css">
+    <link rel="stylesheet" href="js/vendor/jquery-editable-select-master/dist/jquery-editable-select.min.css">
+    <!-- owl.carousel core CSS -->
+    <link rel="stylesheet" href="js/vendor/owlcarousel/owlcarousel/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="js/vendor/owlcarousel/owlcarousel/assets/owl.theme.default.min.css">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+    <!-- vendor css -->
+    <link rel="stylesheet" href="js/vendor/swiper/css/swiper.min.css">
+    <!-- fontawesome css -->
+    <link rel="stylesheet" href="js/vendor/fontawesome/css/fontawesome.css">
+    <link rel="stylesheet" href="js/vendor/fontawesome/css/brands.css">
+    <link rel="stylesheet" href="js/vendor/fontawesome/css/solid.css">
+    <!-- custom css -->
+    <link rel="stylesheet" href="dist/style/css.min.css">
+    <link rel="stylesheet" href="dist/style/global.min.css">
+    <link rel="stylesheet" href="dist/style/index.min.css">
+    <link rel="stylesheet" href="dist/style/animate.min.css">
+    <title>eyemedia - afp</title>
+</head>
+
+<body>
+<div class="wrap container">
+        <!-- registered Modal -->
+        <div id="registeredModalCenter">
+            <div class="modal-full modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                </div>
+                <div class="popup-banner for-mobile">
+                    <button type="button" class="close close-btn" onclick="window.close();">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <img src="https://www.mobii.ai/img/index/login_banner.png" alt="">
+                    <div class="logo-box">
+                        <img src="https://www.mobii.ai/img/index/afp_logo_icon.svg" alt="">
+                    </div>
+                </div>
+                <div class="modal-body">              
+                <h5>會員註冊</h5>       
+                <div class="container px-3">
+                    <div class="login-method">
+                        <div class="method-item">
+                            <img src="https://www.mobii.ai/img/index/social/facebook.svg" alt="">
+                        </div>
+                        <div class="method-item">
+                            <img src="https://www.mobii.ai/img/index/social/line.svg" alt="">
+                        </div>
+                        <div class="method-item">
+                            <img src="https://www.mobii.ai/img/index/social/google.svg" alt="">
+                        </div>
+                        <div class="method-item">
+                            <img src="https://www.mobii.ai/img/index/social/wechat.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="line-middle">
+                        <div class="line-middle-middle-line">
+                            <span class="line-middle-line-text">或</span>
+                        </div>
+                    </div>
+                    <form id="registered-form">
+                        <ul class="nav nav-tabs justify-content-center" id="regTab" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link" id="email-tab" data-toggle="tab" href="#email" role="tab" aria-controls="email" aria-selected="false">電子信箱</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" id="phone-tab" data-toggle="tab" href="#phone" role="tab" aria-controls="phone" aria-selected="true">手機</a>
+                            </li>
+                        </ul>
+                        <div class="tab-content" id="regTabContent">
+                            <div class="tab-pane fade pt-4" id="email" role="tabpanel" aria-labelledby="email-tab">
+                                <div class="form-group linebt-row">
+                                    <input type="email" class="form-control w-100" id="registeredInputEmail" placeholder="電子信箱">
+                                </div>
+                            </div>
+                            <div class="tab-pane fade pt-4 show active" id="phone" role="tabpanel" aria-labelledby="phone-tab">
+                                <table class="form-group">
+                                    <tbody>
+                                        <tr>
+                                            <td width="25%" class="linebt-td">
+                                                    <select class="custom-select">
+                                                        <option value="+886">台灣 +886</option>
+                                                        <option value="86">中國大陸 86</option>
+                                                        <option value="856">香港 856</option>
+                                                    </select>
+                                                <!-- <select id="registeredSelectState" class="form-control registeredSelectState-btn">
+                                                    <option value="+886" selected>台灣 +886</option>
+                                                    <option value="86">中國大陸 86</option>
+                                                    <option value="856">香港 856</option>
+                                                </select> -->
+                                            </td>
+                                            <td width="5%"></td>
+                                            <td width="70%" class="linebt-td"><input type="tel" class="form-control" id="registeredInputPhone" placeholder="手機"></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="bg-white">
+                                <div class="form-inline text-left pl-2 checkbox checkbox-primary small">
+                                    <input type="checkbox" class="form-check-input" id="registeredCheck1">
+                                    <label class="form-check-label" for="registeredCheck1">我同意亞洲好玩卡的</label>
+                                    <a href='member/member_clause.html' target="_blank" class="font-bold text-secondary">
+                                        會員條款
+                                    </a>及                                                                   
+                                    <a href='member/member_private.html' target="_blank" class="font-bold text-secondary">
+                                        隱私政策
+                                    </a>
+                                </div>
+                                <button type="button" class="btn default-btn send-veri-code py-0" onclick="location.href='app-vcode.html'">
+                                    傳送驗證碼
+                                </button>
+                                <p class="text-left">
+                                    己經是會員了嗎?
+                                    <button type="button" class="btn btn-login px-0 font-bold " onclick="location.href='app-login.html'">
+                                        馬上登入
+                                    </button>
+                                </p>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                </div>
+            </div>
+            </div>
+        </div>  
+</div>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="js/vendor/bs4/js/jquery-3.2.1.slim.min.js"></script>
+    <!-- Latest compiled and minified JavaScript -->    
+    <script src="js/vendor/bs4/js/bootstrap.min.js"></script> 
+
+    <!-- owlcarousel JS -->
+    <script src="js/vendor/owlcarousel/vendors/jquery.min.js"></script>
+    <script src="js/vendor/owlcarousel/owlcarousel/owl.carousel.js"></script>
+    <script src="js/vendor/owlcarousel/vendors/highlight.js"></script>
+    <script src="js/vendor/owlcarousel/js/app.js"></script>   
+    <script src="js/vendor/jquery-editable-select-master/dist/jquery-editable-select.js"></script>
+
+    <!-- vendor js -->
+    <script src="js/vendor/swiper/js/swiper.min.js"></script>
+    <script src="js/vendor/imgLiquid.js"></script>
+
+    <!-- custom js -->
+    <script src="js/animateCss.js"></script>
+    <script>    
+        $("#loginhtml").load("login.html");
+    </script>
+    <script src="js/index.js"></script>
+    
+</body>
+
+</html>

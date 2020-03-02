@@ -2606,6 +2606,14 @@ td.linebt-td,
         color: #212529;
       }
     }
+    .active{
+      color: $index-default;
+      font-size: 0.9em;
+      font-weight: bold;  
+      .material-icons{
+        color: #212529;
+      }
+    }
   }
   .open-page-ul li a:not(.active){
     color: #212529;

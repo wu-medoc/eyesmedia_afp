@@ -2883,6 +2883,18 @@ td.linebt-td,
   color: #212529;
 }
 
+#open-pagebox1 .open-page-ul li .active,
+#open-pagebox .open-page-ul li .active {
+  color: #FD5F00;
+  font-size: 0.9em;
+  font-weight: bold;
+}
+
+#open-pagebox1 .open-page-ul li .active .material-icons,
+#open-pagebox .open-page-ul li .active .material-icons {
+  color: #212529;
+}
+
 #open-pagebox1 .open-page-ul li a:not(.active),
 #open-pagebox .open-page-ul li a:not(.active) {
   color: #212529;

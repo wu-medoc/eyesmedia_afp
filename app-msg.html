@@ -1,0 +1,181 @@
+﻿<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=1, user-scalable=no">
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="js/vendor/bs4/css/bootstrap.min.css">
+    <link rel="stylesheet" href="js/vendor/jquery-editable-select-master/dist/jquery-editable-select.min.css">
+    <!-- owl.carousel core CSS -->
+    <link rel="stylesheet" href="js/vendor/owlcarousel/owlcarousel/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="js/vendor/owlcarousel/owlcarousel/assets/owl.theme.default.min.css">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+    <!-- vendor css -->
+    <link rel="stylesheet" href="js/vendor/swiper/css/swiper.min.css">
+    <!-- fontawesome css -->
+    <link rel="stylesheet" href="js/vendor/fontawesome/css/fontawesome.css">
+    <link rel="stylesheet" href="js/vendor/fontawesome/css/brands.css">
+    <link rel="stylesheet" href="js/vendor/fontawesome/css/solid.css">
+    <!-- custom css -->
+    <link rel="stylesheet" href="dist/style/css.min.css">
+    <link rel="stylesheet" href="dist/style/global.min.css">
+    <link rel="stylesheet" href="dist/style/index.min.css">
+    <link rel="stylesheet" href="dist/style/animate.min.css">
+    <title>eyemedia - afp</title>
+</head>
+
+<body>
+<div class="wrap container">
+        <!-- message Modal -->
+        <div id="messageModal-app">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header" onclick="window.close();">
+                </div>
+                <button type="button" class="close text-right" onclick="window.close();">
+                    <span aria-hidden="true">&times;&ensp;</span>
+                </button>
+                <div class="modal-body">
+                    <div id="msg-loginok" class="pb-5">註冊成功, 歡迎加入亞洲好玩卡!</div>
+                    <div id="msg-loginerror" class="pb-5">登入失敗, 輸入的帳號密碼有誤, 請重新輸入!</div>
+                    <div id="msg-psw">
+                        <div class="p-2 mb-4">
+                            新密碼已設定完成
+                        </div>
+                        <div class="text-center bg-light border-t py-2">
+                            <button type="button" class="btn btn-login font-bold px-0 w-100" data-toggle="modal" data-target="#loginModalCenter" data-dismiss="modal">
+                                重新登入
+                            </button>
+                        </div>
+                    </div>
+                    <div id="msg-noselected">
+                        <div class="p-2 mb-4">
+                            規格或數量尚未選擇喔
+                        </div>
+                        <div class="text-center bg-light border-t py-2">
+                            <button type="button" class="btn btn-login font-bold w-100 masklayer-close"  onclick="window.close();">
+                                確定
+                            </button>
+                        </div>
+                    </div>
+                    <div id="msg-myaddressdelete">
+                        <div class="p-2 mb-4">
+                            是否確定要刪除此地址
+                        </div>                     
+                        <div class="d-flex justify-content-center text-center bg-light border-t py-2">
+                            <button type="button" class="btn btn-login font-bold w-100 masklayer-close"  onclick="window.close();">
+                                取消
+                            </button>
+                            <button type="button" class="btn btn-login font-bold left-mline w-100 masklayer-close"  onclick="window.close();">
+                                確定
+                            </button>
+                        </div>
+                    </div>
+                    <div id="msg-mysocialbind">
+                        <div class="p-2 mb-4">
+                            已綁定   
+                        </div>
+                        <div class="text-center bg-light border-t py-2">
+                            <button type="button" class="btn btn-login font-bold w-100 masklayer-close"  onclick="window.close();">
+                                確定
+                            </button>
+                        </div>
+                    </div>
+                    <div id="msg-mysocialremove">
+                        <div class="p-2 mb-4">
+                            是否確定要解除綁定
+                        </div>                        
+                        <div class="d-flex justify-content-center text-center bg-light border-t py-2">
+                            <button type="button" class="btn btn-login font-bold w-100 masklayer-close"  onclick="window.close();">
+                                取消
+                            </button>
+                            <button type="button" class="btn btn-login font-bold left-mline w-100 masklayer-close"  onclick="window.close();">
+                                確定
+                            </button>
+                        </div>
+                    </div>
+                    <div id="msg-mycard">
+                        <div class="p-2 mb-4">
+                            成功加入卡片<br>
+                            此卡號不存在<br>
+                            此卡號已被綁定，請確認您的卡號重新輸入。<br>
+                            修改完成<br>
+                            是否確定解除此會員卡<br>
+                        </div>
+                        <div class="d-flex justify-content-center text-center bg-light border-t py-2">
+                            <button type="button" class="btn btn-login font-bold w-100 masklayer-close"  onclick="window.close();">
+                                取消
+                            </button>
+                            <button type="button" class="btn btn-login font-bold left-mline w-100 masklayer-close"  onclick="window.close();">
+                                確定
+                            </button>
+                        </div>
+                    </div>
+                    <div id="msg-mydiscount">
+                        <div class="p-2 mb-4">
+                            <h5 class="pt-0">新增優惠</h5>
+                            <p>輸入優惠碼新增優惠券</p>
+                            <input type="text" placeholder="輸入優惠碼">
+                        </div>
+                        <div class="d-flex justify-content-center text-center bg-light border-t py-2">
+                            <button type="button" class="btn btn-login font-bold w-100"  onclick="window.close();">
+                                取消
+                            </button>
+                            <button type="button" class="btn btn-login font-bold left-mline w-100" onclick="msg_sub('#msg-mydiscount-add');" data-toggle="modal" data-target="#msg-mydiscount-add">
+                                新增
+                            </button>
+                        </div>
+                    </div>
+                    <div id="msg-mydiscount-add">
+                        <div class="p-2 mb-4">
+                            <p>優惠券新增成功！</p>
+                            <p>新增失敗！優惠碼不存在</p>
+                            <p>新增失敗，會員資格不符！</p>
+                        </div>
+                        <div class="d-flex justify-content-center text-center bg-light border-t py-2">
+                            <button type="button" class="btn btn-login font-bold w-100 masklayer-close"  onclick="window.close();">
+                               確定
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+</div>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="js/vendor/bs4/js/jquery-3.2.1.slim.min.js"></script>
+    <!-- Latest compiled and minified JavaScript -->    
+    <script src="js/vendor/bs4/js/bootstrap.min.js"></script> 
+
+    <!-- owlcarousel JS -->
+    <script src="js/vendor/owlcarousel/vendors/jquery.min.js"></script>
+    <script src="js/vendor/owlcarousel/owlcarousel/owl.carousel.js"></script>
+    <script src="js/vendor/owlcarousel/vendors/highlight.js"></script>
+    <script src="js/vendor/owlcarousel/js/app.js"></script>   
+    <script src="js/vendor/jquery-editable-select-master/dist/jquery-editable-select.js"></script>
+
+    <!-- vendor js -->
+    <script src="js/vendor/swiper/js/swiper.min.js"></script>
+    <script src="js/vendor/imgLiquid.js"></script>
+
+    <!-- custom js -->
+    <script src="js/animateCss.js"></script>
+    <script>    
+        $("#loginhtml").load("login.html");
+    </script>
+    <script src="js/index.js"></script>
+    
+</body>
+
+</html>
