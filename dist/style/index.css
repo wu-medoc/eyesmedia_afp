@@ -220,6 +220,12 @@ input[type='date'] {
   max-height: 60px;
 }
 
+.top-goback {
+  position: absolute;
+  z-index: 2;
+  padding: .5em;
+}
+
 .kv-box {
   width: 100%;
   margin: 0 auto;
@@ -293,10 +299,6 @@ input[type='date'] {
 .kv-box .kv-top .top-item.climate small {
   display: block;
   font-weight: normal;
-}
-
-.kv-box .kv-top .top-item.climate img {
-  max-height: 20px;
 }
 
 @media screen and (min-width: 768px) {
@@ -497,7 +499,7 @@ input[type='date'] {
 
 .kv-box .kv-top .top-item.more-horiz .drop-menu ul button img,
 .kv-box .kv-top .top-item.more-horiz .drop-menu ul a img {
-  width: 20px;
+  width: 24px;
   margin-right: 5px;
   vertical-align: middle;
 }
@@ -2704,6 +2706,18 @@ td.linebt-td,
   font-size: 80%;
 }
 
+.h20 {
+  height: 20px;
+}
+
+.h38 {
+  height: 38px;
+}
+
+.h50 {
+  height: 50px;
+}
+
 /* color ui */
 .bg-cardfooter {
   color: #fff;
@@ -3225,32 +3239,45 @@ button.open-page img {
   height: auto;
   color: #fff;
   top: 50%;
-  right: 1%;
-  transform: translate(-50%, -65%);
-  -webkit-transform: translate(-50%, -65%);
+  right: 0;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
 }
 
-@media (min-width: 481px) {
+@media (max-width: 767px) {
   .item-favorite {
-    top: 54%;
+    top: 48%;
   }
 }
 
 @media (max-width: 480px) {
   .item-favorite {
-    top: 38%;
+    top: 42%;
   }
 }
 
 @media (max-width: 375px) {
   .item-favorite {
-    top: 35%;
+    top: 38%;
   }
 }
 
 @media (max-width: 320px) {
   .item-favorite {
-    top: 30%;
+    top: 36%;
+    right: -5px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .item-favorite {
+    top: 58%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .item-favorite {
+    top: 56%;
   }
 }
 
