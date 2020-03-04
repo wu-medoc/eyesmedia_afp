@@ -203,6 +203,7 @@ input[type='date'] {
 }
 .top-item.logo img{
   padding-bottom: 10px;
+  max-height: 60px;
 }
 
 .kv-box {
@@ -272,6 +273,9 @@ input[type='date'] {
   small {
     display: block;
     font-weight: normal;
+  }
+  img {
+    max-height: 20px;
   }
 }
 @media screen and (min-width: 768px) {
@@ -725,7 +729,7 @@ input[type='date'] {
     display: -ms-flexbox;
     display: flex;
     flex-wrap: wrap;
-    //margin: 0 10px;
+    padding: 7px;
     img {
       width: 30px;
     }  
@@ -1500,8 +1504,10 @@ input[type='date'] {
   float: right;
   line-height: 3em;
 }
-footer.for-pc object{
+footer.for-pc img.logo-s{
+  margin-top: .25em;
   vertical-align: middle;
+  max-height: 30px;
 }
 
 footer.for-pc ul{  
@@ -2876,6 +2882,9 @@ button.open-page {
   }
   @media (max-width: 375px) {
     top: 35%;
+  }
+  @media (max-width: 320px) {
+    top: 30%;
   }
   transform: translate(-50%, -65%);
   -webkit-transform: translate(-50%, -65%);

@@ -217,6 +217,7 @@ input[type='date'] {
 
 .top-item.logo img {
   padding-bottom: 10px;
+  max-height: 60px;
 }
 
 .kv-box {
@@ -292,6 +293,10 @@ input[type='date'] {
 .kv-box .kv-top .top-item.climate small {
   display: block;
   font-weight: normal;
+}
+
+.kv-box .kv-top .top-item.climate img {
+  max-height: 20px;
 }
 
 @media screen and (min-width: 768px) {
@@ -806,6 +811,7 @@ input[type='date'] {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  padding: 7px;
 }
 
 .setting .service-box .service-title .title-box img {
@@ -1614,8 +1620,10 @@ input[type='date'] {
   line-height: 3em;
 }
 
-footer.for-pc object {
+footer.for-pc img.logo-s {
+  margin-top: .25em;
   vertical-align: middle;
+  max-height: 30px;
 }
 
 footer.for-pc ul {
@@ -3237,6 +3245,12 @@ button.open-page img {
 @media (max-width: 375px) {
   .item-favorite {
     top: 35%;
+  }
+}
+
+@media (max-width: 320px) {
+  .item-favorite {
+    top: 30%;
   }
 }
 
