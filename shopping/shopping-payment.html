@@ -31,12 +31,12 @@
             <div class="header-secondary linebt-row">
                 <div class="row">
                     <div class="col-3">
-                        <div class="close-btn">
+                        <div class="close-btn" onclick="history.back();" data-toggle="tooltip" data-placement="bottom" title="回上一頁">
                             <i class="material-icons">&#xE314;</i>
                         </div>
                     </div>
                     <div class="col-6 text-center">
-                        <div class="title-name fs-16">電子發票</div>
+                        <div class="title-name fs-16">付款方式</div>
                     </div>
                     <div class="col-3 text-right">
                         <div class="close-btn"></div>
@@ -45,61 +45,54 @@
             </div>
         </header>
 
-        <main>
-            <div class="electronic-choice-list">
+        <main>        
+            <div class="order-step-box">
+                <ol class="step-list">
+                    <li class="">1</li>
+                    <li class="active">2</li>
+                    <li class="">3</li>
+                </ol>
+                <ol class="step-txt">
+                    <li>確認訂單</li>
+                    <li>付款</li>
+                    <li>訂購完成</li>
+                </ol>
+            </div>
+            <div class="choice-method-list">
                 <ul>
                     <li>
+                        <div class="item item-img">
+                            <img src="../img/shopping/store/linepay_small.svg" alt="">
+                        </div>
                         <div class="item">
-                            <label class="radio-box">發票捐贈
-                                <input type="radio" checked="checked" name="radio">
-                                <span class="checkmark"></span>
-                            </label>
+                            LINE Pay
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item item-img">
+                            <img src="../img/shopping/store/fitbitpay_small.svg" alt="">
+                        </div>
+                        <div class="item">
+                            fitbit pay
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item item-img">
+                            <img src="../img/shopping/store/creditcard_small.svg" alt="">
+                        </div>
+                        <div class="item">
+                            信用卡/ＶISA金融卡
                         </div>
                         <div class="item auto-left">
-                            <input type="text" placeholder="請輸入愛心碼">
-                        </div>
-                        <div class="item search-txt auto-left">
-                            查詢<i class="material-icons">&#xE315;</i>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="item">
-                            <label class="radio-box">會員載具
-                                <input type="radio" checked="checked" name="radio">
-                                <span class="checkmark"></span>
-                            </label>
-                        </div>
-                        <div class="item auto-left"><small>電子發票若中獎將寄送至會員預設地址</small></div>
-                    </li>
-                    <li>
-                        <div class="item">
-                            <label class="radio-box">手機條碼載具
-                                <input type="radio" checked="checked" name="radio">
-                                <span class="checkmark"></span>
-                            </label>
-                        </div>
-                        <div class="item">
-                            <input type="text" placeholder="請填寫手機條碼">
-                        </div>
-                    </li>
-                    <li>
-                        <div class="item item-self">
-                            <label class="radio-box">三聯式發票
-                                <input type="radio" checked="checked" name="radio">
-                                <span class="checkmark"></span>
-                            </label>
-                        </div>
-                        <div class="item-group">
-                            <input type="text" placeholder="請輸入發票抬頭名稱">
-                            <input type="text" placeholder="請輸入統一編號">
+                            <i class="material-icons">&#xE313;</i>
                         </div>
                     </li>
                 </ul>
-            </div>      
+            </div>
         </main>
 
         <footer class="success-mode">
-            <button class="btn-ok">確認</button>
+            <button class="btn-ok">付款</button>
         </footer>
     
     </div>

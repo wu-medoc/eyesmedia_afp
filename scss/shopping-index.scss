@@ -1561,7 +1561,7 @@ a {
                 font-size: .9em;
             }
             .item{
-                color: #818181;
+                color: $gray-color;
             }
             .order-price{
                 color: tomato;
@@ -1589,19 +1589,23 @@ a {
                 &.reverse{
                     transform:scaleX(-1);
                 }
-            }
+            } 
             .discount-price{
-                a{
-                    color: #2796DF;
+                span{
+                    color: $blue-middle;
                     font-weight: 700;
                 }
                 .material-icons{
                     color: $blue-dark;
                 }
             }
+            .invoice-txt,
             .delivery-txt{
                 font-weight: 700;
                 font-size: .9em;
+                span{
+                    color: $blue-middle;
+                }
             }
             .invo-box{
                 width: 24px;
@@ -1626,11 +1630,11 @@ a {
             }
             .item-address{
                 font-size: .9em;
-                color: #4A90E2;
+                color: $blue-middle;
             }
             .item-date{
                 font-size: .7em;
-                color: #818181;
+                color: $gray-color;
             }
             .item-total-price{
                 color: tomato;
@@ -1651,7 +1655,7 @@ a {
             align-items: center;
             padding: 2px 15px;
             font-size: .9em;
-            color: #818181;
+            color: $gray-color;
             &.total-pay{
                 font-size: 1em;
                 font-weight: 700;
@@ -1692,7 +1696,7 @@ a {
         p{
             &:last-child{
                 font-size: 13px;
-                color: #818181;
+                color: $gray-color;
             }
         }
         .material-icons{
@@ -1715,7 +1719,7 @@ a {
             }
             &.address{
                 font-size: 13px;
-                color: #818181;
+                color: $gray-color;
             }
         }
     }
@@ -1751,7 +1755,7 @@ a {
         }
         small{
             margin-left: 10px;
-            color: #818181;
+            color: $gray-color;
         }
         .w100{
             flex: none;
@@ -1826,7 +1830,7 @@ a {
             color: tomato;
         }
         &.mobi{
-            color: #818181;
+            color: $gray-color;
             font-size: .8em;
         }
     }
@@ -1860,5 +1864,244 @@ footer{
         .item{
             margin-left: 5px;
         }
+    }
+}
+
+/* electronic invoice */
+.electronic-choice-list{
+    margin-top: 48px;
+    .radio-box{
+        min-width: 128px;
+    }
+    li{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        padding: 15px 10px;
+        border-bottom: 1px #eee solid;
+    }
+    .search-txt{
+        color: #2196F3;
+        .material-icons{
+            color: $blue-dark;
+        }
+    }
+    small{
+        color: $gray-color;
+    }
+    .material-icons{
+        vertical-align: top;
+    }
+    input{
+        &[type="text"]{
+            border: 1px #eee solid;
+            padding: 5px 10px;
+            border-radius: 10px;
+            @media (min-width: 768px) {
+                width: 550px;
+            }
+        }
+        &.heartcode{
+            width: 143px;
+            margin-right: 10px;
+            @media (min-width: 768px) {
+                width: 473px;
+            }
+        }
+    }
+    .item-group{
+        display: flex;
+        flex-direction: column;
+        input{
+            &:first-child{
+                margin-bottom: 5px;
+            }
+        }
+    }
+    .item-self{
+        align-self: flex-start;
+        padding-top: 6px;
+    }
+    .auto-left{
+        margin-left: auto;
+    }
+}
+
+.choice-method-list{
+    li{
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        padding: 15px;
+        border-bottom: 1px #eee solid;
+        &.choice-credit-card{
+            border-bottom: none;
+        }
+        .credit-card-list{
+            width: 100%;
+            padding-left: 45px;
+            &.has-choice{
+                .card-item{
+                    opacity: .3;
+                }
+                .is-check{
+                    opacity: 1;
+                    .item-check{
+                        opacity: 1;
+                    }
+                }
+            }
+            li{
+                margin-right: -15px;
+                .item-img{
+                    margin-right: 15px;
+                    img{
+                        vertical-align: middle;
+                    }
+                }
+                .item-check{
+                    margin-left: 20px;
+                    opacity: 0;
+                    .material-icons{
+                        vertical-align: sub;
+                        color: #FD5F00;
+                    }
+                }
+                &.ticket-slider{
+                    img{
+                        width: auto;
+                        height: 70px;
+                    }
+                }
+            }
+        }
+        .item-img{
+            margin-right: 15px;
+        }
+    }
+}
+
+.radio-box {
+    display: block;
+    position: relative;
+    padding-left: 30px;
+    cursor: pointer;
+    font-size: 16px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        &:checked{
+            ~.checkmark {
+                background-color: #2196F3;
+                border-color: #2196F3;
+                &:after {
+                    display: block;
+                }
+            }
+        }
+    }
+    .checkmark {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        height: 20px;
+        width: 20px;
+        background-color: $default-white;
+        border: 1px #DADADA solid;
+        border-radius: 50%;
+        transform: translateY(-50%);
+        &:after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: $default-white;
+            display: none;
+        }
+    }
+    &:hover{
+        input{
+            ~.checkmark {
+                background-color: #ccc;
+            }
+            &:checked{
+                ~.checkmark {
+                    background-color: #2196F3;
+                    border-color: #2196F3;
+                    &:after {
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+}
+.input-number-box{
+    margin-top: 48px;
+    padding: 30px;
+    border-bottom: 1px #eee solid;
+    .input-type{
+        margin-bottom: 15px;
+        p{
+            font-size: 13px;
+            color: $blue-dark;
+            margin-bottom: 5px;
+            font-weight: 500;
+        }
+        input{
+            border: 1px #818181 solid;
+            width: 100%;
+            padding: 10px;
+            border-radius: 10px;
+        }
+    }
+    .default-setting{
+        padding: 0;
+        margin-bottom: 15px;
+        .checkbox{
+            label{
+                &:before{
+                    position: absolute;
+                    top: -15px;
+                }
+                &:after{
+                    top: -16px;
+                    left: 0;
+                }
+            }
+        }
+    }
+}
+
+.newebPay{
+    padding-top: 50px;
+    img{
+        display: block;
+        margin: 15px auto;
+    }
+}
+
+.order-error-box{
+    margin-top: 48px;
+    padding-top: 30px;
+}
+
+.order-success{
+    margin: 30px auto;
+}
+
+.material-icons{
+    &.reverse{
+        transform: scaleX(-1);
     }
 }

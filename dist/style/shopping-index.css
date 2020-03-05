@@ -1732,7 +1732,7 @@ a:hover {
 }
 
 .order-box .order-shop-list li .item {
-  color: #818181;
+  color: #8E8E93;
 }
 
 .order-box .order-shop-list li .order-price {
@@ -1774,8 +1774,8 @@ a:hover {
           transform: scaleX(-1);
 }
 
-.order-box .order-method-box li .discount-price a {
-  color: #2796DF;
+.order-box .order-method-box li .discount-price span {
+  color: #0091FF;
   font-weight: 700;
 }
 
@@ -1783,9 +1783,15 @@ a:hover {
   color: #182B56;
 }
 
+.order-box .order-method-box li .invoice-txt,
 .order-box .order-method-box li .delivery-txt {
   font-weight: 700;
   font-size: .9em;
+}
+
+.order-box .order-method-box li .invoice-txt span,
+.order-box .order-method-box li .delivery-txt span {
+  color: #0091FF;
 }
 
 .order-box .order-method-box li .invo-box {
@@ -1817,12 +1823,12 @@ a:hover {
 
 .order-box .order-method-box li .item-address {
   font-size: .9em;
-  color: #4A90E2;
+  color: #0091FF;
 }
 
 .order-box .order-method-box li .item-date {
   font-size: .7em;
-  color: #818181;
+  color: #8E8E93;
 }
 
 .order-box .order-method-box li .item-total-price {
@@ -1850,7 +1856,7 @@ a:hover {
           align-items: center;
   padding: 2px 15px;
   font-size: .9em;
-  color: #818181;
+  color: #8E8E93;
 }
 
 .order-box .total-price-box li.total-pay {
@@ -1896,7 +1902,7 @@ a:hover {
 
 .is-choose-method .item p:last-child {
   font-size: 13px;
-  color: #818181;
+  color: #8E8E93;
 }
 
 .is-choose-method .item .material-icons {
@@ -1921,7 +1927,7 @@ a:hover {
 
 .address-list-box li p.address {
   font-size: 13px;
-  color: #818181;
+  color: #8E8E93;
 }
 
 .add-address-box {
@@ -1967,7 +1973,7 @@ a:hover {
 
 .add-address-list li small {
   margin-left: 10px;
-  color: #818181;
+  color: #8E8E93;
 }
 
 .add-address-list li .w100 {
@@ -2059,7 +2065,7 @@ a:hover {
 }
 
 .shopping-cartfooter p.mobi {
-  color: #818181;
+  color: #8E8E93;
   font-size: .8em;
 }
 
@@ -2101,5 +2107,285 @@ footer .order-go-pay {
 
 footer .order-go-pay .item {
   margin-left: 5px;
+}
+
+/* electronic invoice */
+.electronic-choice-list {
+  margin-top: 48px;
+}
+
+.electronic-choice-list .radio-box {
+  min-width: 128px;
+}
+
+.electronic-choice-list li {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 15px 10px;
+  border-bottom: 1px #eee solid;
+}
+
+.electronic-choice-list .search-txt {
+  color: #2196F3;
+}
+
+.electronic-choice-list .search-txt .material-icons {
+  color: #182B56;
+}
+
+.electronic-choice-list small {
+  color: #8E8E93;
+}
+
+.electronic-choice-list .material-icons {
+  vertical-align: top;
+}
+
+.electronic-choice-list input[type="text"] {
+  border: 1px #eee solid;
+  padding: 5px 10px;
+  border-radius: 10px;
+}
+
+@media (min-width: 768px) {
+  .electronic-choice-list input[type="text"] {
+    width: 550px;
+  }
+}
+
+.electronic-choice-list input.heartcode {
+  width: 143px;
+  margin-right: 10px;
+}
+
+@media (min-width: 768px) {
+  .electronic-choice-list input.heartcode {
+    width: 473px;
+  }
+}
+
+.electronic-choice-list .item-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.electronic-choice-list .item-group input:first-child {
+  margin-bottom: 5px;
+}
+
+.electronic-choice-list .item-self {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  padding-top: 6px;
+}
+
+.electronic-choice-list .auto-left {
+  margin-left: auto;
+}
+
+.choice-method-list li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 15px;
+  border-bottom: 1px #eee solid;
+}
+
+.choice-method-list li.choice-credit-card {
+  border-bottom: none;
+}
+
+.choice-method-list li .credit-card-list {
+  width: 100%;
+  padding-left: 45px;
+}
+
+.choice-method-list li .credit-card-list.has-choice .card-item {
+  opacity: .3;
+}
+
+.choice-method-list li .credit-card-list.has-choice .is-check {
+  opacity: 1;
+}
+
+.choice-method-list li .credit-card-list.has-choice .is-check .item-check {
+  opacity: 1;
+}
+
+.choice-method-list li .credit-card-list li {
+  margin-right: -15px;
+}
+
+.choice-method-list li .credit-card-list li .item-img {
+  margin-right: 15px;
+}
+
+.choice-method-list li .credit-card-list li .item-img img {
+  vertical-align: middle;
+}
+
+.choice-method-list li .credit-card-list li .item-check {
+  margin-left: 20px;
+  opacity: 0;
+}
+
+.choice-method-list li .credit-card-list li .item-check .material-icons {
+  vertical-align: sub;
+  color: #FD5F00;
+}
+
+.choice-method-list li .credit-card-list li.ticket-slider img {
+  width: auto;
+  height: 70px;
+}
+
+.choice-method-list li .item-img {
+  margin-right: 15px;
+}
+
+.radio-box {
+  display: block;
+  position: relative;
+  padding-left: 30px;
+  cursor: pointer;
+  font-size: 16px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.radio-box input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.radio-box input:checked ~ .checkmark {
+  background-color: #2196F3;
+  border-color: #2196F3;
+}
+
+.radio-box input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.radio-box .checkmark {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background-color: #fff;
+  border: 1px #DADADA solid;
+  border-radius: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.radio-box .checkmark:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #fff;
+  display: none;
+}
+
+.radio-box:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+.radio-box:hover input:checked ~ .checkmark {
+  background-color: #2196F3;
+  border-color: #2196F3;
+}
+
+.radio-box:hover input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.input-number-box {
+  margin-top: 48px;
+  padding: 30px;
+  border-bottom: 1px #eee solid;
+}
+
+.input-number-box .input-type {
+  margin-bottom: 15px;
+}
+
+.input-number-box .input-type p {
+  font-size: 13px;
+  color: #182B56;
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+
+.input-number-box .input-type input {
+  border: 1px #818181 solid;
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.input-number-box .default-setting {
+  padding: 0;
+  margin-bottom: 15px;
+}
+
+.input-number-box .default-setting .checkbox label:before {
+  position: absolute;
+  top: -15px;
+}
+
+.input-number-box .default-setting .checkbox label:after {
+  top: -16px;
+  left: 0;
+}
+
+.newebPay {
+  padding-top: 50px;
+}
+
+.newebPay img {
+  display: block;
+  margin: 15px auto;
+}
+
+.order-error-box {
+  margin-top: 48px;
+  padding-top: 30px;
+}
+
+.order-success {
+  margin: 30px auto;
+}
+
+.material-icons.reverse {
+  -webkit-transform: scaleX(-1);
+          transform: scaleX(-1);
 }
 /*# sourceMappingURL=shopping-index.css.map */

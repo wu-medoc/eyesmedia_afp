@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=1, user-scalable=no">
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../js/vendor/bs4/css/bootstrap.min.css">
+    <!-- vendor css -->
+    <link rel="stylesheet" href="../js/vendor/jquery-editable-select-master/dist/jquery-editable-select.min.css">
+    <link rel="stylesheet" href="../js/vendor/swiper/css/swiper.min.css">
+    <!-- fontawesome css -->
+    <link rel="stylesheet" href="../js/vendor/fontawesome/css/fontawesome.css">
+    <link rel="stylesheet" href="../js/vendor/fontawesome/css/brands.css">
+    <link rel="stylesheet" href="../js/vendor/fontawesome/css/solid.css">
+    <!-- custom css -->
+    <link rel="stylesheet" href="../dist/style/css.min.css">
+    <link rel="stylesheet" href="../dist/style/global.min.css">
+    <link rel="stylesheet" href="../dist/style/index.min.css">
+    <link rel="stylesheet" href="../dist/style/shopping-index.min.css">
+    <link rel="stylesheet" href="../dist/style/animate.min.css">
+    <title>eyemedia - afp</title>
+</head>
+
+<body>
+    <div class="wrap container">
+        <header class="fixed-top container">
+            <!-- header top -->
+            <div class="header-secondary linebt-row">
+                <div class="row">
+                    <div class="col-3">
+                        <div class="close-btn" onclick="history.back();" data-toggle="tooltip" data-placement="bottom" title="回上一頁">
+                            <i class="material-icons">&#xE314;</i>
+                        </div>
+                    </div>
+                    <div class="col-6 text-center">
+                        <div class="title-name fs-16">電子發票</div>
+                    </div>
+                    <div class="col-3 text-right">
+                        <div class="close-btn"></div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <form>
+            <main>
+                <div class="electronic-choice-list">
+                    <ul class="invoice">
+                        <li>
+                            <div class="item">
+                                <label class="radio-box">發票捐贈
+                                    <input type="radio" name="radio">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </div>
+                            <div class="d-flex align-items-center auto-left">
+                                <div class="item">
+                                    <input type="text" placeholder="請輸入愛心碼" class="heartcode">
+                                </div>
+                                <div class="item search-txt pl-2" onclick="callsortLayer('.hcode');">
+                                    查詢<i class="material-icons">&#xE315;</i>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="item">
+                                <label class="radio-box">會員載具
+                                    <input type="radio" name="radio">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </div>
+                            <div class="item auto-left"><small>電子發票若中獎將寄送至會員預設地址</small></div>
+                        </li>
+                        <li>
+                            <div class="item">
+                                <label class="radio-box">手機條碼載具
+                                    <input type="radio" name="radio">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </div>
+                            <div class="item auto-left">
+                                <input type="text" placeholder="請填寫手機條碼">
+                            </div>
+                        </li>
+                        <li>
+                            <div class="item item-self">
+                                <label class="radio-box">三聯式發票
+                                    <input type="radio" name="radio">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </div>
+                            <div class="item-group auto-left">
+                                <input type="text" placeholder="請輸入發票抬頭名稱">
+                                <input type="text" placeholder="請輸入統一編號">
+                            </div>
+                        </li>
+                    </ul>
+                </div>      
+            </main>
+
+            <footer class="success-mode container">
+                <button class="btn-ok" onclick="location.href='shopping-payment.html'">確認</button>
+            </footer>
+
+            <!-- 愛心碼 -->
+            <div class="sortlayer">
+                <div class="hcode">
+                    <div id="open-pagebox">
+                        <div class="open-page-title flex-inline-between">
+                            <div class="title-icon">
+                                <button class="btn" onclick="backsortLayer();">
+                                    <i class="material-icons">&#xE314;</i>
+                                </button>
+                            </div>
+                            <div class="title-txt">
+                                查詢愛心碼
+                            </div>
+                            <div class="title-txt">
+                            </div>
+                        </div>
+                        <ul class="open-page-ul" id="queryhcode" onclick="backsortLayer();">
+                            <li class="flex-inline-between" value="119">
+                                <div class="item">
+                                    社團法人台灣流浪動物希望協會
+                                </div>
+                                <div class="item">
+                                    119
+                                </div>    
+                            </li>
+                            <li class="flex-inline-between" value="0095">
+                                <div class="item">
+                                    財團法人法鼓山文教基金會
+                                </div>
+                                <div class="item">
+                                    0095
+                                </div>    
+                            </li>
+                            <li class="flex-inline-between" value="172">
+                                <div class="item">
+                                    流浪貓保護協會
+                                </div>
+                                <div class="item">
+                                    172
+                                </div>    
+                            </li>
+                            <li class="flex-inline-between" value="0528">
+                                <div class="item">
+                                    中華民國流浪動物花園協會
+                                </div>
+                                <div class="item">
+                                    0528
+                                </div>    
+                            </li>
+                            <li class="flex-inline-between" value="529">
+                                <div class="item">
+                                    社團法人高雄市關懷流浪動物協會
+                                </div>
+                                <div class="item">
+                                    529
+                                </div>    
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div> 
+        </form>
+    
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="../js/vendor/bs4/js/jquery-3.2.1.slim.min.js"></script>
+    <!-- Latest compiled and minified JavaScript -->    
+    <script src="../js/vendor/bs4/js/bootstrap.min.js"></script>
+
+    <!-- owlcarousel JS -->
+    <script src="../js/vendor/owlcarousel/vendors/jquery.min.js"></script>
+    <script src="../js/vendor/owlcarousel/owlcarousel/owl.carousel.js"></script>
+    <script src="../js/vendor/owlcarousel/vendors/highlight.js"></script>
+    <script src="../js/vendor/owlcarousel/js/app.js"></script>   
+    <script src="../js/vendor/jquery-editable-select-master/dist/jquery-editable-select.js"></script>
+
+    <!-- vendor js -->
+    <script src="../js/vendor/swiper/js/swiper.min.js"></script>
+    <script src="../js/vendor/imgLiquid.js"></script>
+    <script src="../js/animateCss.js"></script>
+    <script src="../js/index.js"></script>
+    <script>
+        $('#queryhcode li').on('click',function(){
+            hcode=$(this).attr('value');
+            $('input.heartcode').attr('value',hcode);
+        });
+        $('.invoice>li').on('click',function(){
+            $(this).find('input').prop('checked',true);
+        });
+    </script>
+</body>
+
+</html>

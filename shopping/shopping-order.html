@@ -31,7 +31,7 @@
             <div class="header-secondary linebt-row">
                 <div class="row">
                     <div class="col-3">
-                        <div class="close-btn" onclick="history.back();">
+                        <div class="close-btn" onclick="history.back();" data-toggle="tooltip" data-placement="bottom" title="回上一頁">
                             <i class="material-icons">&#xE314;</i>
                         </div>
                     </div>
@@ -119,17 +119,17 @@
                 </ul>
                 <div class="order-method-box">
                     <ul class="method-list">
-                        <li class="index-flex">
+                        <li class="index-flex" onclick="javascript:location.href='shopping-discount.html'">
                             <div class="item three"><i class="material-icons reverse">&#xE54E;</i>使用優惠券、折扣碼</div>
-                            <div class="item one discount-price text-right"><a href="shopping-discount.html"><span class="store1-discount-price" value="188">-$188</span><i class="material-icons">&#xE315;</i></a></div>
+                            <div class="item one discount-price text-right"><span class="store1-discount-price" value="-188">-$188</span><i class="material-icons">&#xE315;</i></div>
                         </li>
                         <!-- 寄送方式 - 選擇寄送方式 -->
-                        <li class="index-flex">
+                        <li class="index-flex" onclick="javascript:location.href='shopping-send.html'">
                             <div class="item"><i class="material-icons">&#xE558;</i>寄送方式</div>
-                            <div class="item delivery-txt text-right"><a href="shopping-send.html">請選擇寄送方式<i class="material-icons">&#xE315;</i></a></div>
+                            <div class="item delivery-txt text-right"><span>請選擇寄送方式</span><i class="material-icons">&#xE315;</i></div>
                         </li>
                         <!-- 寄送方式 - 選擇後 -->
-                        <li class="index-flex">
+                        <li class="index-flex" onclick="javascript:location.href='shopping-send.html'">
                             <div class="item"><i class="material-icons">&#xE558;</i>寄送方式</div>
                             <div class="item delivery-txt text-right delivery-price" value="100">宅配通 $100</div>
                             <div class="item-group">
@@ -182,17 +182,17 @@
                 </ul>
                 <div class="order-method-box">
                     <ul class="method-list">
-                        <li class="index-flex">
+                        <li class="index-flex" onclick="javascript:location.href='shopping-discount.html'">
                             <div class="item three"><i class="material-icons reverse">&#xE54E;</i>使用優惠券、折扣碼</div>
-                            <div class="item one discount-price text-right"><a href="shopping-discount.html"><span class="store1-discount-price" value="88">-$88</span><i class="material-icons">&#xE315;</i></a></div>
+                            <div class="item one discount-price text-right"><span class="store1-discount-price" value="-88">-$88</span><i class="material-icons">&#xE315;</i></div>
                         </li>
                         <!-- 寄送方式 - 選擇寄送方式 -->
-                        <li class="index-flex">
+                        <li class="index-flex" onclick="javascript:location.href='shopping-send.html'">
                             <div class="item"><i class="material-icons">&#xE558;</i>寄送方式</div>
-                            <div class="item delivery-txt text-right"><a href="shopping-send.html">請選擇寄送方式<i class="material-icons">&#xE315;</i></a></div>
+                            <div class="item delivery-txt text-right"><span>請選擇寄送方式</span><i class="material-icons">&#xE315;</i></div>
                         </li>
                         <!-- 寄送方式 - 選擇後 -->
-                        <li class="index-flex">
+                        <li class="index-flex" onclick="javascript:location.href='shopping-send.html'">
                             <div class="item"><i class="material-icons">&#xE558;</i>寄送方式</div>
                             <div class="item delivery-txt text-right delivery-price" value="100">宅配通 $100</div>
                             <div class="item-group">
@@ -220,10 +220,10 @@
             </div>
             <div class="order-box">
                 <div class="order-method-box">
-                    <ul class="method-list">
+                    <ul class="method-list" onclick="javascript:location.href='shopping-invoice.html'">
                         <li class="index-flex">
                             <div class="item d-flex d-inline"><div class="invo-box"><i class="material-icons">&#xE8B0;</i></div>電子發票</div>
-                            <div class="item discount-price text-right"><a href>請選擇發票樣式<i class="material-icons">&#xE315;</i></a></div>
+                            <div class="item text-right invoice-txt"><span>請選擇發票樣式</span><i class="material-icons">&#xE315;</i></div>
                         </li>
                     </ul>
                 </div>
@@ -265,7 +265,7 @@
                         <p class="mobi">此筆訂單可賺<span class="order-mobi" value="69">69</span>魔幣</p>
                     </div>
                     <div class="col-4 col-lg-3 pl-0">
-                         <button type="submit" class="btn onlineshopping-btn mt-2 py-1 w-100 cart-next" onclick="location.href='#'">去結帳</button>
+                         <button type="submit" class="btn onlineshopping-btn mt-2 py-1 w-100 cart-next" onclick="location.href='shopping-payment.html'">去結帳</button>
                     </div>
                 </div>
             </div>

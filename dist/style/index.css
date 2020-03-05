@@ -2177,7 +2177,7 @@ td.linebt-td,
 }
 
 .bearservice .popup-box {
-  z-index: 1000;
+  z-index: 99999999;
   overflow: hidden;
   background-color: #ffffff;
   bottom: 0;
@@ -2494,7 +2494,7 @@ td.linebt-td,
   position: absolute;
   top: 0;
   width: 2px;
-  z-index: 1000;
+  z-index: 99999999;
 }
 
 .bearservice-lg .direct-chat-text::after,
