@@ -204,7 +204,7 @@
                     width: 24px;
                     height: 24px;
                     right:  0;
-                    top:5px;
+                    bottom: 5px;
                     //z-index: 1060;
                 }                
                 .datecalendar:focus::after, 
@@ -214,7 +214,7 @@
                     display: none;
                     position: absolute;
                     right: 0;
-                    top:5px;                    
+                    bottom: 5px;                    
                 }
             }
             button{
