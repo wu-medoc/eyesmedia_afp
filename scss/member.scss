@@ -169,13 +169,51 @@
             border-bottom: 1px $gray-light solid;
             .input-box{
                 flex: 1;
-                input{
+                input[type='text']{
                     background-color: #fff;
                     width: 100%;
                     border: none;
                     text-align: right;
                     color: $blue-dark;
                     border-bottom: 1px $gray-light solid;
+                }
+                input[type='date'] {
+                    border: 0;
+                    background: #fff;
+                    display: block;
+                    text-align: right;
+                    text-align: -webkit-right;
+                    width: 180px;
+                    &::-webkit-inner-spin-button { display: none; }
+                    &::-webkit-calendar-picker-indicator { background: #fff; }
+                    // ::-webkit-datetime-edit { padding: 1em; }
+                    // ::-webkit-datetime-edit-fields-wrapper { background: silver; }
+                    // ::-webkit-datetime-edit-text { color: red; padding: 0 0.3em; }
+                    // ::-webkit-datetime-edit-month-field { color: blue; }
+                    // ::-webkit-datetime-edit-day-field { color: green; }
+                    // ::-webkit-datetime-edit-year-field { color: purple; }
+                    // ::-webkit-inner-spin-button { display: none; }
+                    // ::-webkit-calendar-picker-indicator { background: orange; }
+                }
+                .datecalendar::after{
+                    content: '';
+                    background: url('../../img/member/ic_date_range.png') no-repeat;
+                    background-size: 100%;
+                    display: block;
+                    position: absolute;
+                    width: 24px;
+                    height: 24px;
+                    right:  0;
+                    //z-index: 1060;
+                }                
+                .datecalendar:focus::after, 
+                .datecalendar:hover::after{
+                    content: '';
+                    background: transparent;
+                    display: none;
+                    position: absolute;
+                    right: 0;
+                    
                 }
             }
             button{

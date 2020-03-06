@@ -34,12 +34,6 @@ body.is-open-country .country-box {
   padding-left: 0;
 }
 
-input[type='date'] {
-  display: block;
-  text-align: right;
-  text-align: -webkit-right;
-}
-
 /* Center middle & center-v vertically */
 .center {
   position: absolute;

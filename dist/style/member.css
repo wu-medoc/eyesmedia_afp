@@ -212,13 +212,50 @@
           flex: 1;
 }
 
-.my-list-box ul li .input-box input {
+.my-list-box ul li .input-box input[type='text'] {
   background-color: #fff;
   width: 100%;
   border: none;
   text-align: right;
   color: #182B56;
   border-bottom: 1px #eee solid;
+}
+
+.my-list-box ul li .input-box input[type='date'] {
+  border: 0;
+  background: #fff;
+  display: block;
+  text-align: right;
+  text-align: -webkit-right;
+  width: 180px;
+}
+
+.my-list-box ul li .input-box input[type='date']::-webkit-inner-spin-button {
+  display: none;
+}
+
+.my-list-box ul li .input-box input[type='date']::-webkit-calendar-picker-indicator {
+  background: #fff;
+}
+
+.my-list-box ul li .input-box .datecalendar::after {
+  content: '';
+  background: url("../../img/member/ic_date_range.png") no-repeat;
+  background-size: 100%;
+  display: block;
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  right: 0;
+}
+
+.my-list-box ul li .input-box .datecalendar:focus::after,
+.my-list-box ul li .input-box .datecalendar:hover::after {
+  content: '';
+  background: transparent;
+  display: none;
+  position: absolute;
+  right: 0;
 }
 
 .my-list-box ul li button {
