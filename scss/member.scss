@@ -189,7 +189,10 @@
                     background-position: 100% 50%;
                     z-index: 1;
                     &::-webkit-inner-spin-button { display: none; }
-                    &::-webkit-calendar-picker-indicator { background: #fff; }                    
+                    &::-webkit-calendar-picker-indicator { 
+                        background: transparent;
+                        color: transparent; 
+                    }                    
                     // ::-webkit-datetime-edit { padding: 1em; }
                     // ::-webkit-datetime-edit-fields-wrapper { background: silver; }
                     // ::-webkit-datetime-edit-text { color: red; padding: 0 0.3em; }

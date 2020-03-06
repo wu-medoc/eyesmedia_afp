@@ -239,7 +239,8 @@
 }
 
 .my-list-box ul li .input-box input[type='date']::-webkit-calendar-picker-indicator {
-  background: #fff;
+  background: transparent;
+  color: transparent;
 }
 
 .my-list-box ul li button {
