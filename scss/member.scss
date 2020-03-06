@@ -177,6 +177,10 @@
                     color: $blue-dark;
                     border-bottom: 1px $gray-light solid;
                 }
+                input[type='date']::-webkit-calendar-picker-indicator{
+                        background: transparent;
+                        color: transparent;
+                }
                 input[type='date'] {
                     border: 0;
                     background: #fff;
@@ -185,15 +189,9 @@
                     text-align: -webkit-right;
                     width: 180px;
                     background: url('../../img/member/ic_date_range.png') no-repeat;
-                    background-size: 10%;
+                    background-size: 13%;
                     background-position: 100% 50%;
-                    z-index: 1;
                     &::-webkit-inner-spin-button { display: none; }
-                    &::-webkit-calendar-picker-indicator { 
-                        background: transparent;
-                        color: transparent; 
-                        opacity: 0.1;
-                    }                    
                     // ::-webkit-datetime-edit { padding: 1em; }
                     // ::-webkit-datetime-edit-fields-wrapper { background: silver; }
                     // ::-webkit-datetime-edit-text { color: red; padding: 0 0.3em; }
