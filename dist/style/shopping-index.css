@@ -1878,7 +1878,6 @@ a:hover {
 
 /* send */
 .is-choose-method {
-  margin-top: 48px;
   padding: 10px 15px;
   border-left: 5px #FD5F00 solid;
   display: -webkit-box;
@@ -1898,6 +1897,10 @@ a:hover {
 
 .is-choose-method.disabled .item-check {
   display: none;
+}
+
+.is-choose-method:first-child {
+  margin-top: 48px;
 }
 
 .is-choose-method .item p:last-child {
@@ -2149,6 +2152,7 @@ footer .order-go-pay .item {
 }
 
 .electronic-choice-list input[type="text"] {
+  text-align: left;
   border: 1px #eee solid;
   padding: 5px 10px;
   border-radius: 10px;

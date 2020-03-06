@@ -2780,9 +2780,9 @@ button.open-page {
 }
 .flex-inline-between {
   width: 100%;
-  display: -webkit-inline-box!important;
-  display: -ms-inline-flexbox!important;
-  display: inline-flex!important;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   flex-direction:row;
   justify-content: space-between;
 }

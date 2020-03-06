@@ -96,7 +96,7 @@
                                     </div>
                                     <div class="item card-type">mastercard</div>
                                     <div class="item item-card-num">*1234</div>
-                                    <div class="item item-default auto-left active" onclick="location.href='shopping-cardinfo.html'"><i class="fas fa-check"></i><i class="fas fa-trash pl-2"></i></div>
+                                    <div class="item item-default auto-left active"><i class="fas fa-check"></i></div>
                                 </li>
                                 <li class="lidisplay">
                                     <div class="item item-img">
@@ -104,7 +104,7 @@
                                     </div>
                                     <div class="item card-type">mastercard</div>
                                     <div class="item item-card-num">*1234</div>
-                                    <div class="item item-default auto-left" onclick="location.href='shopping-cardinfo.html'"><i class="fas fa-check"></i><i class="fas fa-trash pl-2"></i></div>
+                                    <div class="item item-default auto-left"><i class="fas fa-check"></i></div>
                                 </li>
                                 <li class="lidisplay">
                                     <div class="item item-img">
@@ -112,14 +112,14 @@
                                     </div>
                                     <div class="item card-type">mastercard</div>
                                     <div class="item item-card-num">*1234</div>
-                                    <div class="item item-default auto-left" onclick="location.href='shopping-cardinfo.html'"><i class="fas fa-check"></i><i class="fas fa-trash pl-2"></i></div>
+                                    <div class="item item-default auto-left"><i class="fas fa-check"></i></div>
                                 </li>
-                                <li>
+                                <li onclick="location.href='shopping-input-num.html'">
                                     <div class="item item-icon">
                                         <i class="material-icons">&#xE145;</i>
                                     </div>
                                     <div class="item add-card">
-                                        <button class="btn animated-btn text-left p-0" onclick="location.href='shopping-input-num.html'">手動輸入卡號</button>
+                                        <button class="btn animated-btn text-left p-0">手動輸入卡號</button>
                                     </div>
                                 </li>
                                 <div class="addheight mb-5"></div>
@@ -172,15 +172,15 @@
                 $('.bank-swiper').append("<div class='swiper-container'><div class='swiper-wrapper'><div class='swiper-slide'><img src='../img/shopping/bank/bk01.png' alt=''></div><div class='swiper-slide'><img src='../img/shopping/bank/bk02.png' alt=''></div></div></div>");
                 bkswiper();
             }
-            $(".otherpay").removeClass('text-muted');
-            $(".lidisplay").siblings().children().removeClass('text-muted');
+            $(".otherpay").css('opacity','1');
+            $(".lidisplay").siblings().children().css('opacity','1');
         });
 
         $( ".lidisplay" ).on('click',function() {
-            $(this).children().removeClass('text-muted');
+            $(this).children().css('opacity','1');
             $(this).children('.item-default').addClass('active');
-            $(this).siblings().children().addClass('text-muted').removeClass('active');
-            $('.otherpay').addClass('text-muted');
+            $(this).siblings().children().css('opacity','0.5').removeClass('active');
+            $('.otherpay').css('opacity','0.5');
         });
     </script>
 </body>

@@ -48,7 +48,7 @@
             </div>
         </div>
     </header>
-
+    
     <main>        
         <div class="header-42"></div>     
         <div class="shopping-cartlist">
@@ -291,28 +291,27 @@
         </div> 
         <div class="addheight container mb-5"></div>
     </main>
-
-    <footer class="shopping-cartfooter">
-        <div class="shopping-coupon container">
-            <a href="shopping-discount.html">
+    <form action="shopping-order.html" method="POST">
+        <footer class="shopping-cartfooter">
+            <div class="shopping-coupon container">
                 <div class="flex-inline-between coupon-box">
                     <div><i class="material-icons offer"></i>下一步使用優惠券、折扣碼</div>
                 </div>
-            </a>
-        </div>
-        <div class="fixed-bottom container">        
-            <div class="row subtotal-info">
-                <div class="col-8 col-lg-9 text-right">
-                    <small>小計</small><span class="price-subtotal" value="142600">$ 142,600</span>
-                    <p class="small text-secondary">未含運費</p>
-                </div>
-                <div class="col-4 col-lg-3 pl-0">
-                     <button type="button" class="btn onlineshopping-btn mt-2 py-1 w-100 cart-next btnext" onclick="location.href='shopping-discount.html'">下一步</button>
+            </div>
+            <div class="fixed-bottom container">        
+                <div class="row subtotal-info">
+                    <div class="col-8 col-lg-9 text-right">
+                        <small>小計</small><span class="price-subtotal" value="142600">$ 142,600</span>
+                        <p class="small text-secondary">未含運費</p>
+                    </div>
+                    <div class="col-4 col-lg-3 pl-0">
+                        <button type="submit" class="btn onlineshopping-btn mt-2 py-1 w-100 cart-next btnext">下一步</button>
+                    </div>
                 </div>
             </div>
-        </div>
-    </footer>
-    
+        </footer>
+    </form>
+
     </div>
 
     <!-- Optional JavaScript -->

@@ -44,7 +44,7 @@
                 </div>
             </div>
         </header>
-        <form>
+        <form action="shopping-order.html" method="POST">
             <main>        
                 <div class="is-choose-method">
                     <div class="item">
@@ -57,34 +57,26 @@
                 </div>
                 <div class="address-list-box">
                     <ul>
-                        <li onclick="location.href='shopping-edit-address.html'">
-                            <div class="item item-checkbox">
-                                <div class="sitem-checkbox">
-                                    <div class="checkbox checkbox-primary">
-                                        <input id="address-01" type="checkbox" checked>
-                                        <label for="address-01"></label>  
-                                    </div>  
-                                </div>
-                            </div>
+                        <li>
                             <div class="item">
-                                <p>艾斯移動</p>
-                                <p class="tel">0227078600</p>
-                                <p class="address">106 臺北市大安區敦化南路2段76號5樓</p>
+                                <label class="radio-box">
+                                    <p>艾斯移動</p>
+                                    <p class="tel">0227078600</p>
+                                    <p class="address">106 臺北市大安區敦化南路2段76號5樓</p>
+                                    <input type="radio" name="radio" checked>
+                                    <span class="checkmark"></span>
+                                </label>
                             </div>
                         </li>
-                        <li onclick="location.href='shopping-edit-address.html'">
-                            <div class="item item-checkbox">
-                                <div class="sitem-checkbox">
-                                    <div class="checkbox checkbox-primary">
-                                        <input id="address-02" type="checkbox">
-                                        <label for="address-02"></label>  
-                                    </div>  
-                                </div>
-                            </div>
+                        <li>
                             <div class="item">
-                                <p>Jason Yang</p>
-                                <p class="tel">0912345678</p>
-                                <p class="address">106 台北市大安區敦化南路2段76號5樓</p>
+                                <label class="radio-box">
+                                    <p>Jason Yang</p>
+                                    <p class="tel">0912345678</p>
+                                    <p class="address">106 台北市大安區敦化南路2段76號5樓</p>
+                                    <input type="radio" name="radio">
+                                    <span class="checkmark"></span>
+                                </label>
                             </div>
                         </li>
                     </ul>
@@ -94,7 +86,7 @@
                 </div>
                 <div class="is-choose-method disabled">
                     <div class="item">
-                        <p>宅配通 <span>$100</span></p>
+                        <p>統一速達 <span>$120</span></p>
                         <p>預計到貨日 <span>12月5日～12月9日</span></p>
                     </div>
                     <div class="item item-check auto-left">
@@ -104,7 +96,7 @@
             </main>
 
             <footer class="success-mode container">
-                <button class="btn-ok">確認</button>
+                <button type="submit" class="btn-ok">確認</button>
             </footer>
         </form>
     </div>
@@ -125,6 +117,12 @@
     <!-- vendor js -->
     <script src="../js/vendor/swiper/js/swiper.min.js"></script>
     <script src="../js/vendor/imgLiquid.js"></script>
+    <script>
+        $('.is-choose-method').on('click', function(){
+            $(this).removeClass('disabled');
+            $(this).siblings().addClass('disabled');
+        });
+    </script>
 </body>
 
 </html>
