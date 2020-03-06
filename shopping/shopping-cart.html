@@ -29,19 +29,19 @@
     <header class="fixed-top container">
         <!-- header top -->
         <div class="header-secondary linebt-row">
-            <div class="row">
-                <div class="col-3">
+            <div class="index-flex justify-content-between">
+                <div class="item two">
                     <div class="close-btn">
                          <button type="button" class="btn" onclick="history.back();" data-toggle="tooltip" data-placement="bottom" title="回上一頁">
                             <i class="material-icons">&#xE314;</i>
                         </button>
                     </div>
                 </div>
-                <div class="col-6 text-center">
+                <div class="item three text-center">
                     <div class="title-name">購物車</div>
                 </div>
-                <div class="col-3 text-right">
-                    <div class="top-item climate"> 
+                <div class="item two">
+                    <div class="top-item climate text-right"> 
                         <img src="../img/shopping/icon_chat.svg"  data-toggle="tooltip" data-placement="bottom" title="客服">
                     </div>
                 </div>
@@ -290,7 +290,6 @@
             
         </div> 
         <div class="addheight container mb-5"></div>
-        <div id="loginhtml"></div>
     </main>
 
     <footer class="shopping-cartfooter">
@@ -335,7 +334,6 @@
 
     <!-- custom js -->
     <script>    
-        $("#loginhtml").load("../login.html");
 
         // products-detail quantity min max control
         $(document).on('click', '.p-quantity button', function () { 
@@ -413,7 +411,6 @@
             if(nochklen==chklen){
                 $('input#'+sid).prop('checked',true); 
             }
-            $('.addheight').last().html(alllen+','+allchklen+','+chklen+','+nochklen+','+parentlen+','+ sid);
         });
          
         //stroe parent Subtotal

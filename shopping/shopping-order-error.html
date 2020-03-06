@@ -32,11 +32,10 @@
                 <div class="row">
                     <div class="col-3">
                         <div class="close-btn">
-                            <i class="material-icons">&#xE314;</i>
                         </div>
                     </div>
                     <div class="col-6 text-center">
-                        <div class="title-name fs-16">付款成功</div>
+                        <div class="title-name fs-16">付款失敗</div>
                     </div>
                     <div class="col-3 text-right">
                         <div class="close-btn"></div>
@@ -46,28 +45,22 @@
         </header>
 
         <main>        
-            <div class="order-step-box">
-                <ol class="step-list">
-                    <li class="">1</li>
-                    <li class="">2</li>
-                    <li class="active">3</li>
-                </ol>
-                <ol class="step-txt">
-                    <li>確認訂單</li>
-                    <li>付款</li>
-                    <li>訂購完成</li>
-                </ol>
-            </div>
-
-            <p class="order-success text-center">訂購完成!</p>
-
-            <div class="container">
-                <div class="row">
-                    <div class="col-6">
-                        <button class="btn-outline">查看訂單</button>
+            <div class="order-error-box">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 text-center">
+                            <div class="order-error">
+                                <img src="../img/shopping/payment-failed.png" alt="">
+                            </div>
+                            <p class="order-success text-center">喔喔！付款失敗了...請確認付款細節!</p>
+                        </div>
                     </div>
-                    <div class="col-6">
-                        <button class="btn-ok">繼續逛逛</button>
+                </div>
+                <div class="container text-center">
+                    <div class="row">
+                        <div class="col-12">
+                            <button class="btn onlineshopping-btn btn-ok" onclick="location.href='shopping-order.html'">返回確認帳單</button>
+                        </div>
                     </div>
                 </div>
             </div>

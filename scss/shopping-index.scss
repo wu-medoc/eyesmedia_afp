@@ -312,7 +312,7 @@ a {
                 margin-top: 0;
                 border-radius: 100px;
                 padding: 5px 20px;
-                font-size: 14px;
+                font-size: small;
                 font-weight: bold;
             }
         }
@@ -332,7 +332,7 @@ a {
                     color: $gray-color;
                 }
                 .material-icons{
-                    font-size: 14px;
+                    font-size: small;
                 }
             }
         }
@@ -870,7 +870,7 @@ a {
                     padding: 10px 15px;
                     color: #555;
                     text-align: center;
-                    font-size: 14px;
+                    font-size: small;
                 }
             }
 
@@ -1019,7 +1019,7 @@ a {
         }
 
         .store-group {
-            font-size: 14px;
+            font-size: small;
 
             .store-item {
                 display: flex;
@@ -1282,7 +1282,7 @@ a {
             border: none;
             background: #13334C;
             border-radius: 30px;
-            font-size: 14px;
+            font-size: small;
         }
     }
     .or-box{
@@ -1359,7 +1359,7 @@ a {
                         color: $gray-color;
                     }
                     .material-icons{
-                        font-size: 14px;
+                        font-size: small;
                     }
                 }
             }
@@ -1928,6 +1928,7 @@ footer{
     }
 }
 
+/* payment */
 .choice-method-list{
     li{
         display: flex;
@@ -1978,10 +1979,97 @@ footer{
         }
         .item-img{
             margin-right: 15px;
+            img{
+                height: 30px;
+            }
         }
     }
+    .main-list{
+        border-top: 1px $gray-light solid;
+        color:$blue-dark;
+        >li{
+            a{
+                display: flex;
+                align-items: center;
+                flex-wrap: wrap;
+                padding: 15px;
+                color:$blue-dark;
+                &.collapsed{
+                    .material-icons{
+                        transform: rotate(180deg);
+                    }
+                }
+            }
+            .item-img, .item-icon{
+                width: 32px;
+                margin-right: 15px;
+                img{
+                    vertical-align: sub;
+                    max-width: 32px;
+                }
+            }
+            .item-icon{
+                width: 26px;
+                height: 26px;
+                border: 1px #ccc dotted;
+                text-align: center;
+                border-radius: 2px;
+                .material-icons{
+                    font-size: 18px;
+                    vertical-align: text-top;
+                }
+            }
+            .card-type{
+                flex: 1;
+            }
+            .item-card-num{
+                margin-right: 10px;
+            }
+            .item-default{
+                min-width: 40px;
+                color: $member-default;
+                font-size: small;
+                text-align: right;
+            }
+            .sub-list{
+                flex: none;
+                width: 100%;
+                padding-left: 42px;
+                li{
+                    display: flex;
+                    flex-wrap: wrap;
+                    align-items: center;
+                    padding: 15px 15px 15px 0;
+                    border-top: 1px $gray-light solid;
+                    // &:last-child{
+                    //     border-bottom: 1px $gray-light solid;
+                    // }
+                    .item-dates{
+                        flex: none;
+                        width: 100%;
+                        display: flex;
+                        .item-date{
+                            flex: 1;
+                            padding-left: 45px;
+                        }
+                    }
+                }
+            }
+            div.item-default:not(.active){
+                visibility: hidden;
+            }
+        }
+    }
+    .setting-default{
+        border-top: 1px $gray-light solid;
+        border-bottom: 1px $gray-light solid;
+    }
+    .bank-swiper{
+        overflow: hidden;
+        position: relative;
+        padding-left: 40px;
+    }
 }
-
 .radio-box {
     display: block;
     position: relative;
@@ -2088,6 +2176,8 @@ footer{
     img{
         display: block;
         margin: 15px auto;
+        width: 70%;
+        max-width: 200px;
     }
 }
 
@@ -2095,7 +2185,16 @@ footer{
     margin-top: 48px;
     padding-top: 30px;
 }
-
+.order-ok,  
+.order-error {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    img{
+        width: auto;
+        max-height: 200px;
+    }
+}
 .order-success{
     margin: 30px auto;
 }

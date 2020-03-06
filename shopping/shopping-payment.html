@@ -29,16 +29,16 @@
         <header class="fixed-top container">
             <!-- header top -->
             <div class="header-secondary linebt-row">
-                <div class="row">
-                    <div class="col-3">
+                <div class="index-flex justify-content-between">
+                    <div class="item two">
                         <div class="close-btn" onclick="history.back();" data-toggle="tooltip" data-placement="bottom" title="回上一頁">
                             <i class="material-icons">&#xE314;</i>
                         </div>
                     </div>
-                    <div class="col-6 text-center">
+                    <div class="item three text-center">
                         <div class="title-name fs-16">付款方式</div>
                     </div>
-                    <div class="col-3 text-right">
+                    <div class="item two text-right">
                         <div class="close-btn"></div>
                     </div>
                 </div>
@@ -59,40 +59,79 @@
                 </ol>
             </div>
             <div class="choice-method-list">
-                <ul>
-                    <li>
+                <ul class="main-list">
+                    <li class="otherpay">
                         <div class="item item-img">
-                            <img src="../img/shopping/store/linepay_small.svg" alt="">
+                            <img src="../img/shopping/store/linepay_small.png" alt="">
                         </div>
                         <div class="item">
                             LINE Pay
                         </div>
                     </li>
-                    <li>
+                    <li class="otherpay">
                         <div class="item item-img">
-                            <img src="../img/shopping/store/fitbitpay_small.svg" alt="">
+                            <img src="../img/shopping/store/fitbitpay_small.png" alt="">
                         </div>
                         <div class="item">
                             fitbit pay
                         </div>
                     </li>
                     <li>
-                        <div class="item item-img">
-                            <img src="../img/shopping/store/creditcard_small.svg" alt="">
-                        </div>
-                        <div class="item">
-                            信用卡/ＶISA金融卡
-                        </div>
-                        <div class="item auto-left">
-                            <i class="material-icons">&#xE313;</i>
+                        <a class="collapsed w-100 p-0 banksp" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                            <div class="item item-img">
+                                <img src="../img/shopping/store/creditcard_small.png" alt="">
+                            </div>
+                            <div class="item">信用卡/ＶISA金融卡</div>
+                            <div class="item auto-left">
+                                <i class="material-icons">&#xE316;</i>
+                            </div>
+                        </a>
+                        <div class="collapse w-100" id="collapseExample">
+                            <!-- Slider main container -->
+                            <div class="bank-swiper"></div>
+                            <ul class="sub-list">
+                                <li class="lidisplay">
+                                    <div class="item item-img">
+                                        <img src="../img/member/creditcard-01.svg" alt="">
+                                    </div>
+                                    <div class="item card-type">mastercard</div>
+                                    <div class="item item-card-num">*1234</div>
+                                    <div class="item item-default auto-left active" onclick="location.href='shopping-cardinfo.html'"><i class="fas fa-check"></i><i class="fas fa-trash pl-2"></i></div>
+                                </li>
+                                <li class="lidisplay">
+                                    <div class="item item-img">
+                                        <img src="../img/member/creditcard-02.svg" alt="">
+                                    </div>
+                                    <div class="item card-type">mastercard</div>
+                                    <div class="item item-card-num">*1234</div>
+                                    <div class="item item-default auto-left" onclick="location.href='shopping-cardinfo.html'"><i class="fas fa-check"></i><i class="fas fa-trash pl-2"></i></div>
+                                </li>
+                                <li class="lidisplay">
+                                    <div class="item item-img">
+                                        <img src="../img/member/creditcard-03.svg" alt="">
+                                    </div>
+                                    <div class="item card-type">mastercard</div>
+                                    <div class="item item-card-num">*1234</div>
+                                    <div class="item item-default auto-left" onclick="location.href='shopping-cardinfo.html'"><i class="fas fa-check"></i><i class="fas fa-trash pl-2"></i></div>
+                                </li>
+                                <li>
+                                    <div class="item item-icon">
+                                        <i class="material-icons">&#xE145;</i>
+                                    </div>
+                                    <div class="item add-card">
+                                        <button class="btn animated-btn text-left p-0" onclick="location.href='shopping-input-num.html'">手動輸入卡號</button>
+                                    </div>
+                                </li>
+                                <div class="addheight mb-5"></div>
+                            </ul>
                         </div>
                     </li>
                 </ul>
             </div>
         </main>
 
-        <footer class="success-mode">
-            <button class="btn-ok">付款</button>
+        <footer class="success-mode container">
+            <button class="btn-ok" onclick="location.href='shopping-order-ok.html'">付款</button>
         </footer>
     
     </div>
@@ -113,7 +152,37 @@
     <!-- vendor js -->
     <script src="../js/vendor/swiper/js/swiper.min.js"></script>
     <script src="../js/vendor/imgLiquid.js"></script>
-    <script src="../js/masonry.pkgd.min.js"></script>
+    <script>
+        function bkswiper(){
+            var swiper = new Swiper('.swiper-container', {
+                loop: false,    
+                slidesPerView: 1.2,
+                spaceBetween: 10,
+                breakpoints: {
+                    640: {
+                    slidesPerView: 2,
+                    spaceBetween: 20
+                    }
+                }
+            });   
+        };
+
+        $( ".collapsed" ).on('click',function() {
+            if($('.bank-swiper').html()==""){
+                $('.bank-swiper').append("<div class='swiper-container'><div class='swiper-wrapper'><div class='swiper-slide'><img src='../img/shopping/bank/bk01.png' alt=''></div><div class='swiper-slide'><img src='../img/shopping/bank/bk02.png' alt=''></div></div></div>");
+                bkswiper();
+            }
+            $(".otherpay").removeClass('text-muted');
+            $(".lidisplay").siblings().children().removeClass('text-muted');
+        });
+
+        $( ".lidisplay" ).on('click',function() {
+            $(this).children().removeClass('text-muted');
+            $(this).children('.item-default').addClass('active');
+            $(this).siblings().children().addClass('text-muted').removeClass('active');
+            $('.otherpay').addClass('text-muted');
+        });
+    </script>
 </body>
 
 </html>

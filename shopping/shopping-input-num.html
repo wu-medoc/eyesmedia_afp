@@ -29,16 +29,16 @@
         <header class="fixed-top container">
             <!-- header top -->
             <div class="header-secondary linebt-row">
-                <div class="row">
-                    <div class="col-3">
-                        <div class="close-btn">
+                <div class="index-flex justify-content-between">
+                    <div class="item two">
+                        <div class="close-btn" onclick="history.back();" data-toggle="tooltip" data-placement="bottom" title="回上一頁">
                             <i class="material-icons">&#xE314;</i>
                         </div>
                     </div>
-                    <div class="col-6 text-center">
+                    <div class="item three text-center">
                         <div class="title-name fs-16">輸入卡號</div>
                     </div>
-                    <div class="col-3 text-right">
+                    <div class="item two text-right">
                         <div class="close-btn"></div>
                     </div>
                 </div>
@@ -46,51 +46,53 @@
         </header>
 
         <main>
-            <div class="input-number-box">     
-                <div class="container">
-                    <div class="row">
-                        <div class="col-12">
-                            <div class="input-type">
-                                <p>信用卡/簽帳金融卡卡號 </p>
-                                <input type="text" placeholder="0000 0000 0000 0000">
+            <form action="shopping-order-error.html" method="post">
+                <div class="input-number-box">     
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="input-type">
+                                    <p>信用卡/簽帳金融卡卡號 </p>
+                                    <input type="number" placeholder="0000 0000 0000 0000" class="form-control" id="validationDefault01" required>
+                                </div>
                             </div>
-                        </div>
-                        <div class="col-6">
-                            <div class="input-type">
-                                <p>有效年月</p>
-                                <input type="text" placeholder="MM/YY">
+                            <div class="col-6">
+                                <div class="input-type">
+                                    <p>有效年月</p>
+                                    <input type="number" placeholder="MM/YY" class="form-control" id="validationDefault02" required>
+                                </div>
                             </div>
-                        </div>
-                        <div class="col-6">
-                            <div class="input-type">
-                                <p>背面末三碼</p>
-                                <input type="text" placeholder="000">
+                            <div class="col-6">
+                                <div class="input-type">
+                                    <p>背面末三碼</p>
+                                    <input type="number" placeholder="000" class="form-control" id="validationDefault03" required>
+                                </div>
                             </div>
-                        </div>
-                        <div class="col-12">
-                            <div class="default-setting">
-                                <div class="item item-checkbox">
-                                    <div class="sitem-checkbox">
-                                        <div class="checkbox checkbox-primary">
-                                            <input id="products002" type="checkbox" class="checkedall">
-                                            <label for="products002"></label>同意加入信用卡,下次結帳更快速 
-                                        </div>  
+                            <div class="col-12">
+                                <div class="default-setting">
+                                    <div class="item item-checkbox small">
+                                        <div class="sitem-checkbox">
+                                            <div class="checkbox checkbox-primary">
+                                                <input id="products002" type="checkbox" class="checkedall">
+                                                <label for="products002"></label>同意加入信用卡,下次結帳更快速 
+                                            </div>  
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-12">
-                            <button class="btn-ok">付款</button>
+                            <div class="col-12">
+                                <button type="submit" class="btn onlineshopping-btn w-100">付款</button>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
+            </form>
             <div class="container">
                 <div class="row">
                     <div class="col-12">
                         <div class="newebPay text-center">
                             <p>本安全服務由藍新金流服務平台提供</p>
-                            <img src="../img/shopping/newebpay.svg" alt="">
+                            <img src="../img/shopping/newebpay.png" alt="">
                             <small>Powered by Neweb Technologies Co., Ltd.</small>
                         </div>
                     </div>
@@ -117,6 +119,34 @@
     <script src="../js/vendor/swiper/js/swiper.min.js"></script>
     <script src="../js/vendor/imgLiquid.js"></script>
     <script src="../js/masonry.pkgd.min.js"></script>
+    <script>  
+        //bootstrap validation
+        (function () {
+            "use strict";
+            window.addEventListener(
+                "load",
+                function () {
+                    // Fetch all the forms we want to apply custom Bootstrap validation styles to
+                    var forms = document.getElementsByClassName("needs-validation");
+                    // Loop over them and prevent submission
+                    var validation = Array.prototype.filter.call(forms, function (form) {
+                        form.addEventListener(
+                            "submit",
+                            function (event) {
+                                if (form.checkValidity() === false) {
+                                    event.preventDefault();
+                                    event.stopPropagation();
+                                }
+                                form.classList.add("was-validated");
+                            },
+                            false
+                        );
+                    });
+                },
+                false
+            );
+        })();
+    </script>
 </body>
 
 </html>

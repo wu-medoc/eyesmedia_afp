@@ -290,7 +290,7 @@ a:hover {
   margin-top: 0;
   border-radius: 100px;
   padding: 5px 20px;
-  font-size: 14px;
+  font-size: small;
   font-weight: bold;
 }
 
@@ -320,7 +320,7 @@ a:hover {
 }
 
 .other-discount-list .discount-item .discount-text p .material-icons {
-  font-size: 14px;
+  font-size: small;
 }
 
 .other-discount-list .discount-item .m-quantity img {
@@ -934,7 +934,7 @@ a:hover {
   padding: 10px 15px;
   color: #555;
   text-align: center;
-  font-size: 14px;
+  font-size: small;
 }
 
 .shopping-storedetail .nav-container nav .levelOne > li:hover {
@@ -1087,7 +1087,7 @@ a:hover {
 }
 
 .store-container .store-tab-box .store-group {
-  font-size: 14px;
+  font-size: small;
 }
 
 .store-container .store-tab-box .store-group .store-item {
@@ -1379,7 +1379,7 @@ a:hover {
   border: none;
   background: #13334C;
   border-radius: 30px;
-  font-size: 14px;
+  font-size: small;
 }
 
 .shopping-discount .or-box {
@@ -1481,7 +1481,7 @@ a:hover {
 }
 
 .shopping-discount .can-use-discount-list li .item-middle p .material-icons {
-  font-size: 14px;
+  font-size: small;
 }
 
 .shopping-discount .can-use-discount-list li .item-see-more {
@@ -2195,6 +2195,7 @@ footer .order-go-pay .item {
   margin-left: auto;
 }
 
+/* payment */
 .choice-method-list li {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2258,6 +2259,126 @@ footer .order-go-pay .item {
 
 .choice-method-list li .item-img {
   margin-right: 15px;
+}
+
+.choice-method-list li .item-img img {
+  height: 30px;
+}
+
+.choice-method-list .main-list {
+  border-top: 1px #eee solid;
+  color: #182B56;
+}
+
+.choice-method-list .main-list > li a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 15px;
+  color: #182B56;
+}
+
+.choice-method-list .main-list > li a.collapsed .material-icons {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.choice-method-list .main-list > li .item-img, .choice-method-list .main-list > li .item-icon {
+  width: 32px;
+  margin-right: 15px;
+}
+
+.choice-method-list .main-list > li .item-img img, .choice-method-list .main-list > li .item-icon img {
+  vertical-align: sub;
+  max-width: 32px;
+}
+
+.choice-method-list .main-list > li .item-icon {
+  width: 26px;
+  height: 26px;
+  border: 1px #ccc dotted;
+  text-align: center;
+  border-radius: 2px;
+}
+
+.choice-method-list .main-list > li .item-icon .material-icons {
+  font-size: 18px;
+  vertical-align: text-top;
+}
+
+.choice-method-list .main-list > li .card-type {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.choice-method-list .main-list > li .item-card-num {
+  margin-right: 10px;
+}
+
+.choice-method-list .main-list > li .item-default {
+  min-width: 40px;
+  color: #FD5F00;
+  font-size: small;
+  text-align: right;
+}
+
+.choice-method-list .main-list > li .sub-list {
+  -webkit-box-flex: 0;
+      -ms-flex: none;
+          flex: none;
+  width: 100%;
+  padding-left: 42px;
+}
+
+.choice-method-list .main-list > li .sub-list li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 15px 15px 15px 0;
+  border-top: 1px #eee solid;
+}
+
+.choice-method-list .main-list > li .sub-list li .item-dates {
+  -webkit-box-flex: 0;
+      -ms-flex: none;
+          flex: none;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.choice-method-list .main-list > li .sub-list li .item-dates .item-date {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding-left: 45px;
+}
+
+.choice-method-list .main-list > li div.item-default:not(.active) {
+  visibility: hidden;
+}
+
+.choice-method-list .setting-default {
+  border-top: 1px #eee solid;
+  border-bottom: 1px #eee solid;
+}
+
+.choice-method-list .bank-swiper {
+  overflow: hidden;
+  position: relative;
+  padding-left: 40px;
 }
 
 .radio-box {
@@ -2373,11 +2494,30 @@ footer .order-go-pay .item {
 .newebPay img {
   display: block;
   margin: 15px auto;
+  width: 70%;
+  max-width: 200px;
 }
 
 .order-error-box {
   margin-top: 48px;
   padding-top: 30px;
+}
+
+.order-ok,
+.order-error {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.order-ok img,
+.order-error img {
+  width: auto;
+  max-height: 200px;
 }
 
 .order-success {

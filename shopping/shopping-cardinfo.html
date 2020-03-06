@@ -29,44 +29,63 @@
         <header class="fixed-top container">
             <!-- header top -->
             <div class="header-secondary linebt-row">
-                <div class="row">
-                    <div class="col-3">
-                        <div class="close-btn">
+                <div class="index-flex justify-content-between">
+                    <div class="item two">
+                        <div class="close-btn" onclick="history.back();" data-toggle="tooltip" data-placement="bottom" title="回上一頁">
                             <i class="material-icons">&#xE314;</i>
                         </div>
                     </div>
-                    <div class="col-6 text-center">
-                        <div class="title-name fs-16">付款失敗</div>
+                    <div class="item three text-center">
+                        <div class="title-name fs-16">信用卡資訊</div>
                     </div>
-                    <div class="col-3 text-right">
+                    <div class="item two text-right">
                         <div class="close-btn"></div>
                     </div>
                 </div>
             </div>
         </header>
 
-        <main>        
-            <div class="order-error-box">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-12 text-center">
-                            <div class="order-error">
-                                <img src="../img/shopping/payment_failed.svg" alt="">
+        <form>
+            <main>
+                <!--信用卡資訊3-->
+                <div class="choice-method-list mt-5">
+                    <ul class="main-list">
+                        <li>
+                            <a class="collapsed w-100 p-0 banksp" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                                <div class="item item-img">
+                                    <img src="../img/shopping/store/creditcard_small.png" alt="">
+                                </div>
+                                <div class="item">現金回饋卡/匯豐</div>
+                                <div class="item auto-left">
+                                    <i class="material-icons">&#xE316;</i>
+                                </div>
+                            </a>
+                            <div class="collapse w-100" id="collapseExample">
+                                <ul class="sub-list">
+                                    <li class="lidisplay">
+                                        <div class="item item-img">
+                                            <img src="../img/member/creditcard-01.svg" alt="">
+                                        </div>
+                                        <div class="item card-type">mastercard</div>
+                                        <div class="item item-card-num">*1234</div>
+                                        <div class="item index-flex">
+                                            <div class="item pl-5">有效日期</div>
+                                            <div class="item text-right">02/2025</div>
+                                        </div>
+                                    </li>
+                                </ul>
                             </div>
-                            <p class="order-success text-center">喔喔！付款失敗了...請確認付款細節!</p>
-                        </div>
-                    </div>
+                        </li>
+                    </ul>
                 </div>
-                <div class="container text-center">
-                    <div class="row">
-                        <div class="col-12">
-                            <button class="btn-ok">返回確認帳單</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-        </main>
+            </main>
+
+            <footer class="success-mode container">
+                <button class="btn-ok">刪除</button>
+            </footer>
+
+
+        </form>
     
     </div>
 
@@ -86,14 +105,10 @@
     <!-- vendor js -->
     <script src="../js/vendor/swiper/js/swiper.min.js"></script>
     <script src="../js/vendor/imgLiquid.js"></script>
-    <script src="../js/masonry.pkgd.min.js"></script>
+    <script src="../js/animateCss.js"></script>
+    <script src="../js/index.js"></script>
     <script>
-    (function(){
-        var mySwiper = new Swiper('.swiper-container', {
-            slidesPerView: 1.3,
-            spaceBetween: 10,
-        });
-    })()
+
     </script>
 </body>
 
