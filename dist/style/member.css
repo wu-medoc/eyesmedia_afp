@@ -247,6 +247,7 @@
   width: 24px;
   height: 24px;
   right: 0;
+  top: 5px;
 }
 
 .my-list-box ul li .input-box .datecalendar:focus::after,
@@ -256,6 +257,7 @@
   display: none;
   position: absolute;
   right: 0;
+  top: 5px;
 }
 
 .my-list-box ul li button {
