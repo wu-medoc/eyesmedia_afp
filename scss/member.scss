@@ -184,8 +184,12 @@
                     text-align: right;
                     text-align: -webkit-right;
                     width: 180px;
+                    background: url('../../img/member/ic_date_range.png') no-repeat;
+                    background-size: 10%;
+                    background-position: 100% 50%;
+                    z-index: 1;
                     &::-webkit-inner-spin-button { display: none; }
-                    &::-webkit-calendar-picker-indicator { background: #fff; }
+                    &::-webkit-calendar-picker-indicator { background: #fff; }                    
                     // ::-webkit-datetime-edit { padding: 1em; }
                     // ::-webkit-datetime-edit-fields-wrapper { background: silver; }
                     // ::-webkit-datetime-edit-text { color: red; padding: 0 0.3em; }
@@ -194,27 +198,6 @@
                     // ::-webkit-datetime-edit-year-field { color: purple; }
                     // ::-webkit-inner-spin-button { display: none; }
                     // ::-webkit-calendar-picker-indicator { background: orange; }
-                }
-                .datecalendar::after{
-                    content: '';
-                    background: url('../../img/member/ic_date_range.png') no-repeat;
-                    background-size: 100%;
-                    display: block;
-                    position: absolute;
-                    width: 24px;
-                    height: 24px;
-                    right:  0;
-                    bottom: 5px;
-                    //z-index: 1060;
-                }                
-                .datecalendar:focus::after, 
-                .datecalendar:hover::after{
-                    content: '';
-                    background: transparent;
-                    display: none;
-                    position: absolute;
-                    right: 0;
-                    bottom: 5px;                    
                 }
             }
             button{

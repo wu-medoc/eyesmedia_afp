@@ -228,6 +228,10 @@
   text-align: right;
   text-align: -webkit-right;
   width: 180px;
+  background: url("../../img/member/ic_date_range.png") no-repeat;
+  background-size: 10%;
+  background-position: 100% 50%;
+  z-index: 1;
 }
 
 .my-list-box ul li .input-box input[type='date']::-webkit-inner-spin-button {
@@ -236,28 +240,6 @@
 
 .my-list-box ul li .input-box input[type='date']::-webkit-calendar-picker-indicator {
   background: #fff;
-}
-
-.my-list-box ul li .input-box .datecalendar::after {
-  content: '';
-  background: url("../../img/member/ic_date_range.png") no-repeat;
-  background-size: 100%;
-  display: block;
-  position: absolute;
-  width: 24px;
-  height: 24px;
-  right: 0;
-  bottom: 5px;
-}
-
-.my-list-box ul li .input-box .datecalendar:focus::after,
-.my-list-box ul li .input-box .datecalendar:hover::after {
-  content: '';
-  background: transparent;
-  display: none;
-  position: absolute;
-  right: 0;
-  bottom: 5px;
 }
 
 .my-list-box ul li button {
