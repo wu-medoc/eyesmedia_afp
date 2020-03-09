@@ -435,11 +435,11 @@ function openMask(e) {
 // overlay-choice open close control
 $('.open-overlay-choice').on("click", function () {
     $('.overlay-choice').toggle();
-    $('.mask-bk.fade.show').removeClass("d-none");
+    $('.modal-backdrop.fade.show').removeClass("d-none");
 });
 $('.close-overlay-choice').on("click", function () {
     $('.overlay-choice').toggle();
-    $('.mask-bk.fade.show').addClass("d-none");
+    $('.modal-backdrop.fade.show').addClass("d-none");
 });
 
 // animated control slideInRight slideOutRight
@@ -472,10 +472,10 @@ $('.close-overlay-choice').on("click", function () {
 
 // black mask sortLayer use
 $('.masklayer').on("click", function () {
-    $('body').append("<div class='mask-bk container'></div>");
+    $('body').append("<div class='modal-backdrop container'></div>");
 });
 $('.masklayer-close').on("click", function () {
-    $('.mask-bk').remove();
+    $('.modal-backdrop').remove();
 });
 
 // multilayer animateCss
@@ -500,7 +500,7 @@ var sLayer = [];
 function callsortLayer(nextLayer) {
     if (sLayer.length === 0) { 
         $('.sortlayer').animateCss('slideInRight', '+d-block container faster');
-        $('body').append("<div class='mask-bk container'></div>");
+        $('body').append("<div class='modal-backdrop container'></div>");
     }
 	if (sLayer[sLayer.length - 1] !== nextLayer) { sLayer.push(nextLayer); }
     (($('.wrap').height()) < ($(nextLayer).height())) ? ($('.sortlayer').css('position','absolute')):($('.sortlayer').css('position','fixed').css('overflow-y','auto'));
@@ -510,7 +510,7 @@ function backsortLayer() {
 	$(sLayer.pop()).animateCss('slideOutRight', '-d-block container faster').removeAttr('style');
     if (sLayer.length === 0) {
         $('.sortlayer').animateCss('slideOutRight', '-d-block container faster').removeAttr('style');
-        $('.mask-bk').remove();
+        $('.modal-backdrop').remove();
         sLayer.length=0;
     }
 };
@@ -519,7 +519,7 @@ var tLayerUp = [];
 function callLayerUp(nextLayerUp) {
     if (tLayerUp.length === 0) {         
         $('.uplayer').animateCss('slideInUp', '+d-block container faster');
-        $('body').append("<div class='mask-bk container'></div>");
+        $('body').append("<div class='modal-backdrop container'></div>");
      }
 	if (tLayerUp[tLayerUp.length - 1] !== nextLayerUp) { tLayerUp.push(nextLayerUp); }
     (($('.wrap').height()) < ($(nextLayerUp).height())) ? ($('.uplayer').css('position','absolute')):($('.uplayer').css('position','fixed').css('overflow-y','auto'));
@@ -530,6 +530,6 @@ function backLayerUp() {
     if (tLayerUp.length === 0) { 
         $('.uplayer').animateCss('slideOutDown', '-d-block container faster').removeAttr('style');
         tLayerUp.length=0;
-        $('.mask-bk').remove();
+        $('.modal-backdrop').remove();
     }
 };

@@ -929,14 +929,6 @@ button.active {
   font-size: 13px;
 }
 
-.card-item .info-box li .shopping-store-badge .badge {
-  line-height: 2;
-  margin-right: 5px;
-  padding-left: 8px;
-  padding-right: 8px;
-  font-size: 70%;
-}
-
 .card-item .info-box li.info-near {
   margin-top: auto;
 }
@@ -963,6 +955,15 @@ button.active {
 
 .card-item .info-box .item-ticket .material-icons {
   font-size: 18px;
+}
+
+.shopping-store-badge .badge {
+  line-height: 2;
+  margin-right: 5px;
+  padding-left: 8px;
+  padding-right: 8px;
+  font-size: 70%;
+  border: 1px solid #FD5F00;
 }
 
 #map {

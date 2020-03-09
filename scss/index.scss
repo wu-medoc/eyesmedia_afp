@@ -2500,6 +2500,7 @@ td.linebt-td,
   background-image: none;
   border-radius: 30px;
 }
+.text-explore, 
 .text-index{
   color: $index-default;
 }  
@@ -2550,7 +2551,7 @@ td.linebt-td,
   background-color: #000;
   opacity: .6;
 }
-.mask-bk{
+.modal-backdrop{
   position: fixed;
   top: 0;
   right: 0;
@@ -2838,7 +2839,7 @@ button.open-page {
   background-color: #dc3545;
 }
 .badge img {
-  height: 2.3em;
+  height: 2em;
 }
 
 /* add favorite */
@@ -3243,7 +3244,12 @@ button.open-page {
       }
   }
 }
-
+img.coinimg-m{
+    width: 1.5em;
+}
+img.nearbyimg{
+  height: 2em;
+}
 /* overlay menu*/
 .overlay{
   display: block;

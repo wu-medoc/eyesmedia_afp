@@ -489,15 +489,6 @@ button.active{
             display: flex;
             align-items: center;
             font-size: 13px;
-            .shopping-store-badge {
-                .badge {
-                    line-height: 2;
-                    margin-right: 5px;
-                    padding-left: 8px;
-                    padding-right: 8px;
-                    font-size: 70%;
-                }
-            }
             &.info-near {
                 margin-top: auto;
             }
@@ -525,6 +516,16 @@ button.active{
     }
 }
 
+.shopping-store-badge {
+    .badge {
+        line-height: 2;
+        margin-right: 5px;
+        padding-left: 8px;
+        padding-right: 8px;
+        font-size: 70%;
+        border:1px solid $onlineshopping-default;
+    }
+}
 #map {
     height: 100%;
 }

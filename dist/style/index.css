@@ -2749,6 +2749,7 @@ td.linebt-td,
   border-radius: 30px;
 }
 
+.text-explore,
 .text-index {
   color: #FD5F00;
 }
@@ -2810,7 +2811,7 @@ td.linebt-td,
   opacity: .6;
 }
 
-.mask-bk {
+.modal-backdrop {
   position: fixed;
   top: 0;
   right: 0;
@@ -3172,7 +3173,7 @@ button.open-page img {
 }
 
 .badge img {
-  height: 2.3em;
+  height: 2em;
 }
 
 /* add favorite */
@@ -3771,6 +3772,14 @@ button.open-page img {
 .mycoin-couponbox.card-columns .item.three p:last-child {
   font-size: .7em;
   color: #8E8E93;
+}
+
+img.coinimg-m {
+  width: 1.5em;
+}
+
+img.nearbyimg {
+  height: 2em;
 }
 
 /* overlay menu*/

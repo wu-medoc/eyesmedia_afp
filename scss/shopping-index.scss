@@ -501,6 +501,7 @@ a {
         margin-left: auto;
         position: relative;
     }
+    span.active, 
     button.active {
         color: $onlineshopping-default ;
         font-weight: bold;
@@ -785,6 +786,28 @@ a {
       button.active{
         border: 1px solid $onlineshopping-default;
       }
+      input[type=radio]{
+        -moz-appearance: none;
+        -webkit-appearance: none;
+        appearance: none;
+        opacity: 0;
+        &+label{
+            border: 1px solid #eee;
+            padding: .2em .5em;
+            margin: .2em;
+            width: 100%;
+            text-align: center;
+            border-radius: .25em;
+        }
+        &:checked+label{
+            border: 1px solid $onlineshopping-default;
+            padding: .2em .5em;
+            margin: .2em;
+            width: 100%;
+            text-align: center;
+            border-radius: .25em;
+        }
+      }
     }
     .open-page-title {
       font-weight: bold;
@@ -970,6 +993,11 @@ a {
         .shopping-store-badge {
             .badge {
                 line-height: 2;
+                margin-right: 5px;
+                padding-left: 8px;
+                padding-right: 8px;
+                font-size: 70%;
+                border:1px solid $onlineshopping-default;
             }
         }
         .store-distance {
@@ -1636,6 +1664,10 @@ a {
                 font-size: .7em;
                 color: $gray-color;
             }
+            .item-note{
+                font-size: .7em;
+                color: $onlineshopping-default;
+            }
             .item-total-price{
                 color: tomato;
                 font-weight: 700;
@@ -1896,7 +1928,7 @@ footer{
         vertical-align: top;
     }
     input{
-        &[type="text"]{
+        &[type=text]{
             text-align: left;
             border: 1px #eee solid;
             padding: 5px 10px;

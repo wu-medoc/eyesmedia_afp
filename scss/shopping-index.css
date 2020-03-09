@@ -1,18 +1,21 @@
 /*
 Error: Invalid CP950 character "\xE5"
-        on line 3 of D:\eyesmedia\ASIAfunPASS\github\afp\eyesmedia_afp\scss\global.scss
+        on line 214 of D:\eyesmedia\ASIAfunPASS\github\afp\eyesmedia_afp\scss\shopping-index.scss
 
-1: html, body {
-2:   border: 0;
-3:   font-family: 'Helvetica Neue', 'Helvetica', 'Arial', 'PingFang TC', '微软雅黑', 'Microsoft YaHei', '华文细黑', 'STHeiti', sans-serif;
-4:   -webkit-font-smoothing: antialiased;
-5:   -moz-osx-font-smoothing: grayscale;
-6:   line-height: 1.5;
-7:   margin: 0;
-8:   padding: 0;
+209:             }
+210:         }
+211:     }
+212: }
+213: 
+214: /* 優惠券 *\/
+215: .other-discount-list{
+216:     background: $gray-light8;
+217:     padding: 0;
+218:     .discount-more{
+219:         color: $blue-dark;
 
 Backtrace:
-D:\eyesmedia\ASIAfunPASS\github\afp\eyesmedia_afp\scss\global.scss:3
+D:\eyesmedia\ASIAfunPASS\github\afp\eyesmedia_afp\scss\shopping-index.scss:214
 C:/Program Files/Adobe/Adobe Dreamweaver CC 2018/ruby/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/util.rb:1325:in `rescue in block in find_encoding_error'
 C:/Program Files/Adobe/Adobe Dreamweaver CC 2018/ruby/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/util.rb:1322:in `block in find_encoding_error'
 C:/Program Files/Adobe/Adobe Dreamweaver CC 2018/ruby/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/util.rb:1321:in `each'
@@ -34,4 +37,4 @@ C:/Program Files/Adobe/Adobe Dreamweaver CC 2018/ruby/bin/sass:22:in `<main>'
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Invalid CP950 character \"\xE5\"\A         on line 3 of D:\eyesmedia\ASIAfunPASS\github\afp\eyesmedia_afp\scss\global.scss\A \A 1: html, body {\A 2:   border: 0;\A 3:   font-family: 'Helvetica Neue', 'Helvetica', 'Arial', 'PingFang TC', '微软雅黑', 'Microsoft YaHei', '华文细黑', 'STHeiti', sans-serif;\A 4:   -webkit-font-smoothing: antialiased;\A 5:   -moz-osx-font-smoothing: grayscale;\A 6:   line-height: 1.5;\A 7:   margin: 0;\A 8:   padding: 0;"; }
+  content: "Error: Invalid CP950 character \"\xE5\"\A         on line 214 of D:\eyesmedia\ASIAfunPASS\github\afp\eyesmedia_afp\scss\shopping-index.scss\A \A 209:             }\A 210:         }\A 211:     }\A 212: }\A 213: \A 214: /* 優惠券 */\A 215: .other-discount-list{\A 216:     background: $gray-light8;\A 217:     padding: 0;\A 218:     .discount-more{\A 219:         color: $blue-dark;"; }

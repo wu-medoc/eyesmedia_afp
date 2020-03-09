@@ -519,6 +519,7 @@ a:hover {
   position: relative;
 }
 
+.shopping-productsdetail span.active,
 .shopping-productsdetail button.active {
   color: #FD5F00;
   font-weight: bold;
@@ -831,6 +832,31 @@ a:hover {
   border: 1px solid #FD5F00;
 }
 
+.productsformat .open-page-body input[type=radio] {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  opacity: 0;
+}
+
+.productsformat .open-page-body input[type=radio] + label {
+  border: 1px solid #eee;
+  padding: .2em .5em;
+  margin: .2em;
+  width: 100%;
+  text-align: center;
+  border-radius: .25em;
+}
+
+.productsformat .open-page-body input[type=radio]:checked + label {
+  border: 1px solid #FD5F00;
+  padding: .2em .5em;
+  margin: .2em;
+  width: 100%;
+  text-align: center;
+  border-radius: .25em;
+}
+
 .productsformat .open-page-title {
   font-weight: bold;
   background-color: #eee;
@@ -1029,6 +1055,11 @@ a:hover {
 
 .store-container .store-info-box .shopping-store-badge .badge {
   line-height: 2;
+  margin-right: 5px;
+  padding-left: 8px;
+  padding-right: 8px;
+  font-size: 70%;
+  border: 1px solid #FD5F00;
 }
 
 .store-container .store-info-box .store-distance {
@@ -1831,6 +1862,11 @@ a:hover {
   color: #8E8E93;
 }
 
+.order-box .order-method-box li .item-note {
+  font-size: .7em;
+  color: #FD5F00;
+}
+
 .order-box .order-method-box li .item-total-price {
   color: tomato;
   font-weight: 700;
@@ -2151,7 +2187,7 @@ footer .order-go-pay .item {
   vertical-align: top;
 }
 
-.electronic-choice-list input[type="text"] {
+.electronic-choice-list input[type=text] {
   text-align: left;
   border: 1px #eee solid;
   padding: 5px 10px;
@@ -2159,7 +2195,7 @@ footer .order-go-pay .item {
 }
 
 @media (min-width: 768px) {
-  .electronic-choice-list input[type="text"] {
+  .electronic-choice-list input[type=text] {
     width: 550px;
   }
 }
