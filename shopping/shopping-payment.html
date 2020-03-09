@@ -156,12 +156,18 @@
         function bkswiper(){
             var swiper = new Swiper('.swiper-container', {
                 loop: false,    
-                breakpoints: {
-                    640: {
+                slidesPerView: 2,
+                spaceBetween: 20,
+                breakpoints: { 
+                    320: {
                     slidesPerView: 1.2,
                     spaceBetween: 10
                     },
-                    1024: {
+                    480: { 
+                    slidesPerView: 1.2,
+                    spaceBetween: 15
+                    },
+                    640: {
                     slidesPerView: 2,
                     spaceBetween: 20
                     }
