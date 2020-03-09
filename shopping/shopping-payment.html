@@ -153,8 +153,12 @@
     <script src="../js/vendor/swiper/js/swiper.min.js"></script>
     <script src="../js/vendor/imgLiquid.js"></script>
     <script>
-        function bkswiper(){
-            var swiper = new Swiper('.swiper-container', {
+
+
+        $( ".collapsed" ).on('click',function() {
+            if($('.bank-swiper').html()==""){
+                $('.bank-swiper').append("<div class='swiper-container'><div class='swiper-wrapper'><div class='swiper-slide'><img src='../img/shopping/bank/bk01.png' alt=''></div><div class='swiper-slide'><img src='../img/shopping/bank/bk02.png' alt=''></div></div></div>");
+                var swiper = new Swiper('.swiper-container', {
                 loop: false,    
                 slidesPerView: 2,
                 spaceBetween: 20,
@@ -173,12 +177,6 @@
                     }
                 }
             });   
-        };
-
-        $( ".collapsed" ).on('click',function() {
-            if($('.bank-swiper').html()==""){
-                $('.bank-swiper').append("<div class='swiper-container'><div class='swiper-wrapper'><div class='swiper-slide'><img src='../img/shopping/bank/bk01.png' alt=''></div><div class='swiper-slide'><img src='../img/shopping/bank/bk02.png' alt=''></div></div></div>");
-                bkswiper();
             }
             $(".otherpay").css('opacity','1');
             $(".lidisplay").siblings().children().css('opacity','1');

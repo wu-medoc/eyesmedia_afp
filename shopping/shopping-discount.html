@@ -41,13 +41,14 @@
             <div class="or-box text-center">
                 <span>或者</span>
             </div>
-            <p class="canuse-discount-txt font-bold">可使用的優惠券</p>
+            <p class="canuse-discount-txt font-bold">可使用的優惠券
+                <input type="reset" value="重設" class="float-right btn"></p>
             <!-- 可使用的優惠券 -->
-            <form id="store1-discount">
+            <form id="store1">
                 <div class="can-use-discount-list">
                     <p class="can-use-title"><span>昇恆昌</span> 可選擇<span>二</span>張</p>
                     <ul>
-                        <li>
+                        <li class="checkedli">
                             <div class="item item-img">
                                 <img src="https://picsum.photos/id/684/600/400" alt="">
                             </div>
@@ -56,15 +57,14 @@
                                 <p>9折 折扣券</p>
                                 <p>2019/11/15 ~ 2019/12/31</p>
                             </div>
-                            <div class="item item-checkbox">
-                                <div class="sitem-checkbox">
-                                    <div class="checkbox checkbox-primary">
-                                        <input id="discount001" type="checkbox" class="checkedall store01"><label for="discount001"></label>  
-                                    </div>  
+                            <label class="radio-box">
+                                <div class="item">
+                                    <input type="radio" name="radio" id="discount001" class="store1">
+                                    <span class="checkmark"></span>
                                 </div>
-                            </div>
+                            </label>
                         </li>
-                        <li>
+                        <li class="checkedli">
                             <div class="item item-img">
                                 <img src="https://picsum.photos/id/684/600/400" alt="">
                             </div>
@@ -73,22 +73,21 @@
                                 <p>8折 折扣券</p>
                                 <p>2019/11/15 ~ 2019/12/31</p>
                             </div>
-                            <div class="item item-checkbox">
-                                <div class="sitem-checkbox">
-                                    <div class="checkbox checkbox-primary">
-                                        <input id="discount002" type="checkbox" class="checkedall store01" checked><label for="discount002"></label>  
-                                    </div>  
+                            <label class="radio-box">
+                                <div class="item">
+                                    <input type="radio" name="radio" id="discount002" class="store1">
+                                    <span class="checkmark"></span>
                                 </div>
-                            </div>
+                            </label>
                         </li>
                     </ul>
                 </div>
             </form>            
-            <form id="store2-discount">
+            <form id="store2">
                 <div class="can-use-discount-list">
                     <p class="can-use-title"><span>新光三越</span> 可選擇<span>一</span>張</p>
                     <ul>
-                        <li>
+                        <li class="checkedli">
                             <div class="item item-img">
                                 <img src="https://picsum.photos/id/684/600/400" alt="">
                             </div>
@@ -97,13 +96,12 @@
                                 <p>9折 折扣券</p>
                                 <p>2019/11/15 ~ 2019/12/31</p>
                             </div>
-                            <div class="item item-checkbox">
-                                <div class="sitem-checkbox">
-                                    <div class="checkbox checkbox-primary">
-                                        <input id="discount003" type="checkbox" class="checkedall store02"><label for="discount003"></label>  
-                                    </div>  
+                            <label class="radio-box">
+                                <div class="item">
+                                    <input type="radio" name="radio2" id="discount003" class="store2">
+                                    <span class="checkmark"></span>
                                 </div>
-                            </div>
+                            </label>
                         </li>
                     </ul>
                 </div>
@@ -112,7 +110,7 @@
             <p class="canuse-discount-txt font-bold mt-0">本次結帳無法用的優惠券</p>
             <div class="can-use-discount-list">
                 <ul>
-                    <li>
+                    <li class="checkedli">
                         <div class="item item-img">
                             <img src="https://picsum.photos/id/684/600/400" alt="">
                         </div>
@@ -133,19 +131,19 @@
             <!-- total price -->
             <div class="total-price-box">
                 <div class="total-header">
-                    <div class="discount001" style="display:none;">
+                    <div class="store1 discount001" style="display:none;">
                         <div class="item-group small">
                             <div class="item"><p class="txt-line-clamp1">昇恆昌 9折 折扣券</p></div>
                             <div class="item discount-price" value="88">88 元</div>
                         </div>
                     </div>
-                    <div class="discount002" style="display:block;">
+                    <div class="store1 discount002" style="display:none;">
                         <div class="item-group small">
                             <div class="item"><p class="txt-line-clamp1">昇恆昌 8折 折扣券</p></div>
                             <div class="item discount-price" value="288">288 元</div>
                         </div>
                     </div>
-                    <div class="discount003" style="display:none;">
+                    <div class="store2 discount003" style="display:none;">
                         <div class="item-group small">
                             <div class="item"><p class="txt-line-clamp1">新光三越 9折 折扣券</p></div>
                             <div class="item discount-price" value="188">188 元</div>
@@ -155,7 +153,7 @@
                 <div class="total-body">
                     <div class="item-group">
                         <div class="item">總共優惠金額</div>
-                        <div class="item price-subtotal" value="288">288 元</div>
+                        <div class="item price-subtotal" value="0">0 元</div>
                     </div>
                 </div>
                 <div class="total-footer">
@@ -193,24 +191,30 @@
     <!-- custom js -->
     <script src="../js/animateCss.js"></script>
     <script>    
-    var distotal=$('.price-subtotal').attr('value');
-    $('.checkedall').on('click', function() { 
-        var ckid=$(this).attr('id');  
-        if($(this).is(':checked')){
-            $('.'+ckid).attr("style","display:block");
-        }else{
-            $('.'+ckid).attr("style","display:none");
-        }
-        $('.'+ckid).each(function() {
-            if(($(this).attr("style"))=="display:block"){
+    var distotal=parseInt($('.price-subtotal').attr('value'));
+    $('.checkedli').on('click', function() { 
+        var ckid=$(this).children().find('input').attr('id'); 
+        var ckstroe=$(this).children().find('input').attr('class'); 
+        $('input#'+ckid).prop('checked', true);
+        $('input[type=radio]').each(function() {
+            var id=$(this).attr('id');
+            ($(this).is(':checked')) ? $('.'+id).attr("style","display:block") : $('.'+id).attr("style","display:none");
+        });
+        distotal=0;
+        $('.total-header>div').each(function() {
+            if (($(this).attr("style"))=="display:block")
                 distotal += parseInt($(this).find('.discount-price').attr('value'));
-            }else{
-                distotal -= parseInt($(this).find('.discount-price').attr('value'));
-            }
         });
         sumtotal(distotal); 
     });
-
+    //reset
+    $('input[type=reset]').on('click', function() { 
+        $('form').each(function() {
+            $(this)[0].reset();
+        });
+        $('.total-header>div').attr("style","display:none");
+        sumtotal(0);
+    });
     //total display
     function sumtotal(e){
         $('.price-subtotal').text('$'+formatPrice(e)+'元');
