@@ -533,3 +533,13 @@ function backLayerUp() {
         $('.modal-backdrop').remove();
     }
 };
+
+// //onelayer use animateCss
+// var oneLayer = [];
+// function callLayerOne(nextLayerOne) {
+//     tLayerUp.push(nextLayerOne);
+// 	$(nextLayerOne).animateCss('slideInRight', '+d-block container faster');
+// };
+// function backLayerOne() {
+// 	$(oneLayer.pop()).animateCss('slideOutRight', '-d-block container faster');
+// };
