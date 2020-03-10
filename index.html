@@ -37,80 +37,90 @@
     <header>
         <!-- header top -->
         <div class="kv-box container">
-            <nav>
                 <div class="pc-top center-v" id="pc-top">
                   <div class="pc-top-box container">
-                    <div class="for-pc">
-                        <div class="login-top">
-                            <div class="kv-small pt-1">
-                            <!-- login trigger modal -->
-                            <button type="button" id="kv-btn-log" class="btn btn-login btn-sm p-0" data-toggle="modal" data-target="#loginModalCenter">
-                                登入
-                            </button>
-                            <span>|</span>               
-                            <button type="button" id="kv-btn-reg" class="btn btn-login btn-sm p-0" data-toggle="modal" data-target="#registeredModalCenter">
-                                註冊
-                            </button> 
-                            你好，曉龍！
-                            </div>
-                        </div>          
-                    </div>
-                    <div class="kv-top d-flex align-items-baseline">
-                        <div class="kv-iconbox">
-                            <div class="kv-icon">
-                                <img src="img/index/icons/icon_scan.png"><br>
-                                掃碼
-                            </div>
-                            <div class="kv-icon">
-                                <img src="img/index/icons/icon_code.png"><br>
-                                乘車碼
-                            </div>
-                            <div class="kv-icon">
-                                <img src="img/index/icons/icon_wallet.png"><br>
-                                付款
-                            </div>
-                        </div>
-                        <div class="top-item logo">
-                            <a href="">
-                                <img src="img/index/logo.png" alt="">
-                            </a>
-                        </div>
-                        <div class="top-item climate for-mobile">
-                            <ul>
-                                <li>
-                                    <p>台北<i class="material-icons">&#xE313;</i><small>20&deg;C</small></p>
-                                </li>
-                                <li class="small pt-3">
+                        <div class="for-pc">
+                            <div class="login-top">
+                                <div class="kv-small pt-2">
+                                    <!-- login trigger modal -->
+                                    <button type="button" id="kv-btn-log" class="btn btn-login btn-sm p-0" data-toggle="modal" data-target="#loginModalCenter">
+                                        登入
+                                    </button>
+                                    <span>|</span>               
+                                    <button type="button" id="kv-btn-reg" class="btn btn-login btn-sm p-0" data-toggle="modal" data-target="#registeredModalCenter">
+                                        註冊
+                                    </button> 
                                     你好，曉龍！
-                                </li>
-                                <li class="small pt-2">
-                                    <img src="img/share/mobiicoin.png" alt="" class="mr-2 h20">8284 點
-                                </li>
-                                <li class="small pt-1">
-                                    <img src="img/index/icons/mobiicoupon.png" alt="" class="mr-2 h20">23 張
-                                </li>
-                            </ul>                            
+                                </div>
+                            </div>    
+                            <div class="d-flex">
+                                <div class="top-item logo">
+                                    <a href="">
+                                        <img src="img/index/logo.png" alt="">
+                                    </a>
+                                </div>
+                                <div class="top-item input-box">
+                                    <button class="btn py-0 border-0"><i class="material-icons">&#xE8B6;</i></button>
+                                    <input type="text" placeholder="熱搜：台北故宮博物館門票">
+                                </div>
+                            </div>     
                         </div>
-                        <div class="top-item input-box">
-                            <button class="btn py-0 border-0"><i class="material-icons">&#xE8B6;</i></button>
-                            <input type="text" placeholder="熱搜：台北故宮博物館門票">
-                        </div>
-                        <div class="top-item more-horiz has-info">
-                            <i class="material-icons">&#xE5D3;</i>
-                            <button class="drop_menu_toggle"></button>
-                            <div class="drop-menu">
-                                <ul class="drop-content">
-                                    <li><a href="javascript:;"><img src="img/index/icons/login_qrcode.png" alt="">掃碼</a></li>
-                                    <li><a href="javascript:;"><img src="img/index/icons/login_scan.png" alt="">乘車碼</a></li>
-                                    <li><a href data-toggle="modal" data-target="#loginModalCenter"><img src="img/index/icons/login_logout.png" alt="">登入/註冊</a></li>
-                                </ul>
+                        <div class="for-mobile">
+                            <div class="kv-top d-flex justify-content-between align-items-start">
+                                <div class="kv-iconbox">
+                                    <div class="kv-icon">
+                                        <img src="img/index/icons/icon_scan.png"><br>
+                                        掃碼
+                                    </div>
+                                    <div class="kv-icon">
+                                        <img src="img/index/icons/icon_code.png"><br>
+                                        乘車碼
+                                    </div>
+                                    <div class="kv-icon">
+                                        <img src="img/index/icons/icon_wallet.png"><br>
+                                        付款
+                                    </div>
+                                </div>
+                                <div class="top-item climate">
+                                    <ul>
+                                        <li>
+                                            <img src="img/index/bn_tips01.png" class="bntips">
+                                        </li>
+                                        <li class="small pt-3">
+                                            
+                                        </li>
+                                        <li class="small pt-2">
+                                            <img src="img/share/mobiicoin.png" alt="" class="mr-2 h20">8284 點
+                                        </li>
+                                        <li class="small pt-1">
+                                            <img src="img/index/icons/mobiicoupon.png" alt="" class="mr-2 h20">23 張
+                                        </li>
+                                    </ul>                            
+                                </div>
+                                <div class="top-item mobiilogo for-mobile pt-2">
+                                    <img src="img/share/Mobii_logo.png">
+                                </div>
+                                <!--未登入-->
+                                <div class="top-item btn white-outline-btn small-70 py-0 pr-2">
+                                    登入/註冊<i class="material-icons chevron_right small-80">&#xe5cc;</i>
+                                </div>
+                                <!--已登入-->
+                                <div class="top-item more-horiz has-info d-none">
+                                    <i class="material-icons">&#xE5D3;</i>
+                                    <button class="drop_menu_toggle"></button>
+                                    <div class="drop-menu">
+                                        <ul class="drop-content">
+                                            <li><a href="javascript:;"><img src="img/index/icons/login_qrcode.png" alt="">掃碼</a></li>
+                                            <li><a href="javascript:;"><img src="img/index/icons/login_scan.png" alt="">乘車碼</a></li>
+                                            <li><a href data-toggle="modal" data-target="#loginModalCenter"><img src="img/index/icons/login_logout.png" alt="">登入/註冊</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </div>
                    </div>
                 </div>          
-                <div class="kv-mask"></div>         
-            </nav>
+                <div class="kv-mask"></div>  
             <!-- Swiper for kv banner-->            
             <div class="kvbn-box kv-mt">
                 <div class="for-pc">

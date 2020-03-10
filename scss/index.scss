@@ -197,7 +197,7 @@ body.is-open-country .country-box {
   }
 }
 .top-item.logo img{
-  padding-bottom: 10px;
+  padding-bottom: 15px;
   max-height: 60px;
 }
 .top-goback{
@@ -210,8 +210,9 @@ body.is-open-country .country-box {
   margin: 0 auto;
   position: relative;
   .kv-small{
+    position: relative;
     margin:2px;
-    top:0;
+    top:10px;
     left: 0;
     font-size:  0.9em;
     text-align: right;  
@@ -288,7 +289,7 @@ body.is-open-country .country-box {
   }
 }
 
-.kv-box .kv-top .top-item.input-box {
+.for-pc .top-item.input-box {
   position: relative;
   -webkit-box-flex: 1;
       -ms-flex: 1;
@@ -322,38 +323,11 @@ body.is-open-country .country-box {
     border-radius: 5px;
   }
 }
-@media (max-width: 767px) {
-  .kv-box .kv-top .top-item.input-box {
-    background-color: #fff;
-    border-radius: 10px;
-    padding: 0px 10px;
-    input {
-      border: none;
-      border-radius: 0;
-    }
-    button {
-      width: auto;
-      position: static;
-      background: none;
-      border-radius: 0;
-      -webkit-transform: translateY(0);
-              transform: translateY(0);
-    }
-    .material-icons {
-      color: #8E8E93;
-      vertical-align: bottom;
-    }
-  }
-}
 
-.kv-box .kv-top .top-item.input-box button .material-icons {
+.for-pc .top-item.input-box button .material-icons {
   color: #fff;
 }
-@media (max-width: 767px) {
-  .kv-box .kv-top .top-item.input-box button .material-icons {
-    color: #8E8E93;
-  }
-}
+
 
 /* more-horiz & drop-menu */
 .more-dot {
@@ -373,6 +347,23 @@ body.is-open-country .country-box {
     border-radius: 100%;
   }
 }
+.kv-box .kv-top{
+  .mobiilogo{
+    img{
+      width: 50%;
+      max-width: 200px;
+      min-width: 85px;
+      position: relative;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      -webkit-transform: translate(-50%, -50%);
+    }
+  }
+  img.bntips{
+      max-width: 90px;
+  }
+} 
 .kv-box .kv-top .top-item.more-horiz {
   -webkit-box-flex: 0;
       -ms-flex: none;
@@ -1508,7 +1499,7 @@ footer.for-pc img.logo-s{
 
 footer.for-pc ul{  
   margin-top: 10px;
-  margin-bottom: 20px;
+  margin-bottom: 14px;
 }
 footer.for-pc li{  
   line-height: 28px;
@@ -2482,6 +2473,17 @@ td.linebt-td,
 .index-outline-btn{
   color: $index-default;
   border-color: $index-default;
+  background-color: transparent;
+  background-image: none;
+  border-radius: 30px;
+  &.unable{
+    color: $gray-color;
+    border-color: $gray-color;
+  }
+}
+.white-outline-btn{
+  color: white;
+  border-color: white;
   background-color: transparent;
   background-image: none;
   border-radius: 30px;
