@@ -1443,37 +1443,6 @@ body.is-open-country .country-box {
   font-weight: 600;
 }
 
-.popup-box .login-method {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  text-align: center;
-  margin: 20px 0;
-}
-
-.popup-box .login-method .method-item {
-  -webkit-box-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  margin: 0 5px;
-}
-
-.popup-box .login-method p {
-  color: #182B56;
-  font-size: 14px;
-}
-
-.popup-box .or-box {
-  position: relative;
-  text-align: center;
-}
-
 .popup-box .or-box:before, .popup-box .or-box:after {
   content: '';
   display: block;
@@ -1796,7 +1765,6 @@ footer.for-pc li {
   -webkit-box-flex: 1;
   -ms-flex: 1;
   flex: 1;
-  margin: 0 5px;
 }
 
 .modal-body .login-method .method-item img {
@@ -3947,6 +3915,13 @@ img.nearbyimg {
   border-top-left-radius: .5em;
   border-top-right-radius: .5em;
   bottom: 0;
+}
+
+.telcodelist {
+  display: none;
+  background-color: #fff;
+  position: absolute;
+  top: 0;
 }
 
 /* Effect 2: Move Up */

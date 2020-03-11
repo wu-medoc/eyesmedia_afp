@@ -101,7 +101,7 @@
                                     <img src="img/share/mobii_logo.png">
                                 </div>
                                 <!--未登入-->
-                                <div class="top-item btn white-outline-btn small-70 py-0 pr-2">
+                                <div class="top-item btn white-outline-btn small-70 py-0 pr-2" data-toggle="modal" data-target="#loginModalCenter">
                                     登入/註冊<i class="material-icons chevron_right small-80">&#xe5cc;</i>
                                 </div>
                                 <!--已登入-->
@@ -1468,10 +1468,115 @@
     <script src="js/vendor/imgLiquid.js"></script>
 
     <!-- custom js -->
-    <script src="js/animateCss.js"></script>
+     
+    <script>
+        $(document).ready(function() { 
+            var JData = [{id:"t1", telname:"中國大陸", telcode:"86"},
+                        {id:"t2", telname:"台灣", telcode:"886"},
+                        {id:"t3", telname:"香港", telcode:"852"},
+                        {id:"t4", telname:"印度", telcode:"91"},
+                        {id:"t5", telname:"馬爾地夫", telcode:"960"},
+                        {id:"t6", telname:"印尼", telcode:"62"},
+                        {id:"t7", telname:"伊朗", telcode:"98"},
+                        {id:"t8", telname:"伊拉克", telcode:"964"},
+                        {id:"t9", telname:"以色列", telcode:"972"},
+                        {id:"t10", telname:"日本", telcode:"81"},
+                        {id:"t11", telname:"所羅門群島", telcode:"677"},
+                        {id:"t12", telname:"斯里蘭卡", telcode:"94"},
+                        {id:"t13", telname:"泰國", telcode:"66"},
+                        {id:"t14", telname:"南韓", telcode:"82"},
+                        {id:"t15", telname:"科威特", telcode:"965"},
+                        {id:"t16", telname:"巴基斯坦", telcode:"92"},
+                        {id:"t17", telname:"澳門", telcode:"853"},
+                        {id:"t18", telname:"馬來西亞", telcode:"60"},
+                        {id:"t19", telname:"菲律賓", telcode:"63"},
+                        {id:"t20", telname:"沙烏地阿拉伯", telcode:"966"},
+                        {id:"t21", telname:"新加坡", telcode:"65"},
+                        {id:"t22", telname:"巴布亞 新幾內亞", telcode:"675"},
+                        {id:"t23", telname:"尼泊爾", telcode:"977"},
+                        {id:"t24", telname:"葉門", telcode:"66"},
+                        {id:"t25", telname:"土耳其", telcode:"90"},
+                        {id:"t26", telname:"越南", telcode:"84"},
+                        {id:"t27", telname:"葡萄牙", telcode:"351"},
+                        {id:"t28", telname:"西班牙", telcode:"34"},
+                        {id:"t29", telname:"瑞典", telcode:"46"},
+                        {id:"t30", telname:"瑞士", telcode:"41"},
+                        {id:"t31", telname:"英國", telcode:"44"},
+                        {id:"t32", telname:"德國", telcode:"49"},
+                        {id:"t33", telname:"俄羅斯", telcode:"7"},
+                        {id:"t34", telname:"匈牙利", telcode:"36"},
+                        {id:"t35", telname:"冰島", telcode:"354"},
+                        {id:"t36", telname:"愛爾蘭", telcode:"353"},
+                        {id:"t37", telname:"馬爾他", telcode:"356"},
+                        {id:"t38", telname:"希臘", telcode:"30"},
+                        {id:"t39", telname:"義大利", telcode:"39"},
+                        {id:"t40", telname:"盧森堡", telcode:"352"},
+                        {id:"t41", telname:"摩洛哥", telcode:"377"},
+                        {id:"t42", telname:"荷蘭", telcode:"31"},
+                        {id:"t43", telname:"挪威", telcode:"47"},
+                        {id:"t44", telname:"波蘭", telcode:"48"},
+                        {id:"t45", telname:"羅馬尼亞", telcode:"40"},
+                        {id:"t46", telname:"奧地利", telcode:"43"},
+                        {id:"t47", telname:"比利時", telcode:"32"},
+                        {id:"t48", telname:"丹麥", telcode:"45"},
+                        {id:"t49", telname:"芬蘭", telcode:"358"},
+                        {id:"t50", telname:"法國", telcode:"358"},
+                        {id:"t51", telname:"阿根廷", telcode:"54"},
+                        {id:"t52", telname:"美國", telcode:"1"},
+                        {id:"t53", telname:"加拿大", telcode:"1"},
+                        {id:"t54", telname:"智利", telcode:"56"},
+                        {id:"t55", telname:"哥倫比亞", telcode:"57"},
+                        {id:"t56", telname:"多明尼亞", telcode:"1809"},
+                        {id:"t57", telname:"巴拿馬", telcode:"507"},
+                        {id:"t58", telname:"宏都拉斯", telcode:"504"},
+                        {id:"t59", telname:"尼加拉瓜", telcode:"505"},
+                        {id:"t60", telname:"厄瓜多爾", telcode:"593"},
+                        {id:"t61", telname:"墨西哥", telcode:"52"},
+                        {id:"t62", telname:"烏拉圭", telcode:"598"},
+                        {id:"t63", telname:"祕魯", telcode:"51"},
+                        {id:"t64", telname:"瓜地馬拉", telcode:"502"},
+                        {id:"t65", telname:"哥斯大黎加", telcode:"506"},
+                        {id:"t66", telname:"薩爾瓦多", telcode:"503"},
+                        {id:"t67", telname:"巴西", telcode:"55"},
+                        {id:"t68", telname:"澳洲", telcode:"61"},
+                        {id:"t69", telname:"帛琉", telcode:"680"},
+                        {id:"t70", telname:"斐濟", telcode:"679"},
+                        {id:"t71", telname:"關島", telcode:"1671"},
+                        {id:"t72", telname:"紐西蘭", telcode:"64"},
+                        {id:"t73", telname:"摩洛哥", telcode:"212"},
+                        {id:"t74", telname:"奈及利亞", telcode:"234"},
+                        {id:"t75", telname:"南非", telcode:"27"},
+                        {id:"t76", telname:"肯亞", telcode:"254"},
+                        {id:"t77", telname:"坦薩尼亞", telcode:"255"},
+                        {id:"t78", telname:"阿爾及利亞", telcode:"213"},
+                        {id:"t79", telname:"埃及", telcode:"20"},];
+            var NumOfJData = JData.length;
+            $('.telcode').on('click',function(){
+                $('.telcodelist').removeClass('d-none');
+                $('.telcodelist').animateCss('slideInRight', '+d-block container');
+                $('.telcodelist').before("<div class='modal-backdrop container' style='z-index:0'></div>");
+                if($('#telcodels').empty()){
+                    for (var i = 0; i < NumOfJData; i++) {
+                        $('#telcodels').append($("<li class='"+JData[i]['id']+" flex-inline-between "+(($('.telcode').attr('id')==JData[i]['id']) ? 'active': '')+"' value='"+(JData[i]['telcode'])+"'>").append($("<div class='item'>").append(JData[i]['telname'])).append("<div class='item'>"+(JData[i]['telcode'])+"</div>"));
+                    };
+                }                
+                $('#telcodels li').on('click',function(){
+                    $('.telcode').empty().attr({'value':($(this).val()),'id':($(this).attr('class').split(/\s+/)[0])}).append($(this).children('div:first').text()+'(+'+$(this).val()+')');
+                    $('.telcodelist').animateCss('slideOutRight', '-d-block container');                    
+                    $('.telcodelist').addClass('d-none').siblings('div.modal-backdrop').remove();
+                });
+                $('.closelayer').on('click',function(){
+                    $('.telcodelist').animateCss('slideOutRight', '-d-block container');             
+                    $('.telcodelist').addClass('d-none').siblings('div.modal-backdrop').remove();
+                });
+
+            });
+        });
+    </script> 
     <script>    
         $("#loginhtml").load("login.html");
     </script>
+    <script src="js/animateCss.js"></script>
     <script src="js/index.js"></script>
     
 </body>
