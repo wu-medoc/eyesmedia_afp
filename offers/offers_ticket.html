@@ -232,12 +232,9 @@
     <script>
         $("footer").hide(); 
         $("#loginhtml").load("../login.html"); 
-        //this onelayer use animateCss
-        var oneLayer = [];
+        //begin use animateCss
         $( document ).ready(function() {
-        var nextLayerOne = '.wrap';
-            oneLayer.push(nextLayerOne);
-            $(nextLayerOne).animateCss('slideInRight', '+container faster');
+            callLayerOne();
 
             //get stepval
             var stepval = getCookie('step');

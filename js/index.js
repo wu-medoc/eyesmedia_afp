@@ -550,15 +550,18 @@ function backLayerUp() {
     }
 };
 
-// //onelayer use animateCss
-// var oneLayer = [];
-// function callLayerOne(nextLayerOne) {
-//     oneLayer.push(nextLayerOne);
-// 	$(nextLayerOne).animateCss('slideInRight', '+d-block container faster');
-// };
-// function backLayerOne() {
-// 	$(oneLayer.pop()).animateCss('slideOutRight', '-d-block container faster');
-// };
+//this onelayer use animateCss
+var oneLayer = [];
+function callLayerOne() {
+var nextLayerOne = '.wrap';
+    oneLayer.push(nextLayerOne);
+    $(nextLayerOne).animateCss('slideInRight', '+container faster');
+};
+function backLayerOne() {
+    $(oneLayer.pop()).animateCss('slideOutRight', '-container faster');
+    $('.wrap').fadeOut(200,function(){ history.back(); });
+    oneLayer.length=0;
+};
 
 
 function getCookie(cname) {
