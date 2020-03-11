@@ -230,6 +230,8 @@
     <!-- custom js -->    
     <script src="../js/animateCss.js"></script>
     <script>
+        $("footer").hide(); 
+        $("#loginhtml").load("../login.html"); 
         //this onelayer use animateCss
         var oneLayer = [];
         $( document ).ready(function() {
@@ -244,7 +246,7 @@
             }else{
                 $.cookie("cookieName", "", {expires: -1});
             }
-            
+
             //receive step control
             $('button.step1').on('click',function(){
                 $('.fixed-btn').append().html("<button type='button' class='btn onlineshopping-obtn w-100' onclick=\"callLayer('.useoffers')\">使用</button>");
@@ -262,11 +264,6 @@
             oneLayer.length=0;
         };
 
-    </script>
-
-    <script>    
-        $("footer").hide(); 
-        $("#loginhtml").load("../login.html"); 
     </script>
     <script src="../js/index.js"></script>
 </body>
