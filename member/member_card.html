@@ -36,10 +36,10 @@
 <body>    
 <div class="wrap container">
     <!--我的卡片1-->
-    <div class="iconpage slideInRight animated">
+    <div class="iconpage">
         <div class="title-box">
             <div class="item icon-btn">                        
-                <button class="btn animated-btn" onclick="countdown('member_index.html');" data-toggle="tooltip" data-placement="bottom" title="回上一頁">
+                <button class="btn animated-btn" onclick="backLayerOne();" data-toggle="tooltip" data-placement="bottom" title="回上一頁">
                     <i class="material-icons">&#xE314;</i>
                 </button>
             </div>
@@ -303,10 +303,17 @@
         // };        
         
 
-        // Leave Forwarding
-        function countdown(e) {
-            setTimeout(function(){ window.location = e ; }, 200);            
-            $('.iconpage').removeClass('slideInRight').addClass('slideOutRight');
+        //this onelayer use animateCss
+        var oneLayer = [];
+        $( document ).ready(function() {
+        var nextLayerOne = '.wrap';
+            oneLayer.push(nextLayerOne);
+            $(nextLayerOne).animateCss('slideInRight', '+container faster');
+        });
+        function backLayerOne() {
+            $(oneLayer.pop()).animateCss('slideOutRight', '-container faster');
+            $('.wrap').fadeOut(200,function(){ history.back(); });
+            oneLayer.length=0;
         };
 
         // 開啟分類清單

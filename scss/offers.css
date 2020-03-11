@@ -1,21 +1,21 @@
 /*
 Error: Invalid CP950 character "\xE5"
-        on line 1044 of D:\eyesmedia\ASIAfunPASS\github\afp\eyesmedia_afp\scss\index.scss
+        on line 49 of D:\eyesmedia\ASIAfunPASS\github\afp\eyesmedia_afp\scss\offers.scss
 
-1039:       color: #E473FF;
-1040:     }
-1041:   }
-1042: }
-1043: 
-1044: /* index 周邊推薦 *\/
-1045: .afp-tab-box{
-1046:   .tab-content {
-1047:     .content-list {
-1048:       display: -webkit-box;
-1049:       display: -ms-flexbox;
+44:     margin-left: auto;
+45:     text-align: right;
+46:     right: 10px;
+47:     position: absolute;
+48: }
+49: /* 優惠券 *\/
+50: .other-discount-list{
+51:     background: #fff;
+52:     padding: 0;
+53:     .discount-more{
+54:         color: $blue-dark;
 
 Backtrace:
-D:\eyesmedia\ASIAfunPASS\github\afp\eyesmedia_afp\scss\index.scss:1044
+D:\eyesmedia\ASIAfunPASS\github\afp\eyesmedia_afp\scss\offers.scss:49
 C:/Program Files/Adobe/Adobe Dreamweaver CC 2018/ruby/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/util.rb:1325:in `rescue in block in find_encoding_error'
 C:/Program Files/Adobe/Adobe Dreamweaver CC 2018/ruby/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/util.rb:1322:in `block in find_encoding_error'
 C:/Program Files/Adobe/Adobe Dreamweaver CC 2018/ruby/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/util.rb:1321:in `each'
@@ -37,4 +37,4 @@ C:/Program Files/Adobe/Adobe Dreamweaver CC 2018/ruby/bin/sass:22:in `<main>'
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Invalid CP950 character \"\xE5\"\A         on line 1044 of D:\eyesmedia\ASIAfunPASS\github\afp\eyesmedia_afp\scss\index.scss\A \A 1039:       color: #E473FF;\A 1040:     }\A 1041:   }\A 1042: }\A 1043: \A 1044: /* index 周邊推薦 */\A 1045: .afp-tab-box{\A 1046:   .tab-content {\A 1047:     .content-list {\A 1048:       display: -webkit-box;\A 1049:       display: -ms-flexbox;"; }
+  content: "Error: Invalid CP950 character \"\xE5\"\A         on line 49 of D:\eyesmedia\ASIAfunPASS\github\afp\eyesmedia_afp\scss\offers.scss\A \A 44:     margin-left: auto;\A 45:     text-align: right;\A 46:     right: 10px;\A 47:     position: absolute;\A 48: }\A 49: /* 優惠券 */\A 50: .other-discount-list{\A 51:     background: #fff;\A 52:     padding: 0;\A 53:     .discount-more{\A 54:         color: $blue-dark;"; }

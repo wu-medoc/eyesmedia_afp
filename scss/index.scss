@@ -2482,6 +2482,19 @@ td.linebt-td,
 .h50{
   height: 50px;
 }
+.h100{
+  height: 100px;
+}
+.shopping-store-badge {
+  .badge {
+      line-height: 2;
+      margin-right: 5px;
+      padding-left: 8px;
+      padding-right: 8px;
+      font-size: 70%;
+      border:1px solid $onlineshopping-default;
+  }
+}
 /* color ui */
 .bg-cardfooter{
   color: #fff;

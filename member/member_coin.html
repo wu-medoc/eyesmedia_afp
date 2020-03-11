@@ -36,11 +36,11 @@
 <body>    
 <div class="wrap container">
     <!--我的魔幣1-->
-    <div class="mycard slideInRight animated">
+    <div class="mycard">
         <div class="lineargradient-purple pb-3">
             <div class="title-box">
                 <div class="item icon-btn">                        
-                    <button class="btn text-white" onclick="countdown('member_index.html');" data-toggle="tooltip" data-placement="bottom" title="回上一頁">
+                    <button class="btn text-white" onclick="backLayerOne();" data-toggle="tooltip" data-placement="bottom" title="回上一頁">
                         <i class="material-icons">&#xE314;</i>
                     </button>
                 </div>
@@ -1048,10 +1048,17 @@
         //$('footer.for-pc').css('position','absolute'); //github use(正式可刪除)
         
 
-        // Leave Forwarding
-        function countdown(e) {
-            setTimeout(function(){ window.location = e ; }, 500);            
-            $('.mycard').removeClass('slideInRight').addClass('slideOutRight');
+        //this onelayer use animateCss
+        var oneLayer = [];
+        $( document ).ready(function() {
+        var nextLayerOne = '.wrap';
+            oneLayer.push(nextLayerOne);
+            $(nextLayerOne).animateCss('slideInRight', '+container faster');
+        });
+        function backLayerOne() {
+            $(oneLayer.pop()).animateCss('slideOutRight', '-container faster');
+            $('.wrap').fadeOut(200,function(){ history.back(); });
+            oneLayer.length=0;
         };
 
     </script>

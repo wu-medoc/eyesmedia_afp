@@ -35,7 +35,7 @@ if ($('.ad-box .swiper-slide').length>1) {
               spaceBetween: 0
             },
             // when window width is >= 640px
-            768: {
+            640: {
               slidesPerView: 1.3,
               spaceBetween: 20
             }
@@ -134,15 +134,19 @@ if ($( ".tablist-swiper" ).hasClass("swiper-container")) {
         paginationClickable: true,
         slidesPerView: 5,
         spaceBetween: 10,
-        breakpoints: {
-          768: {
-            slidesPerView: 8,
-            spaceBetween: 10,
-          },
-          1024: {
-            slidesPerView: 10,
-            spaceBetween: 20,
-          }
+        breakpoints: { 
+            320: {
+            slidesPerView: 4,
+            spaceBetween: 10
+            },
+            480: { 
+            slidesPerView: 5,
+            spaceBetween: 15
+            },
+            640: {
+            slidesPerView: 6,
+            spaceBetween: 20
+            }
         }
     });
 }
@@ -151,15 +155,19 @@ if ($( ".travel-featuredbox" ).hasClass("swiper-container"))  {
         paginationClickable: true,
         slidesPerView: 1.7,
         spaceBetween: 10,
-        breakpoints: {
-          768: {
+        breakpoints: { 
+            320: {
+            slidesPerView: 1.7,
+            spaceBetween: 10
+            },
+            480: { 
+            slidesPerView: 1.8,
+            spaceBetween: 15
+            },
+            640: {
             slidesPerView: 2,
-            spaceBetween: 20,
-          },
-          1024: {
-            slidesPerView: 3,
-            spaceBetween: 20,
-          }
+            spaceBetween: 20
+            }
         },
         loop: true
         //建議資料多時,關閉loop
@@ -170,12 +178,20 @@ if ($( ".travel-topicbox" ).hasClass("swiper-container")) {
         paginationClickable: true,
         freeMode: true,
         slidesPerView: 1.5,
-        spaceBetween: 10,
-        breakpoints: {
-          1024: {
-            slidesPerView: 3,
-            spaceBetween: 20,
-          },
+        spaceBetween: 10,        
+        breakpoints: { 
+            320: {
+            slidesPerView: 1.5,
+            spaceBetween: 10
+            },
+            480: { 
+            slidesPerView: 1.5,
+            spaceBetween: 15
+            },
+            640: {
+            slidesPerView: 2.5,
+            spaceBetween: 20
+            }
         },
         loop: true
         //建議資料多時,關閉loop
@@ -188,7 +204,7 @@ if ($( ".travel-hotbox" ).hasClass("swiper-container")) {
         slidesPerView: 4,
         spaceBetween: 10,
         breakpoints: {
-          1024: {
+          640: {
             slidesPerView: 6
           },
         },
@@ -537,9 +553,23 @@ function backLayerUp() {
 // //onelayer use animateCss
 // var oneLayer = [];
 // function callLayerOne(nextLayerOne) {
-//     tLayerUp.push(nextLayerOne);
+//     oneLayer.push(nextLayerOne);
 // 	$(nextLayerOne).animateCss('slideInRight', '+d-block container faster');
 // };
 // function backLayerOne() {
 // 	$(oneLayer.pop()).animateCss('slideOutRight', '-d-block container faster');
 // };
+
+
+function getCookie(cname) {
+    var ss = document.cookie;
+    var name = cname + "=";
+    var ca = document.cookie.split(';');
+    for(var i=0; i<ca.length; i++)
+    {
+        var c = ca[i].trim();
+        if (c.indexOf(name)==0)
+            return c.substring(name.length,c.length);
+    }
+    return "";
+};
