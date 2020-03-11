@@ -1048,18 +1048,10 @@
         //$('footer.for-pc').css('position','absolute'); //github use(正式可刪除)
         
 
-        //this onelayer use animateCss
-        var oneLayer = [];
+        //begin use animateCss
         $( document ).ready(function() {
-        var nextLayerOne = '.wrap';
-            oneLayer.push(nextLayerOne);
-            $(nextLayerOne).animateCss('slideInRight', '+container faster');
+            callLayerOne();
         });
-        function backLayerOne() {
-            $(oneLayer.pop()).animateCss('slideOutRight', '-container faster');
-            $('.wrap').fadeOut(200,function(){ history.back(); });
-            oneLayer.length=0;
-        };
 
     </script>
 
