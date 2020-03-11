@@ -36,10 +36,10 @@
 <body>    
 <div class="wrap container">
     <!--我的優惠-->
-    <div class="offerslist slideInRight animated">
+    <div class="offerslist">
         <div class="title-box">
             <div class="item icon-btn">                        
-                <button class="btn" data-toggle="tooltip" data-placement="bottom" title="回上一頁">
+                <button class="btn" onclick="backLayerOne();" data-toggle="tooltip" data-placement="bottom" title="回上一頁">
                     <i class="material-icons">&#xE314;</i>
                 </button>
             </div>
@@ -935,6 +935,19 @@
     <script src="../js/animateCss.js"></script>
     <script src="../js/jquery.countdown.min.js"></script>
     <script>
+        //this onelayer use animateCss
+        var oneLayer = [];
+        $( document ).ready(function() {
+        var nextLayerOne = '.wrap';
+            oneLayer.push(nextLayerOne);
+            $(nextLayerOne).animateCss('slideInRight', '+container faster');
+        });
+        function backLayerOne() {
+            $(oneLayer.pop()).animateCss('slideOutRight', '-container faster');
+            $('.wrap').fadeOut(200,function(){ history.back(); });
+            oneLayer.length=0;
+        };
+
         //send stepval
         $('button.sendval').on('click',function(){
             var sendval = $(this).val();
