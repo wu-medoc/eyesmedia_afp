@@ -1468,9 +1468,11 @@
     <script src="js/vendor/imgLiquid.js"></script>
 
     <!-- custom js -->
-     
+    <script>    
+        $("#loginhtml").load("login.html");
+    </script>     
     <script>
-
+        $(document).ready(function() { 
             var JData = [{id:"t1", telname:"中國大陸", telcode:"86"},
                         {id:"t2", telname:"台灣", telcode:"886"},
                         {id:"t3", telname:"香港", telcode:"852"},
@@ -1572,10 +1574,8 @@
                 });
 
             });
+        });
     </script> 
-    <script>    
-        $("#loginhtml").load("login.html");
-    </script>
     <script src="js/animateCss.js"></script>
     <script src="js/index.js"></script>
     
