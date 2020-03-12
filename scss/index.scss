@@ -2504,6 +2504,10 @@ td.linebt-td,
   color: #fff;
   background: $index-default;
   border-radius: 30px;
+  &.unable{
+    color: #fff;
+    background: $gray-color;
+  }
 }
 .index-outline-btn{
   color: $index-default;
@@ -2515,6 +2519,37 @@ td.linebt-td,
     color: $gray-color;
     border-color: $gray-color;
   }
+}
+// .onlineshopping-btn{
+//   background: $onlineshopping-default;
+//   border-radius: 30px;
+//   color: #fff;
+// }
+// .onlineshopping-obtn{
+//   color: $onlineshopping-default;
+//   border-color: $onlineshopping-default;    
+//   background-color: transparent;
+//   background-image: none;
+//   border-radius: 30px;
+// }
+// .onlineshopping-o5btn{
+//   color: $onlineshopping-default;
+//   border-color: $onlineshopping-default;    
+//   background-color: transparent;
+//   background-image: none;
+//   border-radius: .5em;
+// }
+.gray-btn{
+  color: #fff;
+  background: $gray-color;
+  border-radius: 30px;
+}
+.gray-obtn{
+  color: $gray-color;
+  border-color: $gray-color;    
+  background-color: transparent;
+  background-image: none;
+  border-radius: 30px;
 }
 .white-outline-btn{
   color: white;

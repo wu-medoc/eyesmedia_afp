@@ -305,7 +305,7 @@
                         <p class="small text-secondary">未含運費</p>
                     </div>
                     <div class="col-4 col-lg-3 pl-0">
-                        <button type="submit" class="btn onlineshopping-btn mt-2 py-1 w-100 cart-next btnext">下一步</button>
+                        <button type="submit" class="btn index-btn mt-2 py-1 w-100 cart-next btnext">下一步</button>
                     </div>
                 </div>
             </div>
@@ -504,7 +504,7 @@
             if( (storebnval=='ok')){
                 if(modifybtnlen=='1'){
                     $(this).hide();
-                    $('.shopping-cartlist').html("<div class='d-flex flex-column justify-content-center align-items-center' style='height:300px'><p class='p-2 w-100 text-center'>喔喔！購物車內沒有商品</p><button type='button' class='btn onlineshopping-btn m-2 w-75 cart-next' onclick='javascript:location.href=\"index.html\"'>馬上去逛逛</button></div>");
+                    $('.shopping-cartlist').html("<div class='d-flex flex-column justify-content-center align-items-center' style='height:300px'><p class='p-2 w-100 text-center'>喔喔！購物車內沒有商品</p><button type='button' class='btn index-btn m-2 w-75 cart-next' onclick='javascript:location.href=\"index.html\"'>馬上去逛逛</button></div>");
                 }else{
                     $(this).text('編輯全部').val('store0'); 
                     $('.modifybtn').not($(this)).text('編輯');

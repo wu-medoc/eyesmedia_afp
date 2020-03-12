@@ -23,28 +23,6 @@ h6 {
   font-weight: bold;
 }
 
-.onlineshopping-btn {
-  background: #FD5F00;
-  border-radius: 30px;
-  color: #fff;
-}
-
-.onlineshopping-obtn {
-  color: #FD5F00;
-  border-color: #FD5F00;
-  background-color: transparent;
-  background-image: none;
-  border-radius: 30px;
-}
-
-.onlineshopping-o5btn {
-  color: #FD5F00;
-  border-color: #FD5F00;
-  background-color: transparent;
-  background-image: none;
-  border-radius: .5em;
-}
-
 .border-t5 {
   border-top: 5px #f8f8f8 solid;
 }

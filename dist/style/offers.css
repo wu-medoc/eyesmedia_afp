@@ -8,28 +8,6 @@
   font-size: small;
 }
 
-.onlineshopping-btn {
-  background: #FD5F00;
-  border-radius: 30px;
-  color: #fff;
-}
-
-.onlineshopping-obtn {
-  color: #FD5F00;
-  border-color: #FD5F00;
-  background-color: transparent;
-  background-image: none;
-  border-radius: 30px;
-}
-
-.gray-obtn {
-  color: #8E8E93;
-  border-color: #8E8E93;
-  background-color: transparent;
-  background-image: none;
-  border-radius: 30px;
-}
-
 .rwdimg.logo-img {
   width: 80px;
   height: 80px;

@@ -1,21 +1,21 @@
 /*
 Error: Invalid CP950 character "\xE5"
-        on line 49 of D:\eyesmedia\ASIAfunPASS\github\afp\eyesmedia_afp\scss\offers.scss
+        on line 30 of D:\eyesmedia\ASIAfunPASS\github\afp\eyesmedia_afp\scss\offers.scss
 
-44:     margin-left: auto;
-45:     text-align: right;
-46:     right: 10px;
-47:     position: absolute;
-48: }
-49: /* 優惠券 *\/
-50: .other-discount-list{
-51:     background: #fff;
-52:     padding: 0;
-53:     .discount-more{
-54:         color: $blue-dark;
+25:     margin-left: auto;
+26:     text-align: right;
+27:     right: 10px;
+28:     position: absolute;
+29: }
+30: /* 優惠券 *\/
+31: .other-discount-list{
+32:     background: #fff;
+33:     padding: 0;
+34:     .discount-more{
+35:         color: $blue-dark;
 
 Backtrace:
-D:\eyesmedia\ASIAfunPASS\github\afp\eyesmedia_afp\scss\offers.scss:49
+D:\eyesmedia\ASIAfunPASS\github\afp\eyesmedia_afp\scss\offers.scss:30
 C:/Program Files/Adobe/Adobe Dreamweaver CC 2018/ruby/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/util.rb:1325:in `rescue in block in find_encoding_error'
 C:/Program Files/Adobe/Adobe Dreamweaver CC 2018/ruby/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/util.rb:1322:in `block in find_encoding_error'
 C:/Program Files/Adobe/Adobe Dreamweaver CC 2018/ruby/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/util.rb:1321:in `each'
@@ -37,4 +37,4 @@ C:/Program Files/Adobe/Adobe Dreamweaver CC 2018/ruby/bin/sass:22:in `<main>'
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Invalid CP950 character \"\xE5\"\A         on line 49 of D:\eyesmedia\ASIAfunPASS\github\afp\eyesmedia_afp\scss\offers.scss\A \A 44:     margin-left: auto;\A 45:     text-align: right;\A 46:     right: 10px;\A 47:     position: absolute;\A 48: }\A 49: /* 優惠券 */\A 50: .other-discount-list{\A 51:     background: #fff;\A 52:     padding: 0;\A 53:     .discount-more{\A 54:         color: $blue-dark;"; }
+  content: "Error: Invalid CP950 character \"\xE5\"\A         on line 30 of D:\eyesmedia\ASIAfunPASS\github\afp\eyesmedia_afp\scss\offers.scss\A \A 25:     margin-left: auto;\A 26:     text-align: right;\A 27:     right: 10px;\A 28:     position: absolute;\A 29: }\A 30: /* 優惠券 */\A 31: .other-discount-list{\A 32:     background: #fff;\A 33:     padding: 0;\A 34:     .discount-more{\A 35:         color: $blue-dark;"; }

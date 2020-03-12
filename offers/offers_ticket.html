@@ -116,7 +116,7 @@
             </div>
             <div class="h100"></div>
             <div class="fixed-btn container">
-                <button type="button" class="btn onlineshopping-btn w-100 msg-open" value="msg-offers" data-toggle="modal" data-target="#messageModal" data-dismiss="modal" aria-label="Close">領取</button>
+                <button type="button" class="btn index-btn w-100 msg-open" value="msg-offers" data-toggle="modal" data-target="#messageModal" data-dismiss="modal" aria-label="Close">領取</button>
             </div>
         </div>
     </div> 
@@ -143,7 +143,7 @@
                 <div class="bg-light p-2">可使用次數：1次</div>
             </div>
             <div class="container p-3">
-                <button type="button" class="btn onlineshopping-btn w-100 msg-open" value="msg-offers2" data-toggle="modal" data-target="#messageModal" data-dismiss="modal" aria-label="Close">核銷</button>
+                <button type="button" class="btn index-btn w-100 msg-open" value="msg-offers2" data-toggle="modal" data-target="#messageModal" data-dismiss="modal" aria-label="Close">核銷</button>
             </div>
         </div>  
     </div>
@@ -202,7 +202,7 @@
                 <img class="active-img" src="../img/index/tabbar/notification_choosen.svg" alt="">
                 通知
             </a>
-            <a href="member_index.html" class="bar-item active">
+            <a href="../member/member_index.html" class="bar-item">
                 <img class="default-img" src="../img/index/tabbar/my.svg" alt="">
                 <img class="active-img" src="../img/index/tabbar/my_choosen.svg" alt="">
                 我的
@@ -239,14 +239,14 @@
             //get stepval
             var stepval = getCookie('step');
             if (stepval=='step1'){
-                $('.fixed-btn').append().html("<button type='button' class='btn onlineshopping-obtn w-100' onclick=\"callLayer('.useoffers')\">使用</button>");
+                $('.fixed-btn').append().html("<button type='button' class='btn index-outline-btn w-100' onclick=\"callLayer('.useoffers')\">使用</button>");
             }else{
                 $.cookie("cookieName", "", {expires: -1});
             }
 
             //receive step control
             $('button.step1').on('click',function(){
-                $('.fixed-btn').append().html("<button type='button' class='btn onlineshopping-obtn w-100' onclick=\"callLayer('.useoffers')\">使用</button>");
+                $('.fixed-btn').append().html("<button type='button' class='btn index-outline-btn w-100' onclick=\"callLayer('.useoffers')\">使用</button>");
             });            
             $('button.step2').on('click',function(){
                 backLayer();
