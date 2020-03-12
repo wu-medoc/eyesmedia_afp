@@ -1826,7 +1826,9 @@ td.linebt-td,
 @media (max-width: 767px) {
   .modal-full {
       margin: 0 auto;
-      
+      width: 101%;
+      left: -3px;
+      position: absolute;
     .modal-body {
       background-color: #fff;
       width: 100%;
