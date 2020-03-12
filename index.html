@@ -1560,7 +1560,7 @@
                     };
                 }else{       
                     $('#telcodels li').each(function(){ 
-                        ($(this).attr('id')==$('.telcode').attr('id')) ? $(this).addClass('active') : $(this).removeClass('active');
+                        ($(this).attr('class').split(/\s+/)[0]==$('.telcode').attr('id')) ? $(this).addClass('active') : $(this).removeClass('active');
                     });      
                 }                
                 $('#telcodels li').on('click',function(){
