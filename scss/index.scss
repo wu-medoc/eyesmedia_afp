@@ -2520,25 +2520,6 @@ td.linebt-td,
     border-color: $gray-color;
   }
 }
-// .onlineshopping-btn{
-//   background: $onlineshopping-default;
-//   border-radius: 30px;
-//   color: #fff;
-// }
-// .onlineshopping-obtn{
-//   color: $onlineshopping-default;
-//   border-color: $onlineshopping-default;    
-//   background-color: transparent;
-//   background-image: none;
-//   border-radius: 30px;
-// }
-// .onlineshopping-o5btn{
-//   color: $onlineshopping-default;
-//   border-color: $onlineshopping-default;    
-//   background-color: transparent;
-//   background-image: none;
-//   border-radius: .5em;
-// }
 .gray-btn{
   color: #fff;
   background: $gray-color;
@@ -2550,6 +2531,15 @@ td.linebt-td,
   background-color: transparent;
   background-image: none;
   border-radius: 30px;
+}
+.white-btn{
+  color: $gray-color;
+  background: white;
+  border-radius: 30px;
+  &.unable{
+    color: #fff;
+    background: $gray-color;
+  }
 }
 .white-outline-btn{
   color: white;
@@ -2571,6 +2561,13 @@ td.linebt-td,
   background-color: transparent;
   background-image: none;
   border-radius: 30px;
+  &.unable{
+    color: $gray-color;
+    border-top: 1px solid $gray-color;
+    border-bottom: 1px solid $gray-color;
+    border-left: 1px solid $gray-color;
+    border-right: 1px solid $gray-color;
+  }
 }
 .text-explore, 
 .text-index{

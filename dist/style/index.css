@@ -2754,6 +2754,17 @@ td.linebt-td,
   border-radius: 30px;
 }
 
+.white-btn {
+  color: #8E8E93;
+  background: white;
+  border-radius: 30px;
+}
+
+.white-btn.unable {
+  color: #fff;
+  background: #8E8E93;
+}
+
 .white-outline-btn {
   color: white;
   border-color: white;
@@ -2776,6 +2787,14 @@ td.linebt-td,
   background-color: transparent;
   background-image: none;
   border-radius: 30px;
+}
+
+.bluedk-outline-btn.unable {
+  color: #8E8E93;
+  border-top: 1px solid #8E8E93;
+  border-bottom: 1px solid #8E8E93;
+  border-left: 1px solid #8E8E93;
+  border-right: 1px solid #8E8E93;
 }
 
 .text-explore,
