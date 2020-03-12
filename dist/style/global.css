@@ -262,18 +262,38 @@ li {
 }
 
 .title-box {
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   padding: 15px;
 }
 
 .title-box .item {
   min-width: 30px;
   text-align: center;
+}
+
+.title-box .item:first-child {
+  -webkit-box-flex: 2;
+      -ms-flex: 2;
+          flex: 2;
+  text-align: left;
+  text-align: -webkit-left;
+}
+
+.title-box .item:last-child {
+  -webkit-box-flex: 2;
+      -ms-flex: 2;
+          flex: 2;
+  text-align: right;
+  text-align: -webkit-right;
 }
 
 .title-box .item.icon-btn .material-icons {
@@ -288,6 +308,9 @@ li {
   font-size: 18px;
   font-weight: 700;
   margin: auto;
+  -webkit-box-flex: 4;
+      -ms-flex: 4;
+          flex: 4;
 }
 
 .nav-tabs .nav-item {

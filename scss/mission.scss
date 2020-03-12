@@ -1,0 +1,34 @@
+@import "../dist/style/module/mixin";
+@import "../dist/style/module/variable";
+
+.mission-personal{
+    background: $mission-color;
+    color: white;
+    padding: 1em 1.5em;
+}
+
+.info-img{
+    flex: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    overflow: hidden;
+    margin-right: 15px;
+    img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+/* footer */
+.fixed-btn{
+    position: fixed;
+    width: 100%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 15px;
+    background-color: $default-white;
+    box-shadow: 0 -5px 8px rgba(0,0,0,.2);
+}

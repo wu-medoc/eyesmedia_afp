@@ -2569,6 +2569,14 @@ td.linebt-td,
     border-right: 1px solid $gray-color;
   }
 }
+.btw-small{
+  vertical-align: middle;
+  padding: 0 2px 0 8px;
+  font-size: .85em;
+  img{
+    height: 20px;
+  }
+}
 .text-explore, 
 .text-index{
   color: $index-default;

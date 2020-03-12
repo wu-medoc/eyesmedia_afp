@@ -42,9 +42,9 @@ body {
 	background-image: -webkit-gradient(linear,
 									   left bottom,
 									   left top,
-									   color-stop(0.44, rgb(230, 230, 231)),
-									   color-stop(0.72, rgb(172, 177, 184)),
-									   color-stop(0.86, rgb(156, 158, 165)));
+									   color-stop(0.44, rgb(241, 241, 241)),
+									   color-stop(0.72, rgb(224, 225, 226)),
+									   color-stop(0.86, rgb(231, 230, 230)));
 }
 
 // 電腦版顯示
@@ -261,14 +261,25 @@ li {
 
 // 上方標題 & 控制列
 .title-box {
+  width: 100%;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   padding: 15px;
 
   .item {
       min-width: 30px;
       text-align: center;
-
+      &:first-child{
+        flex: 2;
+        text-align: left;
+        text-align: -webkit-left;
+      }
+      &:last-child{
+        flex: 2;
+        text-align: right;
+        text-align: -webkit-right;
+      }
       &.icon-btn {
           .material-icons {
               font-size: 30px;
@@ -277,13 +288,14 @@ li {
 
       &.ctrl-btn {
           color: #13334C;
-      }
+      }      
   }
 
   .title-name {
       font-size: 18px;
       font-weight: 700;
       margin: auto;
+      flex: 4;
   }
 }
 
