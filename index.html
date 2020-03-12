@@ -1558,6 +1558,10 @@
                     for (var i = 0; i < NumOfJData; i++) {
                         $('#telcodels').append($("<li class='"+JData[i]['id']+" flex-inline-between "+(($('.telcode').attr('id')==JData[i]['id']) ? 'active': '')+"' value='"+(JData[i]['telcode'])+"'>").append($("<div class='item'>").append(JData[i]['telname'])).append("<div class='item'>"+(JData[i]['telcode'])+"</div>"));
                     };
+                }else{       
+                    $('#telcodels li').each(function(){ 
+                        ($(this).attr('id')==$('.telcode').attr('id')) ? $(this).addClass('active') : $(this).removeClass('active');
+                    });      
                 }                
                 $('#telcodels li').on('click',function(){
                     $('.telcode').empty().attr({'value':($(this).val()),'id':($(this).attr('class').split(/\s+/)[0])}).append($(this).children('div:first').text()+'(+'+$(this).val()+')');
