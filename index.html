@@ -1554,7 +1554,7 @@
             $('.telcode').on('click',function(){
                 $('.telcodelist').removeClass('d-none').animateCss('slideInRight', '+d-block').before("<div class='modal-backdrop' style='z-index:0'></div>");
                 $('#open-pagebox').addClass('container');
-                if($('#telcodels li').empty()){
+                if($('#telcodels').children().length === 0){
                     for (var i = 0; i < NumOfJData; i++) {
                         $('#telcodels').append($("<li class='"+JData[i]['id']+" flex-inline-between "+(($('.telcode').attr('id')==JData[i]['id']) ? 'active': '')+"' value='"+(JData[i]['telcode'])+"'>").append($("<div class='item'>").append(JData[i]['telname'])).append("<div class='item'>"+(JData[i]['telcode'])+"</div>"));
                     };
