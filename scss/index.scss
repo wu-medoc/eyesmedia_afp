@@ -2629,17 +2629,17 @@ td.linebt-td,
     line-height: 3em;
     font-weight: bold;
     font-size: 1.1em;
-    padding-left: 0.5em;
+    padding-left: 1em;
   }
   .open-page-ul p{
     line-height: 3.2em;
     font-weight: 400;
     font-size: 0.9em;
-    padding-left: 0.5em;
+    padding-left: 1em;
   }
   .open-page-ul li{
-    padding-left: 0.5em;
-    padding-right: 0.5em;
+    padding-left: 1em;
+    padding-right: 1em;
     line-height: 3em;
     font-size: 0.9em;
     font-weight: 400;
@@ -3403,9 +3403,20 @@ img.nearbyimg{
 }
 .telcodelist{
   display: none;
-  background-color:#fff;
+  background-color:transparent;
   position:absolute;
   top:0;
+  overflow-x:hidden;
+  overflow-y:auto;
+  width: 100%;
+  height:100vh;
+  #open-pagebox{
+    width: 100%;
+    right: 0;
+    left: 0;
+    // transform: translate(15%, 0%);
+    // -webkit-transform: translate(15%, 0%);
+  }
 }
 /* Effect 2: Move Up */
 .grid.effect-2 li.animate {
