@@ -245,6 +245,14 @@ if ($( ".shopping-icon" ).hasClass("swiper-container")) {
 }
 if ($( ".shopping-ad" ).hasClass("swiper-container")) {
 var swiper = new Swiper('.shopping-ad.swiper-container', {
+    slidesPerView: 1,
+    spaceBetween: 0,
+    breakpoints: {
+      640: {
+        slidesPerView: 1.5,
+        spaceBetween: 20,
+      },
+    },
     scrollbar: {
       el: '.shopping-ad .swiper-scrollbar',
       hide: true,

@@ -54,35 +54,93 @@
         <div class="shoppingkv swiper-container">
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
-                    <div style="background-image: url('../img/shopping/shopping-bigbn01.png');" class="kvbn-img"></div>
+                    <div style="background-image: url('../img/mission/banner3.png');" class="kvbn-img"></div>
                 </div>
                 <div class="swiper-slide">
-                    <div style="background-image: url('../img/shopping/shopping-bigbn02.png');" class="kvbn-img"></div>
+                    <div style="background-image: url('../img/mission/banner2.png');" class="kvbn-img"></div>
                 </div>
                 <div class="swiper-slide">
-                    <div style="background-image: url('../img/shopping/shopping-bigbn03.png');" class="kvbn-img"></div>
+                    <div style="background-image: url('../img/mission/banner1.png');" class="kvbn-img"></div>
                 </div>
             </div>
         </div>
+    </div>
+    <div class="bg-mission p-3">
+        <div class="bg-white flex-inline-between px-2 brder-mission">
+            <div class="d-flex align-items-center">
+                <img src="../img/share/mobiicoin_red.png" class="h24">
+                <span class="mobiicoin-num">2,366</span>
+            </div>
+            <div class="d-flex align-items-center">
+                可玩次數&ensp;<span class="mobiicoin-num">3</span>&ensp;次
+            </div>
+        </div>
+    </div>    
+    <div class="luckspin-box">
+        <div class="luckspin-top">
+            <section class="conopybox">
+                <div class="item canopy-l"></div>
+                <div class="item canopy-c"></div>
+                <div class="item canopy-r"></div>
+            </section>
+        </div>
+        <div class="luckspin-cont">
+            <div class="luckspin-contbox">
+                <div><img src="../img/shopping/store/stroe-logo-1.png">95折優惠券</div>
+                <div><img src="../img/shopping/store/stroe-logo-2.png">30元折價券</div>
+                <div><img src="../img/shopping/store/stroe-logo-3.png">30元折價券</div>
+                <div><img src="../img/shopping/store/stroe-logo-4.png">30元折價券</div>
+                <div><img src="../img/shopping/store/stroe-logo-5.png">30元折價券</div>
+                <div class="playbox">
+                    <button type="button" id="playagain" class="btn p-0"><img src="../img/mission/playbox.png"></button>
+                    <div id="rundot"><div class="dot"></div><div class="dot1"></div><div class="dot2"></div></div>
+                </div>
+                <div><img src="../img/shopping/store/stroe-logo-6.png">30元折價券</div>
+                <div><img src="../img/shopping/store/stroe-logo-7.png">30元折價券</div>
+                <div><img src="../img/shopping/store/stroe-logo-8.png">30元折價券</div>
+                <div><img src="../img/shopping/store/stroe-logo-9.png">95折優惠券</div>
+                <div><img src="../img/shopping/store/stroe-logo-10.png">30元折價券</div>
+                <div><img src="../img/shopping/store/stroe-logo-11.png">30元折價券</div>
+                <div><img src="../img/shopping/store/stroe-logo-12.png">30元折價券</div>
+            </div>            
+        </div>
+        <div class="addheight pb-5"></div>
     </div>
 
     <!-- 規則 -->
     <div class="sortlayer">
         <div class="luckspin-rules">
             <div id="open-pagebox">
-                <div class="open-page-title flex-inline-between">
-                    <div class="title-icon">
+                <div class="open-page-title index-flex">
+                    <div class="item one title-icon">
                         <button class="btn" onclick="backsortLayer();">
                             <i class="material-icons">&#xE314;</i>
                         </button>
                     </div>
-                    <div class="title-txt">
+                    <div class="item two title-txt text-center">
                         活動規則
                     </div>
-                    <div class="title-txt">
+                    <div class="item one title-txt">
                     </div>
                 </div>
-                <h5>玩法介紹</h5>
+                <div class="rulescontext">
+                    <label>玩法介紹</label>
+                    <ul style="list-style-type:decimal;">
+                        <li>圓盤上可自行貼輸出圖</li>
+                        <li>選定紅色指針位置</li>
+                        <li>以手撥轉輪盤，等待輪盤停止</li>
+                        <li>看輪盤停止，在指針下的內容</li>
+                    </ul>
+                    <label>兌獎方式</label>
+                    <ul>
+                        <li>到我的系統內的我的票券中，找到神奇小按鈕點擊倎哤垽娭屔，峷《敊浭浞浧浵》烗猀。珖珝砯「砨砫粍」紞紏蚙，迻郙鬯偟偩勓埳埱娵徖；梜淊淭烳牼翐脬舑</li>
+                    </ul>
+                    <label>備註</label>
+                    <ul>
+                        <li>偗皏侕妴屾皁，棜哳笎掟涗：「蛩妀莿昢詌臮剆娾，蚗芊亍硠邰莮，桹詒舴陼伅妅氿硰洉，昫啑咁軱蚕揇，堭梴虷灱丱稊迮砒苖桻</li>
+                    </ul>
+                </div>
+                
             </div>
         </div>        
     </div>
@@ -173,6 +231,7 @@
         $( document ).ready(function() {
             callLayerOne();
         });
+
     </script>
 
     <script>    

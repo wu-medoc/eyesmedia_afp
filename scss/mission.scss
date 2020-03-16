@@ -1,6 +1,215 @@
 @import "../dist/style/module/mixin";
 @import "../dist/style/module/variable";
 
+.bg-mission{
+    background: $mission-color;
+}
+.luckspin-box{
+    background: #418BBD;
+    padding-bottom: .5em;
+    .luckspin-top{
+        padding: 1.2em 0;
+        background: transparent !important;
+        position: relative;
+        img{
+            height: 2em;
+        }
+        .conopybox{
+            position: absolute;
+            top: 0px;
+            width: 100%;
+            height: 40px;
+            display: flex;
+            overflow: hidden;
+            justify-content: center;
+        }
+        .canopy-l{
+            background-image: url('../../img/mission/canopy_l.png');
+            background-position: right;
+            background-repeat: repeat-x;
+            background-size: contain;
+            flex:auto;
+            height: 40px;
+            min-width: 92px;
+            @media (max-width: 375px) {
+                display:none;
+            }
+        }
+        .canopy-c{
+            background-image: url('../../img/mission/canopy_c.png');
+            background-position: center;
+            background-repeat: repeat-x;
+            background-size: contain;
+            min-width: 383px;
+            height: 40px;
+            @media (max-width: 375px) {
+                width: 100%;
+                height: 40px;
+            }
+        }
+        .canopy-r{
+            background-image: url('../../img/mission/canopy_r.png');            
+            background-position: left;
+            background-repeat: repeat-x;
+            background-size: contain;
+            flex:auto;
+            height: 40px;
+            min-width: 92px;
+            @media (max-width: 375px) {
+                display:none;
+            }
+        }
+    }
+    .luckspin-cont{
+        background: $mission-color;
+        padding: .75em;
+        margin: 0 auto;
+        border-radius: .25em;
+        max-width: 800px;
+        .luckspin-contbox{
+            background: gray;
+            padding: .5em;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-column-gap: 10px;
+            grid-row-gap: 10px;
+            font-size: 1em;
+            @media (max-width: 375px) {
+                font-size: x-small;
+            }
+            div{
+                padding: .5em;
+                background: #fff;
+                border-radius: .25em;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                overflow:hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                img{
+                    width: auto;
+                    max-width: 120px;
+                    @media (max-width: 767px) {
+                        max-width: 80px;
+                    }
+                    @media (max-width: 480px) {
+                        max-width: 50px;
+                    }
+                }
+            }
+            .playbox{
+                #rundot{
+                    background: transparent;
+                    position: absolute;
+                    width: 250px;
+                    height: 230px;
+                    @keyframes pinpon {
+  
+                        0% {
+                          left: 0;
+                          top: 0;
+                        }
+                      
+                        25% {
+                          left: 220px;
+                          top: 0px;
+                        }
+                      
+                        50% {
+                          left: 220px;
+                          top: 200px;
+                        }
+                      
+                        75% {
+                          left: 0px;
+                          top: 200px;
+                        }
+                        
+                        100% {
+                          left: 0;
+                          top: 0;
+                        }
+                      }
+                      
+                      .dot {
+                        background: red;
+                        border-radius: 50%;
+                        height: 28px;
+                        width: 28px;
+                        position: absolute;
+                        
+                        animation-name: pinpon;
+                        animation-duration: 3s;
+                        animation-timing-function: ease-in;
+                        animation-delay: 1s;    
+                      }
+                      .dot1 {
+                        background: green;
+                        border-radius: 50%;
+                        height: 28px;
+                        width: 28px;
+                        position: absolute;
+                        
+                        animation-name: pinpon;
+                        animation-duration: 2s;
+                        animation-timing-function: ease-in;
+                        animation-delay: 2s;    
+                      }
+                      .dot2 {
+                        opacity: 0.7;
+                        background: yellow;
+                        border-radius: 50%;
+                        height: 28px;
+                        width: 28px;
+                        position: absolute;
+                        
+                        animation-name: pinpon;
+                        animation-duration: 1s;
+                        animation-timing-function: ease-in;
+                        animation-delay: 3s;  
+                      }
+                }
+                #playagain{         
+                    z-index: 1;  
+                    position: absolute;
+                    img{
+                        @media (max-width: 767px) {
+                            max-width: 200px;
+                        }
+                        @media (max-width: 480px) {
+                            max-width: 160px;
+                        }
+                        @media (max-width: 375px) {
+                            max-width: 120px;
+                        }
+                        @media (min-width: 768px) {
+                            max-width: 250px;
+                        }
+                    }
+                }
+                background: transparent;
+                grid-column-start: 2;
+                grid-column-end:4;
+                grid-row-start: 2;
+                grid-row-end:4;
+                position: relative;
+            }
+        }
+    }
+}
+.mobiicoin-num{
+    font-size: 1.2em;
+    font-weight: 700;
+    color: $index-default;
+}
+.brder-mission{
+    border-bottom: 4px solid #418BBD;
+    border-right: 4px solid #418BBD;
+    border-left: 4px solid #0A3450;
+    border-top: 1px solid #0A3450;
+}
 .mission-personal{
     background: $mission-color;
     color: white;
@@ -85,4 +294,19 @@
     padding: 15px;
     background-color: $default-white;
     box-shadow: 0 -5px 8px rgba(0,0,0,.2);
+}
+
+.luckspin-rules{
+    .rulescontext{
+        padding: 1em;
+        label{
+            font-weight: 700;
+        }
+        ul{
+            padding: 0 1em 1em 1em; 
+            li{
+                font-size: small;
+            }
+        }
+    }
 }

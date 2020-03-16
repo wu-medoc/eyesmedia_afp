@@ -1,26 +1,232 @@
 /* line 4, mission.scss */
+.bg-mission {
+  background: #005792; }
+
+/* line 7, mission.scss */
+.luckspin-box {
+  background: #418BBD;
+  padding-bottom: .5em; }
+  /* line 10, mission.scss */
+  .luckspin-box .luckspin-top {
+    padding: 1.2em 0;
+    background: transparent !important;
+    position: relative; }
+    /* line 14, mission.scss */
+    .luckspin-box .luckspin-top img {
+      height: 2em; }
+    /* line 17, mission.scss */
+    .luckspin-box .luckspin-top .conopybox {
+      position: absolute;
+      top: 0px;
+      width: 100%;
+      height: 40px;
+      display: flex;
+      overflow: hidden;
+      justify-content: center; }
+    /* line 26, mission.scss */
+    .luckspin-box .luckspin-top .canopy-l {
+      background-image: url("../../img/mission/canopy_l.png");
+      background-position: right;
+      background-repeat: repeat-x;
+      background-size: contain;
+      flex: auto;
+      height: 40px;
+      min-width: 92px; }
+      @media (max-width: 375px) {
+        /* line 26, mission.scss */
+        .luckspin-box .luckspin-top .canopy-l {
+          display: none; } }
+    /* line 38, mission.scss */
+    .luckspin-box .luckspin-top .canopy-c {
+      background-image: url("../../img/mission/canopy_c.png");
+      background-position: center;
+      background-repeat: repeat-x;
+      background-size: contain;
+      min-width: 383px;
+      height: 40px; }
+      @media (max-width: 375px) {
+        /* line 38, mission.scss */
+        .luckspin-box .luckspin-top .canopy-c {
+          width: 100%;
+          height: 40px; } }
+    /* line 50, mission.scss */
+    .luckspin-box .luckspin-top .canopy-r {
+      background-image: url("../../img/mission/canopy_r.png");
+      background-position: left;
+      background-repeat: repeat-x;
+      background-size: contain;
+      flex: auto;
+      height: 40px;
+      min-width: 92px; }
+      @media (max-width: 375px) {
+        /* line 50, mission.scss */
+        .luckspin-box .luckspin-top .canopy-r {
+          display: none; } }
+  /* line 63, mission.scss */
+  .luckspin-box .luckspin-cont {
+    background: #005792;
+    padding: .75em;
+    margin: 0 auto;
+    border-radius: .25em;
+    max-width: 800px; }
+    /* line 69, mission.scss */
+    .luckspin-box .luckspin-cont .luckspin-contbox {
+      background: gray;
+      padding: .5em;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-column-gap: 10px;
+      grid-row-gap: 10px;
+      font-size: 1em; }
+      @media (max-width: 375px) {
+        /* line 69, mission.scss */
+        .luckspin-box .luckspin-cont .luckspin-contbox {
+          font-size: x-small; } }
+      /* line 80, mission.scss */
+      .luckspin-box .luckspin-cont .luckspin-contbox div {
+        padding: .5em;
+        background: #fff;
+        border-radius: .25em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis; }
+        /* line 91, mission.scss */
+        .luckspin-box .luckspin-cont .luckspin-contbox div img {
+          width: auto;
+          max-width: 120px; }
+          @media (max-width: 767px) {
+            /* line 91, mission.scss */
+            .luckspin-box .luckspin-cont .luckspin-contbox div img {
+              max-width: 80px; } }
+          @media (max-width: 480px) {
+            /* line 91, mission.scss */
+            .luckspin-box .luckspin-cont .luckspin-contbox div img {
+              max-width: 50px; } }
+      /* line 102, mission.scss */
+      .luckspin-box .luckspin-cont .luckspin-contbox .playbox {
+        background: transparent;
+        grid-column-start: 2;
+        grid-column-end: 4;
+        grid-row-start: 2;
+        grid-row-end: 4;
+        position: relative; }
+        /* line 103, mission.scss */
+        .luckspin-box .luckspin-cont .luckspin-contbox .playbox #rundot {
+          background: transparent;
+          position: absolute;
+          width: 250px;
+          height: 230px; }
+@keyframes pinpon {
+  0% {
+    left: 0;
+    top: 0; }
+  25% {
+    left: 220px;
+    top: 0px; }
+  50% {
+    left: 220px;
+    top: 200px; }
+  75% {
+    left: 0px;
+    top: 200px; }
+  100% {
+    left: 0;
+    top: 0; } }
+          /* line 136, mission.scss */
+          .luckspin-box .luckspin-cont .luckspin-contbox .playbox #rundot .dot {
+            background: red;
+            border-radius: 50%;
+            height: 28px;
+            width: 28px;
+            position: absolute;
+            animation-name: pinpon;
+            animation-duration: 3s;
+            animation-timing-function: ease-in;
+            animation-delay: 1s; }
+          /* line 148, mission.scss */
+          .luckspin-box .luckspin-cont .luckspin-contbox .playbox #rundot .dot1 {
+            background: green;
+            border-radius: 50%;
+            height: 28px;
+            width: 28px;
+            position: absolute;
+            animation-name: pinpon;
+            animation-duration: 2s;
+            animation-timing-function: ease-in;
+            animation-delay: 2s; }
+          /* line 160, mission.scss */
+          .luckspin-box .luckspin-cont .luckspin-contbox .playbox #rundot .dot2 {
+            opacity: 0.7;
+            background: yellow;
+            border-radius: 50%;
+            height: 28px;
+            width: 28px;
+            position: absolute;
+            animation-name: pinpon;
+            animation-duration: 1s;
+            animation-timing-function: ease-in;
+            animation-delay: 3s; }
+        /* line 174, mission.scss */
+        .luckspin-box .luckspin-cont .luckspin-contbox .playbox #playagain {
+          z-index: 1;
+          position: absolute; }
+          @media (max-width: 767px) {
+            /* line 177, mission.scss */
+            .luckspin-box .luckspin-cont .luckspin-contbox .playbox #playagain img {
+              max-width: 200px; } }
+          @media (max-width: 480px) {
+            /* line 177, mission.scss */
+            .luckspin-box .luckspin-cont .luckspin-contbox .playbox #playagain img {
+              max-width: 160px; } }
+          @media (max-width: 375px) {
+            /* line 177, mission.scss */
+            .luckspin-box .luckspin-cont .luckspin-contbox .playbox #playagain img {
+              max-width: 120px; } }
+          @media (min-width: 768px) {
+            /* line 177, mission.scss */
+            .luckspin-box .luckspin-cont .luckspin-contbox .playbox #playagain img {
+              max-width: 250px; } }
+
+/* line 202, mission.scss */
+.mobiicoin-num {
+  font-size: 1.2em;
+  font-weight: 700;
+  color: #FD5F00; }
+
+/* line 207, mission.scss */
+.brder-mission {
+  border-bottom: 4px solid #418BBD;
+  border-right: 4px solid #418BBD;
+  border-left: 4px solid #0A3450;
+  border-top: 1px solid #0A3450; }
+
+/* line 213, mission.scss */
 .mission-personal {
   background: #005792;
   color: white;
   padding: 1em 1.5em; }
-  /* line 8, mission.scss */
+  /* line 217, mission.scss */
   .mission-personal .item {
     margin-bottom: .5em; }
-    /* line 10, mission.scss */
+    /* line 219, mission.scss */
     .mission-personal .item:last-child {
       margin-bottom: 0; }
-    /* line 13, mission.scss */
+    /* line 222, mission.scss */
     .mission-personal .item.coin {
       font-size: 1.3em;
       font-weight: 500; }
-    /* line 17, mission.scss */
+    /* line 226, mission.scss */
     .mission-personal .item.progress {
       height: .5em;
       border-radius: 30px; }
-    /* line 21, mission.scss */
+    /* line 230, mission.scss */
     .mission-personal .item.task {
       font-size: .9em; }
-    /* line 24, mission.scss */
+    /* line 233, mission.scss */
     .mission-personal .item .info-img {
       flex: none;
       width: 40px;
@@ -28,56 +234,52 @@
       border-radius: 100%;
       overflow: hidden;
       margin-right: 15px; }
-      /* line 31, mission.scss */
+      /* line 240, mission.scss */
       .mission-personal .item .info-img img {
         width: 100%;
         height: 100%;
         object-fit: cover; }
 
-/* line 41, mission.scss */
+/* line 250, mission.scss */
 .img-box {
   width: 60px;
   height: 60px;
   border-radius: 100%;
   overflow: hidden;
   margin: .5em; }
-  /* line 47, mission.scss */
+  /* line 256, mission.scss */
   .img-box img {
     width: 100%; }
 
-/* line 52, mission.scss */
-.bt-line {
-  border-top: 1px solid #eee; }
-
-/* line 55, mission.scss */
+/* line 261, mission.scss */
 .ms-item {
   border-bottom: 1px solid #eee; }
 
-/* line 58, mission.scss */
+/* line 264, mission.scss */
 .info-box {
   color: #182B56;
   flex: 1;
   margin: .5em; }
-  /* line 62, mission.scss */
+  /* line 268, mission.scss */
   .info-box .info-list {
     height: 100%;
     display: flex;
     flex-direction: column; }
-  /* line 67, mission.scss */
+  /* line 273, mission.scss */
   .info-box .info-name {
     font-weight: 600;
     font-size: 1em; }
-  /* line 71, mission.scss */
+  /* line 277, mission.scss */
   .info-box li {
     font-size: small; }
-    /* line 73, mission.scss */
+    /* line 279, mission.scss */
     .info-box li span.num {
       color: #FD5F00;
       font-size: 1.4em;
       font-weight: 600; }
 
 /* footer */
-/* line 82, mission.scss */
+/* line 288, mission.scss */
 .fixed-btn {
   position: fixed;
   width: 100%;
@@ -87,5 +289,18 @@
   padding: 15px;
   background-color: #fff;
   box-shadow: 0 -5px 8px rgba(0, 0, 0, 0.2); }
+
+/* line 300, mission.scss */
+.luckspin-rules .rulescontext {
+  padding: 1em; }
+  /* line 302, mission.scss */
+  .luckspin-rules .rulescontext label {
+    font-weight: 700; }
+  /* line 305, mission.scss */
+  .luckspin-rules .rulescontext ul {
+    padding: 0 1em 1em 1em; }
+    /* line 307, mission.scss */
+    .luckspin-rules .rulescontext ul li {
+      font-size: small; }
 
 /*# sourceMappingURL=mission.css.map */

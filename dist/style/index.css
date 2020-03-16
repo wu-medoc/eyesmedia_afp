@@ -91,7 +91,7 @@ body.is-open-country .country-box {
 }
 
 .kvbn-img {
-  min-height: 180px;
+  min-height: 140px;
   max-width: 100%;
   width: 100%;
   padding-bottom: 45%;
@@ -119,7 +119,7 @@ body.is-open-country .country-box {
     -webkit-box-flex: 1;
         -ms-flex: 1;
             flex: 1;
-    margin: 6px 10px;
+    margin: 0px 10px;
     padding: 10px 0;
     border: 4px solid #fff;
     border-radius: 1em;
@@ -151,16 +151,16 @@ body.is-open-country .country-box {
     -webkit-box-flex: 1;
         -ms-flex: 1;
             flex: 1;
-    margin: 6px 6px;
-    padding: 8px 0;
+    margin: 0px 6px;
+    padding: 4px 0;
     border: 3px solid #fff;
     border-radius: 1em;
-    height: 70px;
-    max-width: 70px;
+    height: 60px;
+    max-width: 60px;
     text-align: center;
   }
   .kv-iconbox .kv-icon img {
-    height: 2.6em;
+    height: 2.5em;
   }
 }
 
@@ -180,7 +180,7 @@ body.is-open-country .country-box {
     -webkit-box-flex: 1;
         -ms-flex: 1;
             flex: 1;
-    margin: 6px 3px;
+    margin: 0px 3px;
     padding: 4px 0;
     border: 3px solid #fff;
     border-radius: 1em;
@@ -553,6 +553,12 @@ body.is-open-country .country-box {
   background-color: #fff;
   border-top-left-radius: 1em;
   border-top-right-radius: 1em;
+}
+
+@media (max-width: 480px) {
+  .main-content {
+    top: -12px;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -3445,16 +3451,16 @@ button.open-page img {
 
 /* check ui */
 [class*="icheck-material"] {
-  min-height: 22px;
+  min-height: 20px;
   margin-top: 6px !important;
   margin-bottom: 6px !important;
   padding-left: 0px;
 }
 
 [class*="icheck-material"] > label {
-  padding-left: 29px !important;
-  min-height: 22px;
-  line-height: 22px;
+  padding-left: 30px !important;
+  min-height: 20px;
+  line-height: 20px;
   display: inline-block;
   position: relative;
   vertical-align: top;
@@ -3475,8 +3481,8 @@ button.open-page img {
   -ms-appearance: none;
   display: block;
   pointer-events: none;
-  width: 22px;
-  height: 22px;
+  width: 20px;
+  height: 20px;
   outline: none;
   -webkit-transform: scale(2);
           transform: scale(2);
@@ -3508,8 +3514,8 @@ button.open-page img {
   content: "";
   display: inline-block;
   position: absolute;
-  width: 22px;
-  height: 22px;
+  width: 20px;
+  height: 20px;
   border: 2px solid #787878;
   border-radius: 3px;
   margin-left: -29px;
