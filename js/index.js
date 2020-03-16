@@ -1,5 +1,6 @@
 var body = $('body');
 var windowsize = $('body').width();
+/*****************  index  ********************/
 //index ad
 $(".imgLiquidFill").imgLiquid();
 var swiper = new Swiper('.kv-box .swiper-container', {
@@ -10,8 +11,6 @@ var swiper = new Swiper('.kv-box .swiper-container', {
         disableOnInteraction: false,
         },
 });
-
-
 // ad
 // 超過一張才執行 swiper，並且顯示 pagination
 if ($('.ad-box .swiper-slide').length>1) {
@@ -77,7 +76,6 @@ $('.setting .edit-title-cancel').on('click', function(){
     $(this).closest('.multilayer>.setting').removeClass('edit-mode');
 })
 
-
 // footer menu-bar
 $('.bar-item').on('click', function() {
     $('.bar-item').removeClass('active');
@@ -101,7 +99,7 @@ $("#webservice_close").on('click', function(){
     $('#webservice').removeClass();
 });
 
-
+/*****************  swiper  ********************/
 // swiper JS for index
 if ($( ".index-gowhere" ).hasClass("swiper-container")) {
     var swiper = new Swiper('.index-gowhere.swiper-container', {
@@ -280,76 +278,6 @@ var swiper = new Swiper('.shopping-productsimg.swiper-container', {
 }
 
 
-
-// // open-page
-// $( ".open-page" ).on('click', function () {
-//     if ($( "#open-pagebox" ).hasClass("slideOutRight animated")) {
-//         $( "#open-pagebox" ).removeClass('slideOutRight animated');
-//         $( "#open-pagebox" ).addClass('slideInRight animated');
-//         $( "#open-pagebox" ).removeClass('d-block');
-//         $( "#open-pagebox" ).addClass('d-none');
-//     }
-//     $( "#open-pagebox" ).removeClass('d-none');
-//     $( "#open-pagebox" ).addClass('d-block');
-//     $('#open-mask').addClass("modal-backdrop fade show");
-//     $( ".wrap" ).addClass("blur");
-// });
-// $( ".close-left" ).on('click', function () {
-//     $( "#open-pagebox" ).removeClass('slideInRight animated');
-//     $( "#open-pagebox" ).addClass('slideOutRight animated');
-//     $( "#open-pagebox1" ).removeClass('slideInRight animated');
-//     $( "#open-pagebox1" ).addClass('slideOutRight animated');
-//     $('#open-mask').removeClass("modal-backdrop fade show");
-//     $( ".wrap" ).removeClass("blur");
-// });
-// if($('#open-pagebox').length>0) {
-//     var wrapheight = $('#products-list').innerHeight();
-//     var openheight = $('#open-pagebox').outerHeight();  
-//     var openheight1 = (wrapheight-openheight)/3.5;
-//     if (openheight < wrapheight) {
-//         $('#open-pagebox').css({'padding-bottom': openheight1});
-//     }  
-// }
-// // open-page1
-// $( ".open-page1" ).on('click', function () {
-//     if ($( "#open-pagebox1" ).hasClass("slideOutRight animated")) {
-//         $( "#open-pagebox1" ).removeClass('slideOutRight animated');
-//         $( "#open-pagebox1" ).addClass('slideInRight animated');
-//         $( "#open-pagebox1" ).removeClass('d-block');
-//         $( "#open-pagebox1" ).addClass('d-none');
-//     }
-//     $( "#open-pagebox1" ).removeClass('d-none');
-//     $( "#open-pagebox1" ).addClass('d-block');
-//     $('#open-mask').addClass("modal-backdrop fade show");
-//     $( ".wrap" ).addClass("blur");
-// });
-// $( ".close-left1" ).on('click', function () {
-//     $( "#open-pagebox1" ).removeClass('slideInRight animated');
-//     $( "#open-pagebox1" ).addClass('slideOutRight animated');
-// });
-// if($('#open-pagebox1').length>0) {
-//     var wrapheight = $('#products-list').innerHeight();
-//     var openheight = $('#open-pagebox1').outerHeight();  
-//     var openheight1 = (wrapheight-openheight)/3.5;
-//     if (openheight < wrapheight) {
-//         $('#open-pagebox1').css({'padding-bottom': openheight1});
-//     }  
-// }
-// // open-uppage
-// $( ".open-uppage" ).on('click', function () {
-//     $( "#open-pageupbox" ).removeClass('d-none');
-//     $( "#open-pageupbox" ).addClass('d-block');
-//     $('#open-mask').addClass("modal-backdrop fade show");
-//     $( ".wrap" ).addClass("blur");
-// });
-// $( ".close-up" ).on('click', function () {
-//     $('#open-mask').removeClass("modal-backdrop fade show");
-//     $( ".wrap" ).removeClass("blur");    
-//     $( "#open-pageupbox" ).removeClass('d-block');
-//     $( "#open-pageupbox" ).addClass('d-none');
-// });
-
-
 $(document).ready(function(){
     // bear service
     var windowHight = $(window).height();
@@ -409,16 +337,15 @@ $(document).ready(function(){
 
 
 
-function msg_sub(e) {
-    $(e).siblings('div').hide();
-}
 // div switch
 function div_switch() {
     $('.div-switch.d-block').removeClass('d-block').addClass('d-none1');
     $('.div-switch.d-none').removeClass('d-none').addClass('d-block');    
     $('.div-switch.d-none1').removeClass('d-none1').addClass('d-none');
 };
-
+function msg_sub(e) {
+    $(e).siblings('div').hide();
+}
 
 //memberclause & memberprivate
 window.onload = function(){   
@@ -445,48 +372,18 @@ function openMask(e) {
         $('#open-mask').removeClass();
     };
 };
-
-
         
 // overlay-choice open close control
 $('.open-overlay-choice').on("click", function () {
     $('.overlay-choice').toggle();
-    $('.modal-backdrop.fade.show').removeClass("d-none");
+    $('body').append("<div class='modal-backdrop container'></div>");
 });
 $('.close-overlay-choice').on("click", function () {
     $('.overlay-choice').toggle();
-    $('.modal-backdrop.fade.show').addClass("d-none");
+    $('.modal-backdrop').remove();
 });
 
-// animated control slideInRight slideOutRight
-// function levelAnim(obj){
-//     var anim = obj.split(",");
-//     var thislevel = anim[0];
-//     var sublevel = anim[1];
-//     var subpa = anim[2];
-//     var subchild = anim[3];   
-//     if (thislevel < sublevel) { 
-//         //in thislevel < sublevel                   
-//         $('.multilayer').removeClass('slideOutRight slideInRight fast animated d-block container'); 
-//         $('.multilayer>div').removeClass('slideInRight slideOutRight animated d-block container');         
-//         $('.multilayer').addClass('slideInRight animated fast d-block container');   
-//         $('.'+subchild).addClass('slideInRight animated d-block container');   
-//         if (sublevel >1) {  //out Previous layer
-//             $('.'+subpa).addClass('slideOutRight animated d-block container'); 
-//         };  
-//     } else { 
-//         //out thislevel > sublevel
-//         $('.multilayer>div').removeClass('slideInRight slideOutRight animated d-block container');
-//         $('.'+subchild).addClass('slideOutRight animated d-block container'); 
-//         $('.'+subpa).addClass('slideInRight animated d-block container');   
-//         if (sublevel == 0){  //out multilayer
-//             $('.multilayer').removeClass('slideInRight animated fast d-block container');
-//             $('.multilayer').addClass('slideOutRight animated fast d-block container');
-//         };
-//     };    
-// };
-
-// black mask sortLayer use
+// black mask modal massage use
 $('.masklayer').on("click", function () {
     $('body').append("<div class='modal-backdrop container'></div>");
 });
@@ -494,6 +391,21 @@ $('.masklayer-close').on("click", function () {
     $('.modal-backdrop').remove();
 });
 
+// cookie access
+function getCookie(cname) {
+    var ss = document.cookie;
+    var name = cname + "=";
+    var ca = document.cookie.split(';');
+    for(var i=0; i<ca.length; i++)
+    {
+        var c = ca[i].trim();
+        if (c.indexOf(name)==0)
+            return c.substring(name.length,c.length);
+    }
+    return "";
+};
+
+/*****************  animateCss  ********************/
 // multilayer animateCss
 var tLayer = [];
 function callLayer(nextLayer) {
@@ -565,16 +477,3 @@ function backLayerOne() {
     oneLayer.length=0;
 };
 
-
-function getCookie(cname) {
-    var ss = document.cookie;
-    var name = cname + "=";
-    var ca = document.cookie.split(';');
-    for(var i=0; i<ca.length; i++)
-    {
-        var c = ca[i].trim();
-        if (c.indexOf(name)==0)
-            return c.substring(name.length,c.length);
-    }
-    return "";
-};

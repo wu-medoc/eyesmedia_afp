@@ -2,24 +2,82 @@
 .mission-personal {
   background: #005792;
   color: white;
-  padding: 0.5em 1em; }
+  padding: 1em 1.5em; }
+  /* line 8, mission.scss */
+  .mission-personal .item {
+    margin-bottom: .5em; }
+    /* line 10, mission.scss */
+    .mission-personal .item:last-child {
+      margin-bottom: 0; }
+    /* line 13, mission.scss */
+    .mission-personal .item.coin {
+      font-size: 1.3em;
+      font-weight: 500; }
+    /* line 17, mission.scss */
+    .mission-personal .item.progress {
+      height: .5em;
+      border-radius: 30px; }
+    /* line 21, mission.scss */
+    .mission-personal .item.task {
+      font-size: .9em; }
+    /* line 24, mission.scss */
+    .mission-personal .item .info-img {
+      flex: none;
+      width: 40px;
+      height: 40px;
+      border-radius: 100%;
+      overflow: hidden;
+      margin-right: 15px; }
+      /* line 31, mission.scss */
+      .mission-personal .item .info-img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; }
 
-/* line 10, mission.scss */
-.info-img {
-  flex: none;
-  width: 40px;
-  height: 40px;
+/* line 41, mission.scss */
+.img-box {
+  width: 60px;
+  height: 60px;
   border-radius: 100%;
   overflow: hidden;
-  margin-right: 15px; }
-  /* line 17, mission.scss */
-  .info-img img {
-    width: 100%;
+  margin: .5em; }
+  /* line 47, mission.scss */
+  .img-box img {
+    width: 100%; }
+
+/* line 52, mission.scss */
+.bt-line {
+  border-top: 1px solid #eee; }
+
+/* line 55, mission.scss */
+.ms-item {
+  border-bottom: 1px solid #eee; }
+
+/* line 58, mission.scss */
+.info-box {
+  color: #182B56;
+  flex: 1;
+  margin: .5em; }
+  /* line 62, mission.scss */
+  .info-box .info-list {
     height: 100%;
-    object-fit: cover; }
+    display: flex;
+    flex-direction: column; }
+  /* line 67, mission.scss */
+  .info-box .info-name {
+    font-weight: 600;
+    font-size: 1em; }
+  /* line 71, mission.scss */
+  .info-box li {
+    font-size: small; }
+    /* line 73, mission.scss */
+    .info-box li span.num {
+      color: #FD5F00;
+      font-size: 1.4em;
+      font-weight: 600; }
 
 /* footer */
-/* line 25, mission.scss */
+/* line 82, mission.scss */
 .fixed-btn {
   position: fixed;
   width: 100%;

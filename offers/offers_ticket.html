@@ -38,7 +38,7 @@
     <div class="ticketdetail">
         <div class="title-box">
             <div class="item icon-btn">
-                <button class="btn animated-btn" onclick="backLayerOne();" data-toggle="tooltip" data-placement="bottom" title="回上一頁">
+                <button class="btn px-0" onclick="backLayerOne();" data-toggle="tooltip" data-placement="bottom" title="回上一頁">
                     <i class="material-icons">&#xE314;</i>
                 </button>
             </div>
@@ -126,13 +126,13 @@
         <div class="useoffers">
             <div class="title-box">
                 <div class="item icon-btn">
-                    <button class="btn animated-btn" onclick="backLayer();" data-toggle="tooltip" data-placement="bottom" title="回上一頁">
+                    <button class="btn px-0" onclick="backLayer();" data-toggle="tooltip" data-placement="bottom" title="回上一頁">
                         <i class="material-icons">&#xE314;</i>
                     </button>
                 </div>
                 <div class="item title-name">使用優惠券</div>
                 <div class="item icon-btn">
-                    <button class="bluedk-outline-btn small-80" onclick="backLayer()">優惠詳情</button>
+                    <button class="btn bluedk-outline-btn bt-small" onclick="backLayer()">優惠詳情</button>
                 </div>
             </div>
             <div class="text-bluedk text-center">
@@ -240,14 +240,14 @@
             //get stepval
             var stepval = getCookie('step');
             if (stepval=='step1'){
-                $('.fixed-btn').append().html("<button type='button' class='btn index-outline-btn w-100' onclick=\"callLayer('.useoffers')\">使用</button>");
+                $('.fixed-btn').append().html("<button type='button' class='btn px-2 index-outline-btn w-100' onclick=\"callLayer('.useoffers')\">使用</button>");
             }else{
                 $.cookie("cookieName", "", {expires: -1});
             }
 
             //receive step control
             $('button.step1').on('click',function(){
-                $('.fixed-btn').append().html("<button type='button' class='btn index-outline-btn w-100' onclick=\"callLayer('.useoffers')\">使用</button>");
+                $('.fixed-btn').append().html("<button type='button' class='btn px-2 index-outline-btn w-100' onclick=\"callLayer('.useoffers')\">使用</button>");
             });            
             $('button.step2').on('click',function(){
                 backLayer();

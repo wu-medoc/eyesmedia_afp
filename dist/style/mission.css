@@ -4,7 +4,29 @@
   padding: 1em 1.5em;
 }
 
-.info-img {
+.mission-personal .item {
+  margin-bottom: .5em;
+}
+
+.mission-personal .item:last-child {
+  margin-bottom: 0;
+}
+
+.mission-personal .item.coin {
+  font-size: 1.3em;
+  font-weight: 500;
+}
+
+.mission-personal .item.progress {
+  height: .5em;
+  border-radius: 30px;
+}
+
+.mission-personal .item.task {
+  font-size: .9em;
+}
+
+.mission-personal .item .info-img {
   -webkit-box-flex: 0;
       -ms-flex: none;
           flex: none;
@@ -15,11 +37,61 @@
   margin-right: 15px;
 }
 
-.info-img img {
+.mission-personal .item .info-img img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.img-box {
+  width: 60px;
+  height: 60px;
+  border-radius: 100%;
+  overflow: hidden;
+  margin: .5em;
+}
+
+.img-box img {
+  width: 100%;
+}
+
+.ms-item {
+  border-bottom: 1px solid #eee;
+}
+
+.info-box {
+  color: #182B56;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  margin: .5em;
+}
+
+.info-box .info-list {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.info-box .info-name {
+  font-weight: 600;
+  font-size: 1em;
+}
+
+.info-box li {
+  font-size: small;
+}
+
+.info-box li span.num {
+  color: #FD5F00;
+  font-size: 1.4em;
+  font-weight: 600;
 }
 
 /* footer */
