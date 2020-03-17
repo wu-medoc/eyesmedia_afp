@@ -241,6 +241,7 @@
         //begin use animateCss
         $( document ).ready(function() {
             callLayerOne();
+            $('footer.for-pc').hide();
         });
         $('#playagain').on('click', function() {
             if($('.contbox').hasClass('opacity5')) {
@@ -265,17 +266,15 @@
                             {idx:"7", img:"stroe-logo-7.png", txt:"30元折價券", deadline:"2019/11/15 ~ 2019/12/07"},
                             {idx:"8", img:"stroe-logo-8.png", txt:"30元折價券", deadline:"2019/11/15 ~ 2019/12/08"}]
                 var luckrandom = parseInt(Math.random(8)*10);
-                $('.wincontbox').empty();
                 $.each(JData, function( key, value ) {
                     if(JData[key]['idx']==luckrandom){
-                        $('.wincontbox').append("<img src='../img/shopping/store/stroe-logo-"+luckrandom+".png'><p>"+JData[key]['txt']+"</p><small>"+JData[key]['deadline']+"</small></div>");
+                        $('.wincontbox').empty().append("<img src='../img/shopping/store/stroe-logo-"+luckrandom+".png'><p>"+JData[key]['txt']+"</p><small>"+JData[key]['deadline']+"</small></div>");
                     }
                 });   
                 callLayerUp('.winmsg');
                 $('.contbox').removeClass('opacity5');            
-            }, 3000);
+            }, 4000);
         });
-        $('footer.for-pc').hide();
     </script>
 
     <script>    

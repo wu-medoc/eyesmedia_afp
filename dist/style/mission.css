@@ -115,14 +115,14 @@
 
 @media (max-width: 375px) {
   .luckspin-box .luckspin-cont .luckspin-contbox {
-    font-size: x-small;
-    grid-column-gap: 2px;
-    grid-row-gap: 2px;
+    font-size: xx-small;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
   }
 }
 
 .luckspin-box .luckspin-cont .luckspin-contbox div {
-  padding: .5em;
+  padding: .25em;
   background: #fff;
   border-radius: .25em;
   display: -webkit-box;
