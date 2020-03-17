@@ -4,6 +4,10 @@
 .bg-mission{
     background: $mission-color;
 }
+.text-mission{
+    font-size: .9em;
+    color: $mission-color;
+}
 .luckspin-box{
     background: #418BBD;
     padding-bottom: .5em;
@@ -65,7 +69,7 @@
         padding: .75em;
         margin: 0 auto;
         border-radius: .25em;
-        max-width: 800px;
+        max-width: 800px; 
         .luckspin-contbox{
             background: gray;
             padding: .5em;
@@ -74,6 +78,9 @@
             grid-column-gap: 10px;
             grid-row-gap: 10px;
             font-size: 1em;
+            &.no9{
+                grid-template-columns: repeat(3, 1fr);
+            }
             @media (max-width: 375px) {
                 font-size: x-small;
                 grid-column-gap: 2px;
@@ -92,6 +99,7 @@
                 text-overflow: ellipsis;
                 opacity: 1;
                 border: 4px solid gray;
+                border-radius: 0.75em;
                 img{
                     width: auto;
                     max-width: 120px;
@@ -109,6 +117,13 @@
                 animation-timing-function: ease-in;
                 animation-delay: 1s;    
                 animation-iteration-count: infinite;
+            }              
+            .playbox9{
+                background: transparent;
+                padding: 0;
+                img{
+                    max-width: 100%;
+                }
             }
             .playbox{
                 #rundot{
@@ -337,7 +352,7 @@
             box-shadow: 5px 10px 8px #eee;       
             img{
                 max-width: 100px;
-            }    
+            } 
         }
     }
 }
