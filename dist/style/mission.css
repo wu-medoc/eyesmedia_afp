@@ -106,6 +106,8 @@
 @media (max-width: 375px) {
   .luckspin-box .luckspin-cont .luckspin-contbox {
     font-size: x-small;
+    grid-column-gap: 2px;
+    grid-row-gap: 2px;
   }
 }
 
