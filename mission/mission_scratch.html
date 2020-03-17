@@ -43,9 +43,9 @@
                     <i class="material-icons">&#xE314;</i>
                 </button>
             </div>
-            <div class="item title-name">幸運大轉盤</div>                
+            <div class="item title-name">刮刮樂</div>                
             <div class="item">   
-                <button type="button" class="btn bluedk-outline-btn bt-small" onclick="callsortLayer('.luckspin-rules')">活動規則</button>
+                <button type="button" class="btn bluedk-outline-btn bt-small" onclick="callsortLayer('.scratch-rules')">活動規則</button>
             </div>
         </div>
     </div>
@@ -76,40 +76,27 @@
             </div>
         </div>
     </div>    
-    <div class="luckspin-box">
-        <div class="luckspin-top">
+    <div class="scratch-box">
+        <div class="conopybox-top">
             <section class="conopybox">
                 <div class="item canopy-l"></div>
                 <div class="item canopy-c"></div>
                 <div class="item canopy-r"></div>
             </section>
         </div>
-        <div class="luckspin-cont">
-            <div class="luckspin-contbox">
-                <div class="contbox 1"><img src="../img/shopping/store/stroe-logo-1.png">95折優惠券</div>
-                <div class="contbox 2"><img src="../img/shopping/store/stroe-logo-2.png">30元折價券</div>
-                <div class="contbox 3"><img src="../img/shopping/store/stroe-logo-3.png">30元折價券</div>
-                <div class="contbox 4"><img src="../img/shopping/store/stroe-logo-4.png">30元折價券</div>
-                <div class="contbox 12"><img src="../img/shopping/store/stroe-logo-12.png">30元折價券</div>
-                <div class="playbox">
-                    <button type="button" id="playagain" class="btn p-0"><img src="../img/mission/playbox.png"></button>
-                    <div id="rundot"><div class="dot"></div><div class="dot1"></div><div class="dot2"></div></div>
-                </div>
-                <div class="contbox 5"><img src="../img/shopping/store/stroe-logo-5.png">30元折價券</div>
-                <div class="contbox 11"><img src="../img/shopping/store/stroe-logo-11.png">30元折價券</div>
-                <div class="contbox 6"><img src="../img/shopping/store/stroe-logo-6.png">30元折價券</div>
-                <div class="contbox 10"><img src="../img/shopping/store/stroe-logo-10.png">95折優惠券</div>
-                <div class="contbox 9"><img src="../img/shopping/store/stroe-logo-9.png">30元折價券</div>
-                <div class="contbox 8"><img src="../img/shopping/store/stroe-logo-8.png">30元折價券</div>
-                <div class="contbox 7"><img src="../img/shopping/store/stroe-logo-7.png">30元折價券</div>
-            </div>            
-        </div>
-        <div class="addheight pb-5"></div>
     </div>
 
+    <div class="scratch-cont">
+        <h5>SCRATCH HERE</h5> 
+        <div class="dowebok">
+            <img id="robot" src="../img/mission/scratch-win.png">
+            <img id="redux" src="../img/mission/scratch-no.png">
+        </div> 
+    </div>
+           
     <!-- 規則 -->
     <div class="sortlayer">
-        <div class="luckspin-rules">
+        <div class="scratch-rules">
             <div id="open-pagebox">
                 <div class="open-page-title index-flex">
                     <div class="item one title-icon">
@@ -239,6 +226,7 @@
     <!-- vendor js -->
     <script src="../js/vendor/swiper/js/swiper.min.js"></script>
     <script src="../js/vendor/imgLiquid.js"></script>
+    <script src="../js/vendor/bs4/js/jquery.eraser.js"></script>
 
     <!-- custom js -->    
     <script src="../js/animateCss.js"></script>
@@ -246,45 +234,32 @@
         //begin use animateCss
         $( document ).ready(function() {
             callLayerOne();
+            $('footer.for-pc').hide();
+
+            addEventListener( "load", init, false );
         });
-        $('#playagain').on('click', function() {
-            if($('.contbox').hasClass('opacity5')) {
-                $('.contbox').removeClass('opacity5');
-            }else{         
-                $.each($('.contbox'), function( key, value ) {
-                    for(let i=1; i<=12; i++){
-                        var k = i-(0.8*i);
-                        if($(this).attr('class').split(/\s+/)[1]==i){
-                            $(this).addClass('opacity5').css('animation-delay',k+'s');
-                        }
-                    };
-                });     
-            } 
-            setTimeout(function(){ 
-                var JData = [{idx:"1", img:"stroe-logo-1.png", txt:"95折優惠券", deadline:"2019/11/15 ~ 2019/12/01"},
-                            {idx:"2", img:"stroe-logo-2.png", txt:"30元折價券", deadline:"2019/11/15 ~ 2019/12/02"},
-                            {idx:"3", img:"stroe-logo-3.png", txt:"30元折價券", deadline:"2019/11/15 ~ 2019/12/03"},
-                            {idx:"4", img:"stroe-logo-4.png", txt:"30元折價券", deadline:"2019/11/15 ~ 2019/12/04"},
-                            {idx:"5", img:"stroe-logo-5.png", txt:"30元折價券", deadline:"2019/11/15 ~ 2019/12/05"},
-                            {idx:"6", img:"stroe-logo-6.png", txt:"30元折價券", deadline:"2019/11/15 ~ 2019/12/06"},
-                            {idx:"7", img:"stroe-logo-7.png", txt:"30元折價券", deadline:"2019/11/15 ~ 2019/12/07"},
-                            {idx:"8", img:"stroe-logo-8.png", txt:"30元折價券", deadline:"2019/11/15 ~ 2019/12/08"},
-                            {idx:"9", img:"stroe-logo-9.png", txt:"30元折價券", deadline:"2019/11/15 ~ 2019/12/09"},
-                            {idx:"10", img:"stroe-logo-10.png", txt:"95折優惠券", deadline:"2019/11/15 ~ 2019/12/10"},
-                            {idx:"11", img:"stroe-logo-11.png", txt:"30元折價券", deadline:"2019/11/15 ~ 2019/12/11"},
-                            {idx:"12", img:"stroe-logo-12.png", txt:"30元折價券", deadline:"2019/11/15 ~ 2019/12/12"}]
-                var luckrandom = parseInt(Math.random(12)*10);
-                $('.wincontbox').empty();
-                $.each(JData, function( key, value ) {
-                    if(JData[key]['idx']==luckrandom){
-                        $('.wincontbox').append("<img src='../img/shopping/store/stroe-logo-"+luckrandom+".png'><p>"+JData[key]['txt']+"</p><small>"+JData[key]['deadline']+"</small></div>");
-                    }
-                   console.log(JData[key]['idx']);
-                });   
-                callLayerUp('.winmsg');
-                $('.contbox').removeClass('opacity5');            
-            }, 3000);
-        });
+        
+			function init( event ) {
+				//$("#redux").eraser();
+                //$("#redux").eraser({size: 20});
+                $('#redux').eraser({
+                size:80,
+                completeRatio:0.5,
+                completeFunction:function(){
+                    alert(666);
+                }
+            });
+			}
+
+			// function remove(event) {
+			// 	$("#redux").eraser('clear');
+			// 	event.preventDefault();
+			// }
+
+			// function reset(event) {
+			// 	$("#redux").eraser('reset');
+			// 	event.preventDefault();
+			// }
     </script>
 
     <script>    
