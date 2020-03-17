@@ -1337,7 +1337,6 @@ a:hover {
 }
 
 .shopping-cartlist ul.list-unstyled li .col-3 .products-delbtn {
-  display: none;
   max-width: 80px;
   width: 100%;
   height: 100%;

@@ -88,6 +88,8 @@
                 overflow:hidden;
                 white-space: nowrap;
                 text-overflow: ellipsis;
+                opacity: 1;
+                border: 4px solid gray;
                 img{
                     width: auto;
                     max-width: 120px;
@@ -99,77 +101,142 @@
                     }
                 }
             }
+            .contbox.opacity5{
+                animation-name: pinpon;
+                animation-duration: 3s;
+                animation-timing-function: ease-in;
+                animation-delay: 1s;    
+                animation-iteration-count: infinite;
+            }
             .playbox{
                 #rundot{
                     background: transparent;
                     position: absolute;
-                    width: 250px;
-                    height: 230px;
-                    @keyframes pinpon {
-  
+                    width: 255px;
+                    height: 235px;    
+                    @media (max-width: 767px) {
+                        width: 210px;
+                        height: 190px;    
+                    }
+                    @media (max-width: 480px) {
+                        width: 135px;
+                        height: 123px;    
+                    }                     
+                    div{
+                        border-radius: 50%;
+                        height: 28px;
+                        width: 28px;
+                        position: absolute;                        
+                        animation-name: pinpon;
+                        animation-timing-function: ease-in;
+                        animation-iteration-count: infinite;   
+                        @media (max-width: 767px) {     
+                            height: 22px;
+                            width: 22px;        
+                            animation-name: pinpon767;
+                        }
+                        @media (max-width: 480px) {       
+                            height: 18px;
+                            width: 18px;              
+                            animation-name: pinpon480;
+                        }                                           
+                        &.dot {
+                            background: red;
+                            animation-duration: 3s;
+                            animation-delay: 1s;    
+                        }
+                        &.dot1 {
+                            background: green;
+                            animation-duration: 2s;
+                            animation-delay: 2s;    
+                        }
+                        &.dot2 {
+                            background: yellow;
+                            animation-duration: 1s;
+                            animation-delay: 3s;  
+                        }
+                    }
+                    @keyframes pinpon {  
                         0% {
                           left: 0;
                           top: 0;
-                        }
-                      
+                          border: 4px solid #89ff00;
+                        }                      
                         25% {
                           left: 220px;
                           top: 0px;
-                        }
-                      
+                          border: 4px solid #ff0000;
+                        }                      
                         50% {
                           left: 220px;
                           top: 200px;
-                        }
-                      
+                          border: 4px solid #00ffff;
+                        }                      
                         75% {
                           left: 0px;
                           top: 200px;
-                        }
-                        
+                          border: 4px solid #e100ff;
+                        }                        
                         100% {
                           left: 0;
                           top: 0;
+                          border: 4px solid #002fff;
                         }
-                      }
-                      
-                      .dot {
-                        background: red;
-                        border-radius: 50%;
-                        height: 28px;
-                        width: 28px;
-                        position: absolute;
-                        
-                        animation-name: pinpon;
-                        animation-duration: 3s;
-                        animation-timing-function: ease-in;
-                        animation-delay: 1s;    
-                      }
-                      .dot1 {
-                        background: green;
-                        border-radius: 50%;
-                        height: 28px;
-                        width: 28px;
-                        position: absolute;
-                        
-                        animation-name: pinpon;
-                        animation-duration: 2s;
-                        animation-timing-function: ease-in;
-                        animation-delay: 2s;    
-                      }
-                      .dot2 {
-                        opacity: 0.7;
-                        background: yellow;
-                        border-radius: 50%;
-                        height: 28px;
-                        width: 28px;
-                        position: absolute;
-                        
-                        animation-name: pinpon;
-                        animation-duration: 1s;
-                        animation-timing-function: ease-in;
-                        animation-delay: 3s;  
-                      }
+                    }          
+                    @keyframes pinpon767 {  
+                        0% {
+                          left: 0;
+                          top: 0;
+                          border: 4px solid #89ff00;
+                        }                      
+                        25% {
+                          left: 175px;
+                          top: 0px;
+                          border: 4px solid #ff0000;
+                        }                      
+                        50% {
+                          left: 175px;
+                          top: 158px;
+                          border: 4px solid #00ffff;
+                        }                      
+                        75% {
+                          left: 0px;
+                          top: 158px;
+                          border: 4px solid #e100ff;
+                        }                        
+                        100% {
+                          left: 0;
+                          top: 0;
+                          border: 4px solid #002fff;
+                        }
+                    }                                    
+                    @keyframes pinpon480 {  
+                        0% {
+                          left: 0;
+                          top: 0;
+                          border: 3px solid #89ff00;
+                        }                      
+                        25% {
+                          left: 108px;
+                          top: 0px;
+                          border: 3px solid #ff0000;
+                        }                      
+                        50% {
+                          left: 108px;
+                          top: 98px;
+                          border: 3px solid #00ffff;
+                        }                      
+                        75% {
+                          left: 0px;
+                          top: 98px;
+                          border: 3px solid #e100ff;
+                        }                        
+                        100% {
+                          left: 0;
+                          top: 0;
+                          border: 3px solid #002fff;
+                        }
+                    }                   
                 }
                 #playagain{         
                     z-index: 1;  
@@ -245,7 +312,33 @@
         }
     }
 }
-
+.winmsg{
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    .winbox{
+        background-image: url('../../img/mission/bg-win.png');
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .wincontbox{
+            background-color: #fff;
+            text-align: center;;
+            align-items: center;
+            border: 1px solid #f8f8f8;
+            border-radius: .5em;
+            padding: 1em;
+            margin: 2em 1em;
+            box-shadow: 5px 10px 8px #eee;       
+            img{
+                max-width: 100px;
+            }    
+        }
+    }
+}
 
 .img-box {
     width: 60px;
