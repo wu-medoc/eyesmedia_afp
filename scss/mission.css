@@ -7,15 +7,15 @@
   font-size: .9em;
   color: #005792; }
 
-/* line 11, mission.scss */
+/* line 12, mission.scss */
 .conopybox-top {
   padding: 1.2em 0;
   background: transparent !important;
   position: relative; }
-  /* line 15, mission.scss */
+  /* line 16, mission.scss */
   .conopybox-top img {
     height: 2em; }
-  /* line 18, mission.scss */
+  /* line 19, mission.scss */
   .conopybox-top .conopybox {
     position: absolute;
     top: 0px;
@@ -24,7 +24,7 @@
     display: flex;
     overflow: hidden;
     justify-content: center; }
-  /* line 27, mission.scss */
+  /* line 28, mission.scss */
   .conopybox-top .canopy-l {
     background-image: url("../../img/mission/canopy_l.png");
     background-position: right;
@@ -34,10 +34,10 @@
     height: 40px;
     min-width: 92px; }
     @media (max-width: 375px) {
-      /* line 27, mission.scss */
+      /* line 28, mission.scss */
       .conopybox-top .canopy-l {
         display: none; } }
-  /* line 39, mission.scss */
+  /* line 40, mission.scss */
   .conopybox-top .canopy-c {
     background-image: url("../../img/mission/canopy_c.png");
     background-position: center;
@@ -46,11 +46,11 @@
     min-width: 383px;
     height: 40px; }
     @media (max-width: 375px) {
-      /* line 39, mission.scss */
+      /* line 40, mission.scss */
       .conopybox-top .canopy-c {
         width: 100%;
         height: 40px; } }
-  /* line 51, mission.scss */
+  /* line 52, mission.scss */
   .conopybox-top .canopy-r {
     background-image: url("../../img/mission/canopy_r.png");
     background-position: left;
@@ -60,22 +60,22 @@
     height: 40px;
     min-width: 92px; }
     @media (max-width: 375px) {
-      /* line 51, mission.scss */
+      /* line 52, mission.scss */
       .conopybox-top .canopy-r {
         display: none; } }
 
-/* line 64, mission.scss */
+/* line 65, mission.scss */
 .luckspin-box {
   background: #418BBD;
   padding-bottom: .5em; }
-  /* line 67, mission.scss */
+  /* line 68, mission.scss */
   .luckspin-box .luckspin-cont {
     background: #005792;
     padding: .75em;
     margin: 0 auto;
     border-radius: .25em;
     max-width: 800px; }
-    /* line 73, mission.scss */
+    /* line 74, mission.scss */
     .luckspin-box .luckspin-cont .luckspin-contbox {
       background: gray;
       padding: .5em;
@@ -84,16 +84,16 @@
       grid-column-gap: 10px;
       grid-row-gap: 10px;
       font-size: 1em; }
-      /* line 81, mission.scss */
+      /* line 82, mission.scss */
       .luckspin-box .luckspin-cont .luckspin-contbox.no9 {
         grid-template-columns: repeat(3, 1fr); }
       @media (max-width: 375px) {
-        /* line 73, mission.scss */
+        /* line 74, mission.scss */
         .luckspin-box .luckspin-cont .luckspin-contbox {
           font-size: xx-small;
           grid-column-gap: 0px;
           grid-row-gap: 0px; } }
-      /* line 89, mission.scss */
+      /* line 90, mission.scss */
       .luckspin-box .luckspin-cont .luckspin-contbox div {
         padding: .25em;
         background: #fff;
@@ -108,33 +108,33 @@
         opacity: 1;
         border: 4px solid gray;
         border-radius: 0.75em; }
-        /* line 103, mission.scss */
+        /* line 104, mission.scss */
         .luckspin-box .luckspin-cont .luckspin-contbox div img {
           width: auto;
           max-width: 120px; }
           @media (max-width: 767px) {
-            /* line 103, mission.scss */
+            /* line 104, mission.scss */
             .luckspin-box .luckspin-cont .luckspin-contbox div img {
               max-width: 80px; } }
           @media (max-width: 480px) {
-            /* line 103, mission.scss */
+            /* line 104, mission.scss */
             .luckspin-box .luckspin-cont .luckspin-contbox div img {
               max-width: 50px; } }
-      /* line 114, mission.scss */
+      /* line 115, mission.scss */
       .luckspin-box .luckspin-cont .luckspin-contbox .contbox.opacity5 {
         animation-name: pinpon;
         animation-duration: 3s;
         animation-timing-function: ease-in;
         animation-delay: 1s;
         animation-iteration-count: infinite; }
-      /* line 121, mission.scss */
+      /* line 122, mission.scss */
       .luckspin-box .luckspin-cont .luckspin-contbox .playbox9 {
         background: transparent;
         padding: 0; }
-        /* line 124, mission.scss */
+        /* line 125, mission.scss */
         .luckspin-box .luckspin-cont .luckspin-contbox .playbox9 img {
           max-width: 100%; }
-      /* line 128, mission.scss */
+      /* line 129, mission.scss */
       .luckspin-box .luckspin-cont .luckspin-contbox .playbox {
         background: transparent;
         grid-column-start: 2;
@@ -142,23 +142,23 @@
         grid-row-start: 2;
         grid-row-end: 4;
         position: relative; }
-        /* line 129, mission.scss */
+        /* line 130, mission.scss */
         .luckspin-box .luckspin-cont .luckspin-contbox .playbox #rundot {
           background: transparent;
           position: absolute;
           width: 255px;
           height: 235px; }
           @media (max-width: 767px) {
-            /* line 129, mission.scss */
+            /* line 130, mission.scss */
             .luckspin-box .luckspin-cont .luckspin-contbox .playbox #rundot {
               width: 210px;
               height: 190px; } }
           @media (max-width: 480px) {
-            /* line 129, mission.scss */
+            /* line 130, mission.scss */
             .luckspin-box .luckspin-cont .luckspin-contbox .playbox #rundot {
               width: 135px;
               height: 123px; } }
-          /* line 142, mission.scss */
+          /* line 143, mission.scss */
           .luckspin-box .luckspin-cont .luckspin-contbox .playbox #rundot div {
             border-radius: 50%;
             height: 28px;
@@ -168,28 +168,28 @@
             animation-timing-function: ease-in;
             animation-iteration-count: infinite; }
             @media (max-width: 767px) {
-              /* line 142, mission.scss */
+              /* line 143, mission.scss */
               .luckspin-box .luckspin-cont .luckspin-contbox .playbox #rundot div {
                 height: 22px;
                 width: 22px;
                 animation-name: pinpon767; } }
             @media (max-width: 480px) {
-              /* line 142, mission.scss */
+              /* line 143, mission.scss */
               .luckspin-box .luckspin-cont .luckspin-contbox .playbox #rundot div {
                 height: 18px;
                 width: 18px;
                 animation-name: pinpon480; } }
-            /* line 160, mission.scss */
+            /* line 161, mission.scss */
             .luckspin-box .luckspin-cont .luckspin-contbox .playbox #rundot div.dot {
               background: red;
               animation-duration: 3s;
               animation-delay: 1s; }
-            /* line 165, mission.scss */
+            /* line 166, mission.scss */
             .luckspin-box .luckspin-cont .luckspin-contbox .playbox #rundot div.dot1 {
               background: green;
               animation-duration: 2s;
               animation-delay: 2s; }
-            /* line 170, mission.scss */
+            /* line 171, mission.scss */
             .luckspin-box .luckspin-cont .luckspin-contbox .playbox #rundot div.dot2 {
               background: yellow;
               animation-duration: 1s;
@@ -257,63 +257,63 @@
     left: 0;
     top: 0;
     border: 3px solid #002fff; } }
-        /* line 258, mission.scss */
+        /* line 259, mission.scss */
         .luckspin-box .luckspin-cont .luckspin-contbox .playbox #playagain {
           z-index: 1;
           position: absolute; }
           @media (max-width: 767px) {
-            /* line 261, mission.scss */
+            /* line 262, mission.scss */
             .luckspin-box .luckspin-cont .luckspin-contbox .playbox #playagain img {
               max-width: 200px; } }
           @media (max-width: 480px) {
-            /* line 261, mission.scss */
+            /* line 262, mission.scss */
             .luckspin-box .luckspin-cont .luckspin-contbox .playbox #playagain img {
               max-width: 160px; } }
           @media (max-width: 375px) {
-            /* line 261, mission.scss */
+            /* line 262, mission.scss */
             .luckspin-box .luckspin-cont .luckspin-contbox .playbox #playagain img {
               max-width: 120px; } }
           @media (min-width: 768px) {
-            /* line 261, mission.scss */
+            /* line 262, mission.scss */
             .luckspin-box .luckspin-cont .luckspin-contbox .playbox #playagain img {
               max-width: 250px; } }
 
-/* line 286, mission.scss */
+/* line 287, mission.scss */
 .mobiicoin-num {
   font-size: 1.2em;
   font-weight: 700;
   color: #FD5F00; }
 
-/* line 291, mission.scss */
+/* line 292, mission.scss */
 .brder-mission {
   border-bottom: 4px solid #418BBD;
   border-right: 4px solid #418BBD;
   border-left: 4px solid #0A3450;
   border-top: 1px solid #0A3450; }
 
-/* line 297, mission.scss */
+/* line 298, mission.scss */
 .mission-personal {
   background: #005792;
   color: white;
   padding: 1em 1.5em; }
-  /* line 301, mission.scss */
+  /* line 302, mission.scss */
   .mission-personal .item {
     margin-bottom: .5em; }
-    /* line 303, mission.scss */
+    /* line 304, mission.scss */
     .mission-personal .item:last-child {
       margin-bottom: 0; }
-    /* line 306, mission.scss */
+    /* line 307, mission.scss */
     .mission-personal .item.coin {
       font-size: 1.3em;
       font-weight: 500; }
-    /* line 310, mission.scss */
+    /* line 311, mission.scss */
     .mission-personal .item.progress {
       height: .5em;
       border-radius: 30px; }
-    /* line 314, mission.scss */
+    /* line 315, mission.scss */
     .mission-personal .item.task {
       font-size: .9em; }
-    /* line 317, mission.scss */
+    /* line 318, mission.scss */
     .mission-personal .item .info-img {
       flex: none;
       width: 40px;
@@ -321,18 +321,18 @@
       border-radius: 100%;
       overflow: hidden;
       margin-right: 15px; }
-      /* line 324, mission.scss */
+      /* line 325, mission.scss */
       .mission-personal .item .info-img img {
         width: 100%;
         height: 100%;
         object-fit: cover; }
 
-/* line 332, mission.scss */
+/* line 333, mission.scss */
 .winmsg {
   text-align: center;
   align-items: center;
   justify-content: center; }
-  /* line 336, mission.scss */
+  /* line 337, mission.scss */
   .winmsg .winbox {
     background-image: url("../../img/mission/bg-win.png");
     background-position: center;
@@ -341,7 +341,7 @@
     display: flex;
     align-items: center;
     justify-content: center; }
-    /* line 344, mission.scss */
+    /* line 345, mission.scss */
     .winmsg .winbox .wincontbox {
       background-color: #fff;
       text-align: center;
@@ -351,50 +351,50 @@
       padding: 1em;
       margin: 2em 1em;
       box-shadow: 5px 10px 8px #eee; }
-      /* line 353, mission.scss */
+      /* line 354, mission.scss */
       .winmsg .winbox .wincontbox img {
         max-width: 100px; }
 
-/* line 360, mission.scss */
+/* line 361, mission.scss */
 .img-box {
   width: 60px;
   height: 60px;
   border-radius: 100%;
   overflow: hidden;
   margin: .5em; }
-  /* line 366, mission.scss */
+  /* line 367, mission.scss */
   .img-box img {
     width: 100%; }
 
-/* line 371, mission.scss */
+/* line 372, mission.scss */
 .ms-item {
   border-bottom: 1px solid #eee; }
 
-/* line 374, mission.scss */
+/* line 375, mission.scss */
 .info-box {
   color: #182B56;
   flex: 1;
   margin: .5em; }
-  /* line 378, mission.scss */
+  /* line 379, mission.scss */
   .info-box .info-list {
     height: 100%;
     display: flex;
     flex-direction: column; }
-  /* line 383, mission.scss */
+  /* line 384, mission.scss */
   .info-box .info-name {
     font-weight: 600;
     font-size: 1em; }
-  /* line 387, mission.scss */
+  /* line 388, mission.scss */
   .info-box li {
     font-size: small; }
-    /* line 389, mission.scss */
+    /* line 390, mission.scss */
     .info-box li span.num {
       color: #FD5F00;
       font-size: 1.4em;
       font-weight: 600; }
 
 /* footer */
-/* line 398, mission.scss */
+/* line 399, mission.scss */
 .fixed-btn {
   position: fixed;
   width: 100%;
@@ -405,24 +405,24 @@
   background-color: #fff;
   box-shadow: 0 -5px 8px rgba(0, 0, 0, 0.2); }
 
-/* line 410, mission.scss */
+/* line 411, mission.scss */
 .scratch-rules .rulescontext,
 .luckspin-rules .rulescontext {
   padding: 1em; }
-  /* line 412, mission.scss */
+  /* line 413, mission.scss */
   .scratch-rules .rulescontext label,
   .luckspin-rules .rulescontext label {
     font-weight: 700; }
-  /* line 415, mission.scss */
+  /* line 416, mission.scss */
   .scratch-rules .rulescontext ul,
   .luckspin-rules .rulescontext ul {
     padding: 0 1em 1em 1em; }
-    /* line 417, mission.scss */
+    /* line 418, mission.scss */
     .scratch-rules .rulescontext ul li,
     .luckspin-rules .rulescontext ul li {
       font-size: small; }
 
-/* line 425, mission.scss */
+/* line 426, mission.scss */
 .scratch-cont {
   padding: 2em 1em 1em 1em;
   width: 100%;
@@ -436,11 +436,11 @@
   background: -o-linear-gradient(#f9621d, #e00602);
   background: -moz-linear-gradient(#f9621d, #e00602);
   background: linear-gradient(#f9621d, #e00602); }
-  /* line 438, mission.scss */
+  /* line 439, mission.scss */
   .scratch-cont h5 {
     font-weight: 700; }
 
-/* line 443, mission.scss */
+/* line 444, mission.scss */
 canvas {
   position: absolute;
   align-items: center;
@@ -451,19 +451,19 @@ canvas {
   height: 770px;
   font-size: 40px; }
   @media (max-width: 979px) {
-    /* line 443, mission.scss */
+    /* line 444, mission.scss */
     canvas {
       width: 500px;
       height: 480px;
       font-size: 30px; } }
   @media (max-width: 480px) {
-    /* line 443, mission.scss */
+    /* line 444, mission.scss */
     canvas {
       width: 400px;
       height: 385px;
       font-size: 24px; } }
   @media (max-width: 375px) {
-    /* line 443, mission.scss */
+    /* line 444, mission.scss */
     canvas {
       width: 300px;
       height: 290px;
