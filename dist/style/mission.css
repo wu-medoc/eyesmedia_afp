@@ -658,10 +658,16 @@
 .scratch-cont {
   padding: 2em 1em 1em 1em;
   width: 100%;
-  text-align: center;
-  position: relative;
+  height: 900px;
   top: -10px;
   z-index: -1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
   background: -webkit-gradient(linear, left top, left bottom, from(#f9621d), to(#e00602));
   background: linear-gradient(#f9621d, #e00602);
 }
@@ -670,25 +676,40 @@
   font-weight: 700;
 }
 
-.scratch-cont .dowebok {
-  position: relative;
-  display: inline-block;
+canvas {
+  position: absolute;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 2em;
+  background-size: contain;
+  background-repeat: no-repeat;
   width: 800px;
   height: 770px;
-  margin: 0 auto;
+  font-size: 40px;
 }
 
-.scratch-cont .dowebok img {
-  position: absolute;
-  left: 0;
-  top: 0;
-  z-index: 1;
+@media (max-width: 979px) {
+  canvas {
+    width: 500px;
+    height: 480px;
+    font-size: 30px;
+  }
 }
 
-.scratch-cont .dowebok #redux {
-  position: absolute;
-  left: 0;
-  top: 0;
-  z-index: 999;
+@media (max-width: 480px) {
+  canvas {
+    width: 400px;
+    height: 385px;
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 375px) {
+  canvas {
+    width: 300px;
+    height: 290px;
+    font-size: 18px;
+  }
 }
 /*# sourceMappingURL=mission.css.map */

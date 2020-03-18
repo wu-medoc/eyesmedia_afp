@@ -4,7 +4,7 @@
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=1, user-scalable=no">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
     
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="../js/vendor/bs4/css/bootstrap.min.css">
@@ -49,12 +49,13 @@
             </div>
         </div>
     </div>
+    <div><img src="../img/mission/banner2.png" class="img-fluid"></div>
     <!-- Swiper for kv banner-->            
-    <div class="kvbn-box">
+    <!-- <div class="kvbn-box">
         <div class="shoppingkv swiper-container">
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
-                    <div style="background-image: url('../img/mission/banner3.png');" class="kvbn-img"></div>
+                    <div style="background-image: url('../img/mission/banner3.gif');" class="kvbn-img"></div>
                 </div>
                 <div class="swiper-slide">
                     <div style="background-image: url('../img/mission/banner2.png');" class="kvbn-img"></div>
@@ -64,7 +65,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
     <div class="bg-mission p-3">
         <div class="bg-white flex-inline-between px-2 brder-mission">
             <div class="d-flex align-items-center">
@@ -88,10 +89,8 @@
 
     <div class="scratch-cont">
         <h5>SCRATCH HERE</h5> 
-        <div class="dowebok">
-            <img id="robot" src="../img/mission/scratch-win.png">
-            <img id="redux" src="../img/mission/scratch-no.png">
-        </div> 
+        <canvas id="bottom"></canvas>
+        <canvas id="top"></canvas>
     </div>
            
     <!-- 規則 -->
@@ -143,7 +142,7 @@
             </div>
             <div class="text-mission pb-3">已發送至您的票券夾，請注意使用期限</div>
             <div class="d-flex d-inline">
-                <button type="button" class="btn index-outline-btn w-50 mx-2" onclick="backLayerUp()">再玩一次</button>
+                <button type="button" class="btn index-outline-btn w-50 mx-2" onclick="backLayerUp();next()">再玩一次</button>
                 <button type="button" class="btn index-btn w-50 mx-2">前往查看</button>
             </div>
         </div>
@@ -226,7 +225,7 @@
     <!-- vendor js -->
     <script src="../js/vendor/swiper/js/swiper.min.js"></script>
     <script src="../js/vendor/imgLiquid.js"></script>
-    <script src="../js/vendor/bs4/js/jquery.eraser.js"></script>
+    <!-- <script src="../js/vendor/bs4/js/jquery.eraser.js"></script> -->
 
     <!-- custom js -->    
     <script src="../js/animateCss.js"></script>
@@ -235,31 +234,157 @@
         $( document ).ready(function() {
             callLayerOne();
             $('footer.for-pc').hide();
-
-            addEventListener( "load", init, false );
         });
-        
-			function init( event ) {
-				//$("#redux").eraser();
-                //$("#redux").eraser({size: 20});
-                $('#redux').eraser({
-                size:80,
-                completeRatio:0.5,
-                completeFunction:function(){
-                    alert(666);
+
+        //eraser
+        var useNumber=0,
+            luckNumber=[],
+            mousedown,
+            w = $('#top').width(),
+            h = $('#top').height();            
+        var bottomCanvas = document.querySelector("#bottom");
+        var topCanvas = document.querySelector('#top');
+        topCanvas.width = bottomCanvas.width = w;
+        topCanvas.height = bottomCanvas.height = h;
+        var ctxBot = bottomCanvas.getContext("2d");
+        var ctxTop = topCanvas.getContext('2d');
+        bottomCanvas.style.backgroundImage = "url('../img/mission/scratch-win.png')";
+        ctxBot.font = $('#top').css("font-size")+" Microsoft YaHei";
+        //獲取1-1000隨機數
+        function random(){
+                var JData = [{idx:"1", img:"stroe-logo-1.png", txt:"95折優惠券", deadline:"2019/11/15 ~ 2019/12/01"},
+                            {idx:"2", img:"stroe-logo-2.png", txt:"10元折價券", deadline:"2019/11/15 ~ 2019/12/02"},
+                            {idx:"3", img:"stroe-logo-3.png", txt:"20元折價券", deadline:"2019/11/15 ~ 2019/12/03"},
+                            {idx:"4", img:"stroe-logo-4.png", txt:"30元折價券", deadline:"2019/11/15 ~ 2019/12/04"},
+                            {idx:"5", img:"stroe-logo-5.png", txt:"30元折價券", deadline:"2019/11/15 ~ 2019/12/05"},
+                            {idx:"6", img:"stroe-logo-6.png", txt:"30元折價券", deadline:"2019/11/15 ~ 2019/12/06"},
+                            {idx:"7", img:"stroe-logo-7.png", txt:"30元折價券", deadline:"2019/11/15 ~ 2019/12/07"},
+                            {idx:"8", img:"stroe-logo-8.png", txt:"30元折價券", deadline:"2019/11/15 ~ 2019/12/08"},
+                            {idx:"9", img:"stroe-logo-9.png", txt:"30元折價券", deadline:"2019/11/15 ~ 2019/12/09"},
+                            {idx:"10", img:"stroe-logo-10.png", txt:"95折優惠券", deadline:"2019/11/15 ~ 2019/12/10"},
+                            {idx:"11", img:"stroe-logo-11.png", txt:"30元折價券", deadline:"2019/11/15 ~ 2019/12/11"},
+                            {idx:"12", img:"stroe-logo-12.png", txt:"30元折價券", deadline:"2019/11/15 ~ 2019/12/12"}]
+                var luckrandom = parseInt(Math.random(12)*10);
+                var key="",txt="";
+                $.each(JData, function( key, value ) {
+                    if(JData[key]['idx']==luckrandom){
+                        $('.wincontbox').empty().append("<img src='../img/shopping/store/stroe-logo-"+luckrandom+".png'><p>"+JData[key]['txt']+"</p><small>"+JData[key]['deadline']+"</small></div>");
+                        txt=JData[key]['txt'];
+                    }
+                   //console.log(JData[key]['idx']);
+                });   
+                //callLayerUp('.winmsg');
+            return txt;
+        }
+
+        function drawBot(){
+            //清除區域，為了點擊再來一次進行頁面重繪
+            ctxBot.canvas.style.opacity = 1;
+            ctxBot.drawImage(imgBot, 0 , 0 , w , h);
+            ctxBot.clearRect(0, 0, w, h);
+            luckNumber.push(random());
+            //fillText(填充)實心數字 改為strokeText(描邊)為空心數字
+            ctxBot.fillText( luckNumber[luckNumber.length-1],(w/4.5),(h/4.5));
+            ctxBot.fillText( luckNumber[luckNumber.length-1],(w/1.75),(h/2));
+            ctxBot.fillText( luckNumber[luckNumber.length-1],(w/4.5),(h/1.25));
+            ctxBot.fillText( "Lose",(w/1.5),(h/4.5));
+            ctxBot.fillText( "Lose",(w/3.5),(h/2));
+            ctxBot.fillText( "Lose",(w/1.5),(h/1.25));
+        }
+
+
+        var imgBot = new Image();
+        imgBot.src = "../img/mission/scratch-win.png";
+        imgBot.onload = function (){
+            drawBot();
+        }
+        var imgTop = new Image();
+        imgTop.src = "../img/mission/scratch-no.png";
+        imgTop.onload = function (){
+            drawTop();  
+        }
+
+        function drawTop(){
+            ctxTop.canvas.style.opacity = 1;
+            ctxTop.drawImage(imgTop , 0 , 0 , w , h);
+            //ctxTop.fillStyle = 'gray';
+            //ctxTop.fillRect(0, 0, w, h);
+
+            //判斷當前是否為第一次刮開，不是則清除上一次區域
+            if(ctxTop.globalCompositeOperation != 'destination-out'){
+                ctxTop.globalCompositeOperation = 'destination-out';
+            }else{
+                ctxTop.clearRect(0, 0, w, h);
+            }
+        }
+
+        //鼠標移動開始刮圖層
+        topCanvas.addEventListener('touchstart', eventDown);
+        topCanvas.addEventListener('touchend', eventUp);
+        topCanvas.addEventListener('touchmove', eventMove);
+        topCanvas.addEventListener('mousedown', eventDown);
+        document.addEventListener('mouseup', eventUp);
+        topCanvas.addEventListener('mousemove', eventMove);
+
+        function eventDown(ev){
+            ev = ev || event;
+            ev.preventDefault();
+            mousedown=true;
+        }
+
+        function eventUp(ev){
+            ev = ev || event;
+            ev.preventDefault();
+            mousedown=false;
+        }
+
+        function eventMove(ev){
+            ev = ev || event;
+            ev.preventDefault();
+            if(mousedown) {
+                if(ev.changedTouches){
+                    ev=ev.changedTouches[ev.changedTouches.length-1];
                 }
-            });
-			}
+                var x = ev.pageX - this.offsetLeft;
+                var y = ev.pageY - this.offsetTop;
+                ctxTop.beginPath();
+                ctxTop.arc(x, y, 10, 0, Math.PI * 2);
+                ctxTop.fill();
+                alertInfo();
+            }
+        }
 
-			// function remove(event) {
-			// 	$("#redux").eraser('clear');
-			// 	event.preventDefault();
-			// }
 
-			// function reset(event) {
-			// 	$("#redux").eraser('reset');
-			// 	event.preventDefault();
-			// }
+        // 判斷刮開區域大於50%時，頂層canvas消失，顯示底層數據
+        function alertInfo(){
+            var data = ctxTop.getImageData(0,0,w,h).data;
+            var n = 0 ;
+            for (var i = 0; i < data.length; i++) {
+            if (data[i] == 0) {
+                n++;
+            };
+                };
+            if (n >= data.length * 0.5) {
+                ctxTop.globalCompositeOperation = 'destination-over';
+                ctxTop.canvas.style.opacity = 0;
+                document.querySelector("button").style.display="block";
+                callLayerUp('.winmsg');
+            }
+        }
+
+
+        //點擊再來一次進行頁面重繪next
+        function next(){
+            useNumber++;
+        //判斷當前點擊次數
+            if(useNumber>2){
+                alert("今日抽獎次數用完啦~今日所抽號碼為"+luckNumber);
+                document.querySelector("button").disabled = true;
+            }else{
+                drawBot();
+                drawTop();
+            }
+        }
     </script>
 
     <script>    
