@@ -57,28 +57,57 @@
                         <img src="https://picsum.photos/300/300/?random=1">
                     </div>
                 </div>
-                <div class="info-box">
-                    <div class="info-item info-name">
-                        李曉龍
-                    </div>
-                    <div class="info-item info-country">
-                        台灣
-                    </div>
+                <!-- 登入前  div-switch d-block-->
+                <div class="div-switch d-block">
+                    <button type="button" class="btn white-outline-btn btw-small" onclick="div_switch()">登入/註冊<img src="../img/share/forward_w.png" class="h20"></button>
                 </div>
-                <div class="info-box auto-left pr-3">
-                    <div class="info-item info-coin">
-                        100
+                <!-- 登入後  div-switch d-none-->
+                <div class="flex-inline-between">
+                    <div class="info-box div-switch d-none">
+                        <div class="info-item info-name">
+                            李曉龍
+                        </div>
+                        <div class="info-item info-country">
+                            台灣
+                        </div>
                     </div>
-                    <div class="info-item">
-                        <img src="../img/share/mobiicoin.png" alt="" class="coinimg-m mr-1">
-                        我的魔幣
+                    <div class="info-box div-switch d-none">
+                        <div class="info-item info-coin">
+                            100
+                        </div>
+                        <div class="info-item">
+                            <img src="../img/share/mobiicoin.png" alt="" class="coinimg-m mr-1">
+                            我的魔幣
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
         <div class="member-item-group">
             <div class="member-item-bg">
-                <div class="container px-3">
+                <div class="px-3">
+                    <!-- 登入前  div-switch d-block-->
+                    <div class="div-switch d-block">
+                        <div class="mycard-box">
+                            <img class="mycard-img" src="../img/member/mycard-white.png">
+                            <div class="mycard-info">
+                                <p class="info-c">超級會員募集中<br>
+                                綁定一卡通・會員優惠享不完！</p>
+                                <p class="info-b mt-auto ml-auto"><a href>立即綁卡 ＞</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 登入後  div-switch d-none-->
+                    <div class="div-switch d-none">
+                        <div class="mycard-box">
+                            <img class="mycard-img" src="../img/member/mycard-blue.png">
+                            <div class="mycard-info">
+                                <img class="mycard-simg ml-auto" src="../img/member/ipass1.png">
+                                <p class="info-bc align-self-center">超級會員</p>
+                                <p class="info-bb mt-auto ml-auto"> 890 1</p>
+                            </div>
+                        </div>
+                    </div>
                     <div class="member-item-list">
                         <div class="member-items">
                             <a href="member_card.html" class="member-item">
@@ -119,6 +148,22 @@
                                 </div>
                                 <p>我的訂單</p>
                             </a>
+                        </div>
+                    </div>
+                    <!-- ad banner -->
+                    <div class="ad-box pb-5">
+                        <div class="py-3">
+                            <!-- Swiper -->
+                            <div class="swiper-container">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <img src="../img/member/mbanner1.png" alt="">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="../img/member/mbanner1.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -1272,7 +1317,7 @@
                         <p>您的個人資料均被適當地保存在我們的資料庫系統中。任何人均需在我們訂定之權限管理規範下，始得進行資料之取得與利用，非經授權的人員，均不得以任何方法取得及利用您的個人資料。MoBii將依法律規定、您同意之服務條款中所訂之特定目的下，進行您的個人資料之處理及利用，我們不會超出特定目的以外的用途，亦不會任意對其他第三者揭露。 </p>                        
                         <p>MoBii為了行銷、客戶管理與服務、提供網路電子商務服務、履行法定或合約義務、保護當事人及相關利害關係人之權益、售後服務、以及經營合於營業登記項目或組織章程所定之業務等目的，依照各該服務之性質，可能蒐集得以直接或間接識別使用者身分之個人資料。 </p>                        
                         <h6>個人資料的利用 </h6>                        
-                        MoBii所搜集的足以識別使用者身分的個人資料，據個人資料保護法，會受到完善保護，僅供本公司於其內部、依照蒐集之目的進行處理和利用，除了下述特定情形，否則本公司不會將足以識別使用者身分的個人資料提供、出售給第三人(包括境內及境外)、或移作蒐集目的以外之使用。在合約有效期間內，以及法令所定應保存之期間內，本公司會持續保管、處理及利用相關資料。經過您的事前同意或授權允許時。 </p>                        
+                        MoBii所搜集的足以識別使用者身分的個人資料，據個人資料保護法，會受到完善保護，僅供本公司於其內部、依照蒐集之目的進行處理和利用，除了下述特定情形，否則本公司不會將足以識別使用者身分的個人資料提供、出售給第三人(包括境內及境外)、或移作蒐集目的以外之使用。在合約有效期間內，以及法令所定應保存之期間內，本公司會持續保管、處理及利用相關資料。經過您的事前同意或授權允許時。 </br>                        
                         <p>需要與其他人士或公司共用您的資料，才能提供您要求的產品或服務，若本公司沒有事先通知您，這些公司均無權使用本公司提供的個人資料，作提供產品或服務以外的其他用途。 </p>                        
                         <p>為了提供您其他服務或優惠權益，需要與提供該服務或優惠之第三者共用您的資料時，我們會在活動時充分說明並告知，您可以自由選擇是否接受這項服務或優惠。 </p>                        
                         <p>司法單位或其他主管機關經合法正式的程序要求時。 </p>                        
@@ -1645,18 +1690,6 @@
         // $(this).parents().find('div').scrollTop(0);
         // });
 
-        // footer control
-        // function getRootPath(){ 
-        //     var strFullPath=window.document.location.href; 
-        //     var strPath=window.document.location.pathname; 
-        //     var pos=strFullPath.indexOf(strPath); 
-        //     var prePath=strFullPath.substring(0,pos); 
-        //     var postPath=strPath.substring(0,strPath.substr(1).indexOf('/')+1); 
-        //     return(strPath); 
-        // } 
-        // if (getRootPath().toLowerCase().indexOf("member")>0){
-        //     $('footer.for-pc').css('position','absolute');
-        // };       
 
         //dist choosen
         var distdata = {

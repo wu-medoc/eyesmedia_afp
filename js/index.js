@@ -339,8 +339,27 @@ $(document).ready(function(){
     //     scrollTop:0
     //     },1000);
     // }); 
+    
+    //footer control
+    function getRootPath(){ 
+        var strFullPath=window.document.location.href; 
+        var strPath=window.document.location.pathname; 
+        var pos=strFullPath.indexOf(strPath); 
+        var prePath=strFullPath.substring(0,pos); 
+        var postPath=strPath.substring(0,strPath.substr(1).indexOf('/')+1); 
+        return(strPath); 
+    } 
+    // hide pathname push array
+    var pathfoot = ["member","explore"];
+    $.each(pathfoot, function( key, value ) {
+        if (getRootPath().toLowerCase().indexOf(value)>0){
+            $('footer.for-pc').hide();
+        }; 
+    });
+
+
     //footer.pc 
-    (($('.wrap').height()+50) < ($(window).height())) ? ($('footer.for-pc').css('position','absolute')):($('footer.for-pc').css('position','relative'));
+    //(($('.wrap').height()+50) < ($(window).height())) ? ($('footer.for-pc').css('position','absolute')):($('footer.for-pc').css('position','relative'));
 });
 
 

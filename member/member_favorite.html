@@ -468,14 +468,15 @@
 
     <!-- custom js -->    
     <script src="../js/animateCss.js"></script>
-    <script>
-        //item-del
-        $('.item-del').on('click', function(){
-            $(this).parent().remove();
-        });        //begin use animateCss
+    <script>     
+        //begin use animateCss
         $( document ).ready(function() {
             callLayerOne();
         });
+        //item-del
+        $('.item-del').on('click', function(){
+            $(this).parent().remove();
+        });   
 
         // 開啟分類清單
         $('.filter-item').on('click', function(){
