@@ -7,6 +7,15 @@
   color: #005792;
 }
 
+.img-fluid {
+  width: 100%;
+  height: auto;
+}
+
+.bg-m1 {
+  background-color: #f9621d;
+}
+
 .conopybox-top {
   padding: 1.2em 0;
   background: transparent !important;
@@ -658,7 +667,6 @@
 .scratch-cont {
   padding: 2em 1em 1em 1em;
   width: 100%;
-  height: 900px;
   top: -10px;
   z-index: -1;
   display: -webkit-box;
@@ -670,6 +678,25 @@
   text-align: center;
   background: -webkit-gradient(linear, left top, left bottom, from(#f9621d), to(#e00602));
   background: linear-gradient(#f9621d, #e00602);
+  height: 880px;
+}
+
+@media (max-width: 979px) {
+  .scratch-cont {
+    height: 600px;
+  }
+}
+
+@media (max-width: 480px) {
+  .scratch-cont {
+    height: 500px;
+  }
+}
+
+@media (max-width: 375px) {
+  .scratch-cont {
+    height: 400px;
+  }
 }
 
 .scratch-cont h5 {
@@ -681,7 +708,8 @@ canvas {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-top: 2em;
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
   background-size: contain;
   background-repeat: no-repeat;
   width: 800px;
@@ -694,6 +722,7 @@ canvas {
     width: 500px;
     height: 480px;
     font-size: 30px;
+    margin-bottom: 0.5em;
   }
 }
 
@@ -702,6 +731,7 @@ canvas {
     width: 400px;
     height: 385px;
     font-size: 24px;
+    margin-bottom: 3em;
   }
 }
 
@@ -710,6 +740,7 @@ canvas {
     width: 300px;
     height: 290px;
     font-size: 18px;
+    margin-bottom: 3em;
   }
 }
 /*# sourceMappingURL=mission.css.map */
