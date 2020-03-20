@@ -81,6 +81,7 @@ body.is-open-country .country-box {
 }
 
 .shoppingkv-mt {
+  overflow: hidden;
   padding-top: 73px;
 }
 
@@ -91,10 +92,9 @@ body.is-open-country .country-box {
 }
 
 .kvbn-img {
-  min-height: 140px;
   max-width: 100%;
   width: 100%;
-  padding-bottom: 45%;
+  padding-bottom: 43%;
   height: auto;
   display: block;
   overflow: hidden;
@@ -129,9 +129,6 @@ body.is-open-country .country-box {
   }
   .kv-iconbox .kv-icon img {
     height: 2.5em;
-  }
-  .kvbn-img {
-    padding-bottom: 38%;
   }
 }
 
@@ -415,7 +412,7 @@ body.is-open-country .country-box {
 }
 
 .kv-box .kv-top img.bntips {
-  max-width: 90px;
+  width: 90px;
 }
 
 .kv-box .kv-top .top-item.more-horiz {
@@ -711,6 +708,20 @@ body.is-open-country .country-box {
   text-align: center;
   color: #182B56;
   font-size: .8em;
+}
+
+.main-link a.disable, .main-link a.link-item.disable {
+  color: gray;
+}
+
+.main-link a.disable img, .main-link a.link-item.disable img {
+  -webkit-filter: grayscale(100%);
+  -moz-filter: grayscale(100%);
+  -ms-filter: grayscale(100%);
+  -o-filter: grayscale(100%);
+  filter: grayscale(100%);
+  -webkit-filter: gray;
+          filter: gray;
 }
 
 .setting {
@@ -1585,8 +1596,9 @@ body.is-open-country .country-box {
   margin-right: auto;
 }
 
-.swiper-container img {
+.swiper-slide img {
   width: 100%;
+  max-width: 100%;
   height: auto;
 }
 
@@ -2121,6 +2133,13 @@ td.linebt-td,
 /* ad-box */
 .ad-box .swiper-container img {
   border-radius: .5em;
+  max-height: 200px;
+}
+
+@media (max-width: 480px) {
+  .ad-box .swiper-container img {
+    max-height: 68px;
+  }
 }
 
 /* web service */
@@ -2896,6 +2915,10 @@ td.linebt-td,
 
 .bg-lightpink-1 {
   background-color: rgba(228, 115, 255, 0.1);
+}
+
+.opacity5 {
+  opacity: 0.5;
 }
 
 /* open page */
