@@ -142,7 +142,7 @@
                                 </div>
                                 <p>我的收藏</p>
                             </a>
-                            <a href="#" class="member-item">
+                            <a href="member_myorder.html" class="member-item">
                                 <div class="img-box">
                                     <img src="../img/member/member-icon-order.svg" alt="">
                                 </div>
@@ -248,15 +248,15 @@
         <div class="myfile">
             <div class="title-box">
                 <div class="item icon-btn">
-                    <button class="btn px-0 back-btn" onclick="backLayer();" data-toggle="tooltip" data-placement="bottom" title="回上一頁">
+                    <button class="btn px-0 back-btn div-switch d-block" onclick="backLayer();" data-toggle="tooltip" data-placement="bottom" title="回上一頁">
                         <i class="material-icons">&#xE314;</i>
                     </button>
-                    <button class="btn clear-btn d-none">取消</button>
+                    <button class="btn div-switch d-none" onclick="div_switch()">取消</button>
                 </div>
                 <div class="item title-name">我的檔案</div>
                 <div class="item ctrl-btn">
-                    <button class="btn submit-btn d-none">確定</button>
-                    <button class="btn edit-btn d-block">編輯</button>
+                    <button class="btn div-switch d-none" onclick="div_switch()">確定</button>
+                    <button class="btn div-switch d-block" onclick="div_switch()">編輯</button>
                 </div>
             </div>
             <div class="my-info-box">
@@ -278,22 +278,24 @@
                     <li>
                         <div class="item">生日</div>
                         <div class="item input-box auto-left">
-                            <input type="date" class="form-control px-0" placeholder="YYYY/MM/DD">
+                            <input type="date" class="form-control px-0 div-switch d-none" placeholder="YYYY/MM/DD">
                         </div>
+                        <div class="item auto-left div-switch d-block">1990/05/10</div>
                     </li>
                     <li>
                         <div class="item">手機號碼</div>
                         <div class="item input-box">
-                            <input type="text" value="" class="d-none" placeholder="請輸入">
+                            <input type="text" value="" class="div-switch d-none" placeholder="請輸入">
                         </div>
-                        <div class="item auto-left infohas">09******78</div>
+                        <div class="item auto-left div-switch d-block text-danger">尚未驗證</div>
+                        <!-- <div class="item auto-left div-switch d-block">09******78</div> -->
                     </li>
                     <li>
                         <div class="item">E-mail</div>
                         <div class="item input-box">
-                            <input type="text" value="" class="d-none" placeholder="請輸入">
+                            <input type="text" value="" class="div-switch d-none" placeholder="請輸入">
                         </div>
-                        <div class="item auto-left infohas">mo***@eyesmedia.com</div>
+                        <div class="item auto-left div-switch d-block">mo***@eyesmedia.com</div>
                     </li>
                     <li>
                         <div class="item">
@@ -1862,20 +1864,20 @@
 
 
         // (edit, clear, back, submit) button & input control
-        $('.edit-btn').on('click',function(){
-            var btn = $(this).parents(".title-box");
-            $(btn).find(".submit-btn, .clear-btn").removeClass('d-none').addClass('d-block');
-            $(btn).find(".edit-btn, .back-btn").removeClass('d-block').addClass('d-none');
-            $(btn).siblings(".my-list-box").find("div.input-box>input").removeClass('d-none').addClass('d-block');
-            $(btn).siblings(".my-list-box").find("div.infohas").removeClass('d-block').addClass('d-none');
-        });
-        $('.clear-btn, .submit-btn').on('click',function(){
-            var btn = $(this).parents(".title-box");
-            $(btn).find('.edit-btn, .back-btn').removeClass('d-none').addClass('d-block');
-            $(btn).find('.submit-btn, .clear-btn').removeClass('d-block').addClass('d-none');
-            $(btn).siblings(".my-list-box").find("div.input-box>input").removeClass('d-block').addClass('d-none');
-            $(btn).siblings(".my-list-box").find("div.infohas").removeClass('d-none').addClass('d-block');
-        });
+        // $('.edit-btn').on('click',function(){
+        //     var btn = $(this).parents(".title-box");
+        //     $(btn).find(".submit-btn, .clear-btn").removeClass('d-none').addClass('d-block');
+        //     $(btn).find(".edit-btn, .back-btn").removeClass('d-block').addClass('d-none');
+        //     $(btn).siblings(".my-list-box").find("div.input-box>input").removeClass('d-none').addClass('d-block');
+        //     $(btn).siblings(".my-list-box").find("div.infohas").removeClass('d-block').addClass('d-none');
+        // });
+        // $('.clear-btn, .submit-btn').on('click',function(){
+        //     var btn = $(this).parents(".title-box");
+        //     $(btn).find('.edit-btn, .back-btn').removeClass('d-none').addClass('d-block');
+        //     $(btn).find('.submit-btn, .clear-btn').removeClass('d-block').addClass('d-none');
+        //     $(btn).siblings(".my-list-box").find("div.input-box>input").removeClass('d-block').addClass('d-none');
+        //     $(btn).siblings(".my-list-box").find("div.infohas").removeClass('d-none').addClass('d-block');
+        // });
 
         // target to top
         // $('.totop').on('click', function () {

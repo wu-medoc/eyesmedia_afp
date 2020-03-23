@@ -1088,6 +1088,12 @@ body.is-open-country .country-box {
 }
 
 /* all tablist-link */
+.afp-tab-box .tab-line {
+  border-top: 1px solid #eee;
+  position: relative;
+  top: -3px;
+}
+
 .afp-tab-box .tablist-link {
   display: inline-block;
   color: #8E8E93;
@@ -2674,6 +2680,19 @@ td.linebt-td,
   background-size: cover;
 }
 
+.rwdimgbox-80 {
+  width: 80px;
+  height: 80px;
+  padding: 0px;
+  border: 1px #eee solid;
+  margin-right: .5em;
+  border-radius: 5px;
+}
+
+.rwdimgbox-80 div {
+  border-radius: 5px;
+}
+
 /* txt-line-clamp */
 .d-grid {
   display: -ms-grid;
@@ -3448,9 +3467,8 @@ button.open-page img {
   display: -ms-flexbox;
   display: flex;
   padding: 15px;
-  border-top: 1px #eee solid;
   border-bottom: 1px #eee solid;
-  margin-top: 10px;
+  margin-top: 0;
 }
 
 .choice-filter-box .filter-box {

@@ -1,21 +1,21 @@
 /*
 Error: Invalid CP950 character "\xE6"
-        on line 112 of D:\eyesmedia\ASIAfunPASS\github\afp\eyesmedia_afp\scss\member.scss
+        on line 184 of D:\eyesmedia\ASIAfunPASS\github\afp\eyesmedia_afp\scss\member.scss
 
-107:             }
-108:         }
-109:     }
-110: }
-111: 
-112: // 我的帳戶 & mycard
-113: .my-list-box{
-114:     border-top: 1px $gray-light solid;
-115:     &.edit-list{
-116:         ul{
-117:             li{
+179:             }
+180:         }
+181:     }
+182: }
+183: 
+184: // 我的帳戶 & mycard
+185: .my-list-box{
+186:     border-top: 1px $gray-light solid;
+187:     &.edit-list{
+188:         ul{
+189:             li{
 
 Backtrace:
-D:\eyesmedia\ASIAfunPASS\github\afp\eyesmedia_afp\scss\member.scss:112
+D:\eyesmedia\ASIAfunPASS\github\afp\eyesmedia_afp\scss\member.scss:184
 C:/Program Files/Adobe/Adobe Dreamweaver CC 2018/ruby/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/util.rb:1325:in `rescue in block in find_encoding_error'
 C:/Program Files/Adobe/Adobe Dreamweaver CC 2018/ruby/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/util.rb:1322:in `block in find_encoding_error'
 C:/Program Files/Adobe/Adobe Dreamweaver CC 2018/ruby/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/util.rb:1321:in `each'
@@ -37,4 +37,4 @@ C:/Program Files/Adobe/Adobe Dreamweaver CC 2018/ruby/bin/sass:22:in `<main>'
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Invalid CP950 character \"\xE6\"\A         on line 112 of D:\eyesmedia\ASIAfunPASS\github\afp\eyesmedia_afp\scss\member.scss\A \A 107:             }\A 108:         }\A 109:     }\A 110: }\A 111: \A 112: // 我的帳戶 & mycard\A 113: .my-list-box{\A 114:     border-top: 1px $gray-light solid;\A 115:     &.edit-list{\A 116:         ul{\A 117:             li{"; }
+  content: "Error: Invalid CP950 character \"\xE6\"\A         on line 184 of D:\eyesmedia\ASIAfunPASS\github\afp\eyesmedia_afp\scss\member.scss\A \A 179:             }\A 180:         }\A 181:     }\A 182: }\A 183: \A 184: // 我的帳戶 & mycard\A 185: .my-list-box{\A 186:     border-top: 1px $gray-light solid;\A 187:     &.edit-list{\A 188:         ul{\A 189:             li{"; }
