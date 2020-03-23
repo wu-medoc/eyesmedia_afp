@@ -191,7 +191,7 @@
                     <li onclick="callLayer('.myfile');">
                         <button class="btn px-0 w-100 text-left">我的檔案 <span class="auto-left"><i class="material-icons">&#xE315;</i></span></button>
                     </li>
-                    <li onclick="callLayer('.myphone');">
+                    <li onclick="callLayer('.myphone0');">
                         <button class="btn px-0 w-100 text-left">手機驗證 <span class="auto-left"><i class="material-icons">&#xE315;</i></span></button>
                     </li>
                     <li onclick="callLayer('.myaddress');">
@@ -650,8 +650,25 @@
                     </li>
                 </ul>
             </div>
-        </div>     
+        </div>   
         <!--手機驗證2-->
+        <div class="myphone0">
+            <div class="title-box">
+                <div class="item icon-btn">                        
+                    <button class="btn px-0" onclick="backLayer();" data-toggle="tooltip" data-placement="bottom" title="回上一頁">
+                        <i class="material-icons">&#xE314;</i>
+                    </button>
+                </div>
+                <div class="item title-name">手機驗證</div>
+                <div class="item ctrl-btn"></div>
+            </div> 
+            <div class="my-phone-list">
+                <p class="text-left mt-2">您的手機號碼已完成驗證，如需變更手機號碼，請重新驗證。</p>
+                <p class="text-left mb-3">手機號碼：0912345678</p>
+                <button class="btn next-btn w-100" onclick="callLayer('.myphone')">重新驗證</button>
+            </div> 
+        </div>   
+        <!--手機驗證3-->
         <div class="myphone">
             <div class="title-box">
                 <div class="item icon-btn">                        
@@ -714,7 +731,7 @@
                 <input type="tel" id="myPhone1" placeholder="">    
                 <div class="phonebt"></div> 
                 <button class="btn next-btn w-100 mt-3 msg-open" value="msg-phone" data-toggle="modal" data-target="#messageModal">送出</button>
-                <small>沒有收到驗證碼？<button type="button" class="btn p-0 small-80 text-blue" onclick="backLayer();">59秒後重新傳送</button></small>
+                <small class="text-left">沒有收到驗證碼？<button type="button" class="btn p-1 small-80 text-blue" onclick="backLayer();">59秒後重新傳送</button></small>
             </div> 
         </div> 
 
