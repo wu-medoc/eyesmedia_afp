@@ -148,7 +148,28 @@
         </div>
     </div>
 </div> 
-<div id="loginhtml"></div>
+
+
+<!-- SCRATCH modal -->
+<div class="modal fade bd-example-modal-sm" id="scratchModal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-sm">
+        <div class="modal-content">
+            <div class="modal-header" data-dismiss="modal" aria-label="Close">
+            </div>
+            <button type="button" class="close text-right" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;&ensp;</span>
+            </button>
+            <p class="text-center p-3">今日抽獎次數用完啦~<br>今日所抽號碼為</p>
+            <p class="text-center p-3 scratchnum"></p>
+            <div class="d-flex justify-content-center text-center bg-light border-t py-2">
+                <button type="button" class="btn btn-login font-bold w-100 masklayer-close step1" type="submit" name="type" value="step1"  data-dismiss="modal" aria-label="Close">
+                   確定
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
 
     <!--頁尾-->
     <footer class="for-pc"> 
@@ -214,17 +235,11 @@
     <script src="../js/vendor/bs4/js/jquery-3.2.1.slim.min.js"></script>
     <!-- Latest compiled and minified JavaScript -->    
     <script src="../js/vendor/bs4/js/bootstrap.min.js"></script>
-
-    <!-- owlcarousel JS -->
-    <script src="../js/vendor/owlcarousel/vendors/jquery.min.js"></script>
-    <script src="../js/vendor/owlcarousel/owlcarousel/owl.carousel.js"></script>
-    <script src="../js/vendor/owlcarousel/vendors/highlight.js"></script>
-    <script src="../js/vendor/owlcarousel/js/app.js"></script>   
-    <script src="../js/vendor/jquery-editable-select-master/dist/jquery-editable-select.js"></script>
-
+    
     <!-- vendor js -->
     <script src="../js/vendor/swiper/js/swiper.min.js"></script>
     <script src="../js/vendor/imgLiquid.js"></script>
+    <script src="../js/popper.js"></script>
     <!-- <script src="../js/vendor/bs4/js/jquery.eraser.js"></script> -->
 
     <!-- custom js -->    
@@ -377,19 +392,18 @@
         function next(){
             useNumber++;
         //判斷當前點擊次數
-            if(useNumber>2){
-                alert("今日抽獎次數用完啦~今日所抽號碼為"+luckNumber);
+            if(useNumber>2){    
+                $('.scratchnum').empty().append(luckNumber[0]+", "+luckNumber[1]+", "+luckNumber[2]);
+                $('#scratchModal').modal();
                 document.querySelector("button").disabled = true;
             }else{
                 drawBot();
                 drawTop();
             }
         }
+
     </script>
 
-    <script>    
-        $("#loginhtml").load("../login.html"); 
-    </script>
     <script src="../js/index.js"></script>
 </body>
 
