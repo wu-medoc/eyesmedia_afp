@@ -1666,6 +1666,9 @@ footer{
     font-weight: 700;
 }
 .order-box{
+    &:last-child{
+        margin-bottom: 60px;
+    }
     .index-flex{
         .item:first-child{
             font-weight: 700;
@@ -1819,7 +1822,6 @@ footer{
     }
     .total-price-box{
         padding: 10px 0;
-        margin-bottom: 50px;
         li{
             display: flex;
             align-items: center;
@@ -1970,6 +1972,7 @@ footer{
 /* footer */
 .shopping-cartfooter {
     box-shadow: 1px 1px 5px 0px #ccc;
+    background-color: #fff;
     .shopping-coupon {        
         box-shadow: 1px 1px 5px 0px #ccc;
         display: none;
@@ -2005,7 +2008,26 @@ footer{
             color: $gray-color;
             font-size: .8em;
         }
-    }
+    } 
+    ul{        
+        padding: 5px 15px 15px 15px;
+        li{
+            display: flex;
+            align-items: flex-end;
+            .item{
+                flex: 1;
+                margin: 0 5px;
+                text-align: center;
+            }
+            p{
+                color: $onlineshopping-default;
+                text-align: right;            
+                flex: 2;
+                padding-right: .5em;
+                font-size: .9em;
+            }
+        }
+    }   
 }
 
 footer{

@@ -320,7 +320,7 @@ $(document).ready(function(){
     $('.msg-open').on('click', function(){  
         var msgval = $(this).val();
         $('#messageModal .modal-body>div').hide();
-        $('#'+msgval).show();      
+        $('#'+msgval).show();
     });
 
     // password visiblity
@@ -370,9 +370,9 @@ function div_switch() {
     $('.div-switch.d-none').removeClass('d-none').addClass('d-block');    
     $('.div-switch.d-none1').removeClass('d-none1').addClass('d-none');
 };
-function msg_sub(e) {
-    $(e).siblings('div').hide();
-}
+// function msg_sub(e) {
+//     $(e).siblings('div').hide();
+// }
 
 //memberclause & memberprivate
 window.onload = function(){   

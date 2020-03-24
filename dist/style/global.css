@@ -194,13 +194,7 @@ li {
 
 .addheight {
   background-color: #fff;
-  height: 57px;
-}
-
-@media (min-width: 768px) {
-  .addheight {
-    height: 0px;
-  }
+  height: 80px;
 }
 
 .disabled-btn {

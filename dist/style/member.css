@@ -1263,23 +1263,6 @@ img.coinimg-m {
   height: 100vh;
 }
 
-.no-order {
-  padding: 50px 15px;
-  text-align: center;
-}
-
-.no-order img {
-  width: 70%;
-  max-width: 500px;
-}
-
-.no-order p {
-  margin-top: 20px;
-  font-weight: 700;
-  font-size: 1em;
-  color: #182B56;
-}
-
 .wait-pay-list li {
   width: 100%;
   display: -webkit-box;
@@ -1338,14 +1321,17 @@ img.coinimg-m {
 }
 
 .order-status {
-  padding: 15px;
+  padding: 4em 15px 15px 15px;
   background-color: #182B56;
   color: #fff;
   overflow: hidden;
-}
-
-.order-status .item {
-  float: left;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: inherit;
+  -webkit-box-direction: inherit;
+      -ms-flex-direction: inherit;
+          flex-direction: inherit;
 }
 
 .order-status .item:first-child {
@@ -1353,7 +1339,7 @@ img.coinimg-m {
 }
 
 .order-status span {
-  color: #FD5F00;
+  color: tomato;
 }
 
 .order-info li {
@@ -1364,260 +1350,8 @@ img.coinimg-m {
   border-bottom: 1px #eee solid;
 }
 
-.order-info li .auto-left {
-  color: #FD5F00;
-}
-
-.order-title {
-  text-align: center;
-  padding-bottom: 5px;
-  border-bottom: 1px #eee solid;
-  padding: 5px 15px;
-  color: #182B56;
-}
-
-.order-box .auto-left {
-  position: static;
-}
-
-.order-box .auto-left input {
-  text-align: right;
-}
-
-.order-box.order-btn {
-  border-top: 5px #eee solid;
-}
-
-.order-box.order-btn ul {
-  padding: 15px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.order-box.order-btn ul li {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  margin: 0 5px;
-}
-
-.order-box.order-btn ul li button {
-  width: 100%;
-  text-align: center;
-  background: transparent;
-  border: none;
-  color: #182B56;
-  border: 2px #182B56 solid;
-  border-radius: 100px;
-  padding: 10px;
-}
-
-.order-box .order-subtitle {
-  padding: 5px 15px;
-  color: #182B56;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.order-box .order-list li {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding: 10px 15px;
-  border-bottom: 1px #eee solid;
-  color: #182B56;
-}
-
-.order-box .order-shop-list {
-  padding: 15px;
-  background-color: #F8F8F8;
-}
-
-.order-box .order-shop-list li {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin-bottom: 10px;
-}
-
-.order-box .order-shop-list li:last-child {
-  margin-bottom: 0;
-}
-
-.order-box .order-shop-list li .item-img {
-  width: 100px;
-  height: 100px;
-  border: 1px #eee solid;
-  padding: 5px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  background: #fff;
-  margin-right: 10px;
-}
-
-.order-box .order-shop-list li .item-img img {
-  width: 100%;
-}
-
-.order-box .order-shop-list li .item-txt {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-.order-box .order-shop-list li .item {
-  color: #818181;
-}
-
-.order-box .order-shop-list li .order-price {
-  color: #E44D26;
-}
-
-.order-box .order-shop-list li .item-num {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  -ms-flex-item-align: end;
-      align-self: flex-end;
-  text-align: right;
-}
-
-.order-box .order-method-box li {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  color: #182B56;
-  padding: 10px 15px;
-  border-bottom: 1px #eee solid;
-}
-
-.order-box .order-method-box li .material-icons {
-  vertical-align: top;
-}
-
-.order-box .order-method-box li .discount-price {
-  color: #2796DF;
-}
-
-.order-box .order-method-box li .discount-price .material-icons {
-  color: #182B56;
-}
-
-.order-box .order-method-box li .item-group {
-  -webkit-box-flex: 0;
-      -ms-flex: none;
-          flex: none;
-  width: 100%;
-  text-align: right;
-}
-
-.order-box .order-method-box li .item-address {
-  font-size: 13px;
-  color: #4A90E2;
-}
-
-.order-box .order-method-box li .item-date {
-  font-size: 13px;
-  color: #818181;
-}
-
-.order-box .order-method-box li .item-total-price {
-  color: #E44D26;
-}
-
-.order-box .total-price-box {
-  padding: 10px 0;
-}
-
-.order-box .total-price-box li {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding: 2px 15px;
-  font-size: 13px;
-  color: #818181;
-  font-weight: 500;
-}
-
-.order-box .total-price-box li.total-pay {
-  font-size: 16px;
-}
-
-.order-box .total-price-box li.total-pay .item:first-child {
-  color: #182B56;
-}
-
-.order-box .total-price-box li.total-pay .item:last-child {
-  color: #E44D26;
-}
-
-.my-order-footer {
-  padding: 15px;
-  -webkit-box-shadow: 0 -5px 5px rgba(0, 0, 0, 0.2);
-          box-shadow: 0 -5px 5px rgba(0, 0, 0, 0.2);
-}
-
-.my-order-footer li {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-}
-
-.my-order-footer li .item {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  margin: 0 5px;
-  text-align: center;
-}
-
-.my-order-footer li .item p {
-  color: #FD5F00;
-}
-
-.my-order-footer li .item button {
-  width: 100%;
-  background: #FD5F00;
-  border: none;
-  border: 2px #FD5F00 solid;
-  color: #fff;
-  padding: 10px;
-  border-radius: 100px;
-}
-
-.my-order-footer li .item button.outline-btn {
-  color: #FD5F00;
-  background: transparent;
+.order-info li .item:last-child {
+  color: tomato;
 }
 
 .qrcode-box {
@@ -1630,7 +1364,7 @@ img.coinimg-m {
 }
 
 .qrcode-box p.date-limit {
-  color: #FD5F00;
+  color: tomato;
 }
 
 .qrcode-box .qrcode {

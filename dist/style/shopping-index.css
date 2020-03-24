@@ -1846,6 +1846,10 @@ footer a:hover {
   font-weight: 700;
 }
 
+.order-box:last-child {
+  margin-bottom: 60px;
+}
+
 .order-box .index-flex .item:first-child {
   font-weight: 700;
 }
@@ -2052,7 +2056,6 @@ footer a:hover {
 
 .order-box .total-price-box {
   padding: 10px 0;
-  margin-bottom: 50px;
 }
 
 .order-box .total-price-box li {
@@ -2233,6 +2236,7 @@ footer a:hover {
 .shopping-cartfooter {
   -webkit-box-shadow: 1px 1px 5px 0px #ccc;
           box-shadow: 1px 1px 5px 0px #ccc;
+  background-color: #fff;
 }
 
 .shopping-cartfooter .shopping-coupon {
@@ -2278,6 +2282,37 @@ footer a:hover {
 .shopping-cartfooter p.mobi {
   color: #8E8E93;
   font-size: .8em;
+}
+
+.shopping-cartfooter ul {
+  padding: 5px 15px 15px 15px;
+}
+
+.shopping-cartfooter ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.shopping-cartfooter ul li .item {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  margin: 0 5px;
+  text-align: center;
+}
+
+.shopping-cartfooter ul li p {
+  color: #FD5F00;
+  text-align: right;
+  -webkit-box-flex: 2;
+      -ms-flex: 2;
+          flex: 2;
+  padding-right: .5em;
+  font-size: .9em;
 }
 
 footer.success-mode {

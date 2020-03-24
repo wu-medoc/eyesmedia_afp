@@ -72,12 +72,12 @@
                         <!-- 有訂單時顯示 -->
                         <div class="wait-pay-list div-switch d-none">
                             <ul>
-                                <li>
+                                <li onclick="location.href='../shopping/shopping-order.html'">
                                     <div class="item rwdimgbox-80">
                                         <div style="background-image: url('https://picsum.photos/id/684/600/400');" class="rwdimg-cover"></div>
                                     </div>
                                     <div class="item item-info">
-                                        <p>(品牌日破盤）買箱送箱！得意衣物清潔洗衣精正常瓶3000g*4瓶/箱 加碼送補包2000g*6包/箱</p>
+                                        <p>昇恆昌免稅購物網站</p>
                                         <p class="price-asking">NT$ 4,880</p>
                                         <p>2020/01/20</p>
                                     </div>
@@ -86,7 +86,7 @@
                                         <p><span>1</span>樣商品</p>
                                     </div>
                                 </li>
-                                <li>
+                                <li onclick="location.href='../shopping/shopping-order.html'">
                                     <div class="item rwdimgbox-80">
                                         <div style="background-image: url('https://picsum.photos/id/686/600/400');" class="rwdimg-cover"></div>
                                     </div>
@@ -100,49 +100,21 @@
                                         <p><span>1</span>樣商品</p>
                                     </div>
                                 </li>
-                                <li>
-                                    <div class="item rwdimgbox-80">
-                                        <div style="background-image: url('https://picsum.photos/id/654/600/400');" class="rwdimg-cover"></div>
-                                    </div>
-                                    <div class="item item-info">
-                                        <p>昇恆昌免稅購物網站</p>
-                                        <p class="price-asking">NT$ 4,880</p>
-                                        <p>2020/01/20</p>
-                                    </div>
-                                    <div class="item item-type">
-                                        <p>購物商城</p>
-                                        <p><span>1</span>樣商品</p>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="item rwdimgbox-80">
-                                        <div style="background-image: url('https://picsum.photos/id/674/600/400');" class="rwdimg-cover"></div>
-                                    </div>
-                                    <div class="item item-info">
-                                        <p>昇恆昌免稅購物網站</p>
-                                        <p class="price-asking">NT$ 4,880</p>
-                                        <p>2020/01/20</p>
-                                    </div>
-                                    <div class="item item-type">
-                                        <p>購物商城</p>
-                                        <p><span>1</span>樣商品</p>
-                                    </div>
-                                </li>
                             </ul>
                         </div>
                         <!-- 無訂單時顯示 -->
                         <div class="no-order div-switch d-block">
                             <img src="../img/shopping/noorder.png" alt="">
                             <p>尚無訂單</p>
-                            <button class="btn gray-btn mt-2" onclick="div_switch()">顯示訂單</button>
+                            <button type="button" class="btn gray-btn mt-2" onclick="div_switch()">顯示有訂單狀態</button>
                         </div>
                     </div>
                     <!-- 處理中 -->
                     <div role="tabpanel" class="tab-pane" id="order-tab-2">
                         <!-- 有訂單時顯示 -->
-                        <div class="wait-pay-list div-switch d-none">
+                        <div class="wait-pay-list">
                             <ul>
-                                <li>
+                                <li onclick="location.href='member_myorder_detail.html'">
                                     <div class="item rwdimgbox-80">
                                         <div style="background-image: url('https://picsum.photos/id/670/600/400');" class="rwdimg-cover"></div>
                                     </div>
@@ -156,12 +128,20 @@
                                         <p><span>1</span>樣商品</p>
                                     </div>
                                 </li>
-                                <li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- 待收貨 -->
+                    <div role="tabpanel" class="tab-pane" id="order-tab-3">
+                        <!-- 有訂單時顯示 -->
+                        <div class="wait-pay-list">
+                            <ul>
+                                <li onclick="location.href='member_myorder_detail.html#1'">
                                     <div class="item rwdimgbox-80">
-                                        <div style="background-image: url('https://picsum.photos/id/683/600/400');" class="rwdimg-cover"></div>
+                                        <div style="background-image: url('https://picsum.photos/id/684/600/400');" class="rwdimg-cover"></div>
                                     </div>
                                     <div class="item item-info">
-                                        <p>昇恆昌免稅購物網站</p>
+                                        <p>(自取）昇恆昌免稅購物網站</p>
                                         <p class="price-asking">NT$ 4,880</p>
                                         <p>2020/01/20</p>
                                     </div>
@@ -170,12 +150,12 @@
                                         <p><span>1</span>樣商品</p>
                                     </div>
                                 </li>
-                                <li>
+                                <li onclick="location.href='member_myorder_detail.html#2'">
                                     <div class="item rwdimgbox-80">
-                                        <div style="background-image: url('https://picsum.photos/id/685/600/400');" class="rwdimg-cover"></div>
+                                        <div style="background-image: url('https://picsum.photos/id/686/600/400');" class="rwdimg-cover"></div>
                                     </div>
                                     <div class="item item-info">
-                                        <p>昇恆昌免稅購物網站</p>
+                                        <p>(寄送）昇恆昌免稅購物網站</p>
                                         <p class="price-asking">NT$ 4,880</p>
                                         <p>2020/01/20</p>
                                     </div>
@@ -184,9 +164,31 @@
                                         <p><span>1</span>樣商品</p>
                                     </div>
                                 </li>
-                                <li>
+                                <li onclick="location.href='member_myorder_tour.html'">
                                     <div class="item rwdimgbox-80">
-                                        <div style="background-image: url('https://picsum.photos/id/694/600/400');" class="rwdimg-cover"></div>
+                                        <div style="background-image: url('https://picsum.photos/id/654/600/400');" class="rwdimg-cover"></div>
+                                    </div>
+                                    <div class="item item-info">
+                                        <p>(喜鴻）昇恆昌免稅購物網站</p>
+                                        <p class="price-asking">NT$ 4,880</p>
+                                        <p>2020/01/20</p>
+                                    </div>
+                                    <div class="item item-type">
+                                        <p>購物商城</p>
+                                        <p><span>1</span>樣商品</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- 已完成 -->
+                    <div role="tabpanel" class="tab-pane" id="order-tab-4">
+                        <!-- 有訂單時顯示 -->
+                        <div class="wait-pay-list">
+                            <ul>
+                                <li onclick="location.href='member_myorder_detail.html#3'">
+                                    <div class="item rwdimgbox-80">
+                                        <div style="background-image: url('https://picsum.photos/id/684/600/400');" class="rwdimg-cover"></div>
                                     </div>
                                     <div class="item item-info">
                                         <p>昇恆昌免稅購物網站</p>
@@ -200,20 +202,6 @@
                                 </li>
                             </ul>
                         </div>
-                        <!-- 無訂單時顯示 -->
-                        <div class="no-order div-switch d-block">
-                            <img src="../img/shopping/noorder.png" alt="">
-                            <p>尚無訂單</p>
-                            <button class="btn gray-btn mt-2" onclick="div_switch()">顯示訂單</button>
-                        </div>
-                    </div>
-                    <!-- 待收貨 -->
-                    <div role="tabpanel" class="tab-pane" id="order-tab-3">
-                        待收貨
-                    </div>
-                    <!-- 已完成 -->
-                    <div role="tabpanel" class="tab-pane" id="order-tab-4">
-                        已完成
                     </div>
                 </div>
             </div>

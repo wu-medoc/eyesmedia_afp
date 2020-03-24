@@ -41,131 +41,137 @@
             <div class="or-box text-center">
                 <span>或者</span>
             </div>
-            <p class="canuse-discount-txt font-bold">可使用的優惠券
+            <div class="text-center div-switch d-none">
+                <p class="canuse-discount-txt font-bold">可使用的優惠券
                 <input type="reset" value="重設" class="float-right btn"></p>
-            <!-- 可使用的優惠券 -->
-            <form id="store1">
+                <!-- 可使用的優惠券 -->                
+                <form id="store1">
+                    <div class="can-use-discount-list">
+                        <p class="can-use-title"><span>昇恆昌</span> 可選擇<span>二</span>張</p>
+                        <ul>
+                            <li class="checkedli">
+                                <div class="item rwdimgbox-80">
+                                    <div style="background-image: url('https://picsum.photos/300/300/?random=1');" class="rwdimg-cover"></div>
+                                </div>
+                                <div class="item discount-text item-middle">
+                                    <p>昇恆昌</p>
+                                    <p>9折 折扣券</p>
+                                    <p>2019/11/15 ~ 2019/12/31</p>
+                                </div>
+                                <label class="radio-box">
+                                    <div class="item">
+                                        <input type="radio" name="radio" id="discount001" class="store1">
+                                        <span class="checkmark"></span>
+                                    </div>
+                                </label>
+                            </li>
+                            <li class="checkedli">
+                                <div class="item rwdimgbox-80">
+                                    <div style="background-image: url('https://picsum.photos/300/300/?random=1');" class="rwdimg-cover"></div>
+                                </div>
+                                <div class="item discount-text item-middle">
+                                    <p>昇恆昌</p>
+                                    <p>8折 折扣券</p>
+                                    <p>2019/11/15 ~ 2019/12/31</p>
+                                </div>
+                                <label class="radio-box">
+                                    <div class="item">
+                                        <input type="radio" name="radio" id="discount002" class="store1">
+                                        <span class="checkmark"></span>
+                                    </div>
+                                </label>
+                            </li>
+                        </ul>
+                    </div>
+                </form>            
+                <form id="store2">
+                    <div class="can-use-discount-list">
+                        <p class="can-use-title"><span>新光三越</span> 可選擇<span>一</span>張</p>
+                        <ul>
+                            <li class="checkedli">
+                                <div class="item rwdimgbox-80">
+                                    <div style="background-image: url('https://picsum.photos/300/300/?random=2');" class="rwdimg-cover"></div>
+                                </div>
+                                <div class="item discount-text item-middle">
+                                    <p>新光三越</p>
+                                    <p>9折 折扣券</p>
+                                    <p>2019/11/15 ~ 2019/12/31</p>
+                                </div>
+                                <label class="radio-box">
+                                    <div class="item">
+                                        <input type="radio" name="radio2" id="discount003" class="store2">
+                                        <span class="checkmark"></span>
+                                    </div>
+                                </label>
+                            </li>
+                        </ul>
+                    </div>
+                </form>
+                <!-- 本次結帳無法用的優惠券 -->
+                <p class="canuse-discount-txt font-bold mt-0">本次結帳無法用的優惠券</p>
                 <div class="can-use-discount-list">
-                    <p class="can-use-title"><span>昇恆昌</span> 可選擇<span>二</span>張</p>
                     <ul>
                         <li class="checkedli">
                             <div class="item rwdimgbox-80">
-                                <div style="background-image: url('https://picsum.photos/300/300/?random=1');" class="rwdimg-cover"></div>
+                                <div style="background-image: url('https://picsum.photos/300/300/?random=4');" class="rwdimg-cover"></div>
                             </div>
-                            <div class="item discount-text item-middle">
+                            <div class="item item-middle">
                                 <p>昇恆昌</p>
-                                <p>9折 折扣券</p>
-                                <p>2019/11/15 ~ 2019/12/31</p>
+                                <p>滿萬送千 折價券</p>
+                                <p class="can-use-date">使用期限 2019/11/15 ~ 2019/12/31</p>
                             </div>
-                            <label class="radio-box">
-                                <div class="item">
-                                    <input type="radio" name="radio" id="discount001" class="store1">
-                                    <span class="checkmark"></span>
-                                </div>
-                            </label>
-                        </li>
-                        <li class="checkedli">
-                            <div class="item rwdimgbox-80">
-                                <div style="background-image: url('https://picsum.photos/300/300/?random=1');" class="rwdimg-cover"></div>
+                            <div class="item item-see-more">
+                                <a href="store-info.html">
+                                    去逛逛<i class="material-icons">&#xE315;</i>
+                                </a>
                             </div>
-                            <div class="item discount-text item-middle">
-                                <p>昇恆昌</p>
-                                <p>8折 折扣券</p>
-                                <p>2019/11/15 ~ 2019/12/31</p>
-                            </div>
-                            <label class="radio-box">
-                                <div class="item">
-                                    <input type="radio" name="radio" id="discount002" class="store1">
-                                    <span class="checkmark"></span>
-                                </div>
-                            </label>
                         </li>
                     </ul>
                 </div>
-            </form>            
-            <form id="store2">
-                <div class="can-use-discount-list">
-                    <p class="can-use-title"><span>新光三越</span> 可選擇<span>一</span>張</p>
-                    <ul>
-                        <li class="checkedli">
-                            <div class="item rwdimgbox-80">
-                                <div style="background-image: url('https://picsum.photos/300/300/?random=2');" class="rwdimg-cover"></div>
+                <!-- total price -->
+                <div class="total-price-box">
+                    <div class="total-header">
+                        <div class="store1 discount001" style="display:none;">
+                            <div class="item-group small">
+                                <div class="item"><p class="txt-line-clamp1">昇恆昌 9折 折扣券</p></div>
+                                <div class="item discount-price" value="88">88 元</div>
                             </div>
-                            <div class="item discount-text item-middle">
-                                <p>新光三越</p>
-                                <p>9折 折扣券</p>
-                                <p>2019/11/15 ~ 2019/12/31</p>
+                        </div>
+                        <div class="store1 discount002" style="display:none;">
+                            <div class="item-group small">
+                                <div class="item"><p class="txt-line-clamp1">昇恆昌 8折 折扣券</p></div>
+                                <div class="item discount-price" value="288">288 元</div>
                             </div>
-                            <label class="radio-box">
-                                <div class="item">
-                                    <input type="radio" name="radio2" id="discount003" class="store2">
-                                    <span class="checkmark"></span>
-                                </div>
-                            </label>
-                        </li>
-                    </ul>
+                        </div>
+                        <div class="store2 discount003" style="display:none;">
+                            <div class="item-group small">
+                                <div class="item"><p class="txt-line-clamp1">新光三越 9折 折扣券</p></div>
+                                <div class="item discount-price" value="188">188 元</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="total-body">
+                        <div class="item-group">
+                            <div class="item">總共優惠金額</div>
+                            <div class="item price-subtotal" value="0">0 元</div>
+                        </div>
+                    </div>
+                    <div class="total-footer">
+                        <div class="item-group">
+                            <div class="item">
+                                <button type="button" class="cancel-btn" onclick="history.back();">取消</button>
+                            </div>
+                            <div class="item">
+                                <button type="button" class="submit-btn" onclick="location.href='shopping-order.html'">確定</button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </form>
-            <!-- 本次結帳無法用的優惠券 -->
-            <p class="canuse-discount-txt font-bold mt-0">本次結帳無法用的優惠券</p>
-            <div class="can-use-discount-list">
-                <ul>
-                    <li class="checkedli">
-                        <div class="item rwdimgbox-80">
-                            <div style="background-image: url('https://picsum.photos/300/300/?random=4');" class="rwdimg-cover"></div>
-                        </div>
-                        <div class="item item-middle">
-                            <p>昇恆昌</p>
-                            <p>滿萬送千 折價券</p>
-                            <p class="can-use-date">使用期限 2019/11/15 ~ 2019/12/31</p>
-                        </div>
-                        <div class="item item-see-more">
-                            <a href="store-info.html">
-                                去逛逛<i class="material-icons">&#xE315;</i>
-                            </a>
-                        </div>
-                    </li>
-                </ul>
             </div>
-
-            <!-- total price -->
-            <div class="total-price-box">
-                <div class="total-header">
-                    <div class="store1 discount001" style="display:none;">
-                        <div class="item-group small">
-                            <div class="item"><p class="txt-line-clamp1">昇恆昌 9折 折扣券</p></div>
-                            <div class="item discount-price" value="88">88 元</div>
-                        </div>
-                    </div>
-                    <div class="store1 discount002" style="display:none;">
-                        <div class="item-group small">
-                            <div class="item"><p class="txt-line-clamp1">昇恆昌 8折 折扣券</p></div>
-                            <div class="item discount-price" value="288">288 元</div>
-                        </div>
-                    </div>
-                    <div class="store2 discount003" style="display:none;">
-                        <div class="item-group small">
-                            <div class="item"><p class="txt-line-clamp1">新光三越 9折 折扣券</p></div>
-                            <div class="item discount-price" value="188">188 元</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="total-body">
-                    <div class="item-group">
-                        <div class="item">總共優惠金額</div>
-                        <div class="item price-subtotal" value="0">0 元</div>
-                    </div>
-                </div>
-                <div class="total-footer">
-                    <div class="item-group">
-                        <div class="item">
-                             <button type="button" class="cancel-btn" onclick="history.back();">取消</button>
-                        </div>
-                        <div class="item">
-                             <button type="button" class="submit-btn" onclick="location.href='shopping-order.html'">確定</button>
-                        </div>
-                    </div>
-                </div>
+            <div class="no-order div-switch d-block">
+                <img src="../img/shopping/nodiscount.png" alt="">
+                <p class="">咦？目前還沒有優惠券喔...</p>
+                <button type="button" class="btn gray-btn mt-2" onclick="div_switch()">顯示優惠券狀態</button>
             </div>
         </div>
     
@@ -228,6 +234,7 @@
     return t = t.replace(/,(\d\d)$/, ".$1"), r = t.split("."), r[1] == "00" && (t = r[0]), t
     }
     </script>
+    <script src="../js/index.js"></script>
 </body>
 
 </html>

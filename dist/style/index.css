@@ -1644,6 +1644,23 @@ footer.for-pc li {
   font-size: 0.9em;
 }
 
+.no-order {
+  padding: 3em;
+  text-align: center;
+}
+
+.no-order img {
+  width: 65%;
+  max-width: 400px;
+}
+
+.no-order p {
+  margin-top: 20px;
+  font-weight: 700;
+  font-size: 1em;
+  color: #182B56;
+}
+
 /* loginhtml for modal*/
 .login-top {
   font-size: 0.8em;
@@ -1703,6 +1720,7 @@ footer.for-pc li {
 
 #messageModal .modal-body {
   padding: 0;
+  margin-top: 0;
 }
 
 .modal-body {
@@ -2687,6 +2705,7 @@ td.linebt-td,
 .rwdimgbox-80 {
   width: 80px;
   height: 80px;
+  min-width: 80px;
   padding: 0px;
   border: 1px #eee solid;
   margin-right: .5em;

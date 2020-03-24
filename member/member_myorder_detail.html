@@ -1,0 +1,295 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=1, user-scalable=no">
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../js/vendor/bs4/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../js/vendor/jquery-editable-select-master/dist/jquery-editable-select.min.css">
+    <!-- owl.carousel core CSS -->
+    <link rel="stylesheet" href="../js/vendor/owlcarousel/owlcarousel/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="../js/vendor/owlcarousel/owlcarousel/assets/owl.theme.default.min.css">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+    <!-- vendor css -->
+    <link rel="stylesheet" href="../js/vendor/swiper/css/swiper.min.css">
+    <!-- fontawesome css -->
+    <link rel="stylesheet" href="../js/vendor/fontawesome/css/fontawesome.css">
+    <link rel="stylesheet" href="../js/vendor/fontawesome/css/brands.css">
+    <link rel="stylesheet" href="../js/vendor/fontawesome/css/solid.css">
+    <!-- custom css -->
+    <link rel="stylesheet" href="../dist/style/css.min.css">
+    <link rel="stylesheet" href="../dist/style/global.min.css">
+    <link rel="stylesheet" href="../dist/style/index.min.css">
+    <link rel="stylesheet" href="../dist/style/member.min.css">
+    <link rel="stylesheet" href="../dist/style/shopping-index.min.css">
+    <link rel="stylesheet" href="../dist/style/animate.min.css">
+
+    <title>艾斯移動 - 訂單詳情</title>
+</head>
+
+<body>
+    <div class="wrap container">
+        <header class="fixed-top container">
+            <!-- header top -->
+            <div class="header-secondary linebt-row">
+                <div class="index-flex justify-content-between">
+                    <div class="item two">
+                        <div class="close-btn" onclick="history.back();" data-toggle="tooltip" data-placement="bottom" title="回上一頁">
+                            <i class="material-icons">&#xE314;</i>
+                        </div>
+                    </div>
+                    <div class="item three text-center">
+                        <div class="title-name fs-16">訂單詳情</div>
+                    </div>
+                    <div class="item two text-right">
+                        <div class="close-btn"></div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="order-status">
+            <div class="item"><i class="material-icons">&#xE85D;</i></div>
+            <div class="item">                
+                <p class="completed">訂單已完成</p>
+                <p class="completed">已在 2020/01/13 確認取貨！</p>
+                <p class="processing">處理中</p>
+                <p class="processing">店家正在處理您的訂單，請耐心等候</p>
+                <p class="send">待收貨</p>
+                <p class="send">店家已在 <span>2020/01/13</span> 出貨囉！</p>
+                <p class="pick">待收貨</p>
+                <p class="pick">商品已到店，請於 <span>2020/4/1</span> 前完成取貨</p>
+            </div>
+        </div>
+        <div class="order-info">
+            <ul>
+                <li class="flex-inline-between">
+                    <div class="item">訂單編號</div>
+                    <div class="item">AFP20200111004</div>
+                </li>
+                <li class="flex-inline-between">
+                    <div class="item">訂單成立時間</div>
+                    <div class="item">2020/01/10 12:30</div>
+                </li>
+            </ul>
+        </div>
+        <div class="order-box">
+            <div class="order-subtitle">
+                <i class="material-icons">&#xE8D1;</i><span class="store-name">昇恆昌免稅購物網站</span>
+            </div>
+            <ul class="order-shop-list">
+                <li>
+                    <div class="item rwdimgbox-80">
+                        <div style="background-image: url('https://picsum.photos/300/300/?random=1');" class="rwdimg-cover"></div>
+                    </div>
+                    <div class="item item-txt">
+                        <p>超級超好吃的舊振南鳳梨酥</p>
+                        <p>規格：32入</p>
+                        <p class="order-price auto-top">$880</p>
+                    </div>
+                    <div class="item item-num order-quantity">x2</div>
+                </li>
+                <li>
+                    <div class="item rwdimgbox-80">
+                        <div style="background-image: url('https://picsum.photos/300/300/?random=2');" class="rwdimg-cover"></div>
+                    </div>
+                    <div class="item item-txt">
+                        <p>超級超好吃的舊振南鳳梨酥</p>
+                        <p>規格：32入</p>
+                        <p class="order-price auto-top">$880</p>
+                    </div>
+                    <div class="item item-num order-quantity">x2</div>
+                </li>
+            </ul>
+            <div class="order-method-box">
+                <ul class="method-list">
+                    <li class="index-flex">
+                        <div class="item three"><i class="material-icons reverse">&#xE54E;</i>使用優惠券、折扣碼</div>
+                        <div class="item one discount-price text-right">-$188</div>
+                    </li>
+                    <li class="index-flex">
+                        <div class="item"><i class="material-icons">&#xE558;</i>寄送方式</div>
+                        <div class="item delivery-txt text-right delivery-price pick">憑取貨碼至商店取貨</div>
+                        <div class="item delivery-txt text-right delivery-price send completed">宅配通 $100</div>
+                        <div class="item-group send completed">
+                            <div class="item small">106 台北市大安區敦化南路2段76號5樓</div>
+                            <div class="item item-date">預計到貨日期 12月5日～12月9日</div>
+                        </div>
+                    </li>
+                    <li class="index-flex">
+                        <div class="item one">留言</div>
+                        <div class="item three">
+                            請幫我在三天後再寄出，謝謝
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="border-t5 w-100"></div>
+        <div class="order-title">
+            付款詳情
+        </div>
+        <div class="order-box">
+            <div class="order-method-box">
+                <ul class="method-list">
+                    <li class="index-flex">
+                        <div class="item one d-flex d-inline"><i class="material-icons">&#xE263;</i>付款方式</div>
+                        <div class="item two text-right invoice-txt">信用卡/VISA金融卡 *9405</div>
+                    </li>
+                </ul>
+            </div>
+            <div class="total-price-box">
+                <ul>
+                    <li class="index-flex">
+                        <div class="item">商品總金額</div>
+                        <div class="item text-right order-subtotal">$1,760</div>
+                    </li>
+                    <li class="index-flex">
+                        <div class="item">運費總金額</div>
+                        <div class="item text-right order-delivery">$200</div>
+                    </li>
+                    <li class="index-flex">
+                        <div class="item">優惠折抵</div>
+                        <div class="item text-right order-discount">-$188</div>
+                    </li>
+                    <li class="index-flex py-0">
+                        <div class="item two left-line">優惠券 AFP20200111004 </div>
+                        <div class="item one text-right sub-discount">-$100 </div>
+                    </li>
+                    <li class="index-flex py-0">
+                        <div class="item two left-line">春節優惠折抵 </div>
+                        <div class="item ont text-right sub-discount">-$88 </div>
+                    </li>
+                    <li class="total-pay index-flex">
+                        <div class="item">付款總金額</div>
+                        <div class="item text-right order-sumtotal">$1,772</div>
+                    </li>
+                </ul>
+            </div>
+            <div class="border-t5 w-100"></div>
+            <div class="flex-inline-between pb-3 px-3 send pick processing">
+                <div class="item w-100 p-2"><button type="button" class="btn bluedk-outline-btn w-100">聯絡店家</button></div>
+                <div class="item w-100 p-2"><button type="button" class="btn bluedk-outline-btn w-100" onclick="location.href='../shopping/store-info.html'">去逛賣場</button></div>
+            </div>
+            <div class="flex-inline-between pb-3 px-3 completed">
+                <div class="item w-100 p-2"><button type="button" class="btn bluedk-outline-btn w-100" onclick="location.href='../shopping/store-info.html'">退換貨</button></div>
+                <div class="item w-100 p-2"><button type="button" class="btn bluedk-outline-btn w-100">聯絡店家</button></div>
+            </div>
+        </div>   
+        <div class="addheight"></div>
+        
+        <div class="multilayer">       
+            <div class="useoffers">
+                <div class="title-box">
+                    <div class="item icon-btn">
+                        <button class="btn px-0" onclick="backLayer();" data-toggle="tooltip" data-placement="bottom" title="回上一頁">
+                            <i class="material-icons">&#xE314;</i>
+                        </button>
+                    </div>
+                    <div class="item title-name">取貨</div>
+                    <div class="item icon-btn">
+                    </div>
+                </div>
+                <div class="text-bluedk text-center">
+                    <h6>昇恆昌免稅購物網站</h6>
+                    <p>AFP20200111004</p>
+                    <small class="text-index">取貨期限：2020/4/1</small>
+                    <div class="border rounded p-3 m-3"><img src="../img/member/QRcode.svg"></div>
+                    <div class="bg-light p-2">可使用次數：1次</div>
+                </div>
+                <div class="container p-3">
+                    <button type="button" class="btn index-btn w-100 msg-open" value="msg-mobii" data-toggle="modal" data-target="#messageModal">完成</button>
+                </div>
+            </div>  
+        </div>
+
+    </div>   
+    <div id="loginhtml"></div> 
+    <footer class="shopping-cartfooter container fixed-bottom">
+        <ul>
+            <li>
+                <p>此筆訂單可賺取<span>137</span>魔幣</p>
+            </li>
+            <li>
+                <div class="item send">
+                    <button type="button" class="btn index-outline-btn w-100">退換貨</button>
+                </div>
+                <div class="item send">
+                    <button type="button" class="btn index-btn w-100 msg-open" value="msg-receipt" data-toggle="modal" data-target="#messageModal">確認收貨</button>
+                </div>
+                <div class="item pick">
+                    <button type="button" class="btn index-btn w-100" onclick="callLayer('.useoffers')">開啟取貨碼</button>
+                </div>
+            </li>
+        </ul>
+    </footer>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="../js/vendor/bs4/js/jquery-3.2.1.slim.min.js"></script>
+    <!-- Latest compiled and minified JavaScript -->    
+    <script src="../js/vendor/bs4/js/bootstrap.min.js"></script>
+
+    <!-- owlcarousel JS -->
+    <script src="../js/vendor/owlcarousel/vendors/jquery.min.js"></script>
+    <script src="../js/vendor/owlcarousel/owlcarousel/owl.carousel.js"></script>
+    <script src="../js/vendor/owlcarousel/vendors/highlight.js"></script>
+    <script src="../js/vendor/owlcarousel/js/app.js"></script>   
+    <script src="../js/vendor/jquery-editable-select-master/dist/jquery-editable-select.js"></script>
+
+    <!-- vendor js -->
+    <script src="../js/vendor/swiper/js/swiper.min.js"></script>
+    <script src="../js/vendor/imgLiquid.js"></script>
+    
+    <!-- custom js -->
+    <script>
+        $("#loginhtml").load("../login.html"); 
+
+        //send寄送 pick自取 (class不影響版面,僅判斷用,可移除)
+        //parameterN==1自取,其餘寄送
+        var parameterN ="";
+        parameterN = parseInt($(location).attr("href").split("#")[1]);
+        $('.send, .pick, .processing, .completed').hide();
+        //(parameterN==1) ? $('.pick').show() :  $('.send').show();
+        switch(parameterN) {
+            case 1:
+                // pick自取
+                $('.pick').show();
+                $('footer').show();
+                break;
+            case 2:
+                // send寄送
+                $('.send').show();
+                $('footer').show();
+                break;
+            case 3:
+                // completed已完成
+                $('.completed').show();
+                $('footer').hide();
+                break;
+            default:
+                // processing處理中
+                $('.processing').show();
+                $('footer').hide();
+        }
+        
+        // completed onclick modal(msg-mobii)
+        function orderCompleted(){
+            setTimeout(function(){ 
+            window.location.replace('member_myorder_detail.html#3');
+            location.reload(); },2000);
+        }        
+        $('.msg-open').on('click', function(){  
+            orderCompleted();
+        });
+    </script>
+    <script src="../js/animateCss.js"></script>
+    <script src="../js/index.js"></script>
+</body>
+
+</html>
