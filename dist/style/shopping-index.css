@@ -1463,35 +1463,43 @@ footer a:hover {
   padding: 0 0.5em;
 }
 
+.shopping-cartlist .returns-list,
+.shopping-cartlist ul.list-unstyled {
+  color: #182B56;
+}
+
+.shopping-cartlist .returns-list li,
 .shopping-cartlist ul.list-unstyled li {
-  padding: 0 0 0 0.5em;
+  padding: 0;
   border-bottom: 1px solid #f8f8f8;
 }
 
+.shopping-cartlist .returns-list li img,
 .shopping-cartlist ul.list-unstyled li img {
   height: 1.8em;
 }
 
-.shopping-cartlist ul.list-unstyled li .store-title {
-  height: 3em;
-}
-
+.shopping-cartlist .returns-list li .products-sitem .sitem-checkbox,
 .shopping-cartlist ul.list-unstyled li .products-sitem .sitem-checkbox {
   width: 26px;
 }
 
+.shopping-cartlist .returns-list li .products-sitem .sitem-img,
 .shopping-cartlist ul.list-unstyled li .products-sitem .sitem-img {
   width: 80px;
 }
 
+.shopping-cartlist .returns-list li .products-sitem .sitem-title,
 .shopping-cartlist ul.list-unstyled li .products-sitem .sitem-title {
   width: 70%;
 }
 
+.shopping-cartlist .returns-list li .products-sitem .sitem-title small,
 .shopping-cartlist ul.list-unstyled li .products-sitem .sitem-title small {
   color: #6c757d;
 }
 
+.shopping-cartlist .returns-list li .products-sitem .products-quantity input.form-control.text-center,
 .shopping-cartlist ul.list-unstyled li .products-sitem .products-quantity input.form-control.text-center {
   width: 50px;
   padding: 2px 4px;
@@ -1499,12 +1507,14 @@ footer a:hover {
   border: 0px;
 }
 
+.shopping-cartlist .returns-list li .products-sitem .products-quantity .input-group-btn button,
 .shopping-cartlist ul.list-unstyled li .products-sitem .products-quantity .input-group-btn button {
   padding: 2px 3px;
   line-height: 1em;
   font-size: 0.7em;
 }
 
+.shopping-cartlist .returns-list li .price-asking,
 .shopping-cartlist ul.list-unstyled li .price-asking {
   color: tomato;
   font-weight: bold;
@@ -1512,6 +1522,7 @@ footer a:hover {
   padding: .25em;
 }
 
+.shopping-cartlist .returns-list li .price-original,
 .shopping-cartlist ul.list-unstyled li .price-original {
   color: gray;
   text-decoration: line-through;
@@ -1520,17 +1531,20 @@ footer a:hover {
   text-align: right;
 }
 
+.shopping-cartlist .returns-list li .col-9,
 .shopping-cartlist ul.list-unstyled li .col-9 {
   padding-right: 0px;
   padding-left: 4px;
 }
 
+.shopping-cartlist .returns-list li .col-3,
 .shopping-cartlist ul.list-unstyled li .col-3 {
   white-space: nowrap;
   padding-right: 0px;
   padding-left: 5px;
 }
 
+.shopping-cartlist .returns-list li .col-3 .products-delbtn,
 .shopping-cartlist ul.list-unstyled li .col-3 .products-delbtn {
   max-width: 80px;
   width: 100%;
@@ -1540,10 +1554,15 @@ footer a:hover {
   border-radius: 0;
 }
 
+.shopping-cartlist .returns-list li.linebt-row10,
 .shopping-cartlist ul.list-unstyled li.linebt-row10 {
   border-bottom: 10px solid #f8f8f8;
   padding: 0;
   height: 10;
+}
+
+.shopping-cartlist .returns-ul li {
+  padding: .5em;
 }
 
 /* 選擇優惠券或輸入折扣碼 */
@@ -2379,7 +2398,7 @@ footer .order-go-pay .item {
 }
 
 .electronic-choice-list .search-txt {
-  color: #2196F3;
+  color: #4A90E2;
 }
 
 .electronic-choice-list .search-txt .material-icons {
@@ -2628,73 +2647,6 @@ footer .order-go-pay .item {
   padding-left: 40px;
 }
 
-.radio-box {
-  display: block;
-  position: relative;
-  padding-left: 30px;
-  cursor: pointer;
-  font-size: 16px;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
-.radio-box input {
-  position: absolute;
-  opacity: 0;
-  cursor: pointer;
-}
-
-.radio-box input:checked ~ .checkmark {
-  background-color: #2196F3;
-  border-color: #2196F3;
-}
-
-.radio-box input:checked ~ .checkmark:after {
-  display: block;
-}
-
-.radio-box .checkmark {
-  position: absolute;
-  top: 50%;
-  left: 0;
-  height: 20px;
-  width: 20px;
-  background-color: #fff;
-  border: 1px #DADADA solid;
-  border-radius: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-}
-
-.radio-box .checkmark:after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background: #fff;
-  display: none;
-}
-
-.radio-box:hover input ~ .checkmark {
-  background-color: #ccc;
-}
-
-.radio-box:hover input:checked ~ .checkmark {
-  background-color: #2196F3;
-  border-color: #2196F3;
-}
-
-.radio-box:hover input:checked ~ .checkmark:after {
-  display: block;
-}
-
 .input-number-box {
   margin-top: 48px;
   padding: 30px;
@@ -2774,5 +2726,15 @@ footer .order-go-pay .item {
 .material-icons.reverse {
   -webkit-transform: scaleX(-1);
           transform: scaleX(-1);
+}
+
+figure {
+  width: auto;
+  max-width: 100%;
+}
+
+figure img {
+  width: auto;
+  max-width: 100%;
 }
 /*# sourceMappingURL=shopping-index.css.map */

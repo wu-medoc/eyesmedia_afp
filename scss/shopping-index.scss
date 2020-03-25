@@ -1345,15 +1345,14 @@ footer{
     padding: 0 0.5em;
 }
 .shopping-cartlist {
+    .returns-list, 
     ul.list-unstyled {
+        color: $blue-dark;
         li {
-            padding: 0 0 0 0.5em;
+            padding: 0;
             border-bottom: 1px solid $gray-light8;
             img {
                 height: 1.8em;
-            }
-            .store-title {
-                height: 3em;
             }
             .products-sitem {
                 .sitem-checkbox {
@@ -1419,6 +1418,11 @@ footer{
             padding: 0;
             height: 10;
           }
+    }
+    .returns-ul{
+        li{
+            padding: .5em;
+        }
     }
 }
 
@@ -2076,7 +2080,7 @@ footer{
         border-bottom: 1px #eee solid;
     }
     .search-txt{
-        color: #2196F3;
+        color: #4A90E2;
         .material-icons{
             color: $blue-dark;
         }
@@ -2265,70 +2269,6 @@ footer{
         padding-left: 40px;
     }
 }
-.radio-box {
-    display: block;
-    position: relative;
-    padding-left: 30px;
-    cursor: pointer;
-    font-size: 16px;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    input {
-        position: absolute;
-        opacity: 0;
-        cursor: pointer;
-        &:checked{
-            ~.checkmark {
-                background-color: #2196F3;
-                border-color: #2196F3;
-                &:after {
-                    display: block;
-                }
-            }
-        }
-    }
-    .checkmark {
-        position: absolute;
-        top: 50%;
-        left: 0;
-        height: 20px;
-        width: 20px;
-        background-color: $default-white;
-        border: 1px #DADADA solid;
-        border-radius: 50%;
-        transform: translateY(-50%);
-        &:after {
-            content: "";
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 6px;
-            height: 6px;
-            border-radius: 50%;
-            background: $default-white;
-            display: none;
-        }
-    }
-    &:hover{
-        input{
-            ~.checkmark {
-                background-color: #ccc;
-            }
-            &:checked{
-                ~.checkmark {
-                    background-color: #2196F3;
-                    border-color: #2196F3;
-                    &:after {
-                        display: block;
-                    }
-                }
-            }
-        }
-    }
-}
 .input-number-box{
     margin-top: 48px;
     padding: 30px;
@@ -2397,5 +2337,14 @@ footer{
 .material-icons{
     &.reverse{
         transform: scaleX(-1);
+    }
+}
+
+figure{
+    width: auto;
+    max-width: 100%;
+    img{            
+        width: auto;
+        max-width: 100%;
     }
 }

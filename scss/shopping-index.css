@@ -8,8 +8,8 @@ Error: Invalid CP950 character "\xE5"
 203: }
 204: 
 205: /* 優惠券 *\/
-206: .other-discount-list{
-207:     background: $gray-light8;
+206: .other-discount-list-w{
+207:     background: #fff;
 208:     padding: 0;
 209:     .discount-more{
 210:         color: $blue-dark;
@@ -37,4 +37,4 @@ C:/Program Files/Adobe/Adobe Dreamweaver CC 2018/ruby/bin/sass:22:in `<main>'
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Invalid CP950 character \"\xE5\"\A         on line 205 of D:\eyesmedia\ASIAfunPASS\github\afp\eyesmedia_afp\scss\shopping-index.scss\A \A 200:             }\A 201:         }\A 202:     }\A 203: }\A 204: \A 205: /* 優惠券 */\A 206: .other-discount-list{\A 207:     background: $gray-light8;\A 208:     padding: 0;\A 209:     .discount-more{\A 210:         color: $blue-dark;"; }
+  content: "Error: Invalid CP950 character \"\xE5\"\A         on line 205 of D:\eyesmedia\ASIAfunPASS\github\afp\eyesmedia_afp\scss\shopping-index.scss\A \A 200:             }\A 201:         }\A 202:     }\A 203: }\A 204: \A 205: /* 優惠券 */\A 206: .other-discount-list-w{\A 207:     background: #fff;\A 208:     padding: 0;\A 209:     .discount-more{\A 210:         color: $blue-dark;"; }

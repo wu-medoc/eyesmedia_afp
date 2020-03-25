@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=1, user-scalable=no">
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../js/vendor/bs4/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../js/vendor/jquery-editable-select-master/dist/jquery-editable-select.min.css">
+    <!-- owl.carousel core CSS -->
+    <link rel="stylesheet" href="../js/vendor/owlcarousel/owlcarousel/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="../js/vendor/owlcarousel/owlcarousel/assets/owl.theme.default.min.css">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+    <!-- vendor css -->
+    <link rel="stylesheet" href="../js/vendor/swiper/css/swiper.min.css">
+    <!-- fontawesome css -->
+    <link rel="stylesheet" href="../js/vendor/fontawesome/css/fontawesome.css">
+    <link rel="stylesheet" href="../js/vendor/fontawesome/css/brands.css">
+    <link rel="stylesheet" href="../js/vendor/fontawesome/css/solid.css">
+    <!-- custom css -->
+    <link rel="stylesheet" href="../dist/style/css.min.css">
+    <link rel="stylesheet" href="../dist/style/global.min.css">
+    <link rel="stylesheet" href="../dist/style/index.min.css">
+    <link rel="stylesheet" href="../dist/style/member.min.css">
+    <link rel="stylesheet" href="../dist/style/shopping-index.min.css">
+    <link rel="stylesheet" href="../dist/style/animate.min.css">
+
+    <title>艾斯移動 - 訂單詳情</title>
+</head>
+
+<body>
+    <div class="wrap container">
+        <header class="fixed-top container">
+            <!-- header top -->
+            <div class="header-secondary linebt-row">
+                <div class="index-flex justify-content-between">
+                    <div class="item two">
+                        <div class="close-btn" onclick="history.back();" data-toggle="tooltip" data-placement="bottom" title="回上一頁">
+                            <i class="material-icons">&#xE314;</i>
+                        </div>
+                    </div>
+                    <div class="item three text-center">
+                        <div class="title-name fs-16">退換貨</div>
+                    </div>
+                    <div class="item two text-right">
+                        <button type="button" class="btn bluedk-outline-btn bt-small mr-1">退換說明</button>
+                    </button>
+                </div>
+            </div>
+        </header>
+        <div class="header-42"></div>     
+        <div class="shopping-cartlist">
+            <div class="returns-list w-100">
+                <form id="store1" class="product">
+                    <ul class="store1ul returns-ul">
+                        <li class="flex-inline-between">      
+                            <div class="store-title center-v p-1">   
+                                <label for="store01-all">
+                                    <i class="fas fa-store pr-2 pb-1"></i>昇恆昌免稅購物網站 
+                                </label>
+                            </div>    
+                        </li>
+                        <li>
+                            <div class="products-sitem d-flex align-items-start bd-highlight">
+                                <div class="sitem-checkbox">
+                                    <div class="icheck-material-blue">
+                                        <input id="products001" type="checkbox" class="checkedall store01-all" checked><label for="products001" class="p-0"></label>  
+                                    </div>  
+                                </div>
+                                <div class="sitem-img bd-highlight py-1">
+                                    <div class="rwdimg" style="background-image: url('../img/shopping/products/p00001.jpg');"></div>
+                                </div>
+                                <div class="sitem-title bd-highlight py-1">
+                                    <p class="txt-line-clamp1">Apple iPhone XS 256GB Apple iPhone XS 256GB</p> 
+                                    <small class="txt-line-clamp1">規格：香檳金</small> 
+                                    <div class="products-quantity">
+                                        <div class="d-flex p-quantity products001">
+                                            <div class="input-group-btn data-dwn">
+                                                <button type="button" class="btn btn-default btn-outline-dark" data-dir="dwn"><i class="fas fa-minus"></i></button>
+                                            </div>
+                                            <div><input type="number" class="form-control text-center products001 bg-white" value="1" min="0" max="3" required readonly></div>
+                                            <div class="input-group-btn data-up">
+                                                <button type="button" class="btn btn-default btn-outline-dark" data-dir="up"><i class="fas fa-plus"></i></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>                      
+                        </li>    
+                        <li>
+                            <div class="products-sitem d-flex d-inline">   
+                                <label class="radio-box pr-4">退貨
+                                    <input type="radio" name="p1radio" checked>
+                                    <span class="checkmark"></span>
+                                </label>
+                                <label class="radio-box pr-4">換貨
+                                    <input type="radio" name="p1radio">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </div>             
+                        </li>  
+                        <li>
+                            <div class="products-sitem flex-inline-between">   
+                                <div class="item">原因</div>
+                                <a href><span class="text-blue">請選擇原因</span><i class="material-icons">&#xE315;</i></a>
+                            </div>             
+                        </li>
+                    </ul>         
+                </form>
+            </div>
+            
+        </div> 
+    </div>    
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="../js/vendor/bs4/js/jquery-3.2.1.slim.min.js"></script>
+    <!-- Latest compiled and minified JavaScript -->    
+    <script src="../js/vendor/bs4/js/bootstrap.min.js"></script>
+
+    <!-- owlcarousel JS -->
+    <script src="../js/vendor/owlcarousel/vendors/jquery.min.js"></script>
+    <script src="../js/vendor/owlcarousel/owlcarousel/owl.carousel.js"></script>
+    <script src="../js/vendor/owlcarousel/vendors/highlight.js"></script>
+    <script src="../js/vendor/owlcarousel/js/app.js"></script>   
+    <script src="../js/vendor/jquery-editable-select-master/dist/jquery-editable-select.js"></script>
+
+    <!-- vendor js -->
+    <script src="../js/vendor/swiper/js/swiper.min.js"></script>
+    <script src="../js/vendor/imgLiquid.js"></script>
+    
+    <!-- custom js -->
+    <script>
+        $(document).on('click', '.p-quantity button', function () { 
+        var btn = $(this),
+            qid=$(this).closest('.p-quantity').find('input').attr('class').split(/\s+/)[2];
+            oldValue = $('input.'+qid).val().trim(),
+            input = $('input.'+qid),
+            newVal = 0,
+            sumpaskval = 0,
+            univalent = parseInt($('.'+qid+'.univalent').attr('value'));
+            if (btn.attr('data-dir') == 'up') {            
+                (oldValue < input.attr('max')) ? (newVal = parseInt(oldValue) + 1): (newVal = input.val());
+            } else {
+                (oldValue > 1) ? (newVal = parseInt(oldValue) - 1) : (newVal = 1);
+            }
+            input.val(newVal);
+        });
+        
+    </script>
+    <script src="../js/animateCss.js"></script>
+    <script src="../js/index.js"></script>
+</body>
+
+</html>
