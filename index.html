@@ -67,24 +67,34 @@
                         </div>
                         <div class="for-mobile">
                             <div class="kv-top d-flex justify-content-between align-items-start">
-                                <div class="kv-iconbox">
-                                    <div class="kv-icon">
-                                        <img src="img/index/icons/icon_scan.png"><br>
-                                        掃碼
-                                    </div>
-                                    <div class="kv-icon">
-                                        <img src="img/index/icons/icon_code.png"><br>
-                                        乘車碼
-                                    </div>
-                                    <div class="kv-icon">
-                                        <img src="img/index/icons/icon_wallet.png"><br>
-                                        付款
+                                <!--未登入-->
+                                <div class="div-switch d-block top-bn">
+                                    <img src="img/index/top_bn1.png" class="img-fluid">
+                                </div>
+                                <!--已登入-->
+                                <div class="div-switch d-none">
+                                    <div class="kv-iconbox">
+                                        <div class="kv-icon">
+                                            <img src="img/index/icons/icon_scan.png"><br>
+                                            掃碼
+                                        </div>
+                                        <div class="kv-icon">
+                                            <img src="img/index/icons/icon_code.png"><br>
+                                            乘車碼
+                                        </div>
+                                        <div class="kv-icon">
+                                            <img src="img/index/icons/icon_wallet.png"><br>
+                                            付款
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="top-item climate">
                                     <ul>
-                                        <li>
-                                            <img src="img/index/bn_tips01.gif" class="bntips">
+                                        <li>                                            
+                                            <!--未登入-->
+                                            <img src="img/index/bn_tips01.gif" class="bntips div-switch d-block" onclick="div_switch()">
+                                            <!--已登入-->
+                                            <img src="img/index/bn_tips02.gif" class="bntips div-switch d-none" onclick="div_switch()">
                                         </li>
                                         <li class="small pt-3">
                                             
@@ -101,18 +111,19 @@
                                     <img src="img/share/mobii_logo.png">
                                 </div>
                                 <!--未登入-->
-                                <div class="top-item btn white-outline-btn btw-small" data-toggle="modal" data-target="#loginModalCenter">
+                                <div class="top-item btn white-outline-btn btw-small div-switch d-block" data-toggle="modal" data-target="#loginModalCenter">
                                     登入/註冊<img src="img/share/forward_w.png" class="h20">
                                 </div>
                                 <!--已登入-->
-                                <div class="top-item more-horiz has-info d-none">
+                                <div class="top-item more-horiz has-info div-switch d-none">
                                     <i class="material-icons">&#xE5D3;</i>
                                     <button class="drop_menu_toggle"></button>
                                     <div class="drop-menu">
                                         <ul class="drop-content">
-                                            <li><a href="javascript:;"><img src="img/index/icons/login_qrcode.png" alt="">掃碼</a></li>
-                                            <li><a href="javascript:;"><img src="img/index/icons/login_scan.png" alt="">乘車碼</a></li>
-                                            <li><a href data-toggle="modal" data-target="#loginModalCenter"><img src="img/index/icons/login_logout.png" alt="">登入/註冊</a></li>
+                                            <li><a href="member/member_ticket.html"><img src="img/share/drop_tickets.png" alt="">我的票券</a></li>
+                                            <li><a href="member/member_favorite.html"><img src="img/share/drop_favorite.png" alt="">我的收藏</a></li>
+                                            <li><a href="member/member_myorder.html"><img src="img/share/drop_order.png" alt="">我的訂單</a></li>
+                                            <!-- <li><a href data-toggle="modal" data-target="#loginModalCenter"><img src="img/index/icons/login_logout.png" alt="">登入/註冊</a></li> -->
                                         </ul>
                                     </div>
                                 </div>

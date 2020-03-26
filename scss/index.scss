@@ -102,6 +102,16 @@ body.is-open-country .country-box {
   background-size:cover;
 }
 
+.top-bn{
+  width: 100%;
+  height: auto;
+  max-height: 78px;
+  position: absolute;
+  top:40px;
+  right: 1.5em;
+  width: 66%;
+  display: flex;
+}
 @media (max-width: 767px) {
   .kv-iconbox{
     font-size: 1em;
@@ -259,8 +269,8 @@ body.is-open-country .country-box {
 
 .kv-box .kv-top .top-item.climate {
   -webkit-box-flex: 0;
-      -ms-flex: none;
-          flex: none;
+      -ms-flex: auto;
+          flex: auto;
   line-height: 1;
   color: #fff;
   .material-icons {
@@ -372,11 +382,9 @@ body.is-open-country .country-box {
 .kv-box .kv-top{
   .mobiilogo{
     img{
-      width: 50%;
-      max-width: 200px;
-      min-width: 85px;
-      position: relative;
-      top: 50%;
+      width: 100px;
+      position: absolute;
+      top: 10%;
       left: 50%;
       transform: translate(-50%, -50%);
       -webkit-transform: translate(-50%, -50%);
@@ -463,6 +471,10 @@ body.is-open-country .country-box {
 .kv-box .kv-top .top-item.more-horiz .drop-menu ul li {
   font-size: 15px;
   padding: 4px 0;
+  border-bottom: 1px solid #B6C0D5;
+  &:last-child{
+    border-bottom: 0px;
+  }
 }
 .kv-box .kv-top .top-item.more-horiz .drop-menu ul a {
   display: block;
