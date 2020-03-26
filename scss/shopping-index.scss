@@ -1374,7 +1374,9 @@ footer{
                         width: 50px;   
                         padding: 2px 4px;
                         height: 1.8em;
-                        border: 0px
+                        border: 0px;
+                        -moz-appearance: none;
+                        -webkit-appearance: none;
                     }
                     .input-group-btn button{
                         padding: 2px 3px;
