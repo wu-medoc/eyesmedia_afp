@@ -804,6 +804,12 @@ footer a:hover {
   text-align: right;
 }
 
+.shopping-productsdetail .products-quantity input[type=number]::-webkit-inner-spin-button,
+.shopping-productsdetail .products-quantity input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
 .shopping-productsdetail .products-quantity input.form-control.text-center {
   width: 50px;
   padding: 2px 4px;
@@ -1499,6 +1505,14 @@ footer a:hover {
 .shopping-cartlist .returns-list li .products-sitem .sitem-title small,
 .shopping-cartlist ul.list-unstyled li .products-sitem .sitem-title small {
   color: #6c757d;
+}
+
+.shopping-cartlist .returns-list li .products-sitem .products-quantity input[type=number]::-webkit-inner-spin-button,
+.shopping-cartlist .returns-list li .products-sitem .products-quantity input[type=number]::-webkit-outer-spin-button,
+.shopping-cartlist ul.list-unstyled li .products-sitem .products-quantity input[type=number]::-webkit-inner-spin-button,
+.shopping-cartlist ul.list-unstyled li .products-sitem .products-quantity input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 .shopping-cartlist .returns-list li .products-sitem .products-quantity input.form-control.text-center,
