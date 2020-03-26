@@ -809,6 +809,8 @@ footer a:hover {
   padding: 2px 4px;
   height: 1.8em;
   border: 0px;
+  -moz-appearance: none;
+  -webkit-appearance: none;
 }
 
 .shopping-productsdetail .products-quantity .input-group-btn button {
