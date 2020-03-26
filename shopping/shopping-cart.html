@@ -502,9 +502,11 @@
             };
             //editok 
             if( (storebnval=='ok')){
+                $('.shopping-cartfooter').show();
                 if(modifybtnlen=='1'){
                     $(this).hide();
-                    $('.shopping-cartlist').html("<div class='d-flex flex-column justify-content-center align-items-center' style='height:300px'><p class='p-2 w-100 text-center'>喔喔！購物車內沒有商品</p><button type='button' class='btn index-btn m-2 w-75 cart-next' onclick='javascript:location.href=\"index.html\"'>馬上去逛逛</button></div>");
+                    $('.shopping-cartlist').html("<div class='d-flex flex-column justify-content-center align-items-center h-auto'><img src=\"../img/shopping/nocart.png\" class='nocart'><p class='p-2 w-100 text-center'>購物車內還沒有商品？<br>我OK! 你先買～</p><button type='button' class='btn index-btn m-2 w-75 cart-next' onclick='javascript:location.href=\"index.html\"'>立馬去買</button></div>");
+                    $('.shopping-cartfooter').hide();
                 }else{
                     $(this).text('編輯全部').val('store0'); 
                     $('.modifybtn').not($(this)).text('編輯');

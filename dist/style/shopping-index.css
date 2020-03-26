@@ -1565,6 +1565,19 @@ footer a:hover {
   padding: .5em;
 }
 
+.shopping-cartlist .nocart {
+  margin-top: 5em;
+  width: auto;
+  height: auto;
+  max-height: 300px;
+}
+
+@media (max-width: 480px) {
+  .shopping-cartlist .nocart {
+    max-height: 200px;
+  }
+}
+
 /* 選擇優惠券或輸入折扣碼 */
 .shopping-discount {
   color: #182B56;
