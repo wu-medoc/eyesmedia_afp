@@ -77,6 +77,11 @@ body.is-open-country .country-box {
   height: 90px;
   display: inline-flex;
 }
+.header-100 {
+  width: 100%;
+  height: 100px;
+  display: inline-flex;
+}
 .pt-5em{
   padding-top: 5em;
 }
@@ -2849,6 +2854,8 @@ button.open-page {
   background-color: #000;
   opacity: .6;
   z-index: 2;
+  top: 0;
+  left: 0;
 }
 .filter-outbox{
   overflow: hidden;
@@ -2886,17 +2893,25 @@ button.open-page {
       padding-left: 1em;
   }
   .open-page-ul li{
-      padding-left: 1em;
-      padding-right: 1em;
-      line-height: 3em;
+    padding-left: 1em;
+    padding-right: 1em;
+    line-height: 3em;
+    font-size: 0.9em;
+    font-weight: 400;
+    border-top: 1px #C4C2C2 solid;     
+    i.fa-check{
+      padding: 0 4px;
+      visibility: hidden;
+    } 
+    &.active,
+    .active {
+      color: $index-default;
       font-size: 0.9em;
-      font-weight: 400;
-      border-top: 1px #C4C2C2 solid;      
-      &.active,
-      .active {
-        color: $index-default;
-        font-size: 0.9em;
-        font-weight: bold;
+      font-weight: bold;
+      i.fa-check{
+        padding: 0 4px;
+        visibility: visible;
+      } 
     } 
   }
   .open-page-ul li a:not(.active){
@@ -2950,6 +2965,9 @@ button.open-page {
   }
   .sub-img img{
     height: 2em;
+  }
+  .material-icons{
+    color: $blue-dark;
   }
 }
 .flex-inline-between {

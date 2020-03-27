@@ -514,6 +514,7 @@ footer{
     padding-top: 1em;  
     padding-left: 4%; 
     margin: 0 auto;
+    position: relative;
     .products-item {
         width: 31.3%;   
         background-color: #fff; 
@@ -2369,5 +2370,20 @@ figure{
     img{            
         width: auto;
         max-width: 100%;
+    }
+}
+
+/* roaming */
+.filter-item {
+    flex: 1;
+    text-align: center;
+    color: $explore-default;
+
+    &.active {
+        color: $index-default;
+
+        .material-icons {
+            transform: rotate(180deg);
+        }
     }
 }

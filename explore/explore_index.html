@@ -108,6 +108,28 @@
                 <a href>
                     <div class="card-item">
                         <div class="img-box">
+                            <img src="https://picsum.photos/300/300/?random=2">
+                        </div>
+                        <div class="info-box">
+                            <ul class="info-list">
+                                <li class="info-name">蓮池潭</li>
+                                <li>
+                                    <div class="shopping-store-badge">                        
+                                        <span class="badge badge-pill text-explore"><img src="../img/share/2000.png" alt="">景點</span> 
+                                        <span class="badge badge-pill text-explore">折價券</span>      
+                                    </div>
+                                </li>
+                                <li class="info-near">
+                                    <div class="item">近左營捷運站</div>
+                                    <div class="item auto-left">距離<span>33</span>km</div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </a>
+                <a href>
+                    <div class="card-item">
+                        <div class="img-box">
                             <img src="https://picsum.photos/300/300/?random=3">
                         </div>
                         <div class="info-box">
@@ -194,54 +216,54 @@
                     </div>
                 </a>         
             </div>   
-            <div id="type" class="explore-filter-content">
+            <div id="type" class="filter-content">
                 <ul class="open-page-ul">
-                    <li class="flex-inline-between">                
-                            <div class="">
-                                全部顯示
-                            </div>
-                            <div class="">
-                                <button class="btn active"><i class="fas fa-check"></i></button>
-                            </div>   
+                    <li class="flex-inline-between active" onclick="">                
+                        <div class="">
+                            全部顯示
+                        </div>
+                        <div class="">
+                            22<i class="fas fa-check"></i>
+                        </div>   
                     </li>
                     <li class="flex-inline-between">
                         <div class="">
                             熱門
                         </div>
                         <div class="">
-                            13274
+                            8<i class="fas fa-check"></i>
                         </div>                
                     </li>
-                    <li class="flex-inline-between">
+                    <li class="flex-inline-between" onclick="">
                         <div class="">
                             美食
                         </div>
                         <div class="">
-                            1231
+                            1231<i class="fas fa-check"></i>
                         </div>                
                     </li>
-                    <li class="flex-inline-between">
+                    <li class="flex-inline-between" onclick="">
                         <div class="">
                             購物
                         </div>
                         <div class="">
-                            274
+                            274<i class="fas fa-check"></i>
                         </div>                
                     </li>
-                    <li class="flex-inline-between">
+                    <li class="flex-inline-between" onclick="">
                         <div class="">
                             景點
                         </div>
                         <div class="">
-                            1374
+                            1374<i class="fas fa-check"></i>
                         </div>                
                     </li>
-                    <li class="flex-inline-between">
+                    <li class="flex-inline-between" onclick="">
                         <div class="">
                             遊樂
                         </div>
                         <div class="">
-                            1327
+                            1327<i class="fas fa-check"></i>
                         </div>                
                     </li>
                 </ul>
@@ -556,13 +578,13 @@
     
     <script>
         $(document).ready(function(){
-            var topBox = $('.explore-top-box');
-            // console.log(topBox.height());
-            var mainBox = $('.explore-container');
-            // console.log(mainBox.height());
-            $(window).on('resize', function(){
-                mainBox.css({ 'height': 'calc(100vh - ' + topBox.height() + 'px)' });
-            }).trigger('resize');
+            // var topBox = $('.explore-top-box');
+            // // console.log(topBox.height());
+            // var mainBox = $('.explore-container');
+            // // console.log(mainBox.height());
+            // $(window).on('resize', function(){
+            //     mainBox.css({ 'height': 'calc(100vh - ' + topBox.height() + 'px)' });
+            // }).trigger('resize');
 
             // 開啟篩選清單
             $('.filter-item').on('click', function(){
@@ -577,16 +599,16 @@
             })
             
             // 篩選清單層級樣式
-            $('.nav-container .levelOne > li').on('click', function(){
-                $('.nav-container .levelOne > li').removeClass('active');
-                $(this).addClass('active');
-            })
+            // $('.nav-container .levelOne > li').on('click', function(){
+            //     $('.nav-container .levelOne > li').removeClass('active');
+            //     $(this).addClass('active');
+            // })
 
-            $('.nav-container .levelTwo > li').on('click', function(){
-                console.log('here');
-                $('.nav-container .levelTwo > li').removeClass('active');
-                $(this).addClass('active');
-            })
+            // $('.nav-container .levelTwo > li').on('click', function(){
+            //     console.log('here');
+            //     $('.nav-container .levelTwo > li').removeClass('active');
+            //     $(this).addClass('active');
+            // })
 
 
         })
