@@ -49,8 +49,11 @@
                             <div class="back-go">
                                 <button type="button" onclick="history.back()" data-toggle="tooltip" data-placement="top" title="回上一頁"><i class="material-icons">&#xe5cb;</i></button>
                             </div>
-                            <div class="add-favorite">
-                                <button type="button" class="active" data-toggle="modal" data-target=".bd-example-modal-sm" data-toggle="tooltip" data-placement="top" title="加入收藏"><i class="material-icons">&#xe87d;</i></button>
+                            <div class="d-flex d-inline">
+                                <button class="btn add-share" type="button" data-url="http://localhost:52330/explore/explore_page_03.html" data-trigger="copy" data-toggle="modal" data-target=".share-modal-sm"><i class="material-icons share">&#xe80d;</i></button>
+                                <div class="add-favorite">
+                                    <button type="button" class="active" data-toggle="modal" data-target=".bd-example-modal-sm" data-toggle="tooltip" data-placement="top" title="加入收藏"><i class="material-icons">&#xe87d;</i></button>
+                                </div>
                             </div>
                         </div>  
                     </div>  
@@ -104,6 +107,22 @@
                                         </div>
                                         <div class="open-btn"><i class="material-icons"></i></div>
                                         <ul class="itemopen-list">
+                                            <li><span>內湖復興店</span><i class="fas fa-chevron-right text-right pr-2"></i></li>
+                                            <li><span>金湖廣場</span><i class="fas fa-chevron-right text-right pr-2"></i></li>
+                                            <li><span>內湖復興店</span><i class="fas fa-chevron-right text-right pr-2"></i></li>
+                                            <li><span>金湖廣場</span><i class="fas fa-chevron-right text-right pr-2"></i></li>
+                                            <li><span>內湖復興店</span><i class="fas fa-chevron-right text-right pr-2"></i></li>
+                                            <li><span>金湖廣場</span><i class="fas fa-chevron-right text-right pr-2"></i></li>
+                                            <li><span>內湖復興店</span><i class="fas fa-chevron-right text-right pr-2"></i></li>
+                                            <li><span>金湖廣場</span><i class="fas fa-chevron-right text-right pr-2"></i></li>
+                                            <li><span>內湖復興店</span><i class="fas fa-chevron-right text-right pr-2"></i></li>
+                                            <li><span>金湖廣場</span><i class="fas fa-chevron-right text-right pr-2"></i></li>
+                                            <li><span>內湖復興店</span><i class="fas fa-chevron-right text-right pr-2"></i></li>
+                                            <li><span>金湖廣場</span><i class="fas fa-chevron-right text-right pr-2"></i></li>
+                                            <li><span>內湖復興店</span><i class="fas fa-chevron-right text-right pr-2"></i></li>
+                                            <li><span>金湖廣場</span><i class="fas fa-chevron-right text-right pr-2"></i></li>
+                                            <li><span>內湖復興店</span><i class="fas fa-chevron-right text-right pr-2"></i></li>
+                                            <li><span>金湖廣場</span><i class="fas fa-chevron-right text-right pr-2"></i></li>
                                             <li><span>內湖復興店</span><i class="fas fa-chevron-right text-right pr-2"></i></li>
                                             <li><span>金湖廣場</span><i class="fas fa-chevron-right text-right pr-2"></i></li>
                                         </ul>
@@ -589,6 +608,27 @@
         $('.open-btn').on('click', function(){
             $(this).parent().toggleClass('is-open');
         })
+
+        //scroll top
+        $(document).on( 'scroll', function(){        
+            if ($(window).scrollTop() < 400) {        
+                $('#storeTab').removeClass('fixed-top container');
+            } else {                
+                $('#storeTab').addClass('fixed-top container');
+            }
+        });
+        
+        //copy url
+        $(document).ready(function() {
+            $('[data-trigger="copy"]').on('click', function(e) {
+                var temp = $('<input>'); // 建立input物件            
+                $('body').append(temp); // 將input物件增加到body
+                var url = $(this).data('url'); // 取得要複製的連結
+                temp.val(url).select(); // 將連結加到input物件value
+                document.execCommand('copy'); // 複製
+                temp.remove(); // 移除input物件
+            });
+        });
     </script>
     <script src="../js/index.js"></script>
 </body>

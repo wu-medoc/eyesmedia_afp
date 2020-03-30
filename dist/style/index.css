@@ -2810,6 +2810,10 @@ td.linebt-td,
   width: 100px;
 }
 
+.z-index2 {
+  z-index: 2;
+}
+
 .badge-index {
   color: #fff;
   background-color: #dc3545;
@@ -3391,10 +3395,10 @@ button.open-page img {
 }
 
 /* add favorite */
-.back-go,
-.add-favorite,
-.del-favorite {
-  padding: .5em;
+.add-share {
+  color: rgba(0, 0, 0, 0.5);
+  padding: 0 2px;
+  text-shadow: -1px -1px 0 rgba(255, 255, 255, 0.4), 1px -1px 0 rgba(255, 255, 255, 0.4), -1px 1px 0 rgba(255, 255, 255, 0.4), 1px 1px 0 rgba(255, 255, 255, 0.4);
 }
 
 .back-go button,
@@ -3402,22 +3406,23 @@ button.open-page img {
 .del-favorite button {
   background-color: rgba(0, 0, 0, 0.2);
   border-radius: 100%;
+  border: 0;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   width: 30px;
   height: 30px;
-  border: 0;
 }
 
 .back-go button i,
 .add-favorite button i,
 .del-favorite button i {
   font-size: 1.5m;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   padding-right: 0px;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   color: rgba(255, 255, 255, 0.8);
 }
 
@@ -3431,15 +3436,6 @@ button.open-page img {
 .add-favorite button.active i,
 .del-favorite button.active i {
   font-size: 1.5em;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  position: absolute;
-  top: 11px;
-  right: 25px;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   color: #f4246a;
 }
 

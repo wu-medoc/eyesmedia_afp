@@ -56,6 +56,17 @@
         <!-- Swiper for productbigimg -->        
         <div class="shopping-productsdetail">
             <div class="shopping-productsdetailbox container">
+                <div class="d-flex position-absolute w-100 z-index2">           
+                    <div class="discount-price">
+                        8折
+                    </div>
+                    <div class="ml-auto d-flex d-inline align-items-center h50">
+                        <button class="btn add-share" type="button" data-url="http://localhost:52330/explore/explore_page_03.html" data-trigger="copy" data-toggle="modal" data-target=".share-modal-sm"><i class="material-icons share">&#xe80d;</i></button>
+                        <div class="add-favorite">
+                            <button type="button" class="active" data-toggle="modal" data-target=".bd-example-modal-sm" data-toggle="tooltip" data-placement="top" title="加入收藏"><i class="material-icons">&#xe87d;</i></button>
+                        </div>
+                    </div>
+                </div>
                 <div class="shopping-productsimgbox">
                     <div class="shopping-productsimg swiper-container">
                         <div class="swiper-wrapper">
@@ -72,23 +83,22 @@
                         <!-- Add Pagination -->
                         <div class="swiper-pagination"></div>
                     </div>
-                </div>                
-                <div class="discount-price">
-                    8折
-                </div>
-                <div class="add-favorite">
-                    <button type="button" class="active" data-toggle="modal" data-target=".bd-example-modal-sm" data-toggle="tooltip" data-placement="top" title="加入收藏"><i class="material-icons">&#xe87d;</i></button>
-                </div>
+                </div>     
             </div>
             <div class="linebt-row"></div>
             <div class="products-info p-3">
-                <div class="item shopping-flex">
-                    <div class="item three products-title">
+                <div class="item">
+                    <div class="products-title">
                         Apple iPhone XS 256GB                                
                     </div>
-                    <div class="item one products-price d-block border-left">
-                        <div class="price-original">$37,000</div>
-                        <div class="price-asking">$30,320 <span>/ 組</span></div>
+                </div>
+                <div class="item flex-inline-between">
+                    <div class="products-price">
+                        <span class="price-asking">$30,320 </span>&ensp;
+                        <span class="price-original">$37,000</span>                             
+                    </div>
+                    <div class="text-right">
+                        / 組
                     </div>
                 </div>
                 <div class="item flex-inline-between">
@@ -115,7 +125,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="item shopping-flex">
+                <div class="item shopping-flex onbuy">
                     <div class="item products-btn-addcart pt-0 mr-2">
                         <button type="button" class="btn index-outline-btn w-100">加入購物車</button>                           
                     </div>
@@ -346,13 +356,26 @@
         $(document).on( 'scroll', function(){        
             if ($(window).scrollTop() < 700) {        
                 $('.tag-topbox').removeClass('fixed-top container');
+                $('.onbuy').removeClass('fixed-bottom container shopping-cartfooter py-3 px-3');
                 $('.nav-tabs-box').removeClass('tag-top');
             } else {                
                 $('.tag-topbox').addClass('fixed-top container');
+                $('.onbuy').addClass('fixed-bottom container shopping-cartfooter py-3 px-3');
                 $('.nav-tabs-box').addClass('tag-top'); 
             }
         });
         
+        //copy url
+        $(document).ready(function() {
+            $('[data-trigger="copy"]').on('click', function(e) {
+                var temp = $('<input>'); // 建立input物件            
+                $('body').append(temp); // 將input物件增加到body
+                var url = $(this).data('url'); // 取得要複製的連結
+                temp.val(url).select(); // 將連結加到input物件value
+                document.execCommand('copy'); // 複製
+                temp.remove(); // 移除input物件
+            });
+        });
         $("#loginhtml").load("../login.html");
     </script>
     <script src="../js/index.js"></script>

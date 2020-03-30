@@ -507,6 +507,7 @@ footer{
             text-decoration: line-through;
             text-align: bottom;
             font-size: 0.8em; 
+            height: 1em;
         }
     }
 }
@@ -697,13 +698,6 @@ footer{
             background-color: #eee;
             opacity: 0.7;     
         }
-    }
-    .add-favorite {
-        float: right;
-        position: absolute;
-        right: 1em;
-        top: .5em;
-        z-index: 10;
     }
     .item {
         padding-top: 1em;
@@ -956,20 +950,14 @@ footer{
 /* shopping商店頁 */
 .shopping-storedetail{
     .shopping-storeup { 
+        padding: .5em;
         width: inherit;
         position: absolute;  
         top: 1%;
         z-index: 2;
         display: flex;
-        justify-content: space-around;
+        justify-content: space-between;
         align-items: stretch;
-    }
-    .back-go {
-        flex: 1;
-    } 
-    .add-favorite {
-        flex: 1;
-        text-align: right;
     }
     .shopping-storeimgbox{
         overflow: hidden;
@@ -1253,12 +1241,10 @@ footer{
                         transition: max-height 0.25s ease-out;
                         overflow: hidden;
                         padding-left: 35px;
-
                         li {
                             display: flex;
                             justify-content: space-between;
                             line-height: 2;
-
                             &.this-day {
                                 font-weight: 500;
                             }
@@ -1282,7 +1268,7 @@ footer{
                 &.is-open {
                     max-height: 500px;
                     transition: max-height 0s ease-in;
-
+                    overflow: auto;
                     .open-btn {
                         .material-icons {
                             transform: rotate(180deg);
