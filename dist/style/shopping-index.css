@@ -13,7 +13,7 @@ input[type=number]::-webkit-outer-spin-button {
     position: absolute;
     top: 0;
     margin: 0 auto;
-    padding: 1.1em .5em 1em .5em;
+    padding: .75em;
     z-index: 150;
   }
   .kv-box .kv-top .top-item.input-box {
