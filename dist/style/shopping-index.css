@@ -1029,6 +1029,13 @@ footer a:hover {
   border-top-right-radius: .5em;
 }
 
+.productsformat .custom-gutters .item {
+  -webkit-box-flex: inherit;
+      -ms-flex: inherit;
+          flex: inherit;
+  margin: .15em;
+}
+
 /* shopping商店頁 */
 .shopping-storedetail {
   /*HTML and CSS only multilevel drop down menu*/

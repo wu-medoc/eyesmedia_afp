@@ -3157,7 +3157,7 @@ td.linebt-td,
 .btn-gray {
   border: 1px solid #eee;
   border-radius: .25em;
-  margin: .25em;
+  white-space: inherit;
 }
 
 button.open-page img {
