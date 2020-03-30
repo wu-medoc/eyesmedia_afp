@@ -153,7 +153,7 @@
                     <div class="total-body">
                         <div class="item-group">
                             <div class="item">總共優惠金額</div>
-                            <div class="item price-subtotal" value="0">0 元</div>
+                            <div class="item price-dissubtotal" value="0">0 元</div>
                         </div>
                     </div>
                     <div class="total-footer">
@@ -197,7 +197,7 @@
     <!-- custom js -->
     <script src="../js/animateCss.js"></script>
     <script>    
-    var distotal=parseInt($('.price-subtotal').attr('value'));
+    var distotal=parseInt($('.price-dissubtotal').attr('value'));
     $('.checkedli').on('click', function() { 
         var ckid=$(this).children().find('input').attr('id'); 
         var ckstroe=$(this).children().find('input').attr('class'); 
@@ -211,7 +211,7 @@
             if (($(this).attr("style"))=="display:block")
                 distotal += parseInt($(this).find('.discount-price').attr('value'));
         });
-        sumtotal(distotal); 
+        dissumtotal(distotal); 
     });
     //reset
     $('input[type=reset]').on('click', function() { 
@@ -219,11 +219,11 @@
             $(this)[0].reset();
         });
         $('.total-header>div').attr("style","display:none");
-        sumtotal(0);
+        dissumtotal(0);
     });
     //total display
-    function sumtotal(e){
-        $('.price-subtotal').text('$'+formatPrice(e)+'元');
+    function dissumtotal(e){
+        $('.price-dissubtotal').text('$'+formatPrice(e)+'元');
     }
 
     //Currency formatting

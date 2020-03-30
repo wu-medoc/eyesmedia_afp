@@ -1,7 +1,11 @@
 @import "../dist/style/module/mixin";
 @import '../dist/style/module/variable';
 
-
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
 /* searchbar input */
 @media (max-width: 767px){
     .kv-box .kv-top {
@@ -1543,6 +1547,7 @@ footer{
             .item-middle{
                 flex: 1;
                 margin: 0 10px;
+                text-align: left;
                 p{
                     &:first-child{
                         font-weight: 700;
