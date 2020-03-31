@@ -1,7 +1,8 @@
 @import "../dist/style/module/variable";
 
 .mymember {
-    background: linear-gradient($index-default 30%, #fff 0);
+    //background: linear-gradient($index-default 30%, #fff 0);
+    background: $index-default;
 }
 .title-box{
     button.btn{
@@ -10,7 +11,7 @@
 }
 .member-top-box{
     position: relative;
-    background-color: $index-default;
+    background: $index-default;
     .title-box{
         .material-icons{
             color: $default-white;
@@ -421,6 +422,9 @@ input[type="file"] {
         border-bottom: 1px solid #ccc;
         align-self: center;
         text-align: center;
+        &#myPhone{
+            text-align: left;
+        }
     }
 }
 
