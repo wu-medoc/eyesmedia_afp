@@ -728,10 +728,16 @@
                 <div class="item title-name">手機驗證</div>
                 <div class="item ctrl-btn"></div>
             </div> 
-            <div class="my-phone-list d-flex flex-column justify-content-center">
+            <div class="my-phone-list d-flex flex-column justify-content-center" id="myphone6">
                 <small>驗證碼已發送至 +886 972 XXX XXX</small>
-                <input type="tel" id="myPhone1" placeholder="">    
-                <div class="phonebt"></div> 
+                <form class="d-flex d-inline">
+                    <input type="text" maxlength="1">
+                    <input type="text" maxlength="1">
+                    <input type="text" maxlength="1">
+                    <input type="text" maxlength="1">
+                    <input type="text" maxlength="1">
+                    <input type="text" maxlength="1"> 
+                </form>                   
                 <button class="btn next-btn w-100 mt-3 msg-open" value="msg-phone" data-toggle="modal" data-target="#messageModal">送出</button>
                 <small class="text-left">沒有收到驗證碼？<button type="button" class="btn p-1 small-80 text-blue" onclick="backLayer();">59秒後重新傳送</button></small>
             </div> 
@@ -1987,7 +1993,21 @@
             false
         );
     })();    
-
+    var demo=document.getElementById('myphone6');
+        input=demo.getElementsByTagName('input');
+        var iNow=0;
+        type   = !-[1,] ? 'onpropertychange' : 'oninput',
+                limit  = 1; //滿足自動切換焦點的字元數
+        for(var i=0;i<input.length-1;i++){
+            input[i].index=i;
+            input[i][type]=function () {
+                iNow=this.index;
+                var that=this;
+                setTimeout(function () {
+                   that.value.length>limit-1&&input[iNow+1].focus();
+                },0)
+            }
+        }
     </script>
 
     <script>    

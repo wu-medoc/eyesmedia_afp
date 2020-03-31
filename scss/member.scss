@@ -402,6 +402,7 @@ input[type="file"] {
     .form-control{
         border: 1px solid #fff;
     }
+    //虛線
     .phonebt{
         width: 75%;
         height: 1px;
@@ -411,13 +412,14 @@ input[type="file"] {
         margin: 0 auto;    
     }
     input{  
-        margin-top: 1em;     
+        margin: 1em;     
         width: 75%;     
         border-top: 0;
         border-right: 0;
         border-left: 0;
-        border-bottom: 0;
+        border-bottom: 1px solid #ccc;
         align-self: center;
+        text-align: center;
     }
 }
 
