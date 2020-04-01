@@ -280,164 +280,166 @@
 
         <div class="multilayer">
             <!-- 選擇優惠券 -->
-            <div class="shopping-discount">     
-                <div class="header-secondary linebt-row">
-                    <!-- header top -->
+            <div class="shopping-discount">   
+                <div class="layerscrollmove">                    
                     <div class="header-secondary linebt-row">
-                        <div class="index-flex justify-content-between">
-                            <div class="item one">
-                                <div class="close-btn" onclick="backLayer()">
-                                    <i class="material-icons">&#xE314;</i>
+                        <!-- header top -->
+                        <div class="header-secondary linebt-row">
+                            <div class="index-flex justify-content-between">
+                                <div class="item one">
+                                    <div class="close-btn" onclick="backLayer()">
+                                        <i class="material-icons">&#xE314;</i>
+                                    </div>
+                                </div>
+                                <div class="item three text-center">
+                                    <div class="title-name fs-16">選擇優惠券或輸入折扣碼</div>
+                                </div>
+                                <div class="item one text-right">
+                                    <div class="close-btn"></div>
                                 </div>
                             </div>
-                            <div class="item three text-center">
-                                <div class="title-name fs-16">選擇優惠券或輸入折扣碼</div>
-                            </div>
-                            <div class="item one text-right">
-                                <div class="close-btn"></div>
-                            </div>
                         </div>
+                    </div>   
+                    <div class="input-box">
+                        <input type="text" placeholder="輸入優惠碼">
+                        <button type="button">新增</button>
                     </div>
-                </div>   
-                <div class="input-box">
-                    <input type="text" placeholder="輸入優惠碼">
-                     <button type="button">新增</button>
-                </div>
-                <div class="or-box text-center">
-                    <span>或者</span>
-                </div>
-                <div class="text-center div-switch d-none">
-                    <p class="canuse-discount-txt font-bold">可使用的優惠券
-                    <input type="reset" value="重設" class="float-right btn"></p>
-                    <!-- 可使用的優惠券 -->                
-                    <form id="store1">
+                    <div class="or-box text-center">
+                        <span>或者</span>
+                    </div>
+                    <div class="text-center div-switch d-none">
+                        <p class="canuse-discount-txt font-bold">可使用的優惠券
+                        <input type="reset" value="重設" class="float-right btn"></p>
+                        <!-- 可使用的優惠券 -->                
+                        <form id="store1">
+                            <div class="can-use-discount-list">
+                                <p class="can-use-title"><span>昇恆昌</span> 可選擇<span>二</span>張</p>
+                                <ul>
+                                    <li class="checkedli">
+                                        <div class="item rwdimgbox-80">
+                                            <div style="background-image: url('https://picsum.photos/300/300/?random=1');" class="rwdimg-cover"></div>
+                                        </div>
+                                        <div class="item discount-text item-middle">
+                                            <p>昇恆昌</p>
+                                            <p>9折 折扣券</p>
+                                            <p>2019/11/15 ~ 2019/12/31</p>
+                                        </div>
+                                        <label class="radio-box">
+                                            <div class="item">
+                                                <input type="radio" name="radio" id="discount001" class="store1">
+                                                <span class="checkmark"></span>
+                                            </div>
+                                        </label>
+                                    </li>
+                                    <li class="checkedli">
+                                        <div class="item rwdimgbox-80">
+                                            <div style="background-image: url('https://picsum.photos/300/300/?random=1');" class="rwdimg-cover"></div>
+                                        </div>
+                                        <div class="item discount-text item-middle">
+                                            <p>昇恆昌</p>
+                                            <p>8折 折扣券</p>
+                                            <p>2019/11/15 ~ 2019/12/31</p>
+                                        </div>
+                                        <label class="radio-box">
+                                            <div class="item">
+                                                <input type="radio" name="radio" id="discount002" class="store1">
+                                                <span class="checkmark"></span>
+                                            </div>
+                                        </label>
+                                    </li>
+                                </ul>
+                            </div>
+                        </form>            
+                        <form id="store2">
+                            <div class="can-use-discount-list">
+                                <p class="can-use-title"><span>新光三越</span> 可選擇<span>一</span>張</p>
+                                <ul>
+                                    <li class="checkedli">
+                                        <div class="item rwdimgbox-80">
+                                            <div style="background-image: url('https://picsum.photos/300/300/?random=2');" class="rwdimg-cover"></div>
+                                        </div>
+                                        <div class="item discount-text item-middle">
+                                            <p>新光三越</p>
+                                            <p>9折 折扣券</p>
+                                            <p>2019/11/15 ~ 2019/12/31</p>
+                                        </div>
+                                        <label class="radio-box">
+                                            <div class="item">
+                                                <input type="radio" name="radio2" id="discount003" class="store2">
+                                                <span class="checkmark"></span>
+                                            </div>
+                                        </label>
+                                    </li>
+                                </ul>
+                            </div>
+                        </form>
+                        <!-- 本次結帳無法用的優惠券 -->
+                        <p class="canuse-discount-txt font-bold mt-0">本次結帳無法用的優惠券</p>
                         <div class="can-use-discount-list">
-                            <p class="can-use-title"><span>昇恆昌</span> 可選擇<span>二</span>張</p>
                             <ul>
                                 <li class="checkedli">
                                     <div class="item rwdimgbox-80">
-                                        <div style="background-image: url('https://picsum.photos/300/300/?random=1');" class="rwdimg-cover"></div>
+                                        <div style="background-image: url('https://picsum.photos/300/300/?random=4');" class="rwdimg-cover"></div>
                                     </div>
-                                    <div class="item discount-text item-middle">
+                                    <div class="item item-middle">
                                         <p>昇恆昌</p>
-                                        <p>9折 折扣券</p>
-                                        <p>2019/11/15 ~ 2019/12/31</p>
+                                        <p>滿萬送千 折價券</p>
+                                        <p class="can-use-date">使用期限 2019/11/15 ~ 2019/12/31</p>
                                     </div>
-                                    <label class="radio-box">
-                                        <div class="item">
-                                            <input type="radio" name="radio" id="discount001" class="store1">
-                                            <span class="checkmark"></span>
-                                        </div>
-                                    </label>
-                                </li>
-                                <li class="checkedli">
-                                    <div class="item rwdimgbox-80">
-                                        <div style="background-image: url('https://picsum.photos/300/300/?random=1');" class="rwdimg-cover"></div>
+                                    <div class="item item-see-more">
+                                        <a href="store-info.html">
+                                            去逛逛<i class="material-icons">&#xE315;</i>
+                                        </a>
                                     </div>
-                                    <div class="item discount-text item-middle">
-                                        <p>昇恆昌</p>
-                                        <p>8折 折扣券</p>
-                                        <p>2019/11/15 ~ 2019/12/31</p>
-                                    </div>
-                                    <label class="radio-box">
-                                        <div class="item">
-                                            <input type="radio" name="radio" id="discount002" class="store1">
-                                            <span class="checkmark"></span>
-                                        </div>
-                                    </label>
                                 </li>
                             </ul>
                         </div>
-                    </form>            
-                    <form id="store2">
-                        <div class="can-use-discount-list">
-                            <p class="can-use-title"><span>新光三越</span> 可選擇<span>一</span>張</p>
-                            <ul>
-                                <li class="checkedli">
-                                    <div class="item rwdimgbox-80">
-                                        <div style="background-image: url('https://picsum.photos/300/300/?random=2');" class="rwdimg-cover"></div>
+                        <!-- total price -->
+                        <div class="total-price-box">
+                            <div class="total-header">
+                                <div class="store1 discount001" style="display:none;">
+                                    <div class="item-group small">
+                                        <div class="item"><p class="txt-line-clamp1">昇恆昌 9折 折扣券</p></div>
+                                        <div class="item discount-price" value="88">88 元</div>
                                     </div>
-                                    <div class="item discount-text item-middle">
-                                        <p>新光三越</p>
-                                        <p>9折 折扣券</p>
-                                        <p>2019/11/15 ~ 2019/12/31</p>
+                                </div>
+                                <div class="store1 discount002" style="display:none;">
+                                    <div class="item-group small">
+                                        <div class="item"><p class="txt-line-clamp1">昇恆昌 8折 折扣券</p></div>
+                                        <div class="item discount-price" value="288">288 元</div>
                                     </div>
-                                    <label class="radio-box">
-                                        <div class="item">
-                                            <input type="radio" name="radio2" id="discount003" class="store2">
-                                            <span class="checkmark"></span>
-                                        </div>
-                                    </label>
-                                </li>
-                            </ul>
-                        </div>
-                    </form>
-                    <!-- 本次結帳無法用的優惠券 -->
-                    <p class="canuse-discount-txt font-bold mt-0">本次結帳無法用的優惠券</p>
-                    <div class="can-use-discount-list">
-                        <ul>
-                            <li class="checkedli">
-                                <div class="item rwdimgbox-80">
-                                    <div style="background-image: url('https://picsum.photos/300/300/?random=4');" class="rwdimg-cover"></div>
                                 </div>
-                                <div class="item item-middle">
-                                    <p>昇恆昌</p>
-                                    <p>滿萬送千 折價券</p>
-                                    <p class="can-use-date">使用期限 2019/11/15 ~ 2019/12/31</p>
-                                </div>
-                                <div class="item item-see-more">
-                                    <a href="store-info.html">
-                                        去逛逛<i class="material-icons">&#xE315;</i>
-                                    </a>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                    <!-- total price -->
-                    <div class="total-price-box">
-                        <div class="total-header">
-                            <div class="store1 discount001" style="display:none;">
-                                <div class="item-group small">
-                                    <div class="item"><p class="txt-line-clamp1">昇恆昌 9折 折扣券</p></div>
-                                    <div class="item discount-price" value="88">88 元</div>
+                                <div class="store2 discount003" style="display:none;">
+                                    <div class="item-group small">
+                                        <div class="item"><p class="txt-line-clamp1">新光三越 9折 折扣券</p></div>
+                                        <div class="item discount-price" value="188">188 元</div>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="store1 discount002" style="display:none;">
-                                <div class="item-group small">
-                                    <div class="item"><p class="txt-line-clamp1">昇恆昌 8折 折扣券</p></div>
-                                    <div class="item discount-price" value="288">288 元</div>
+                            <div class="total-body">
+                                <div class="item-group">
+                                    <div class="item">總共優惠金額</div>
+                                    <div class="item price-dissubtotal" value="0">0 元</div>
                                 </div>
                             </div>
-                            <div class="store2 discount003" style="display:none;">
-                                <div class="item-group small">
-                                    <div class="item"><p class="txt-line-clamp1">新光三越 9折 折扣券</p></div>
-                                    <div class="item discount-price" value="188">188 元</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="total-body">
-                            <div class="item-group">
-                                <div class="item">總共優惠金額</div>
-                                <div class="item price-dissubtotal" value="0">0 元</div>
-                            </div>
-                        </div>
-                        <div class="total-footer">
-                            <div class="item-group">
-                                <div class="item">
-                                    <button type="button" class="cancel-btn" onclick="backLayer()">取消</button>
-                                </div>
-                                <div class="item">
-                                    <button type="button" class="submit-btn" onclick="backLayer()">確定</button>
+                            <div class="total-footer">
+                                <div class="item-group">
+                                    <div class="item">
+                                        <button type="button" class="cancel-btn" onclick="backLayer()">取消</button>
+                                    </div>
+                                    <div class="item">
+                                        <button type="button" class="submit-btn" onclick="backLayer()">確定</button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="no-order div-switch d-block">
-                    <img src="../img/shopping/nodiscount.png" alt="">
-                    <p class="">咦？目前還沒有優惠券喔...</p>
-                    <button type="button" class="btn gray-btn mt-2" onclick="div_switch()">顯示優惠券狀態</button>
-                </div>
+                    <div class="no-order div-switch d-block">
+                        <img src="../img/shopping/nodiscount.png" alt="">
+                        <p class="">咦？目前還沒有優惠券喔...</p>
+                        <button type="button" class="btn gray-btn mt-2" onclick="div_switch()">顯示優惠券狀態</button>
+                    </div>
+                </div>  
             </div>
             <!-- 寄送方式 -->
             <div class="shopping-send">
@@ -460,58 +462,99 @@
                     </div>
                 </header>
                 <form action="shopping-order.html" >
-                    <main>        
-                        <div class="is-choose-method">
-                            <div class="item">
-                                <p>宅配通 <span>$100</span></p>
-                                <p>預計到貨日 <span>12月5日～12月9日</span></p>
+                    <ul class="is-choose-ul">   
+                        <li class="is-choose">
+                            <!-- 已選取 -->
+                            <div class="is-choose-method">
+                                <div class="item">
+                                    <p>宅配通 <span>$100</span></p>
+                                    <p>預計到貨日 <span>12月5日～12月9日</span></p>
+                                </div>
+                                <div class="item item-check auto-left">
+                                    <i class="material-icons">&#xE5CA;</i>
+                                </div>
                             </div>
-                            <div class="item item-check auto-left">
-                                <i class="material-icons">&#xE5CA;</i>
+                            <div class="is-choose-body">
+                                <div class="address-list-box">
+                                    <ul>
+                                        <li>
+                                            <div class="item">
+                                                <label class="radio-box">
+                                                    <p>艾斯移動</p>
+                                                    <p class="tel">0227078600</p>
+                                                    <p class="address">106 臺北市大安區敦化南路2段76號5樓</p>
+                                                    <input type="radio" name="radio" checked>
+                                                    <span class="checkmark"></span>
+                                                </label>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="item">
+                                                <label class="radio-box">
+                                                    <p>Jason Yang</p>
+                                                    <p class="tel">0912345678</p>
+                                                    <p class="address">106 台北市大安區敦化南路2段76號5樓</p>
+                                                    <input type="radio" name="radio">
+                                                    <span class="checkmark"></span>
+                                                </label>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="add-address-box text-center" onclick="callLayer('.shopping-address')">
+                                    新增地址<i class="material-icons">&#xE145;</i>
+                                </div>
                             </div>
-                        </div>
-                        <div class="address-list-box">
-                            <ul>
-                                <li>
-                                    <div class="item">
-                                        <label class="radio-box">
-                                            <p>艾斯移動</p>
-                                            <p class="tel">0227078600</p>
-                                            <p class="address">106 臺北市大安區敦化南路2段76號5樓</p>
-                                            <input type="radio" name="radio" checked>
-                                            <span class="checkmark"></span>
-                                        </label>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="item">
-                                        <label class="radio-box">
-                                            <p>Jason Yang</p>
-                                            <p class="tel">0912345678</p>
-                                            <p class="address">106 台北市大安區敦化南路2段76號5樓</p>
-                                            <input type="radio" name="radio">
-                                            <span class="checkmark"></span>
-                                        </label>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="add-address-box text-center" onclick="callLayer('.shopping-address')">
-                            新增地址<i class="material-icons">&#xE145;</i>
-                        </div>
-                        <div class="is-choose-method disabled">
-                            <div class="item">
-                                <p>統一速達 <span>$120</span></p>
-                                <p>預計到貨日 <span>12月5日～12月9日</span></p>
+                        </li>   
+                        <li class="is-choose"> 
+                            <!-- disabled未選取 -->
+                            <div class="is-choose-method disabled">
+                                <div class="item">
+                                    <p>自取 </p>
+                                    <p>到貨後請於7日內憑取貨碼至商店取貨，逾期訂單將自動取消</p>
+                                </div>
+                                <div class="item item-check auto-left">
+                                    <i class="material-icons">&#xE5CA;</i>
+                                </div>
                             </div>
-                            <div class="item item-check auto-left">
-                                <i class="material-icons">&#xE5CA;</i>
+                            <div class="is-choose-body disabled">
+                                <div class="address-list-box">
+                                    <ul>
+                                        <li>
+                                            <div class="item">
+                                                <label class="radio-box">
+                                                    <p>內湖旗艦店</p>
+                                                    <p>營業時間  08:00-21:00</p>
+                                                    <p class="tel">0227078600</p>
+                                                    <p class="address">106 臺北市大安區敦化南路2段76號5樓</p>
+                                                    <input type="radio" name="radio1" checked>
+                                                    <span class="checkmark"></span>
+                                                </label>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="item">
+                                                <label class="radio-box">
+                                                    <p>大安旗艦店</p>
+                                                    <p>營業時間  08:00-21:00</p>
+                                                    <p class="tel">0912345678</p>
+                                                    <p class="address">106 台北市大安區敦化南路2段76號5樓</p>
+                                                    <input type="radio" name="radio1">
+                                                    <span class="checkmark"></span>
+                                                </label>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
-                        </div>
-                    </main>
+
+                        </li> 
+                    </ul>
         
                     <footer class="success-mode container">
-                        <button type="button" class="btn-ok" onclick="backLayer()">確認</button>
+                        <div class="small-80 text-gray text-center w-100 div-switch d-none">＊所選地址不在商店配送範圍，請重新選擇</div>
+                        <button type="button" class="btn-ok div-switch d-block" onclick="div_switch()">確認</button>
+                        <button type="button" class="btn gray-btn div-switch d-none" onclick="div_switch();backLayer();">確認</button>
                     </footer>
                 </form>
             </div>
@@ -1065,9 +1108,9 @@
         })();
 
         //send choose
-        $('.is-choose-method').on('click', function(){
-            $(this).removeClass('disabled');
-            $(this).siblings().addClass('disabled');
+        $('.is-choose').on('click', function(){
+            $(this).find('div').removeClass('disabled');
+            $(this).siblings().find('div').addClass('disabled');
         });
 
         //add address

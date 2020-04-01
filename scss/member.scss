@@ -24,20 +24,28 @@
         max-width: 500px;
         margin: 0 auto;
         padding: 1em;
+        flex:1;
         .info-coin{
             text-align: center;
         }
         .info-item{
-            min-width: 60px;
-            display: flex;
+            overflow:hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
             align-items: center;
             color: $default-white;
             font-size: 16px;
-            &.info-name, &.info-coin{
+            &.info-name{
+                width: auto;
+                @media (max-width: 375px) {
+                    width: 74px;
+                }
                 font-size: 18px;
                 font-weight: 700;
             }
             &.info-coin{
+                font-size: 18px;
+                font-weight: 700;
                 justify-content: center;
             }
         }
@@ -48,6 +56,10 @@
     flex: none;
     width: 75px;
     height: 75px;
+    @media (max-width: 375px) {
+        width: 65px;
+        height: 65px;
+    }
     border-radius: 100%;
     overflow: hidden;
     margin-right: 15px;
@@ -693,11 +705,13 @@ input[type="file"] {
 // myfavorite
 .favorite-explore{
     padding: 15px;  
+    >div{
+        border-bottom: 1px #eee solid;
+    }
     a.d-flex{
         color: $blue-dark;
     }   
     a.item-explore {
-        border-bottom: 1px #eee solid;
         color: $explore-default;
     }
     .img-box {
@@ -952,6 +966,7 @@ input[type="file"] {
     padding: .5em;
     text-align: justify;
     text-justify: auto;
+    position: inherit;
     ul{
         padding: .5em 0 .25em 0;
         font-weight: 700;
@@ -972,10 +987,6 @@ input[type="file"] {
     color: #fff;
     border-radius: 1em;
     background: rgba(255, 255, 255, 0.3);
-}
-img.coinimg-m{
-    width: 1.5em;
-    margin: 4px;
 }
 .item-btn{
     display: flex;

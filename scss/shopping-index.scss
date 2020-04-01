@@ -1579,7 +1579,7 @@ footer{
             }
         }
         .total-footer{
-            padding: 20px 0;
+            //padding: 20px 0;
             .item{
                 flex: 1;
                 margin: 15px;
@@ -1874,6 +1874,15 @@ footer{
 
 
 /* send */
+.is-choose-ul{
+    padding-top: 48px;
+}
+.is-choose-body{
+    display: block;
+    &.disabled{
+        display: none;
+    }
+}
 .is-choose-method{
     padding: 10px 15px;
     border-left: 5px #FD5F00 solid;
@@ -1887,9 +1896,6 @@ footer{
         .item-check{
             display: none;
         }
-    }
-    &:first-child{
-        margin-top: 48px;
     }
     .item{
         p{

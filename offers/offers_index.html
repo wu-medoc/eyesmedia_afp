@@ -30,23 +30,31 @@
     <link rel="stylesheet" href="../dist/style/offers.min.css">
     <link rel="stylesheet" href="../dist/style/animate.min.css">
 
-    <title>艾斯移動 - 我的首頁</title>
+    <title>艾斯移動 - 找優惠</title>
 </head>
 
 <body>    
 <div class="wrap container">
-    <!--我的優惠-->
+    <header>
+        <!-- header top -->
+        <div class="header-secondary">
+            <div class="index-flex justify-content-between">
+                <div class="item two">
+                    <div class="close-btn">
+                         <button type="button" class="btn" onclick="backLayerOne();" data-toggle="tooltip" data-placement="bottom" title="回上一頁">
+                            <i class="material-icons">&#xE314;</i>
+                        </button>
+                    </div>
+                </div>
+                <div class="item three text-center">
+                    <div class="title-name">找優惠</div>
+                </div>
+                <div class="item two">
+                </div>
+            </div>
+        </div>
+    </header>
     <div class="offerslist">
-        <div class="title-box">
-            <div class="item icon-btn">                        
-                <button class="btn px-0" onclick="backLayerOne();" data-toggle="tooltip" data-placement="bottom" title="回上一頁">
-                    <i class="material-icons">&#xE314;</i>
-                </button>
-            </div>
-            <div class="item title-name">找優惠</div>                
-            <div class="item">   
-            </div>
-        </div>        
         <div class="searchbox">
             <button class="btn"><i class="material-icons">&#xE8B6;</i></button>
             <input type="text" placeholder="搜尋" class="border-0">
@@ -909,7 +917,7 @@
                 <img class="active-img" src="../img/index/tabbar/mission_choosen.png" alt="">
                 任務
             </a>
-            <a href="javascript:;" class="bar-item">
+            <a href="../notify/notify_index.html" class="bar-item">
                 <img class="default-img" src="../img/index/tabbar/notification.svg" alt="">
                 <img class="active-img" src="../img/index/tabbar/notification_choosen.svg" alt="">
                 通知

@@ -30,7 +30,7 @@
     <link rel="stylesheet" href="../dist/style/offers.min.css">
     <link rel="stylesheet" href="../dist/style/animate.min.css">
 
-    <title>艾斯移動 - 我的首頁</title>
+    <title>艾斯移動 - 找優惠</title>
 </head>
 
 <body>    
@@ -58,9 +58,13 @@
                     <img src="../img/callcar/sogo.png" alt="">
                 </div>
                 <div class="index-flex p-3">
-                    <div class="item three font-bold text-bluedk">
-                        <h6>高雄捷運股份有限公司</h6>
-                        <h6>捷運一日效期QRCODE票</h6>
+                    <div class="item three text-bluedk">
+                        <h6 class="font-bold">高雄捷運股份有限公司</h6>
+                        <h5 class="font-bold">捷運一日效期QRCODE票</h5>
+                        <div class="flex-inline-between">
+                            <div class="item">近忠孝新生捷運站</div>
+                            <div class="item">距離33km</div>
+                        </div>
                     </div>
                     <div class="item one auto-left">
                         <div class="shopping-store-badge">                        
@@ -71,23 +75,26 @@
                 <div class="ticket-detailrow">
                     <div class="p-3">
                         <p class="font-bold">優惠內容:</p>
-                        <p>捷運一日效期QRCODE票</p>
+                        <p>兌換期間持有SOGO APP 、SOGO LINE、SOGO Facebook、SOGO網、SOGOInstagram、SOGO istore 線上購物、friDay物、veryWed 之兌換憑證及快樂購卡，即可至各館贈獎處兌換。</p>
                     </div>
                 </div>
                 <div class="ticket-detailrow">
-                    <div class="d-flex p-3">
+                    <div class="d-flex p-3" onclick="location.href='../shopping/store-info.html'">
                         <div class="item item-icon">
-                            <i class="material-icons"></i>
+                            <img src="../img/share/store-location.png" class="h24 pr-2">
                         </div>
                         <div class="item">
-                            SOGO復興館12Ｆ、復興館9F、敦化館5Ｆ
+                            內湖旗艦店
+                        </div>
+                        <div class="item auto-left">
+                            <i class="material-icons">&#xE315;</i>
                         </div>
                     </div>
                 </div>
                 <div class="ticket-detailrow">
                     <div class="d-flex p-3">
                         <div class="item item-icon">
-                            <i class="material-icons"></i>
+                            <img src="../img/share/store-time.png" class="h24 pr-2">
                         </div>
                         <div class="item">
                             10/9(三)～11/3(日)
@@ -198,7 +205,7 @@
                 <img class="active-img" src="../img/index/tabbar/mission_choosen.png" alt="">
                 任務
             </a>
-            <a href="javascript:;" class="bar-item">
+            <a href="../notify/notify_index.html" class="bar-item">
                 <img class="default-img" src="../img/index/tabbar/notification.svg" alt="">
                 <img class="active-img" src="../img/index/tabbar/notification_choosen.svg" alt="">
                 通知

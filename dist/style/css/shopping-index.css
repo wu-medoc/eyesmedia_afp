@@ -1763,10 +1763,6 @@ footer a:hover {
   font-weight: 700;
 }
 
-.shopping-discount .total-price-box .total-footer {
-  padding: 20px 0;
-}
-
 .shopping-discount .total-price-box .total-footer .item {
   -webkit-box-flex: 1;
       -ms-flex: 1;
@@ -2136,6 +2132,18 @@ footer a:hover {
 }
 
 /* send */
+.is-choose-ul {
+  padding-top: 48px;
+}
+
+.is-choose-body {
+  display: block;
+}
+
+.is-choose-body.disabled {
+  display: none;
+}
+
 .is-choose-method {
   padding: 10px 15px;
   border-left: 5px #FD5F00 solid;
@@ -2156,10 +2164,6 @@ footer a:hover {
 
 .is-choose-method.disabled .item-check {
   display: none;
-}
-
-.is-choose-method:first-child {
-  margin-top: 48px;
 }
 
 .is-choose-method .item p:last-child {

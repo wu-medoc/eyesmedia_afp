@@ -1,0 +1,11 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "../../scss/notify.scss",
+        "module/_mixin.scss",
+        "module/_variable.scss"
+    ],
+    "names": [],
+    "file": "notify.min.css"
+}

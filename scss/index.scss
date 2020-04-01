@@ -90,7 +90,7 @@ body.is-open-country .country-box {
 }
 .shoppingkv-mt{
   overflow: hidden;
-  padding-top: 67px;
+  padding-top: 65px;
   @media (min-width: 768px) {
     padding-top: 85px;
   }
@@ -98,7 +98,8 @@ body.is-open-country .country-box {
 .kvbn-img {
   max-width: 100%;
   width: 100%;
-  padding-bottom:43%;
+  padding-bottom:39%;
+  min-height: 135px;
   height: auto;
   display:block;
   overflow:hidden;
@@ -113,7 +114,7 @@ body.is-open-country .country-box {
   max-height: 78px;
   position: absolute;
   top:40px;
-  right: 1.5em;
+  right: 1em;
   width: 66%;
   display: flex;
 }
@@ -767,15 +768,13 @@ body.is-open-country .country-box {
     display: -ms-flexbox;
     display: flex;
     flex-wrap: wrap;
+    justify-content: flex-start;
     padding: 7px;
     img {
       width: 30px;
     }  
     .title-item {
-      margin-right: 10px;
-      &:last-child {
-        margin-right: 0;
-      }
+      padding: 1px 8px;
       .material-icons {
         color: #8E8E93;
         vertical-align: text-top;
@@ -790,10 +789,11 @@ body.is-open-country .country-box {
     color: #fff;
     font-size: 13px;
     padding: 3px 5px;
-    -ms-flex-item-align: center;
-        -ms-grid-row-align: center;
-        align-self: center;
+    -ms-flex-item-align: flex-end;
+    -ms-grid-row-align: flex-end;
+    align-self: flex-end;
     white-space: nowrap;
+    margin-bottom: 7px;
   }
   .main-link {
     display: none;
@@ -3897,7 +3897,7 @@ img.nearbyimg{
 }
 .multilayer{
   width:100%;
-  position:absolute;
+  position: fixed;
   top:0;
   display:none;
   z-index:1040;
@@ -3929,7 +3929,7 @@ img.nearbyimg{
 .sortlayer,
 .uplayer{
   width:100%;
-  position:absolute;
+  position: fixed;
   top:0;
   display:none;
   z-index:1041;
@@ -3948,6 +3948,12 @@ img.nearbyimg{
   border-top-left-radius: .5em;
   border-top-right-radius: .5em;
   bottom: 0;
+}
+.layerscrollmove{
+  position: absolute; 
+  width:100% ;
+  height: 100vh;
+  background-color:#fff;
 }
 .telcodelist{
   display: none;
