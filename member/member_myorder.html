@@ -46,27 +46,30 @@
             </div>
         </div>      
         <div class="afp-tab-box">
-            <div class="afp-tab mb-5">
-                <div class="nav-tabs-box mt-3">
+            <div class="afp-tab mb-5">          
+                <div class="nav-tabs-box tablist-swiper swiper-container">
                     <!-- Nav tabs -->                                
-                    <ul class="nav-tab-list nav nav-tabs nav-line mb-2 d-flex justify-content-around" role="tablist">
-                        <li role="presentation" class="active">
-                            <a href="#order-tab-1" class="tablist-link active" aria-controls="order-tab-1" role="tab" data-toggle="tab" aria-selected="true">待付款</a>
-                        </li>
-                        <li role="presentation">
-                            <a href="#order-tab-2" class="tablist-link" aria-controls="order-tab-2" role="tab" data-toggle="tab" aria-selected="false">處理中</a>
-                        </li>
-                        <li role="presentation">
-                            <a href="#order-tab-3" class="tablist-link" aria-controls="order-tab-3" role="tab" data-toggle="tab" aria-selected="false">待收貨</a>
-                        </li>
-                        <li role="presentation">
-                            <a href="#order-tab-4" class="tablist-link" aria-controls="order-tab-4" role="tab" data-toggle="tab" aria-selected="false">已完成</a>
-                        </li>
-                    </ul>  
-                    <div class="tab-line w-100"></div>   
+                    <ul id="nav-tab-member" class="swiper-wrapper nav nav-tabs nav-line mb-2" role="tablist">
+                            <li role="presentation" class="active swiper-slide">
+                                <a href="#order-tab-1" class="tablist-link active" aria-controls="order-tab-1" role="tab" data-toggle="tab" aria-selected="true">待付款</a>
+                            </li>
+                            <li role="presentation" class="swiper-slide">
+                                <a href="#order-tab-2" class="tablist-link" aria-controls="order-tab-2" role="tab" data-toggle="tab" aria-selected="false">處理中</a>
+                            </li>
+                            <li role="presentation" class="swiper-slide">
+                                <a href="#order-tab-3" class="tablist-link" aria-controls="order-tab-3" role="tab" data-toggle="tab" aria-selected="false">待收貨</a>
+                            </li>
+                            <li role="presentation" class="swiper-slide">
+                                <a href="#order-tab-4" class="tablist-link" aria-controls="order-tab-4" role="tab" data-toggle="tab" aria-selected="false">已完成</a>
+                            </li>
+                            <li role="presentation" class="swiper-slide">
+                                <a href="#order-tab-5" class="tablist-link" aria-controls="order-tab-5" role="tab" data-toggle="tab" aria-selected="false">退換貨</a>
+                            </li>  
+                    </ul>     
+                    <div class="tab-line w-100"></div>
                 </div>
                 <!-- Tab panes -->
-                <div class="tab-content">
+                <div class="tab-content mb-5">
                     <!-- 待付款 -->
                     <div role="tabpanel" class="tab-pane active" id="order-tab-1">
                         <!-- 有訂單時顯示 -->

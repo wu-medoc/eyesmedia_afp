@@ -141,7 +141,7 @@ if ($( ".tablist-swiper" ).hasClass("swiper-container")) {
             spaceBetween: 15
             },
             640: {
-            slidesPerView: 6,
+            slidesPerView: 5,
             spaceBetween: 20
             }
         }
@@ -358,7 +358,7 @@ $(document).ready(function(){
 
 
     //footer.pc 
-    //(($('.wrap').height()+50) < ($(window).height())) ? ($('footer.for-pc').css('position','absolute')):($('footer.for-pc').css('position','relative'));
+    (($('.wrap').height()+50) < ($(window).height())) ? ($('footer.for-pc').css('position','absolute')):($('footer.for-pc').css('position','relative'));
 });
 
 

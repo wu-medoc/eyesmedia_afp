@@ -2098,6 +2098,16 @@ footer a:hover {
   border: 0;
 }
 
+.order-box .order-method-box li .item-right {
+  text-align: right;
+  font-weight: 700;
+  font-size: .9em;
+}
+
+.order-box .order-method-box li .item-right span {
+  color: #0091FF;
+}
+
 .order-box .total-price-box {
   padding: 10px 0;
 }

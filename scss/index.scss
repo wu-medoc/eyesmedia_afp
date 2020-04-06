@@ -918,7 +918,7 @@ body.is-open-country .country-box {
 
 /* afp-tab-box */
 .afp-tab-box {
-  #nav-tab-coupon, 
+  #nav-tab-member, 
   #nav-tab-featured {
     display: inline-table;
     overflow: visible;
@@ -2566,6 +2566,18 @@ td.linebt-td,
 }
 .w100{
   width: 100px;
+}
+.w-90{
+  width: 90%;
+}
+.w-95{
+  width: 95%;
+}
+.w-5{
+  width: 5%;
+}
+.w-10{
+  width: 10%;
 }
 .z-index2{
   z-index: 2;

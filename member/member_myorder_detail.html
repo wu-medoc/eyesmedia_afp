@@ -58,13 +58,13 @@
             <div class="item"><i class="material-icons">&#xE85D;</i></div>
             <div class="item">                
                 <p class="completed">訂單已完成</p>
-                <p class="completed">已在 2020/01/13 確認取貨！</p>
+                <p class="completed small-80">已在 2020/01/13 確認取貨！</p>
                 <p class="processing">處理中</p>
-                <p class="processing">店家正在處理您的訂單，請耐心等候</p>
+                <p class="processing small-80">店家正在處理您的訂單，請耐心等候</p>
                 <p class="send">待收貨</p>
-                <p class="send">店家已在 <span>2020/01/13</span> 出貨囉！</p>
+                <p class="send small-80">店家已在 <span>2020/01/13</span> 出貨囉！</p>
                 <p class="pick">待收貨</p>
-                <p class="pick">商品已到店，請於 <span>2020/4/1</span> 前完成取貨</p>
+                <p class="pick small-80">商品已到店，請於 <span>2020/4/1</span> 前完成取貨</p>
             </div>
         </div>
         <div class="order-info">
@@ -110,13 +110,9 @@
             <div class="order-method-box">
                 <ul class="method-list">
                     <li class="index-flex">
-                        <div class="item three"><i class="material-icons reverse">&#xE54E;</i>使用優惠券、折扣碼</div>
-                        <div class="item one discount-price text-right">-$188</div>
-                    </li>
-                    <li class="index-flex">
                         <div class="item"><i class="material-icons">&#xE558;</i>寄送方式</div>
-                        <div class="item delivery-txt text-right delivery-price pick">憑取貨碼至商店取貨</div>
-                        <div class="item delivery-txt text-right delivery-price send completed">宅配通 $100</div>
+                        <div class="item item-right pick">憑取貨碼至商店取貨</div>
+                        <div class="item item-right send completed">宅配通 $100</div>
                         <div class="item-group send completed">
                             <div class="item small">106 台北市大安區敦化南路2段76號5樓</div>
                             <div class="item item-date">預計到貨日期 12月5日～12月9日</div>
@@ -124,7 +120,7 @@
                     </li>
                     <li class="index-flex">
                         <div class="item one">留言</div>
-                        <div class="item three text-right">
+                        <div class="item three item-right">
                             請幫我在三天後再寄出，謝謝
                         </div>
                     </li>
@@ -140,7 +136,15 @@
                 <ul class="method-list">
                     <li class="index-flex">
                         <div class="item one d-flex d-inline"><i class="material-icons">&#xE263;</i>付款方式</div>
-                        <div class="item two text-right invoice-txt">信用卡/VISA金融卡 *9405</div>
+                        <div class="item two item-right">信用卡/VISA金融卡 *9405</div>
+                    </li>
+                    <li class="index-flex">
+                        <div class="item one d-flex d-inline"><div class="invo-box"><i class="material-icons">&#xE8B0;</i></div>電子發票</div>
+                        <div class="item two item-right">ZP49652322</div>
+                    </li>
+                    <li class="index-flex">
+                        <div class="item one d-flex d-inline"><i class="material-icons reverse">&#xE54E;</i>使用優惠券、折扣碼</div>
+                        <div class="item two item-right">-$188</div>
                     </li>
                 </ul>
             </div>
@@ -167,17 +171,27 @@
                         <div class="item ont text-right sub-discount">-$88 </div>
                     </li>
                     <li class="total-pay index-flex">
-                        <div class="item">付款總金額</div>
+                        <div class="item">訂單金額</div>
                         <div class="item text-right order-sumtotal">$1,772</div>
                     </li>
                 </ul>
             </div>
+            <!-- 訂單處理中 -->
             <div class="border-t5 w-100"></div>
-            <div class="flex-inline-between pb-3 px-3 send pick processing">
+            <div class="flex-inline-between align-items-end pb-3 px-3 send pick processing">
                 <div class="item w-100 p-2"><button type="button" class="btn bluedk-outline-btn w-100">聯絡店家</button></div>
                 <div class="item w-100 p-2"><button type="button" class="btn bluedk-outline-btn w-100" onclick="location.href='../shopping/store-info.html'">去逛賣場</button></div>
             </div>
-            <div class="flex-inline-between pb-3 px-3 completed">
+            <!-- 訂單完成 | 鑑賞期已過 -->
+            <div class="flex-inline-between align-items-end pb-3 px-3 completed">
+                <div class="item w-100 p-2">
+                    <p class="small-expired">鑑賞期已過</p>
+                    <button type="button" class="btn bluedk-outline-btn unable w-100" onclick="location.href='member_returns.html'">退換貨</button>
+                </div>
+                <div class="item w-100 p-2"><button type="button" class="btn bluedk-outline-btn w-100">聯絡店家</button></div>
+            </div>
+            <!-- 訂單完成 | 鑑賞期內 -->
+            <div class="flex-inline-between align-items-end pb-3 px-3 completed">
                 <div class="item w-100 p-2"><button type="button" class="btn bluedk-outline-btn w-100" onclick="location.href='member_returns.html'">退換貨</button></div>
                 <div class="item w-100 p-2"><button type="button" class="btn bluedk-outline-btn w-100">聯絡店家</button></div>
             </div>
@@ -214,7 +228,8 @@
     <footer class="shopping-cartfooter container fixed-bottom">
         <ul>
             <li>
-                <p>此筆訂單可賺取<span>137</span>魔幣</p>
+                <p class="send">此筆訂單可賺取<span>137</span>魔幣</p>
+                <p class="pick text-center">此筆訂單可賺取<span>137</span>魔幣</p>
             </li>
             <li>
                 <div class="item send">
@@ -222,7 +237,7 @@
                 </div>
                 <div class="item send">
                     <button type="button" class="btn index-btn w-100 msg-open" value="msg-receipt" data-toggle="modal" data-target="#messageModal">確認收貨</button>
-                </div>
+                </div>   
                 <div class="item pick">
                     <button type="button" class="btn index-btn w-100" onclick="callLayer('.useoffers')">開啟取貨碼</button>
                 </div>

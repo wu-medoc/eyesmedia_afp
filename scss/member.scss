@@ -1126,7 +1126,11 @@ input[type="file"] {
         color: tomato;
     }
 }
-
+.small-expired{
+    color: $gray-color;
+    font-size: xx-small;
+    text-align: center;
+}
 .order-info{
     li{
         display: flex;
