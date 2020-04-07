@@ -917,6 +917,12 @@ body.is-open-country .country-box {
 }
 
 /* afp-tab-box */
+.explore-block{
+  h6 {
+    font-weight: bold;
+    padding: 1em 1em .25em 1em;
+  }
+}
 .afp-tab-box {
   #nav-tab-member, 
   #nav-tab-featured {
@@ -1133,7 +1139,7 @@ body.is-open-country .country-box {
         }
       }
     }
-  }
+  }  
 }
 
 
@@ -4000,4 +4006,94 @@ img.nearbyimg{
 @keyframes moveUp {
 	0% { }
 	100% { -webkit-transform: translateY(0); transform: translateY(0); opacity: 1; }
+}
+
+/* shopping products */
+.onsale-list{  
+  h6 {
+    font-weight: bold;
+    padding: 2em 0 .25em 0;
+  }
+}
+// .tab-content1{
+//   position: relative;
+//   width: 100%;
+//   height: 350px;
+//   background: #fff;
+//   overflow: hidden;
+//   @media (max-width: 767px) {
+//     height: 300px;
+//   }
+//   @media (max-width: 480px) {
+//     height: 280px;
+//   }
+//   @media (min-width: 768px) and (max-width: 979px) {
+//     height: 350px;
+//   }
+//   @media (min-width: 980px) {
+//     height: 400px;
+//   }
+//   @media (min-width: 1200px) {
+//     height: 450px;
+//   }
+// }
+
+// .tab-content1{
+//   position: relative;
+//   >.tab-pane {
+//     position: absolute;
+//     display: block;
+//     background: #fff;
+//     top: 0;
+//     left: 0;
+//     z-index: 1;
+//     &.active{
+//       z-index: 2;
+//     }
+//   }
+// }
+.onsale-products {
+  overflow: hidden;
+  padding: 1em .2em;
+  width: auto;
+  .products-item{
+    display: block;
+  }
+  .products-img .img-box{
+      border-radius: .5em;
+      border: 1px solid $gray-light;
+      resize: none;
+      .rwdimg{
+          border-radius: .5em;
+      }
+  }
+  .products-title {
+      color: $blue-dark;
+      font-weight: bold;
+      padding: 0 0.5em;
+      height: 48px;
+  }
+  .products-price {
+      padding: 0 0.5em;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      flex-direction: column;
+      //-webkit-box-pack: justify;
+      //-ms-flex-pack: justify;
+      //justify-content: space-between;
+      //align-items: center;
+      .price-asking {
+          color: tomato;
+          font-weight: bold;
+          font-size: 1.1em;
+      }
+      .price-original {
+          color: gray;
+          text-decoration: line-through;
+          text-align: bottom;
+          font-size: 0.8em; 
+          height: 1em;
+      }
+  }
 }

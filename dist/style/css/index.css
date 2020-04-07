@@ -1007,6 +1007,11 @@ body.is-open-country .country-box {
 }
 
 /* afp-tab-box */
+.explore-block h6 {
+  font-weight: bold;
+  padding: 1em 1em .25em 1em;
+}
+
 .afp-tab-box #nav-tab-member,
 .afp-tab-box #nav-tab-featured {
   display: inline-table;
@@ -4188,5 +4193,63 @@ img.nearbyimg {
     transform: translateY(0);
     opacity: 1;
   }
+}
+
+/* shopping products */
+.onsale-list h6 {
+  font-weight: bold;
+  padding: 2em 0 .25em 0;
+}
+
+.onsale-products {
+  overflow: hidden;
+  padding: 1em .2em;
+  width: auto;
+}
+
+.onsale-products .products-item {
+  display: block;
+}
+
+.onsale-products .products-img .img-box {
+  border-radius: .5em;
+  border: 1px solid #eee;
+  resize: none;
+}
+
+.onsale-products .products-img .img-box .rwdimg {
+  border-radius: .5em;
+}
+
+.onsale-products .products-title {
+  color: #182B56;
+  font-weight: bold;
+  padding: 0 0.5em;
+  height: 48px;
+}
+
+.onsale-products .products-price {
+  padding: 0 0.5em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.onsale-products .products-price .price-asking {
+  color: tomato;
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+.onsale-products .products-price .price-original {
+  color: gray;
+  text-decoration: line-through;
+  text-align: bottom;
+  font-size: 0.8em;
+  height: 1em;
 }
 /*# sourceMappingURL=index.css.map */

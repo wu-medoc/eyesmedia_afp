@@ -259,18 +259,40 @@ var swiper = new Swiper('.shopping-ad.swiper-container', {
   });
 }
 if ($( ".shopping-products" ).hasClass("swiper-container")) {
-var swiper = new Swiper('.shopping-products.swiper-container', {
-    slidesPerView: 2.5,
-    spaceBetween: 10,
-    breakpoints: {
-      480: {
-        slidesPerView: 3,
-        spaceBetween: 20,
-      },
-    },
-    loop: true
+    var swiper = new Swiper('.shopping-products.swiper-container', {
+        slidesPerView: 2.5,
+        spaceBetween: 10,
+        breakpoints: {
+            320: {
+            slidesPerView: 2.5,
+            spaceBetween: 10
+            },
+            480: { 
+            slidesPerView: 2.5,
+            spaceBetween: 15
+            },
+            640: {
+            slidesPerView: 3,
+            spaceBetween: 20
+            }
+        },
+        loop: true
     });
 }
+if ($( ".onsale-products" ).hasClass("swiper-container")) {    
+    var onsaleswiper = new Swiper('.onsale-products.swiper-container', {
+        observer:true,
+        observeParents:true,
+        slidesPerView: 3,
+        spaceBetween: 10,
+        loop: true,
+        //updateOnWindowResize: false,
+        preloadImages: true,
+        updateOnImagesReady : true,
+    });
+}
+
+
 if ($( ".shopping-productsimg" ).hasClass("swiper-container")) {
 var swiper = new Swiper('.shopping-productsimg.swiper-container', {
     pagination: {

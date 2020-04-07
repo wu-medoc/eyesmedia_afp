@@ -116,7 +116,7 @@
   overflow: hidden;
   h6 {
     font-weight: bold;
-    padding: .25em 0;
+    padding: 1em 0 .25em 0;
   }
   overflow-x: auto;
   overflow-y: hidden;
@@ -140,8 +140,7 @@
   position: absolute;
 }
 
-.travel-featuredbox
-{
+.travel-featuredbox{
   .item-body {
     border-top-left-radius: .5em;
     border-top-right-radius: .5em;
