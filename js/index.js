@@ -424,11 +424,11 @@ function openMask(e) {
 // overlay-choice open close control
 $('.open-overlay-choice').on("click", function () {
     $('.overlay-choice').toggle();
-    $('body').append("<div class='modal-backdrop container'></div>");
+    $('.modal-backdrop').removeClass('d-none');
 });
 $('.close-overlay-choice').on("click", function () {
     $('.overlay-choice').toggle();
-    $('.modal-backdrop').remove();
+    $('.modal-backdrop').addClass('d-none');
 });
 
 // black mask modal massage use

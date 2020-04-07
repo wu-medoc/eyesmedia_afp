@@ -901,7 +901,7 @@ footer a:hover {
 }
 
 .shopping-productsdetail .products-tag .tag-topbox {
-  padding: 0 1em;
+  padding: 0.5em 1em;
 }
 
 .shopping-productsdetail .products-tag .tag-topbox .tag-top {
@@ -2108,6 +2108,13 @@ footer a:hover {
   color: #0091FF;
 }
 
+.order-box .order-method-box .note-boxbg {
+  background-color: #f8f8f8;
+  color: gray;
+  padding: 1em;
+  font-size: .9em;
+}
+
 .order-box .total-price-box {
   padding: 10px 0;
 }
@@ -2135,6 +2142,15 @@ footer a:hover {
 
 .order-box .total-price-box li.total-pay .item:last-child {
   color: tomato;
+}
+
+.order-box .total-price-box li.total-way {
+  font-size: 1em;
+  font-weight: 700;
+}
+
+.order-box .total-price-box li.total-way:last-child {
+  font-size: .9em;
 }
 
 .order-box .total-price-box li .item:last-child {

@@ -310,29 +310,6 @@
         margin-top: 5px;
         color: $blue-dark;
     }
-    .upload-box{
-        position: relative;
-        .add-btn, .change-btn{
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-        }
-        .change-btn{
-            width: 60px;
-            height: 60px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: $default-white;
-            background-color: $member-default;
-            border-radius: 100%;
-            box-shadow: 0 0 10px rgba(0,0,0,.5);
-        }
-        .add-btnbg {
-            width: 130px;
-        }
-    }
     .passport-status{
         margin-top: -6px;
         color: $gray-color;
@@ -342,7 +319,53 @@
         }
     }
 }
-
+.upload-dot{
+    border: 2px;
+    border-color: $index-default; 
+    border-style:dashed;
+    border-radius: 5px;
+    width: 100px;
+    height: 100px;
+    color: $index-default;
+    .add-txt{
+        position: absolute;
+        top: 65%;
+        left: 50%;
+        transform: translate(-50%, 0);    
+        white-space: nowrap;
+    }
+    .add-btn img{
+        width: 40px;
+    }
+}
+.uploadimg{
+    height: 100px;
+    border-radius: 5px;
+    border: 1px solid #eee;
+}
+.upload-box{
+    position: relative;
+    .add-btn, .change-btn{
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .change-btn{
+        width: 60px;
+        height: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: $default-white;
+        background-color: $member-default;
+        border-radius: 100%;
+        box-shadow: 0 0 10px rgba(0,0,0,.5);
+    }
+    .add-btnbg {
+        width: 130px;
+    }
+}
 // 上傳護照提示
 .upload-passport-noti{
     height: calc(100vh - 54px);
@@ -357,7 +380,9 @@
     }
 }
 input[type="file"] {
-    position: absolute;
+    visibility: hidden;
+    position: fixed;
+    line-height: 0;
     width: 1px;
     height: 1px;
     padding: 0;
@@ -1113,7 +1138,7 @@ input[type="file"] {
 }
 
 .order-status{
-    padding: 4em 15px 15px 15px;
+    padding: 5em 15px 15px 15px;
     background-color: $blue-dark;
     color: $default-white;
     overflow: hidden;
@@ -1127,9 +1152,12 @@ input[type="file"] {
     }
 }
 .small-expired{
-    color: $gray-color;
+    color: $blue-dark;
     font-size: xx-small;
     text-align: center;
+    &.unable{
+        color: $gray-color;
+    }
 }
 .order-info{
     li{
@@ -1161,5 +1189,25 @@ input[type="file"] {
         padding: 5px 15px;
         background-color: #F6F6E9;
         color: #818181;
+    }
+}
+
+.return-box{
+    .reason-list{
+        color: $blue-dark;
+        li{
+            border-bottom: 1px solid #eee;
+            padding: .5em 1em;
+            &:first-child{
+                border-top: 1px solid #eee;
+            }
+            &.active{
+                color: $index-default;
+                &::after{
+                    content:"✔";
+                    float: right;
+                }
+            }
+        }
     }
 }

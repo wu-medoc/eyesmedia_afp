@@ -821,7 +821,7 @@ footer{
         background-color: #eee;
         padding: 0.5em 0 0 0;
         .tag-topbox {    
-            padding: 0 1em;
+            padding: 0.5em 1em;
             .tag-top {    
                 background-color: #fff;            
                 padding: 0 1em;
@@ -1852,6 +1852,12 @@ footer{
                 }
             }
         }
+        .note-boxbg{
+            background-color:#f8f8f8;
+            color: gray;
+            padding: 1em;
+            font-size: .9em;
+        }
     }
     .total-price-box{
         padding: 10px 0;
@@ -1871,6 +1877,13 @@ footer{
                     &:last-child{
                         color: tomato;
                     }
+                }
+            }
+            &.total-way{                
+                font-size: 1em;
+                font-weight: 700;
+                &:last-child{        
+                    font-size: .9em;
                 }
             }
             .item:last-child{

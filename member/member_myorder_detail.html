@@ -65,6 +65,8 @@
                 <p class="send small-80">店家已在 <span>2020/01/13</span> 出貨囉！</p>
                 <p class="pick">待收貨</p>
                 <p class="pick small-80">商品已到店，請於 <span>2020/4/1</span> 前完成取貨</p>
+                <p class="returned">已完成</p>
+                <p class="returned small-80">訂單已完成，再去賣場逛逛吧！</p>
             </div>
         </div>
         <div class="order-info">
@@ -113,7 +115,7 @@
                         <div class="item"><i class="material-icons">&#xE558;</i>寄送方式</div>
                         <div class="item item-right pick">憑取貨碼至商店取貨</div>
                         <div class="item item-right send completed">宅配通 $100</div>
-                        <div class="item-group send completed">
+                        <div class="item-group send completed returned">
                             <div class="item small">106 台北市大安區敦化南路2段76號5樓</div>
                             <div class="item item-date">預計到貨日期 12月5日～12月9日</div>
                         </div>
@@ -143,8 +145,8 @@
                         <div class="item two item-right">ZP49652322</div>
                     </li>
                     <li class="index-flex">
-                        <div class="item one d-flex d-inline"><i class="material-icons reverse">&#xE54E;</i>使用優惠券、折扣碼</div>
-                        <div class="item two item-right">-$188</div>
+                        <div class="item two d-flex d-inline"><i class="material-icons reverse">&#xE54E;</i>使用優惠券、折扣碼</div>
+                        <div class="item one item-right">-$188</div>
                     </li>
                 </ul>
             </div>
@@ -185,7 +187,7 @@
             <!-- 訂單完成 | 鑑賞期已過 -->
             <div class="flex-inline-between align-items-end pb-3 px-3 completed">
                 <div class="item w-100 p-2">
-                    <p class="small-expired">鑑賞期已過</p>
+                    <p class="small-expired unable">鑑賞期已過</p>
                     <button type="button" class="btn bluedk-outline-btn unable w-100" onclick="location.href='member_returns.html'">退換貨</button>
                 </div>
                 <div class="item w-100 p-2"><button type="button" class="btn bluedk-outline-btn w-100">聯絡店家</button></div>
@@ -193,6 +195,14 @@
             <!-- 訂單完成 | 鑑賞期內 -->
             <div class="flex-inline-between align-items-end pb-3 px-3 completed">
                 <div class="item w-100 p-2"><button type="button" class="btn bluedk-outline-btn w-100" onclick="location.href='member_returns.html'">退換貨</button></div>
+                <div class="item w-100 p-2"><button type="button" class="btn bluedk-outline-btn w-100">聯絡店家</button></div>
+            </div>
+            <!-- 訂單完成 | 申請退換貨 -->
+            <div class="flex-inline-between align-items-end pb-3 px-3 returned">
+                <div class="item w-100 p-2">
+                    <p class="small-expired">已申請退換貨</p>
+                    <button type="button" class="btn bluedk-outline-btn w-100" onclick="location.href='member_returns_detail.html'">退換貨詳情</button>
+                </div>
                 <div class="item w-100 p-2"><button type="button" class="btn bluedk-outline-btn w-100">聯絡店家</button></div>
             </div>
         </div>   
@@ -285,6 +295,11 @@
             case 3:
                 // completed已完成
                 $('.completed').show();
+                $('footer').hide();
+                break;
+            case 4:
+                // returned退換貨
+                $('.returned').show();
                 $('footer').hide();
                 break;
             default:
