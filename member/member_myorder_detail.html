@@ -178,8 +178,8 @@
                     </li>
                 </ul>
             </div>
-            <!-- 訂單處理中 -->
             <div class="border-t5 w-100"></div>
+            <!-- 訂單處理中 -->
             <div class="flex-inline-between align-items-end pb-3 px-3 send pick processing">
                 <div class="item w-100 p-2"><button type="button" class="btn bluedk-outline-btn w-100">聯絡店家</button></div>
                 <div class="item w-100 p-2"><button type="button" class="btn bluedk-outline-btn w-100" onclick="location.href='../shopping/store-info.html'">去逛賣場</button></div>
@@ -279,7 +279,7 @@
         //parameterN==1自取,其餘寄送
         var parameterN ="";
         parameterN = parseInt($(location).attr("href").split("#")[1]);
-        $('.send, .pick, .processing, .completed').hide();
+        $('.send, .pick, .processing, .completed, .returned').hide();
         //(parameterN==1) ? $('.pick').show() :  $('.send').show();
         switch(parameterN) {
             case 1:
