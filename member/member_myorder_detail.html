@@ -56,17 +56,9 @@
         </header>
         <div class="order-status">
             <div class="item"><i class="material-icons">&#xE85D;</i></div>
-            <div class="item">                
-                <p class="completed">訂單已完成</p>
-                <p class="completed small-80">已在 2020/01/13 確認取貨！</p>
-                <p class="processing">處理中</p>
-                <p class="processing small-80">店家正在處理您的訂單，請耐心等候</p>
-                <p class="send">待收貨</p>
-                <p class="send small-80">店家已在 <span>2020/01/13</span> 出貨囉！</p>
-                <p class="pick">待收貨</p>
-                <p class="pick small-80">商品已到店，請於 <span>2020/4/1</span> 前完成取貨</p>
-                <p class="returned">已完成</p>
-                <p class="returned small-80">訂單已完成，再去賣場逛逛吧！</p>
+            <div class="item">      
+                <p class="status1">處理中</p>
+                <p class="status2 small-80">店家正在處理您的訂單，請耐心等候</p>
             </div>
         </div>
         <div class="order-info">
@@ -179,8 +171,17 @@
                 </ul>
             </div>
             <div class="border-t5 w-100"></div>
-            <!-- 訂單處理中 -->
-            <div class="flex-inline-between align-items-end pb-3 px-3 send pick processing">
+            <div class="order-method-box">
+                <ul class="method-list">
+                    <li class="flex-inline-between">
+                        <div class="item font-bold"><img src="../img/share/mobiicoin_red.png" alt="" class="coinimg-m m-0">可賺到的Mobii Point <span class="small-expired">(猶豫期後入帳)</span></div>
+                        <div class="item item-right mobii">3枚</div>
+                    </li>
+                </ul>
+            </div>
+            <div class="border-t5 w-100"></div>
+            <!-- 自取 | 訂單處理中 -->
+            <div class="flex-inline-between align-items-end pb-3 px-3 processing">
                 <div class="item w-100 p-2"><button type="button" class="btn bluedk-outline-btn w-100">聯絡店家</button></div>
                 <div class="item w-100 p-2"><button type="button" class="btn bluedk-outline-btn w-100" onclick="location.href='../shopping/store-info.html'">去逛賣場</button></div>
             </div>
@@ -188,12 +189,12 @@
             <div class="flex-inline-between align-items-end pb-3 px-3 completed">
                 <div class="item w-100 p-2">
                     <p class="small-expired unable">鑑賞期已過</p>
-                    <button type="button" class="btn bluedk-outline-btn unable w-100" onclick="location.href='member_returns.html'">退換貨</button>
+                    <button type="button" class="btn bluedk-outline-btn unable w-100">退換貨</button>
                 </div>
                 <div class="item w-100 p-2"><button type="button" class="btn bluedk-outline-btn w-100">聯絡店家</button></div>
             </div>
-            <!-- 訂單完成 | 鑑賞期內 -->
-            <div class="flex-inline-between align-items-end pb-3 px-3 completed">
+            <!-- 寄送 | 訂單完成 | 鑑賞期內 -->
+            <div class="flex-inline-between align-items-end pb-3 px-3 send pick completed">
                 <div class="item w-100 p-2"><button type="button" class="btn bluedk-outline-btn w-100" onclick="location.href='member_returns.html'">退換貨</button></div>
                 <div class="item w-100 p-2"><button type="button" class="btn bluedk-outline-btn w-100">聯絡店家</button></div>
             </div>
@@ -225,7 +226,7 @@
                     <p>AFP20200111004</p>
                     <small class="text-index">取貨期限：2020/4/1</small>
                     <div class="border rounded p-3 m-3"><img src="../img/member/QRcode.svg"></div>
-                    <div class="bg-light p-2">可使用次數：1次</div>
+                    <div class="bg-light p-2 d-none">可使用次數：1次</div>
                 </div>
                 <div class="container p-3">
                     <button type="button" class="btn index-btn w-100 msg-open" value="msg-mobii" data-toggle="modal" data-target="#messageModal">完成</button>
@@ -238,18 +239,14 @@
     <footer class="shopping-cartfooter container fixed-bottom">
         <ul>
             <li>
-                <p class="send">此筆訂單可賺取<span>137</span>魔幣</p>
-                <p class="pick text-center">此筆訂單可賺取<span>137</span>魔幣</p>
-            </li>
-            <li>
-                <div class="item send">
+                <!-- <div class="item send">
                     <button type="button" class="btn index-outline-btn w-100">退換貨</button>
                 </div>
                 <div class="item send">
                     <button type="button" class="btn index-btn w-100 msg-open" value="msg-receipt" data-toggle="modal" data-target="#messageModal">確認收貨</button>
-                </div>   
+                </div>    -->
                 <div class="item pick">
-                    <button type="button" class="btn index-btn w-100" onclick="callLayer('.useoffers')">開啟取貨碼</button>
+                    <button type="button" class="btn index-btn w-100" onclick="callLayer('.useoffers')">取貨</button>
                 </div>
             </li>
         </ul>
@@ -275,27 +272,32 @@
     <script>
         $("#loginhtml").load("../login.html"); 
 
-        //send寄送 pick自取 (class不影響版面,僅判斷用,可移除)
-        //parameterN==1自取,其餘寄送
+        //class不影響版面,僅判斷用,可移除
         var parameterN ="";
         parameterN = parseInt($(location).attr("href").split("#")[1]);
         $('.send, .pick, .processing, .completed, .returned').hide();
-        //(parameterN==1) ? $('.pick').show() :  $('.send').show();
         switch(parameterN) {
             case 1:
                 // pick自取
                 $('.pick').show();
                 $('footer').show();
+                $('.status1').text("待收貨");
+                $('.status2').html("商品已到店，請於 <span>2020/4/1</span> 前完成取貨");
                 break;
             case 2:
                 // send寄送
                 $('.send').show();
-                $('footer').show();
+                $('footer').hide();
+                $('.status1').text("待收貨");
+                $('.status2').html("店家已在 2020/03/25 出貨囉！<br>2020/4/14前可申請退換貨");
+                orderCompleted();
                 break;
-            case 3:
+            case 3: 
                 // completed已完成
                 $('.completed').show();
                 $('footer').hide();
+                $('.status1').text("已完成");
+                $('.status2').html("訂單已完成，再去賣場逛逛吧。<br>2020/4/8前可申請退換貨");
                 break;
             case 4:
                 // returned退換貨
@@ -306,13 +308,15 @@
                 // processing處理中
                 $('.processing').show();
                 $('footer').hide();
+                $('.status1').text("處理中");
+                $('.status2').html("店家正在處理您的訂單，請耐心等候");
         }
         
         // completed onclick modal(msg-mobii)
         function orderCompleted(){
             setTimeout(function(){ 
             window.location.replace('member_myorder_detail.html#3');
-            location.reload(); },2000);
+            location.reload(); },5000);
         }        
         $('.msg-open').on('click', function(){  
             orderCompleted();
