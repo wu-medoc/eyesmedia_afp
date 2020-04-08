@@ -1462,4 +1462,9 @@ input[type="file"] {
   content: "✔";
   float: right;
 }
+
+.returnInfo p {
+  font-size: small;
+  padding: 1em;
+}
 /*# sourceMappingURL=member.css.map */

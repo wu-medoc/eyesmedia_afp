@@ -3580,7 +3580,7 @@ button.open-page img {
 .radio-box {
   display: block;
   position: relative;
-  padding-left: 30px;
+  padding: 0 15px 0 30px;
   cursor: pointer;
   -webkit-user-select: none;
   -moz-user-select: none;
