@@ -12,7 +12,7 @@
 		
 		this.options = options;
 		this.$select = $(select);
-		this.$input  = $('<input type="text" autocomplete="off">');
+		this.$input  = $('<input type="text" autocomplete="on">');
 		this.$list   = $('<ul class="es-list">');
 		this.utility = new EditableSelectUtility(this);
 		

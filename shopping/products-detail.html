@@ -126,11 +126,8 @@
                     </div>
                 </div>
                 <div class="item shopping-flex onbuy">
-                    <div class="item products-btn-addcart pt-0 mr-2">
-                        <button type="button" class="btn index-outline-btn w-100">加入購物車</button>                           
-                    </div>
                     <div class="item products-btn-buynow pt-0">                        
-                        <button type="button" class="btn index-btn w-100" onclick="location.href='shopping-cart.html'">直接購買</button>      
+                        <button type="button" class="btn index-btn w-100" onclick="location.href='shopping-cart.html'">加入購物車</button>      
                     </div>
                 </div>
             </div>            
@@ -164,7 +161,7 @@
                             <div class="tag-topbox">
                                 <div class="nav-tabs-box tablist-products">
                                     <!-- Nav tabs -->
-                                    <ul id="nav-tab-storedetail" class="nav nav-tabs" role="tablist">
+                                    <ul id="nav-tab-storedetail" class="nav nav-tabs pt-2" role="tablist">
                                             <li class="">
                                                 <a href="#tag01" class="tablist-link link-orange active" id="tab-tag01" onClick="javascript:ScrollTo('tag01')">關於商品</a>
                                             </li>
@@ -332,6 +329,29 @@
 
     <!-- custom js -->
     <script>    
+        //scroll focus tablist-link
+        var sectionIds = {};
+        $(".tab-pane").each(function () {
+            var $this = $(this);
+            sectionIds[$this.attr("id")] = $this.offset().top;
+        });
+        $(window).scroll(function (event) {
+            var scrolled = $(this).scrollTop();
+            var flag=0;
+            for (key in sectionIds) {
+                if (scrolled > sectionIds[key] ) {                    
+                    $("#tab-"+key).addClass("active show");
+                    flag+=1;
+                        if(flag>0){
+                            $('.tablist-link').removeClass("active show");
+                            $("#tab-"+key).addClass("active show");
+                            console.log($("#tab-"+key).siblings());
+                        }
+                }
+            }
+        });
+
+
         // products-detail quantity min max control
         $(document).on('click', '.p-quantity button', function () { 
         var btn = $(this),
@@ -351,11 +371,11 @@
         function ScrollTo(id_name) {
             $('.tag-topbox').addClass('fixed-top container');
             $('.nav-tabs-box').addClass('tag-top'); 
-            $('html,body').animate({scrollTop: $('#'+id_name).offset().top}, 1000);
+            $('html,body').animate({scrollTop: $('#'+id_name).offset().top-50}, 1000);
             $('.tablist-link').removeClass('active show');
             $('#tab-'+id_name).addClass('active show');
         }
-        $(document).on( 'scroll', function(){        
+        $(document).on( 'scroll', function(){       
             if ($(window).scrollTop() < 700) {        
                 $('.tag-topbox').removeClass('fixed-top container');
                 $('.onbuy').removeClass('fixed-bottom container shopping-cartfooter py-3 px-3');
