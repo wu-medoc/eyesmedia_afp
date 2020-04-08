@@ -396,30 +396,30 @@ function div_switch() {
 // }
 
 //memberclause & memberprivate
-window.onload = function(){   
-    $('.memberclause').on('click', function(){  
-        openMask();
-        $('.memberclause-box').slideToggle();   
-    });    
-    $('.memberprivate').on('click', function(){  
-        openMask();
-        $('.memberprivate-box').slideToggle();
-    });   
-    $('.memberclause-close').on('click', function(){  
-        openMask('hide');
-        $('.memberclause-box').slideToggle();
-    });    
-    $('.memberprivate-close').on('click', function(){  
-        openMask('hide');    
-        $('.memberprivate-box').slideToggle();
-    });
-};
-function openMask(e) {
-    $('#open-mask').addClass("modal-backdrop fade show");
-    if(e="hide"){
-        $('#open-mask').removeClass();
-    };
-};
+// window.onload = function(){   
+//     $('.memberclause').on('click', function(){  
+//         openMask();
+//         $('.memberclause-box').slideToggle();   
+//     });    
+//     $('.memberprivate').on('click', function(){  
+//         openMask();
+//         $('.memberprivate-box').slideToggle();
+//     });   
+//     $('.memberclause-close').on('click', function(){  
+//         openMask('hide');
+//         $('.memberclause-box').slideToggle();
+//     });    
+//     $('.memberprivate-close').on('click', function(){  
+//         openMask('hide');    
+//         $('.memberprivate-box').slideToggle();
+//     });
+// };
+// function openMask(e) {
+//     $('#open-mask').addClass("modal-backdrop fade show");
+//     if(e="hide"){
+//         $('#open-mask').removeClass();
+//     };
+// };
         
 // overlay-choice open close control
 $('.open-overlay-choice').on("click", function () {
