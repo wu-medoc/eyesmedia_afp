@@ -339,7 +339,7 @@
             var scrolled = $(this).scrollTop();
             var flag=0;
             for (key in sectionIds) {
-                if (scrolled > sectionIds[key] ) {                    
+                if (scrolled-50 > sectionIds[key] ) {                    
                     $("#tab-"+key).addClass("active show");
                     flag+=1;
                         if(flag>0){
