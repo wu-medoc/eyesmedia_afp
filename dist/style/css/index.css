@@ -118,8 +118,8 @@ body.is-open-country .country-box {
   max-height: 78px;
   position: absolute;
   top: 40px;
-  right: 1em;
-  width: 66%;
+  right: 0;
+  width: 64%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -132,7 +132,7 @@ body.is-open-country .country-box {
     top: 40px;
     right: 1.5em;
     color: #fff;
-    width: 66%;
+    width: 64%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -303,7 +303,6 @@ body.is-open-country .country-box {
   -webkit-box-flex: 0;
   -ms-flex: auto;
   flex: auto;
-  line-height: 1;
   color: #fff;
 }
 
@@ -318,6 +317,35 @@ body.is-open-country .country-box {
 .kv-box .kv-top .top-item.climate small {
   display: block;
   font-weight: normal;
+}
+
+.kv-box .kv-top .top-item.climate ul {
+  width: 45%;
+}
+
+@media (max-width: 375px) {
+  .kv-box .kv-top .top-item.climate ul {
+    width: 90px;
+  }
+}
+
+.kv-box .kv-top .top-item.climate ul li:nth-child(2) {
+  margin-top: 2em;
+  padding: 4px 0;
+}
+
+@media (max-width: 480px) {
+  .kv-box .kv-top .top-item.climate ul li:nth-child(2) {
+    margin-top: 1.5em;
+    padding: 0;
+  }
+}
+
+@media (max-width: 375px) {
+  .kv-box .kv-top .top-item.climate ul li:nth-child(2) {
+    margin-top: 1.1em;
+    padding: 0;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -747,6 +775,7 @@ body.is-open-country .country-box {
   filter: grayscale(100%);
   -webkit-filter: gray;
           filter: gray;
+  opacity: .6;
 }
 
 .setting {
