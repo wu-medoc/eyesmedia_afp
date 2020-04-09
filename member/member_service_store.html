@@ -39,84 +39,63 @@
         <div class="bearservice-lg">
             <header class="fixed-top container">
                 <!-- header top -->
-                <div class="header-secondary linebt-row">
-                    <div class="index-flex justify-content-between">
+                <div class="header-secondary">
+                    <div class="flex-inline-between">
                         <div class="item one">
                             <div class="close-btn" onclick="history.back();" data-toggle="tooltip" data-placement="bottom" title="回上一頁">
                                 <i class="material-icons">&#xE314;</i>
                             </div>
                         </div>
                         <div class="item three text-center">
-                            <div class="title-name fs-16">昇恆昌免稅購物網站</div>
+                            <div class="d-grid">
+                                <div class="title-name txt-line-clamp1">昇恆昌免稅購物網站</div>
+                            </div>
                         </div>
                         <div class="item one text-right">
-                            <button type="button" class="btn bluedk-outline-btn bt-small mr-1" onclick="callsortLayer('.returnInfo')">退換說明</button>
                         </div>
                     </div>
                 </div>
             </header>
-                <div class="hr-100"></div>
+            <div class="header-addheight"></div>  
+            <div class="service-msg">
+                客服單編號：123487563872875
+            </div>           
+            <div class="chat-box">
                 <div class="popup-messages">          
                     <div class="direct-chat-messages">
-                        <div class="chat-box-single-line">
-                                <abbr class="timestamp">Sun, Dec 11 1:20 PM</abbr>
-                        </div>
-                        
+                        <small class="timestamp-s">2020/01/11 11</small>
+                        <div class="direct-chat-sys">買方已提出 退貨 需求</div>
+                        <small class="timestamp-s">2020/01/11 12</small>                        
                         <!-- Message. Default to the left -->
                         <div class="direct-chat-msg">
-                            <!-- direct-chat-info -->
                             <div class="direct-chat-text">
-                            Hey你好, 我是熊, 很高興為您服務
+                                您好，我們會請專人到府收回退貨，再為您處理退款～
                             </div>                  
-                            <ul class="direct-info">
-                                <span>來看看有什麼熱門問題吧!</span>
-                                <li><a href="">亞洲好玩卡網站是什麼?</a></li>
-                                <li><a href="">我想問如何快速取貨?</a></li>
-                                <li><a href="">想要退換貨怎麼辦?</a></li>
-                                <li><a href="">最近有什麼最新優惠?</a></li>
-                                <li><a href="">我該如何購買網路商品?</a></li>
-                            </ul>
+                            <div class="direct-chat-text">
+                                客服專線 0800-xxxxxx
+                            </div>                  
                         </div>          
                         <!-- Message. Default to the right -->
                         <div class="guests-chat-msg">
-                            <!-- direct-chat-info -->
                             <div class="guests-chat-text">
-                            請幫我轉真人服務
+                                請幫我轉真人服務
                             </div> 
-                            <div class="guests-chat-name">
-                            guests
-                            </div> 
-                            <div class="guests-chat-text">
-                            請幫我轉真人服務
-                            </div> 
-                            <div class="guests-chat-name">
-                            guests
-                            </div> 
-                            <div class="guests-chat-text">
-                            請幫我轉真人服務
-                            </div> 
-                            <div class="guests-chat-name">
-                            guests
-                            </div> 
-                            <div class="guests-chat-text">
-                            請幫我轉真人服務
-                            </div> 
-                            <div class="guests-chat-name">
-                            guests
-                            </div> 
-                            <div class="guests-chat-text">
-                            請幫我轉真人服務
-                            </div> 
-                            <div class="guests-chat-name">
-                            guests
-                            </div> 
-                        </div>          
-                        <div class="popup-messages-footer">
-                            <input type="text" placeholder="請輸入問題">
-                        </div>        
-                    </div>
+                        </div>     
+                    </div> 
+                    <bottom class="btn index-outline-btn small-80 m-2 preview">結單(預覽)</bottom>   
+                </div>               
+                <div class="service-overbox text-center d-none">
+                    <small class="timestamp-s">2020/01/11 12</small>
+                    <div class="service-over">                            
+                        此客服單已經結單
+                    </div>  
+                    <bottom class="btn index-outline-btn small-80 m-2" onclick="history.back();">回上一頁</bottom>
                 </div>
-            </div>
+            </div>    
+            <div class="service-store-footer container">
+                <input type="text" placeholder="請填寫問題內容（限填200字）">
+                <i class="material-icons send m-2">&#xe163;</i>
+            </div>  
         </div>    
     </div>   
 
@@ -199,6 +178,12 @@
     
     <!-- custom js -->
     <script>
+        $('footer').show();
+
+        $('.preview').on('click', function(){
+            $('.preview ,.service-store-footer').addClass('d-none');
+            $(' .service-overbox').removeClass('d-none');
+        });
     </script>
     <script src="../js/animateCss.js"></script>
     <script src="../js/index.js"></script>

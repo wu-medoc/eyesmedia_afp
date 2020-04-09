@@ -2306,6 +2306,8 @@ td.linebt-td,
 }
 
 .bearservice .popup-box .popup-messages .direct-chat-messages .chat-box-single-line abbr.timestamp {
+  text-align: center;
+  color: gray;
   background-color: #fff;
   font-size: 0.8em;
   padding: 0 11px;
@@ -2348,11 +2350,11 @@ td.linebt-td,
 }
 
 .bearservice-lg .chat-box {
-  overflow: hidden;
   background-color: #ffffff;
   bottom: 0;
   width: 100%;
-  height: 100%;
+  height: auto;
+  min-width: 320px;
 }
 
 .bearservice-lg .chat-box .popup-head {
@@ -2378,7 +2380,7 @@ td.linebt-td,
 
 .bearservice-lg .chat-box .popup-messages {
   background: #fff none repeat scroll 0 0;
-  height: 90vh;
+  height: auto;
   overflow-y: auto;
 }
 
@@ -2399,6 +2401,8 @@ td.linebt-td,
 }
 
 .bearservice-lg .chat-box .popup-messages .direct-chat-messages .chat-box-single-line abbr.timestamp {
+  text-align: center;
+  color: gray;
   background-color: #fff;
   font-size: 0.8em;
   padding: 0 11px;
@@ -2433,11 +2437,113 @@ td.linebt-td,
   margin-bottom: 0px;
 }
 
+.bearservice-lg .service-store-footer {
+  background: #eee;
+  overflow: hidden;
+  position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  min-width: 320px;
+  padding: .5em .5em 1.5em .5em;
+}
+
+@media (max-width: 767px) {
+  .bearservice-lg .service-store-footer {
+    bottom: 62px;
+  }
+}
+
+@media (max-width: 570px) {
+  .bearservice-lg .service-store-footer {
+    bottom: 62px;
+  }
+}
+
+@media (max-width: 480px) {
+  .bearservice-lg .service-store-footer {
+    bottom: 55px;
+  }
+}
+
+@media (max-width: 375px) {
+  .bearservice-lg .service-store-footer {
+    bottom: 40px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .bearservice-lg .service-store-footer {
+    bottom: 80px;
+  }
+}
+
+@media (min-width: 992px) {
+  .bearservice-lg .service-store-footer {
+    bottom: 105px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .bearservice-lg .service-store-footer {
+    bottom: 125px;
+  }
+}
+
+.bearservice-lg .service-store-footer input {
+  border: 1px solid #ccc;
+  border-radius: 16px;
+  padding: 4px 8px;
+  width: 100%;
+  margin-bottom: 0px;
+}
+
+.bearservice-lg .service-msg {
+  background: #F6F6E9;
+  text-align: center;
+  font-size: .9em;
+  padding: .5em 1em;
+}
+
+.bearservice-lg .service-overbox {
+  padding-bottom: 200px;
+}
+
+.bearservice-lg .service-overbox .service-over {
+  background: #f8f8f8;
+  text-align: center;
+  font-size: .9em;
+  padding: .5em 1em;
+}
+
+.bearservice-lg .timestamp-s {
+  width: 100%;
+  text-align: center;
+  color: gray;
+  background-color: #fff;
+  font-size: 0.8em;
+  padding: 1em;
+  display: inline-block;
+}
+
+.bearservice-lg .direct-chat-sys {
+  width: 100%;
+  text-align: center;
+  display: inline-block;
+  padding: 0 .5em 1em .5em;
+}
+
+.bearservice-lg,
+.bearservice {
+  color: #182B56;
+}
+
 .bearservice-lg .simple_round,
 .bearservice .simple_round {
   background: #d1d1d1 none repeat scroll 0 0;
   border-radius: 50%;
-  color: #4b4b4b !important;
+  color: #182B56;
   height: 21px;
   padding: 0 0 0 1px;
   width: 21px;
@@ -2486,9 +2592,9 @@ td.linebt-td,
 
 .bearservice-lg .popup-messages .direct-chat-text,
 .bearservice .popup-messages .direct-chat-text {
-  background: #C1DCFF none repeat scroll 0 0;
-  border: 1px solid #C1DCFF;
-  border-radius: 2px;
+  background: #E5E5EA none repeat scroll 0 0;
+  border: 1px solid #E5E5EA;
+  border-radius: 10px;
   color: #1f2121;
 }
 
@@ -2569,7 +2675,7 @@ td.linebt-td,
 .bearservice-lg .direct-chat-text::before,
 .bearservice .direct-chat-text::after,
 .bearservice .direct-chat-text::before {
-  border-color: transparent #C1DCFF transparent transparent;
+  border-color: transparent #E5E5EA transparent transparent;
 }
 
 .bearservice-lg .direct-chat-text::after,
@@ -2580,7 +2686,7 @@ td.linebt-td,
   -moz-border-left-colors: none;
   -moz-border-right-colors: none;
   -moz-border-top-colors: none;
-  border-color: transparent #C1DCFF transparent transparent;
+  border-color: transparent #E5E5EA transparent transparent;
   -o-border-image: none;
      border-image: none;
   border-style: solid;
@@ -2605,8 +2711,8 @@ td.linebt-td,
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  background: #C1DCFF none repeat scroll 0 0;
-  border: 1px solid #C1DCFF;
+  background: #E5E5EA none repeat scroll 0 0;
+  border: 1px solid #E5E5EA;
   border-radius: 10px;
   margin: 5px 30px 0 0;
   padding: 5px 10px;

@@ -309,9 +309,9 @@ var swiper = new Swiper('.shopping-productsimg.swiper-container', {
 
 $(document).ready(function(){
     // bear service
-    var windowHight = $(window).height();
-    var bearhight = windowHight-70;
-    $('.bearservice-lg').css('height',bearhight);
+    // var windowHight = $(window).height();
+    // var bearhight = windowHight-70;
+    // $('.bearservice-lg').css('height',bearhight);
 
     // registeredSelectState for phone select
     // $('.registeredSelectState-btn').on('click', function () {

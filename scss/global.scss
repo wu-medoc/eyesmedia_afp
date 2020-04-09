@@ -320,7 +320,8 @@ li {
 // 共用 footer
 footer.for-mobile {
   position: fixed;
-  width: 101%;
+  width: 101%;  
+  min-width: 320px;
   left: 50%;
   -webkit-transform: translateX(-50%);
   transform: translateX(-50%);
@@ -334,7 +335,8 @@ footer.for-mobile {
 footer.for-pc{
   padding: 20px 0;
   background: #f8f8f8;
-  width: 100%;
+  width: 100%;  
+  min-width: 320px;
   position: relative;
   display: inline-block;
   bottom: 0;
