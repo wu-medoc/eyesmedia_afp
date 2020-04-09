@@ -2723,6 +2723,9 @@ td.linebt-td,
 .bearservice .guests-chat-msg {
   float: right;
   width: 100%;
+  display: -ms-inline-grid;
+  display: inline-grid;
+  justify-items: self-end;
 }
 
 .bearservice-lg .guests-chat-text::after,
@@ -4194,8 +4197,8 @@ img.nearbyimg {
 }
 
 .multilayer {
-  width: 100%;
   position: fixed;
+  width: 100%;
   top: 0;
   display: none;
   z-index: 1040;
@@ -4205,22 +4208,22 @@ img.nearbyimg {
 }
 
 .multilayer > div {
+  position: absolute;
   overflow-x: hidden;
   overflow-y: auto;
   display: none;
   background-color: #fff;
   min-height: 100vh;
-  position: absolute;
   z-index: 1;
 }
 
 .sortlayer > div {
+  position: absolute;
   overflow-x: hidden;
   overflow-y: auto;
   display: none;
   background-color: transparent;
   min-height: 100vh;
-  position: absolute;
 }
 
 .sortlayer > div li.active > div {
@@ -4229,8 +4232,8 @@ img.nearbyimg {
 
 .sortlayer,
 .uplayer {
-  width: 100%;
   position: fixed;
+  width: 100%;
   top: 0;
   display: none;
   z-index: 1041;
@@ -4241,12 +4244,12 @@ img.nearbyimg {
 }
 
 .uplayer > div {
+  position: absolute;
   overflow-x: hidden;
   overflow-y: auto;
   display: none;
   background-color: #fff;
   min-height: 65vh;
-  position: absolute;
   border-top-left-radius: .5em;
   border-top-right-radius: .5em;
   bottom: 0;
@@ -4255,7 +4258,7 @@ img.nearbyimg {
 .layerscrollmove {
   position: absolute;
   width: 100%;
-  height: 100vh;
+  height: calc(100% - 74px);
   background-color: #fff;
 }
 
