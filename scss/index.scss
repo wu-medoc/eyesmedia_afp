@@ -2479,6 +2479,7 @@ td.linebt-td,
   }
   .guests-chat-msg{         
     float: right;
+    width: 100%;
   }
   .guests-chat-text::after, 
   .guests-chat-text::before {
@@ -2517,6 +2518,7 @@ td.linebt-td,
     padding: 5px 10px;
     position: relative;
     text-align: right;
+    float: right;
   }
   .guests-chat-name {
     text-align: right;

@@ -93,7 +93,7 @@
                 </div>
             </div>    
             <div class="service-store-footer container">
-                <input type="text" placeholder="請填寫問題內容（限填200字）">
+                <input type="text" class="customer-msg" placeholder="請填寫問題內容（限填200字）">
                 <i class="material-icons send m-2">&#xe163;</i>
             </div>  
         </div>    
@@ -183,6 +183,12 @@
         $('.preview').on('click', function(){
             $('.preview ,.service-store-footer').addClass('d-none');
             $(' .service-overbox').removeClass('d-none');
+        });
+
+        $('i.send').on('click', function(){
+            if($('input.customer-msg').val().length>0){
+                $('.direct-chat-messages').append("<div class='guests-chat-msg'><div class='guests-chat-text'>"+$('input.customer-msg').val()+"</div></div>");
+            }
         });
     </script>
     <script src="../js/animateCss.js"></script>
