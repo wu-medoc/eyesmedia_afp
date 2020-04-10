@@ -69,7 +69,7 @@ body.is-open-country .country-box {
 /* header kv-box*/
 .header-addheight {
   width: 100%;
-  height: 58px;
+  height: 62px;
   display: inline-flex;
 }
 .header-90 {
@@ -90,9 +90,9 @@ body.is-open-country .country-box {
 }
 .shoppingkv-mt{
   overflow: hidden;
-  padding-top: 65px;
+  padding-top: 64px;
   @media (min-width: 768px) {
-    padding-top: 85px;
+    padding-top: 89px;
   }
 }
 .kvbn-img {
@@ -117,6 +117,9 @@ body.is-open-country .country-box {
   right: 0;
   width: 64%;
   display: flex;
+  img{
+    border-radius: 5px;
+  }
 }
 @media (max-width: 767px) {
   .kv-iconbox{
@@ -2554,6 +2557,7 @@ td.linebt-td,
 .rwdimg {
   display:block;
   width: 100%;
+  min-width: 60px;
   height: auto;
   padding-bottom:100%;
   overflow:hidden;
@@ -2564,42 +2568,25 @@ td.linebt-td,
 .rwdimg-cover {
   display:block;
   width: 100%;
+  min-height: 80px;
   height: auto;
   padding-bottom:100%;
   overflow:hidden;
   background-position: center center;
   background-repeat: no-repeat;
   background-size:cover;
-}
-.rwdimg-h65 {
-  display:block;
-  width: 100%;
-  height: auto;
-  padding-bottom:65%;
-  overflow:hidden;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size:cover;
-}
-.rwdimg-h55 {
-  display:block;
-  width: 100%;
-  height: auto;
-  padding-bottom:55%;
-  overflow:hidden;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size:cover;
-}
-.rwdimg-h20 {
-  display:block;
-  width: 100%;
-  height: auto;
-  padding-bottom:20%;
-  overflow:hidden;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size:cover;
+  &.h20{
+    padding-bottom:20%;
+  }
+  &.h37{
+    padding-bottom:37%;
+  }
+  &.h55{
+    padding-bottom:55%;
+  }
+  &.h65{
+    padding-bottom:65%;
+  }
 }
 .rwdimgbox-80{
   width: 80px;
@@ -2607,6 +2594,7 @@ td.linebt-td,
   min-width: 80px;
   padding: 0px;
   border: 1px #eee solid;
+  background: #fff;
   margin-right: .5em;
   border-radius: 5px;
   div{
@@ -3060,6 +3048,7 @@ button.open-page {
 .header-secondary {
   background-color: #fff;
   padding: 15px;
+  min-width: 320px;
   .title-name{
     font-size: 1.3em;
     font-weight: bold;
@@ -4027,6 +4016,7 @@ img.nearbyimg{
   display:none;
   background-color:#fff;
   min-height:100vh;
+  height:100%;
   z-index: 1;
 }
 .sortlayer>div{
@@ -4063,12 +4053,12 @@ img.nearbyimg{
   border-top-right-radius: .5em;
   bottom: 0;
 }
-.layerscrollmove{
-  position: absolute; 
-  width:100% ;
-  height: calc(100% - 74px);
-  background-color:#fff;
-}
+// .layerscrollmove{
+//   position: absolute; 
+//   width:100% ;
+//   height: 100%;
+//   background-color:#fff;
+// }
 .telcodelist{
   display: none;
   background-color:transparent;

@@ -878,6 +878,9 @@ footer{
                     width: auto;
                     margin-left: auto;
                     margin-right: auto;
+                    @media (max-width: 320px) {
+                        height: 20em;
+                    }
                 }
                 display: -webkit-box;
                 display: -ms-flexbox;
@@ -1608,6 +1611,7 @@ footer{
     }
     .auto-left{
         margin-left: auto;
+        text-align: right;
     }
 }
 
@@ -1904,9 +1908,6 @@ footer{
 }
 .is-choose-body{
     display: block;
-    &.disabled{
-        display: none;
-    }
 }
 .is-choose-method{
     padding: 10px 15px;
@@ -1914,11 +1915,17 @@ footer{
     display: flex;
     align-items: center;
     border-bottom: 1px #eee solid;
+        &+.is-choose-body{
+            display: block;
+        }
     &.disabled{
         border-top: 1px #eee solid;
         border-left-color: #C4C4C4;
         margin-top: 0;
         .item-check{
+            display: none;
+        }
+        &+.is-choose-body{
             display: none;
         }
     }
@@ -1935,6 +1942,7 @@ footer{
     }
     .auto-left{
         margin-left: auto;
+        text-align: right;
     }
 }
 
@@ -1993,6 +2001,7 @@ footer{
         }        
         .auto-left{
             margin-left: auto;
+            text-align: right;
         }
     }
 }
@@ -2176,6 +2185,7 @@ footer{
     }
     .auto-left{
         margin-left: auto;
+        text-align: right;
     }
 }
 

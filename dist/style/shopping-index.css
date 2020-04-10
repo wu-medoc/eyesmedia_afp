@@ -1809,7 +1809,7 @@ footer a:hover {
 
 /* order */
 .order-step-box {
-  margin-top: 48px;
+  margin-top: 68px;
   border-bottom: 1px #eee solid;
   padding: 25px 0;
 }
@@ -2159,7 +2159,7 @@ footer a:hover {
 }
 
 .is-choose-method:first-child {
-  margin-top: 48px;
+  margin-top: 68px;
 }
 
 .is-choose-method .item p:last-child {
@@ -2203,7 +2203,7 @@ footer a:hover {
 
 /* add address */
 .add-address-list {
-  margin-top: 48px;
+  margin-top: 68px;
 }
 
 .add-address-list li {
@@ -2405,7 +2405,7 @@ footer .order-go-pay .item {
 
 /* electronic invoice */
 .electronic-choice-list {
-  margin-top: 48px;
+  margin-top: 68px;
 }
 
 .electronic-choice-list .radio-box {
@@ -2677,7 +2677,7 @@ footer .order-go-pay .item {
 }
 
 .input-number-box {
-  margin-top: 48px;
+  margin-top: 68px;
   padding: 30px;
   border-bottom: 1px #eee solid;
 }
@@ -2727,7 +2727,7 @@ footer .order-go-pay .item {
 }
 
 .order-error-box {
-  margin-top: 48px;
+  margin-top: 68px;
   padding-top: 30px;
 }
 

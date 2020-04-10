@@ -973,6 +973,15 @@ footer a:hover {
     margin-left: auto;
     margin-right: auto;
   }
+}
+
+@media (max-width: 767px) and (max-width: 320px) {
+  .shopping-productsdetail .shopping-productsimgbox .swiper-slide img {
+    height: 20em;
+  }
+}
+
+@media (max-width: 767px) {
   .shopping-productsdetail .shopping-productsimgbox .swiper-pagination-fraction {
     bottom: 0.5em;
     right: 0.5em;
@@ -1801,6 +1810,7 @@ footer a:hover {
 
 .shopping-discount .auto-left {
   margin-left: auto;
+  text-align: right;
 }
 
 /* order */
@@ -2170,10 +2180,6 @@ footer a:hover {
   display: block;
 }
 
-.is-choose-body.disabled {
-  display: none;
-}
-
 .is-choose-method {
   padding: 10px 15px;
   border-left: 5px #FD5F00 solid;
@@ -2186,6 +2192,10 @@ footer a:hover {
   border-bottom: 1px #eee solid;
 }
 
+.is-choose-method + .is-choose-body {
+  display: block;
+}
+
 .is-choose-method.disabled {
   border-top: 1px #eee solid;
   border-left-color: #C4C4C4;
@@ -2193,6 +2203,10 @@ footer a:hover {
 }
 
 .is-choose-method.disabled .item-check {
+  display: none;
+}
+
+.is-choose-method.disabled + .is-choose-body {
   display: none;
 }
 
@@ -2207,6 +2221,7 @@ footer a:hover {
 
 .is-choose-method .auto-left {
   margin-left: auto;
+  text-align: right;
 }
 
 .address-list-box li {
@@ -2281,6 +2296,7 @@ footer a:hover {
 
 .add-address-list li .auto-left {
   margin-left: auto;
+  text-align: right;
 }
 
 .note-box {
@@ -2522,6 +2538,7 @@ footer .order-go-pay .item {
 
 .electronic-choice-list .auto-left {
   margin-left: auto;
+  text-align: right;
 }
 
 /* payment */

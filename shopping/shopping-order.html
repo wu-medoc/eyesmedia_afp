@@ -507,11 +507,12 @@
                         </div>
                     </div>
                 </header>
-                <form action="shopping-order.html" >
+                <form action="shopping-order.html">
+                <div class="layerscrollmove">
                     <ul class="is-choose-ul">   
                         <li class="is-choose">
                             <!-- 已選取 -->
-                            <div class="is-choose-method">
+                            <div class="is-choose-method disabled">
                                 <div class="item">
                                     <p>宅配通 <span>$100</span></p>
                                     <p>預計到貨日 <span>12月5日～12月9日</span></p>
@@ -529,7 +530,7 @@
                                                     <p>艾斯移動</p>
                                                     <p class="tel">0227078600</p>
                                                     <p class="address">106 臺北市大安區敦化南路2段76號5樓</p>
-                                                    <input type="radio" name="radio" checked>
+                                                    <input type="radio" name="radio">
                                                     <span class="checkmark"></span>
                                                 </label>
                                             </div>
@@ -538,6 +539,28 @@
                                             <div class="item">
                                                 <label class="radio-box">
                                                     <p>Jason Yang</p>
+                                                    <p class="tel">0912345678</p>
+                                                    <p class="address">106 台北市大安區敦化南路2段76號5樓</p>
+                                                    <input type="radio" name="radio">
+                                                    <span class="checkmark"></span>
+                                                </label>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="item">
+                                                <label class="radio-box">
+                                                    <p>Mei</p>
+                                                    <p class="tel">0912345678</p>
+                                                    <p class="address">106 台北市大安區敦化南路2段76號5樓</p>
+                                                    <input type="radio" name="radio">
+                                                    <span class="checkmark"></span>
+                                                </label>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="item">
+                                                <label class="radio-box">
+                                                    <p>IVY</p>
                                                     <p class="tel">0912345678</p>
                                                     <p class="address">106 台北市大安區敦化南路2段76號5樓</p>
                                                     <input type="radio" name="radio">
@@ -563,7 +586,7 @@
                                     <i class="material-icons">&#xE5CA;</i>
                                 </div>
                             </div>
-                            <div class="is-choose-body disabled">
+                            <div class="is-choose-body">
                                 <div class="address-list-box">
                                     <ul>
                                         <li>
@@ -573,7 +596,7 @@
                                                     <p>營業時間  08:00-21:00</p>
                                                     <p class="tel">0227078600</p>
                                                     <p class="address">106 臺北市大安區敦化南路2段76號5樓</p>
-                                                    <input type="radio" name="radio1" checked>
+                                                    <input type="radio" name="radio">
                                                     <span class="checkmark"></span>
                                                 </label>
                                             </div>
@@ -585,7 +608,7 @@
                                                     <p>營業時間  08:00-21:00</p>
                                                     <p class="tel">0912345678</p>
                                                     <p class="address">106 台北市大安區敦化南路2段76號5樓</p>
-                                                    <input type="radio" name="radio1">
+                                                    <input type="radio" name="radio">
                                                     <span class="checkmark"></span>
                                                 </label>
                                             </div>
@@ -596,7 +619,8 @@
 
                         </li> 
                     </ul>
-        
+                    <div class="addheight mb-5"></div>
+                </div>
                     <footer class="success-mode container">
                         <div class="small-80 text-gray text-center w-100 div-switch d-none">＊所選地址不在商店配送範圍，請重新選擇</div>
                         <button type="button" class="btn-ok div-switch d-block" onclick="div_switch()">確認</button>
