@@ -804,6 +804,16 @@ footer a:hover {
   text-align: right;
 }
 
+.shopping-productsdetail .products-set {
+  color: #182B56;
+  font-size: 0.8em;
+  font-weight: bold;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  padding-left: .5em;
+}
+
 .shopping-productsdetail .products-quantity input[type=number]::-webkit-inner-spin-button,
 .shopping-productsdetail .products-quantity input[type=number]::-webkit-outer-spin-button {
   -webkit-appearance: none;
