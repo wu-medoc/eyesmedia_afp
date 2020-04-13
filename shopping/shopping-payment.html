@@ -26,7 +26,7 @@
 
 <body>
     <div class="wrap container">
-        <header class="fixed-top container">
+        <header class="container">
             <!-- header top -->
             <div class="header-secondary linebt-row">
                 <div class="index-flex justify-content-between">
@@ -114,7 +114,7 @@
                                     <div class="item item-card-num">*1234</div>
                                     <div class="item item-default auto-left"><i class="fas fa-check"></i></div>
                                 </li>
-                                <li onclick="location.href='shopping-input-num.html'">
+                                <li onclick="callLayer('.shopping-cardnum')">
                                     <div class="item item-icon">
                                         <i class="material-icons">&#xE145;</i>
                                     </div>
@@ -133,6 +133,82 @@
         <footer class="success-mode container">
             <button class="btn-ok" onclick="location.href='shopping-order-ok.html'">付款</button>
         </footer>
+
+
+        <div class="multilayer">
+            <div class="shopping-cardnum">
+                <header class="container">
+                    <!-- header top -->
+                    <div class="header-secondary linebt-row">
+                        <div class="index-flex justify-content-between">
+                            <div class="item two">
+                                <div class="close-btn" onclick="backLayer();" data-toggle="tooltip" data-placement="bottom" title="回上一頁">
+                                    <i class="material-icons">&#xE314;</i>
+                                </div>
+                            </div>
+                            <div class="item three text-center">
+                                <div class="title-name fs-16">輸入卡號</div>
+                            </div>
+                            <div class="item two text-right">
+                                <div class="close-btn"></div>
+                            </div>
+                        </div>
+                    </div>
+                </header>
+                <form action="shopping-order-error.html" >
+                    <div class="input-number-box">     
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="input-type">
+                                        <p>信用卡/簽帳金融卡卡號 </p>
+                                        <input type="text" placeholder="0000 0000 0000 0000" class="form-control" id="validationDefault01" required>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="input-type">
+                                        <p>有效年月</p>
+                                        <input type="text" placeholder="MM/YY" class="form-control" id="validationDefault02" required>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="input-type">
+                                        <p>背面末三碼</p>
+                                        <input type="text" placeholder="000" class="form-control" id="validationDefault03" required>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="default-setting">
+                                        <div class="item item-checkbox small">
+                                            <div class="sitem-checkbox">
+                                                <div class="icheck-material-blue">
+                                                    <input id="products002" type="checkbox" class="checkedall">
+                                                    <label for="products002"></label>同意加入信用卡,下次結帳更快速 
+                                                </div>  
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <button type="submit" class="btn index-btn w-100">付款</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="newebPay text-center">
+                                <p>本安全服務由藍新金流服務平台提供</p>
+                                <img src="../img/shopping/newebpay.png" alt="">
+                                <small>Powered by Neweb Technologies Co., Ltd.</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     
     </div>
 
@@ -152,8 +228,36 @@
     <!-- vendor js -->
     <script src="../js/vendor/swiper/js/swiper.min.js"></script>
     <script src="../js/vendor/imgLiquid.js"></script>
-    <script>
 
+    <!-- custom js -->
+    <script src="../js/animateCss.js"></script>
+    <script>
+        //bootstrap validation
+        (function () {
+            "use strict";
+            window.addEventListener(
+                "load",
+                function () {
+                    // Fetch all the forms we want to apply custom Bootstrap validation styles to
+                    var forms = document.getElementsByClassName("needs-validation");
+                    // Loop over them and prevent submission
+                    var validation = Array.prototype.filter.call(forms, function (form) {
+                        form.addEventListener(
+                            "submit",
+                            function (event) {
+                                if (form.checkValidity() === false) {
+                                    event.preventDefault();
+                                    event.stopPropagation();
+                                }
+                                form.classList.add("was-validated");
+                            },
+                            false
+                        );
+                    });
+                },
+                false
+            );
+        })();
 
         $( ".collapsed" ).on('click',function() {
             if($('.bank-swiper').html()==""){
@@ -189,6 +293,7 @@
             $('.otherpay').css('opacity','0.5');
         });
     </script>
+    <script src="../js/index.js"></script>
 </body>
 
 </html>
