@@ -183,9 +183,6 @@ i {
 ul, ol {
   list-style: none;
 }
-li {
-  cursor: pointer;
-}
 
 :focus {
   outline: 0;
@@ -199,9 +196,6 @@ li {
 .addheight{
   background-color: #fff;
   height: 90px;
-  // @media (min-width: 768px) {
-  //   height: 80px;
-  // }
 }
 
 // 全站 btn

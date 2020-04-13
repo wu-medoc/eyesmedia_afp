@@ -179,10 +179,6 @@ ul, ol {
   list-style: none;
 }
 
-li {
-  cursor: pointer;
-}
-
 :focus {
   outline: 0;
 }
@@ -194,7 +190,7 @@ li {
 
 .addheight {
   background-color: #fff;
-  height: 80px;
+  height: 90px;
 }
 
 .disabled-btn {
