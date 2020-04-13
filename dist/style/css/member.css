@@ -339,6 +339,7 @@
   text-align: right;
 }
 
+.my-list-box ul li .input-box input[type='date'],
 .my-list-box ul li .input-box input[type='tel'],
 .my-list-box ul li .input-box input[type='email'],
 .my-list-box ul li .input-box input[type='text'] {
@@ -347,27 +348,6 @@
   border: 0;
   text-align: right;
   color: #182B56;
-}
-
-.my-list-box ul li .input-box input[type='date']::-webkit-calendar-picker-indicator {
-  background: transparent;
-  color: transparent;
-}
-
-.my-list-box ul li .input-box input[type='date'] {
-  border: 0;
-  background: #fff;
-  display: block;
-  text-align: right;
-  text-align: -webkit-right;
-  width: 180px;
-  background: url("../../img/member/ic_date_range.png") no-repeat;
-  background-size: 13%;
-  background-position: 100% 50%;
-}
-
-.my-list-box ul li .input-box input[type='date']::-webkit-inner-spin-button {
-  display: none;
 }
 
 .my-list-box ul li button {

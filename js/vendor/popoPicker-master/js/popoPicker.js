@@ -125,7 +125,7 @@
                 html += '<div class="p-select-title">' + option.headTitle + '</div>';
             }
             if (option.display != 'center') {
-                html += '<a href="javascript:void(0)" class="p-select-submit-btn">确认</a>';
+                html += '<a href="javascript:void(0)" class="p-select-submit-btn">確認</a>';
             }
             html += '</div>';
             html += '<div class="p-select-body">';
@@ -815,9 +815,9 @@
         //获取结果
         function getLastVal(result) {
             if(result.length==5){
-                lastValue = result[0].display+'-'+result[1].display+'-'+result[2].display+' '+result[3].display+':'+result[4].display;
+                lastValue = result[0].display+'/'+result[1].display+'/'+result[2].display+' '+result[3].display+':'+result[4].display;
             }else if (result.length==3){
-                lastValue = result[0].display+'-'+result[1].display+'-'+result[2].display;
+                lastValue = result[0].display+'/'+result[1].display+'/'+result[2].display;
             } else{
                 lastValue = result[0].display+':'+result[1].display;
             }

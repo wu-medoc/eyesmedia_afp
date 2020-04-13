@@ -256,6 +256,7 @@
             .input-box{
                 flex: 1;
                 text-align: right;
+                input[type='date'],
                 input[type='tel'],
                 input[type='email'],
                 input[type='text']{
@@ -265,21 +266,21 @@
                     text-align: right;
                     color: $blue-dark;
                 }
-                input[type='date']::-webkit-calendar-picker-indicator{
-                        background: transparent;
-                        color: transparent;
-                }
-                input[type='date'] {
-                    border: 0;
-                    background: #fff;
-                    display: block;
-                    text-align: right;
-                    text-align: -webkit-right;
-                    width: 180px;
-                    background: url('../../img/member/ic_date_range.png') no-repeat;
-                    background-size: 13%;
-                    background-position: 100% 50%;
-                    &::-webkit-inner-spin-button { display: none; }
+                // input[type='date']::-webkit-calendar-picker-indicator{
+                //         background: transparent;
+                //         color: transparent;
+                // }
+                // input[type='date'] {
+                //     border: 0;
+                //     background: #fff;
+                //     display: block;
+                //     text-align: right;
+                //     text-align: -webkit-right;
+                //     width: 180px;
+                //     background: url('../../img/member/ic_date_range.png') no-repeat;
+                //     background-size: 13%;
+                //     background-position: 100% 50%;
+                //     &::-webkit-inner-spin-button { display: none; }
                     // ::-webkit-datetime-edit { padding: 1em; }
                     // ::-webkit-datetime-edit-fields-wrapper { background: silver; }
                     // ::-webkit-datetime-edit-text { color: red; padding: 0 0.3em; }
@@ -288,7 +289,7 @@
                     // ::-webkit-datetime-edit-year-field { color: purple; }
                     // ::-webkit-inner-spin-button { display: none; }
                     // ::-webkit-calendar-picker-indicator { background: orange; }
-                }
+                //}
             }
             button{
                 color: $blue-dark;

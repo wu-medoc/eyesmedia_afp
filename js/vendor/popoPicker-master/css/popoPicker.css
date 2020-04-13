@@ -239,7 +239,7 @@
 .p-select-wheel>li{
     white-space: nowrap;
     overflow: hidden;
-    text-overflow: ellipsis;
+    /*text-overflow: ellipsis;*/
     width: 100%;
     padding: 0 10px;
     line-height: 34px;
@@ -289,6 +289,8 @@
 .p-select-wrap.p-3d .p-select-ul>li,
 .p-select-wrap.p-3d .p-select-label{
     color: #2a2b2c;
+    padding: 0 10px;
+    border-bottom:0px;
 }
 .p-select-wrap.p-3d .p-select-body:before{
     content: "";

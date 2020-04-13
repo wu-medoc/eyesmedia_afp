@@ -29,6 +29,7 @@
     <link rel="stylesheet" href="../dist/style/index.min.css">
     <link rel="stylesheet" href="../dist/style/member.min.css">
     <link rel="stylesheet" href="../dist/style/animate.min.css">
+    <link rel="stylesheet" href="../js/vendor/popoPicker-master/css/popoPicker.css">
 
     <title>艾斯移動 - 我的首頁</title>
 </head>
@@ -278,8 +279,8 @@
                     </li>
                     <li>
                         <div class="item">生日</div>
-                        <div class="item input-box auto-left">
-                            <input type="date" class="form-control px-0 div-switch d-none" placeholder="YYYY/MM/DD">
+                        <div class="item input-box auto-left div-switch d-none">
+                            <input class="inp js-date text-right text-bluedk border-0" placeholder="YYYY/MM/DD" value="1990/05/10">
                         </div>
                         <div class="item auto-left div-switch d-block">1990/05/10</div>
                     </li>
@@ -1759,10 +1760,17 @@
     <!-- vendor js -->
     <script src="../js/vendor/swiper/js/swiper.min.js"></script>
     <script src="../js/vendor/imgLiquid.js"></script>
+    <script src="../js/vendor/popoPicker-master/js/popoPicker.js"></script>
 
     <!-- custom js -->    
     <script src="../js/animateCss.js"></script>
     <script>
+        //popoPicker Date
+        new popoDateTime('.js-date',{
+            container:'.input-box',
+            time: false
+        });
+
         //cityzip
         $(document).ready(function() { 
             var JData = [{id:"t1", telname:"中國大陸", telcode:"86"},
