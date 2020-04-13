@@ -533,3 +533,16 @@
                 </div>
             </div>
         </div>
+
+        <!-- iframe Modal -->
+        <div class="modal fade" id="iframeModalCenter" tabindex="-1" role="dialog" aria-labelledby="loginModalCenterTitle" aria-hidden="true">
+            <div class="modal-full modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header p-0" data-dismiss="modal" aria-label="Close">
+                </div>
+                <div class="modal-body mt-0 p-0">   
+                    <iframe [src]="justkaUrl | Safe: 'resourceUrl'" src="https://mobii.ai" frameborder="0" class="justkaBox"></iframe>
+                </div>
+            </div>
+            </div>
+        </div>  
