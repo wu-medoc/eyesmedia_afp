@@ -125,7 +125,7 @@
                 html += '<div class="p-select-title">' + option.headTitle + '</div>';
             }
             if (option.display != 'center') {
-                html += '<a href="javascript:void(0)" class="p-select-submit-btn">確認</a>';
+                html += '<a href="javascript:void(0)" class="p-select-submit-btn">完成</a>';
             }
             html += '</div>';
             html += '<div class="p-select-body">';
