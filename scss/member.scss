@@ -294,6 +294,9 @@
             button{
                 color: $blue-dark;
             }      
+        }        
+        &.p-select-wheel>li{
+            border-bottom: 0px;
         }
     }    
 }

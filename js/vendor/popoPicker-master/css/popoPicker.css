@@ -248,7 +248,6 @@
     cursor: pointer;
     -webkit-user-select: none;
     text-align: center;
-    border-bottom: 0px;
 }
 .p-select-ul>li{
     color: #666;

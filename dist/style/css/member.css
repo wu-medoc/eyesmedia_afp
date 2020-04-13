@@ -354,6 +354,10 @@
   color: #182B56;
 }
 
+.my-list-box ul.p-select-wheel > li {
+  border-bottom: 0px;
+}
+
 .my-info-box {
   display: -webkit-box;
   display: -ms-flexbox;
