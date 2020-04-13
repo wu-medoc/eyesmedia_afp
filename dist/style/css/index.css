@@ -3434,6 +3434,7 @@ button.open-page img {
 .header-secondary .title-name {
   font-size: 1.3em;
   font-weight: bold;
+  white-space: nowrap;
 }
 
 .header-secondary .col-3 {

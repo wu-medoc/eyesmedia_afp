@@ -29,11 +29,11 @@
     <div class="onlineshopping slideInRight animated">
         <header class="fixed-top container">
             <!-- header top -->
-            <div class="header-secondary">
+            <div class="header-secondary linebt-row">
                 <div class="index-flex justify-content-between">
-                    <div class="item two">
+                    <div class="item one">
                         <div class="close-btn">
-                            <button class="btn" onclick="backLayerOne()" data-toggle="tooltip" data-placement="bottom" title="回上一頁">
+                            <button class="btn px-0" onclick="backLayerOne()" data-toggle="tooltip" data-placement="bottom" title="回上一頁">
                                 <i class="material-icons">&#xE314;</i>
                             </button>
                         </div>
@@ -41,8 +41,8 @@
                     <div class="item three text-center">
                         <div class="title-name">Ｗifi網路分享器</div>
                     </div>
-                    <div class="item two">
-                        <div class="top-item climate text-right"> 
+                    <div class="item one">
+                        <div class="top-item climate text-right d-flex"> 
                                 <img src="../img/shopping/icon_chat.svg" class="" data-toggle="tooltip" data-placement="bottom" title="客服">
                                 <button onclick="location.href='shopping-cart.html'" class="badge-img px-0" data-toggle="tooltip" data-placement="bottom" title="購物車">
                                     <span class="badge badge-on">99+</span><img src="../img/shopping/icon_shoppingcart.svg">
@@ -51,7 +51,7 @@
                     </div>
                 </div>
             </div>
-            <div class="header-sort">            
+            <div class="choice-filter-box py-1">            
                 <div class="flex-inline-between">
                     <div class="flex-inline-between">
                         <div class="item center-v">日本</div>
@@ -59,7 +59,7 @@
                             <button class="btn px-0 filter-item" data-filter="type"><i class="material-icons">&#xE313;</i></button>
                         </div>
                     </div>
-                    <div class="sub-img" onclick="callsortLayer('.productslistsort');">
+                    <div class="filter-box" onclick="callsortLayer('.productslistsort');">
                         <button class="btn px-0"><i class="material-icons">&#xE152;</i></button>
                     </div>
                 </div>
@@ -68,7 +68,7 @@
         <main>        
             <div class="header-100"></div>     
             <!-- masonry products -->
-            <div class="products-listbox filter-container"> 
+            <div class="products-listbox filter-container mt-2"> 
                 <div class="mask-container d-none w-100 h-100"></div>    
                     <div class="grid">
                         <div class="products-sizer"></div>
