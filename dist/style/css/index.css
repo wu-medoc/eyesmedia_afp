@@ -1922,6 +1922,21 @@ footer.for-pc li {
   color: rgba(24, 43, 86, 0.5);
 }
 
+.modal-body .myphoneinput {
+  /* Chrome, Safari, Edge, Opera */
+  /* Firefox */
+}
+
+.modal-body .myphoneinput input::-webkit-outer-spin-button,
+.modal-body .myphoneinput input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.modal-body .myphoneinput input[type=number] {
+  -moz-appearance: textfield;
+}
+
 #vcode-form {
   text-align: left;
 }
