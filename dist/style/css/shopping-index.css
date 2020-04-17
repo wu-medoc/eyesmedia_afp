@@ -581,6 +581,7 @@ footer a:hover {
   color: #182B56;
   font-weight: bold;
   padding: 0 0.5em;
+  min-height: 48px;
 }
 
 .products-listbox .products-item .products-price {
