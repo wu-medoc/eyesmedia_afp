@@ -70,8 +70,23 @@
                 <button type="button" class="btn outline-btn w-100 mt-4" onclick="div_switch();">卡片列表(如有卡片時的顯示畫面)</button>   
             </div>            
             <!--卡片列表-->
-            <div class="my-list-box border-bottom-0 div-switch d-none">       
-                <ul>
+            <div class="member-item-group border-bottom-0 div-switch d-none">  
+                <button class="btn open-overlay-choice"> 
+                    <div class="mycard-box">
+                        <img class="mycard-img" src="../img/member/mycard-blue.png">
+                        <div class="mycard-info">
+                            <img class="mycard-simg ml-auto" src="../img/member/ipass1.png">
+                            <p class="info-bc align-self-center">超級會員</p>
+                            <p class="info-bb mt-auto ml-auto"> 890 1</p>
+                        </div>
+                    </div>
+                </button> 
+                <div class="text-center">＊卡片掛失服務請依一卡通掛失規定辦理<span class="text-index">前往掛失</span></div>    
+                <div class="d-flex d-inline p-3">
+                    <button class="btn bluedk-outline-btn w-50 m-2">乘車紀錄</button>
+                    <button class="btn bluedk-outline-btn w-50 m-2">消費記錄</button>
+                </div>
+                <!-- <ul>
                     <li>                                                  
                         <button class="btn open-overlay-choice w-100"> 
                             <div class="flex-inline-between">
@@ -85,13 +100,13 @@
                             </div>     
                         </button>
                     </li>
-                </ul>
+                </ul> -->
             </div>
         </div>
     </div>
   
         <!--修改卡片選單-->
-        <div class="overlay-choice" style="display: none;">
+        <div class="overlay-choice container p-3" style="display: none;">
             <div class="choice-list">
                 <ul>
                     <li>

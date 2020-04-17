@@ -2719,6 +2719,9 @@ td.linebt-td,
     color: #fff;
     background: $gray-color;
   }
+  &:hover{
+    color: $blue-dark;
+  }
 }
 .index-outline-btn{
   color: $index-default;
@@ -2750,6 +2753,9 @@ td.linebt-td,
   &.unable{
     color: #fff;
     background: $gray-color;
+  }
+  &:hover{
+    color: $index-default;
   }
 }
 .white-outline-btn{

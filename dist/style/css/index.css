@@ -3021,6 +3021,11 @@ td.linebt-td,
   background: #8E8E93;
 }
 
+.next-btn:hover,
+.index-btn:hover {
+  color: #182B56;
+}
+
 .index-outline-btn {
   color: #FD5F00;
   border-color: #FD5F00;
@@ -3057,6 +3062,10 @@ td.linebt-td,
 .bluedk-btn.unable {
   color: #fff;
   background: #8E8E93;
+}
+
+.bluedk-btn:hover {
+  color: #FD5F00;
 }
 
 .white-outline-btn {
