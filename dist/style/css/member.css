@@ -7,6 +7,16 @@
   color: #182B56;
 }
 
+.w-84 {
+  width: auto;
+}
+
+@media screen and (max-width: 480px) {
+  .w-84 {
+    width: 84px;
+  }
+}
+
 .member-top-box {
   position: relative;
   background: #FD5F00;
@@ -384,7 +394,7 @@
 
 .my-info-box .passport-status {
   margin-top: -6px;
-  color: #8E8E93;
+  color: #FD5F00;
 }
 
 .my-info-box .passport-status .material-icons {
@@ -602,16 +612,6 @@ input[type="file"] {
 
 .my-address-list ul li:first-child {
   border-top: 1px #eee solid;
-}
-
-.my-address-list ul li .item.w-84 {
-  width: auto;
-}
-
-@media screen and (max-width: 570px) {
-  .my-address-list ul li .item.w-84 {
-    width: 84px;
-  }
 }
 
 .my-address-list ul li .item.default-item p {

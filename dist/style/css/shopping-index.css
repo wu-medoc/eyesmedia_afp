@@ -526,6 +526,10 @@ footer a:hover {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  min-height: 40px;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 
 .shopping-products .products-price .price-asking {
@@ -568,9 +572,6 @@ footer a:hover {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -587,7 +588,7 @@ footer a:hover {
   text-decoration: line-through;
   text-align: bottom;
   font-size: 0.8em;
-  text-align: right;
+  padding-left: .5em;
 }
 
 @media (max-width: 767px) {
@@ -637,6 +638,7 @@ footer a:hover {
   color: #182B56;
   font-weight: bold;
   padding: 0 0.5em;
+  min-height: 48px;
 }
 
 .products-recently .products-item .products-price {
@@ -644,9 +646,6 @@ footer a:hover {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -663,7 +662,7 @@ footer a:hover {
   text-decoration: line-through;
   text-align: bottom;
   font-size: 0.8em;
-  text-align: right;
+  padding-left: .5em;
 }
 
 /* shopping產品資訊 */
@@ -768,6 +767,7 @@ footer a:hover {
   color: #182B56;
   font-weight: bold;
   padding: 0 0.5em;
+  min-height: 48px;
 }
 
 .shopping-productsdetail .products-price {

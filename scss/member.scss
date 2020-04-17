@@ -9,6 +9,12 @@
         color: $blue-dark;
     }
 }
+.w-84{
+    width: auto;
+    @media screen and (max-width: 480px) {
+        width: 84px;
+    }
+}
 .member-top-box{
     position: relative;
     background: $index-default;
@@ -316,7 +322,7 @@
     }
     .passport-status{
         margin-top: -6px;
-        color: $gray-color;
+        color: $index-default;
         .material-icons{
             font-size: 18px;
             vertical-align: sub;
@@ -491,12 +497,6 @@ input[type="file"] {
                 border-top: 1px $gray-light solid;
             }
             .item{
-                &.w-84{
-                    width: auto;
-                    @media screen and (max-width: 570px) {
-                        width: 84px;
-                    }
-                }
                 &.default-item{
                     p{
                         color: $member-default;
