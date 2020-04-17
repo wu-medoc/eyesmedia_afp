@@ -3572,7 +3572,10 @@ button.open-page {
       .card{
           margin-top: .25em;
           //box-shadow: 0 0 3px rgba(0,0,0,.2);
-          -webkit-column-break-inside: avoid;
+          -webkit-column-break-inside: avoid;          
+          button{
+              min-width: 65px;
+          }
       }
       column-count: 1;
       @media screen and (min-width: 1023px) {

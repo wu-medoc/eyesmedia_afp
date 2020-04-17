@@ -11,7 +11,9 @@
         font-size: small;
     }
 }
-
+button.btn{
+    white-space: nowrap;
+}
 .rwdimg.logo-img{
     //border: 1px $gray-light solid;
     width: 80px;
@@ -69,6 +71,11 @@
                 position: relative;
                 padding: 10px;
                 padding-right: 0;
+                min-width: 75px;
+                text-align: center;
+                button{
+                    min-width: 65px;
+                }
                 .line-box{
                     display: block;
                     width: 1px;
