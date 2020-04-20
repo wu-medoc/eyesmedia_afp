@@ -361,7 +361,7 @@ $(document).ready(function(){
     //     },1000);
     // }); 
     
-    //footer control
+    //footer control hide pathname
     function getRootPath(){ 
         var strFullPath=window.document.location.href; 
         var strPath=window.document.location.pathname; 
@@ -370,7 +370,6 @@ $(document).ready(function(){
         var postPath=strPath.substring(0,strPath.substr(1).indexOf('/')+1); 
         return(strPath); 
     } 
-    // hide pathname push array
     var pathfoot = ["member","explore"];
     $.each(pathfoot, function( key, value ) {
         if (getRootPath().toLowerCase().indexOf(value)>0){
@@ -380,7 +379,13 @@ $(document).ready(function(){
 
 
     //footer.pc 
-    (($('.wrap').height()+50) < ($(window).height())) ? ($('footer.for-pc').css('position','absolute')):($('footer.for-pc').css('position','relative'));
+    if(($('.wrap').height()+70) < ($(window).height())){
+        $('footer.for-pc').css('position','fixed');
+        $('.wrap').css('padding-bottom','150px');
+    }else{
+        $('footer.for-pc').css('position','relative');
+        $('.wrap').css('padding-bottom','auto');
+    }
 });
 
 
