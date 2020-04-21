@@ -26,16 +26,28 @@
 
 <body>
     <div class="wrap container">
-        <div class="explore-top-box bg-white">
-            <div class="title-box">
-                <div class="item icon-btn" onclick="history.back()"><i class="material-icons">&#xE314;</i></div>
-                <div class="item title-name">探索週邊</div>
-                <div class="item icon-btn">
-                    <button  onclick="location.href='explore_page_02.html'" data-toggle="tooltip" data-placement="bottom" title="查看地圖">
-                        <img src="../img/explore/icon/open-map.svg">
-                    </button>
+        <header>
+            <div class="header-secondary">
+                <div class="index-flex justify-content-between">
+                    <div class="item two">
+                        <div class="close-btn">
+                             <button type="button" class="btn" onclick="history.back()" data-toggle="tooltip" data-placement="bottom" title="回上一頁">
+                                <i class="material-icons">&#xE314;</i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="item three text-center">
+                        <div class="title-name">探索週邊</div>
+                    </div>
+                    <div class="item two">
+                        <button  onclick="location.href='explore_page_02.html'" data-toggle="tooltip" data-placement="bottom" title="查看地圖">
+                            <img src="../img/explore/icon/open-map.svg">
+                        </button>
+                    </div>
                 </div>
             </div>
+        </header>
+        <div class="explore-top-box bg-white">
             <div class="input-box">
                 <div class="form-group">
                     <div class="input">
@@ -58,7 +70,7 @@
                 </div>
             </div>
         </div>
-        <div class="explore-container pb-5">
+        <div class="explore-container pb-wrap">
             <div class="explore-card-list">
                 <div class="mask-container d-none w-100 h-100"></div>
                 <a href="explore_page_03.html">
@@ -268,293 +280,178 @@
                     </li>
                 </ul>
             </div>
-            
-            </div>
         </div>
 
-    <!--篩選-->
-    <div class="sortlayer">       
-        <div class="sortpage1">
-            <div id="open-pagebox">
-                <div class="open-page-title flex-inline-between">
-                    <div class="title-icon">
-                        <button class="btn" onclick="backsortLayer();">
-                            <i class="material-icons">&#xE314;</i>
-                        </button>
+        <!--篩選-->
+        <div class="sortlayer">       
+            <div class="sortpage1">
+                <div id="open-pagebox">
+                    <div class="open-page-title flex-inline-between">
+                        <div class="title-icon">
+                            <button class="btn" onclick="backsortLayer();">
+                                <i class="material-icons">&#xE314;</i>
+                            </button>
+                        </div>
+                        <div class="title-txt">
+                            篩選與排序
+                        </div>
+                        <div class="title-txt active">
+                        </div>
                     </div>
-                    <div class="title-txt">
-                        篩選與排序
-                    </div>
-                    <div class="title-txt active">
-                    </div>
-                </div>
-                <ul class="open-page-ul">
-                    <label>篩選</label>
-                    <li class="flex-inline-between">
-                        <div class="">
-                            捷運紅線
-                        </div>
-                        <div class="">
-                            全部顯示<i class="fas fa-chevron-right fa-fw"></i>
-                        </div>                
-                    </li>
-                    <li class="flex-inline-between">
-                        <div class="">
-                            捷運橘線
-                        </div>
-                        <div class="">
-                            全部顯示<i class="fas fa-chevron-right fa-fw"></i>
-                        </div>                
-                    </li>
-                    <li class="flex-inline-between active" onclick="callsortLayer('.sortpage2');">
-                        <div class="">
-                            高捷輕軌
-                        </div>
-                        <div class="">
-                            夢時代<i class="fas fa-chevron-right fa-fw"></i>
-                        </div>                
-                    </li>
-                    <li class="flex-inline-between">
-                        <div class="">
-                            藍色公路
-                        </div>
-                        <div class="">
-                            全部顯示<i class="fas fa-chevron-right fa-fw"></i>
-                        </div>                
-                    </li>
-                    <li class="flex-inline-between">
-                        <div class="">
-                            往山上走
-                        </div>
-                        <div class="">
-                            全部顯示<i class="fas fa-chevron-right fa-fw"></i>
-                        </div>                
-                    </li>
-                </ul>
-                <ul class="open-page-ul">
-                    <label>排序</label>
-                    <li class="flex-inline-between">
-                        <div class="">
-                            最新上架優先
-                        </div>
-                        <div class="">                    
-                        </div>                
-                    </li>
-                    <li class="flex-inline-between active">                
+                    <ul class="open-page-ul">
+                        <label>篩選</label>
+                        <li class="flex-inline-between">
                             <div class="">
-                                熱門程度優先
+                                捷運紅線
                             </div>
                             <div class="">
-                                <i class="fas fa-check"></i>
-                            </div>   
-                    </li>
-                    <li class="flex-inline-between">
-                        <div class="">
-                            距離由近而遠
-                        </div>
-                        <div class="">
-                            
-                        </div>                
-                    </li>
-                    <li class="flex-inline-between">
-                        <div class="">
-                            距離由遠而近
-                        </div>
-                        <div class="">
-                            
-                        </div>                
-                    </li>
-                </ul>
-                <button class="btn all-reset">
-                    全部重設
-                </button>
-            </div>
-        </div>
-         <!-- shopping right-menu (open-pagebox1) -->
-         <div class="sortpage2">
-            <div id="open-pagebox1">
-                <div class="open-page-title flex-inline-between">                
-                    <div class="close-btn">
-                        <button class="btn" onclick="backsortLayer();">
-                            <i class="material-icons">&#xE314;</i>
-                        </button>
-                    </div>
-                    <div class="title-txt">
-                        周邊分類
-                    </div>
-                    <div class="title-txt">
-                    </div>
-                </div>
-                <ul class="open-page-ul">
-                    <li class="flex-inline-between">
-                        <div class="">
-                            全部顯示
-                        </div>
-                        <div class="">
-                            
-                        </div>                
-                    </li>
-                    <li class="flex-inline-between">
-                        <div class="">
-                            籬仔內C1
-                        </div>
-                        <div class="">
-                            13274
-                        </div>                
-                    </li>
-                    <li class="flex-inline-between">
-                        <div class="">
-                            凱旋瑞田C2
-                        </div>
-                        <div class="">
-                            1231
-                        </div>                
-                    </li>
-                    <li class="flex-inline-between">
-                        <div class="">
-                            前鎮之星C3
-                        </div>
-                        <div class="">
-                            274
-                        </div>                
-                    </li>
-                    <li class="flex-inline-between">
-                        <div class="">
-                            凱旋中華C4
-                        </div>
-                        <div class="">
-                            1374
-                        </div>                
-                    </li>
-                    <li class="flex-inline-between active">
-                        <div class="">
-                            夢時代C5
-                        </div>
-                        <div class="">
-                            1327<i class="fas fa-check"></i>
-                        </div>                
-                    </li>
-                </ul>
-            </div>
-        </div> 
-    </div>
-
-    </div>
-
-
-    <footer class="for-pc"> 
-        <!--web service-->
-        <div class="bearservice">            
-            <div class="scroll-top-wrapper">
-                <span class="scroll-top-inner">
-                    <button type="button" id="webservice"><img src="../img/index/icons/for-pc/icon_service.png"></button>
-                    <button type="button" id="webservice_close" class="d-none"><img src="../img/index/icons/for-pc/icon_close.png"></button>
-                </span>
-            </div>
-            <div class="popup-box chat-popup" id="qnimate">
-                <div class="popup-head">
-                    <div class="popup-head-left pull-left"><img src="../img/index/icons/for-pc/icon_bear.png" alt="service"> 熊客服</div>
-                </div>
-                <div class="hr-100"></div>
-                <div class="popup-messages">          
-                    <div class="direct-chat-messages">
-                        <div class="chat-box-single-line">
-                                <abbr class="timestamp">Sun, Dec 11 1:20 PM</abbr>
-                        </div>
-                        
-                        <!-- Message. Default to the left -->
-                        <div class="direct-chat-msg">
-                            <!-- direct-chat-info -->
-                            <div class="direct-chat-text">
-                            Hey你好, 我是熊, 很高興為您服務
-                            </div>                  
-                            <ul class="direct-info">
-                                來看看有什麼熱門問題吧!
-                                <li><a href="">亞洲好玩卡網站是什麼?</a></li>
-                                <li><a href="">我想問如何快速取貨?</a></li>
-                                <li><a href="">想要退換貨怎麼辦?</a></li>
-                                <li><a href="">最近有什麼最新優惠?</a></li>
-                                <li><a href="">我該如何購買網路商品?</a></li>
-                            </ul>
-                        </div>          
-                        <!-- Message. Default to the right -->
-                        <div class="guests-chat-msg">
-                            <!-- direct-chat-info -->
-                            <div class="guests-chat-text">
-                            請幫我轉真人服務
-                            </div> 
-                            <div class="guests-chat-name">
-                            guests
-                            </div> 
-                        </div>          
+                                全部顯示<i class="fas fa-chevron-right fa-fw"></i>
+                            </div>                
+                        </li>
+                        <li class="flex-inline-between">
+                            <div class="">
+                                捷運橘線
+                            </div>
+                            <div class="">
+                                全部顯示<i class="fas fa-chevron-right fa-fw"></i>
+                            </div>                
+                        </li>
+                        <li class="flex-inline-between active" onclick="callsortLayer('.sortpage2');">
+                            <div class="">
+                                高捷輕軌
+                            </div>
+                            <div class="">
+                                夢時代<i class="fas fa-chevron-right fa-fw"></i>
+                            </div>                
+                        </li>
+                        <li class="flex-inline-between">
+                            <div class="">
+                                藍色公路
+                            </div>
+                            <div class="">
+                                全部顯示<i class="fas fa-chevron-right fa-fw"></i>
+                            </div>                
+                        </li>
+                        <li class="flex-inline-between">
+                            <div class="">
+                                往山上走
+                            </div>
+                            <div class="">
+                                全部顯示<i class="fas fa-chevron-right fa-fw"></i>
+                            </div>                
+                        </li>
+                    </ul>
+                    <ul class="open-page-ul">
+                        <label>排序</label>
+                        <li class="flex-inline-between">
+                            <div class="">
+                                最新上架優先
+                            </div>
+                            <div class="">                    
+                            </div>                
+                        </li>
+                        <li class="flex-inline-between active">                
+                                <div class="">
+                                    熱門程度優先
+                                </div>
+                                <div class="">
+                                    <i class="fas fa-check"></i>
+                                </div>   
+                        </li>
+                        <li class="flex-inline-between">
+                            <div class="">
+                                距離由近而遠
+                            </div>
+                            <div class="">
                                 
+                            </div>                
+                        </li>
+                        <li class="flex-inline-between">
+                            <div class="">
+                                距離由遠而近
+                            </div>
+                            <div class="">
+                                
+                            </div>                
+                        </li>
+                    </ul>
+                    <button class="btn all-reset">
+                        全部重設
+                    </button>
+                </div>
+            </div>
+            <!-- shopping right-menu (open-pagebox1) -->
+            <div class="sortpage2">
+                <div id="open-pagebox1">
+                    <div class="open-page-title flex-inline-between">                
+                        <div class="close-btn">
+                            <button class="btn" onclick="backsortLayer();">
+                                <i class="material-icons">&#xE314;</i>
+                            </button>
+                        </div>
+                        <div class="title-txt">
+                            周邊分類
+                        </div>
+                        <div class="title-txt">
+                        </div>
                     </div>
+                    <ul class="open-page-ul">
+                        <li class="flex-inline-between">
+                            <div class="">
+                                全部顯示
+                            </div>
+                            <div class="">
+                                
+                            </div>                
+                        </li>
+                        <li class="flex-inline-between">
+                            <div class="">
+                                籬仔內C1
+                            </div>
+                            <div class="">
+                                13274
+                            </div>                
+                        </li>
+                        <li class="flex-inline-between">
+                            <div class="">
+                                凱旋瑞田C2
+                            </div>
+                            <div class="">
+                                1231
+                            </div>                
+                        </li>
+                        <li class="flex-inline-between">
+                            <div class="">
+                                前鎮之星C3
+                            </div>
+                            <div class="">
+                                274
+                            </div>                
+                        </li>
+                        <li class="flex-inline-between">
+                            <div class="">
+                                凱旋中華C4
+                            </div>
+                            <div class="">
+                                1374
+                            </div>                
+                        </li>
+                        <li class="flex-inline-between active">
+                            <div class="">
+                                夢時代C5
+                            </div>
+                            <div class="">
+                                1327<i class="fas fa-check"></i>
+                            </div>                
+                        </li>
+                    </ul>
                 </div>
-                <div class="hr-100"></div>
-                <div class="popup-messages-footer">
-                    <input type="text" placeholder="請輸入問題">
-                </div>
-            </div>
+            </div> 
         </div>
-        <!--footer content-->
-        <div class="container">
-        <div class="row d-flex">
-            <div class="col-4 col-md-3">
-            <h6>關於亞洲好玩卡</h6>
-            <ul>
-                <li><a href="#">關於我們</a></li>
-            </ul>            
-            </div>
-            <div class="col-4 col-md-3">
-            <h6>追蹤我們</h6>
-            <ul>
-                <li><a href="#"><i class="fab fa-facebook-f fa-fw"></i> Facebook</a></li>
-                <li><a href="#"><i class="fab fa-line fa-fw"></i> Line</a></li>
-                <li><a href="#"><i class="fab fa-instagram fa-fw"></i> Instagram</a></li>
-            </ul>            
-            </div>  
-            <div class="w-100"></div>
-            <div class="col-12 border-t">
-            <div class="f-left small-70 d-flex align-items-center text-nowrap">
-                <img src="../img/index/logo-s.png" class="logo-s"><span> Designed by 艾斯移動股份有限公司</span>
-            </div>
-            <div class="f-right small-70">
-                Ⓒ2020 艾斯移動股份有限公司. All Right Reserved          
-            </div>
-            </div>
-        </div>  
-        </div>
-    </footer>
-    <footer class="mobile-footer for-mobile container">
-        <div class="menu-bar">
-            <a href="../index.html" class="bar-item">
-                <img class="default-img" src="../img/index/tabbar/home.svg" alt="">
-                <img class="active-img" src="../img/index/tabbar/home_choosen.svg" alt="">
-                首頁
-            </a>
-            <a href="explore_index.html" class="bar-item active">
-                <img class="default-img" src="../img/index/tabbar/nearby.svg" alt="">
-                <img class="active-img" src="../img/index/tabbar/nearby_choosen.svg" alt="">
-                周邊
-            </a>
-            <a href="../mission/mission_index.html" class="bar-item">
-                <div class="more-dot"></div>
-                <img class="default-img more-dot" src="../img/index/tabbar/mission.png" alt="">
-                <img class="active-img" src="../img/index/tabbar/mission_choosen.png" alt="">
-                任務
-            </a>
-            <a href="../notify/notify_index.html" class="bar-item">
-                <img class="default-img" src="../img/index/tabbar/notification.svg" alt="">
-                <img class="active-img" src="../img/index/tabbar/notification_choosen.svg" alt="">
-                通知
-            </a>
-            <a href="../member/member_index.html" class="bar-item">
-                <img class="default-img" src="../img/index/tabbar/my.svg" alt="">
-                <img class="active-img" src="../img/index/tabbar/my_choosen.svg" alt="">
-                我的
-            </a>
-        </div>
-    </footer>
+
+    </div>
+
+    <div id="footerMobii"></div>
 
 
     <!-- Optional JavaScript -->
@@ -577,6 +474,7 @@
     <script src="../js/animateCss.js"></script>
     
     <script>
+        $("#footerMobii").load("../footerMobii.html");
         $(document).ready(function(){
             // var topBox = $('.explore-top-box');
             // // console.log(topBox.height());

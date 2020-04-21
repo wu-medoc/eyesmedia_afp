@@ -3452,20 +3452,38 @@ button.open-page img {
 }
 
 /* header-secondary */
+header + div {
+  padding-top: 69px;
+}
+
 .header-secondary {
   background-color: #fff;
   padding: 15px;
   min-width: 320px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1030;
 }
 
 .header-secondary .title-name {
   font-size: 1.3em;
   font-weight: bold;
   white-space: nowrap;
+  text-align: center;
 }
 
 .header-secondary .col-3 {
   padding: 0;
+}
+
+.header-secondary div.item:first-child {
+  text-align: left;
+}
+
+.header-secondary div.item:last-child {
+  text-align: right;
 }
 
 .header-sort {
@@ -4030,37 +4048,6 @@ img.nearbyimg {
 }
 
 /* animated control */
-.s0 {
-  overflow: hidden;
-  width: 100%;
-  height: 100vh;
-}
-
-#s1, #s2, #s3, #s4, #s5, #s6 {
-  overflow-x: hidden;
-  overflow-y: auto;
-  width: 100%;
-  height: 100%;
-  min-height: 100vh;
-  position: absolute;
-  top: 0;
-  display: none;
-  background-color: #fff;
-  z-index: 301;
-  padding: 0;
-}
-
-#s1 > div,
-#s2 > div,
-#s3 > div,
-#s4 > div,
-#s5 > div,
-#s6 > div {
-  display: none;
-  background-color: #fff;
-  min-height: 100vh;
-}
-
 .multilayer {
   position: fixed;
   width: 100%;
@@ -4083,19 +4070,6 @@ img.nearbyimg {
   z-index: 1;
 }
 
-.sortlayer > div {
-  position: absolute;
-  overflow-x: hidden;
-  overflow-y: auto;
-  display: none;
-  background-color: transparent;
-  min-height: 100vh;
-}
-
-.sortlayer > div li.active > div {
-  color: #FD5F00;
-}
-
 .sortlayer,
 .uplayer {
   position: fixed;
@@ -4107,6 +4081,19 @@ img.nearbyimg {
   min-height: 100vh;
   padding: 0;
   overflow: hidden;
+}
+
+.sortlayer > div {
+  position: absolute;
+  overflow-x: hidden;
+  overflow-y: auto;
+  display: none;
+  background-color: transparent;
+  min-height: 100vh;
+}
+
+.sortlayer > div li.active > div {
+  color: #FD5F00;
 }
 
 .uplayer > div {
