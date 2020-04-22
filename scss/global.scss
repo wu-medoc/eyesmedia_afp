@@ -64,6 +64,19 @@ body {
   }
 }
 
+
+.wrap {  
+  min-width: 320px;
+  //overflow-x: hidden;
+  height: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  padding-bottom: 0px;
+}
+.pb-wrap{  
+  padding-bottom: 0px;
+}
+
 @media (max-width: 767px){  
   .container{     
     width: 100%;
@@ -72,18 +85,9 @@ body {
     margin-right: auto;
     margin-left: auto;
   }
-}
-
-.wrap {  
-  min-width: 320px;
-  //overflow-x: hidden;
-  height: 100%;
-  margin-right: auto;
-  margin-left: auto;
-  padding-bottom: 82px;
-}
-.pb-wrap{  
-  padding-bottom: 82px;
+  .wrap, .pb-wrap{  
+    padding-bottom: 82px;
+  }
 }
 .hasBg {
   background-color: #F8F8F8;
@@ -95,7 +99,6 @@ body {
   padding-left: 0;
   padding-right: 0;
 }
-
 // 全站遮罩
 .overlay {
   position: absolute;
@@ -430,15 +433,13 @@ footer.for-mobile {
 }
 
 footer.for-pc{
-  padding: 20px 0;
+  padding: 15px 0 0 0;
   background: #f8f8f8;
   width: 100%;  
   min-width: 320px;
   position: relative;
   display: inline-block;
   bottom: 0;
-  margin-top: -180px;
-  height: 180px;
   clear:both;
   @media (max-width: 767px) {
     display: none;

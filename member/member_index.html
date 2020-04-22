@@ -351,8 +351,8 @@
                 <ul>
                     <li>
                         <div class="item">有效期限</div>
-                        <div class="item input-box">
-                            <input type="date" value="">
+                        <div class="item input-box1">
+                            <input class="inp js-date1 text-right text-bluedk border-0" placeholder="YYYY/MM/DD" value="1990/07/10">
                         </div>
                         <div class="item auto-left"></div>
                     </li>
@@ -392,8 +392,8 @@
                 <ul>
                     <li>
                         <div class="item">有效期限</div>
-                        <div class="item input-box">
-                            <input type="date" value="">
+                        <div class="item input-box2">
+                            <input class="inp js-date2 text-right text-bluedk border-0" placeholder="YYYY/MM/DD" value="1990/07/10">
                         </div>
                         <div class="item auto-left"></div>
                     </li>
@@ -613,8 +613,8 @@
                 <ul>
                     <li>
                         <div class="item">有效期限</div>
-                        <div class="item input-box">
-                            <input type="date" value="2024-01-01">
+                        <div class="item input-box3">
+                            <input class="inp js-date3 text-right text-bluedk border-0" placeholder="YYYY/MM/DD" value="1990/07/10">
                         </div>
                     </li>
                 </ul>
@@ -650,8 +650,8 @@
                 <ul>
                     <li>
                         <div class="item">有效期限</div>
-                        <div class="item input-box">
-                            <input type="date" value="2024-01-01">
+                        <div class="item input-box4">
+                            <input class="inp js-date4 text-right text-bluedk border-0" placeholder="YYYY/MM/DD" value="1990/07/10">
                         </div>
                     </li>
                 </ul>
@@ -844,7 +844,7 @@
                     <div class="item p-3">
                         設定為預設地址
                     </div>
-                    <div class="item item-checkbox">
+                    <div class="item item-checkbox center-v">
                         <div class="sitem-checkbox text-right">
                             <div class="icheck-material-blue center-v">
                                 <input id="products002" type="checkbox" checked>
@@ -1684,67 +1684,8 @@
 <div id="open-mask"></div>
 
 <div id="loginhtml"></div>
-
-    <!--頁尾-->
-    <footer class="for-pc"> 
-        <div class="container">
-            <div class="row d-flex">
-                <div class="col-4 col-md-3">
-                <h6>關於亞洲好玩卡</h6>
-                <ul>
-                    <li><a href="#">關於我們</a></li>
-                </ul>            
-                </div>
-                <div class="col-4 col-md-3">
-                <h6>追蹤我們</h6>
-                <ul>
-                    <li><a href="#"><i class="fab fa-facebook-f fa-fw"></i> Facebook</a></li>
-                    <li><a href="#"><i class="fab fa-line fa-fw"></i> Line</a></li>
-                    <li><a href="#"><i class="fab fa-instagram fa-fw"></i> Instagram</a></li>
-                </ul>            
-                </div>  
-                <div class="w-100"></div>
-                <div class="col-12 border-t">
-                <div class="f-left small-70 d-flex align-items-center text-nowrap">
-                <img src="../img/index/logo-s.png" class="logo-s"><span> Designed by 艾斯移動股份有限公司</span>
-            </div>
-                <div class="f-right small-70">
-                Ⓒ2020 艾斯移動股份有限公司. All Right Reserved          
-                </div>
-                </div>
-            </div>  
-        </div>
-    </footer>
-    <footer class="mobile-footer for-mobile container">
-        <div class="menu-bar">
-            <a href="../index.html" class="bar-item">
-                <img class="default-img" src="../img/index/tabbar/home.svg" alt="">
-                <img class="active-img" src="../img/index/tabbar/home_choosen.svg" alt="">
-                首頁
-            </a>
-            <a href="../explore/explore_index.html" class="bar-item">
-                <img class="default-img" src="../img/index/tabbar/nearby.svg" alt="">
-                <img class="active-img" src="../img/index/tabbar/nearby_choosen.svg" alt="">
-                周邊
-            </a>
-            <a href="../mission/mission_index.html" class="bar-item">
-                <div class="more-dot"></div>
-                <img class="default-img more-dot" src="../img/index/tabbar/mission.png" alt="">
-                <img class="active-img" src="../img/index/tabbar/mission_choosen.png" alt="">
-                任務
-            </a>
-            <a href="../notify/notify_index.html" class="bar-item">
-                <img class="default-img" src="../img/index/tabbar/notification.svg" alt="">
-                <img class="active-img" src="../img/index/tabbar/notification_choosen.svg" alt="">
-                通知
-            </a>
-            <a href="member_index.html" class="bar-item active">
-                <img class="default-img" src="../img/index/tabbar/my.svg" alt="">
-                <img class="active-img" src="../img/index/tabbar/my_choosen.svg" alt="">
-                我的
-            </a>
-        </div>
-    </footer>      
+<div id="footerMobii"></div>
+  
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -1772,7 +1713,22 @@
             container:'.input-box',
             time: false
         });
-
+        new popoDateTime('.js-date1',{
+            container:'.input-box1',
+            time: false
+        });
+        new popoDateTime('.js-date2',{
+            container:'.input-box2',
+            time: false
+        });
+        new popoDateTime('.js-date3',{
+            container:'.input-box3',
+            time: false
+        });
+        new popoDateTime('.js-date4',{
+            container:'.input-box4',
+            time: false
+        });
         //cityzip
         $(document).ready(function() { 
             var JData = [{id:"t1", telname:"中國大陸", telcode:"86"},
@@ -2024,6 +1980,7 @@
 
     <script>    
         $("#loginhtml").load("../login.html");
+        $("#footerMobii").load("../footerMobii.html");
     </script>
     <script src="../js/index.js"></script>
 </body>

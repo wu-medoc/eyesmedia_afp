@@ -2,7 +2,8 @@
 
 .mymember {
     //background: linear-gradient($index-default 30%, #fff 0);
-    background: $index-default;
+    //background: $index-default;
+    min-height:100vh;
 }
 .title-box{
     button.btn{
