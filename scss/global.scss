@@ -67,16 +67,28 @@ body {
 
 .wrap {  
   min-width: 320px;
-  //overflow-x: hidden;
   height: 100%;
   margin-right: auto;
   margin-left: auto;
-  padding-bottom: 0px;
 }
-.pb-wrap{  
+.wrap, .pb-wrap{  
   padding-bottom: 0px;
+  @media (max-width: 767px){  
+    padding-bottom: 79px;
+  }
+  @media (max-width: 570px){  
+    padding-bottom: 82px;
+  }
+  @media (max-width: 480px){  
+    padding-bottom: 74px;
+  }
+  @media (max-width: 375px){  
+    padding-bottom: 65px;
+  }
+  @media (max-width: 320px){  
+    padding-bottom: 58px;
+  }
 }
-
 @media (max-width: 767px){  
   .container{     
     width: 100%;
@@ -84,9 +96,6 @@ body {
     padding-left: 0;
     margin-right: auto;
     margin-left: auto;
-  }
-  .wrap, .pb-wrap{  
-    padding-bottom: 82px;
   }
 }
 .hasBg {
@@ -188,6 +197,8 @@ i {
 
 ul, ol {
   list-style: none;
+  padding-left: 0;
+  padding-right: 0;
 }
 
 :focus {

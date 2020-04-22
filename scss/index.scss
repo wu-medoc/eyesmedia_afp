@@ -2229,7 +2229,6 @@ td.linebt-td,
 } 
 
 .bearservice-lg {
-  height: 90vh;
   border-left: 1px solid #ccc;
   border-right: 1px solid #ccc;
   .chat-box {
@@ -2315,27 +2314,24 @@ td.linebt-td,
     display: flex;
     width: 100%;
     min-width: 320px;
-    padding: .5em .5em 1.5em .5em;
+    padding: .5em;
     @media (max-width: 767px) {
-      bottom: 62px;
+      bottom: 79px;
     }
     @media (max-width: 570px) {
-      bottom: 62px;
+      bottom: 82px;
     }
     @media (max-width: 480px) {
-      bottom: 55px;
+      bottom: 74px;
     }
     @media (max-width: 375px) {
-      bottom: 40px;
+      bottom: 63px;
     }
-    @media (min-width: 768px) and (max-width: 991px) {
-      bottom: 80px;
+    @media (max-width: 320px) {
+      bottom: 58px;
     }
-    @media (min-width: 992px) {      
-      bottom: 105px;
-    }
-    @media (min-width: 1200px) {  
-      bottom: 125px;
+    @media (min-width: 768px) {  
+      bottom: 180px;
     }
     input{
       border: 1px solid #ccc;
@@ -3199,9 +3195,19 @@ button.open-page {
 }
 
 /* header-secondary */
+.headerbox + form, 
+.headerbox + div, 
+header + form, 
+header + main, 
 header + div{
-  padding-top: 69px;
+  padding-top: 72px;
 }
+@media (max-width: 767px){  
+  .headerbox + div{  
+    padding-bottom: 70px;
+  }
+}
+.headerbox, 
 .header-secondary {
   background-color: #fff;
   padding: 15px;
@@ -3225,6 +3231,7 @@ header + div{
   }
   div.item:last-child{
     text-align: right;
+    text-align: -webkit-right;
   }
 }
 

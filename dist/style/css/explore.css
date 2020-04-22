@@ -63,6 +63,47 @@ body {
   }
 }
 
+.wrap {
+  min-width: 320px;
+  height: 100%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.wrap, .pb-wrap {
+  padding-bottom: 0px;
+}
+
+@media (max-width: 767px) {
+  .wrap, .pb-wrap {
+    padding-bottom: 79px;
+  }
+}
+
+@media (max-width: 570px) {
+  .wrap, .pb-wrap {
+    padding-bottom: 82px;
+  }
+}
+
+@media (max-width: 480px) {
+  .wrap, .pb-wrap {
+    padding-bottom: 74px;
+  }
+}
+
+@media (max-width: 375px) {
+  .wrap, .pb-wrap {
+    padding-bottom: 65px;
+  }
+}
+
+@media (max-width: 320px) {
+  .wrap, .pb-wrap {
+    padding-bottom: 58px;
+  }
+}
+
 @media (max-width: 767px) {
   .container {
     width: 100%;
@@ -71,18 +112,6 @@ body {
     margin-right: auto;
     margin-left: auto;
   }
-}
-
-.wrap {
-  min-width: 320px;
-  height: 100%;
-  margin-right: auto;
-  margin-left: auto;
-  padding-bottom: 82px;
-}
-
-.pb-wrap {
-  padding-bottom: 82px;
 }
 
 .hasBg {
@@ -181,6 +210,8 @@ i {
 
 ul, ol {
   list-style: none;
+  padding-left: 0;
+  padding-right: 0;
 }
 
 :focus {
@@ -444,15 +475,13 @@ footer.for-mobile {
 }
 
 footer.for-pc {
-  padding: 20px 0;
+  padding: 15px 0 0 0;
   background: #f8f8f8;
   width: 100%;
   min-width: 320px;
   position: relative;
   display: inline-block;
   bottom: 0;
-  margin-top: -180px;
-  height: 180px;
   clear: both;
 }
 

@@ -306,7 +306,6 @@ var swiper = new Swiper('.shopping-productsimg.swiper-container', {
     });
 }
 
-
 $(document).ready(function(){
     // bear service
     // var windowHight = $(window).height();
@@ -516,16 +515,18 @@ function backLayerUp() {
 };
 
 //this onelayer use animateCss
-var oneLayer = [];
-function callLayerOne() {
-var nextLayerOne = '.wrap';
-    oneLayer.push(nextLayerOne);
-    $(nextLayerOne).animateCss('slideInRight', '+container faster');
-};
-function backLayerOne() {
-    $(oneLayer.pop()).animateCss('slideOutRight', '-container faster');
-    $('.wrap').fadeOut(200,function(){ 
-        (history.length<=2) ? window.location.href='../index.html' : history.back(); 
-    });
-    oneLayer.length=0;
-};
+// var oneLayer = [];
+// function callLayerOne() {
+// var nextLayerOne = '.wrap';
+//     oneLayer.push(nextLayerOne);
+//     $(nextLayerOne).animateCss('slideInRight', '+container faster');
+// };
+// function backLayerOne() {
+//     $(oneLayer.pop()).animateCss('slideOutRight', '-container faster');
+//     $('.wrap').fadeOut(200,function(){ 
+//         (history.length<=2) ? window.location.href='../index.html' : history.back(); 
+//     });
+//     oneLayer.length=0;
+// };
+
+//$('.iconpage').css('-webkit-animation-name','slideOutRight').css('animation-name','slideOutRight');

@@ -389,7 +389,7 @@
             </div>
         </div>
         <div class="h-50 d-inline-block"></div>
-        <div id="loginhtml"></div>
+        
     </main>
     
     <!--篩選-->
@@ -564,6 +564,9 @@
     </div> 
     </div>
 
+    <div id="loginhtml"></div>
+    <div id="footerMobii"></div>
+    
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="../js/vendor/bs4/js/jquery-3.2.1.slim.min.js"></script>
@@ -588,6 +591,7 @@
     <script>   
         // login.html load
         $("#loginhtml").load("../login.html");
+        $("#footerMobii").load("../footerMobii.html");
         
         // swiper for shopping-storeimg
         if ($( ".shopping-storeimg" ).hasClass("swiper-container")) {

@@ -26,44 +26,44 @@
 
 <body>
 <div class="wrap container">
-    <div class="onlineshopping slideInRight animated">
-        <header class="fixed-top container">
-            <!-- header top -->
-            <div class="header-secondary">
-                <div class="index-flex justify-content-between">
-                    <div class="item two">
-                        <div class="close-btn">
-                            <button class="btn px-0" onclick="history.back();" data-toggle="tooltip" data-placement="bottom" title="回上一頁">
-                                <i class="material-icons">&#xE314;</i>
+    <header>
+        <div class="header-secondary container">
+            <div class="index-flex justify-content-between">
+                <div class="item two">
+                    <div class="close-btn">
+                        <button class="btn px-0" onclick="history.back();" data-toggle="tooltip" data-placement="bottom" title="回上一頁">
+                            <i class="material-icons">&#xE314;</i>
+                        </button>
+                    </div>
+                </div>
+                <div class="item three text-center">
+                    <div class="title-name">台灣伴手禮</div>
+                </div>
+                <div class="item two">
+                    <div class="top-item climate text-right"> 
+                            <img src="../img/shopping/icon_chat.svg" class="" data-toggle="tooltip" data-placement="bottom" title="客服">
+                            <button onclick="location.href='shopping-cart.html'" class="badge-img px-0" data-toggle="tooltip" data-placement="bottom" title="購物車">
+                                <span class="badge badge-on">99+</span><img src="../img/shopping/icon_shoppingcart.svg">
                             </button>
-                        </div>
-                    </div>
-                    <div class="item three text-center">
-                        <div class="title-name">台灣伴手禮</div>
-                    </div>
-                    <div class="item two">
-                        <div class="top-item climate text-right"> 
-                                <img src="../img/shopping/icon_chat.svg" class="" data-toggle="tooltip" data-placement="bottom" title="客服">
-                                <button onclick="location.href='shopping-cart.html'" class="badge-img px-0" data-toggle="tooltip" data-placement="bottom" title="購物車">
-                                    <span class="badge badge-on">99+</span><img src="../img/shopping/icon_shoppingcart.svg">
-                                </button>
-                        </div>
                     </div>
                 </div>
             </div>
-            <div class="header-sort">            
-                <div class="flex-inline-between">
-                    <div class="sub-title">
-                            篩選與排序
-                    </div>
-                    <div class="sub-img" onclick="callsortLayer('.productslistsort');">
-                        <button class="btn px-0"><i class="material-icons">&#xE152;</i></button>
-                    </div>
+        </div>
+    </header>
+    <div class="onlineshopping">
+
+        <div class="header-sort">            
+            <div class="flex-inline-between">
+                <div class="sub-title">
+                        篩選與排序
+                </div>
+                <div class="sub-img" onclick="callsortLayer('.productslistsort');">
+                    <button class="btn px-0"><i class="material-icons">&#xE152;</i></button>
                 </div>
             </div>
-        </header>
+        </div>
         <main>        
-            <div class="header-100"></div>     
+                 
             <!-- masonry products -->
             <div class="products-listbox">        
                     <div class="grid">

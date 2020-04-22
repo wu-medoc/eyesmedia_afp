@@ -26,14 +26,13 @@
 
 <body>
 <div class="wrap container">
-    <div class="onlineshopping slideInRight animated">
-        <header class="fixed-top container">
-            <!-- header top -->
-            <div class="header-secondary linebt-row">
+    <div class="onlineshopping">
+        <header>
+            <div class="header-secondary container linebt-row">
                 <div class="index-flex justify-content-between">
                     <div class="item one">
                         <div class="close-btn">
-                            <button class="btn px-0" onclick="backLayerOne()" data-toggle="tooltip" data-placement="bottom" title="回上一頁">
+                            <button class="btn px-0" onclick="history.back()" data-toggle="tooltip" data-placement="bottom" title="回上一頁">
                                 <i class="material-icons">&#xE314;</i>
                             </button>
                         </div>
@@ -66,7 +65,7 @@
             </div>
         </header>
         <main>        
-            <div class="header-100"></div>     
+                 
             <!-- masonry products -->
             <div class="products-listbox filter-container mt-2"> 
                 <div class="mask-container d-none w-100 h-100"></div>    
@@ -678,7 +677,6 @@
     <script src="../js/animateCss.js"></script>
     <script>            
         $(document).ready(function() {
-            callLayerOne();
             
             // 開啟分類清單
             $('.filter-item').on('click', function(){

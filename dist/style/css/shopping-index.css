@@ -2199,10 +2199,6 @@ footer a:hover {
 }
 
 /* send */
-.is-choose-ul {
-  padding-top: 62px;
-}
-
 .is-choose-body {
   display: block;
 }
@@ -2278,10 +2274,6 @@ footer a:hover {
 }
 
 /* add address */
-.add-address-list {
-  margin-top: 62px;
-}
-
 .add-address-list li {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2481,10 +2473,6 @@ footer .order-go-pay .item {
 }
 
 /* electronic invoice */
-.electronic-choice-list {
-  margin-top: 62px;
-}
-
 .electronic-choice-list .radio-box {
   min-width: 128px;
 }
@@ -2804,7 +2792,6 @@ footer .order-go-pay .item {
 }
 
 .order-error-box {
-  margin-top: 62px;
   padding-top: 30px;
 }
 

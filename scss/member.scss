@@ -1,11 +1,13 @@
 @import "../dist/style/module/variable";
-
 .mymember {
     //background: linear-gradient($index-default 30%, #fff 0);
     //background: $index-default;
-    min-height:100vh;
+    min-height: calc(100vh + 70px);
 }
-.title-box{
+ul{
+    padding: 0;
+}
+.title-box{    
     button.btn{
         color: $blue-dark;
     }
@@ -14,6 +16,9 @@
     width: auto;
     @media screen and (max-width: 480px) {
         width: 84px;
+    }
+    @media screen and (max-width: 320px) {
+        width: 77px;
     }
 }
 .member-top-box{
@@ -314,7 +319,8 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    padding: 30px 15px;
+    padding-right: 1em;
+    padding-left: 1em;
     border-top: 1px $gray-light solid;
     border-bottom: 1px $gray-light solid;
     .info-email{
@@ -447,7 +453,8 @@ input[type="file"] {
 
 // 手機驗證
 .my-phone-list{
-    padding: 1em;
+    padding-right: 1em;
+    padding-left: 1em;
     text-align: center;
     .form-control{
         border: 1px solid #fff;

@@ -1925,9 +1925,6 @@ footer{
 
 
 /* send */
-.is-choose-ul{
-    padding-top: 62px;
-}
 .is-choose-body{
     display: block;
 }
@@ -1995,7 +1992,7 @@ footer{
 
 /* add address */
 .add-address-list{
-    margin-top: 62px;
+    //margin-top: 62px;
     li{
         display: flex;
         align-items: center;
@@ -2150,7 +2147,7 @@ footer{
 
 /* electronic invoice */
 .electronic-choice-list{
-    margin-top: 62px;
+    //margin-top: 62px;
     .radio-box{
         min-width: 128px;
     }
@@ -2401,7 +2398,7 @@ footer{
 }
 
 .order-error-box{
-    margin-top: 62px;
+    //margin-top: 62px;
     padding-top: 30px;
 }
 .order-ok,  

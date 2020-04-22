@@ -35,18 +35,30 @@
 
 <body>
     <div class="wrap container">
-        <div class="title-box">
-            <div class="item icon-btn">                        
-                <button class="btn px-0" onclick="backLayerOne();" data-toggle="tooltip" data-placement="bottom" title="回上一頁">
-                    <i class="material-icons">&#xE314;</i>
-                </button>
+        <header>
+            <div class="header-secondary container">
+                <div class="index-flex justify-content-between">
+                    <div class="item two">
+                        <div class="close-btn">
+                             <button type="button" class="btn" onclick="history.back()" data-toggle="tooltip" data-placement="bottom" title="回上一頁">
+                                <i class="material-icons">&#xE314;</i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="item three text-center">
+                        <div class="title-name">我的訂單</div>
+                    </div>
+                    <div class="item two">
+                        <button class="btn msg-open" value="msg-mydiscount" data-toggle="modal" data-target="#messageModal" data-dismiss="modal" aria-label="Close">
+                            <i class="material-icons">&#xE145;</i>
+                        </button>
+                    </div>
+                </div>
             </div>
-            <div class="item title-name">我的訂單</div>                
-            <div class="item">        
-            </div>
-        </div>      
+        </header>   
+
         <div class="afp-tab-box">
-            <div class="afp-tab mb-5">          
+            <div class="afp-tab">          
                 <div class="nav-tabs-box tablist-swiper swiper-container">
                     <!-- Nav tabs -->                                
                     <ul id="nav-tab-member" class="swiper-wrapper nav nav-tabs nav-line mb-2" role="tablist">
@@ -69,7 +81,7 @@
                     <div class="tab-line w-100"></div>
                 </div>
                 <!-- Tab panes -->
-                <div class="tab-content mb-5">
+                <div class="tab-content">
                     <!-- 待付款 -->
                     <div role="tabpanel" class="tab-pane active" id="order-tab-1">
                         <!-- 有訂單時顯示 -->
@@ -233,67 +245,8 @@
         </div>
     </div>
     <div id="loginhtml"></div>
+    <div id="footerMobii"></div>
 
-    <!--頁尾-->
-    <footer class="for-pc"> 
-        <div class="container">
-            <div class="row d-flex">
-                <div class="col-4 col-md-3">
-                <h6>關於亞洲好玩卡</h6>
-                <ul>
-                    <li><a href="#">關於我們</a></li>
-                </ul>            
-                </div>
-                <div class="col-4 col-md-3">
-                <h6>追蹤我們</h6>
-                <ul>
-                    <li><a href="#"><i class="fab fa-facebook-f fa-fw"></i> Facebook</a></li>
-                    <li><a href="#"><i class="fab fa-line fa-fw"></i> Line</a></li>
-                    <li><a href="#"><i class="fab fa-instagram fa-fw"></i> Instagram</a></li>
-                </ul>            
-                </div>  
-                <div class="w-100"></div>
-                <div class="col-12 border-t">
-                <div class="f-left small-70 d-flex align-items-center text-nowrap">
-                <img src="../img/index/logo-s.png" class="logo-s"><span> Designed by 艾斯移動股份有限公司</span>
-            </div>
-                <div class="f-right small-70">
-                Ⓒ2020 艾斯移動股份有限公司. All Right Reserved          
-                </div>
-                </div>
-            </div>  
-        </div>
-    </footer>
-    <footer class="mobile-footer for-mobile container">
-        <div class="menu-bar">
-            <a href="../index.html" class="bar-item">
-                <img class="default-img" src="../img/index/tabbar/home.svg" alt="">
-                <img class="active-img" src="../img/index/tabbar/home_choosen.svg" alt="">
-                首頁
-            </a>
-            <a href="../explore/explore_index.html" class="bar-item">
-                <img class="default-img" src="../img/index/tabbar/nearby.svg" alt="">
-                <img class="active-img" src="../img/index/tabbar/nearby_choosen.svg" alt="">
-                周邊
-            </a>
-            <a href="../mission/mission_index.html" class="bar-item">
-                <div class="more-dot"></div>
-                <img class="default-img more-dot" src="../img/index/tabbar/mission.png" alt="">
-                <img class="active-img" src="../img/index/tabbar/mission_choosen.png" alt="">
-                任務
-            </a>
-            <a href="../notify/notify_index.html" class="bar-item">
-                <img class="default-img" src="../img/index/tabbar/notification.svg" alt="">
-                <img class="active-img" src="../img/index/tabbar/notification_choosen.svg" alt="">
-                通知
-            </a>
-            <a href="member_index.html" class="bar-item active">
-                <img class="default-img" src="../img/index/tabbar/my.svg" alt="">
-                <img class="active-img" src="../img/index/tabbar/my_choosen.svg" alt="">
-                我的
-            </a>
-        </div>
-    </footer>      
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="../js/vendor/bs4/js/jquery-3.2.1.slim.min.js"></script>
@@ -313,9 +266,8 @@
 
     <!-- custom js -->    
     <script src="../js/animateCss.js"></script>
-    <script>        //begin use animateCss
+    <script> 
         $( document ).ready(function() {
-            callLayerOne();
             $('footer.for-pc').hide();
         });
 
@@ -323,7 +275,8 @@
     </script>
 
     <script>    
-        $("#loginhtml").load("../login.html"); 
+        $("#loginhtml").load("../login.html");         
+        $("#footerMobii").load("../footerMobii.html"); 
     </script>
     <script src="../js/index.js"></script>
 </body>

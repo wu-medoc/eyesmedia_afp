@@ -37,9 +37,9 @@
 <div class="wrap container">
     <!--任務-->
     <div class="missionlist">
-        <div class="title-box">
+        <div class="headerbox container title-box">
             <div class="item icon-btn">                        
-                <button class="btn px-0" onclick="backLayerOne();" data-toggle="tooltip" data-placement="bottom" title="回上一頁">
+                <button class="btn px-0" onclick="history.back();" data-toggle="tooltip" data-placement="bottom" title="回上一頁">
                     <i class="material-icons">&#xE314;</i>
                 </button>
             </div>
@@ -48,226 +48,170 @@
                 <button type="button" class="btn bluedk-outline-btn bt-small" onclick="location.href='../member/member_coin.html'">我的魔幣</button>
             </div>
         </div>
-        <div class="mission-personal">     
-            <div class="item d-flex">
-                <div class="info-box info-img">
-                    <div class="info-item">
-                        <img src="https://picsum.photos/300/300/?random=1">
+        <div>
+            <div class="mission-personal">     
+                <div class="item d-flex">
+                    <div class="info-box info-img">
+                        <div class="info-item">
+                            <img src="https://picsum.photos/300/300/?random=1">
+                        </div>
                     </div>
-                </div>
-                <div class="align-self-center">
-                    <div class="div-switch d-block">
-                        <button type="button" class="btn white-outline-btn btw-small" onclick="div_switch()">登入/註冊<img src="../img/share/forward_w.png" class="h20"></button>
+                    <div class="align-self-center">
+                        <div class="div-switch d-block">
+                            <button type="button" class="btn white-outline-btn btw-small" onclick="div_switch()">登入/註冊<img src="../img/share/forward_w.png" class="h20"></button>
+                        </div>
+                        <div class="div-switch d-none small-80">哈囉！曉龍</div>
                     </div>
-                    <div class="div-switch d-none small-80">哈囉！曉龍</div>
+                </div>    
+                <div class="item coin d-flex d-inline">
+                    <img src="../img/share/mobiicoin_red.png" class="h24 mr-2">
+                    <span class="div-switch d-block">--</span>
+                    <span class="div-switch d-none">2,366</span>
                 </div>
-            </div>    
-            <div class="item coin d-flex d-inline">
-                <img src="../img/share/mobiicoin_red.png" class="h24 mr-2">
-                <span class="div-switch d-block">--</span>
-                <span class="div-switch d-none">2,366</span>
-            </div>
-            <div class="item progress">
-                <div class="progress-bar bg-index div-switch d-block" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
-                <div class="progress-bar bg-index div-switch d-none" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-            </div> 
-            <div class="item task d-flex d-inline">
-                任務完成度：<span class="div-switch div-switch d-block">--%</span><span class="div-switch d-none">50%</span>
-            </div>
-        </div>        
-        <!-- 任務列表 -->
-        <!-- tab content-->
-        <div class="afp-tab-box">
-            <div class="afp-tab mb-5">
-                <div class="nav-tabs-box mt-3">
-                    <!-- Nav tabs -->                                
-                    <ul class="nav-tab-list nav nav-tabs nav-line mb-2 d-flex justify-content-around" role="tablist">
-                            <li role="presentation" class="active">
-                                <a href="#missiontag01" class="tablist-link active" aria-controls="missiontag01" role="tab" data-toggle="tab" aria-selected="true">每日任務<span class="badge badge-index">3</span></a>
-                            </li>
-                            <li role="presentation">
-                                <a href="#missiontag02" class="tablist-link" aria-controls="missiontag02" role="tab" data-toggle="tab" aria-selected="false">進階任務<span class="badge badge-index">2</span></a>
-                            </li>
-                    </ul>     
+                <div class="item progress">
+                    <div class="progress-bar bg-index div-switch d-block" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                    <div class="progress-bar bg-index div-switch d-none" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                </div> 
+                <div class="item task d-flex d-inline">
+                    任務完成度：<span class="div-switch div-switch d-block">--%</span><span class="div-switch d-none">50%</span>
                 </div>
-                <!-- Tab panes -->
-                <div class="tab-content pt-2 pb-5 bt-line">
-                    <div role="tabpanel" class="tab-pane fade active show w-100" id="missiontag01"> 
-                        <a href class="d-flex ms-item">
-                            <div class="d-flex align-items-start w-100">
-                                <div class="img-box">
-                                    <img src="../img/mission/store.png">
+            </div>        
+            <!-- 任務列表 -->
+            <!-- tab content-->
+            <div class="afp-tab-box">
+                <div class="afp-tab">
+                    <div class="nav-tabs-box mt-3">
+                        <!-- Nav tabs -->                                
+                        <ul class="nav-tab-list nav nav-tabs nav-line mb-2 d-flex justify-content-around" role="tablist">
+                                <li role="presentation" class="active">
+                                    <a href="#missiontag01" class="tablist-link active" aria-controls="missiontag01" role="tab" data-toggle="tab" aria-selected="true">每日任務<span class="badge badge-index">3</span></a>
+                                </li>
+                                <li role="presentation">
+                                    <a href="#missiontag02" class="tablist-link" aria-controls="missiontag02" role="tab" data-toggle="tab" aria-selected="false">進階任務<span class="badge badge-index">2</span></a>
+                                </li>
+                        </ul>     
+                    </div>
+                    <!-- Tab panes -->
+                    <div class="tab-content pt-2 pb-5 bt-line">
+                        <div role="tabpanel" class="tab-pane fade active show w-100" id="missiontag01"> 
+                            <a href class="d-flex ms-item">
+                                <div class="d-flex align-items-start w-100">
+                                    <div class="img-box">
+                                        <img src="../img/mission/store.png">
+                                    </div>
+                                    <div class="info-box w-100">
+                                        <ul class="info-list">
+                                            <li class="info-name">隨機點擊一間商店</li>
+                                            <li><span class="num">0/1</span>完成</li>
+                                            <li class="d-flex d-inline">獎勵：<img src="../img/share/mobiicoin_red.png" class="h20">╳6</li>
+                                        </ul>
+                                    </div>
                                 </div>
-                                <div class="info-box w-100">
-                                    <ul class="info-list">
-                                        <li class="info-name">隨機點擊一間商店</li>
-                                        <li><span class="num">0/1</span>完成</li>
-                                        <li class="d-flex d-inline">獎勵：<img src="../img/share/mobiicoin_red.png" class="h20">╳6</li>
-                                    </ul>
+                                <div class="ml-auto w80 align-self-center text-center">
+                                    <button type="button" class="btn px-3 index-btn">GO</button>
                                 </div>
-                            </div>
-                            <div class="ml-auto w80 align-self-center text-center">
-                                <button type="button" class="btn px-3 index-btn">GO</button>
-                            </div>
-                        </a>
-                        <a href="mission_luckspin.html" class="d-flex ms-item">
-                            <div class="d-flex align-items-start w-100">
-                                <div class="img-box">
-                                    <img src="../img/mission/luckyspin.png">
+                            </a>
+                            <a href="mission_luckspin.html" class="d-flex ms-item">
+                                <div class="d-flex align-items-start w-100">
+                                    <div class="img-box">
+                                        <img src="../img/mission/luckyspin.png">
+                                    </div>
+                                    <div class="info-box w-100">
+                                        <ul class="info-list">
+                                            <li class="info-name">玩一次大轉盤</li>
+                                            <li><span class="num">0/1</span>完成</li>
+                                            <li class="d-flex d-inline">獎勵：<img src="../img/share/mobiicoin_red.png" class="h20">╳6</li>
+                                        </ul>
+                                    </div>
                                 </div>
-                                <div class="info-box w-100">
-                                    <ul class="info-list">
-                                        <li class="info-name">玩一次大轉盤</li>
-                                        <li><span class="num">0/1</span>完成</li>
-                                        <li class="d-flex d-inline">獎勵：<img src="../img/share/mobiicoin_red.png" class="h20">╳6</li>
-                                    </ul>
+                                <div class="ml-auto w80 align-self-center text-center">
+                                    <button type="button" class="btn px-3 index-outline-btn">領取</button>
                                 </div>
-                            </div>
-                            <div class="ml-auto w80 align-self-center text-center">
-                                <button type="button" class="btn px-3 index-outline-btn">領取</button>
-                            </div>
-                        </a>
-                        <a href="mission_scratch.html" class="d-flex ms-item">
-                            <div class="d-flex align-items-start w-100">
-                                <div class="img-box">
-                                    <img src="../img/mission/Scratch.png">
+                            </a>
+                            <a href="mission_scratch.html" class="d-flex ms-item">
+                                <div class="d-flex align-items-start w-100">
+                                    <div class="img-box">
+                                        <img src="../img/mission/Scratch.png">
+                                    </div>
+                                    <div class="info-box w-100">
+                                        <ul class="info-list">
+                                            <li class="info-name">玩一次刮刮樂</li>
+                                            <li><span class="num">0/1</span>完成</li>
+                                            <li class="d-flex d-inline">獎勵：<img src="../img/share/mobiicoin_red.png" class="h20">╳6</li>
+                                        </ul>
+                                    </div>
                                 </div>
-                                <div class="info-box w-100">
-                                    <ul class="info-list">
-                                        <li class="info-name">玩一次刮刮樂</li>
-                                        <li><span class="num">0/1</span>完成</li>
-                                        <li class="d-flex d-inline">獎勵：<img src="../img/share/mobiicoin_red.png" class="h20">╳6</li>
-                                    </ul>
+                                <div class="ml-auto w80 align-self-center text-center">
+                                    <button type="button" class="btn px-3 index-outline-btn unable">完成</button>
                                 </div>
-                            </div>
-                            <div class="ml-auto w80 align-self-center text-center">
-                                <button type="button" class="btn px-3 index-outline-btn unable">完成</button>
-                            </div>
-                        </a>
-                    </div>                    
-                    <div role="tabpanel" class="tab-pane" id="missiontag02">
-                        
-                        <a href class="d-flex ms-item">
-                            <div class="d-flex align-items-start w-100">
-                                <div class="img-box">
-                                    <img src="../img/mission/store.png">
+                            </a>
+                        </div>                    
+                        <div role="tabpanel" class="tab-pane" id="missiontag02">
+                            
+                            <a href class="d-flex ms-item">
+                                <div class="d-flex align-items-start w-100">
+                                    <div class="img-box">
+                                        <img src="../img/mission/store.png">
+                                    </div>
+                                    <div class="info-box w-100">
+                                        <ul class="info-list">
+                                            <li class="info-name">累積核銷2張優惠券</li>
+                                            <li><span class="num">1/2</span>完成</li>
+                                            <li class="d-flex d-inline">獎勵：<img src="../img/share/mobiicoin_red.png" class="h20">╳6</li>
+                                        </ul>
+                                    </div>
                                 </div>
-                                <div class="info-box w-100">
-                                    <ul class="info-list">
-                                        <li class="info-name">累積核銷2張優惠券</li>
-                                        <li><span class="num">1/2</span>完成</li>
-                                        <li class="d-flex d-inline">獎勵：<img src="../img/share/mobiicoin_red.png" class="h20">╳6</li>
-                                    </ul>
+                                <div class="ml-auto w80 align-self-center text-center">
+                                    <button type="button" class="btn px-3 index-btn">GO</button>
                                 </div>
-                            </div>
-                            <div class="ml-auto w80 align-self-center text-center">
-                                <button type="button" class="btn px-3 index-btn">GO</button>
-                            </div>
-                        </a>
-                        <a href="mission_luckspin.html" class="d-flex ms-item">
-                            <div class="d-flex align-items-start w-100">
-                                <div class="img-box">
-                                    <img src="../img/mission/luckyspin.png">
+                            </a>
+                            <a href="mission_luckspin.html" class="d-flex ms-item">
+                                <div class="d-flex align-items-start w-100">
+                                    <div class="img-box">
+                                        <img src="../img/mission/luckyspin.png">
+                                    </div>
+                                    <div class="info-box w-100">
+                                        <ul class="info-list">
+                                            <li class="info-name">累積邀請1位好友</li>
+                                            <li><span class="num">0/1</span>完成</li>
+                                            <li class="d-flex d-inline">獎勵：<img src="../img/share/mobiicoin_red.png" class="h20">╳6</li>
+                                        </ul>
+                                    </div>
                                 </div>
-                                <div class="info-box w-100">
-                                    <ul class="info-list">
-                                        <li class="info-name">累積邀請1位好友</li>
-                                        <li><span class="num">0/1</span>完成</li>
-                                        <li class="d-flex d-inline">獎勵：<img src="../img/share/mobiicoin_red.png" class="h20">╳6</li>
-                                    </ul>
+                                <div class="ml-auto w80 align-self-center text-center">
+                                    <button type="button" class="btn px-3 index-outline-btn">領取</button>
                                 </div>
-                            </div>
-                            <div class="ml-auto w80 align-self-center text-center">
-                                <button type="button" class="btn px-3 index-outline-btn">領取</button>
-                            </div>
-                        </a>
-                        <a href="mission_scratch.html" class="d-flex ms-item">
-                            <div class="d-flex align-items-start w-100">
-                                <div class="img-box">
-                                    <img src="../img/mission/Scratch.png">
+                            </a>
+                            <a href="mission_scratch.html" class="d-flex ms-item">
+                                <div class="d-flex align-items-start w-100">
+                                    <div class="img-box">
+                                        <img src="../img/mission/Scratch.png">
+                                    </div>
+                                    <div class="info-box w-100">
+                                        <ul class="info-list">
+                                            <li class="info-name">累積邀請2位好友</li>
+                                            <li><span class="num">0/2</span>完成</li>
+                                            <li class="d-flex d-inline">獎勵：<img src="../img/share/mobiicoin_red.png" class="h20">╳6</li>
+                                        </ul>
+                                    </div>
                                 </div>
-                                <div class="info-box w-100">
-                                    <ul class="info-list">
-                                        <li class="info-name">累積邀請2位好友</li>
-                                        <li><span class="num">0/2</span>完成</li>
-                                        <li class="d-flex d-inline">獎勵：<img src="../img/share/mobiicoin_red.png" class="h20">╳6</li>
-                                    </ul>
+                                <div class="ml-auto w80 align-self-center text-center">
+                                    <button type="button" class="btn px-3 index-outline-btn unable">完成</button>
                                 </div>
-                            </div>
-                            <div class="ml-auto w80 align-self-center text-center">
-                                <button type="button" class="btn px-3 index-outline-btn unable">完成</button>
-                            </div>
-                        </a>
-                    </div>    
-                </div>
-            </div>                        
-        </div>   
+                            </a>
+                        </div>    
+                    </div>
+                </div>                        
+            </div>   
+        </div>
     </div>
   
 
 
 </div> 
 <div id="loginhtml"></div>
+<div id="footerMobii"></div>
 
-    <!--頁尾-->
-    <footer class="for-pc"> 
-        <div class="container">
-            <div class="row d-flex">
-                <div class="col-4 col-md-3">
-                <h6>關於亞洲好玩卡</h6>
-                <ul>
-                    <li><a href="#">關於我們</a></li>
-                </ul>            
-                </div>
-                <div class="col-4 col-md-3">
-                <h6>追蹤我們</h6>
-                <ul>
-                    <li><a href="#"><i class="fab fa-facebook-f fa-fw"></i> Facebook</a></li>
-                    <li><a href="#"><i class="fab fa-line fa-fw"></i> Line</a></li>
-                    <li><a href="#"><i class="fab fa-instagram fa-fw"></i> Instagram</a></li>
-                </ul>            
-                </div>  
-                <div class="w-100"></div>
-                <div class="col-12 border-t">
-                <div class="f-left small-70 d-flex align-items-center text-nowrap">
-                <img src="../img/index/logo-s.png" class="logo-s"><span> Designed by 艾斯移動股份有限公司</span>
-            </div>
-                <div class="f-right small-70">
-                Ⓒ2020 艾斯移動股份有限公司. All Right Reserved          
-                </div>
-                </div>
-            </div>  
-        </div>
-    </footer>
-    <footer class="mobile-footer for-mobile container">
-        <div class="menu-bar">
-            <a href="../index.html" class="bar-item">
-                <img class="default-img" src="../img/index/tabbar/home.svg" alt="">
-                <img class="active-img" src="../img/index/tabbar/home_choosen.svg" alt="">
-                首頁
-            </a>
-            <a href="../explore/explore_index.html" class="bar-item">
-                <img class="default-img" src="../img/index/tabbar/nearby.svg" alt="">
-                <img class="active-img" src="../img/index/tabbar/nearby_choosen.svg" alt="">
-                周邊
-            </a>
-            <a href="mission_index.html" class="bar-item active">
-                <img class="default-img" src="../img/index/tabbar/mission.svg" alt="">
-                <img class="active-img" src="../img/index/tabbar/mission_choosen.svg" alt="">
-                任務
-            </a>
-            <a href="../notify/notify_index.html" class="bar-item">
-                <img class="default-img" src="../img/index/tabbar/notification.svg" alt="">
-                <img class="active-img" src="../img/index/tabbar/notification_choosen.svg" alt="">
-                通知
-            </a>
-            <a href="../member/member_index.html" class="bar-item">
-                <img class="default-img" src="../img/index/tabbar/my.svg" alt="">
-                <img class="active-img" src="../img/index/tabbar/my_choosen.svg" alt="">
-                我的
-            </a>
-        </div>
-    </footer>      
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="../js/vendor/bs4/js/jquery-3.2.1.slim.min.js"></script>
@@ -289,14 +233,12 @@
     <script src="../js/animateCss.js"></script>
     <script src="../js/jquery.countdown.min.js"></script>
     <script>
-        //begin use animateCss
-        $( document ).ready(function() {
-            callLayerOne();
-        });
+
     </script>
 
     <script>    
         $("#loginhtml").load("../login.html"); 
+        $("#footerMobii").load("../footerMobii.html"); 
     </script>
     <script src="../js/index.js"></script>
 </body>

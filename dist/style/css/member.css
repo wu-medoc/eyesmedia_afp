@@ -1,6 +1,10 @@
 @charset "UTF-8";
 .mymember {
-  min-height: 100vh;
+  min-height: calc(100vh + 70px);
+}
+
+ul {
+  padding: 0;
 }
 
 .title-box button.btn {
@@ -14,6 +18,12 @@
 @media screen and (max-width: 480px) {
   .w-84 {
     width: 84px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .w-84 {
+    width: 77px;
   }
 }
 
@@ -382,7 +392,8 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding: 30px 15px;
+  padding-right: 1em;
+  padding-left: 1em;
   border-top: 1px #eee solid;
   border-bottom: 1px #eee solid;
 }
@@ -552,7 +563,8 @@ input[type="file"] {
 }
 
 .my-phone-list {
-  padding: 1em;
+  padding-right: 1em;
+  padding-left: 1em;
   text-align: center;
   /* Chrome, Safari, Edge, Opera */
   /* Firefox */

@@ -2394,7 +2394,6 @@ td.linebt-td,
 }
 
 .bearservice-lg {
-  height: 90vh;
   border-left: 1px solid #ccc;
   border-right: 1px solid #ccc;
 }
@@ -2496,48 +2495,42 @@ td.linebt-td,
   display: flex;
   width: 100%;
   min-width: 320px;
-  padding: .5em .5em 1.5em .5em;
+  padding: .5em;
 }
 
 @media (max-width: 767px) {
   .bearservice-lg .service-store-footer {
-    bottom: 62px;
+    bottom: 79px;
   }
 }
 
 @media (max-width: 570px) {
   .bearservice-lg .service-store-footer {
-    bottom: 62px;
+    bottom: 82px;
   }
 }
 
 @media (max-width: 480px) {
   .bearservice-lg .service-store-footer {
-    bottom: 55px;
+    bottom: 74px;
   }
 }
 
 @media (max-width: 375px) {
   .bearservice-lg .service-store-footer {
-    bottom: 40px;
+    bottom: 63px;
   }
 }
 
-@media (min-width: 768px) and (max-width: 991px) {
+@media (max-width: 320px) {
   .bearservice-lg .service-store-footer {
-    bottom: 80px;
+    bottom: 58px;
   }
 }
 
-@media (min-width: 992px) {
+@media (min-width: 768px) {
   .bearservice-lg .service-store-footer {
-    bottom: 105px;
-  }
-}
-
-@media (min-width: 1200px) {
-  .bearservice-lg .service-store-footer {
-    bottom: 125px;
+    bottom: 180px;
   }
 }
 
@@ -3452,10 +3445,21 @@ button.open-page img {
 }
 
 /* header-secondary */
+.headerbox + form,
+.headerbox + div,
+header + form,
+header + main,
 header + div {
-  padding-top: 69px;
+  padding-top: 72px;
 }
 
+@media (max-width: 767px) {
+  .headerbox + div {
+    padding-bottom: 70px;
+  }
+}
+
+.headerbox,
 .header-secondary {
   background-color: #fff;
   padding: 15px;
@@ -3467,6 +3471,7 @@ header + div {
   z-index: 1030;
 }
 
+.headerbox .title-name,
 .header-secondary .title-name {
   font-size: 1.3em;
   font-weight: bold;
@@ -3474,16 +3479,20 @@ header + div {
   text-align: center;
 }
 
+.headerbox .col-3,
 .header-secondary .col-3 {
   padding: 0;
 }
 
+.headerbox div.item:first-child,
 .header-secondary div.item:first-child {
   text-align: left;
 }
 
+.headerbox div.item:last-child,
 .header-secondary div.item:last-child {
   text-align: right;
+  text-align: -webkit-right;
 }
 
 .header-sort {
