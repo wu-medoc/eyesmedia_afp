@@ -1695,16 +1695,19 @@ footer.for-pc li {
   font-size: 0.9em;
 }
 
+.no-data,
 .no-order {
   padding: 3em;
   text-align: center;
 }
 
+.no-data img,
 .no-order img {
   width: 65%;
   max-width: 400px;
 }
 
+.no-data p,
 .no-order p {
   margin-top: 20px;
   font-weight: 700;
