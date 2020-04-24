@@ -1,34 +1,4 @@
 @charset "UTF-8";
-body.is-open-aside {
-  overflow-y: hidden;
-}
-
-body.is-open-aside .more-link-aside {
-  right: 0;
-}
-
-body.is-open-login .login-box {
-  display: block;
-}
-
-body.is-open-reg .reg-box {
-  display: block;
-}
-
-body.is-open-verification .verification-box {
-  display: block;
-  -webkit-box-shadow: 0 10px 300px #333;
-          box-shadow: 0 10px 300px #333;
-}
-
-body.is-open-password .password-box {
-  display: block;
-}
-
-body.is-open-country .country-box {
-  display: block;
-}
-
 .container {
   padding-right: 0;
   padding-left: 0;
@@ -59,22 +29,6 @@ body.is-open-country .country-box {
 .header-addheight {
   width: 100%;
   height: 62px;
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-}
-
-.header-90 {
-  width: 100%;
-  height: 90px;
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-}
-
-.header-100 {
-  width: 100%;
-  height: 100px;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -1002,43 +956,6 @@ body.is-open-country .country-box {
   margin-left: 15px;
 }
 
-/* svg bg */
-.iconbg-green {
-  background: radial-gradient(50% 50% at 50% 50%, #AAE25B 0%, #44B649 100%);
-  -webkit-fill: radial-gradient(50% 50% at 50% 50%, #AAE25B 0%, #44B649 100%);
-  fill: radial-gradient(50% 50% at 50% 50%, #AAE25B 0%, #44B649 100%);
-}
-
-.iconbg-blue {
-  background: radial-gradient(50% 50% at 50% 50%, #36D1DB 0%, #5B85E4 100%);
-  -webkit-fill: radial-gradient(50% 50% at 50% 50%, #36D1DB 0%, #5B85E4 100%);
-  fill: radial-gradient(50% 50% at 50% 50%, #36D1DB 0%, #5B85E4 100%);
-}
-
-.iconbg-tiffany {
-  background: radial-gradient(50% 50% at 50% 50%, #05BDB6 0%, #48B1BF 100%);
-  -webkit-fill: radial-gradient(50% 50% at 50% 50%, #05BDB6 0%, #48B1BF 100%);
-  fill: radial-gradient(50% 50% at 50% 50%, #05BDB6 0%, #48B1BF 100%);
-}
-
-.iconbg-organic {
-  background: radial-gradient(50% 50% at 50% 50%, #884371 0%, #F3904F 99.86%);
-  -webkit-fill: radial-gradient(50% 50% at 50% 50%, #884371 0%, #F3904F 99.86%);
-  fill: radial-gradient(50% 50% at 50% 50%, #884371 0%, #F3904F 99.86%);
-}
-
-.iconbg-purple {
-  background: radial-gradient(50% 50% at 50% 50%, #642A72 0%, #C6426E 100%);
-  -webkit-fill: radial-gradient(50% 50% at 50% 50%, #642A72 0%, #C6426E 100%);
-  fill: radial-gradient(50% 50% at 50% 50%, #642A72 0%, #C6426E 100%);
-}
-
-.iconbg-yellow {
-  background: radial-gradient(50% 50% at 50% 50%, #F6971D 0%, #FFD100 100%);
-  -webkit-fill: radial-gradient(50% 50% at 50% 50%, #F6971D 0%, #FFD100 100%);
-  fill: radial-gradient(50% 50% at 50% 50%, #F6971D 0%, #FFD100 100%);
-}
-
 /* afp-tab-box */
 .explore-block h6 {
   font-weight: bold;
@@ -1180,13 +1097,7 @@ body.is-open-country .country-box {
   transition: .5s width;
 }
 
-.afp-tab-box a.tablist-link.link-pink.active:hover::after,
-.afp-tab-box a.tablist-link.link-pink.active.show::after,
-.afp-tab-box .tablist-link.link-pink::after {
-  background-color: #E473FF;
-}
-
-.afp-tab-box a.tablist-link.link-org.active:hover::after,
+.afp-tab-box a.tablist-link.link-orange.active:hover::after,
 .afp-tab-box a.tablist-link.link-orange.active.show::after,
 .afp-tab-box .tablist-link.link-orange::after {
   background-color: #FD5F00;
@@ -1215,13 +1126,6 @@ body.is-open-country .country-box {
   background: transparent;
   font-weight: 700;
   color: #FD5F00;
-}
-
-.afp-tab-box .nav-tabs li a.tablist-link.link-pink:hover.active.show,
-.afp-tab-box .nav-tabs li a.tablist-link.link-pink:hover.active,
-.afp-tab-box .nav-tabs li a.tablist-link.link-pink.active.show,
-.afp-tab-box .nav-tabs li a.tablist-link.link-pink.active {
-  color: #E473FF;
 }
 
 /* index 周邊推薦 */
@@ -1933,16 +1837,6 @@ footer.for-pc li {
 #vcode-form .vcode-tel,
 #vcode-form .vcode-mail {
   font-size: .8em;
-}
-
-.lineargradient-purple {
-  background: -webkit-gradient(linear, left top, left bottom, from(#7787FE), to(#70B8FE));
-  background: linear-gradient(to bottom, #7787FE, #70B8FE);
-}
-
-.lineargradient-blue {
-  background: -webkit-gradient(linear, left top, right bottom, from(#36D1DB), to(#568EE3));
-  background: linear-gradient(to bottom right, #36D1DB, #568EE3);
 }
 
 #login-form,
@@ -3151,7 +3045,6 @@ td.linebt-td,
   opacity: 0.5;
 }
 
-/* check box ui */
 /* open page */
 .blur {
   -webkit-filter: blur(5px);

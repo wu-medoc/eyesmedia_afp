@@ -80,7 +80,7 @@
   overflow-x: auto;
   overflow-y: hidden;
   width: auto;
-  height: 490px;
+  height: 530px;
 }
 
 .travel-featured h6 {
@@ -88,27 +88,33 @@
   padding: 1em 0 .25em 0;
 }
 
-@media (min-width: 991px) and (max-width: 1024px) {
-  .travel-featured {
-    height: 530px;
-  }
-}
-
-@media (min-width: 376px) and (max-width: 480px) {
+@media (max-width: 767px) {
   .travel-featured {
     height: 430px;
   }
 }
 
-@media (min-width: 321px) and (max-width: 375px) {
+@media (max-width: 480px) {
   .travel-featured {
     height: 390px;
   }
 }
 
-@media (max-width: 320px) {
+@media (min-width: 768px) and (max-width: 979px) {
   .travel-featured {
-    height: 380px;
+    height: 490px;
+  }
+}
+
+@media (min-width: 980px) {
+  .travel-featured {
+    height: 530px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .travel-featured {
+    height: 590px;
   }
 }
 

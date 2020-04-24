@@ -695,17 +695,7 @@ input[type="file"] {
                 top: 50%;
                 transform: translateY(-50%);
                 color: rgba(24, 43, 86, 0.5);
-                // &.visibility-off{
-                //     display: block;
-                // }
             }
-            // .password-item.toggle-visibility{
-            //     .material-icons{
-            //         &.visibility-off{
-            //             display: none;
-            //         }
-            //     }
-            // }
         }
     }
 }
@@ -1058,6 +1048,19 @@ input[type="file"] {
     }   
 }
 
+/* member_coin bg */
+.lineargradient-purple {
+    background: -webkit-linear-gradient(top,#7787FE,#70B8FE);
+    background: -o-linear-gradient(bottom,#7787FE,#70B8FE);
+    background: -moz-linear-gradient(bottom,#7787FE,#70B8FE);
+    background: linear-gradient(to bottom,#7787FE,#70B8FE);
+}
+.lineargradient-blue {
+    background: -webkit-linear-gradient(left top,#36D1DB,#568EE3);
+    background: -o-linear-gradient(bottom right,#36D1DB,#568EE3);
+    background: -moz-linear-gradient(bottom right,#36D1DB,#568EE3);
+    background: linear-gradient(to bottom right,#36D1DB,#568EE3);
+}
 
 .w-10{
     width: 10%;
@@ -1069,39 +1072,6 @@ input[type="file"] {
 .mysetting{
     height: 100vh;
 }
-
-
-// 我的訂單
-// .myorder-tab-box{
-//     .nav-tabs{
-//         li{
-//             flex: 1;
-//             text-align: center;
-//             padding-bottom: 10px;
-//             a{
-//                 position: relative;
-//                 color: #13334C;
-//                 padding-bottom: 10px;
-//                 &:after{
-//                     content: '';
-//                     position: absolute;
-//                     bottom: -3px;
-//                     left: 7px;
-//                     right: 7px;
-//                     height: 3px;
-//                     background-color:tomato;
-//                     display: none;
-//                 }
-//                 &.active{
-//                     color: tomato;
-//                     &:after{
-//                         display: block;
-//                     }
-//                 }
-//             }
-//         }
-//     }
-// }
 
 
 .wait-pay-list{
