@@ -361,7 +361,7 @@ $(document).ready(function(){
     //     },1000);
     // }); 
     
-    //footer control hide pathname
+    // footer control hide pathname
     // function getRootPath(){ 
     //     var strFullPath=window.document.location.href; 
     //     var strPath=window.document.location.pathname; 
@@ -376,7 +376,11 @@ $(document).ready(function(){
     //         $('footer.for-pc').hide();
     //     }; 
     // });
-
+    $(".menu-bar").on('click', function(e) {
+        const Ftarget = $('.bar-item').index(e.currentTarget);
+        $('.bar-item').eq(Ftarget).addClass('active');
+        $('.bar-item').eq(Ftarget).siblings('.bar-item').remvoeClass('');
+    });
 
     //footer.pc 
     // if(($('.wrap').height()+70) < ($(window).height())){
