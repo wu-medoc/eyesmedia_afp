@@ -2,13 +2,13 @@
 @import "../dist/style/module/variable";
 
 #clock{
+    font-size: small;
     .item-time{
         background: $blue-dark;
         border-radius: .25em;
         color: #fff;
         padding: 2px 4px;
         margin: 1px;
-        font-size: small;
     }
 }
 #time-hours,

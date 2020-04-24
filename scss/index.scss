@@ -1673,6 +1673,14 @@ footer.for-pc li{
 .modal-body {
   margin-top: 1.2em;
   text-align: center;
+  padding: 0;
+  >div{
+    padding: 1em;
+    &#msg-noselected{
+      border-top: 1px #eee solid;;
+      padding: 0;
+    }
+  }
   .logo-box{
     img{
       width: 80px;
@@ -1681,9 +1689,6 @@ footer.for-pc li{
   h5 {
     padding: 1em 0;
     font-weight: bold;
-  }
-  #msg-loginerror {
-    border-bottom: 1px #eee solid;;
   }
   .icon_group button {
     margin: 1em 0.5em;

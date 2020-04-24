@@ -1,11 +1,14 @@
 @charset "UTF-8";
+#clock {
+  font-size: small;
+}
+
 #clock .item-time {
   background: #182B56;
   border-radius: .25em;
   color: #fff;
   padding: 2px 4px;
   margin: 1px;
-  font-size: small;
 }
 
 #time-hours,
