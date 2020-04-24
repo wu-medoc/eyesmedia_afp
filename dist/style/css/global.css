@@ -70,40 +70,6 @@ body {
   margin-left: auto;
 }
 
-.wrap, .pb-wrap {
-  padding-bottom: 0px;
-}
-
-@media (max-width: 767px) {
-  .wrap, .pb-wrap {
-    padding-bottom: 79px;
-  }
-}
-
-@media (max-width: 570px) {
-  .wrap, .pb-wrap {
-    padding-bottom: 82px;
-  }
-}
-
-@media (max-width: 480px) {
-  .wrap, .pb-wrap {
-    padding-bottom: 74px;
-  }
-}
-
-@media (max-width: 375px) {
-  .wrap, .pb-wrap {
-    padding-bottom: 65px;
-  }
-}
-
-@media (max-width: 320px) {
-  .wrap, .pb-wrap {
-    padding-bottom: 58px;
-  }
-}
-
 @media (max-width: 767px) {
   .container {
     width: 100%;
@@ -152,6 +118,8 @@ ol, ul, li, fieldset, legend, label {
   border: 0;
   vertical-align: baseline;
   margin: 0;
+  padding-left: 0;
+  padding-right: 0;
 }
 
 article, aside, canvas, figure, figure img, figcaption, hgroup,

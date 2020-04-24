@@ -1366,18 +1366,6 @@ body.is-open-country .country-box {
   position: relative;
 }
 
-.popup-box.password-box .password-item .form-group.toggle-visibility .visibility-off {
-  display: block;
-}
-
-.popup-box.password-box .password-item .form-group.toggle-visibility .visibility {
-  display: none;
-}
-
-.popup-box.password-box .password-item .visibility-off {
-  display: none;
-}
-
 .popup-box.password-box .password-item .form-group .material-icons {
   position: absolute;
   right: 10px;
@@ -1894,18 +1882,6 @@ footer.for-pc li {
 
 .modal-body .password-item {
   margin-top: 20px;
-}
-
-.modal-body .password-item .form-group.toggle-visibility .visibility-off {
-  display: block;
-}
-
-.modal-body .password-item .form-group.toggle-visibility .visibility {
-  display: none;
-}
-
-.modal-body .password-item .visibility-off {
-  display: none;
 }
 
 .modal-body .password-item .form-group {
@@ -3450,12 +3426,70 @@ button.open-page img {
 header + form,
 header + main,
 header + div {
-  padding-top: 72px;
+  padding-top: 70px;
+}
+
+.headerbox + form,
+.headerbox + div,
+header + form,
+header + main,
+header + div,
+.pb-wrap {
+  padding-bottom: 0px;
 }
 
 @media (max-width: 767px) {
-  .headerbox + div {
-    padding-bottom: 70px;
+  .headerbox + form,
+  .headerbox + div,
+  header + form,
+  header + main,
+  header + div,
+  .pb-wrap {
+    padding-bottom: 79px;
+  }
+}
+
+@media (max-width: 570px) {
+  .headerbox + form,
+  .headerbox + div,
+  header + form,
+  header + main,
+  header + div,
+  .pb-wrap {
+    padding-bottom: 82px;
+  }
+}
+
+@media (max-width: 480px) {
+  .headerbox + form,
+  .headerbox + div,
+  header + form,
+  header + main,
+  header + div,
+  .pb-wrap {
+    padding-bottom: 74px;
+  }
+}
+
+@media (max-width: 375px) {
+  .headerbox + form,
+  .headerbox + div,
+  header + form,
+  header + main,
+  header + div,
+  .pb-wrap {
+    padding-bottom: 65px;
+  }
+}
+
+@media (max-width: 320px) {
+  .headerbox + form,
+  .headerbox + div,
+  header + form,
+  header + main,
+  header + div,
+  .pb-wrap {
+    padding-bottom: 58px;
   }
 }
 
@@ -3464,6 +3498,7 @@ header + div {
   background-color: #fff;
   padding: 15px;
   min-width: 320px;
+  max-height: 70px;
   position: fixed;
   top: 0;
   right: 0;
@@ -3541,6 +3576,11 @@ header + div {
 
 .border-radius5 {
   border-radius: .5em;
+}
+
+.border-bottom-radius5 {
+  border-bottom-left-radius: .5em;
+  border-bottom-right-radius: .5em;
 }
 
 .left-mline {

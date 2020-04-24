@@ -313,6 +313,39 @@ footer a:hover {
   font-size: .9em;
 }
 
+.other-discount-list-w .discount-item .discount-text p {
+  width: 260px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+@media (max-width: 570px) {
+  .other-discount-list-w .discount-item .discount-text p {
+    width: 360px;
+  }
+}
+
+@media (max-width: 480px) {
+  .other-discount-list-w .discount-item .discount-text p {
+    width: 280px;
+  }
+}
+
+@media (max-width: 375px) {
+  .other-discount-list-w .discount-item .discount-text p {
+    width: 170px;
+  }
+}
+
+@media (max-width: 320px) {
+  .other-discount-list-w .discount-item .discount-text p {
+    width: 130px;
+  }
+}
+
 .other-discount-list-w .discount-item .discount-text p:first-child {
   font-weight: 700;
 }

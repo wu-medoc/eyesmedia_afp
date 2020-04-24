@@ -1239,17 +1239,17 @@ body.is-open-country .country-box {
   position: relative;
 }
 
-.popup-box.password-box .password-item .form-group.toggle-visibility .visibility-off {
-  display: block;
-}
+// .popup-box.password-box .password-item .form-group.toggle-visibility .visibility-off {
+//   display: block;
+// }
 
-.popup-box.password-box .password-item .form-group.toggle-visibility .visibility {
-  display: none;
-}
+// .popup-box.password-box .password-item .form-group.toggle-visibility .visibility {
+//   display: none;
+// }
 
-.popup-box.password-box .password-item .visibility-off {
-  display: none;
-}
+// .popup-box.password-box .password-item .visibility-off {
+//   display: none;
+// }
 .popup-box.password-box .password-item .form-group .material-icons {
   position: absolute;
   right: 10px;
@@ -1761,17 +1761,17 @@ footer.for-pc li{
   }
   .password-item {
     margin-top: 20px; 
-    .form-group.toggle-visibility {
-      .visibility-off {
-        display: block;
-      }
-      .visibility {
-        display: none;
-      }
-    }  
-    .visibility-off {
-      display: none;
-    }
+    // .form-group.toggle-visibility {
+    //   .visibility {
+    //     display: block;
+    //   }
+    //   .visibility-off {
+    //     display: none;
+    //   }
+    // }  
+    // .visibility {
+    //   display: none;
+    // }
     .form-group {
       position: relative;
       .material-icons {
@@ -3200,11 +3200,30 @@ button.open-page {
 header + form, 
 header + main, 
 header + div{
-  padding-top: 72px;
+  padding-top: 70px;
 }
-@media (max-width: 767px){  
-  .headerbox + div{  
-    padding-bottom: 70px;
+
+.headerbox + form, 
+.headerbox + div, 
+header + form, 
+header + main, 
+header + div,
+.pb-wrap{  
+  padding-bottom: 0px;
+  @media (max-width: 767px){  
+    padding-bottom: 79px;
+  }
+  @media (max-width: 570px){  
+    padding-bottom: 82px;
+  }
+  @media (max-width: 480px){  
+    padding-bottom: 74px;
+  }
+  @media (max-width: 375px){  
+    padding-bottom: 65px;
+  }
+  @media (max-width: 320px){  
+    padding-bottom: 58px;
   }
 }
 .headerbox, 
@@ -3212,6 +3231,7 @@ header + div{
   background-color: #fff;
   padding: 15px;
   min-width: 320px;
+  max-height: 70px;
   position: fixed;
   top: 0;
   right: 0;
@@ -3269,6 +3289,10 @@ header + div{
 }
 .border-radius5{
   border-radius: .5em;
+}
+.border-bottom-radius5{
+  border-bottom-left-radius: .5em;
+  border-bottom-right-radius: .5em;
 }
 .left-mline{
   padding-left: 15px;

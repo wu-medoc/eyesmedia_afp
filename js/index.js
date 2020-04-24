@@ -344,14 +344,15 @@ $(document).ready(function(){
     });
 
     // password visiblity
-    $(".toggle-password").on('click', function() {
-        $(this).parent().toggleClass("toggle-visibility");
-        var input = $($(this).attr("toggle"));
-        if (input.attr("type") == "password") {
-        input.attr("type", "text");
-        } else {
-        input.attr("type", "password");
-        }
+    $(".toggle-password").on('click', function(e) {
+        const target = $('.toggle-password').index(e.currentTarget);
+        $('.toggle-password').eq(target).find('i.visibility').toggleClass('d-inline-block');
+        $('.toggle-password').eq(target).find('i.visibility-off').toggleClass('d-none');
+        if ($('.toggle-password').eq(target).siblings('input').attr('type') === 'password') {
+            $('.toggle-password').eq(target).siblings('input').attr('type', 'text');
+          } else {
+            $('.toggle-password').eq(target).siblings('input').attr('type', 'password');
+          }
     });
     //gotop 
     // $('.gotop').on('click', function(){  

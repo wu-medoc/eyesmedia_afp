@@ -11,6 +11,15 @@
         font-size: small;
     }
 }
+#time-hours,
+#time-minutes,
+#time-seconds{
+    background-color: $cardfooter-color;
+    border-radius: 5px;
+    color: #fff;
+    padding: 2px 4px;
+    margin: 1px;
+}
 button.btn{
     white-space: nowrap;
 }
@@ -145,7 +154,25 @@ button.btn{
             justify-content: center;
             color: $blue-dark;
             font-size: .9em;
-            p{
+            p{     
+                width: 260px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                display: -webkit-box;
+                 -webkit-box-orient: vertical;
+                -webkit-line-clamp: 2;
+                @media (max-width: 570px) {                   
+                    width: 360px;
+                }
+                @media (max-width: 480px) {                   
+                    width: 280px;
+                }
+                @media (max-width: 375px) {                    
+                    width: 170px;
+                }
+                @media (max-width: 320px) {                    
+                    width: 130px;
+                }
                 &:first-child{
                     font-weight: 700;
                 }
@@ -156,7 +183,7 @@ button.btn{
                 }
                 .material-icons{
                     font-size: small;
-                }
+                }  
             }
         }
         .m-quantity{
