@@ -386,7 +386,7 @@ $(document).ready(function(){
     // }
 });
 window.onload = function(){  
-    var strPath=window.document.location.pathname;
+    var strPath=window.document.location.pathname.replace("/eyesmedia_afp","");
     var postPath=strPath.substring(0,strPath.substr(1).indexOf('/')+1).replace("/",""); 
     $('.bar-item').removeClass('active');   
     (postPath=="")?
