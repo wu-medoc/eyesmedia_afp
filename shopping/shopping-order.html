@@ -780,6 +780,7 @@
                                     </div>
                                 </li>
                             </ul>
+                            <div class="addheight"></div>
                         </div>      
                     </main>        
                     <footer class="success-mode container">
@@ -1265,6 +1266,7 @@
         $('.invoice>li').on('click',function(){
             $(this).find('input').prop('checked',true);
         });
+        $("input").on("click", function() { setTimeout(function(){ document.body.scrollTop = document.body.scrollHeight; },300); });
     </script>
     <script src="../js/index.js"></script>
 </body>
