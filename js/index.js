@@ -75,11 +75,6 @@ $('.setting .edit-title-cancel').on('click', function(){
     $(this).closest('.multilayer>.setting').removeClass('edit-mode');
 })
 
-// footer menu-bar
-$('.bar-item').on('click', function() {
-    $('.bar-item').removeClass('active');
-    $(this).addClass('active');
-})
 
 // web service JS 
 $(document).on( 'scroll', function(){        
@@ -385,14 +380,17 @@ $(document).ready(function(){
     //     $('.wrap').css('padding-bottom','auto');
     // }
 });
+
+
 window.onload = function(){  
+
     var strPath=window.document.location.pathname.replace("/eyesmedia_afp","");
     var postPath=strPath.substring(0,strPath.substr(1).indexOf('/')+1).replace("/",""); 
     $('.bar-item').removeClass('active');   
     (postPath=="")?
         $('.Findex').addClass('active'):
         $('.F'+postPath).addClass('active');
-    console.log(postPath);
+
 };
 
 

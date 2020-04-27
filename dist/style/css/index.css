@@ -1676,6 +1676,12 @@ footer.for-pc li {
 
 #messageModal .modal-body > div {
   display: none;
+  padding: 0;
+}
+
+#messageModal .modal-body > div .border-t {
+  border-bottom-left-radius: .5em;
+  border-bottom-right-radius: .5em;
 }
 
 #messageModal .modal-body {
