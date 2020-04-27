@@ -1279,7 +1279,6 @@ footer{
                     .item {
                         span {
                             margin-right: 5px;
-                            font-weight: 500;
                         }
                     }
 
@@ -1633,7 +1632,6 @@ footer{
                     box-shadow: none;
                     border-radius: 100px;
                     border: 2px $onlineshopping-default solid;
-                    font-weight: 500;
                     &.cancel-btn{
                         color: $onlineshopping-default;
                     }
@@ -1889,7 +1887,6 @@ footer{
             }
             .item-right{
                 text-align: right;
-                font-weight: 500;
                 font-size: .95em;
                 span{
                     color: $blue-middle;
@@ -2378,7 +2375,6 @@ footer{
             font-size: 13px;
             color: $blue-dark;
             margin-bottom: 5px;
-            font-weight: 500;
         }
         input{
             border: 1px #818181 solid;

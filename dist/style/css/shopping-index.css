@@ -1416,7 +1416,6 @@ footer a:hover {
 
 .store-container .store-tab-box .store-group .store-item.store-itemopen .item span {
   margin-right: 5px;
-  font-weight: 500;
 }
 
 .store-container .store-tab-box .store-group .store-item.store-itemopen .itemopen-list {
@@ -1847,7 +1846,6 @@ footer a:hover {
           box-shadow: none;
   border-radius: 100px;
   border: 2px #FD5F00 solid;
-  font-weight: 500;
 }
 
 .shopping-discount .total-price-box .total-footer .item button.cancel-btn {
@@ -2169,7 +2167,6 @@ footer a:hover {
 
 .order-box .order-method-box li .item-right {
   text-align: right;
-  font-weight: 500;
   font-size: .95em;
 }
 
@@ -2788,7 +2785,6 @@ footer .order-go-pay .item {
   font-size: 13px;
   color: #182B56;
   margin-bottom: 5px;
-  font-weight: 500;
 }
 
 .input-number-box .input-type input {
