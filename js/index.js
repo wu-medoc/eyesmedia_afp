@@ -520,7 +520,11 @@ function backLayerUp() {
         $('.modal-backdrop').remove();
     }
 };
-
+$('.modal-backdrop').on('click',function(){
+    backLayer();
+    backsortLayer();
+    $('.modal-backdrop').remove();
+});
 //this onelayer use animateCss
 // var oneLayer = [];
 // function callLayerOne() {
