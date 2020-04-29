@@ -142,7 +142,11 @@
 .travel-featured .tab-pane {
   position: absolute;
 }
-
+.travel-featuredlist h6{
+  font-weight: bold;
+  padding: 1em 0 .25em 0;
+}
+.travel-featuredboxlist, 
 .travel-featuredbox{
   .item-body {
     border-top-left-radius: .5em;
@@ -152,7 +156,8 @@
   .item-img {
     border-top-left-radius: .5em;
     border-top-right-radius: .5em;
-    width: 100%;
+    width: 100%;    
+    min-height: 100px;
     height: auto;
   }
   .item-title {
@@ -207,4 +212,12 @@
       margin: 5px;
     }
   } 
+  .col-6:nth-child(odd){
+    padding-left: 0;
+    padding-right: 5px;
+  }
+  .col-6:nth-child(even){
+    padding-right: 0;
+    padding-left: 5px;
+  }
 }

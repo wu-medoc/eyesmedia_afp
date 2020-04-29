@@ -957,11 +957,7 @@
 }
 
 /* afp-tab-box */
-.explore-block h6 {
-  font-weight: bold;
-  padding: 1em 1em .25em 1em;
-}
-
+.afp-tab-box #nav-tab,
 .afp-tab-box #nav-tab-member,
 .afp-tab-box #nav-tab-featured {
   display: inline-table;
@@ -969,6 +965,7 @@
   white-space: nowrap;
 }
 
+.afp-tab-box #nav-tab li,
 .afp-tab-box #nav-tab-member li,
 .afp-tab-box #nav-tab-featured li {
   font-size: .9em;
@@ -978,6 +975,7 @@
   white-space: nowrap;
 }
 
+.afp-tab-box #nav-tab.nav-tabs,
 .afp-tab-box #nav-tab-member.nav-tabs,
 .afp-tab-box #nav-tab-featured.nav-tabs {
   border-bottom: 0px;
@@ -1129,14 +1127,6 @@
 }
 
 /* index 周邊推薦 */
-.afp-tab-box .tab-content .content-list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-}
-
 .afp-tab-box .tab-content .content-list .content-item {
   display: block;
   margin-bottom: 15px;
@@ -4110,6 +4100,7 @@ img.nearbyimg {
 }
 
 /* shopping products */
+.explore-block h6,
 .onsale-list h6 {
   font-weight: bold;
   padding: 2em 0 .25em 0;

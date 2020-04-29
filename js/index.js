@@ -148,21 +148,20 @@ if ($( ".travel-featuredbox" ).hasClass("swiper-container"))  {
         slidesPerView: 1.7,
         spaceBetween: 10,
         breakpoints: { 
-            320: {
-            slidesPerView: 1.7,
-            spaceBetween: 10
-            },
-            480: { 
+            768: { 
             slidesPerView: 1.8,
             spaceBetween: 15
             },
-            640: {
+            1024: {
             slidesPerView: 2,
             spaceBetween: 20
             }
         },
-        loop: true
-        //建議資料多時,關閉loop
+        loop: true,
+        observer:true,
+        observeParents:true,
+        preloadImages: true,
+        updateOnImagesReady : true
     });
 }
 if ($( ".travel-topicbox" ).hasClass("swiper-container")) {

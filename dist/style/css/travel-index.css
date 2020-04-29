@@ -122,36 +122,50 @@
   position: absolute;
 }
 
+.travel-featuredlist h6 {
+  font-weight: bold;
+  padding: 1em 0 .25em 0;
+}
+
+.travel-featuredboxlist .item-body,
 .travel-featuredbox .item-body {
   border-top-left-radius: .5em;
   border-top-right-radius: .5em;
   text-align: left;
 }
 
+.travel-featuredboxlist .item-img,
 .travel-featuredbox .item-img {
   border-top-left-radius: .5em;
   border-top-right-radius: .5em;
   width: 100%;
+  min-height: 100px;
   height: auto;
 }
 
+.travel-featuredboxlist .item-title,
 .travel-featuredbox .item-title {
   font-weight: bold;
   color: #333;
 }
 
+.travel-featuredboxlist .item-info,
 .travel-featuredbox .item-info {
   line-height: 1.6em;
   margin-bottom: 10px;
   font-size: 0.8em;
 }
 
+.travel-featuredboxlist .item-title,
 .travel-featuredbox .item-title {
   padding: 2px 10px;
   font-weight: bold;
   font-size: 0.9em;
 }
 
+.travel-featuredboxlist .item-location,
+.travel-featuredboxlist .item-price,
+.travel-featuredboxlist .item-date,
 .travel-featuredbox .item-location,
 .travel-featuredbox .item-price,
 .travel-featuredbox .item-date {
@@ -159,6 +173,9 @@
   color: #333;
 }
 
+.travel-featuredboxlist .item-location .price-asking,
+.travel-featuredboxlist .item-price .price-asking,
+.travel-featuredboxlist .item-date .price-asking,
 .travel-featuredbox .item-location .price-asking,
 .travel-featuredbox .item-price .price-asking,
 .travel-featuredbox .item-date .price-asking {
@@ -167,10 +184,12 @@
   font-size: medium;
 }
 
+.travel-featuredboxlist a .item-day,
 .travel-featuredbox a .item-day {
   color: #6c757d;
 }
 
+.travel-featuredboxlist .item-keyword,
 .travel-featuredbox .item-keyword {
   padding: 3px 5px;
   overflow: hidden;
@@ -178,11 +197,13 @@
 }
 
 @media screen and (min-width: 768px) {
+  .travel-featuredboxlist .item-keyword,
   .travel-featuredbox .item-keyword {
     height: 26px;
   }
 }
 
+.travel-featuredboxlist .item-keyword span,
 .travel-featuredbox .item-keyword span {
   white-space: nowrap;
   color: #333;
@@ -191,5 +212,17 @@
   padding: 0 2px;
   font-size: 12px;
   margin: 5px;
+}
+
+.travel-featuredboxlist .col-6:nth-child(odd),
+.travel-featuredbox .col-6:nth-child(odd) {
+  padding-left: 0;
+  padding-right: 5px;
+}
+
+.travel-featuredboxlist .col-6:nth-child(even),
+.travel-featuredbox .col-6:nth-child(even) {
+  padding-right: 0;
+  padding-left: 5px;
 }
 /*# sourceMappingURL=travel-index.css.map */
