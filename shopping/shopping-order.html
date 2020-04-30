@@ -1266,7 +1266,14 @@
         $('.invoice>li').on('click',function(){
             $(this).find('input').prop('checked',true);
         });
-        $("input").on("click", function() { setTimeout(function(){ document.body.scrollTop = $(this).scrollHeight; },300); });
+        //$("input").on("click", function() { setTimeout(function(){ document.body.scrollTop = $('input:focus').scrollHeight; },300); });
+        const inputEL = document.querySelector('input');
+        const log = document.getElementsByClassName('form-control');
+        inputEL.onscroll = logScroll;
+
+        function logScroll(e) {
+        log.textContent = 'Scroll position: ${e.target.scrollTop}';
+        }
     </script>
     <script src="../js/index.js"></script>
 </body>
