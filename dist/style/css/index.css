@@ -4063,19 +4063,6 @@ img.nearbyimg {
   bottom: 0;
 }
 
-.uplayer > div .cardnum img {
-  padding: 1em;
-  width: 344px;
-  height: 322px;
-}
-
-@media (max-width: 375px) {
-  .uplayer > div .cardnum img {
-    width: 256px;
-    height: 258px;
-  }
-}
-
 .telcodelist {
   display: none;
   background-color: transparent;

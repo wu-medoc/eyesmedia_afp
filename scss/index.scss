@@ -3424,15 +3424,6 @@ img.nearbyimg{
   border-top-left-radius: .5em;
   border-top-right-radius: .5em;
   bottom: 0;
-  .cardnum img{
-    padding: 1em;
-    width: 344px;
-    height: 322px;
-    @media (max-width: 375px) {
-      width: 256px;
-      height: 258px;
-    }
-  }
 }
 
 .telcodelist{
