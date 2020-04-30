@@ -300,7 +300,7 @@ var swiper = new Swiper('.shopping-productsimg.swiper-container', {
     });
 }
 
-$(document).ready(function(){    
+$(document).ready(function(){
     // bear service
     // var windowHight = $(window).height();
     // var bearhight = windowHight-70;
