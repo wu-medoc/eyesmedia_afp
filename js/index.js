@@ -302,6 +302,7 @@ var swiper = new Swiper('.shopping-productsimg.swiper-container', {
 
 $(document).ready(function(){
     //解決移動端文本框拖動鍵盤遮擋輸入框的方法
+    if($('input').length>0)
     $('input').scrollIntoViewIfNeeded(true);
 
     // bear service
