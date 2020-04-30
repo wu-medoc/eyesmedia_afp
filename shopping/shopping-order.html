@@ -1266,14 +1266,16 @@
         $('.invoice>li').on('click',function(){
             $(this).find('input').prop('checked',true);
         });
-        //$("input").on("click", function() { setTimeout(function(){ document.body.scrollTop = $('input:focus').scrollHeight; },300); });
-        const inputEL = document.querySelector('input');
-        const log = document.getElementsByClassName('form-control');
-        inputEL.onscroll = logScroll;
+        
+        /** 避免灰屏 */
+        $('.modal-backdrop').on('click', () => {
+        this.appService.backLayer();
+        this.appService.backsortLayer();
+        $('.modal-backdrop').remove();
+        });
 
-        function logScroll(e) {
-        log.textContent = 'Scroll position: ${e.target.scrollTop}';
-        }
+        /** 避免輸入鍵盤擋到輸入框 */
+        $('input').on('click', function() { setTimeout(function() { document.body.scrollTop = document.querySelector('input').scrollHeight; }, 300); });
     </script>
     <script src="../js/index.js"></script>
 </body>
