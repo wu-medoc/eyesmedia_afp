@@ -4063,6 +4063,11 @@ img.nearbyimg {
   bottom: 0;
 }
 
+.uplayer > div img.w-50 {
+  width: 50%;
+  height: auto;
+}
+
 .telcodelist {
   display: none;
   background-color: transparent;
