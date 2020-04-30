@@ -96,12 +96,10 @@
                         <div role="tabpanel" class="tab-pane fade active show w-100" id="missiontag01"> 
                             <a href="mission_luckspin.html" class="d-flex ms-item p-1">
                                 <div class="d-flex align-items-start w-100">
-                                    <div class="img-box">
-                                        <div class="progressbar">
-                                            <input type="hidden" value="1">
-                                            <div class="second circle" data-percent="0">
-                                              <strong></strong>
-                                            </div>
+                                    <div class="progressbar">
+                                        <input type="hidden" value="1">
+                                        <div class="second circle" data-percent="0">
+                                          <strong></strong>
                                         </div>
                                     </div>
                                     <div class="info-box w-100">
@@ -117,12 +115,10 @@
                             </a>
                             <a href="#" class="d-flex ms-item p-1">
                                 <div class="d-flex align-items-start w-100">                                    
-                                    <div class="img-box">
-                                        <div class="progressbar">
-                                            <input type="hidden" value="1">
-                                            <div class="second circle" data-percent="1">
-                                              <strong></strong>
-                                            </div>
+                                    <div class="progressbar">
+                                        <input type="hidden" value="1">
+                                        <div class="second circle" data-percent="1">
+                                          <strong></strong>
                                         </div>
                                     </div>
                                     <div class="info-box w-100">
@@ -138,12 +134,10 @@
                             </a>
                             <a href="mission_scratch.html" class="d-flex ms-item p-1">
                                 <div class="d-flex align-items-start w-100">
-                                    <div class="img-box">
-                                        <div class="progressbar">
-                                            <input type="hidden" value="2">
-                                            <div class="second circle" data-percent="1">
-                                              <strong></strong>
-                                            </div>
+                                    <div class="progressbar">
+                                        <input type="hidden" value="2">
+                                        <div class="second circle" data-percent="1">
+                                          <strong></strong>
                                         </div>
                                     </div>
                                     <div class="info-box w-100">
@@ -159,12 +153,10 @@
                             </a>
                             <a href="#" class="d-flex ms-item p-1">
                                 <div class="d-flex align-items-start w-100">
-                                    <div class="img-box">
-                                        <div class="progressbar">
-                                            <input type="hidden" value="2">
-                                            <div class="second circle" data-percent="2">
-                                              <strong></strong>
-                                            </div>
+                                    <div class="progressbar">
+                                        <input type="hidden" value="2">
+                                        <div class="second circle" data-percent="2">
+                                          <strong></strong>
                                         </div>
                                     </div>
                                     <div class="info-box w-100">
@@ -182,12 +174,10 @@
                         <div role="tabpanel" class="tab-pane" id="missiontag02">
                             <a href="mission_luckspin.html" class="d-flex ms-item p-1">
                                 <div class="d-flex align-items-start w-100">
-                                    <div class="img-box">
-                                        <div class="progressbar">
-                                            <input type="hidden" value="1">
-                                            <div class="second circle" data-percent="0">
-                                              <strong></strong>
-                                            </div>
+                                    <div class="progressbar">
+                                        <input type="hidden" value="1">
+                                        <div class="second circle" data-percent="0">
+                                          <strong></strong>
                                         </div>
                                     </div>
                                     <div class="info-box w-100">
@@ -203,12 +193,10 @@
                             </a>
                             <a href="mission_luckspin.html" class="d-flex ms-item p-1">
                                 <div class="d-flex align-items-start w-100">
-                                    <div class="img-box">
-                                        <div class="progressbar">
-                                            <input type="hidden" value="1">
-                                            <div class="second circle" data-percent="1">
-                                              <strong></strong>
-                                            </div>
+                                    <div class="progressbar">
+                                        <input type="hidden" value="1">
+                                        <div class="second circle" data-percent="1">
+                                          <strong></strong>
                                         </div>
                                     </div>
                                     <div class="info-box w-100">
@@ -224,12 +212,10 @@
                             </a>
                             <a href="mission_luckspin.html" class="d-flex ms-item p-1">
                                 <div class="d-flex align-items-start w-100">
-                                    <div class="img-box">
-                                        <div class="progressbar">                                            
-                                            <input type="hidden" value="5">
-                                            <div class="second circle" data-percent="2">
-                                              <strong></strong>
-                                            </div>
+                                    <div class="progressbar">                                            
+                                        <input type="hidden" value="5">
+                                        <div class="second circle" data-percent="2">
+                                          <strong></strong>
                                         </div>
                                     </div>
                                     <div class="info-box w-100">
@@ -245,12 +231,10 @@
                             </a>
                             <a href="mission_luckspin.html" class="d-flex ms-item p-1">
                                 <div class="d-flex align-items-start w-100">
-                                    <div class="img-box">
-                                        <div class="progressbar">
-                                            <input type="hidden" value="3">
-                                            <div class="second circle" data-percent="0">
-                                              <strong></strong>
-                                            </div>
+                                    <div class="progressbar">
+                                        <input type="hidden" value="3">
+                                        <div class="second circle" data-percent="0">
+                                          <strong></strong>
                                         </div>
                                     </div>
                                     <div class="info-box w-100">
@@ -311,11 +295,12 @@
                         $(this).data('animate', true);
                         $(this).find('.circle').circleProgress({
                             value: percent / pval,
-                            size : 54,
-                            thickness: 5,
+                            size : 50,
+                            thickness: 2,
                             fill: {
                                 color: '#FD5F00'
-                            }
+                            },
+                            emptyFill: 'rgba(0, 0, 0, 0)'
                         }).on('circle-animation-progress', function (event, progress, stepValue) {
                             $(this).find('strong').text(percent + "/" + pval);
                         }).stop();

@@ -2521,12 +2521,14 @@ td.linebt-td,
 .bg-cardfooter{
   color: #fff;
   background: $cardfooter-color;
+  white-space: nowrap;
 }
 .next-btn, 
 .index-btn{
   color: #fff;
   background: $index-default;
   border-radius: 30px;
+  white-space: nowrap;
   &.unable{
     color: #fff;
     background: $gray-color;
@@ -2541,6 +2543,7 @@ td.linebt-td,
   background-color: transparent;
   background-image: none;
   border-radius: 30px;
+  white-space: nowrap;
   &.unable{
     color: $gray-color;
     border-color: $gray-color;
@@ -2550,6 +2553,7 @@ td.linebt-td,
   color: #fff;
   background: $gray-color;
   border-radius: 30px;
+  white-space: nowrap;
 }
 .gray-obtn{
   color: $gray-color;
@@ -2557,11 +2561,13 @@ td.linebt-td,
   background-color: transparent;
   background-image: none;
   border-radius: 30px;
+  white-space: nowrap;
 }
 .bluedk-btn{
   color: #fff;
   background: $blue-dark;
   border-radius: 30px;
+  white-space: nowrap;
   &.unable{
     color: #fff;
     background: $gray-color;
@@ -2576,6 +2582,7 @@ td.linebt-td,
   background-color: transparent;
   background-image: none;
   border-radius: 30px;
+  white-space: nowrap;
   &.unable{
     color: $gray-color;
     border-color: $gray-color;
@@ -2590,6 +2597,7 @@ td.linebt-td,
   background-color: transparent;
   background-image: none;
   border-radius: 30px;
+  white-space: nowrap;
   &.unable{
     color: $gray-color;
     border-top: 1px solid $gray-color;

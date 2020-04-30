@@ -2874,6 +2874,7 @@ td.linebt-td,
 .bg-cardfooter {
   color: #fff;
   background: #13334C;
+  white-space: nowrap;
 }
 
 .next-btn,
@@ -2881,6 +2882,7 @@ td.linebt-td,
   color: #fff;
   background: #FD5F00;
   border-radius: 30px;
+  white-space: nowrap;
 }
 
 .next-btn.unable,
@@ -2900,6 +2902,7 @@ td.linebt-td,
   background-color: transparent;
   background-image: none;
   border-radius: 30px;
+  white-space: nowrap;
 }
 
 .index-outline-btn.unable {
@@ -2911,6 +2914,7 @@ td.linebt-td,
   color: #fff;
   background: #8E8E93;
   border-radius: 30px;
+  white-space: nowrap;
 }
 
 .gray-obtn {
@@ -2919,12 +2923,14 @@ td.linebt-td,
   background-color: transparent;
   background-image: none;
   border-radius: 30px;
+  white-space: nowrap;
 }
 
 .bluedk-btn {
   color: #fff;
   background: #182B56;
   border-radius: 30px;
+  white-space: nowrap;
 }
 
 .bluedk-btn.unable {
@@ -2942,6 +2948,7 @@ td.linebt-td,
   background-color: transparent;
   background-image: none;
   border-radius: 30px;
+  white-space: nowrap;
 }
 
 .white-outline-btn.unable {
@@ -2958,6 +2965,7 @@ td.linebt-td,
   background-color: transparent;
   background-image: none;
   border-radius: 30px;
+  white-space: nowrap;
 }
 
 .bluedk-outline-btn.unable {
