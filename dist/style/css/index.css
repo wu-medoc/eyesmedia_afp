@@ -4065,6 +4065,7 @@ img.nearbyimg {
 
 .uplayer > div img.cardnum {
   padding: 2em;
+  width: 50%;
   max-height: 330px;
 }
 
