@@ -3425,9 +3425,13 @@ img.nearbyimg{
   border-top-right-radius: .5em;
   bottom: 0;
   img.cardnum{
-    padding: 2em;
-    width: 50%;
-    max-height: 330px;
+    padding: 1em;
+    width: 344px;
+    height: 322px;
+    @media (max-width: 375px) {
+      width: 256px;
+      height: 258px;
+    }
   }
 }
 
