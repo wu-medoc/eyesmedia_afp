@@ -1277,7 +1277,7 @@
         /** 避免輸入鍵盤擋到輸入框 */
         $('input').on('click', function(e) { 
             const target = $('input').index(e.currentTarget);
-            setTimeout(function() { document.body.scrollTop = ($('input').eq(target)[0].offsetTop + 50); }, 300); 
+            setTimeout(function() { document.body.scrollTop = ($('input').eq(target)[0].offsetTop - 50); }, 300); 
             //console.log($('input').eq(target)[0].scrollHeight);
         });
     </script>
