@@ -1268,10 +1268,10 @@
         });
         
         /** 避免灰屏 */
-        $('.modal-backdrop').on('click', () => {
-        this.appService.backLayer();
-        this.appService.backsortLayer();
-        $('.modal-backdrop').remove();
+        $('.modal-backdrop').on('click', function(){
+            backLayer();
+            backsortLayer();
+            $('.modal-backdrop').remove();
         });
 
         /** 避免輸入鍵盤擋到輸入框 */
