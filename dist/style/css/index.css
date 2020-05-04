@@ -3345,7 +3345,7 @@ header + form,
 header + main,
 header + div,
 .pb-wrap {
-  padding-bottom: 0px;
+  padding-bottom: 40px;
 }
 
 @media (max-width: 767px) {
