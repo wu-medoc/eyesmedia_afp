@@ -4,6 +4,10 @@
   padding-left: 0;
 }
 
+figure.image img {
+  width: -webkit-fill-available;
+}
+
 /* Center middle & center-v vertically */
 .center {
   position: absolute;
