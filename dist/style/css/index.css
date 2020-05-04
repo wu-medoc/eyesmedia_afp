@@ -1597,8 +1597,8 @@ footer.for-pc li {
 
 .no-data img,
 .no-order img {
-  width: 65%;
-  max-width: 400px;
+  width: 60%;
+  max-width: 360px;
 }
 
 .no-data p,
