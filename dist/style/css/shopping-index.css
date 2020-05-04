@@ -18,7 +18,6 @@ button.btn {
     top: 0;
     margin: 0 auto;
     padding: .75em;
-    z-index: 150;
   }
   .kv-box .kv-top .top-item.input-box {
     border-radius: 10px;

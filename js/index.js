@@ -447,6 +447,7 @@ $('.masklayer-close').on("click", function () {
     $('.modal-backdrop').remove();
 });
 
+
 // cookie access
 function getCookie(cname) {
     var ss = document.cookie;
@@ -475,7 +476,8 @@ function callLayer(nextLayer) {
 function backLayer() {
 	$(tLayer.pop()).animateCss('slideOutRight', '-d-block container faster').removeAttr('style');
     if (tLayer.length === 0) {
-        $('.multilayer').animateCss('slideOutRight', '-d-block container faster').removeAttr('style');
+        $('.multilayer').animateCss('slideOutRight', '-d-block container faster').removeAttr('style');        
+        $('.modal-backdrop').remove();
         tLayer.length=0;   
     }
 };
@@ -513,15 +515,11 @@ function backLayerUp() {
 	$(tLayerUp.pop()).animateCss('slideOutDown', '-d-block container faster').removeAttr('style');
     if (tLayerUp.length === 0) { 
         $('.uplayer').animateCss('slideOutDown', '-d-block container faster').removeAttr('style');
-        tLayerUp.length=0;
         $('.modal-backdrop').remove();
+        tLayerUp.length=0;
     }
 };
-$('.modal-backdrop').on('click',function(){
-    backLayer();
-    backsortLayer();
-    $('.modal-backdrop').remove();
-});
+
 
 //this onelayer use animateCss
 var oneLayer = [];
@@ -538,9 +536,3 @@ function backLayerOne() {
     oneLayer.length=0;
 };
 
-// var u = navigator.userAgent;
-// var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1; //android终端
-// var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
-// alert('是否是Android：'+isAndroid);
-// alert('是否是iOS：'+isiOS);
-// alert('是PC：'+u);

@@ -28,11 +28,11 @@
 <div class="wrap container">
     <div class="onlineshopping">
         <header>
-            <div class="header-secondary container linebt-row">
+            <div class="header-secondary container">
                 <div class="index-flex justify-content-between">
-                    <div class="item one">
+                    <div class="item two">
                         <div class="close-btn">
-                            <button class="btn px-0" onclick="history.back()" data-toggle="tooltip" data-placement="bottom" title="回上一頁">
+                            <button class="btn px-0" onclick="history.back();" data-toggle="tooltip" data-placement="bottom" title="回上一頁">
                                 <i class="material-icons">&#xE314;</i>
                             </button>
                         </div>
@@ -40,8 +40,8 @@
                     <div class="item three text-center">
                         <div class="title-name">Ｗifi網路分享器</div>
                     </div>
-                    <div class="item one">
-                        <div class="top-item climate text-right d-flex"> 
+                    <div class="item two">
+                        <div class="top-item climate text-right"> 
                                 <img src="../img/shopping/icon_chat.svg" class="" data-toggle="tooltip" data-placement="bottom" title="客服">
                                 <button onclick="location.href='shopping-cart.html'" class="badge-img px-0" data-toggle="tooltip" data-placement="bottom" title="購物車">
                                     <span class="badge badge-on">99+</span><img src="../img/shopping/icon_shoppingcart.svg">
@@ -50,368 +50,442 @@
                     </div>
                 </div>
             </div>
-            <div class="choice-filter-box py-1">            
-                <div class="flex-inline-between">
+        </header>
+        <main>       
+            <div class="filterbar">
+                <div class="choice-filter-box py-1">
                     <div class="flex-inline-between">
-                        <div class="item center-v">日本</div>
+                        <div class="item center-v"> 分類</div>
                         <div class="item pr-2">
                             <button class="btn px-0 filter-item" data-filter="type"><i class="material-icons">&#xE313;</i></button>
                         </div>
+                    </div>
+                    <div class="filter-box">
+                        <button class="btn px-0 item-search" onclick="div_switch();"><i class="material-icons">&#xe8b6;</i></button>
                     </div>
                     <div class="filter-box" onclick="callsortLayer('.productslistsort');">
                         <button class="btn px-0"><i class="material-icons">&#xE152;</i></button>
                     </div>
                 </div>
             </div>
-        </header>
-        <main>        
-                 
-            <!-- masonry products -->
-            <div class="products-listbox filter-container mt-2"> 
-                <div class="mask-container d-none w-100 h-100"></div>    
-                    <div class="grid">
-                        <div class="products-sizer"></div>
-                        <div class="products-item">
-                            <a href="products-detail.html">
-                                <div class="products-img">
-                                    <div class="img-box">
-                                        <div class="rwdimg" style="background-image: url('../img/shopping/products/products001.jfif');"></div>
-                                    </div> 
+            <div class="filter-outbox">
+                <div class="filter-main">
+                    <div class="mask-container d-none w-100 h-100"></div>
+                    <!-- masonry products -->
+                    <div class="products-listbox filter-container">   
+                            <div class="grid">
+                                <div class="products-sizer"></div>
+                                <div class="products-item">
+                                    <a href="products-detail.html">
+                                        <div class="products-img">
+                                            <div class="img-box">
+                                                <div class="rwdimg" style="background-image: url('../img/shopping/products/products001.jfif');"></div>
+                                            </div> 
+                                        </div>
+                                        <div class="products-title">
+                                            <p class="txt-line-clamp2">日本旅遊上網Wi-Fi網路分享器尊榮不降速方案</p>
+                                        </div>
+                                        <div class="products-price">
+                                            <div class="price-asking">$30,320</div>
+                                            <div class="price-original">$37,000</div>
+                                        </div>
+                                    </a>
                                 </div>
-                                <div class="products-title">
-                                    <p class="txt-line-clamp2">日本旅遊上網Wi-Fi網路分享器尊榮不降速方案</p>
+                                <div class="products-item">
+                                    <a href="products-detail.html">
+                                        <div class="products-img">
+                                            <div class="img-box">
+                                                <div class="rwdimg" style="background-image: url('../img/shopping/products/products001.jfif');"></div>
+                                            </div> 
+                                        </div>
+                                        <div class="products-title">
+                                            <p class="txt-line-clamp2">日本旅遊上網Wi-Fi網路分享器尊榮不降速方案</p>
+                                        </div>
+                                        <div class="products-price">
+                                            <div class="price-asking">$30,320</div>
+                                            <div class="price-original">$37,000</div>
+                                        </div>
+                                    </a>
                                 </div>
-                                <div class="products-price">
-                                    <div class="price-asking">$30,320</div>
-                                    <div class="price-original">$37,000</div>
+                                <div class="products-item">
+                                    <a href="products-detail.html">
+                                        <div class="products-img">
+                                            <div class="img-box">
+                                                <div class="rwdimg" style="background-image: url('../img/shopping/products/products001.jfif');"></div>
+                                            </div> 
+                                        </div>
+                                        <div class="products-title">
+                                            <p class="txt-line-clamp2">日本旅遊上網Wi-Fi網路分享器尊榮不降速方案</p>
+                                        </div>
+                                        <div class="products-price">
+                                            <div class="price-asking">$30,320</div>
+                                            <div class="price-original">$37,000</div>
+                                        </div>
+                                    </a>
                                 </div>
-                            </a>
-                        </div>
-                        <div class="products-item">
-                            <a href="products-detail.html">
-                                <div class="products-img">
-                                    <div class="img-box">
-                                        <div class="rwdimg" style="background-image: url('../img/shopping/products/products001.jfif');"></div>
-                                    </div> 
+                                <div class="products-item">
+                                    <a href="products-detail.html">
+                                        <div class="products-img">
+                                            <div class="img-box">
+                                                <div class="rwdimg" style="background-image: url('../img/shopping/products/products001.jfif');"></div>
+                                            </div> 
+                                        </div>
+                                        <div class="products-title">
+                                            <p class="txt-line-clamp2">日本旅遊上網Wi-Fi網路分享器尊榮不降速方案</p>
+                                        </div>
+                                        <div class="products-price">
+                                            <div class="price-asking">$30,320</div>
+                                            <div class="price-original">$37,000</div>
+                                        </div>
+                                    </a>
                                 </div>
-                                <div class="products-title">
-                                    <p class="txt-line-clamp2">日本旅遊上網Wi-Fi網路分享器尊榮不降速方案</p>
+                                <div class="products-item">
+                                    <a href="products-detail.html">
+                                        <div class="products-img">
+                                            <div class="img-box">
+                                                <div class="rwdimg" style="background-image: url('../img/shopping/products/products001.jfif');"></div>
+                                            </div> 
+                                        </div>
+                                        <div class="products-title">
+                                            <p class="txt-line-clamp2">日本旅遊上網Wi-Fi網路分享器尊榮不降速方案</p>
+                                        </div>
+                                        <div class="products-price">
+                                            <div class="price-asking">$30,320</div>
+                                            <div class="price-original">$37,000</div>
+                                        </div>
+                                    </a>
                                 </div>
-                                <div class="products-price">
-                                    <div class="price-asking">$30,320</div>
-                                    <div class="price-original">$37,000</div>
+                                <div class="products-item">
+                                    <a href="products-detail.html">
+                                        <div class="products-img">
+                                            <div class="img-box">
+                                                <div class="rwdimg" style="background-image: url('../img/shopping/products/products001.jfif');"></div>
+                                            </div> 
+                                        </div>
+                                        <div class="products-title">
+                                            <p class="txt-line-clamp2">日本旅遊上網Wi-Fi網路分享器尊榮不降速方案</p>
+                                        </div>
+                                        <div class="products-price">
+                                            <div class="price-asking">$30,320</div>
+                                            <div class="price-original">$37,000</div>
+                                        </div>
+                                    </a>
                                 </div>
-                            </a>
-                        </div>
-                        <div class="products-item">
-                            <a href="products-detail.html">
-                                <div class="products-img">
-                                    <div class="img-box">
-                                        <div class="rwdimg" style="background-image: url('../img/shopping/products/products001.jfif');"></div>
-                                    </div> 
+                                <div class="products-item">
+                                    <a href="products-detail.html">
+                                        <div class="products-img">
+                                            <div class="img-box">
+                                                <div class="rwdimg" style="background-image: url('../img/shopping/products/products001.jfif');"></div>
+                                            </div> 
+                                        </div>
+                                        <div class="products-title">
+                                            <p class="txt-line-clamp2">日本旅遊上網Wi-Fi網路分享器尊榮不降速方案</p>
+                                        </div>
+                                        <div class="products-price">
+                                            <div class="price-asking">$30,320</div>
+                                            <div class="price-original">$37,000</div>
+                                        </div>
+                                    </a>
                                 </div>
-                                <div class="products-title">
-                                    <p class="txt-line-clamp2">日本旅遊上網Wi-Fi網路分享器尊榮不降速方案</p>
+                                <div class="products-item">
+                                    <a href="products-detail.html">
+                                        <div class="products-img">
+                                            <div class="img-box">
+                                                <div class="rwdimg" style="background-image: url('../img/shopping/products/products001.jfif');"></div>
+                                            </div> 
+                                        </div>
+                                        <div class="products-title">
+                                            <p class="txt-line-clamp2">日本旅遊上網Wi-Fi網路分享器尊榮不降速方案</p>
+                                        </div>
+                                        <div class="products-price">
+                                            <div class="price-asking">$30,320</div>
+                                            <div class="price-original">$37,000</div>
+                                        </div>
+                                    </a>
                                 </div>
-                                <div class="products-price">
-                                    <div class="price-asking">$30,320</div>
-                                    <div class="price-original">$37,000</div>
+                                <div class="products-item">
+                                    <a href="products-detail.html">
+                                        <div class="products-img">
+                                            <div class="img-box">
+                                                <div class="rwdimg" style="background-image: url('../img/shopping/products/products001.jfif');"></div>
+                                            </div> 
+                                        </div>
+                                        <div class="products-title">
+                                            <p class="txt-line-clamp2">日本旅遊上網Wi-Fi網路分享器尊榮不降速方案</p>
+                                        </div>
+                                        <div class="products-price">
+                                            <div class="price-asking">$30,320</div>
+                                            <div class="price-original">$37,000</div>
+                                        </div>
+                                    </a>
                                 </div>
-                            </a>
-                        </div>
-                        <div class="products-item">
-                            <a href="products-detail.html">
-                                <div class="products-img">
-                                    <div class="img-box">
-                                        <div class="rwdimg" style="background-image: url('../img/shopping/products/products001.jfif');"></div>
-                                    </div> 
+                                <div class="products-item">
+                                    <a href="products-detail.html">
+                                        <div class="products-img">
+                                            <div class="img-box">
+                                                <div class="rwdimg" style="background-image: url('../img/shopping/products/products001.jfif');"></div>
+                                            </div> 
+                                        </div>
+                                        <div class="products-title">
+                                            <p class="txt-line-clamp2">日本旅遊上網Wi-Fi網路分享器尊榮不降速方案</p>
+                                        </div>
+                                        <div class="products-price">
+                                            <div class="price-asking">$30,320</div>
+                                            <div class="price-original">$37,000</div>
+                                        </div>
+                                    </a>
                                 </div>
-                                <div class="products-title">
-                                    <p class="txt-line-clamp2">日本旅遊上網Wi-Fi網路分享器尊榮不降速方案</p>
+                                <div class="products-item">
+                                    <a href="products-detail.html">
+                                        <div class="products-img">
+                                            <div class="img-box">
+                                                <div class="rwdimg" style="background-image: url('../img/shopping/products/products001.jfif');"></div>
+                                            </div> 
+                                        </div>
+                                        <div class="products-title">
+                                            <p class="txt-line-clamp2">日本旅遊上網Wi-Fi網路分享器尊榮不降速方案</p>
+                                        </div>
+                                        <div class="products-price">
+                                            <div class="price-asking">$30,320</div>
+                                            <div class="price-original">$37,000</div>
+                                        </div>
+                                    </a>
                                 </div>
-                                <div class="products-price">
-                                    <div class="price-asking">$30,320</div>
-                                    <div class="price-original">$37,000</div>
+                                <div class="products-item">
+                                    <a href="products-detail.html">
+                                        <div class="products-img">
+                                            <div class="img-box">
+                                                <div class="rwdimg" style="background-image: url('../img/shopping/products/products001.jfif');"></div>
+                                            </div> 
+                                        </div>
+                                        <div class="products-title">
+                                            <p class="txt-line-clamp2">日本旅遊上網Wi-Fi網路分享器尊榮不降速方案</p>
+                                        </div>
+                                        <div class="products-price">
+                                            <div class="price-asking">$30,320</div>
+                                            <div class="price-original">$37,000</div>
+                                        </div>
+                                    </a>
                                 </div>
-                            </a>
-                        </div>
-                        <div class="products-item">
-                            <a href="products-detail.html">
-                                <div class="products-img">
-                                    <div class="img-box">
-                                        <div class="rwdimg" style="background-image: url('../img/shopping/products/products001.jfif');"></div>
-                                    </div> 
+                                <div class="products-item">
+                                    <a href="products-detail.html">
+                                        <div class="products-img">
+                                            <div class="img-box">
+                                                <div class="rwdimg" style="background-image: url('../img/shopping/products/products001.jfif');"></div>
+                                            </div> 
+                                        </div>
+                                        <div class="products-title">
+                                            <p class="txt-line-clamp2">日本旅遊上網Wi-Fi網路分享器尊榮不降速方案</p>
+                                        </div>
+                                        <div class="products-price">
+                                            <div class="price-asking">$30,320</div>
+                                            <div class="price-original">$37,000</div>
+                                        </div>
+                                    </a>
                                 </div>
-                                <div class="products-title">
-                                    <p class="txt-line-clamp2">日本旅遊上網Wi-Fi網路分享器尊榮不降速方案</p>
+                                <div class="products-item">
+                                    <a href="products-detail.html">
+                                        <div class="products-img">
+                                            <div class="img-box">
+                                                <div class="rwdimg" style="background-image: url('../img/shopping/products/products001.jfif');"></div>
+                                            </div> 
+                                        </div>
+                                        <div class="products-title">
+                                            <p class="txt-line-clamp2">日本旅遊上網Wi-Fi網路分享器尊榮不降速方案</p>
+                                        </div>
+                                        <div class="products-price">
+                                            <div class="price-asking">$30,320</div>
+                                            <div class="price-original">$37,000</div>
+                                        </div>
+                                    </a>
                                 </div>
-                                <div class="products-price">
-                                    <div class="price-asking">$30,320</div>
-                                    <div class="price-original">$37,000</div>
+                                <div class="products-item">
+                                    <a href="products-detail.html">
+                                        <div class="products-img">
+                                            <div class="img-box">
+                                                <div class="rwdimg" style="background-image: url('../img/shopping/products/products001.jfif');"></div>
+                                            </div> 
+                                        </div>
+                                        <div class="products-title">
+                                            <p class="txt-line-clamp2">日本旅遊上網Wi-Fi網路分享器尊榮不降速方案</p>
+                                        </div>
+                                        <div class="products-price">
+                                            <div class="price-asking">$30,320</div>
+                                            <div class="price-original">$37,000</div>
+                                        </div>
+                                    </a>
                                 </div>
-                            </a>
-                        </div>
-                        <div class="products-item">
-                            <a href="products-detail.html">
-                                <div class="products-img">
-                                    <div class="img-box">
-                                        <div class="rwdimg" style="background-image: url('../img/shopping/products/products001.jfif');"></div>
-                                    </div> 
+                                <div class="products-item">
+                                    <a href="products-detail.html">
+                                        <div class="products-img">
+                                            <div class="img-box">
+                                                <div class="rwdimg" style="background-image: url('../img/shopping/products/products001.jfif');"></div>
+                                            </div> 
+                                        </div>
+                                        <div class="products-title">
+                                            <p class="txt-line-clamp2">日本旅遊上網Wi-Fi網路分享器尊榮不降速方案</p>
+                                        </div>
+                                        <div class="products-price">
+                                            <div class="price-asking">$30,320</div>
+                                            <div class="price-original">$37,000</div>
+                                        </div>
+                                    </a>
                                 </div>
-                                <div class="products-title">
-                                    <p class="txt-line-clamp2">日本旅遊上網Wi-Fi網路分享器尊榮不降速方案</p>
+                                <div class="products-item">
+                                    <a href="products-detail.html">
+                                        <div class="products-img">
+                                            <div class="img-box">
+                                                <div class="rwdimg" style="background-image: url('../img/shopping/products/products001.jfif');"></div>
+                                            </div> 
+                                        </div>
+                                        <div class="products-title">
+                                            <p class="txt-line-clamp2">日本旅遊上網Wi-Fi網路分享器尊榮不降速方案</p>
+                                        </div>
+                                        <div class="products-price">
+                                            <div class="price-asking">$30,320</div>
+                                            <div class="price-original">$37,000</div>
+                                        </div>
+                                    </a>
                                 </div>
-                                <div class="products-price">
-                                    <div class="price-asking">$30,320</div>
-                                    <div class="price-original">$37,000</div>
+                                <div class="products-item">
+                                    <a href="products-detail.html">
+                                        <div class="products-img">
+                                            <div class="img-box">
+                                                <div class="rwdimg" style="background-image: url('../img/shopping/products/products001.jfif');"></div>
+                                            </div> 
+                                        </div>
+                                        <div class="products-title">
+                                            <p class="txt-line-clamp2">日本旅遊上網Wi-Fi網路分享器尊榮不降速方案</p>
+                                        </div>
+                                        <div class="products-price">
+                                            <div class="price-asking">$30,320</div>
+                                            <div class="price-original">$37,000</div>
+                                        </div>
+                                    </a>
                                 </div>
-                            </a>
-                        </div>
-                        <div class="products-item">
-                            <a href="products-detail.html">
-                                <div class="products-img">
-                                    <div class="img-box">
-                                        <div class="rwdimg" style="background-image: url('../img/shopping/products/products001.jfif');"></div>
-                                    </div> 
+                                <div class="products-item">
+                                    <a href="products-detail.html">
+                                        <div class="products-img">
+                                            <div class="img-box">
+                                                <div class="rwdimg" style="background-image: url('../img/shopping/products/products001.jfif');"></div>
+                                            </div> 
+                                        </div>
+                                        <div class="products-title">
+                                            <p class="txt-line-clamp2">日本旅遊上網Wi-Fi網路分享器尊榮不降速方案</p>
+                                        </div>
+                                        <div class="products-price">
+                                            <div class="price-asking">$30,320</div>
+                                            <div class="price-original">$37,000</div>
+                                        </div>
+                                    </a>
                                 </div>
-                                <div class="products-title">
-                                    <p class="txt-line-clamp2">日本旅遊上網Wi-Fi網路分享器尊榮不降速方案</p>
+                                <div class="products-item">
+                                    <a href="products-detail.html">
+                                        <div class="products-img">
+                                            <div class="img-box">
+                                                <div class="rwdimg" style="background-image: url('../img/shopping/products/products001.jfif');"></div>
+                                            </div> 
+                                        </div>
+                                        <div class="products-title">
+                                            <p class="txt-line-clamp2">日本旅遊上網Wi-Fi網路分享器尊榮不降速方案</p>
+                                        </div>
+                                        <div class="products-price">
+                                            <div class="price-asking">$30,320</div>
+                                            <div class="price-original">$37,000</div>
+                                        </div>
+                                    </a>
                                 </div>
-                                <div class="products-price">
-                                    <div class="price-asking">$30,320</div>
-                                    <div class="price-original">$37,000</div>
+                                <div class="products-item">
+                                    <a href="products-detail.html">
+                                        <div class="products-img">
+                                            <div class="img-box">
+                                                <div class="rwdimg" style="background-image: url('../img/shopping/products/products001.jfif');"></div>
+                                            </div> 
+                                        </div>
+                                        <div class="products-title">
+                                            <p class="txt-line-clamp2">日本旅遊上網Wi-Fi網路分享器尊榮不降速方案</p>
+                                        </div>
+                                        <div class="products-price">
+                                            <div class="price-asking">$30,320</div>
+                                            <div class="price-original">$37,000</div>
+                                        </div>
+                                    </a>
                                 </div>
-                            </a>
-                        </div>
-                        <div class="products-item">
-                            <a href="products-detail.html">
-                                <div class="products-img">
-                                    <div class="img-box">
-                                        <div class="rwdimg" style="background-image: url('../img/shopping/products/products001.jfif');"></div>
-                                    </div> 
-                                </div>
-                                <div class="products-title">
-                                    <p class="txt-line-clamp2">日本旅遊上網Wi-Fi網路分享器尊榮不降速方案</p>
-                                </div>
-                                <div class="products-price">
-                                    <div class="price-asking">$30,320</div>
-                                    <div class="price-original">$37,000</div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="products-item">
-                            <a href="products-detail.html">
-                                <div class="products-img">
-                                    <div class="img-box">
-                                        <div class="rwdimg" style="background-image: url('../img/shopping/products/products001.jfif');"></div>
-                                    </div> 
-                                </div>
-                                <div class="products-title">
-                                    <p class="txt-line-clamp2">日本旅遊上網Wi-Fi網路分享器尊榮不降速方案</p>
-                                </div>
-                                <div class="products-price">
-                                    <div class="price-asking">$30,320</div>
-                                    <div class="price-original">$37,000</div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="products-item">
-                            <a href="products-detail.html">
-                                <div class="products-img">
-                                    <div class="img-box">
-                                        <div class="rwdimg" style="background-image: url('../img/shopping/products/products001.jfif');"></div>
-                                    </div> 
-                                </div>
-                                <div class="products-title">
-                                    <p class="txt-line-clamp2">日本旅遊上網Wi-Fi網路分享器尊榮不降速方案</p>
-                                </div>
-                                <div class="products-price">
-                                    <div class="price-asking">$30,320</div>
-                                    <div class="price-original">$37,000</div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="products-item">
-                            <a href="products-detail.html">
-                                <div class="products-img">
-                                    <div class="img-box">
-                                        <div class="rwdimg" style="background-image: url('../img/shopping/products/products001.jfif');"></div>
-                                    </div> 
-                                </div>
-                                <div class="products-title">
-                                    <p class="txt-line-clamp2">日本旅遊上網Wi-Fi網路分享器尊榮不降速方案</p>
-                                </div>
-                                <div class="products-price">
-                                    <div class="price-asking">$30,320</div>
-                                    <div class="price-original">$37,000</div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="products-item">
-                            <a href="products-detail.html">
-                                <div class="products-img">
-                                    <div class="img-box">
-                                        <div class="rwdimg" style="background-image: url('../img/shopping/products/products001.jfif');"></div>
-                                    </div> 
-                                </div>
-                                <div class="products-title">
-                                    <p class="txt-line-clamp2">日本旅遊上網Wi-Fi網路分享器尊榮不降速方案</p>
-                                </div>
-                                <div class="products-price">
-                                    <div class="price-asking">$30,320</div>
-                                    <div class="price-original">$37,000</div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="products-item">
-                            <a href="products-detail.html">
-                                <div class="products-img">
-                                    <div class="img-box">
-                                        <div class="rwdimg" style="background-image: url('../img/shopping/products/products001.jfif');"></div>
-                                    </div> 
-                                </div>
-                                <div class="products-title">
-                                    <p class="txt-line-clamp2">日本旅遊上網Wi-Fi網路分享器尊榮不降速方案</p>
-                                </div>
-                                <div class="products-price">
-                                    <div class="price-asking">$30,320</div>
-                                    <div class="price-original">$37,000</div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="products-item">
-                            <a href="products-detail.html">
-                                <div class="products-img">
-                                    <div class="img-box">
-                                        <div class="rwdimg" style="background-image: url('../img/shopping/products/products001.jfif');"></div>
-                                    </div> 
-                                </div>
-                                <div class="products-title">
-                                    <p class="txt-line-clamp2">日本旅遊上網Wi-Fi網路分享器尊榮不降速方案</p>
-                                </div>
-                                <div class="products-price">
-                                    <div class="price-asking">$30,320</div>
-                                    <div class="price-original">$37,000</div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="products-item">
-                            <a href="products-detail.html">
-                                <div class="products-img">
-                                    <div class="img-box">
-                                        <div class="rwdimg" style="background-image: url('../img/shopping/products/products001.jfif');"></div>
-                                    </div> 
-                                </div>
-                                <div class="products-title">
-                                    <p class="txt-line-clamp2">日本旅遊上網Wi-Fi網路分享器尊榮不降速方案</p>
-                                </div>
-                                <div class="products-price">
-                                    <div class="price-asking">$30,320</div>
-                                    <div class="price-original">$37,000</div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="products-item">
-                            <a href="products-detail.html">
-                                <div class="products-img">
-                                    <div class="img-box">
-                                        <div class="rwdimg" style="background-image: url('../img/shopping/products/products001.jfif');"></div>
-                                    </div> 
-                                </div>
-                                <div class="products-title">
-                                    <p class="txt-line-clamp2">日本旅遊上網Wi-Fi網路分享器尊榮不降速方案</p>
-                                </div>
-                                <div class="products-price">
-                                    <div class="price-asking">$30,320</div>
-                                    <div class="price-original">$37,000</div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="products-item">
-                            <a href="products-detail.html">
-                                <div class="products-img">
-                                    <div class="img-box">
-                                        <div class="rwdimg" style="background-image: url('../img/shopping/products/products001.jfif');"></div>
-                                    </div> 
-                                </div>
-                                <div class="products-title">
-                                    <p class="txt-line-clamp2">日本旅遊上網Wi-Fi網路分享器尊榮不降速方案</p>
-                                </div>
-                                <div class="products-price">
-                                    <div class="price-asking">$30,320</div>
-                                    <div class="price-original">$37,000</div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="products-item">
-                            <a href="products-detail.html">
-                                <div class="products-img">
-                                    <div class="img-box">
-                                        <div class="rwdimg" style="background-image: url('../img/shopping/products/products001.jfif');"></div>
-                                    </div> 
-                                </div>
-                                <div class="products-title">
-                                    <p class="txt-line-clamp2">日本旅遊上網Wi-Fi網路分享器尊榮不降速方案</p>
-                                </div>
-                                <div class="products-price">
-                                    <div class="price-asking">$30,320</div>
-                                    <div class="price-original">$37,000</div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="products-item">
-                            <a href="products-detail.html">
-                                <div class="products-img">
-                                    <div class="img-box">
-                                        <div class="rwdimg" style="background-image: url('../img/shopping/products/products001.jfif');"></div>
-                                    </div> 
-                                </div>
-                                <div class="products-title">
-                                    <p class="txt-line-clamp2">日本旅遊上網Wi-Fi網路分享器尊榮不降速方案</p>
-                                </div>
-                                <div class="products-price">
-                                    <div class="price-asking">$30,320</div>
-                                    <div class="price-original">$37,000</div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="products-item">
-                            <a href="products-detail.html">
-                                <div class="products-img">
-                                    <div class="img-box">
-                                        <div class="rwdimg" style="background-image: url('../img/shopping/products/products001.jfif');"></div>
-                                    </div> 
-                                </div>
-                                <div class="products-title">
-                                    <p class="txt-line-clamp2">日本旅遊上網Wi-Fi網路分享器尊榮不降速方案</p>
-                                </div>
-                                <div class="products-price">
-                                    <div class="price-asking">$30,320</div>
-                                    <div class="price-original">$37,000</div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="products-item">
-                            <a href="products-detail.html">
-                                <div class="products-img">
-                                    <div class="img-box">
-                                        <div class="rwdimg" style="background-image: url('../img/shopping/products/products001.jfif');"></div>
-                                    </div> 
-                                </div>
-                                <div class="products-title">
-                                    <p class="txt-line-clamp2">日本旅遊上網Wi-Fi網路分享器尊榮不降速方案</p>
-                                </div>
-                                <div class="products-price">
-                                    <div class="price-asking">$30,320</div>
-                                    <div class="price-original">$37,000</div>
-                                </div>
-                            </a>
+                            </div>
+                        
+                        <div id="type" class="filter-content pb-wrap">
+                            <ul class="open-page-ul">
+                                <li class="flex-inline-between" onclick="">                
+                                    <div class="">
+                                        全部顯示
+                                    </div>
+                                    <div class="">
+                                        22<i class="fas fa-check"></i>
+                                    </div>   
+                                </li>
+                                <li class="flex-inline-between active" onclick="">
+                                    <div class="">
+                                        日本
+                                    </div>
+                                    <div class="">
+                                        8<i class="fas fa-check"></i>
+                                    </div>                
+                                </li>
+                                <li class="flex-inline-between" onclick="">
+                                    <div class="">
+                                        歐洲
+                                    </div>
+                                    <div class="">
+                                        4<i class="fas fa-check"></i>
+                                    </div>                
+                                </li>
+                                <li class="flex-inline-between" onclick="">
+                                    <div class="">
+                                        大陸
+                                    </div>
+                                    <div class="">
+                                        2<i class="fas fa-check"></i>
+                                    </div>                
+                                </li>
+                                <li class="flex-inline-between" onclick="">
+                                    <div class="">
+                                        東南亞
+                                    </div>
+                                    <div class="">
+                                        4<i class="fas fa-check"></i>
+                                    </div>                
+                                </li>
+                                <li class="flex-inline-between" onclick="">
+                                    <div class="">
+                                        大洋洲
+                                    </div>
+                                    <div class="">
+                                        1<i class="fas fa-check"></i>
+                                    </div>                
+                                </li>                        
+                                <li class="flex-inline-between" onclick="">
+                                    <div class="">
+                                        美加
+                                    </div>
+                                    <div class="">
+                                        2<i class="fas fa-check"></i>
+                                    </div>                
+                                </li>                        
+                                <li class="flex-inline-between" onclick="">
+                                    <div class="">
+                                        非洲多國
+                                    </div>
+                                    <div class="">
+                                        1<i class="fas fa-check"></i>
+                                    </div>                
+                                </li>
+                            </ul>
                         </div>
                     </div>
-                
+                </div>
                 <div id="type" class="filter-content pb-wrap">
                     <ul class="open-page-ul">
-                        <li class="flex-inline-between" onclick="">                
+                        <li class="flex-inline-between active" onclick="">                
                             <div class="">
                                 全部顯示
                             </div>
@@ -419,9 +493,9 @@
                                 22<i class="fas fa-check"></i>
                             </div>   
                         </li>
-                        <li class="flex-inline-between active" onclick="">
+                        <li class="flex-inline-between">
                             <div class="">
-                                日本
+                                熱門
                             </div>
                             <div class="">
                                 8<i class="fas fa-check"></i>
@@ -429,56 +503,39 @@
                         </li>
                         <li class="flex-inline-between" onclick="">
                             <div class="">
-                                歐洲
+                                美食
                             </div>
                             <div class="">
-                                4<i class="fas fa-check"></i>
+                                1231<i class="fas fa-check"></i>
                             </div>                
                         </li>
                         <li class="flex-inline-between" onclick="">
                             <div class="">
-                                大陸
+                                購物
                             </div>
                             <div class="">
-                                2<i class="fas fa-check"></i>
+                                274<i class="fas fa-check"></i>
                             </div>                
                         </li>
                         <li class="flex-inline-between" onclick="">
                             <div class="">
-                                東南亞
+                                景點
                             </div>
                             <div class="">
-                                4<i class="fas fa-check"></i>
+                                1374<i class="fas fa-check"></i>
                             </div>                
                         </li>
                         <li class="flex-inline-between" onclick="">
                             <div class="">
-                                大洋洲
+                                遊樂
                             </div>
                             <div class="">
-                                1<i class="fas fa-check"></i>
-                            </div>                
-                        </li>                        
-                        <li class="flex-inline-between" onclick="">
-                            <div class="">
-                                美加
-                            </div>
-                            <div class="">
-                                2<i class="fas fa-check"></i>
-                            </div>                
-                        </li>                        
-                        <li class="flex-inline-between" onclick="">
-                            <div class="">
-                                非洲多國
-                            </div>
-                            <div class="">
-                                1<i class="fas fa-check"></i>
+                                1327<i class="fas fa-check"></i>
                             </div>                
                         </li>
                     </ul>
                 </div>
             </div>
-            <div class="h-50 d-inline-block"></div>
             <div id="loginhtml"></div>
         </main >
     </div>

@@ -1267,13 +1267,6 @@
             $(this).find('input').prop('checked',true);
         });
         
-        /** 避免灰屏 */
-        $('.modal-backdrop').on('click', function(){
-            backLayer();
-            backsortLayer();
-            $('.modal-backdrop').remove();
-        });
-
         /** 避免輸入鍵盤擋到輸入框 */
         $("input").focus(function(e){ 
             const target = $('input').index(e.currentTarget);
