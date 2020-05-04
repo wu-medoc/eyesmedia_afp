@@ -519,14 +519,18 @@ canvas{
 canvas{
     margin-top: 0;
     font-size: 1.2em;
-    background-color: #fdebef;
-    border-radius: 100%;
 }
 .progressbar{
     line-height: 0;
 }
 .second.circle{
     background-color: #fdebef;
+    canvas{
+        margin-top: 0;
+        font-size: 1.2em;
+        background-color: #fdebef;
+        border-radius: 100%;
+    }
 }
 .circular-progress-bar {
     display: inline-block;

@@ -1275,9 +1275,9 @@
         });
 
         /** 避免輸入鍵盤擋到輸入框 */
-        $('input').on('click', function(e) { 
+        $("input").focus(function(e){ 
             const target = $('input').index(e.currentTarget);
-            setTimeout(function() { document.body.scrollTop = ($('input').eq(target)[0].offsetTop - 50); }, 300); 
+            document.body.scrollTop = ($('input').eq(target)[0].offsetTop - 50); 
         });
     </script>
     <script src="../js/index.js"></script>

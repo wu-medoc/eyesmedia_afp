@@ -775,8 +775,6 @@ canvas {
 canvas {
   margin-top: 0;
   font-size: 1.2em;
-  background-color: #fdebef;
-  border-radius: 100%;
 }
 
 .progressbar {
@@ -785,6 +783,13 @@ canvas {
 
 .second.circle {
   background-color: #fdebef;
+}
+
+.second.circle canvas {
+  margin-top: 0;
+  font-size: 1.2em;
+  background-color: #fdebef;
+  border-radius: 100%;
 }
 
 .circular-progress-bar {
