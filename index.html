@@ -1773,13 +1773,17 @@
 
 
     <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->    
+    <script src="js/vendor/bs4/js/jquery-3.2.1.slim.min.js"></script>
     <script src="../js/vendor/owlcarousel/vendors/jquery.min.js"></script>
     <!-- Latest compiled and minified JavaScript -->    
     <script src="../js/vendor/bs4/js/popper.min.js"></script>
     <script src="../js/vendor/bs4/js/bootstrap.min.js"></script>
     
     <!-- owlcarousel JS -->
+    <script src="../js/vendor/owlcarousel/owlcarousel/owl.carousel.js"></script>
+    <script src="../js/vendor/owlcarousel/vendors/highlight.js"></script>
+    <script src="../js/vendor/owlcarousel/js/app.js"></script>   
     <script src="../js/vendor/jquery-editable-select-master/dist/jquery-editable-select.js"></script>
 
     <!-- vendor js -->
@@ -1788,7 +1792,10 @@
     <script src="js/animateCss.js"></script>    
 
     <!-- custom js -->
-   
+    <script>    
+        $("#loginhtml").load("login.html");
+        $("#footerMobii").load("footerMobii.html");
+    </script>     
     <script>
         $(document).ready(function() { 
             var JData = [{id:"t1", telname:"中國大陸", telcode:"86"},
@@ -1915,11 +1922,8 @@
         });
 
     </script> 
-    <script>    
-        $("#loginhtml").load("login.html");
-        $("#footerMobii").load("footerMobii.html");
-    </script>  
-    <script src="js/index.js"></script>    
+    <script src="js/index.js"></script>
+    
 </body>
 
 </html>
