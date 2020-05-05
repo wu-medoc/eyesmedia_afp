@@ -3287,6 +3287,12 @@ header + div,
       }   
       &:last-child{
           padding-right: 0;
+      }  
+      &:nth-child(odd){
+          padding-right: .5em;                 
+          @media screen and (max-width: 571px) {
+            padding-right: 0;
+          }   
       }
       &.one{
           flex-grow: 1; 
@@ -3300,12 +3306,17 @@ header + div,
       &.four{
           flex-grow: 4; 
       }
-  }   
-  &.flex-coinbn{        
-      @media screen and (max-width: 571px) {
-          flex-direction: column;
-      }        
-  } 
+  }    
+  &.flex-gamebn,  
+  &.flex-coinbn{   
+    flex-wrap: wrap;     
+    div.item{  
+      flex: 0 0 50%;  
+    }          
+    @media screen and (max-width: 571px) {
+      flex-direction: column;
+    }     
+  }  
 }
 /* coupon card*/
 .mycoin-couponbox{    

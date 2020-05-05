@@ -68,25 +68,23 @@
                 </div>
             </div>
         </div>
-        <div class="game-list">
-            <h6 class="p-3">遊戲列表</h6>
-            <div class="member-flex flex-coinbn">
+        <div class="game-list p-3 div-switch d-block">
+            <h6 class="py-2">遊戲列表</h6>
+            <div class="member-flex flex-gamebn">
                 <div class="item">
                     <img src="../img/mission/game-li01.png" alt="" class="img-fluid">
                 </div>
                 <div class="item">
                     <img src="../img/mission/game-li02.png" alt="" class="img-fluid">
-                </div>
-                <div class="item">
-                    <img src="../img/mission/game-li01.png" alt="" class="img-fluid">
-                </div>
-                <div class="item">
-                    <img src="../img/mission/game-li02.png" alt="" class="img-fluid">
-                </div>
-                <div class="item">
-                    <img src="../img/mission/game-li01.png" alt="" class="img-fluid">
                 </div>
             </div>
+        </div>
+        <div class="no-data div-switch d-none">
+            <img src="../img/share/game-null.png" alt="">
+            <p>Oops！下次再來玩...</p>
+        </div>
+        <div class="w-100 text-center">
+            <button class="btn index-outline-btn" onclick="div_switch()">畫面切換</button>
         </div>
     </main>
     
@@ -112,9 +110,13 @@
     <!-- custom js -->
     <script>
     $(document).ready(function() {
-                var mySwiper = new Swiper ('.swiper-container', {
-            // Optional parameters
-            // direction: 'vertical',
+        var mySwiper = new Swiper ('.swiper-container', {
+            observer:true,
+            observeParents:true,
+            slidesPerView: 1,
+            spaceBetween: 0,
+            preloadImages: true,
+            updateOnImagesReady : true,
             loop: true,
         });
         callLayerOne();
