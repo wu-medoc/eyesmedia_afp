@@ -742,6 +742,7 @@ figure.image img {
 
 .setting {
   width: 100%;
+  min-width: 320px;
   background-color: #fff;
 }
 
@@ -819,6 +820,7 @@ figure.image img {
 
 .setting .edit-title-box {
   display: none;
+  white-space: nowrap;
 }
 
 .setting .edit-title-box .edit-item {

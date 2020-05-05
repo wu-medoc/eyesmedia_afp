@@ -251,7 +251,7 @@ footer{
                 position: relative;
                 padding: 10px;
                 padding-right: 0;
-                min-width: 75px;
+                width: 75px;
                 text-align: center;
                 button{
                     min-width: 65px;
@@ -325,25 +325,12 @@ footer{
             justify-content: center;
             color: $blue-dark;
             font-size: .9em;
-            p{                 
-                width: 260px;
+            p{              
                 overflow: hidden;
                 text-overflow: ellipsis;
                 display: -webkit-box;
                  -webkit-box-orient: vertical;
                 -webkit-line-clamp: 2;
-                @media (max-width: 570px) {                   
-                    width: 360px;
-                }
-                @media (max-width: 480px) {                   
-                    width: 280px;
-                }
-                @media (max-width: 375px) {                    
-                    width: 170px;
-                }
-                @media (max-width: 320px) {                    
-                    width: 130px;
-                }
                 &:first-child{
                     font-weight: 700;
                 }
@@ -405,7 +392,7 @@ footer{
                 position: relative;
                 padding: 10px;
                 padding-right: 0;
-                min-width: 75px;
+                width: 75px;
                 text-align: center;
                 button{
                     min-width: 65px;

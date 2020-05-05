@@ -456,7 +456,7 @@
     }
 }
 
-canvas{
+.scratch-cont canvas{
     position: absolute;
     align-items: center;
     margin-top: 1.5em;
@@ -488,50 +488,53 @@ canvas{
 
 
 //circle progress
-.circle {
-    width: 50px;
-    margin: 0px;
-    display: inline-block;
-    position: relative;
-    text-align: center;
-    line-height: 1.2;
-}
 
-.circle strong {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, 50%);
-    -webkit-transform: translate(-50%, 50%);
-    width: 100%;
-    text-align: center;
-    line-height: 1.4em;
-    font-size: 1.2em;
-    color: #FD5F00;    
-}
-
-.circle strong i {
-    font-style: normal;
-    font-size: 0.6em;
-    font-weight: normal;
-}
-
-canvas{
-    margin-top: 0;
-    font-size: 1.2em;
-}
 .progressbar{
     line-height: 0;
-}
-.second.circle{
-    background-color: #fdebef;
+    .circle {
+        width: 50px;
+        margin: 0px;
+        display: inline-block;
+        position: relative;
+        text-align: center;
+        line-height: 1.2;
+    }
+    
+    .circle strong {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        -webkit-transform: translate(-50%, -50%);
+        width: 100%;
+        text-align: center;
+        line-height: 1.4em;
+        font-size: 1.2em;
+        color: #FD5F00;    
+    }
+    
+    .circle strong i {
+        font-style: normal;
+        font-size: 0.6em;
+        font-weight: normal;
+    }
+    
     canvas{
         margin-top: 0;
         font-size: 1.2em;
+    }
+    .second.circle{
         background-color: #fdebef;
         border-radius: 100%;
+        canvas{
+            margin-top: 0;
+            font-size: 1.2em;
+            background-color: #fdebef;
+            border-radius: 100%;
+        }
     }
 }
+
 .circular-progress-bar {
     display: inline-block;
     border-radius: 50%;

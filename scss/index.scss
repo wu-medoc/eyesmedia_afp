@@ -638,6 +638,7 @@ figure.image{
 }
 .setting{  
   width: 100%;
+  min-width: 320px;
   background-color: #fff;
 }
 .setting.edit-mode {
@@ -709,19 +710,19 @@ figure.image{
 
 .setting .edit-title-box {
   display: none;
+  white-space: nowrap;
+  .edit-item {
+    color: #0091FF;
+    font-size: 16px;
+  }
+  .edit-item.edit-title {
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0 auto;
+    color: #333;
+  }
 }
 
-.setting .edit-title-box .edit-item {
-  color: #0091FF;
-  font-size: 16px;
-}
-
-.setting .edit-title-box .edit-item.edit-title {
-  font-size: 18px;
-  font-weight: 700;
-  margin: 0 auto;
-  color: #333;
-}
 
 .setting .service-box {
   padding: 0 15px;

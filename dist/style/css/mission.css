@@ -703,7 +703,7 @@
   font-weight: 700;
 }
 
-canvas {
+.scratch-cont canvas {
   position: absolute;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -718,7 +718,7 @@ canvas {
 }
 
 @media (max-width: 979px) {
-  canvas {
+  .scratch-cont canvas {
     width: 500px;
     height: 480px;
     font-size: 30px;
@@ -727,7 +727,7 @@ canvas {
 }
 
 @media (max-width: 480px) {
-  canvas {
+  .scratch-cont canvas {
     width: 400px;
     height: 385px;
     font-size: 24px;
@@ -736,7 +736,7 @@ canvas {
 }
 
 @media (max-width: 375px) {
-  canvas {
+  .scratch-cont canvas {
     width: 300px;
     height: 290px;
     font-size: 18px;
@@ -744,7 +744,11 @@ canvas {
   }
 }
 
-.circle {
+.progressbar {
+  line-height: 0;
+}
+
+.progressbar .circle {
   width: 50px;
   margin: 0px;
   display: inline-block;
@@ -753,12 +757,12 @@ canvas {
   line-height: 1.2;
 }
 
-.circle strong {
+.progressbar .circle strong {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, 50%);
-  -webkit-transform: translate(-50%, 50%);
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
   width: 100%;
   text-align: center;
   line-height: 1.4em;
@@ -766,26 +770,23 @@ canvas {
   color: #FD5F00;
 }
 
-.circle strong i {
+.progressbar .circle strong i {
   font-style: normal;
   font-size: 0.6em;
   font-weight: normal;
 }
 
-canvas {
+.progressbar canvas {
   margin-top: 0;
   font-size: 1.2em;
 }
 
-.progressbar {
-  line-height: 0;
-}
-
-.second.circle {
+.progressbar .second.circle {
   background-color: #fdebef;
+  border-radius: 100%;
 }
 
-.second.circle canvas {
+.progressbar .second.circle canvas {
   margin-top: 0;
   font-size: 1.2em;
   background-color: #fdebef;

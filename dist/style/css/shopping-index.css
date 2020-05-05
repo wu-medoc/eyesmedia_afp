@@ -213,7 +213,7 @@ footer a:hover {
   position: relative;
   padding: 10px;
   padding-right: 0;
-  min-width: 75px;
+  width: 75px;
   text-align: center;
 }
 
@@ -313,36 +313,11 @@ footer a:hover {
 }
 
 .other-discount-list-w .discount-item .discount-text p {
-  width: 260px;
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
-}
-
-@media (max-width: 570px) {
-  .other-discount-list-w .discount-item .discount-text p {
-    width: 360px;
-  }
-}
-
-@media (max-width: 480px) {
-  .other-discount-list-w .discount-item .discount-text p {
-    width: 280px;
-  }
-}
-
-@media (max-width: 375px) {
-  .other-discount-list-w .discount-item .discount-text p {
-    width: 170px;
-  }
-}
-
-@media (max-width: 320px) {
-  .other-discount-list-w .discount-item .discount-text p {
-    width: 130px;
-  }
 }
 
 .other-discount-list-w .discount-item .discount-text p:first-child {
@@ -426,7 +401,7 @@ footer a:hover {
   position: relative;
   padding: 10px;
   padding-right: 0;
-  min-width: 75px;
+  width: 75px;
   text-align: center;
 }
 
