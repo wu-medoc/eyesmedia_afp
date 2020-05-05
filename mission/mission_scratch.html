@@ -134,7 +134,7 @@
             </div>
             <div class="text-mission pb-3">已發送至您的票券夾，請注意使用期限</div>
             <div class="d-flex d-inline">
-                <button type="button" class="btn index-outline-btn w-50 mx-2" onclick="backLayerUp();next()">再玩一次</button>
+                <button type="button" class="btn index-outline-btn w-50 mx-2" onclick="next();">再玩一次</button>
                 <button type="button" class="btn index-btn w-50 mx-2">前往查看</button>
             </div>
         </div>
@@ -165,13 +165,12 @@
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="../js/vendor/bs4/js/jquery-3.2.1.slim.min.js"></script>
+    <script src="../js/vendor/owlcarousel/vendors/jquery.min.js"></script>
     <!-- Latest compiled and minified JavaScript -->    
     <script src="../js/vendor/bs4/js/popper.min.js"></script>
     <script src="../js/vendor/bs4/js/bootstrap.min.js"></script>
     
     <!-- owlcarousel JS -->
-    <script src="../js/vendor/owlcarousel/vendors/jquery.min.js"></script>
     <script src="../js/vendor/owlcarousel/owlcarousel/owl.carousel.js"></script>
     <script src="../js/vendor/owlcarousel/vendors/highlight.js"></script>
     <script src="../js/vendor/owlcarousel/js/app.js"></script>   
@@ -324,11 +323,12 @@
 
         //點擊再來一次進行頁面重繪next
         function next(){
+            backLayerUp();
             useNumber++;
         //判斷當前點擊次數
             if(useNumber>2){    
                 $('.scratchnum').empty().append(luckNumber[0]+", "+luckNumber[1]+", "+luckNumber[2]);
-                $('#scratchModal').modal();
+                $(document).ready(function(){$('#scratchModal').modal();});
                 document.querySelector("button").disabled = true;
             }else{
                 drawBot();

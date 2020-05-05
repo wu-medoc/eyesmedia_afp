@@ -4114,6 +4114,10 @@ img.nearbyimg {
 }
 
 /* shopping products */
+h6 {
+  font-weight: bold;
+}
+
 .explore-block h6,
 .onsale-list h6 {
   font-weight: bold;

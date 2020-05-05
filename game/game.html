@@ -27,7 +27,6 @@
     <link rel="stylesheet" href="../dist/style/css.min.css">
     <link rel="stylesheet" href="../dist/style/global.min.css">
     <link rel="stylesheet" href="../dist/style/index.min.css">
-    <link rel="stylesheet" href="../dist/style/roam.min.css">
     <link rel="stylesheet" href="../dist/style/animate.min.css">
 
     <title>Mobii - 遊戲館</title>
@@ -53,22 +52,43 @@
             </div>
         </div>  
     </header>
-    <div class="banner-box">
-        <div class="swiper-container">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                    <img src="../img/roaming/wifi-banner.png" alt="">
-                </div>
-                <div class="swiper-slide">
-                    <img src="../img/roaming/wifi-banner.png" alt="">
-                </div>
-                <div class="swiper-slide">
-                    <img src="../img/roaming/wifi-banner.png" alt="">
+    <main>
+        <div class="banner-box">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="../img/mission/game-bn01.png" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="../img/mission/game-bn01.png" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="../img/mission/game-bn01.png" alt="">
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-
+        <div class="game-list">
+            <h6 class="p-3">遊戲列表</h6>
+            <div class="member-flex flex-coinbn">
+                <div class="item">
+                    <img src="../img/mission/game-li01.png" alt="" class="img-fluid">
+                </div>
+                <div class="item">
+                    <img src="../img/mission/game-li02.png" alt="" class="img-fluid">
+                </div>
+                <div class="item">
+                    <img src="../img/mission/game-li01.png" alt="" class="img-fluid">
+                </div>
+                <div class="item">
+                    <img src="../img/mission/game-li02.png" alt="" class="img-fluid">
+                </div>
+                <div class="item">
+                    <img src="../img/mission/game-li01.png" alt="" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </main>
     
 </div> 
     <!-- Optional JavaScript -->
@@ -92,8 +112,7 @@
     <!-- custom js -->
     <script>
     $(document).ready(function() {
-        $(".imgLiquidFill").imgLiquid();
-        var mySwiper = new Swiper ('.swiper-container', {
+                var mySwiper = new Swiper ('.swiper-container', {
             // Optional parameters
             // direction: 'vertical',
             loop: true,
