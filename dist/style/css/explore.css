@@ -52,15 +52,12 @@ button.filter-item {
 
 .explore-top-box .form-group .input .material-icons {
   position: static;
-  -webkit-transform: translate(0, 0);
-          transform: translate(0, 0);
+  transform: translate(0, 0);
   display: inline-block;
 }
 
 .explore-top-box .form-group .input .item {
   padding: 0 10px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   background-color: #eee;
   border-radius: 5px;
@@ -73,16 +70,12 @@ button.filter-item {
 }
 
 .explore-top-box .filter-item-box {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   padding: 0 15px 10px;
 }
 
 .explore-top-box .filter-item-box .filter-item {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  flex: 1;
   text-align: center;
   color: #182B56;
 }
@@ -92,8 +85,7 @@ button.filter-item {
 }
 
 .explore-top-box .filter-item-box .filter-item.active .material-icons {
-  -webkit-transform: rotate(180deg);
-          transform: rotate(180deg);
+  transform: rotate(180deg);
 }
 
 .active {
@@ -224,15 +216,11 @@ button.active {
 }
 
 .store-info-box .store-tab-box .nav-tabs {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
 
 .store-info-box .store-tab-box .nav-tabs .nav-item {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  flex: 1;
   text-align: center;
   position: relative;
 }
@@ -246,8 +234,7 @@ button.active {
   border-radius: 1px;
   position: absolute;
   left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
+  transform: translateX(-50%);
   bottom: 0;
 }
 
@@ -260,12 +247,8 @@ button.active {
 }
 
 .store-info-box .store-tab-box .store-group .store-item {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   position: relative;
   padding: 15px;
   border-bottom: 1px #eee solid;
@@ -273,13 +256,11 @@ button.active {
 
 .store-info-box .store-tab-box .store-group .store-item.store-open p {
   max-height: 94px;
-  -webkit-transition: max-height 0.15s ease-out;
   transition: max-height 0.15s ease-out;
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
   -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
   padding-right: 25px;
 }
 
@@ -291,19 +272,15 @@ button.active {
 
 .store-info-box .store-tab-box .store-group .store-item.store-open.is-open p {
   max-height: 500px;
-  -webkit-transition: max-height 0.25s ease-in;
   transition: max-height 0.25s ease-in;
   text-overflow: unset;
   display: -webkit-box;
   -webkit-line-clamp: unset;
-  -webkit-box-orient: vertical;
 }
 
 .store-info-box .store-tab-box .store-group .store-item.store-time {
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
   max-height: auto;
-  -webkit-transition: max-height 0s ease-out;
   transition: max-height 0s ease-out;
 }
 
@@ -313,24 +290,17 @@ button.active {
 }
 
 .store-info-box .store-tab-box .store-group .store-item.store-time .time-list {
-  -webkit-box-flex: 0;
-      -ms-flex: none;
-          flex: none;
+  flex: none;
   width: 100%;
   max-height: 0;
-  -webkit-transition: max-height 0.25s ease-out;
   transition: max-height 0.25s ease-out;
   overflow: hidden;
   padding-left: 35px;
 }
 
 .store-info-box .store-tab-box .store-group .store-item.store-time .time-list li {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
   line-height: 1.8;
 }
 
@@ -340,25 +310,21 @@ button.active {
 
 .store-info-box .store-tab-box .store-group .store-item.store-time.is-open .item-icon,
 .store-info-box .store-tab-box .store-group .store-item.store-time.is-open .open-btn {
-  -ms-flex-item-align: start;
-      align-self: flex-start;
+  align-self: flex-start;
 }
 
 .store-info-box .store-tab-box .store-group .store-item.store-time.is-open ul {
   max-height: 500px;
-  -webkit-transition: max-height 0.5s ease-in;
   transition: max-height 0.5s ease-in;
 }
 
 .store-info-box .store-tab-box .store-group .store-item.is-open {
   max-height: 500px;
-  -webkit-transition: max-height 0s ease-in;
   transition: max-height 0s ease-in;
 }
 
 .store-info-box .store-tab-box .store-group .store-item.is-open .open-btn .material-icons {
-  -webkit-transform: rotate(180deg);
-          transform: rotate(180deg);
+  transform: rotate(180deg);
 }
 
 .store-info-box .store-tab-box .store-group .store-item .item-icon {
@@ -366,15 +332,9 @@ button.active {
   height: 25px;
   background-color: #4a90e2;
   border-radius: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   margin-right: 10px;
 }
 
@@ -384,12 +344,8 @@ button.active {
 }
 
 .store-info-box .store-tab-box .ticket-list li {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   padding: 15px;
   border-bottom: 1px #eee solid;
 }
@@ -404,9 +360,7 @@ button.active {
 }
 
 .store-info-box .store-tab-box .ticket-list .ticket-info {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  flex: 1;
   font-size: 14px;
 }
 
@@ -425,25 +379,18 @@ button.active {
 
 .store-info-box .store-tab-box .shop-filter {
   padding: 15px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
 
 .store-info-box .store-tab-box .shop-list {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
   background-color: #eee;
   padding: 5px;
 }
 
 .store-info-box .store-tab-box .shop-list .shop-item {
-  -webkit-box-flex: 0;
-      -ms-flex: none;
-          flex: none;
+  flex: none;
   width: 49%;
   margin-bottom: 0;
   background-color: #fff;
@@ -474,8 +421,6 @@ button.active {
 }
 
 .card-item {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   padding: 15px;
   border-bottom: 1px #eee solid;
@@ -494,21 +439,14 @@ button.active {
 }
 
 .card-item .info-box {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  flex: 1;
   padding-left: 15px;
 }
 
 .card-item .info-box .info-list {
   height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
 }
 
 .card-item .info-box .info-list .badge {
@@ -525,12 +463,8 @@ button.active {
 }
 
 .card-item .info-box li {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   font-size: 13px;
 }
 
@@ -539,12 +473,8 @@ button.active {
 }
 
 .card-item .info-box .item-tag {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   border: 1px solid #e5e9f2;
   padding: 1px 10px;
   border-radius: 100px;
@@ -633,12 +563,8 @@ button.active {
 }
 
 .nav-container nav .levelThree a {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
 }
 
 .nav-container nav .levelThree a .material-icons {

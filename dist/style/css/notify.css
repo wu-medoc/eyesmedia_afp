@@ -7,8 +7,6 @@ ul.notifylist li {
   width: 100%;
   border-bottom: 1px solid #eee;
   padding: 1em;
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
   display: inline-flex;
 }
 
@@ -24,12 +22,8 @@ ul.notifylist li label {
 
 ul.notifylist li .auto-left {
   margin-left: auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
 }
 
 .newnotify {
@@ -52,19 +46,13 @@ ul.newlist li {
 
 ul.newlist li .newinfo {
   width: calc(100% - 90px);
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
   display: inline-flex;
 }
 
 ul.newlist li .newinfo .auto-left {
   margin-left: auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
 }
 
 ul.newlist li label {
@@ -83,13 +71,11 @@ ul.newlist li .newbody {
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
-  -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
 }
 
 ul.newlist li.active .material-icons {
-  -webkit-transform: rotate(180deg);
-          transform: rotate(180deg);
+  transform: rotate(180deg);
 }
 
 ul.newlist li.active .newbody {
@@ -97,8 +83,6 @@ ul.newlist li.active .newbody {
 }
 
 ul.newlist li.active .auto-left {
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
+  align-items: flex-end;
 }
 /*# sourceMappingURL=notify.css.map */

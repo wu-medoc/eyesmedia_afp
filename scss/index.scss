@@ -236,6 +236,7 @@ figure.image{
       -ms-flex: auto;
           flex: auto;
   color: #fff;
+  text-align: left;
   .material-icons {
     color: #333;
   }
@@ -247,7 +248,7 @@ figure.image{
     font-weight: normal;
   }
   ul{
-    width: 45%;
+    min-width: 100px;
     @media (max-width: 375px) {
       width: 90px;
     }
@@ -361,15 +362,16 @@ figure.image{
   }
 }
 .kv-box .kv-top{
-  .mobiilogo{
-    img{
+  img.mobiilogo{
       width: 100px;
       position: absolute;
-      top: 10%;
+      top: 10px;
       left: 50%;
       transform: translate(-50%, -50%);
       -webkit-transform: translate(-50%, -50%);
-    }
+      @media (max-width: 375px) {
+        width: 90px;
+      }
   }
   img.bntips{
       width: 90px;

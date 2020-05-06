@@ -72,8 +72,7 @@ body.open-popup .popup-box, body.open-popup .overlay, body.open-popup .search-ta
 }
 
 .call-car-box .call-car-input .input-box {
-  -webkit-box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.3);
-          box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.3);
   border-radius: 10px;
   background-color: #fff;
   padding: 15px 25px 15px 40px;
@@ -86,14 +85,11 @@ body.open-popup .popup-box, body.open-popup .overlay, body.open-popup .search-ta
 
 .call-car-box .call-car-input .input-box.use-code {
   padding: 15px;
-  -webkit-box-shadow: none;
-          box-shadow: none;
+  box-shadow: none;
   border-radius: 0;
 }
 
 .call-car-box .call-car-input .input-box.use-code .input {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   margin-left: 0;
 }
@@ -105,9 +101,7 @@ body.open-popup .popup-box, body.open-popup .overlay, body.open-popup .search-ta
 }
 
 .call-car-box .call-car-input .input-box.use-code .input .item:first-child {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  flex: 1;
   margin-right: 10px;
 }
 
@@ -131,8 +125,7 @@ body.open-popup .popup-box, body.open-popup .overlay, body.open-popup .search-ta
   position: absolute;
   top: 50%;
   left: 26px;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
+  transform: translateY(-50%);
   background-color: #35A88E;
 }
 
@@ -142,8 +135,7 @@ body.open-popup .popup-box, body.open-popup .overlay, body.open-popup .search-ta
 
 .call-car-map {
   height: calc(100vh - 194px);
-  -webkit-box-shadow: 0px -1px 4px rgba(135, 135, 135, 0.3);
-          box-shadow: 0px -1px 4px rgba(135, 135, 135, 0.3);
+  box-shadow: 0px -1px 4px rgba(135, 135, 135, 0.3);
   position: relative;
 }
 
@@ -177,12 +169,8 @@ body.open-popup .popup-box, body.open-popup .overlay, body.open-popup .search-ta
 .choice-map-list li {
   padding: 15px 25px;
   border-top: 1px #ddd solid;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   cursor: pointer;
 }
 
@@ -207,27 +195,16 @@ body.open-popup .popup-box, body.open-popup .overlay, body.open-popup .search-ta
 
 .note-box {
   height: calc(100vh - 57px);
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   padding: 15px;
   margin-top: auto;
 }
 
 .note-box .note-title {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  align-items: center;
+  justify-content: space-between;
   margin-bottom: 15px;
 }
 
@@ -237,11 +214,8 @@ body.open-popup .popup-box, body.open-popup .overlay, body.open-popup .search-ta
 }
 
 .note-box .note-list {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 
 .note-box .note-list .item {
@@ -254,7 +228,6 @@ body.open-popup .popup-box, body.open-popup .overlay, body.open-popup .search-ta
 
 .note-box .note-list .item.active {
   color: #fff;
-  background: -webkit-gradient(linear, right top, left top, from(#568EE3), to(#36D1DB));
   background: linear-gradient(270deg, #568EE3 0%, #36D1DB 100%);
   border-color: #fff;
 }
@@ -286,8 +259,7 @@ body.open-popup .popup-box, body.open-popup .overlay, body.open-popup .search-ta
 .popup-box .img-box {
   position: absolute;
   left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
+  transform: translateX(-50%);
   top: -25px;
 }
 
@@ -305,8 +277,7 @@ body.open-popup .popup-box, body.open-popup .overlay, body.open-popup .search-ta
   height: 30px;
   position: absolute;
   top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
+  transform: translateY(-50%);
   background-color: #35A88E;
   left: 15px;
 }
@@ -324,8 +295,7 @@ body.open-popup .popup-box, body.open-popup .overlay, body.open-popup .search-ta
   background-color: #fff;
   position: absolute;
   top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
+  transform: translateY(-50%);
   left: -15px;
 }
 
@@ -356,8 +326,6 @@ body.open-popup .popup-box, body.open-popup .overlay, body.open-popup .search-ta
 }
 
 .discount-tikcet-box {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   justify-items: center;
   padding: 15px;
@@ -385,17 +353,12 @@ body.open-popup .popup-box, body.open-popup .overlay, body.open-popup .search-ta
 
 .discount-tikcet-box .discount-item:last-child {
   margin-right: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
 }
 
 .discount-tikcet-box .discount-item:last-child button {
   color: #fff;
-  background: -webkit-gradient(linear, right top, left top, from(#568EE3), to(#36D1DB));
   background: linear-gradient(270deg, #568EE3 0%, #36D1DB 100%);
   border-radius: 6px;
   padding: 0 10px;
@@ -420,29 +383,16 @@ body.open-popup .popup-box, body.open-popup .overlay, body.open-popup .search-ta
 }
 
 .info-card-box .info-content {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   padding: 15px;
 }
 
 .info-card-box .info-content .info-list {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   width: 60%;
 }
 
@@ -464,15 +414,9 @@ body.open-popup .popup-box, body.open-popup .overlay, body.open-popup .search-ta
   height: 40px;
   border: 1px solid #9B9B9B;
   border-radius: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
   margin: 0 auto 5px;
 }
 
@@ -481,9 +425,7 @@ body.open-popup .popup-box, body.open-popup .overlay, body.open-popup .search-ta
 }
 
 .info-card-box .info-content .info-list .item {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  flex: 1;
   text-align: center;
   margin-bottom: 10px;
   color: #9B9B9B;
@@ -512,17 +454,10 @@ body.open-popup .popup-box, body.open-popup .overlay, body.open-popup .search-ta
 }
 
 .info-card-box .taxi-content {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
   padding: 15px;
 }
 
@@ -531,8 +466,6 @@ body.open-popup .popup-box, body.open-popup .overlay, body.open-popup .search-ta
 }
 
 .info-card-box .taxi-content .taxi-item .item {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   font-size: 13px;
   color: #4A4A4A;
@@ -564,8 +497,7 @@ body.open-popup .popup-box, body.open-popup .overlay, body.open-popup .search-ta
 .main-discount-box .discount-top-bg {
   height: 26px;
   background: #D9A77A;
-  -webkit-box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.25);
-          box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.25);
   border-radius: 5px;
   padding: 8px;
   margin: 0 -10px;
@@ -581,8 +513,7 @@ body.open-popup .popup-box, body.open-popup .overlay, body.open-popup .search-ta
   margin-top: -12px;
   background-color: #fff;
   border-radius: 5px;
-  -webkit-box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
-          box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
   padding: 15px;
   position: relative;
 }
@@ -623,12 +554,8 @@ body.open-popup .popup-box, body.open-popup .overlay, body.open-popup .search-ta
 }
 
 .main-discount-box .discount-content .discount-info-box {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
   color: #182B56;
   margin: 10px 0 0;
 }
@@ -669,12 +596,9 @@ body.open-popup .popup-box, body.open-popup .overlay, body.open-popup .search-ta
 }
 
 .other-discount-list .discount-item {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   margin-bottom: 15px;
-  -webkit-box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
-          box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
   border-radius: 10px;
   padding: 15px 10px;
 }
@@ -687,27 +611,18 @@ body.open-popup .popup-box, body.open-popup .overlay, body.open-popup .search-ta
   background-color: #fff;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  background-image: -webkit-gradient(linear, left top, right top, from(#568EE3), to(#36D1DB));
   background-image: linear-gradient(to right, #568EE3 0%, #36D1DB 100%);
   border: 1px #568EE3 solid;
 }
 
 .other-discount-list .discount-item .item {
-  -webkit-box-flex: 0;
-      -ms-flex: none;
-          flex: none;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  flex: none;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
 }
 
 .other-discount-list .discount-item .item:nth-of-type(2) {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  flex: 1;
   margin-left: 10px;
 }
 
@@ -726,8 +641,7 @@ body.open-popup .popup-box, body.open-popup .overlay, body.open-popup .search-ta
   position: absolute;
   left: 0;
   top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
+  transform: translateY(-50%);
 }
 
 .other-discount-list .discount-item .item:last-child .circle {
@@ -760,16 +674,13 @@ body.open-popup .popup-box, body.open-popup .overlay, body.open-popup .search-ta
 
 .other-discount-list .discount-item .item:last-child:before {
   top: -15px;
-  -webkit-transform: rotate(180deg);
-          transform: rotate(180deg);
-  -webkit-box-shadow: inset 0px 2px 2px rgba(0, 0, 0, 0.15);
-          box-shadow: inset 0px 2px 2px rgba(0, 0, 0, 0.15);
+  transform: rotate(180deg);
+  box-shadow: inset 0px 2px 2px rgba(0, 0, 0, 0.15);
 }
 
 .other-discount-list .discount-item .item:last-child:after {
   bottom: -15px;
-  -webkit-box-shadow: inset 0px 2px 2px rgba(0, 0, 0, 0.15);
-          box-shadow: inset 0px 2px 2px rgba(0, 0, 0, 0.15);
+  box-shadow: inset 0px 2px 2px rgba(0, 0, 0, 0.15);
 }
 
 .other-discount-list .discount-item .item .img-box {
@@ -792,16 +703,9 @@ body.open-popup .popup-box, body.open-popup .overlay, body.open-popup .search-ta
 }
 
 .other-discount-list .discount-item .discount-text {
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
 }
 
 .other-discount-list .discount-item .discount-text p:first-child {
@@ -825,8 +729,7 @@ body.open-popup .popup-box, body.open-popup .overlay, body.open-popup .search-ta
 }
 
 .call-car-info .info-box {
-  -webkit-box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.3);
-          box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.3);
   border-radius: 10px;
   background-color: #fff;
   position: relative;
@@ -834,8 +737,6 @@ body.open-popup .popup-box, body.open-popup .overlay, body.open-popup .search-ta
 }
 
 .call-car-info .info-box .info-content {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   background-color: #F2F2F2;
   border-radius: 10px;
@@ -847,32 +748,17 @@ body.open-popup .popup-box, body.open-popup .overlay, body.open-popup .search-ta
 }
 
 .call-car-info .info-box .info-content.desc-info {
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  flex-direction: column;
+  justify-content: center;
   padding: 30px;
 }
 
 .call-car-info .info-box .info-content.desc-info .title-box {
-  display: -ms-flexbox;
-  display: -webkit-box;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -ms-flex-direction: column;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-          flex-direction: column;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: wrap;
   padding: 0;
   text-align: center;
   margin-bottom: 20px;
@@ -900,15 +786,9 @@ body.open-popup .popup-box, body.open-popup .overlay, body.open-popup .search-ta
 }
 
 .call-car-info .info-box .info-content.desc-info .desc-info-list li {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  align-items: center;
+  justify-content: space-between;
   padding: 10px 0;
   border-bottom: 1px solid #4A90E2;
 }
@@ -949,12 +829,8 @@ body.open-popup .popup-box, body.open-popup .overlay, body.open-popup .search-ta
 }
 
 .call-car-info .info-box .info-content .item.status {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
 }
 
 .call-car-info .info-box .info-content .material-icons {
@@ -979,7 +855,6 @@ body.open-popup .popup-box, body.open-popup .overlay, body.open-popup .search-ta
   background-color: #9B9B9B;
   position: absolute;
   top: 50%;
-  -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
   left: 6px;
 }
@@ -998,15 +873,9 @@ body.open-popup .popup-box, body.open-popup .overlay, body.open-popup .search-ta
 
 .call-car-info .pay-method-box {
   height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.3);
-          box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.3);
+  flex-direction: column;
+  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.3);
   border-radius: 10px;
   background-color: #fff;
   position: relative;
@@ -1036,12 +905,8 @@ body.open-popup .popup-box, body.open-popup .overlay, body.open-popup .search-ta
 }
 
 .call-car-info .pay-method-box .pay-title {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   margin-bottom: 20px;
 }
 
@@ -1051,20 +916,13 @@ body.open-popup .popup-box, body.open-popup .overlay, body.open-popup .search-ta
 }
 
 .call-car-info .pay-method-box .pay-content {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  flex: 1;
 }
 
 .call-car-info .pay-method-box .pay-content .content-box {
   height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
 }
 
 .call-car-info .pay-method-box .pay-slider {
@@ -1091,15 +949,9 @@ body.open-popup .popup-box, body.open-popup .overlay, body.open-popup .search-ta
   border: 1px #eee solid;
   border-radius: 100%;
   overflow: hidden;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
 }
 
 .call-car-info .pay-method-box .pay-slider .pay-item img {
@@ -1113,15 +965,9 @@ body.open-popup .popup-box, body.open-popup .overlay, body.open-popup .search-ta
 }
 
 .call-car-info .pay-method-box .pay-list {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: space-between;
+  align-items: center;
   padding: 10px 0;
 }
 
@@ -1151,8 +997,7 @@ body.open-popup .popup-box, body.open-popup .overlay, body.open-popup .search-ta
 
 .choice-discount-ticket .discount-ticket {
   border-radius: 10px 10px 0 0;
-  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-          box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
   margin-top: 15px;
 }
 
@@ -1163,8 +1008,6 @@ body.open-popup .popup-box, body.open-popup .overlay, body.open-popup .search-ta
 }
 
 .choice-discount-ticket .ticket-list > li {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   padding: 15px;
   border-bottom: 1px #eee solid;
@@ -1185,9 +1028,7 @@ body.open-popup .popup-box, body.open-popup .overlay, body.open-popup .search-ta
 }
 
 .choice-discount-ticket .ticket-list > li .item.desc-box {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  flex: 1;
 }
 
 .choice-discount-ticket .ticket-list > li .item .team-name {
@@ -1207,8 +1048,6 @@ body.open-popup .popup-box, body.open-popup .overlay, body.open-popup .search-ta
 }
 
 #pay-final .pay-title {
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
 }
 /*# sourceMappingURL=car.css.map */
