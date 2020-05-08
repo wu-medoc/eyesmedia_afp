@@ -3508,6 +3508,12 @@ h6 {
       font-weight: bold;
       padding: 0 0.5em;
       height: 48px;
+      width:auto;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+       -webkit-box-orient: vertical;
+      -webkit-line-clamp: 2;
   }
   .products-price {
       padding: 0 0.5em;
