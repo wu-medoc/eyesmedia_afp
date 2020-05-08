@@ -442,6 +442,9 @@
     background: -moz-linear-gradient(#f9621d,#e00602);
     background: linear-gradient(#f9621d,#e00602);
     height: 880px;
+    #bottom{        
+        border-radius: 7%;
+    }
     @media (max-width: 979px) {
         height: 600px;
     }
@@ -462,7 +465,7 @@
     margin-top: 1.5em;
     margin-bottom: 0.5em;
     background-size: contain;
-    background-repeat: no-repeat;
+    background-repeat: inherit;
     width: 800px;
     height: 770px;
     font-size: 40px;

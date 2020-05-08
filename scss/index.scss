@@ -2333,7 +2333,7 @@ td.linebt-td,
     position: relative;
   }
   .guests-chat-msg{         
-    float: right;
+    margin-left: auto !important;
     width: 100%;
     display: inline-grid;
     justify-items: self-end;
