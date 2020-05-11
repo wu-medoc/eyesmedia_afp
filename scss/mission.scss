@@ -93,28 +93,40 @@
                 grid-column-gap: 0px;
                 grid-row-gap: 0px;
             }
-            div{
+            div.contbox{
+                width: 100%;
                 padding: .25em;
                 background: #fff;
                 border-radius: .25em;
-                display: flex;
+                display: grid;
+                grid-auto-flow: row;
                 justify-content: center;
+                justify-items: center;
                 align-items: center;
-                flex-direction: column;
-                overflow:hidden;
-                white-space: nowrap;
-                text-overflow: ellipsis;
                 opacity: 1;
                 border: 4px solid gray;
                 border-radius: 0.75em;
+                p{
+                    overflow: hidden;
+                    align-items: center;
+                    @media (max-width: 767px) {
+                        height: 44px;
+                    }
+                    @media (max-width: 480px) {
+                        height: 38px;
+                    }
+                }
                 img{
+                    align-self: center;
                     width: auto;
                     max-width: 120px;
                     @media (max-width: 767px) {
                         max-width: 80px;
+                        max-height: 80px;
                     }
                     @media (max-width: 480px) {
                         max-width: 50px;
+                        max-height: 50px;
                     }
                 }
             }
@@ -131,8 +143,15 @@
                 img{
                     max-width: 100%;
                 }
+                .btn{
+                    width: 100%;
+                    height: 100%;
+                }
             }
             .playbox{
+                display: flex;
+                justify-content: center;
+                align-items: center;
                 #rundot{
                     background: transparent;
                     position: absolute;
@@ -148,8 +167,9 @@
                     }                     
                     div{
                         border-radius: 50%;
-                        height: 28px;
-                        width: 28px;
+                        margin: 4px;
+                        height: 26px;
+                        width: 26px;
                         position: absolute;                        
                         animation-name: pinpon;
                         animation-timing-function: ease-in;
