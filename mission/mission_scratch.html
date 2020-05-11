@@ -196,8 +196,8 @@
         topCanvas.height = bottomCanvas.height = h;
         var ctxBot = bottomCanvas.getContext("2d");
         var ctxTop = topCanvas.getContext('2d');
-        bottomCanvas.style.backgroundImage = "url('../img/mission/scratch-win.png')";
-        ctxBot.font = $('#top').css("font-size")+" Microsoft YaHei";
+        bottomCanvas.style.backgroundImage = "url('../img/mission/scratch-win.png')"; //銀底圖
+        ctxBot.font = $('#top').css("font-size")+" Microsoft YaHei"; //字型大小
         //獲取1-1000隨機數
         function random(){
                 var JData = [{idx:"1", img:"stroe-logo-1.png", txt:"95折優惠券", deadline:"2019/11/15 ~ 2019/12/01"},
@@ -225,6 +225,17 @@
             return txt;
         }
 
+        var imgTop = new Image();
+        imgTop.src = "../img/mission/scratch-no.png"; //鈔票圖
+        imgTop.onload = function (){
+            drawTop();  
+        }
+        var imgBot = new Image();
+        imgBot.src = "../img/mission/scratch-win.png"; //銀底圖
+        imgBot.onload = function (){
+            drawBot();
+        }
+
         function drawBot(){
             //清除區域，為了點擊再來一次進行頁面重繪
             ctxBot.canvas.style.opacity = 1;
@@ -241,16 +252,6 @@
         }
 
 
-        var imgBot = new Image();
-        imgBot.src = "../img/mission/scratch-win.png";
-        imgBot.onload = function (){
-            drawBot();
-        }
-        var imgTop = new Image();
-        imgTop.src = "../img/mission/scratch-no.png";
-        imgTop.onload = function (){
-            drawTop();  
-        }
 
         function drawTop(){
             ctxTop.canvas.style.opacity = 1;
@@ -296,7 +297,7 @@
                 var x = ev.pageX - this.offsetLeft;
                 var y = ev.pageY - this.offsetTop;
                 ctxTop.beginPath();
-                ctxTop.arc(x, y, 10, 0, Math.PI * 2);
+                ctxTop.arc(x, y, 18, 0, Math.PI * 2); //18筆刷大小
                 ctxTop.fill();
                 alertInfo();
             }
