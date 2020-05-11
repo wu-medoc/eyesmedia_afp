@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=1, user-scalable=no">
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../js/vendor/bs4/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../js/vendor/jquery-editable-select-master/dist/jquery-editable-select.min.css">
+    <!-- owl.carousel core CSS -->
+    <link rel="stylesheet" href="../js/vendor/owlcarousel/owlcarousel/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="../js/vendor/owlcarousel/owlcarousel/assets/owl.theme.default.min.css">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+    <!-- vendor css -->
+    <link rel="stylesheet" href="../js/vendor/swiper/css/swiper.min.css">
+    <!-- fontawesome css -->
+    <link rel="stylesheet" href="../js/vendor/fontawesome/css/fontawesome.css">
+    <link rel="stylesheet" href="../js/vendor/fontawesome/css/brands.css">
+    <link rel="stylesheet" href="../js/vendor/fontawesome/css/solid.css">
+    <!-- custom css -->
+    <link rel="stylesheet" href="../dist/style/css.min.css">
+    <link rel="stylesheet" href="../dist/style/global.min.css">
+    <link rel="stylesheet" href="../dist/style/index.min.css">
+    <link rel="stylesheet" href="../dist/style/mission.min.css">
+    <link rel="stylesheet" href="../dist/style/animate.min.css">
+
+    <title>Mobii - 我的首頁</title>
+</head>
+
+<body>    
+<div class="wrap container">
+    <header>
+        <div class="header-secondary container linebt-row">
+            <div class="index-flex justify-content-between">
+                <div class="item two">
+                    <div class="close-btn">
+                         <button type="button" class="btn" onclick="history.back();" data-toggle="tooltip" data-placement="bottom" title="回上一頁">
+                            <i class="material-icons">&#xe314;</i>
+                        </button>
+                    </div>
+                </div>
+                <div class="item three text-center">
+                    <div class="title-name">幸運大轉盤</div>
+                </div>
+                <div class="item two">
+                    <button type="button" class="btn bluedk-outline-btn bt-small" onclick="callsortLayer('.luckspin-rules')">活動規則</button>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="missionlist">
+        <div><img src="../img/mission/banner3.gif" class="img-fluid"></div>
+        <div class="bg-mission p-3">
+            <div class="bg-white flex-inline-between px-2 brder-mission">
+                <div class="d-flex align-items-center">
+                    <img src="../img/share/mobiicoin_red.png" class="h24">
+                    <span class="mobiicoin-num">2,366</span>
+                </div>
+                <div class="d-flex align-items-center">
+                    可玩次數&ensp;<span class="mobiicoin-num">3</span>&ensp;次
+                </div>
+            </div>
+        </div>    
+        <div class="luckspin-box">
+            <div class="conopybox-top">
+                <section class="conopybox">
+                    <div class="item canopy-l"></div>
+                    <div class="item canopy-c"></div>
+                    <div class="item canopy-r"></div>
+                </section>
+            </div>
+            <div class="luckspin-cont">
+                <div class="luckspin-contbox">
+                    <div class="playbox">
+                        <button type="button" id="playagain" class="btn p-0" onclick="play()"><img src="../img/mission/playbox.png"></button>
+                        <div id="rundot"><div class="dot"></div><div class="dot1"></div><div class="dot2"></div></div>
+                    </div>
+                </div>            
+            </div>
+        </div>
+    </div>
+
+
+    <!-- 規則 -->
+    <div class="sortlayer">
+        <div class="luckspin-rules">
+            <div id="open-pagebox">
+                <div class="open-page-title index-flex">
+                    <div class="item one title-icon">
+                        <button class="btn" onclick="backsortLayer();">
+                            <i class="material-icons">&#xe314;</i>
+                        </button>
+                    </div>
+                    <div class="item two title-txt text-center">
+                        活動規則
+                    </div>
+                    <div class="item one title-txt">
+                    </div>
+                </div>
+                <div class="rulescontext">
+                    <label>玩法介紹</label>
+                    <ul style="list-style-type:decimal;">
+                        <li>圓盤上可自行貼輸出圖</li>
+                        <li>選定紅色指針位置</li>
+                        <li>以手撥轉輪盤，等待輪盤停止</li>
+                        <li>看輪盤停止，在指針下的內容</li>
+                    </ul>
+                    <label>兌獎方式</label>
+                    <ul>
+                        <li>到我的系統內的我的票券中，找到神奇小按鈕點擊倎哤垽娭屔，峷《敊浭浞浧浵》烗猀。珖珝砯「砨砫粍」紞紏蚙，迻郙鬯偟偩勓埳埱娵徖；梜淊淭烳牼翐脬舑</li>
+                    </ul>
+                    <label>備註</label>
+                    <ul>
+                        <li>偗皏侕妴屾皁，棜哳笎掟涗：「蛩妀莿昢詌臮剆娾，蚗芊亍硠邰莮，桹詒舴陼伅妅氿硰洉，昫啑咁軱蚕揇，堭梴虷灱丱稊迮砒苖桻</li>
+                    </ul>
+                </div>
+                
+            </div>
+        </div>        
+    </div>
+    <!-- 中奬 -->
+    <div class="uplayer">
+        <div class="winmsg">
+            <div class="winbox w-100">
+                <div class="wincontbox">
+                    <img src="../img/shopping/store/stroe-logo-6.png">
+                    <p>30元折價券</p>
+                    <small>2019/11/15 ~ 2019/12/31</small>
+                </div>
+            </div>
+            <div class="text-mission pb-3">已發送至您的票券夾，請注意使用期限</div>
+            <div class="d-flex d-inline justify-content-center">
+                <button type="button" class="btn index-outline-btn w-50 mx-2" onclick="backLayerUp();next();">再玩一次</button>
+                <button type="button" class="btn index-btn w-50 mx-2">前往查看</button>
+            </div>
+        </div>
+    </div>
+</div> 
+<div id="loginhtml"></div>
+<div id="footerMobii"></div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="../js/vendor/owlcarousel/vendors/jquery.min.js"></script>
+    <!-- Latest compiled and minified JavaScript -->    
+    <script src="../js/vendor/bs4/js/popper.min.js"></script>
+    <script src="../js/vendor/bs4/js/bootstrap.min.js"></script>
+    
+    <!-- owlcarousel JS -->
+    <script src="../js/vendor/owlcarousel/owlcarousel/owl.carousel.js"></script>
+    <script src="../js/vendor/owlcarousel/vendors/highlight.js"></script>
+    <script src="../js/vendor/owlcarousel/js/app.js"></script>   
+    <script src="../js/vendor/jquery-editable-select-master/dist/jquery-editable-select.js"></script>
+
+    <!-- vendor js -->
+    <script src="../js/vendor/swiper/js/swiper.min.js"></script>
+    <script src="../js/vendor/imgLiquid.js"></script>
+
+    <!-- custom js -->    
+    <script src="../js/animateCss.js"></script>
+    <script>
+        $( document ).ready(function() {
+            $('footer.for-pc').hide();
+        });
+        
+        // 各格數的發亮順序
+        const order8 = [1, 2, 3, 8, 4, 7, 6, 5];
+        const order12 = [1, 2, 3, 4, 12, 5, 11, 6, 10, 9, 8, 7];
+        var JData = [{idx:"1", quota:"1", img:"stroe-logo-1.png", txt:"95折優惠券*1", deadline:"2019/11/15 ~ 2019/12/01"},
+                            {idx:"2", quota:"1", img:"stroe-logo-2.png", txt:"滿900元運費打9折(機會有限儘請把握)*2", deadline:"2019/11/15 ~ 2019/12/02"},
+                            {idx:"3", quota:"1", img:"stroe-logo-3.png", txt:"30元折價券*3", deadline:"2019/11/15 ~ 2019/12/03"},
+                            {idx:"4", quota:"1", img:"stroe-logo-4.png", txt:"30元折價券*4", deadline:"2019/11/15 ~ 2019/12/04"},
+                            {idx:"5", quota:"0", img:"stroe-logo-5.png", txt:"30元折價券*5", deadline:"2019/11/15 ~ 2019/12/05"},
+                            {idx:"6", quota:"0", img:"stroe-logo-6.png", txt:"30元折價券*6", deadline:"2019/11/15 ~ 2019/12/06"},
+                            {idx:"7", quota:"1", img:"stroe-logo-7.png", txt:"30元折價券*7", deadline:"2019/11/15 ~ 2019/12/07"},
+                            {idx:"8", quota:"0", img:"stroe-logo-8.png", txt:"30元折價券*8", deadline:"2019/11/15 ~ 2019/12/08"},
+                            {idx:"9", quota:"1", img:"stroe-logo-9.png", txt:"杏仁果1盒(口味隨機)*9", deadline:"2019/11/15 ~ 2019/12/09"},
+                            {idx:"10", quota:"1", img:"stroe-logo-10.png", txt:"95折優惠券*10", deadline:"2019/11/15 ~ 2019/12/10"},
+                            {idx:"11", quota:"1", img:"stroe-logo-11.png", txt:"30元折價券*11", deadline:"2019/11/15 ~ 2019/12/11"},
+                            {idx:"12", quota:"1", img:"stroe-logo-12.png", txt:"30元折價券*12", deadline:"2019/11/15 ~ 2019/12/12"}];
+        //亂數取值
+        var luckrandom = parseInt(Math.random(12)*10);
+        console.log(luckrandom);
+        var key="";
+        $.each(JData, function( key, value ) {
+            //初始資料
+            (JData[key]['quota']=="0") ?            
+                $('.luckspin-contbox').prepend("<div class='contbox "+ order12.pop() +"' id='p"+ JData[key]['idx'] +"'><img src='../img/shopping/store/thanks.png'><p>再接再厲</p></div>"):
+                $('.luckspin-contbox').prepend("<div class='contbox "+ order12.pop() +"' id='p"+ JData[key]['idx'] +"'><img src='../img/shopping/store/"+ JData[key]['img'] +"'><p>"+JData[key]['txt']+"</p></div>");
+            //console.log(JData[key]['idx']);
+        });
+        function play(){
+            //啟動跑燈
+            $.each($('.contbox'), function( key, value ) {
+                for(let i=1; i<=12; i++){
+                    var k = i-(0.8*i);
+                    if($(this).attr('class').split(/\s+/)[1]==i){
+                        $(this).addClass('opacity5').css('animation-delay',k+'s');
+                    }  
+                };            
+            });  
+            
+            //5杪停止跑燈
+            setTimeout(function(){     
+                var key="";
+                $.each(JData, function( key, value ) {
+                    if(JData[key]['idx']==luckrandom){
+                        if (JData[key]['quota']=="0") {
+                            $('.wincontbox').empty().append("<img src='../img/shopping/store/thanks.png'><p>再接再厲</p></div>");
+                            $('.text-mission').text("好可惜喔！差一點就中了～");
+                            $('.index-btn').hide();
+                        } else {
+                            $('.wincontbox').empty().append("<img src='../img/shopping/store/"+ JData[key]['img'] +"'><p>"+JData[key]['txt']+"</p><small>"+JData[key]['deadline']+"</small></div>");
+                            $('.text-mission').text("已發送至您的優惠夾，請注意使用期限");
+                        };
+                    }
+                }); 
+                for(let j=1; j<=12; j++){
+                    if (luckrandom!=j){
+                        $('#p'+j).removeClass('opacity5').removeAttr('style');   
+                    } 
+                }    
+                //跳出中獎畫面            
+                callLayerUp('.winmsg');
+            }, 5000);
+        };
+        function next(){
+            location.reload(); 
+        };
+    </script>
+
+    <script>    
+        $("#loginhtml").load("../login.html"); 
+        $("#footerMobii").load("../footerMobii.html"); 
+    </script>
+    <script src="../js/index.js"></script>
+</body>
+
+</html>
