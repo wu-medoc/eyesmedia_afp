@@ -138,6 +138,14 @@
                 animation-iteration-count: infinite;
             }              
             .playbox9{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                grid-column-start: 2;
+                grid-column-end: 2;
+                grid-row-start: 2;
+                grid-row-end: 2;
+                position: relative;
                 background: transparent;
                 padding: 0;
                 img{

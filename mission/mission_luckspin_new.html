@@ -77,6 +77,9 @@
             </div>
             <div class="luckspin-cont">
                 <div class="luckspin-contbox">
+                    <div class="playbox9">
+                        <button type="button" id="playagain" class="btn p-0" onclick="play()"><img src="../img/mission/playbox9.png"></button>
+                    </div>
                     <div class="playbox">
                         <button type="button" id="playagain" class="btn p-0" onclick="play()"><img src="../img/mission/playbox.png"></button>
                         <div id="rundot"><div class="dot"></div><div class="dot1"></div><div class="dot2"></div></div>
@@ -168,11 +171,11 @@
         $( document ).ready(function() {
             $('footer.for-pc').hide();
         });
-        
+
         // 各格數的發亮順序
         const order8 = [1, 2, 3, 8, 4, 7, 6, 5];
         const order12 = [1, 2, 3, 4, 12, 5, 11, 6, 10, 9, 8, 7];
-        var JData = [{idx:"1", quota:"1", img:"stroe-logo-1.png", txt:"95折優惠券*1", deadline:"2019/11/15 ~ 2019/12/01"},
+        const JData = [{idx:"1", quota:"1", img:"stroe-logo-1.png", txt:"95折優惠券*1", deadline:"2019/11/15 ~ 2019/12/01"},
                             {idx:"2", quota:"1", img:"stroe-logo-2.png", txt:"滿900元運費打9折(機會有限儘請把握)*2", deadline:"2019/11/15 ~ 2019/12/02"},
                             {idx:"3", quota:"1", img:"stroe-logo-3.png", txt:"30元折價券*3", deadline:"2019/11/15 ~ 2019/12/03"},
                             {idx:"4", quota:"1", img:"stroe-logo-4.png", txt:"30元折價券*4", deadline:"2019/11/15 ~ 2019/12/04"},
@@ -184,17 +187,43 @@
                             {idx:"10", quota:"1", img:"stroe-logo-10.png", txt:"95折優惠券*10", deadline:"2019/11/15 ~ 2019/12/10"},
                             {idx:"11", quota:"1", img:"stroe-logo-11.png", txt:"30元折價券*11", deadline:"2019/11/15 ~ 2019/12/11"},
                             {idx:"12", quota:"1", img:"stroe-logo-12.png", txt:"30元折價券*12", deadline:"2019/11/15 ~ 2019/12/12"}];
-        //亂數取值
-        var luckrandom = parseInt(Math.random(12)*10);
-        console.log(luckrandom);
-        var key="";
-        $.each(JData, function( key, value ) {
-            //初始資料
-            (JData[key]['quota']=="0") ?            
-                $('.luckspin-contbox').prepend("<div class='contbox "+ order12.pop() +"' id='p"+ JData[key]['idx'] +"'><img src='../img/shopping/store/thanks.png'><p>再接再厲</p></div>"):
-                $('.luckspin-contbox').prepend("<div class='contbox "+ order12.pop() +"' id='p"+ JData[key]['idx'] +"'><img src='../img/shopping/store/"+ JData[key]['img'] +"'><p>"+JData[key]['txt']+"</p></div>");
-            //console.log(JData[key]['idx']);
-        });
+
+        //接收格數參數
+        var parameterN = "",
+            luckrandom = "",
+            key="";
+        parameterN = parseInt($(location).attr("href").split("#")[1]);
+        switch(parameterN) {
+        case 8:
+            $('.luckspin-contbox').addClass('no9');
+            luckrandom = parseInt(Math.random(8)*10);
+            console.log(luckrandom);
+            $.each(JData, function( key, value ) {
+                //初始資料
+                if(JData[key]['idx']<=parameterN){
+                (JData[key]['quota']=="0") ?            
+                    $('.luckspin-contbox').prepend("<div class='contbox "+ order8.pop() +"' id='p"+ JData[key]['idx'] +"'><img src='../img/shopping/store/thanks.png'><p>再接再厲</p></div>"):
+                    $('.luckspin-contbox').prepend("<div class='contbox "+ order8.pop() +"' id='p"+ JData[key]['idx'] +"'><img src='../img/shopping/store/"+ JData[key]['img'] +"'><p>"+JData[key]['txt']+"</p></div>");
+                };
+                    $('.playbox').hide();
+                    $('.playbox9').show();
+            });
+            break;
+        default:        
+            $('.luckspin-contbox').removeClass('no9');
+            luckrandom = parseInt(Math.random(12)*10);
+            console.log(luckrandom);
+            $.each(JData, function( key, value ) {
+                //初始資料                
+                (JData[key]['quota']=="0") ?            
+                    $('.luckspin-contbox').prepend("<div class='contbox "+ order12.pop() +"' id='p"+ JData[key]['idx'] +"'><img src='../img/shopping/store/thanks.png'><p>再接再厲</p></div>"):
+                    $('.luckspin-contbox').prepend("<div class='contbox "+ order12.pop() +"' id='p"+ JData[key]['idx'] +"'><img src='../img/shopping/store/"+ JData[key]['img'] +"'><p>"+JData[key]['txt']+"</p></div>");
+            });
+            $('.playbox9').hide();
+            $('.playbox').show();
+            break;
+        }
+
         function play(){
             //啟動跑燈
             $.each($('.contbox'), function( key, value ) {
@@ -233,6 +262,7 @@
         function next(){
             location.reload(); 
         };
+
     </script>
 
     <script>    
