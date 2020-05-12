@@ -3547,3 +3547,19 @@ iframe.justkaBox{
 .el-scrollbar__bar {
   opacity: 1!important;
 }
+
+//app
+.appround{
+  color:$blue-dark;
+  li {    
+    padding: 1em;
+    img{
+      width: 164px;
+    }    
+    &:first-child{
+      img{
+        width: 120px;
+      }
+    }
+  }
+}
