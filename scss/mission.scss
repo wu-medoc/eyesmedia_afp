@@ -84,7 +84,6 @@
             grid-template-columns: repeat(4, 1fr);
             grid-column-gap: 10px;
             grid-row-gap: 10px;
-            font-size: 1em;
             &.no9{
                 grid-template-columns: repeat(3, 1fr);
             }
@@ -110,10 +109,12 @@
                     overflow: hidden;
                     align-items: center;
                     @media (max-width: 767px) {
+                        font-size: 1em;
                         height: 44px;
                     }
                     @media (max-width: 480px) {
                         height: 38px;
+                        font-size: 0.9em;
                     }
                 }
                 img{
