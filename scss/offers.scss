@@ -155,7 +155,7 @@ button.btn{
             color: $blue-dark;
             font-size: .9em;
             p{     
-                width: 260px;
+                width: 175px;
                 overflow: hidden;
                 text-overflow: ellipsis;
                 display: -webkit-box;
@@ -165,7 +165,7 @@ button.btn{
                     width: 360px;
                 }
                 @media (max-width: 480px) {                   
-                    width: 280px;
+                    width: 235px;
                 }
                 @media (max-width: 375px) {                    
                     width: 170px;
