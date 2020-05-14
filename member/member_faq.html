@@ -37,25 +37,80 @@
 <div class="wrap container">
         <!--常見問題2-->
         <div class="myfaq animated slideInRight">
-            <div class="headerbox container title-box">
+            <div class="headerbox container title-box border-b">
                 <div class="item icon-btn">                        
-                    <button class="btn px-0" onclick="location.replace('member_index.html#mysetting')" data-toggle="tooltip" data-placement="bottom" title="回上一頁">
+                    <button class="btn px-0" onclick="history.back()" data-toggle="tooltip" data-placement="bottom" title="回上一頁">
                         <i class="material-icons">&#xe314;</i>
                     </button>
                 </div>
                 <div class="item title-name">常見問題</div>
                 <div class="item icon-btn"></div>
             </div>
-            <div class="my-list-box">
-                <p>
-
-                </p>
+            <div class="my-list-box pb-5 mb-5">
+                <ul>
+                    <li onclick="callLayer('.Msafety');">
+                        <button class="btn px-0 w-100 text-left">會員中心與安全 <span class="auto-left"><i class="material-icons">&#xe315;</i></span></button>
+                    </li>
+                    <li onclick="callLayer('.Mpay');">
+                        <button class="btn px-0 w-100 text-left">訂單與支付 <span class="auto-left"><i class="material-icons">&#xe315;</i></span></button>
+                    </li>
+                    <li onclick="callLayer('.Mrefunds');">
+                        <button class="btn px-0 w-100 text-left">退貨退款 <span class="auto-left"><i class="material-icons">&#xe315;</i></span></button>
+                    </li>
+                    <li onclick="callLayer('.Mlogistics');">
+                        <button class="btn px-0 w-100 text-left">寄件物流 <span class="auto-left"><i class="material-icons">&#xe315;</i></span></button>
+                    </li>
+                    <li onclick="callLayer('.Mpoint');">
+                        <button class="btn px-0 w-100 text-left">點數M Point<span class="auto-left"><i class="material-icons">&#xe315;</i></span></button>
+                    </li>
+                    <li onclick="callLayer('.Mcoupon');">
+                        <button class="btn px-0 w-100 text-left">優惠券 <span class="auto-left"><i class="material-icons">&#xe315;</i></span></button>
+                    </li>
+                    <li onclick="callLayer('.Mcenter');">
+                        <button class="btn px-0 w-100 text-left">聯絡客服 <span class="auto-left"><i class="material-icons">&#xe315;</i></span></button>
+                    </li>
+                </ul>
             </div>
         </div>
      
 
     <!--次頁-->
     <div class="multilayer">
+        <div class="Msafety">
+            <div class="headerbox container title-box border-b">
+                <div class="item icon-btn">                        
+                    <button class="btn px-0" onclick="history.back()" data-toggle="tooltip" data-placement="bottom" title="回上一頁">
+                        <i class="material-icons">&#xe314;</i>
+                    </button>
+                </div>
+                <div class="item title-name">會員中心與安全</div>
+                <div class="item icon-btn"></div>
+            </div>
+            <div class="p-5 mt-5 faq-content">
+                <h6>如何註冊成為會員?</h6>
+                <p>您可以透過以下步驟註冊成為會員：</p><br>
+                <p>手機 / Email註冊</p>
+                <ul class="decimal">
+                    <li>點選右上方「登入/註冊」</li>
+                    <li>點選下方「馬上註冊」</li>
+                    <li>進入到會員註冊頁面</li>
+                    <li>選擇您要以手機號碼或Email註冊</li>
+                    <li>勾選同意會員條款與隱私政策</li>
+                    <li>點選傳送驗證碼</li>
+                    <li>輸入您收到的驗證碼</li>
+                    <li>設定您的密碼，點選「建立新帳號」</li>
+                    <li>完成後即可註冊成功</li>
+                </ul>
+                <br>
+                <p>第三方帳號快速註冊</p>
+                <ul class="decimal">
+                    <li>點選右上方「登入/註冊」</li>
+                    <li>點選下方「馬上註冊」</li>
+                    <li>選擇您要以FB或Google</li>
+                    <li>即可以第三方帳號快速完成註冊</li>
+                </ul>
+            </div>
+        </div>
     </div>
 
 

@@ -503,7 +503,3 @@ function backLayerOne() {
     oneLayer.length=0;
 };
 
-    //跳轉頁帶參數呼叫callLayer
-    if(window.location.href.split('#')[1].length > 1){
-        callLayer('.'+window.location.href.split('#')[1]);
-    }
