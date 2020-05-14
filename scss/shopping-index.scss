@@ -686,10 +686,13 @@ footer{
             margin-right: auto;
             overflow: hidden;
             img {
-                height: 35em;
                 width: auto;
                 margin-left: auto;
                 margin-right: auto;
+                height: 40em;
+                @media (min-width: 768px) and (max-width: 979px) {
+                    height: 35em;
+                }
             }
             display: -webkit-box;
             display: -ms-flexbox;
@@ -909,8 +912,11 @@ footer{
                     width: auto;
                     margin-left: auto;
                     margin-right: auto;
-                    @media (max-width: 320px) {
+                    @media (max-width: 375px) {
                         height: 20em;
+                    }
+                    @media (max-width: 320px) {
+                        height: 17em;
                     }
                 }
                 display: -webkit-box;
@@ -1006,7 +1012,7 @@ footer{
     .img-fluid {
         background-size: cover;
         background-position: center;
-        height: 60vh;
+        height: 50vh;
     }
     .swiper-pagination-fraction {
         bottom: 1.5em;
