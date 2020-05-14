@@ -1203,7 +1203,9 @@ input[type="file"] {
 }
 
 .faq-content{
+    color: $blue-dark;
     ul.decimal{
         list-style-type:decimal;
+        padding-left: 1.5em;
     }
 }
