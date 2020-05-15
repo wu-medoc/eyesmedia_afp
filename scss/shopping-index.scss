@@ -839,12 +839,22 @@ footer{
             background-color: #fff;
             padding: 0.5em 1em 0 1em;
         }
-        .products-storecoupon-btn button.default-outline-btn {             
-            font-size: 0.9em;
-            margin-top: 0px;
-            width: 100px;
-            border-radius: 6px;
-        } 
+        .products-storecoupon-btn{        
+            padding-bottom: .5rem!important;
+            max-width: 70%;
+            button.onlineshopping-o5btn{
+                width: 90%;
+                overflow:hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+            }
+            button.default-outline-btn {             
+               font-size: 0.9em;
+               margin-top: 0px;
+               width: 100px;
+               border-radius: 6px;
+           } 
+        }
         .storecoupon-title {
             font-weight: bold;
             font-size: 0.9em;

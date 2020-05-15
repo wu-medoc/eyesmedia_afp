@@ -36,125 +36,28 @@
 <body>
 <div class="wrap container">
     <header>
-        <!-- header top -->
-        <div class="kv-box container">
-                <div class="pc-top center-v" id="pc-top">
-                  <div class="pc-top-box container">
-                        <div class="for-pc">
-                            <div class="login-top">
-                                <div class="kv-small pt-2">
-                                    <!-- login trigger modal -->
-                                    <button type="button" id="kv-btn-log" class="btn btn-login btn-sm p-0" data-toggle="modal" data-target="#loginModalCenter">
-                                        登入
-                                    </button>
-                                    <span>|</span>               
-                                    <button type="button" id="kv-btn-reg" class="btn btn-login btn-sm p-0" data-toggle="modal" data-target="#registeredModalCenter">
-                                        註冊
-                                    </button> 
-                                    你好，曉龍！
-                                </div>
-                            </div>    
-                            <div class="d-flex">
-                                <div class="top-item logo">
-                                    <a href="">
-                                        <img src="img/index/logo.png" alt="">
-                                    </a>
-                                </div>
-                                <div class="top-item input-box">
-                                    <button class="btn py-0 border-0"><i class="material-icons">&#xE8B6;</i></button>
-                                    <input type="text" placeholder="熱搜：台北故宮博物館門票">
-                                </div>
-                            </div>     
-                        </div>
-                        <div class="for-mobile">
-                            <div class="kv-top d-flex justify-content-between align-items-start">
-                                <!--未登入-->
-                                <div class="div-switch d-block top-bn">
-                                    <img src="img/index/top_bn1.png" class="img-fluid">
-                                </div>
-                                <!--已登入-->
-                                <div class="div-switch d-none">
-                                    <div class="kv-iconbox">
-                                        <div class="kv-icon">
-                                            <img src="img/index/icons/icon_scan.png"><br>
-                                            掃碼
-                                        </div>
-                                        <div class="kv-icon">
-                                            <img src="img/index/icons/icon_code.png"><br>
-                                            乘車碼
-                                        </div>
-                                        <div class="kv-icon">
-                                            <img src="img/index/icons/icon_wallet.png"><br>
-                                            付款
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="top-item climate">
-                                    <ul>
-                                        <li>                                            
-                                            <!--未登入-->
-                                            <img src="img/index/bn_tips01.gif" class="bntips div-switch d-block" onclick="div_switch()">
-                                            <!--已登入-->
-                                            <img src="img/index/bn_tips02.gif" class="bntips div-switch d-none" onclick="div_switch()">
-                                        </li>
-                                        <li class="small">
-                                            <div class="txt-line-clamp1">你好! 曉龍大安直男</div>
-                                        </li>
-                                        <li class="small">
-                                            <img src="img/share/mobiicoin.png" alt="" class="mr-2 h20">8284 點
-                                        </li>
-                                        <li class="small">
-                                            <img src="img/index/icons/mobiicoupon.png" alt="" class="mr-2 h20">23 張
-                                        </li>
-                                    </ul>                            
-                                </div>
-                                <div class="top-item for-mobile pt-2">
-                                    <img src="img/share/mobii_logo.png" class="mobiilogo">
-                                </div>
-                                <!--未登入-->
-                                <div class="top-item btn white-outline-btn btw-small div-switch d-block" data-toggle="modal" data-target="#loginModalCenter">
-                                    登入/註冊<img src="img/share/forward_w.png" class="h20">
-                                </div>
-                                <!--已登入-->
-                                <div class="top-item more-horiz has-info div-switch d-none">
-                                    <i class="material-icons">&#xE5D3;</i>
-                                    <button class="drop_menu_toggle"></button>
-                                    <div class="drop-menu">
-                                        <ul class="drop-content">
-                                            <li><a href="member/member_discount.html"><img src="img/share/drop_discount.png" alt="">我的優惠</a></li>
-                                            <li><a href="member/member_favorite.html"><img src="img/share/drop_favorite.png" alt="">我的收藏</a></li>
-                                            <li><a href="member/member_myorder.html"><img src="img/share/drop_order.png" alt="">我的訂單</a></li>
-                                            <!-- <li><a href data-toggle="modal" data-target="#loginModalCenter"><img src="img/index/icons/login_logout.png" alt="">登入/註冊</a></li> -->
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                   </div>
-                </div>          
-                <!-- <div class="kv-mask"></div>   -->
-            <!-- Swiper for kv banner-->            
-            <div class="kvbn-box kv-mt">
-                <div class="for-pc">
-                    <div class="swiper-container">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <a href><div style="background-image: url('img/index/kv_01.png');" class="kvbn-img"></div></a>
-                            </div>
-                            <div class="swiper-slide">
-                                <a href><div style="background-image: url('img/index/kv_02.png');" class="kvbn-img"></div></a>
-                            </div>
-                            <div class="swiper-slide">
-                                <a href><div style="background-image: url('img/index/kv_03.png');" class="kvbn-img"></div></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="for-mobile">
-                    <div style="background-image: url('img/index/kv_bnbg.gif');" class="kvbn-img"></div>
-                </div>
-            </div>
+        <div class="mobii-topbox">
+            <img src="img/share/mlogo.png" class="m-topbox-item">            
+            <img src="img/index/txt.png" class="m-topbox-item">            
+            <button type="button" class="m-topbox-item btn bluedk-outline-btn btw-small div-switch d-block" data-toggle="modal" data-target="#loginModalCenter">
+                登入/註冊<img src="img/share/forward_w.png" class="h20">
+            </button>
         </div>
+        <section class="mobii-bnbox">
+            <ul class="m-bnbox-item">
+                <li>
+                    <div class="txt-line-clamp1">你好! 曉龍大安直男</div>
+                </li>
+                <li>
+                    <img src="img/share/mobiicoin.png" alt="" class="mr-2 h20">8284 點
+                </li>
+                <li>
+                    <img src="img/index/icons/mobiicoupon.png" alt="" class="mr-2 h20">23 張
+                </li>
+            </ul>
+            <img src="img/index/bn01.png" class="m-bnbox-item">
+            <img src="img/index/bn02.png" class="m-bnbox-item">
+        </section>
     </header>  
     <main class="pt-0">     
         <div class="main-content container">
