@@ -44,15 +44,15 @@ $(document).ready(function(){
     }
 
     // 開啟 dropMenu
-    $('body').on('click', function(evt){
-        if($(evt.target).attr('class') != 'drop-content' && $(evt.target).attr('class') != 'drop_menu_toggle') {
-            $('.more-horiz').removeClass('is-open');
-        }
-    })
-    $('body').on('click', '.drop_menu_toggle', function(){
-        var dropwrap = $(this).parent('.more-horiz');
-        dropwrap.toggleClass('is-open');
-    })
+    // $('body').on('click', function(evt){
+    //     if($(evt.target).attr('class') != 'drop-content' && $(evt.target).attr('class') != 'drop_menu_toggle') {
+    //         $('.more-horiz').removeClass('is-open');
+    //     }
+    // })
+    // $('body').on('click', '.drop_menu_toggle', function(){
+    //     var dropwrap = $(this).parent('.more-horiz');
+    //     dropwrap.toggleClass('is-open');
+    // })
 
     //header taipei
     if ($('.for-sub').length>0) {
