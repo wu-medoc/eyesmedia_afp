@@ -37,26 +37,19 @@
 <div class="wrap container">
     <header>
         <div class="mobii-topbox">
-            <img src="img/share/mlogo.png" class="m-topbox-item">            
-            <img src="img/index/txt.png" class="m-topbox-item">            
-            <button type="button" class="m-topbox-item btn bluedk-outline-btn btw-small div-switch d-block" data-toggle="modal" data-target="#loginModalCenter">
-                登入/註冊<img src="img/share/forward_w.png" class="h20">
-            </button>
+            <div class="container">
+                <img src="img/share/mlogo.png" class="m-topbox-item">                
+                <button type="button" class="m-topbox-item btn bluedk-outline-btn btw-small" data-toggle="modal" data-target="#loginModalCenter">
+                    登入/註冊<img src="img/share/forward_w.png" class="h20">
+                </button>
+                <div class="userbox d-none"></div>
+            </div>  
+            <img src="img/index/txt.png" class="m-topbox-item sloger">      
         </div>
         <section class="mobii-bnbox">
-            <ul class="m-bnbox-item">
-                <li>
-                    <div class="txt-line-clamp1">你好! 曉龍大安直男</div>
-                </li>
-                <li>
-                    <img src="img/share/mobiicoin.png" alt="" class="mr-2 h20">8284 點
-                </li>
-                <li>
-                    <img src="img/index/icons/mobiicoupon.png" alt="" class="mr-2 h20">23 張
-                </li>
-            </ul>
-            <img src="img/index/bn01.png" class="m-bnbox-item">
-            <img src="img/index/bn02.png" class="m-bnbox-item">
+            <div class="userbox mr-auto"></div>
+            <img src="img/index/bn01.png" class="m-bnbox-item bn1">
+            <img src="img/index/bn02.png" class="m-bnbox-item bn2">
         </section>
     </header>  
     <main class="pt-0">     
@@ -1694,7 +1687,8 @@
     <script src="js/animateCss.js"></script>    
 
     <!-- custom js -->
-    <script>    
+    <script>            
+        $(".userbox").load("userbox.html");
         $("#loginhtml").load("login.html");
         $("#footerMobii").load("footerMobii.html");
     </script>     
@@ -1821,6 +1815,16 @@
                     },0)
                 }
             }
+
+            //login ok
+            $('.login-ok').on('click',function(){
+                var loginInfo = ["曉龍大安直男",'83430','1260'];
+                $('.user-hi').text("你好! "+loginInfo[0]);
+                $('.user-mobii').text(loginInfo[1]);
+                $('.user-ds').text(loginInfo[2]);
+                $('.m-topbox-item.btn').css("display","none");
+                $('.userbox.d-none').removeClass('d-none');
+            });
         });
 
     </script> 

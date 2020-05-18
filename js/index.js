@@ -310,24 +310,6 @@ $(document).ready(function(){
             $(".vcode-mail").text("貼心小提醒：有時驗證信可能會被放到垃圾郵件喔！");
         }     
     });
-    //#messageModal message control
-    $('.msg-loginerror').on('click', function(){  
-        $('#messageModal .modal-body>div').hide();
-        $('#msg-loginerror').show();    
-    });
-    $('.msg-loginok').on('click', function(){; 
-        $('#messageModal .modal-body>div').hide();
-        $('#msg-loginok').show();         
-    });
-    $('.msg-psw').on('click', function(){    
-        $('#messageModal .modal-body>div').hide();
-        $('#msg-psw').show();     
-    });
-    $('.msg-open').on('click', function(){  
-        var msgval = $(this).val();
-        $('#messageModal .modal-body>div').hide();
-        $('#'+msgval).show();
-    });
 
     // password visiblity
     $(".toggle-password").on('click', function(e) {
@@ -393,7 +375,7 @@ $(document).ready(function(){
 
 
 window.onload = function(){  
-
+    //footer bar active
     var strPath=window.document.location.pathname.replace("/eyesmedia_afp","");
     var postPath=strPath.substring(0,strPath.substr(1).indexOf('/')+1).replace("/",""); 
     $('.bar-item').removeClass('active');   
@@ -401,6 +383,12 @@ window.onload = function(){
         $('.Findex').addClass('active'):
         $('.F'+postPath).addClass('active');
 
+    //#messageModal message control
+    $('.msg-open').on('click', function(){  
+        var msgval = $(this).val();
+        $('#messageModal .modal-body>div').hide();
+        $('#'+msgval).show();
+    });
 };
 
 
