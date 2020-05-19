@@ -1078,8 +1078,7 @@ figure.image{
   }  
   a.tablist-link.link-orange.active::after, 
   a.tablist-link.link-orange.active:hover::after, 
-  a.tablist-link.link-orange.active.show::after,
- {
+  a.tablist-link.link-orange.active.show::after {
     background-color: $onlineshopping-default;
   }
   a.tablist-link.active::after, 
