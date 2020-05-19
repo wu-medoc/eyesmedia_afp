@@ -70,8 +70,7 @@ ul.newlist{
                 transform: rotate(180deg);
             }
             .newbody{
-                display: block;
-                height: auto;
+                display: hidden;
             }         
             .auto-left{
                 align-items: flex-end;
