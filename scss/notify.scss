@@ -62,8 +62,8 @@ ul.newlist{
             display: -webkit-box;
              -webkit-box-orient: vertical;
             -webkit-line-clamp: 2;
-            height: -webkit-fill-available;
-            min-height: 47px;
+            // height: -webkit-fill-available;
+            height: 47px;
         }
         &.active{
             .material-icons{
@@ -71,6 +71,7 @@ ul.newlist{
             }
             .newbody{
                 display: block;
+                height: auto;
             }         
             .auto-left{
                 align-items: flex-end;
