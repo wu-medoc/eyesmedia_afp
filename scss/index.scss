@@ -163,10 +163,25 @@ figure.image{
         height: calc(72px * 1.3 );
       }
       @media (max-width: 480px) {
+        height: calc(72px * 1.1 );
+      }
+      @media (max-width: 375px) {
         height: 72px;
+        &.bn1{
+          width: 192px;
+        }
+        &.bn2{
+          width: 64px;
+        }
       }
       @media (max-width: 320px) {
         height: calc(72px * 0.85 );
+        &.bn1{
+          width: calc(192px * 0.85 );
+        }
+        &.bn2{
+          width: calc(64px * 0.85 );
+        }
       }
       @media (min-width: 768px) {
         height: auto;
