@@ -1050,13 +1050,18 @@ figure.image{
     position: relative;
     top: -3px;
   }
+  .tablist-link.link-orange:hover::after, 
+  .tablist-link.link-orange::after, 
+  .tablist-link.link-orange, 
   .tablist-link {
     display: inline-block;
     color: $gray-color;
+    border: none;
+    background-color: transparent;
   }  
   a.tablist-link.active:hover::after, 
   a.tablist-link.active.show::after,
-  .tablist-link::after {
+  a.tablist-link::after {
     content: '';
     display: block;
     width: 0;
@@ -1071,9 +1076,10 @@ figure.image{
     -webkit-transition: .5s width;
     transition: .5s width;
   }  
+  a.tablist-link.link-orange.active::after, 
   a.tablist-link.link-orange.active:hover::after, 
   a.tablist-link.link-orange.active.show::after,
-  .tablist-link.link-orange::after {
+ {
     background-color: $onlineshopping-default;
   }
   a.tablist-link.active::after, 
@@ -3470,8 +3476,8 @@ img.nearbyimg{
 }
 .overlay-choice{
   position: absolute;
-  left: 15px;
-  right: 15px;
+  left: auto;
+  right: auto;
   bottom: 85px;
   z-index: 1041;
   .choice-list, .choice-status{

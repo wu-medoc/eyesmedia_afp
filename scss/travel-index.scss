@@ -1,26 +1,37 @@
 @import '../dist/style/module/variable';
 
 /* travel-hot */
+h6 {
+  color: $blue-dark;
+  font-weight: bold;
+  padding: 1em 0 .5em 0;
+}
 .travel-hot {
   overflow-x: visible;
   width: 100%;
-  .col-12 {
-    padding-right: 0px;
-    padding-left: 0px;
+  a {    
+    color: $blue-dark;
+    &:hover{
+      color: #343a40;
+    }
   }    
   .hot-body{    
     width: 100%;
     text-align: left;
-    a.txt-line-clamp2 {
+    .txt-line-clamp2 {
       font-size: 0.9em;
       font-weight: 700;
-      color: #343a40;
     }
-    a.txt-line-clamp3 {
+    .txt-line-clamp3 {
       font-size: 0.8em;
-      color: #343a40;
       font-weight: 400; 
     }        
+    h6 {      
+      height: 3.5em;
+    }        
+    p {      
+      height: 3em;
+    }
   }
 }
 // @media (max-width: 480px) {
@@ -36,10 +47,14 @@
 
 /* travel topic */
 .travel-topic {
-    background-color: #1E4067;
-    color: #fff;
     overflow-x: visible;
     width: auto;
+    a {    
+      color: $blue-dark;
+      &:hover{
+        color: #343a40;
+      }
+    }   
 }
 // @media (max-width: 480px) {
 //     .travel-topic {
@@ -51,14 +66,17 @@
 // }
 .topic-body {
     text-align: left;
-    a.txt-line-clamp1 {
+    h6{
+      padding: .25em;
+    }
+    p.txt-line-clamp1 {
       font-size: 0.9em;
-      font-weight: 700;   
-      color: #fff;   
+      font-weight: 700;  
+      height: 24px;
       &:last-child {
         font-size: 0.8em;
-        color: #fff;   
-        font-weight: 400; 
+        font-weight: 400;  
+        height: 30px;
       }  
     }
 }
@@ -71,6 +89,7 @@
     padding-right: 0;
 }
 .topic-img-top label{
+  color: #fff;
   font-size: 1.3em;
   position: absolute;
   top: 50%;
@@ -82,7 +101,6 @@
   
 /* travel featured */
 .travel-featured {
-  overflow: hidden;
   h6 {
     font-weight: bold;
     padding: 1em 0 .25em 0;
