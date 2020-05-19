@@ -7,7 +7,9 @@
 
 figure.image{
   img{
-    width: -webkit-fill-available;
+    max-width: -webkit-fill-available;
+    max-width: -moz-available;
+    max-width: stretch;
   }
 }
 
@@ -56,26 +58,42 @@ figure.image{
     justify-content: space-between;
     align-items: center;
   }
-  img.m-topbox-item{
-    height: 23px;
+  img.mobiitoplogo{
+    //logo
+    height: auto;
     width: auto;
     margin-right: 5px;
-    @media (max-width: 320px) {
-      height: 21px;
-      max-width: 150px;
-    }
-    &:first-child{
+      @media (max-width: 320px) {
+        height: 21px;
+      }
+      @media (min-width: 321px) and (max-width: 767px) {
+        height: 23px;
+      }
       @media (min-width: 768px) {
         height: 33px;
       }
     }
-  }
-  .sloger{   
-    position: absolute;
-    top: 26px;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    -webkit-transform: translate(-50%, -50%);
+  img.sloger{   
+      position: absolute;
+      top: 26px;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      -webkit-transform: translate(-50%, -50%);
+      height: auto;
+      width: auto;
+      @media (max-width: 375px) {
+        height: auto;
+        max-width: 140px;
+      }
+      @media (max-width: 295px) {   
+        display: none;
+      }
+      @media (min-width: 376px) and (max-width: 767px) {
+        height: 20px;
+      }
+      @media (min-width: 768px) {
+        height: 24px;
+      }
   }
   .m-topbox-item.btn{
     padding: 3px 5px;
