@@ -78,22 +78,6 @@ $(document).ready(function(){
     })
 
 
-    // web service JS 
-    $(document).on( 'scroll', function(){        
-        if ($(window).scrollTop() > 100) {
-        $('.scroll-top-wrapper').addClass('show');
-        }
-    });
-    $("#webservice").on('click', function(){
-        $('#qnimate').addClass('popup-box-on');
-        $('#webservice').addClass('d-none');
-        $('#webservice_close').removeClass();
-    });
-    $("#webservice_close").on('click', function(){
-        $('#qnimate').removeClass('popup-box-on');
-        $('#webservice_close').addClass('d-none');
-        $('#webservice').removeClass();
-    });
 
     /*****************  swiper  ********************/
     // swiper JS for index

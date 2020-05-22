@@ -10,8 +10,6 @@
     <link rel="stylesheet" href="js/vendor/bs4/css/bootstrap.min.css">
     <link rel="stylesheet" href="js/vendor/jquery-editable-select-master/dist/jquery-editable-select.min.css">
     <!-- owl.carousel core CSS -->
-    <link rel="stylesheet" href="js/vendor/owlcarousel/owlcarousel/assets/owl.carousel.min.css">
-    <link rel="stylesheet" href="js/vendor/owlcarousel/owlcarousel/assets/owl.theme.default.min.css">
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -26,7 +24,13 @@
     <!-- custom css -->
     <link rel="stylesheet" href="dist/style/css.min.css">
     <link rel="stylesheet" href="dist/style/global.min.css">
+    <link rel="stylesheet" href="dist/style/serviceQA.min.css">
+    <link rel="stylesheet" href="dist/style/bs4modal.min.css">
+    <link rel="stylesheet" href="dist/style/navlink.min.css">
+    <link rel="stylesheet" href="dist/style/footer.min.css">
+    <link rel="stylesheet" href="dist/style/swiperSet.min.css">
     <link rel="stylesheet" href="dist/style/index.min.css">
+    <link rel="stylesheet" href="dist/style/home.min.css">
     <link rel="stylesheet" href="dist/style/travel-index.min.css">
     <link rel="stylesheet" href="dist/style/animate.min.css">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
@@ -1690,11 +1694,6 @@
     <script src="js/vendor/bs4/js/popper.min.js"></script>
     <script src="js/vendor/bs4/js/bootstrap.min.js"></script>
     
-    <!-- owlcarousel JS -->
-    <script src="js/vendor/owlcarousel/owlcarousel/owl.carousel.js"></script>
-    <script src="js/vendor/owlcarousel/vendors/highlight.js"></script>
-    <script src="js/vendor/owlcarousel/js/app.js"></script>   
-    <script src="js/vendor/jquery-editable-select-master/dist/jquery-editable-select.js"></script>
 
     <!-- vendor js -->
     <script src="js/vendor/swiper/js/swiper.min.js"></script>
@@ -1841,6 +1840,25 @@
                 $('.userbox.d-none').removeClass('d-none');
                 $('.userdrop').removeClass('d-none');
             });
+
+            
+            // web service JS 
+            $(document).on( 'scroll', function(){        
+                if ($(window).scrollTop() > 100) {
+                $('.scroll-top-wrapper').addClass('show');
+                }
+            });
+            $("#webservice").on('click', function(){
+                $('#qnimate').addClass('popup-box-on');
+                $('#webservice').addClass('d-none');
+                $('#webservice_close').removeClass();
+            });
+            $("#webservice_close").on('click', function(){
+                $('#qnimate').removeClass('popup-box-on');
+                $('#webservice_close').addClass('d-none');
+                $('#webservice').removeClass();
+            });
+
         });
 
     </script> 
