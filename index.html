@@ -1697,7 +1697,7 @@
 
     <!-- vendor js -->
     <script src="js/vendor/swiper/js/swiper.min.js"></script>
-    <script src="js/vendor/imgLiquid.js"></script>
+    <script src="js/vendor/bs4/js/imgLiquid.js"></script>
     <script src="js/animateCss.js"></script>    
 
     <!-- custom js -->
@@ -1708,36 +1708,6 @@
     </script>     
     <script>
         $(document).ready(function() { 
-        // 超過一張才執行 swiper，並且顯示 pagination
-        if ($('.ad-box .swiper-slide').length>1) {
-            // console.log('true');
-            var swiper = new Swiper('.ad-box .swiper-container', {
-                pagination: {
-                    el: '.swiper-pagination',
-                    clickable: true,
-                },
-                slidesPerView: 1.3,
-                spaceBetween: 10,
-                breakpoints: {
-                    // when window width is >= 320px
-                    320: {
-                    slidesPerView: 1,
-                    spaceBetween: 0
-                    },
-                    // when window width is >= 480px
-                    480: {
-                    slidesPerView: 1,
-                    spaceBetween: 0
-                    },
-                    // when window width is >= 640px
-                    640: {
-                    slidesPerView: 1.3,
-                    spaceBetween: 20
-                    }
-                },
-            });
-        }
-
             var JData = [{id:"t1", telname:"中國大陸", telcode:"86"},
                         {id:"t2", telname:"台灣", telcode:"886"},
                         {id:"t3", telname:"香港", telcode:"852"},

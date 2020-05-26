@@ -12,7 +12,36 @@ $(document).ready(function(){
             disableOnInteraction: false,
             },
     });
-    
+    // ad
+    // 超過一張才執行 swiper，並且顯示 pagination
+    if ($('.ad-box .swiper-slide').length>1) {
+        // console.log('true');
+        var swiper = new Swiper('.ad-box .swiper-container', {
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            slidesPerView: 1.3,
+            spaceBetween: 10,
+            breakpoints: {
+                // when window width is >= 320px
+                320: {
+                slidesPerView: 1,
+                spaceBetween: 0
+                },
+                // when window width is >= 480px
+                480: {
+                slidesPerView: 1,
+                spaceBetween: 0
+                },
+                // when window width is >= 640px
+                640: {
+                slidesPerView: 1.3,
+                spaceBetween: 20
+                }
+            },
+        });
+    }
 
     // 開啟 dropMenu
     // $('body').on('click', function(evt){
