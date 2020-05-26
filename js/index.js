@@ -375,7 +375,6 @@ window.onload = function(){
     });
 };
 
-
 // div switch
 function div_switch() {
     $('.div-switch.d-block').removeClass('d-block').addClass('d-none1');
