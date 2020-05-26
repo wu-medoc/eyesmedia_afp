@@ -1087,15 +1087,18 @@ h6 {
   &.card-columns {
       background-color: #fff;
       .card{
-          margin-top: .25em;
-          //box-shadow: 0 0 3px rgba(0,0,0,.2);
-          -webkit-column-break-inside: avoid;          
-          button{
-              min-width: 65px;
-          }
+        margin-top: .25em;
+        //box-shadow: 0 0 3px rgba(0,0,0,.2);
+        -webkit-column-break-inside: avoid;    
+        button{
+            min-width: 65px;
+        }
+        .card-body{
+          padding: 1em;
+        }
       }
       column-count: 1;
-      @media screen and (min-width: 1023px) {
+      @media (min-width: 768px) {
           column-count: 2;
           flex-wrap: wrap;
       }    
@@ -1103,9 +1106,12 @@ h6 {
           color: $cardfooter-color;
           font-size: .9em;
           font-weight: 700;
+          overflow:hidden;
+          height: 1.5em;
           &:last-child{
               font-size: .7em;
               color: $gray-color;
+              position: absolute;
           }
       }
   }

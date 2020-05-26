@@ -148,30 +148,40 @@ button.btn{
             }
         }
         .discount-text{
+            width: auto;
+            @media (max-width: 570px) {                   
+                max-width: 360px;
+            }
+            @media (max-width: 480px) {                   
+                max-width: 235px;
+            }
+            @media (max-width: 375px) {                    
+                max-width: 170px;
+            }
+            @media (max-width: 320px) {                    
+                max-width: 130px;
+            }
+            @media (min-width: 768px) {                
+                max-width: 160px;
+            }
+            @media (min-width: 980px) {             
+                max-width: 280px;
+            }
+            @media (min-width: 1200px) {             
+                max-width: 360px;
+            }
             flex-direction: column;
             align-items: flex-start;
             justify-content: center;
             color: $blue-dark;
             font-size: .9em;
             p{     
-                width: 175px;
+                max-height: 3em;
                 overflow: hidden;
                 text-overflow: ellipsis;
                 display: -webkit-box;
                  -webkit-box-orient: vertical;
                 -webkit-line-clamp: 2;
-                @media (max-width: 570px) {                   
-                    width: 360px;
-                }
-                @media (max-width: 480px) {                   
-                    width: 235px;
-                }
-                @media (max-width: 375px) {                    
-                    width: 170px;
-                }
-                @media (max-width: 320px) {                    
-                    width: 130px;
-                }
                 &:first-child{
                     font-weight: 700;
                 }
@@ -277,3 +287,27 @@ button.btn{
     box-shadow: 0 -5px 8px rgba(0,0,0,.2);
 }
 
+/* progress */
+.card-text{
+    .offers-progress{
+        border-radius: 5em;
+        background: #FFCFB3;
+        .progress-bar{
+            background: $index-default;
+        }
+        .offers-progress-txt{
+            color: white;
+            position: absolute;
+            text-align: center;
+            width: 100%;
+        }
+    }
+    &.unable{
+        .offers-progress{
+            background: $gray-color;
+            .progress-bar{
+                background: $gray-color;
+            }
+        }
+    }
+}
