@@ -60,7 +60,7 @@
             </div>
         </div>
         <!-- 手機版 -->
-        <div class="swiper-container">
+        <div class="swiper-container travel-ad">
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
                     <img src="../img/travel/header_travel04.jpg" alt="">
@@ -627,11 +627,11 @@
 
     <!-- custom js -->
     <script>    
-        //login ok
         $(".userbox").load("../userbox.html");
         $("#loginhtml").load("../login.html");
         $("#footerMobii").load("../footerMobii.html"); 
         $(window).on('load',function() { 
+            //login ok
             $('.login-ok').on('click',function(){
                 var loginInfo = ["曉龍大安直男",'83430','1260'];
                 $('.user-hi').text("你好! "+loginInfo[0]);

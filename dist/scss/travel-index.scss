@@ -6,6 +6,12 @@ h6 {
   font-weight: bold;
   padding: 1em 0 .5em 0;
 }
+.travel-ad{
+  padding-top: 0;
+  @media (min-width: 768px) {
+      padding-top: 56px;
+  }
+}
 .travel-hot {
   overflow-x: visible;
   width: 100%;
