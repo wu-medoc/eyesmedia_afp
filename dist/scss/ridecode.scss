@@ -1,0 +1,12 @@
+@import '../style/module/variable';
+.infotxt{
+    position: relative;
+    text-align: center;
+    margin-top: 3em;
+    @media (max-width: 767px) {
+        position: absolute;
+        left: 50%;
+        bottom: 15%;
+        transform: translateX(-50%);
+    }
+}
