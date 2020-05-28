@@ -40,6 +40,9 @@ $(document).ready(function(){
                 spaceBetween: 20
                 }
             },
+            autoplay: {
+                delay: 5000,
+            },
         });
     }
 
