@@ -82,8 +82,8 @@
                 </div>
             </div>
             <div class="text-bluedk text-center">
-                <small><img src="../img/share/loading.png" alt="loading" class="h20 pr-2">更新  <span id="clock"></span></small>
-                <div class="border rounded p-3 m-3"><img src="../img/share/ipass-qrcode.png"></div>
+                <small class="reloading"><img src="../img/share/loading.png" alt="loading" class="h20 pr-2">更新  <span id="clock"></span></small>
+                <div class="border rounded p-3 m-3"><img src="../img/share/ipass-qrcode.png" class="img-fluid"></div>
                 <small>虛擬卡號：8090001812285234</small>
                 <div class="bg-light p-3 mt-3 text-left"><small>將從您帳戶暫扣NT$100，如有未使用的金額將會退還至您的一卡通帳戶。
                     我的條碼本月剩餘付款額度：</small><span class="remaining">NT$200,000</span></div>
@@ -124,6 +124,10 @@
         var endTime = Date.now() + 120000;
         $('#clock').countdown(endTime, function(event) {
         $(this).html("<span class='item-time'>"+event.strftime('%M')+" : </span><span class='item-time'>"+event.strftime('%S'));
+        });
+
+        $('.reloading').on('click',function(){
+            location.reload(); 
         });
 
         $("#loginhtml").load("../login.html"); 
