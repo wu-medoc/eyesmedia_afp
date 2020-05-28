@@ -435,10 +435,6 @@ input[type="file"] {
             margin: 0 5px;
             border-radius: 30px !important;
         }
-        .outline-btn{
-            border-color: $member-default;
-            color: $member-default;
-        }
     }
 }
 
@@ -984,10 +980,7 @@ input[type="file"] {
 #open-mask.modal-backdrop {
     z-index: 1040;
 }
-.outline-btn{
-    border-color: $member-default;
-    color: $member-default;
-}
+
 
 // member clause&private
 .member-body {

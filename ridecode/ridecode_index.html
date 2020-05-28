@@ -52,7 +52,7 @@
     </header>
 
     <div class="text-bluedk">
-        <div class="contrainer p-3">
+        <div class="contrainer p-3 div-switch d-block">
             <h6 class="pt-5 pb-3">尚未綁定付款方式</h6>
             <p>快速綁定付款，便捷交通一網打盡</p>
             <div class="py-3 text-center">
@@ -65,8 +65,31 @@
                     立即綁定卡片
                 </div>    
             </div>
+            <button type="button" class="btn index-outline-btn w-100 mt-4" onclick="div_switch();">卡片列表(如有卡片時的顯示畫面)</button>
             <div class="infotxt">
                 <a href></a>如何使用？</a> | <a href>我的系統</a>
+            </div>
+        </div>
+        <div class="div-switch d-none">
+            <div class="pt-2 pb-3 px-3 d-flex justify-content-between mb-4 linebt-row">
+                <div class="item">
+                    <img src="../img/share/creditcard.png" alt="card" class="h38">
+                    已綁定信用卡
+                </div>
+                <div class="item text-right">
+                    <img src="../img/share/Master.png" alt="Master card" class="h38">
+                    ···· 9405                    
+                </div>
+            </div>
+            <div class="text-bluedk text-center">
+                <small><img src="../img/share/loading.png" alt="loading" class="h20 pr-2">更新  <span id="clock"></span></small>
+                <div class="border rounded p-3 m-3"><img src="../img/share/ipass-qrcode.png"></div>
+                <small>虛擬卡號：8090001812285234</small>
+                <div class="bg-light p-3 mt-3 text-left"><small>將從您帳戶暫扣NT$100，如有未使用的金額將會退還至您的一卡通帳戶。
+                    我的條碼本月剩餘付款額度：</small><span class="remaining">NT$200,000</span></div>
+            </div>
+            <div class="p-3 text-right">
+                <img src="../img/share/ipass.png" alt="一卡通" class="h50">
             </div>
         </div>
     </div>
@@ -98,6 +121,11 @@
     </script>
 
     <script>    
+        var endTime = Date.now() + 120000;
+        $('#clock').countdown(endTime, function(event) {
+        $(this).html("<span class='item-time'>"+event.strftime('%M')+" : </span><span class='item-time'>"+event.strftime('%S'));
+        });
+
         $("#loginhtml").load("../login.html"); 
         $("#footerMobii").load("../footerMobii.html"); 
     </script>
