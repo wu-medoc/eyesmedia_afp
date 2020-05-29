@@ -412,11 +412,9 @@ function callLayer(nextLayer) {
         $('.multilayer').animateCss('slideInRight', '+d-block container faster');
     }
     if (tLayer[tLayer.length - 1] !== nextLayer) { tLayer.push(nextLayer); }
-    //(($('.wrap').height()) < ($(nextLayer).height())) ? ($('.multilayer').css('position','absolute')):($('.multilayer').css('position','fixed').css('overflow-y','auto'));
     $(nextLayer).animateCss('slideInRight', '+d-block container faster');
     
     $('.txt').append("<br>"+tLayer);
-    $(nextLayer).css("z-index",i++)
     $(nextLayer).children('.s').append(i++);
 };
 function backLayer() {
@@ -424,14 +422,14 @@ function backLayer() {
 	$(backlayer).animateCss('slideOutRight', '-d-block container faster').removeAttr('style');
     if (tLayer.length === 0) {
         $('.multilayer').animateCss('slideOutRight', '-d-block container faster').removeAttr('style');        
-        tLayer.length=0;   
-        $('.modal-backdrop').remove();
+        tLayer.length=0; $('.modal-backdrop').remove();
     }
     tLayer = jQuery.grep(tLayer, function(value) {
         return value !== backlayer;
     });    
     $('.txt').append("<br>"+tLayer);
 };
+
 //sortlayer use animateCss
 var sLayer = [];
 function callsortLayer(nextLayer) {
