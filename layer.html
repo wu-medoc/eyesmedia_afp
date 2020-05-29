@@ -35,12 +35,18 @@
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <title>Mobii!</title>
     <style>
+        .layerbox{
+            position: relative;
+        }
         .layerbox>div{
             display: none;
             width: 400px;
             height: 100px;
             background-color: bisque;
             margin: 1em;
+            position: absolute;
+            left: 0;
+            top: 0;
         }
     </style>
 </head>
@@ -53,18 +59,22 @@
         <div class="layer1">1
             <button  onclick="callLayer('.layer2')">call2</button>
             <button onclick="backLayer()">back</button>
+            <label class="s"></label>
         </div>
         <div class="layer2">2
             <button  onclick="callLayer('.layer3')">call3</button>
             <button onclick="backLayer()">back</button>
+            <label class="s"></label>
         </div>
         <div class="layer3">3
             <button  onclick="callLayer('.layer4')">call4</button>
             <button onclick="backLayer()">back</button>
+            <label class="s"></label>
         </div>
         <div class="layer4">4
             <button  onclick="callLayer('.layer2')">call2</button>
             <button onclick="backLayer()">back</button>
+            <label class="s"></label>
         </div>
     </div>
     
