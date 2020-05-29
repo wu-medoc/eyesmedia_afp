@@ -1177,7 +1177,7 @@ footer{
                 position: relative;
                 padding: 15px;
                 border-bottom: 1px $gray-light solid;
-
+                /* store intro*/
                 &.store-open {
                     p {
                         max-height: 94px;
@@ -1198,16 +1198,16 @@ footer{
 
                     &.is-open {
                         p {
-                            max-height: 500px;
                             transition: max-height 0.25s ease-in;
                             text-overflow: unset;
                             display: -webkit-box;
                             -webkit-line-clamp: unset;
                             -webkit-box-orient: vertical;
+                            max-height: fit-content;
                         }
                     }
                 }
-                
+                /* store item */
                 &.store-itemopen {
                     flex-wrap: wrap;
                     max-height: auto;
@@ -1237,21 +1237,18 @@ footer{
                     }
 
                     &.is-open {
-
                         .item-icon,
                         .open-btn {
                             align-self: flex-start;
                         }
-
                         ul {
-                            max-height: 500px;
+                            max-height: fit-content;
                             transition: max-height 0.5s ease-in;
                         }
                     }
                 }
 
                 &.is-open {
-                    max-height: 500px;
                     transition: max-height 0s ease-in;
                     overflow: auto;
                     .open-btn {

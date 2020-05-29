@@ -413,6 +413,8 @@ function callLayer(nextLayer) {
     if (tLayer[tLayer.length - 1] !== nextLayer) { tLayer.push(nextLayer); }
     //(($('.wrap').height()) < ($(nextLayer).height())) ? ($('.multilayer').css('position','absolute')):($('.multilayer').css('position','fixed').css('overflow-y','auto'));
     $(nextLayer).animateCss('slideInRight', '+d-block container faster');
+    $('.txt').append("<br>"+ tLayer+"  ");
+    $(nextLayer).append("<br>"+ tLayer+"  ");
 };
 function backLayer() {
 	$(tLayer.pop()).animateCss('slideOutRight', '-d-block container faster').removeAttr('style');
@@ -421,6 +423,7 @@ function backLayer() {
         tLayer.length=0;   
         $('.modal-backdrop').remove();
     }
+    
 };
 //sortlayer use animateCss
 var sLayer = [];

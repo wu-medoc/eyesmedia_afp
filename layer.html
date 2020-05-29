@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=1, user-scalable=no">
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="js/vendor/bs4/css/bootstrap.min.css">
+    <link rel="stylesheet" href="js/vendor/jquery-editable-select-master/dist/jquery-editable-select.min.css">
+    <!-- owl.carousel core CSS -->
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+    <!-- vendor css -->
+    <link rel="stylesheet" href="js/vendor/swiper/css/swiper.min.css">
+    <!-- fontawesome css -->
+    <link rel="stylesheet" href="js/vendor/fontawesome/css/fontawesome.css">
+    <link rel="stylesheet" href="js/vendor/fontawesome/css/brands.css">
+    <link rel="stylesheet" href="js/vendor/fontawesome/css/solid.css">
+    <!-- custom css -->
+    <link rel="stylesheet" href="dist/style/css.min.css">
+    <link rel="stylesheet" href="dist/style/global.min.css">
+    <!-- <link rel="stylesheet" href="dist/style/bs4modal.min.css">
+    <link rel="stylesheet" href="dist/style/swiperSet.min.css">
+    <link rel="stylesheet" href="dist/style/navlink.min.css">
+    <link rel="stylesheet" href="dist/style/footer.min.css">
+    <link rel="stylesheet" href="dist/style/serviceQA.min.css"> -->
+    <link rel="stylesheet" href="dist/style/home.min.css">
+    <link rel="stylesheet" href="dist/style/index.min.css">
+    <link rel="stylesheet" href="dist/style/animate.min.css">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <title>Mobii!</title>
+    <style>
+        .layerbox>div{
+            display: none;
+            width: 400px;
+            height: 100px;
+            background-color: bisque;
+            margin: 1em;
+        }
+    </style>
+</head>
+<body>
+    <div class="layer">
+        <button  onclick="callLayer('.layer1')">call1</button>
+        <label class="txt"></label>
+    </div>
+    <div class="layerbox">
+        <div class="layer1">1
+            <button  onclick="callLayer('.layer2')">call2</button>
+            <button onclick="backLayer()">back</button>
+        </div>
+        <div class="layer2">2
+            <button  onclick="callLayer('.layer3')">call3</button>
+            <button onclick="backLayer()">back</button>
+        </div>
+        <div class="layer3">3
+            <button  onclick="callLayer('.layer4')">call4</button>
+            <button onclick="backLayer()">back</button>
+        </div>
+        <div class="layer4">4
+            <button  onclick="callLayer('.layer2')">call2</button>
+            <button onclick="backLayer()">back</button>
+        </div>
+    </div>
+    
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="js/vendor/bs4/js/jquery-3.2.1.min.js"></script>
+    <!-- Latest compiled and minified JavaScript -->    
+    <script src="js/vendor/bs4/js/popper.min.js"></script>
+    <script src="js/vendor/bs4/js/bootstrap.min.js"></script>
+    
+
+    <!-- vendor js -->
+    <script src="js/vendor/swiper/js/swiper.min.js"></script>
+    <script src="js/vendor/bs4/js/imgLiquid.js"></script>
+    <script src="js/animateCss.js"></script>    
+    <script src="js/index.js"></script>  
+    <script>
+        
+    </script>
+</body>
+</html>
