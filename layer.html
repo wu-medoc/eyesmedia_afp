@@ -90,10 +90,32 @@
     <!-- vendor js -->
     <script src="js/vendor/swiper/js/swiper.min.js"></script>
     <script src="js/vendor/bs4/js/imgLiquid.js"></script>
-    <script src="js/animateCss.js"></script>    
-    <script src="js/index.js"></script>  
+    <script src="js/animateCss.js"></script>  
     <script>
-        
+        var tLayer = [];
+        var i=1;
+        function callLayer(nextLayer) {
+            if (tLayer.length === 0) { 
+                $('.multilayer').animateCss('slideInRight', '+d-block container faster');
+            }
+            if (tLayer[tLayer.length - 1] !== nextLayer) { tLayer.push(nextLayer); }
+            $(nextLayer).animateCss('slideInRight', '+d-block container faster');
+            
+            $('.txt').append("<br>"+tLayer);
+            $(nextLayer).css("z-index",i++)
+        };
+        function backLayer() {
+            var lastlayer = tLayer.pop();
+            $(lastlayer).animateCss('slideOutRight', '-d-block container faster').removeAttr('style');
+            if (tLayer.length === 0) {
+                $('.multilayer').animateCss('slideOutRight', '-d-block container faster').removeAttr('style');        
+                tLayer.length=0; $('.modal-backdrop').remove();
+            }
+            tLayer = jQuery.grep(tLayer, function(value) {
+                return value !== lastlayer;
+            });    
+            $('.txt').append("<br>"+tLayer);
+        };        
     </script>
 </body>
 </html>

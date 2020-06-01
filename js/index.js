@@ -312,8 +312,8 @@ $(document).ready(function(){
 
     // overlay-choice open close control
     $('.open-overlay-choice').on("click", function () {
+        $('.overlay-choice').parent().append("<a onclick='location.reload();' class='w-100 h-100 masklayer'><div class='modal-backdrop container'></div></a>");
         $('.overlay-choice').toggle();
-        $('body').append("<a onclick='location.reload();' class='w-100 h-100 masklayer'><div class='modal-backdrop container'></div></a>");
     });
     $('.close-overlay-choice').on("click", function () {
         $('.overlay-choice').toggle();
@@ -412,22 +412,19 @@ function callLayer(nextLayer) {
         $('.multilayer').animateCss('slideInRight', '+d-block container faster');
     }
     if (tLayer[tLayer.length - 1] !== nextLayer) { tLayer.push(nextLayer); }
-    $(nextLayer).animateCss('slideInRight', '+d-block container faster');
-    
-    $('.txt').append("<br>"+tLayer);
-    $(nextLayer).children('.s').append(i++);
+    $(nextLayer).animateCss('slideInRight', '+d-block container faster');    
+    $(nextLayer).css("z-index",i++);
 };
 function backLayer() {
-    var backlayer = tLayer.pop();
-	$(backlayer).animateCss('slideOutRight', '-d-block container faster').removeAttr('style');
+    var lastlayer = tLayer.pop();
+	$(lastlayer).animateCss('slideOutRight', '-d-block container faster').removeAttr('style');
     if (tLayer.length === 0) {
         $('.multilayer').animateCss('slideOutRight', '-d-block container faster').removeAttr('style');        
         tLayer.length=0; $('.modal-backdrop').remove();
     }
     tLayer = jQuery.grep(tLayer, function(value) {
-        return value !== backlayer;
+        return value !== lastlayer;
     });    
-    $('.txt').append("<br>"+tLayer);
 };
 
 //sortlayer use animateCss
