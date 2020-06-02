@@ -66,7 +66,10 @@
   .modal-body {
     margin-top: 1.2em;
     text-align: center;
-    padding: 0;
+    padding: 0;    
+    form{
+      padding-bottom: 2em;
+    }
     >div{
       padding: 1em 0 0 0;
       &#msg-noselected{

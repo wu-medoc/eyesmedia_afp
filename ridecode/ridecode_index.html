@@ -127,7 +127,7 @@
         });
 
         $('.reloading').on('click',function(){
-            location.reload(); 
+            location.replace(window.document.location.pathname); 
         });
 
         $("#loginhtml").load("../login.html"); 
