@@ -209,7 +209,7 @@ ul{
                     &:first-child{
                         flex: 1;
                     }
-                    &:last-child{
+                    &.auto-left:last-child{
                         flex: none;
                         width: 30px;
                         .material-icons{
@@ -253,11 +253,16 @@ ul{
         li{
             color: $blue-dark;
             display: flex;
+            flex: 1;
             align-items: center;
             padding: 15px;
             border-bottom: 1px $gray-light solid;
+            small.text-danger{
+                position: absolute;
+                transform: translate(-18%, 99%);
+            }
             .input-box{
-                flex: 1;
+                flex: 2;
                 text-align: right;
                 input[type='date'],
                 input[type='tel'],
@@ -268,6 +273,14 @@ ul{
                     border: 0;
                     text-align: right;
                     color: $blue-dark;
+                }
+                input[type=date]::-webkit-inner-spin-button {
+                    -webkit-appearance: none;
+                    display: none;
+                } 
+                input[type=date]::-webkit-calendar-picker-indicator {
+                    -webkit-appearance: none;
+                    display: none;
                 }
                 // input[type='date']::-webkit-calendar-picker-indicator{
                 //         background: transparent;

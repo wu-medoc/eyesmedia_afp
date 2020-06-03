@@ -259,61 +259,63 @@
                     <button class="btn div-switch d-block" onclick="div_switch()">編輯</button>
                 </div>
             </div>
-            <div class="my-info-box">
-                <div class="info-box info-img mr-0">
-                    <div class="info-item">
-                        <img src="https://picsum.photos/300/300/?random=1">
+            <div>
+                <div class="my-info-box p-3">
+                    <div class="info-box info-img mr-0">
+                        <div class="info-item">
+                            <img src="https://picsum.photos/300/300/?random=1">
+                        </div>
+                    </div>
+                    <div class="info-box info-email">
+                        mo***@eyesmedia.com
                     </div>
                 </div>
-                <div class="info-box info-email">
-                    mo***@eyesmedia.com
+                <div class="my-list-box">
+                    <ul>
+                        <li>
+                            <div class="item">名稱</div>
+                            <div class="item auto-left">李曉龍</div>
+                        </li>
+                        <li>
+                            <div class="item">生日</div>
+                            <div class="item input-box div-switch d-none">
+                                <input class="inp js-date text-right text-bluedk border-0" placeholder="YYYY/MM/DD" value="1990/05/10">
+                            </div>
+                            <div class="item auto-left div-switch d-block">1990/05/10</div>
+                        </li>
+                        <li>
+                            <div class="item">手機號碼</div>
+                            <div class="item input-box">
+                                <input type="text" value="" class="div-switch d-none" placeholder="請輸入">
+                            </div>
+                            <div class="item div-switch d-block text-danger">尚未驗證</div>
+                            <!-- <div class="item auto-left div-switch d-block">09******78</div> -->
+                        </li>
+                        <li>
+                            <div class="item">E-mail</div>
+                            <div class="item input-box">
+                                <input type="text" value="" class="div-switch d-none" placeholder="請輸入">
+                            </div>
+                            <div class="item div-switch d-block">
+                                <input class="txt-line-clamp1 border-0 float-right" value="mo********************@eyesmedia.com">
+                            </div>
+                        </li>
+                        <li>
+                            <div class="item">
+                                <button class="btn px-0 w-100" onclick="callLayer('.mypassport');">
+                                    上傳護照 <span class="auto-left"><i class="material-icons">&#xe315;</i></span>
+                                </button>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="item">
+                                <button class="btn px-0 w-100" onclick="callLayer('.mymtps');">
+                                    上傳台胞證 <span class="auto-left"><i class="material-icons">&#xe315;</i></span>
+                                </button>                                
+                            </div>
+                        </li>
+                    </ul>
                 </div>
-            </div>
-            <div class="my-list-box">
-                <ul>
-                    <li>
-                        <div class="item">名稱</div>
-                        <div class="item auto-left">李曉龍</div>
-                    </li>
-                    <li>
-                        <div class="item">生日</div>
-                        <div class="item input-box auto-left div-switch d-none">
-                            <input class="inp js-date text-right text-bluedk border-0" placeholder="YYYY/MM/DD" value="1990/05/10">
-                        </div>
-                        <div class="item auto-left div-switch d-block">1990/05/10</div>
-                    </li>
-                    <li>
-                        <div class="item">手機號碼</div>
-                        <div class="item input-box">
-                            <input type="text" value="" class="div-switch d-none" placeholder="請輸入">
-                        </div>
-                        <div class="item auto-left div-switch d-block text-danger">尚未驗證</div>
-                        <!-- <div class="item auto-left div-switch d-block">09******78</div> -->
-                    </li>
-                    <li>
-                        <div class="item">E-mail</div>
-                        <div class="item input-box">
-                            <input type="text" value="" class="div-switch d-none" placeholder="請輸入">
-                        </div>
-                        <div class="item auto-left div-switch d-block">
-                            <input class="txt-line-clamp1 w-80 border-0 float-right" value="mo********************@eyesmedia.com">
-                        </div>
-                    </li>
-                    <li>
-                        <div class="item">
-                            <button class="btn px-0 w-100" onclick="callLayer('.mypassport');">
-                                上傳護照 <span class="auto-left"><i class="material-icons">&#xe315;</i></span>
-                            </button>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="item">
-                            <button class="btn px-0 w-100" onclick="callLayer('.mymtps');">
-                                上傳台胞證 <span class="auto-left"><i class="material-icons">&#xe315;</i></span>
-                            </button>                                
-                        </div>
-                    </li>
-                </ul>
             </div>
         </div>
         <!--上傳護照3-->
