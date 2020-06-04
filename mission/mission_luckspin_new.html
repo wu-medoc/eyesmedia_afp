@@ -223,7 +223,7 @@
             //啟動跑燈
             $.each($('.contbox'), function( key, value ) {
                 for(let i=1; i<=12; i++){
-                    var k = i-(0.8*i);
+                    var k = i-(0.95*i);
                     if($(this).attr('class').split(/\s+/)[1]==i){
                         $(this).addClass('opacity5').css('animation-delay',k+'s');
                     }  
@@ -252,7 +252,7 @@
                 }    
                 //跳出中獎畫面            
                 callLayerUp('.winmsg');
-            }, 5000);
+            }, 2000);
         };
         function next(){
             location.replace(window.document.location.pathname); 
