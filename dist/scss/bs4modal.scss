@@ -70,8 +70,10 @@
     >div{
       padding: 1em 0 0 0;
       &#msg-noselected{
-        border-top: 1px #eee solid;;
-        padding: 0;
+        >div:last-child{
+          border-top: 1px #eee solid;;
+          padding: 0;
+        }
       }
     }
     .logo-box{
@@ -682,10 +684,15 @@
     overflow-y:auto;
     display:none;
     background-color:#fff;
-    min-height:65vh;
+    height: auto;
     border-top-left-radius: .5em;
     border-top-right-radius: .5em;
     bottom: 0;
+    padding-bottom: 100px;
+    @media (min-width: 768px) {
+      max-height:45vh;
+      padding-bottom: 60px;
+    }
   }
   
   .telcodelist{

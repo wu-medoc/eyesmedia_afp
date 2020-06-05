@@ -910,6 +910,8 @@ footer{
       background-color: #eee;
       border-top-left-radius: .5em;
       border-top-right-radius: .5em;
+      padding: .5em 0;
+      margin-bottom: 1em;
     }
     .d-flex{
         .item{
@@ -929,7 +931,7 @@ footer{
         z-index: 2;
         display: flex;
         justify-content: space-between;
-        align-items: stretch;
+        align-items: baseline;
     }
     .shopping-storeimgbox{
         overflow: hidden;
