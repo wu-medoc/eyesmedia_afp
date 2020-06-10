@@ -39,16 +39,18 @@
                         </div>
                     </div>
                     <form id="login-form">
-                        <div class="form-group form-inline linebt-row">
-                            <label for="loginInputEmailTel">Email/手機</label>
-                            <input type="text" class="form-control" id="loginInputEmailTel" placeholder="">
+                        <div class="form-group form-inline">
+                            <label for="loginInputEmailTel">帳號</label>
+                            <input type="text" class="form-control" id="loginInputEmailTel" placeholder="請輸入Email/手機">
+                            <div class="small-warning"><span>帳號輸入錯誤</span></div>
                         </div>
-                        <div class="form-group form-inline linebt-row">
+                        <div class="form-group form-inline">
                             <label for="loginInputPassword">密碼</label>
-                            <input type="password" class="form-control" id="loginInputPassword" autocomplete="on">
+                            <input type="password" class="form-control" id="loginInputPassword" autocomplete="on" placeholder="請輸入密碼">
+                            <div class="small-warning"><span>密碼輸入錯誤</span></div>
                         </div>
-                        <button type="button" class="btn index-btn w-100 login-ok" data-dismiss="modal">登入</button>
-                        <span class="text-left">
+                        <button type="button" class="btn index-btn w-100 login-ok my-2" data-dismiss="modal">登入</button>
+                        <span class="text-left small-80 text-secondary">
                             還不是會員嗎?
                         </span>
                         <button type="button" class="btn btn-login font-bold px-0 modalopen" data-toggle="modal" data-target="#registeredModalCenter" data-dismiss="modal" aria-label="Close">
@@ -112,44 +114,47 @@
                                 <a class="nav-link active" id="phone-tab" data-toggle="tab" href="#phone" role="tab" aria-controls="phone" aria-selected="true">手機</a>
                             </li>
                         </ul>
-                        <div class="pt-4">
-                            <div class="form-group linebt-row">
-                                <input type="text" class="form-control w-100" id="registeredInputNickname" placeholder="暱稱">
+                        <div class="pt-3">
+                            <div class="form-group form-inline">
+                                <label>暱稱<span class="text-danger">*</span></label>
+                                <input type="text" class="form-control" id="registeredInputNickname" placeholder="請輸入 1 到 8 個字元">
+                                <div class="small-warning"><span>暱稱請勿空白</span></div>
                             </div>
                         </div>
                         <div class="tab-content" id="regTabContent">
                             <div class="tab-pane fade" id="email" role="tabpanel" aria-labelledby="email-tab">
-                                <div class="form-group linebt-row">
-                                    <input type="email" class="form-control w-100" id="registeredInputEmail" placeholder="電子信箱">
+                                <div class="form-group form-inline">
+                                    <label>E-mail<span class="text-danger">*</span></label>
+                                    <input type="email" class="form-control" id="registeredInputEmail" placeholder="請輸入電子信箱">
+                                    <div class="small-warning"><span>電子信箱輸入錯誤</span></div>
                                 </div>
                             </div>
                             <div class="tab-pane fade show active" id="phone" role="tabpanel" aria-labelledby="phone-tab">
-                                <table class="form-group">
+                                <table class="form-group reg-form">
                                     <tbody>
                                         <tr>
-                                            <td width="25%" class="linebt-td">
-                                                <button type="button" value="886" id="t2" class="telcode btn">台灣(+886)
-                                                    <!-- <input type="hidden" value="886" id="t2" class="telcode"> -->
-                                                </button>
+                                            <td>
+                                                手機<span class="text-danger">*</span>
                                             </td>
-                                            <td width="5%"></td>
-                                            <td width="70%" class="linebt-td"><input type="tel" class="form-control" id="registeredInputPhone" placeholder="手機"></td>
+                                            <td >
+                                                <button type="button" value="886" id="t2" class="telcode btn">台灣(+886)</button>
+                                            </td>
+                                            <td>
+                                                <input type="tel" class="form-control" id="registeredInputPhone" placeholder="請輸入完整手機號碼">
+                                                <div class="small-warning regtd"><span>格式不符</span></div>
+                                            </td>
                                         </tr>
                                     </tbody>
                                 </table>
                             </div>
-                            <div class="bg-white">
+                            <div class="bg-white regfooter">
                                 <div class="form-inline text-left pl-2 icheck-material-blue small">
-                                    <input type="checkbox" class="form-check-input" id="registeredCheck1">
-                                    <label class="form-check-label" for="registeredCheck1">我同意Mobii!的</label>
-                                    <a href='member/member_clause.html' target="_blank" class="font-bold text-secondary">
-                                        會員條款
-                                    </a>及                                                                   
-                                    <a href='member/member_private.html' target="_blank" class="font-bold text-secondary">
-                                        隱私政策
-                                    </a>
+                                    <input type="radio" class="form-check-input" id="registeredCheck1">
+                                    <label class="form-check-label" for="registeredCheck1">我同意 Mobii! 的</label>
+                                    <a href='member/member_clause.html' target="_blank" class="font-bold">&ensp;會員條款&ensp;</a>及                                                                   
+                                    <a href='member/member_private.html' target="_blank" class="font-bold">&ensp;隱私政策&ensp;</a>
                                 </div>
-                                <button type="button" class="btn index-btn w-100 send-veri-code" data-toggle="modal" data-target="#VcodeModalCenter" data-dismiss="modal" aria-label="Close">
+                                <button type="button" class="btn index-btn w-100 send-veri-code my-2" data-toggle="modal" data-target="#VcodeModalCenter" data-dismiss="modal" aria-label="Close">
                                     傳送驗證碼
                                 </button>
                                 <p class="text-left">
@@ -167,7 +172,7 @@
             </div>
             </div>         
             <!-- 國碼 -->
-            <div class="telcodelist">
+            <div class="telcodelist d-none">
                 <div id="open-pagebox">
                     <div class="open-page-title flex-inline-between">
                         <div class="title-icon">

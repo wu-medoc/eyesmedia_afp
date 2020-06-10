@@ -767,6 +767,7 @@ header + div,
 .back-go, 
 .add-favorite, 
 .del-favorite {
+  padding: 0;
   width: 55px;
   @media (max-width: 480px) {
     width: 45px;
@@ -775,6 +776,7 @@ header + div,
     width: 40px;
     border:0 ;
     padding: 0;
+    margin: 0.5em 0;
     .imgicon{
       visibility: visible;
     }

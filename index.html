@@ -1737,14 +1737,10 @@
     <script src="js/vendor/bs4/js/imgLiquid.js"></script>
     <script src="js/animateCss.js"></script>    
 
-    <!-- custom js -->
-    <script>            
-        $(".userbox").load("userbox.html");
-        $("#loginhtml").load("login.html");
-        $("#footerMobii").load("footerMobii.html");
-    </script>     
+    <!-- custom js -->    
     <script>
-        $(document).ready(function() { 
+        $(window).on('load',function() { 
+            
             var JData = [{id:"t1", telname:"中國大陸", telcode:"86"},
                         {id:"t2", telname:"台灣", telcode:"886"},
                         {id:"t3", telname:"香港", telcode:"852"},
@@ -1826,6 +1822,7 @@
                         {id:"t79", telname:"埃及", telcode:"20"},];
             var NumOfJData = JData.length;
             $('.telcode').on('click',function(){
+                console.log("ok");
                 $('.telcodelist').removeClass('d-none').animateCss('slideInRight', '+d-block').before("<div class='modal-backdrop' style='z-index:0'></div>");
                 $('#open-pagebox').addClass('container');
                 if($('#telcodels').children().length === 0){
@@ -1846,10 +1843,6 @@
                 });
 
             });
-            
-        });
-
-        $(window).on('load',function() { 
             //phone 6 input
             var demo=document.getElementById('myphoneinput');
             input=demo.getElementsByTagName('input');
@@ -1898,6 +1891,11 @@
 
         });
 
+    </script> 
+    <script>            
+        $(".userbox").load("userbox.html");
+        $("#loginhtml").load("login.html");
+        $("#footerMobii").load("footerMobii.html");
     </script> 
     <script src="js/index.js"></script>
     
