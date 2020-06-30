@@ -326,12 +326,6 @@ figure.image{
   &.h37{
     padding-bottom:37%;
   }
-  &.h55{
-    padding-bottom:55%;
-  }
-  &.h65{
-    padding-bottom:65%;
-  }
 }
 .rwdimg-cover {
   display:block;
@@ -815,7 +809,7 @@ header + div,
     top: calc(100% - 165px);
   }
   @media (max-width: 320px) {
-    top: calc(100% - 180px);
+    top: calc(100% - 170px);
   }
   @media (min-width: 768px){
     top: calc(100% - 150px);
