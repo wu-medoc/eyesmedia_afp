@@ -320,6 +320,18 @@ figure.image{
   background-position: center center;
   background-repeat: no-repeat;
   background-size:contain;
+  &.h20{
+    padding-bottom:20%;
+  }
+  &.h37{
+    padding-bottom:37%;
+  }
+  &.h55{
+    padding-bottom:55%;
+  }
+  &.h65{
+    padding-bottom:65%;
+  }
 }
 .rwdimg-cover {
   display:block;
