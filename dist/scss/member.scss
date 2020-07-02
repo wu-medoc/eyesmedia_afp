@@ -277,9 +277,13 @@ ul{
                 input[type='email'],
                 input[type='text']{
                     width: 100%;
-                }                
+                }           
                 input[type='date']{
                     width: 110px;
+                }     
+                input#bdayinput{
+                    padding: 0;
+                    height: auto;
                 }
                 input[type=date]::-webkit-inner-spin-button {
                     -webkit-appearance: none;

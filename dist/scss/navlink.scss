@@ -105,7 +105,8 @@
       border: none;
       background-color: transparent;
     }  
-    a.tablist-link.active:hover::after, 
+    a.tablist-link.active::after, 
+    a.tablist-link.active.show:hover::after, 
     a.tablist-link.active.show::after,
     a.tablist-link::after {
       content: '';
