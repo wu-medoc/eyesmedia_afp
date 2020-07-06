@@ -284,6 +284,11 @@ ul{
                 input#bdayinput{
                     padding: 0;
                     height: auto;
+                    width: calc(100% - 38px);
+                }
+                .icon-birth{
+                    width: 26px;
+                    height: 26px;
                 }
                 input[type=date]::-webkit-inner-spin-button {
                     -webkit-appearance: none;
