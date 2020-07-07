@@ -639,12 +639,14 @@ header + div,
   background-color: #fff;
   padding: 15px;
   min-width: 320px;
+  max-width: 1140px;
   max-height: 70px;
   position: fixed;
   top: 0;
   right: 0;
   left: 0;
   z-index: 1030;
+  margin: 0 auto;
   .title-name{
     font-size: 1.3em;
     font-weight: bold;
