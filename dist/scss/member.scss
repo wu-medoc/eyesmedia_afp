@@ -325,6 +325,7 @@ ul{
             }
             button{
                 color: $blue-dark;
+                display: flex;
             }      
         }        
         &.p-select-wheel>li{
@@ -1005,9 +1006,6 @@ input[type="file"] {
 }   
 .auto-left{
     margin-left: auto;
-    text-align: right;
-    right: 10px;
-    position: absolute; 
 }
 #open-mask.modal-backdrop {
     z-index: 1040;
