@@ -688,7 +688,9 @@ footer{
         padding: 0 .25em;
         color: $onlineshopping-default;
         border: 1px solid $onlineshopping-default;
-        font-size: 90%;
+        font-size: 85%;
+        height: 1.5em;
+        white-space: nowrap;
     }
     .products-title {   
         color: $blue-dark;
