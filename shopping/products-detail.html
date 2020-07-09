@@ -348,7 +348,7 @@
         //捲動時控制
         $(window).scroll(function (event) {
             var scrolled = $(this).scrollTop();
-            //位置控制
+            //fixed控制
             if(scrolled<600){
                 $('.tag-topbox').removeClass('fixed-top container');
                 $('.onbuy').removeClass('fixed-bottom container shopping-cartfooter py-3 px-3');
@@ -356,17 +356,13 @@
                 $('.tag-topbox').addClass('fixed-top container');
                 $('.onbuy').addClass('fixed-bottom container shopping-cartfooter py-3 px-3');
             }
-            //var flag=0;
+            //位置控制
             for (key in sectionIds) {
                     console.log(scrolled +' '+ sectionIds[key] );               
                 if ( (scrolled>600) && (scrolled > sectionIds[key]) ) {     
                     $("#tab-"+key).addClass("active show");
-                    //{tag01: 873.21875, tag02: 2796.046875, tag03: 3070.640625}
-                    //flag+=1;
-                        //if(flag>0){
-                            $('.tablist-link').removeClass("active show");
-                            $("#tab-"+key).addClass("active show");
-                        //}
+                        $('.tablist-link').removeClass("active show");
+                        $("#tab-"+key).addClass("active show");
                 }
             }
         });
