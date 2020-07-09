@@ -639,7 +639,7 @@ header + div,
   background-color: #fff;
   padding: 15px;
   min-width: 320px;
-  max-width: 1140px;
+  max-width: auto;
   max-height: 70px;
   position: fixed;
   top: 0;
@@ -647,6 +647,18 @@ header + div,
   left: 0;
   z-index: 1030;
   margin: 0 auto;
+  @media (max-width: 767px) {
+    max-width: 540px;
+  }
+  @media (min-width: 768px) and (max-width: 979px) {
+    max-width: 720px;
+  }
+  @media (min-width: 980px) {
+    max-width: 960px;
+  }
+  @media (min-width: 1200px) {
+    max-width: 1140px;
+  }
   .title-name{
     font-size: 1.3em;
     font-weight: bold;

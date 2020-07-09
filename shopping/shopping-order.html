@@ -45,7 +45,7 @@
         </header>
 
         <form>   
-            <main>     
+            <main class="orderbox">     
                 <div class="order-step-box">
                     <ol class="step-list">
                         <li class="active">1</li>
@@ -207,9 +207,37 @@
                                 </div>
                             </li>
                             <li class="index-flex">
-                                <div class="item three">此賣場訂單金額 (<span class="store1-products-num">2</span>件商品)</div>
-                                <div class="item one item-total-price text-right store1-subtotal" value="3372">
+                                <div class="item three">此賣場訂單金額 (<span class="store2-products-num">2</span>件商品)</div>
+                                <div class="item one item-total-price text-right store2-subtotal" value="3372">
                                     $3,372
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="order-box store d-none" id="store3">
+                    <div class="order-subtitle">
+                        <i class="material-icons">&#xE8D1;</i>艾斯移動
+                    </div>
+                    <ul class="order-shop-list">
+                        <li>
+                            <div class="item rwdimgbox-80">
+                                <div style="background-image: url('https://picsum.photos/300/300/?random=1');" class="rwdimg-cover"></div>
+                            </div>
+                            <div class="item item-txt">
+                                <p>高雄捷運一日 QR CODE 搭乘券</p>
+                                <p>規格：單一規格</p>
+                                <p class="order-price auto-top store3-products001-price" value="120">$120</p>
+                            </div>
+                            <div class="item item-num order-quantity" value="2">x1</div>
+                        </li>
+                    </ul>
+                    <div class="order-method-box">
+                        <ul class="method-list">
+                            <li class="index-flex">
+                                <div class="item three">此賣場訂單金額 (<span class="store3-products-num">1</span>件商品)</div>
+                                <div class="item one item-total-price text-right store3-subtotal" value="120">
+                                    $120
                                 </div>
                             </li>
                         </ul>
@@ -345,54 +373,6 @@
                                             </div>
                                         </label>
                                     </li>
-                                    <li class="checkedli">
-                                        <div class="item rwdimgbox-80">
-                                            <div style="background-image: url('https://picsum.photos/300/300/?random=1');" class="rwdimg-cover"></div>
-                                        </div>
-                                        <div class="item discount-text item-middle">
-                                            <p>昇恆昌</p>
-                                            <p>8折 折扣券</p>
-                                            <p>2019/11/15 ~ 2019/12/31</p>
-                                        </div>
-                                        <label class="radio-box">
-                                            <div class="item">
-                                                <input type="radio" name="radio" id="discount002" class="store1">
-                                                <span class="checkmark"></span>
-                                            </div>
-                                        </label>
-                                    </li>
-                                    <li class="checkedli">
-                                        <div class="item rwdimgbox-80">
-                                            <div style="background-image: url('https://picsum.photos/300/300/?random=1');" class="rwdimg-cover"></div>
-                                        </div>
-                                        <div class="item discount-text item-middle">
-                                            <p>昇恆昌</p>
-                                            <p>8折 折扣券</p>
-                                            <p>2019/11/15 ~ 2019/12/31</p>
-                                        </div>
-                                        <label class="radio-box">
-                                            <div class="item">
-                                                <input type="radio" name="radio" id="discount002" class="store1">
-                                                <span class="checkmark"></span>
-                                            </div>
-                                        </label>
-                                    </li>
-                                    <li class="checkedli">
-                                        <div class="item rwdimgbox-80">
-                                            <div style="background-image: url('https://picsum.photos/300/300/?random=1');" class="rwdimg-cover"></div>
-                                        </div>
-                                        <div class="item discount-text item-middle">
-                                            <p>昇恆昌</p>
-                                            <p>8折 折扣券</p>
-                                            <p>2019/11/15 ~ 2019/12/31</p>
-                                        </div>
-                                        <label class="radio-box">
-                                            <div class="item">
-                                                <input type="radio" name="radio" id="discount002" class="store1">
-                                                <span class="checkmark"></span>
-                                            </div>
-                                        </label>
-                                    </li>
                                 </ul>
                             </div>
                         </form>            
@@ -412,6 +392,29 @@
                                         <label class="radio-box">
                                             <div class="item">
                                                 <input type="radio" name="radio2" id="discount003" class="store2">
+                                                <span class="checkmark"></span>
+                                            </div>
+                                        </label>
+                                    </li>
+                                </ul>
+                            </div>
+                        </form>
+                        <form id="store3">
+                            <div class="can-use-discount-list">
+                                <p class="can-use-title"><span>艾斯移動</span> 可選擇<span>一</span>張</p>
+                                <ul>
+                                    <li class="checkedli">
+                                        <div class="item rwdimgbox-80">
+                                            <div style="background-image: url('https://picsum.photos/300/300/?random=4');" class="rwdimg-cover"></div>
+                                        </div>
+                                        <div class="item discount-text item-middle">
+                                            <p>艾斯移動</p>
+                                            <p>9折 折扣券</p>
+                                            <p>2019/11/15 ~ 2019/12/31</p>
+                                        </div>
+                                        <label class="radio-box">
+                                            <div class="item">
+                                                <input type="radio" name="radio3" id="discount004" class="store3">
                                                 <span class="checkmark"></span>
                                             </div>
                                         </label>
@@ -459,6 +462,12 @@
                                     <div class="item-group small">
                                         <div class="item"><p class="txt-line-clamp1">新光三越 9折 折扣券</p></div>
                                         <div class="item discount-price" value="188">188 元</div>
+                                    </div>
+                                </div>
+                                <div class="store3 discount004" style="display:none;">
+                                    <div class="item-group small">
+                                        <div class="item"><p class="txt-line-clamp1">艾斯移動 9折 折扣券</p></div>
+                                        <div class="item discount-price" value="12">12 元</div>
                                     </div>
                                 </div>
                             </div>
@@ -1269,6 +1278,20 @@
             const target = $('input').index(e.currentTarget);
             document.body.scrollTop = ($('input').eq(target)[0].offsetTop - 50); 
         });
+
+        // 判斷是產品或車票
+        var hashVal=window.location.hash.split("#")[1];
+        console.log(hashVal);
+        if (hashVal=="tk") {
+            $('#store3').toggleClass('d-none');
+            $('#store1 ,#store2, .sendbox li:not(:last-child)').hide();
+            $('.orderbox .total-price-box .order-subtotal').attr('value','120').text('$120');
+            $('.orderbox .total-price-box .order-delivery').attr('value','0').text('$0');
+            $('.orderbox .total-price-box .order-discount').attr('value','-0').text('-$0');
+            $('.orderbox .total-price-box .sub-discount').attr('value','-0').text('-$0');
+            $('.orderbox .total-price-box .order-sumtotal').attr('value','120').text('$120');    
+            $('.shopping-cartfooter .price-subtotal').attr('value','120').text('$120');
+        }
     </script>
     <script src="../js/index.js"></script>
 </body>

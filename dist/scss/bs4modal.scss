@@ -1,6 +1,6 @@
 @import '../style/module/variable';
 /* loginhtml for modal*/
-.login-top {
+  .login-top {
     font-size: 0.8em;
     white-space: nowrap;
     text-align: right;
@@ -28,6 +28,11 @@
     }
   }
   
+  button.close{
+    &:focus{
+      outline: none;
+    }
+  }
   .modal-header {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -463,6 +468,7 @@
       font-weight: 400;
       border-top: 1px #C4C2C2 solid;
       color: #212529;
+      user-select: none;
       &.active{
         color: $index-default;
         font-size: 0.9em;
@@ -569,6 +575,7 @@
       font-size: 0.9em;
       font-weight: 400;
       border-top: 1px #C4C2C2 solid;     
+      user-select: none;
       i.fa-check{
         padding: 0 4px;
         visibility: hidden;

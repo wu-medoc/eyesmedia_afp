@@ -684,6 +684,12 @@ footer{
             padding-top: 0;
         }
     }
+    .products-label {
+        padding: 0 .25em;
+        color: $onlineshopping-default;
+        border: 1px solid $onlineshopping-default;
+        font-size: 90%;
+    }
     .products-title {   
         color: $blue-dark;
         font-weight: bold;
@@ -1475,6 +1481,28 @@ footer{
 /* 選擇優惠券或輸入折扣碼 */
 .shopping-discount{
     color: $blue-dark;
+    .checkmark {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        height: 18px;
+        width: 18px;
+        border: 1px #DADADA solid;
+        transform: translateY(-50%);
+        &:after {
+            content: "✔";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 18px;
+            height: 18px;
+            color: $default-white;
+            display: none;
+            line-height: 1em;
+            background: transparent;
+        }
+    }
     .fs-16{
         font-size: 16px !important;
     }
@@ -1537,6 +1565,7 @@ footer{
             font-size: small;
             border-bottom: 1px #eee solid;
             padding: 10px 15px;
+            text-align: left;
         }
         .can-use-date{
             font-size: 13px;

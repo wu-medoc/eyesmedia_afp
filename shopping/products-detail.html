@@ -86,7 +86,10 @@
             </div>
             <div class="linebt-row"></div>
             <div class="products-info p-3">
-                <div class="item">
+                <div class="item d-flex d-inline">
+                    <span class="products-label d-none">
+                        電子票券                                
+                    </span>
                     <div class="products-title">
                         [下殺限定]Apple iPhone XS 256G 5.8吋智慧型手機                                
                     </div>
@@ -126,7 +129,7 @@
                 </div>
                 <div class="item shopping-flex onbuy">
                     <div class="item products-btn-buynow pt-0">                        
-                        <button type="button" class="btn index-btn w-100">加入購物車</button>      
+                        <button type="button" class="btn index-btn w-100 buybtn">加入購物車</button>      
                     </div>
                 </div>
             </div>            
@@ -345,7 +348,26 @@
                 }
             }
         });
-
+        
+        /* products-detail href nav-tag TOP */        
+        function ScrollTo(id_name) {
+            $('.tag-topbox').addClass('fixed-top container');
+            $('.nav-tabs-box').addClass('tag-top'); 
+            $('html,body').animate({scrollTop: $('#'+id_name).offset().top-50}, 1000);
+            $('.tablist-link').removeClass('active show');
+            $('#tag-'+id_name).addClass('active show');
+        }
+        $(document).on('scroll', function(){       
+            if ($(window).scrollTop() < 700) {        
+                $('.tag-topbox').removeClass('fixed-top container');
+                $('.onbuy').removeClass('fixed-bottom container shopping-cartfooter py-3 px-3');
+                $('.nav-tabs-box').removeClass('tag-top');
+            } else {                
+                $('.tag-topbox').addClass('fixed-top container');
+                $('.onbuy').addClass('fixed-bottom container shopping-cartfooter py-3 px-3');
+                $('.nav-tabs-box').addClass('tag-top'); 
+            }
+        });
 
         // products-detail quantity min max control
         $(document).on('click', '.p-quantity button', function () { 
@@ -361,27 +383,7 @@
             }
             input.val(newVal);
         });
-
-        /* products-detail href nav-tag TOP */        
-        function ScrollTo(id_name) {
-            $('.tag-topbox').addClass('fixed-top container');
-            $('.nav-tabs-box').addClass('tag-top'); 
-            $('html,body').animate({scrollTop: $('#'+id_name).offset().top-50}, 1000);
-            $('.tablist-link').removeClass('active show');
-            $('#tab-'+id_name).addClass('active show');
-        }
-        $(document).on( 'scroll', function(){       
-            if ($(window).scrollTop() < 700) {        
-                $('.tag-topbox').removeClass('fixed-top container');
-                $('.onbuy').removeClass('fixed-bottom container shopping-cartfooter py-3 px-3');
-                $('.nav-tabs-box').removeClass('tag-top');
-            } else {                
-                $('.tag-topbox').addClass('fixed-top container');
-                $('.onbuy').addClass('fixed-bottom container shopping-cartfooter py-3 px-3');
-                $('.nav-tabs-box').addClass('tag-top'); 
-            }
-        });
-        
+     
         //copy url
         $(document).ready(function() {
             $('[data-trigger="copy"]').on('click', function(e) {
@@ -393,6 +395,32 @@
                 temp.remove(); // 移除input物件
             });
         });
+
+        // 判斷是產品或車票
+            var hashVal=window.location.hash.split("#")[1];
+            var JData = [{id:"tk", title:"電子車票"}];
+            var hashValue = ""
+            for (let i = 0; i < JData.length; i++) {
+                hashValue = JData[i]['id'];                
+                if (hashVal=="tk") {
+                    //顯示,隱藏區塊控制
+                    $('.products-label').toggleClass('d-none');
+                    $('.discount-price, .products-storecoupon').hide();
+                    $('.products-norm').attr('disabled','false').removeAttr('onclick').children().html('<span class=\"text-muted\">單一規格</span>').append('<i class=\"material-icons text-muted\">&#xe315;</i>');
+                    $('.onbuy').prev().hide();
+                    $('.onbuy button').text('直接購買');
+                    $('#tab-tag02, #tag02 h6').text('使用須知');
+                    //帶入假資料
+                    $('.buybtn').attr('onclick','window.open("shopping-order.html#tk","_parent")');
+                    $('.price-asking, .price-original').text('$120');
+                    $('.products-set').text('/ 份');
+                    $('.products-info .products-title').first().text('高雄捷運一日 QR CODE 搭乘券');
+                    $('.swiper-wrapper .swiper-slide:first').find('img').attr('src','https://picsum.photos/400/600/?random=1');
+                    $('.swiper-wrapper .swiper-slide:nth-child(2)').find('img').attr('src','https://picsum.photos/500/500/?random=2');
+                    $('.swiper-wrapper .swiper-slide:last').find('img').attr('src','https://picsum.photos/600/400/?random=3');
+
+                }
+            }
         $("#loginhtml").load("../login.html");
     </script>
     <script src="../js/index.js"></script>
