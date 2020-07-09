@@ -276,7 +276,6 @@
             }
             $(".otherpay").css('opacity','1');
             $(".lidisplay").siblings().children().css('opacity','1');
-            $('.btn-ok').removeClass('msg-open').removeAttr('data-toggle').removeAttr('data-target').attr('onclick','location.href="shopping-order-ok.html"');
 
         });
 
@@ -285,6 +284,7 @@
             $(this).children('.item-default').addClass('active');
             $(this).siblings().children().css('opacity','0.5').removeClass('active');
             $('.otherpay').css('opacity','0.5');
+            $('.btn-ok').removeClass('msg-open').removeAttr('data-toggle').removeAttr('data-target').attr('onclick','location.href="shopping-order-ok.html"');
         });
     </script>
     <script src="../js/index.js"></script>
