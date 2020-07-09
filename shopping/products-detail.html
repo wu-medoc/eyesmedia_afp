@@ -165,13 +165,13 @@
                                     <!-- Nav tabs -->
                                     <ul id="nav-tab-storedetail" class="nav nav-tabs pt-2" role="tablist">
                                             <li class="">
-                                                <a href="#tag01" class="tablist-link link-orange active" id="tab-tag01" onClick="javascript:ScrollTo('tag01')">關於商品</a>
+                                                <a href="#tag01" class="tablist-link link-orange active" id="tab-tag01" onClick="ScrollTag('tag01')">關於商品</a>
                                             </li>
                                             <li class="">
-                                                <a href="#tag02" class="tablist-link link-orange" id="tab-tag02" onClick="javascript:ScrollTo('tag02')">付款交貨</a>
+                                                <a href="#tag02" class="tablist-link link-orange" id="tab-tag02" onClick="ScrollTag('tag02')">付款交貨</a>
                                             </li>
                                             <li class="">
-                                                <a href="#tag03" class="tablist-link link-orange" id="tab-tag03" onClick="javascript:ScrollTo('tag03')">訂購須知</a>
+                                                <a href="#tag03" class="tablist-link link-orange" id="tab-tag03" onClick="ScrollTag('tag03')">訂購須知</a>
                                             </li>
                                     </ul>        
                                 </div>
@@ -329,45 +329,48 @@
     <!-- custom js -->
     <script>    
         //scroll focus tablist-link
+        //點選時控制
+        function ScrollTag(e) {
+            var id_name=e;
+            console.log(e);
+            $('.tag-topbox').addClass('fixed-top container');
+            $('.tablist-link').removeClass('active show');
+            $('#tab-'+id_name).addClass('active show');
+            $('html,body').animate({scrollTop: $('#'+id_name).offset().top-50}, 1000);
+        }
+        //取得tag 
         var sectionIds = {};
         $(".tab-pane").each(function () {
             var $this = $(this);
-            sectionIds[$this.attr("id")] = $this.offset().top;
+            sectionIds[$this.attr("id")] = $this.offset().top-50;
         });
+        console.log(sectionIds);
+        //捲動時控制
         $(window).scroll(function (event) {
             var scrolled = $(this).scrollTop();
-            var flag=0;
+            //位置控制
+            if(scrolled<600){
+                $('.tag-topbox').removeClass('fixed-top container');
+                $('.onbuy').removeClass('fixed-bottom container shopping-cartfooter py-3 px-3');
+            }else{
+                $('.tag-topbox').addClass('fixed-top container');
+                $('.onbuy').addClass('fixed-bottom container shopping-cartfooter py-3 px-3');
+            }
+            //var flag=0;
             for (key in sectionIds) {
-                if (scrolled-50 > sectionIds[key] ) {                    
+                    console.log(scrolled +' '+ sectionIds[key] );               
+                if ( (scrolled>600) && (scrolled > sectionIds[key]) ) {     
                     $("#tab-"+key).addClass("active show");
-                    flag+=1;
-                        if(flag>0){
+                    //{tag01: 873.21875, tag02: 2796.046875, tag03: 3070.640625}
+                    //flag+=1;
+                        //if(flag>0){
                             $('.tablist-link').removeClass("active show");
                             $("#tab-"+key).addClass("active show");
-                        }
+                        //}
                 }
             }
         });
-        
-        /* products-detail href nav-tag TOP */        
-        function ScrollTo(id_name) {
-            $('.tag-topbox').addClass('fixed-top container');
-            $('.nav-tabs-box').addClass('tag-top'); 
-            $('html,body').animate({scrollTop: $('#'+id_name).offset().top-50}, 1000);
-            $('.tablist-link').removeClass('active show');
-            $('#tag-'+id_name).addClass('active show');
-        }
-        $(document).on('scroll', function(){       
-            if ($(window).scrollTop() < 700) {        
-                $('.tag-topbox').removeClass('fixed-top container');
-                $('.onbuy').removeClass('fixed-bottom container shopping-cartfooter py-3 px-3');
-                $('.nav-tabs-box').removeClass('tag-top');
-            } else {                
-                $('.tag-topbox').addClass('fixed-top container');
-                $('.onbuy').addClass('fixed-bottom container shopping-cartfooter py-3 px-3');
-                $('.nav-tabs-box').addClass('tag-top'); 
-            }
-        });
+
 
         // products-detail quantity min max control
         $(document).on('click', '.p-quantity button', function () { 
