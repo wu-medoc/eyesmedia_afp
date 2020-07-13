@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=1, user-scalable=no">
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../js/vendor/bs4/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../js/vendor/jquery-editable-select-master/dist/jquery-editable-select.min.css">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+    <!-- vendor css -->
+    <link rel="stylesheet" href="../js/vendor/swiper/css/swiper.min.css">
+    <!-- fontawesome css -->
+    <link rel="stylesheet" href="../js/vendor/fontawesome/css/fontawesome.css">
+    <link rel="stylesheet" href="../js/vendor/fontawesome/css/brands.css">
+    <link rel="stylesheet" href="../js/vendor/fontawesome/css/solid.css">
+    <!-- custom css -->
+    <link rel="stylesheet" href="../dist/style/css.min.css">
+    <link rel="stylesheet" href="../dist/style/global.min.css">
+    <link rel="stylesheet" href="../dist/style/index.min.css">
+    <link rel="stylesheet" href="../dist/style/member.min.css">
+    <link rel="stylesheet" href="../dist/style/animate.min.css">
+    <link rel="stylesheet" href="../js/vendor/popoPicker-master/css/popoPicker.css">
+
+    <title>Mobii! - 我的首頁</title>
+</head>
+
+<body>    
+<div class="wrap container">
+
+        <!--支付設定2-->
+        <div class="mypay">
+            <div class="headerbox container title-box">
+                <div class="item icon-btn">                        
+                    <button class="btn px-0" onclick="animRouter('Setting.html')" data-toggle="tooltip" data-placement="bottom" title="回上一頁">
+                        <i class="material-icons">&#xe314;</i>
+                    </button>
+                </div>
+                <div class="item title-name">付款設定</div>
+                <div class="item icon-btn"></div>
+            </div>
+            <div class="my-creditcard-list">
+                <ul class="main-list">
+                    <li>
+                        <a class="collapsed" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                            <div class="item item-img">
+                                <img src="../img/member/member-creditcard.svg" alt="">
+                            </div>
+                            <div class="item">信用卡/ＶISA金融卡</div>
+                            <div class="item auto-left">
+                                <i class="material-icons">&#xE316;</i>
+                            </div>
+                        </a>
+                        <div class="collapse" id="collapseExample">
+                            <ul class="sub-list">
+                                <li onclick="callLayer('.mypaycardinfo');">
+                                    <div class="item item-img">
+                                        <img src="../img/member/creditcard-01.svg" alt="">
+                                    </div>
+                                    <div class="item card-type">mastercard</div>
+                                    <div class="item item-card-num">*1234</div>
+                                    <div class="item item-default auto-left">[預設]</div>
+                                </li>
+                                <li onclick="callLayer('.mypaycardinfo');">
+                                    <div class="item item-img">
+                                        <img src="../img/member/creditcard-02.svg" alt="">
+                                    </div>
+                                    <div class="item card-type">mastercard</div>
+                                    <div class="item item-card-num">*1234</div>
+                                    <div class="item item-default auto-left"></div>
+                                </li>
+                                <li onclick="callLayer('.mypaycardinfo');">
+                                    <div class="item item-img">
+                                        <img src="../img/member/creditcard-03.svg" alt="">
+                                    </div>
+                                    <div class="item card-type">mastercard</div>
+                                    <div class="item item-card-num">*1234</div>
+                                    <div class="item item-default auto-left"></div>
+                                </li>
+                                <li onclick="callLayer('.mypayaddcard');">
+                                    <div class="item item-icon">
+                                        <i class="material-icons">&#xE145;</i>
+                                    </div>
+                                    <div class="item add-card">
+                                        <button class="btn px-0 text-left">新增信用卡</button>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="fixed-btn container">
+                <button class="btn next-btn w-100" onclick="history.back()">確認</button>
+            </div>
+        </div>
+        
+    <!--次頁-->
+    <div class="multilayer">
+      
+        <!--新增信用卡3-->
+        <div class="mypayaddcard">
+            <div class="headerbox container title-box">
+                <div class="item icon-btn">                        
+                    <button class="btn px-0" onclick="backLayer();" data-toggle="tooltip" data-placement="bottom" title="回上一頁">
+                        <i class="material-icons">&#xe314;</i>
+                    </button>
+                </div>
+                <div class="item title-name">新增信用卡</div>
+                <div class="item icon-btn"></div>
+            </div>
+            <form>
+                <div class="my-creditcard-info">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="form-group">
+                                    <label for="card_01">信用卡 / 簽帳金融卡卡號</label>
+                                    <input type="text" class="form-control" id="card_01" aria-describedby="" placeholder="0000 0000 0000 0000">
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="form-group">
+                                    <label for="card_02">有效年月</label>
+                                    <input type="text" class="form-control" id="card_02" aria-describedby="" placeholder="MM / YY">
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="form-group">
+                                    <label for="card_03">背面末三碼</label>
+                                    <input type="text" class="form-control" id="card_03" aria-describedby="" placeholder="000">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="setting-default pl-3">                        
+                            <div class="icheck-material-blue">
+                                <input id="i4" type="checkbox" checked>
+                                <label for="i4">設定為預設地址</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12">
+                                <button type="button" class="btn next-btn w-100" onclick="backLayer()">完成</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="neweb-pay">
+                    <p>本安全服務由藍新金流服務平台提供</p>
+                    <img src="../img/member/logo_neweb.svg" alt="">
+                    <small>Powered by Neweb Technologies Co., Ltd.</small>
+                </div>
+            </form>
+        </div>
+        <!--信用卡資訊3-->
+        <div class="mypaycardinfo">
+            <div class="headerbox container title-box">
+                <div class="item icon-btn">                        
+                    <button class="btn px-0" onclick="backLayer();" data-toggle="tooltip" data-placement="bottom" title="回上一頁">
+                        <i class="material-icons">&#xe314;</i>
+                    </button>
+                </div>
+                <div class="item title-name">信用卡資訊</div>
+                <div class="item del-btn">
+                    <button type="button" class="btn msg-open" value="msg-myaddressdelete" data-toggle="modal" data-target="#messageModal" data-dismiss="modal" aria-label="Close">刪除</button>
+                </div>
+            </div>
+            <form action="">
+                <div class="my-creditcard-list">
+                    <ul class="main-list">
+                        <li>
+                            <!-- <div class="d-flex d-inline">
+                                <div class="item item-img">
+                                    <img src="../img/member/member-creditcard.svg" alt="">
+                                </div>
+                                <div class="item">鑽金卡/元大</div>
+                                <div class="item">
+                                </div>
+                            </div> -->
+                            <div>
+                                <ul class="sub-list pl-3">
+                                    <li>
+                                        <div class="item item-img">
+                                            <img src="../img/member/creditcard-01.svg" alt="">
+                                        </div>
+                                        <div class="item card-type">mastercard</div>
+                                        <div class="item">*1234</div>
+                                        <!-- <div class="item item-default auto-left"></div> -->
+                                        <div class="item item-dates">
+                                            <div class="item item-date">有效日期</div>
+                                            <div class="item item-date-txt">02／2025</div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                    
+                    <div class="flex-inline-between setting-default">
+                        <div class="p-3">設定為預設地址</div>
+                        <div class="icheck-material-blue center-v">
+                            <input id="i5" type="checkbox" checked>
+                            <label for="i5"></label>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="addheight"></div>
+
+</div> 
+<div id="loginhtml"></div>
+  
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="../js/vendor/bs4/js/jquery-3.2.1.min.js"></script>
+    <!-- Latest compiled and minified JavaScript -->    
+    <script src="../js/vendor/bs4/js/popper.min.js"></script>
+    <script src="../js/vendor/bs4/js/bootstrap.min.js"></script>
+    <script src="../js/vendor/jquery-editable-select-master/dist/jquery-editable-select.js"></script>
+
+    <!-- vendor js -->
+    <script src="../js/vendor/swiper/js/swiper.min.js"></script>
+    <script src="../js/vendor/imgLiquid.js"></script>
+    <script src="../js/vendor/popoPicker-master/js/popoPicker.js"></script>
+
+    <!-- custom js -->    
+    <script src="../js/animateCss.js"></script>
+
+    <script>    
+        
+        
+        $("#loginhtml").load("../login.html");
+    </script>
+    <script src="../js/index.js"></script>
+</body>
+
+</html>

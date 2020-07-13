@@ -1,6 +1,7 @@
 
 
-$(document).ready(function(){
+$(document).ready(function(){    
+    
     /*****************  index  ********************/
     //index ad
     $(".imgLiquidFill").imgLiquid();
@@ -404,6 +405,7 @@ function getCookie(cname) {
 };
 
 /*****************  animateCss  ********************/
+// 同頁DIV動畫
 // multilayer animateCss
 var tLayer = [];
 var i=1;
@@ -482,3 +484,11 @@ function backLayerOne() {
     oneLayer.length=0;
 };
 
+// 換頁動畫
+function animRouter(e) {
+    $('body').animate({'margin-left' : '100%', 'width' : 'toggle'},function(){ 
+        window.location = e;
+    });
+};
+$('body').addClass("slideInRight animated");
+$('.animated').css('animation-fill-mode','inherit');

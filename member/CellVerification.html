@@ -1,0 +1,280 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=1, user-scalable=no">
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../js/vendor/bs4/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../js/vendor/jquery-editable-select-master/dist/jquery-editable-select.min.css">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+    <!-- vendor css -->
+    <link rel="stylesheet" href="../js/vendor/swiper/css/swiper.min.css">
+    <!-- fontawesome css -->
+    <link rel="stylesheet" href="../js/vendor/fontawesome/css/fontawesome.css">
+    <link rel="stylesheet" href="../js/vendor/fontawesome/css/brands.css">
+    <link rel="stylesheet" href="../js/vendor/fontawesome/css/solid.css">
+    <!-- custom css -->
+    <link rel="stylesheet" href="../dist/style/css.min.css">
+    <link rel="stylesheet" href="../dist/style/global.min.css">
+    <link rel="stylesheet" href="../dist/style/index.min.css">
+    <link rel="stylesheet" href="../dist/style/member.min.css">
+    <link rel="stylesheet" href="../dist/style/animate.min.css">
+    <link rel="stylesheet" href="../js/vendor/popoPicker-master/css/popoPicker.css">
+
+    <title>Mobii! - 我的首頁</title>
+</head>
+
+<body>    
+<div class="wrap container">
+
+    <!--手機驗證2-->
+    <div class="myphone0">
+        <div class="headerbox container title-box">
+            <div class="item icon-btn">                        
+                <button class="btn px-0" onclick="history.back()" data-toggle="tooltip" data-placement="bottom" title="回上一頁">
+                    <i class="material-icons">&#xe314;</i>
+                </button>
+            </div>
+            <div class="item title-name">手機驗證</div>
+            <div class="item ctrl-btn"></div>
+        </div> 
+        <div class="my-phone-list">
+            <p class="text-left mt-2">您的手機號碼已完成驗證，如需變更手機號碼，請重新驗證。</p>
+            <p class="text-left mb-3">手機號碼：0912345678</p>
+            <button class="btn next-btn w-100" onclick="callLayer('.myphone')">重新驗證</button>
+        </div> 
+    </div>   
+
+
+    <!--次頁-->
+    <div class="multilayer">
+        <!--手機驗證3-->
+        <div class="myphone">
+            <div class="headerbox container title-box">
+                <div class="item icon-btn">                        
+                    <button class="btn px-0" onclick="backLayer();" data-toggle="tooltip" data-placement="bottom" title="回上一頁">
+                        <i class="material-icons">&#xe314;</i>
+                    </button>
+                </div>
+                <div class="item title-name">手機驗證</div>
+                <div class="item ctrl-btn"></div>
+            </div>
+            <div class="my-phone-list container">
+                <table class="form-group mt-3 w-100">
+                    <tbody>
+                        <tr>
+                            <td width="25%" class="linebt-td">
+                                <button type="button" value="886" id="t2" class="telcode btn">台灣(+886)
+                                    <!-- <input type="hidden" value="886" id="t2" class="telcode"> -->
+                                </button>
+                            </td>
+                            <td width="5%"></td>
+                            <td width="70%" class="linebt-td"><input type="tel" class="form-control" id="myPhone" placeholder="手機"></td>
+                        </tr>
+                    </tbody>
+                </table>                
+                <button class="btn next-btn w-100" onclick="callLayer('.myphone1')">傳送簡訊驗證碼</button>
+            </div>
+            <!-- 國碼 -->
+            <div class="telcodelist d-none">
+                <div id="open-pagebox">
+                    <div class="open-page-title flex-inline-between">
+                        <div class="title-icon">
+                            <button class="btn closelayer">
+                                <i class="material-icons">&#xe314;</i>
+                            </button>
+                        </div>
+                        <div class="title-txt">
+                            選擇國家或地區
+                        </div>
+                        <div class="title-txt">
+                        </div>
+                    </div>
+                    <ul class="open-page-ul" id="telcodels">
+                    </ul>                       
+                </div>
+            </div>    
+        </div> 
+        <!--手機驗證3-->
+        <div class="myphone1">
+            <div class="headerbox container title-box">
+                <div class="item icon-btn">                        
+                    <button class="btn px-0" onclick="backLayer();" data-toggle="tooltip" data-placement="bottom" title="回上一頁">
+                        <i class="material-icons">&#xe314;</i>
+                    </button>
+                </div>
+                <div class="item title-name">手機驗證</div>
+                <div class="item ctrl-btn"></div>
+            </div> 
+            <div class="my-phone-list d-flex flex-column justify-content-center" id="myphone6">
+                <small>驗證碼已發送至 +886 972 XXX XXX</small>
+                <form class="d-flex d-inline">
+                    <input type="number" maxlength="1">
+                    <input type="number" maxlength="1">
+                    <input type="number" maxlength="1">
+                    <input type="number" maxlength="1">
+                    <input type="number" maxlength="1">
+                    <input type="number" maxlength="1"> 
+                </form>                   
+                <button class="btn next-btn w-100 mt-3 msg-open" value="msg-phone" data-toggle="modal" data-target="#messageModal">送出</button>
+                <small class="text-left">沒有收到驗證碼？<button type="button" class="btn p-1 small-80 text-blue" onclick="backLayer();">59秒後重新傳送</button></small>
+            </div> 
+        </div>  
+    </div>
+    <div class="addheight"></div>
+</div> 
+<div id="loginhtml"></div>
+  
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="../js/vendor/bs4/js/jquery-3.2.1.min.js"></script>
+    <!-- Latest compiled and minified JavaScript -->    
+    <script src="../js/vendor/bs4/js/popper.min.js"></script>
+    <script src="../js/vendor/bs4/js/bootstrap.min.js"></script>
+    <script src="../js/vendor/jquery-editable-select-master/dist/jquery-editable-select.js"></script>
+
+    <!-- vendor js -->
+    <script src="../js/vendor/swiper/js/swiper.min.js"></script>
+    <script src="../js/vendor/imgLiquid.js"></script>
+    <script src="../js/vendor/popoPicker-master/js/popoPicker.js"></script>
+
+    <!-- custom js -->    
+    <script src="../js/animateCss.js"></script>
+
+    <script>    
+        //cityzip
+        $(document).ready(function() { 
+            var JData = [{id:"t1", telname:"中國大陸", telcode:"86"},
+                        {id:"t2", telname:"台灣", telcode:"886"},
+                        {id:"t3", telname:"香港", telcode:"852"},
+                        {id:"t4", telname:"印度", telcode:"91"},
+                        {id:"t5", telname:"馬爾地夫", telcode:"960"},
+                        {id:"t6", telname:"印尼", telcode:"62"},
+                        {id:"t7", telname:"伊朗", telcode:"98"},
+                        {id:"t8", telname:"伊拉克", telcode:"964"},
+                        {id:"t9", telname:"以色列", telcode:"972"},
+                        {id:"t10", telname:"日本", telcode:"81"},
+                        {id:"t11", telname:"所羅門群島", telcode:"677"},
+                        {id:"t12", telname:"斯里蘭卡", telcode:"94"},
+                        {id:"t13", telname:"泰國", telcode:"66"},
+                        {id:"t14", telname:"南韓", telcode:"82"},
+                        {id:"t15", telname:"科威特", telcode:"965"},
+                        {id:"t16", telname:"巴基斯坦", telcode:"92"},
+                        {id:"t17", telname:"澳門", telcode:"853"},
+                        {id:"t18", telname:"馬來西亞", telcode:"60"},
+                        {id:"t19", telname:"菲律賓", telcode:"63"},
+                        {id:"t20", telname:"沙烏地阿拉伯", telcode:"966"},
+                        {id:"t21", telname:"新加坡", telcode:"65"},
+                        {id:"t22", telname:"巴布亞 新幾內亞", telcode:"675"},
+                        {id:"t23", telname:"尼泊爾", telcode:"977"},
+                        {id:"t24", telname:"葉門", telcode:"66"},
+                        {id:"t25", telname:"土耳其", telcode:"90"},
+                        {id:"t26", telname:"越南", telcode:"84"},
+                        {id:"t27", telname:"葡萄牙", telcode:"351"},
+                        {id:"t28", telname:"西班牙", telcode:"34"},
+                        {id:"t29", telname:"瑞典", telcode:"46"},
+                        {id:"t30", telname:"瑞士", telcode:"41"},
+                        {id:"t31", telname:"英國", telcode:"44"},
+                        {id:"t32", telname:"德國", telcode:"49"},
+                        {id:"t33", telname:"俄羅斯", telcode:"7"},
+                        {id:"t34", telname:"匈牙利", telcode:"36"},
+                        {id:"t35", telname:"冰島", telcode:"354"},
+                        {id:"t36", telname:"愛爾蘭", telcode:"353"},
+                        {id:"t37", telname:"馬爾他", telcode:"356"},
+                        {id:"t38", telname:"希臘", telcode:"30"},
+                        {id:"t39", telname:"義大利", telcode:"39"},
+                        {id:"t40", telname:"盧森堡", telcode:"352"},
+                        {id:"t41", telname:"摩洛哥", telcode:"377"},
+                        {id:"t42", telname:"荷蘭", telcode:"31"},
+                        {id:"t43", telname:"挪威", telcode:"47"},
+                        {id:"t44", telname:"波蘭", telcode:"48"},
+                        {id:"t45", telname:"羅馬尼亞", telcode:"40"},
+                        {id:"t46", telname:"奧地利", telcode:"43"},
+                        {id:"t47", telname:"比利時", telcode:"32"},
+                        {id:"t48", telname:"丹麥", telcode:"45"},
+                        {id:"t49", telname:"芬蘭", telcode:"358"},
+                        {id:"t50", telname:"法國", telcode:"358"},
+                        {id:"t51", telname:"阿根廷", telcode:"54"},
+                        {id:"t52", telname:"美國", telcode:"1"},
+                        {id:"t53", telname:"加拿大", telcode:"1"},
+                        {id:"t54", telname:"智利", telcode:"56"},
+                        {id:"t55", telname:"哥倫比亞", telcode:"57"},
+                        {id:"t56", telname:"多明尼亞", telcode:"1809"},
+                        {id:"t57", telname:"巴拿馬", telcode:"507"},
+                        {id:"t58", telname:"宏都拉斯", telcode:"504"},
+                        {id:"t59", telname:"尼加拉瓜", telcode:"505"},
+                        {id:"t60", telname:"厄瓜多爾", telcode:"593"},
+                        {id:"t61", telname:"墨西哥", telcode:"52"},
+                        {id:"t62", telname:"烏拉圭", telcode:"598"},
+                        {id:"t63", telname:"祕魯", telcode:"51"},
+                        {id:"t64", telname:"瓜地馬拉", telcode:"502"},
+                        {id:"t65", telname:"哥斯大黎加", telcode:"506"},
+                        {id:"t66", telname:"薩爾瓦多", telcode:"503"},
+                        {id:"t67", telname:"巴西", telcode:"55"},
+                        {id:"t68", telname:"澳洲", telcode:"61"},
+                        {id:"t69", telname:"帛琉", telcode:"680"},
+                        {id:"t70", telname:"斐濟", telcode:"679"},
+                        {id:"t71", telname:"關島", telcode:"1671"},
+                        {id:"t72", telname:"紐西蘭", telcode:"64"},
+                        {id:"t73", telname:"摩洛哥", telcode:"212"},
+                        {id:"t74", telname:"奈及利亞", telcode:"234"},
+                        {id:"t75", telname:"南非", telcode:"27"},
+                        {id:"t76", telname:"肯亞", telcode:"254"},
+                        {id:"t77", telname:"坦薩尼亞", telcode:"255"},
+                        {id:"t78", telname:"阿爾及利亞", telcode:"213"},
+                        {id:"t79", telname:"埃及", telcode:"20"},];
+            var NumOfJData = JData.length;
+            $('.telcode').on('click',function(){
+                $('.telcodelist').removeClass('d-none').animateCss('slideInRight', '+d-block container').before("<div class='modal-backdrop' style='z-index:1030'></div>");
+                $('#open-pagebox').addClass('container');
+                if($('#telcodels').children().length === 0){
+                    for (var i = 0; i < NumOfJData; i++) {
+                        $('#telcodels').append($("<li class='"+JData[i]['id']+" flex-inline-between "+(($('.telcode').attr('id')==JData[i]['id']) ? 'active': '')+"' value='"+(JData[i]['telcode'])+"'>").append($("<div class='item'>").append(JData[i]['telname'])).append("<div class='item'>"+(JData[i]['telcode'])+"</div>"));
+                    };
+                }else{       
+                    $('#telcodels li').each(function(){ 
+                        ($(this).attr('class').split(/\s+/)[0]==$('.telcode').attr('id')) ? $(this).addClass('active') : $(this).removeClass('active');
+                    });      
+                }                
+                $('#telcodels li').on('click',function(){
+                    $('.telcode').empty().attr({'value':($(this).val()),'id':($(this).attr('class').split(/\s+/)[0])}).append($(this).children('div:first').text()+'(+'+$(this).val()+')');
+                    $('.telcodelist').animateCss('slideOutRight', '-d-block container').addClass('d-none').siblings('div.modal-backdrop').remove();
+                });
+                $('.closelayer').on('click',function(){
+                    $('.telcodelist').animateCss('slideOutRight', '-d-block container').addClass('d-none').siblings('div.modal-backdrop').remove();
+                });
+                $(".telcodelist").css('z-index','1030');                
+            });
+        });
+
+        //phone 6 input
+        var demo=document.getElementById('myphone6');
+        input=demo.getElementsByTagName('input');
+        var iNow=0;
+        type   = !-[1,] ? 'onpropertychange' : 'oninput',
+                limit  = 1; //滿足自動切換焦點的字元數
+        for(var i=0;i<input.length-1;i++){
+            input[i].index=i;
+            input[i][type]=function () {
+                iNow=this.index;
+                var that=this;
+                setTimeout(function () {
+                   that.value.length>limit-1&&input[iNow+1].focus();
+                },0)
+            }
+        }
+        
+        $("#loginhtml").load("../login.html");
+    </script>
+    <script src="../js/index.js"></script>
+</body>
+
+</html>

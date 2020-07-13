@@ -1,0 +1,1977 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=1, user-scalable=no">
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../js/vendor/bs4/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../js/vendor/jquery-editable-select-master/dist/jquery-editable-select.min.css">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+    <!-- vendor css -->
+    <link rel="stylesheet" href="../js/vendor/swiper/css/swiper.min.css">
+    <!-- fontawesome css -->
+    <link rel="stylesheet" href="../js/vendor/fontawesome/css/fontawesome.css">
+    <link rel="stylesheet" href="../js/vendor/fontawesome/css/brands.css">
+    <link rel="stylesheet" href="../js/vendor/fontawesome/css/solid.css">
+    <!-- custom css -->
+    <link rel="stylesheet" href="../dist/style/css.min.css">
+    <link rel="stylesheet" href="../dist/style/global.min.css">
+    <link rel="stylesheet" href="../dist/style/index.min.css">
+    <link rel="stylesheet" href="../dist/style/member.min.css">
+    <link rel="stylesheet" href="../dist/style/animate.min.css">
+    <link rel="stylesheet" href="../js/vendor/popoPicker-master/css/popoPicker.css">
+
+    <title>Mobii! - 我的首頁</title>
+</head>
+
+<body>    
+<div class="wrap container">
+    <!--我的主頁-->
+    <div class="mymember">
+        <div class="member-top-box">
+            <div class="title-box">
+                <div class="item icon-btn">
+                    <div class="img-box">
+                        <button class="btn px-0" onclick="callLayer('.mysetting')"><img src="../img/member/member-icon-setting.svg" alt="設定"></button >
+                    </div>
+                </div>
+                <div class="item title-name"></div>
+                <div class="item icon-btn">
+                    <div class="img-box">
+                        <img src="../img/member/member-icon-noti.svg" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="member-info-box">
+                <div class="info-box info-img">
+                    <div class="info-item">
+                        <img src="https://picsum.photos/300/300/?random=1">
+                    </div>
+                </div>
+                <!-- 登入前  div-switch d-block-->
+                <div class="div-switch d-block">
+                    <button type="button" class="btn white-outline-btn btw-small" onclick="div_switch()">登入/註冊<img src="../img/share/forward_w.png" class="h20"></button>
+                </div>
+                <!-- 登入後  div-switch d-none-->
+                <div class="flex-inline-between">
+                    <div class="info-box div-switch d-none">
+                        <div class="info-item info-name">
+                            李曉龍至尊
+                        </div>
+                        <div class="info-item info-country">
+                            台灣
+                        </div>
+                    </div>
+                    <div class="info-box div-switch d-none">
+                        <div class="info-item text-nowrap">
+                            <img src="../img/share/mobiicoin.png" alt="" class="coinimg-m m-0">
+                            Mobii! Point
+                        </div>
+                        <div class="info-item info-coin">
+                            100
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="member-item-group">
+                <div class="member-item-bg">
+                    <div class="px-3">
+                        <!-- 登入前  div-switch d-block-->
+                        <div class="div-switch d-block">
+                            <div class="mycard-box">
+                                <img class="mycard-img" src="../img/member/mycard-white.png">
+                                <div class="mycard-info">
+                                    <p class="info-c">超級會員募集中<br>
+                                    綁定一卡通・會員優惠享不完！</p>
+                                    <p class="info-b mt-auto ml-auto"><a href>立即綁卡 ＞</a></p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 登入後  div-switch d-none-->
+                        <div class="div-switch d-none">
+                            <div class="mycard-box">
+                                <img class="mycard-img" src="../img/member/mycard-blue.png">
+                                <div class="mycard-info">
+                                    <img class="mycard-simg ml-auto" src="../img/member/ipass1.png">
+                                    <p class="info-bc align-self-center">超級會員</p>
+                                    <p class="info-bb mt-auto ml-auto"> 890 1</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="member-item-list">
+                            <div class="member-items">
+                                <a href="member_card.html" class="member-item">
+                                    <div class="img-box">
+                                        <img src="../img/member/member-icon-card.svg" alt="">
+                                    </div>
+                                    <p>我的卡片</p>
+                                </a>
+                                <a href="member_ticket.html" class="member-item">
+                                    <div class="img-box">
+                                        <img src="../img/member/member-icon-ticket.svg" alt="">
+                                    </div>
+                                    <p>我的票券</p>
+                                </a>
+                                <a href="member_coin.html" class="member-item">
+                                    <div class="img-box">
+                                        <img src="../img/member/member-icon-coin.svg" alt="">
+                                    </div>
+                                    <p>Mobii! Point</p>
+                                </a>
+                            </div>
+                            <div class="member-items">
+                                <a href="member_discount.html" class="member-item">
+                                    <div class="img-box">
+                                        <img src="../img/member/member-icon-discount.svg" alt="">
+                                    </div>
+                                    <p>我的優惠券</p>
+                                </a>
+                                <a href="member_favorite.html" class="member-item">
+                                    <div class="img-box">
+                                        <img src="../img/member/member-icon-favorite.svg" alt="">
+                                    </div>
+                                    <p>我的收藏</p>
+                                </a>
+                                <a href="member_myorder.html" class="member-item">
+                                    <div class="img-box">
+                                        <img src="../img/member/member-icon-order.svg" alt="">
+                                    </div>
+                                    <p>我的訂單</p>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- ad banner -->
+                        <div class="ad-box">
+                            <div class="pt-3">
+                                <!-- Swiper -->
+                                <div class="swiper-container">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            <div class="rwdimg-cover h20 border-radius5" style="background-image: url('../img/member/mbanner2.png');"></div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="rwdimg-cover h20 border-radius5" style="background-image: url('../img/member/mbanner1.png');"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="addheight pb-5"></div>
+                    </div>
+                </div>
+            </div>      
+        </div>     
+    </div>  
+     
+
+    <!--次頁-->
+    <div class="multilayer">
+        <!--我的設定選單1-->
+        <div class="mysetting">
+            <div class="headerbox container title-box">
+                <div class="item icon-btn">
+                    <button class="btn px-0" onclick="backLayer();" data-toggle="tooltip" data-placement="bottom" title="回上一頁">
+                        <i class="material-icons">&#xe314;</i>
+                    </button>
+                </div>
+                <div class="item title-name">帳號設定</div>
+                <div class="item icon-btn"></div>
+            </div>
+            <div class="my-list-box">
+                <p class="text-index">我的帳號</p>
+                <ul>
+                    <li onclick="callLayer('.myfile');">
+                        <button class="btn px-0 w-100 text-left">我的檔案 <span class="auto-left"><i class="material-icons">&#xe315;</i></span></button>
+                    </li>
+                    <li onclick="callLayer('.myphone0');">
+                        <button class="btn px-0 w-100 text-left">手機驗證 <span class="auto-left"><i class="material-icons">&#xe315;</i></span></button>
+                    </li>
+                    <li onclick="callLayer('.myaddress');">
+                        <button class="btn px-0 w-100 text-left">我的地址 <span class="auto-left"><i class="material-icons">&#xe315;</i></span></button>
+                    </li>
+                    <li onclick="callLayer('.mypay');">
+                        <button class="btn px-0 w-100 text-left">付款設定 <span class="auto-left"><i class="material-icons">&#xe315;</i></span></button>
+                    </li>
+                    <li onclick="callLayer('.mypsw');">
+                        <button class="btn px-0 w-100 text-left">變更密碼 <span class="auto-left"><i class="material-icons">&#xe315;</i></span></button>
+                    </li>
+                    <li onclick="callLayer('.mysocial');">
+                        <button class="btn px-0 w-100 text-left">社群帳號綁定 <span class="auto-left"><i class="material-icons">&#xe315;</i></span></button>
+                    </li>
+                </ul>
+                <p class="text-index">我的語言</p>
+                <ul class="my-language">
+                    <li>
+                        <div class="item">語言</div>
+                        <div class="item">繁體中文</div>
+                    </li>
+                    <li>
+                        <div class="item">幣別</div>
+                        <div class="item">TWD</div>
+                    </li>
+                </ul>
+                <p class="text-index">我的小幫手</p>
+                <ul>
+                    <li onclick="location.href='member_faq.html'">
+                        <div class="item">常見問題</div>
+                        <div class="item auto-left"><i class="material-icons">&#xe315;</i></div>
+                    </li>
+                    <li onclick="callLayer('.myclause');">
+                        <div class="item">使用者規範</div>
+                        <div class="item auto-left"><i class="material-icons">&#xe315;</i></div>
+                    </li>
+                    <li onclick="callLayer('.myprivate');">
+                        <div class="item">隱私權政策</div>
+                        <div class="item auto-left"><i class="material-icons">&#xe315;</i></div>
+                    </li>
+                    <li onclick="callLayer('.myabout');">
+                        <div class="item">關於</div>
+                        <div class="item auto-left"><i class="material-icons">&#xe315;</i></div>
+                    </li>
+                    <li onclick="">
+                        <div class="item">登出</div>
+                        <div class="item auto-left"><i class="material-icons">&#xe315;</i></div>
+                    </li>
+                </ul>
+                <div class="addheight"></div>
+            </div>
+        </div>
+
+        <!--我的檔案2-->
+        <div class="myfile">
+            <div class="headerbox container title-box">
+                <div class="item icon-btn">
+                    <button class="btn px-0 back-btn div-switch d-block" onclick="backLayer();" data-toggle="tooltip" data-placement="bottom" title="回上一頁">
+                        <i class="material-icons">&#xe314;</i>
+                    </button>
+                    <button class="btn div-switch d-none" onclick="div_switch()">取消</button>
+                </div>
+                <div class="item title-name">我的檔案</div>
+                <div class="item ctrl-btn">
+                    <button class="btn div-switch d-none" onclick="div_switch()">確定</button>
+                    <button class="btn div-switch d-block" onclick="div_switch()">編輯</button>
+                </div>
+            </div>
+            <div>
+                <div class="my-info-box p-3">
+                    <div class="info-box info-img mr-0">
+                        <div class="info-item">
+                            <img src="https://picsum.photos/300/300/?random=1">
+                        </div>
+                    </div>
+                    <div class="info-box info-email">
+                        mo***@eyesmedia.com
+                    </div>
+                </div>
+                <div class="my-list-box">
+                    <ul>
+                        <li>
+                            <div class="item">名稱</div>
+                            <div class="item auto-left">李曉龍</div>
+                        </li>
+                        <li>
+                            <div class="item">生日</div>
+                            <div class="item input-box div-switch d-none">
+                                <input class="inp js-date text-right text-bluedk border-0" placeholder="YYYY/MM/DD" value="1990/05/10">
+                            </div>
+                            <div class="item auto-left div-switch d-block">1990/05/10</div>
+                        </li>
+                        <li>
+                            <div class="item">手機號碼</div>
+                            <div class="item input-box">
+                                <input type="text" value="" class="div-switch d-none" placeholder="請輸入">
+                            </div>
+                            <div class="item div-switch d-block text-danger">尚未驗證</div>
+                            <!-- <div class="item auto-left div-switch d-block">09******78</div> -->
+                        </li>
+                        <li>
+                            <div class="item">E-mail</div>
+                            <div class="item input-box">
+                                <input type="text" value="" class="div-switch d-none" placeholder="請輸入">
+                            </div>
+                            <div class="item div-switch d-block">
+                                <input class="txt-line-clamp1 border-0 float-right" value="mo********************@eyesmedia.com">
+                            </div>
+                        </li>
+                        <li>
+                            <div class="item">
+                                <button class="btn px-0 w-100" onclick="callLayer('.mypassport');">
+                                    上傳護照 <span class="auto-left"><i class="material-icons">&#xe315;</i></span>
+                                </button>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="item">
+                                <button class="btn px-0 w-100" onclick="callLayer('.mymtps');">
+                                    上傳台胞證 <span class="auto-left"><i class="material-icons">&#xe315;</i></span>
+                                </button>                                
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!--上傳護照3-->
+        <div class="mypassport">
+            <div class="headerbox container title-box">
+                <div class="item icon-btn">                        
+                    <button class="btn px-0" onclick="backLayer();" data-toggle="tooltip" data-placement="bottom" title="回上一頁">
+                        <i class="material-icons">&#xe314;</i>
+                    </button>
+                </div>
+                <div class="item title-name">上傳護照</div>
+                <div class="item ctrl-btn">
+                    <button class="btn px-0" onclick="callLayer('.mypassportnote');" data-toggle="tooltip" data-placement="bottom" title="儲存">
+                        儲存
+                    </button>
+                </div>
+            </div>
+            <div class="my-info-box">
+                <label for="file-upload" class="custom-file-upload">                        
+                    <div class="upload-box">
+                        <img src="../img/member/passport.svg">
+                        <div class="add-btn">
+                            <img src="../img/member/uploadphoto.svg" alt="">
+                        </div>
+                    </div>
+                </label>
+                <input id="file-upload" type="file"/>
+                <div class="passport-status">
+                    未上傳
+                </div>
+            </div>
+            <div class="my-list-box edit-list">
+                <ul>
+                    <li>
+                        <div class="item">有效期限</div>
+                        <div class="item input-box1">
+                            <input class="inp js-date1 text-right text-bluedk border-0" placeholder="YYYY/MM/DD" value="1990/07/10">
+                        </div>
+                        <div class="item auto-left"></div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!--上傳台胞證3-->
+        <div class="mymtps">
+            <div class="headerbox container title-box">
+                <div class="item icon-btn">                                             
+                    <button class="btn px-0" onclick="backLayer();" data-toggle="tooltip" data-placement="bottom" title="回上一頁">
+                        <i class="material-icons">&#xe314;</i>
+                    </button>
+                </div>
+                <div class="item title-name">上傳台胞證</div>
+                <div class="item ctrl-btn">                        
+                    <button class="btn px-0" onclick="callLayer('.mymtpsnote');" data-toggle="tooltip" data-placement="bottom" title="儲存">
+                        儲存
+                    </button>
+                </div>
+            </div>
+            <div class="my-info-box">
+                <label for="file-upload" class="custom-file-upload">                        
+                    <div class="upload-box">
+                        <img src="../img/member/mtps.svg">
+                        <div class="add-btn">
+                            <img src="../img/member/uploadphoto.svg" alt="">
+                        </div>
+                    </div>
+                </label>
+                <input id="file-upload" type="file"/>
+                <div class="passport-status">
+                    未上傳
+                </div>
+            </div>
+            <div class="my-list-box edit-list">
+                <ul>
+                    <li>
+                        <div class="item">有效期限</div>
+                        <div class="item input-box2">
+                            <input class="inp js-date2 text-right text-bluedk border-0" placeholder="YYYY/MM/DD" value="1990/07/10">
+                        </div>
+                        <div class="item auto-left"></div>
+                    </li>
+                </ul>
+            </div>
+        </div>      
+        <!--提示護照4-->
+        <div class="mypassportnote">
+            <div class="headerbox container title-box">
+                <div class="item ctrl-btn">
+                    <button class="btn px-0" onclick="backLayer();" data-toggle="tooltip" data-placement="bottom" title="關閉">
+                        關閉
+                    </button>
+                </div>
+                <div class="item title-name"></div>
+                <div class="item ctrl-btn"></div>
+            </div>
+            <div class="upload-passport-noti">
+                <div class="noti-text">
+                    <strong>提示：</strong>
+                    <p>對準護照的資料頁面拍攝，請注意內容是否清晰</p>
+                    <small>備註：護照資料僅供核對使用</small>
+                </div>
+                <div class="img-box">
+                    <img src="../img/member/passport-noti.svg" alt="">
+                </div>
+                <div class="btn next-btn open-overlay-choice">
+                    下一步
+                </div>
+            </div>
+            <!--拍照或錄像-->
+            <div class="overlay-choice" style="display: none;">
+                <div class="choice-list">
+                    <ul>
+                        <li class="flex-inline-between">
+                            <div class="item">
+                                <button class="btn px-0 close-overlay-choice" onclick="callLayer('.mypassportphoto');" data-toggle="tooltip" data-placement="bottom" title="Take Photo or Video">
+                                    拍照或攝影
+                                </button>
+                            </div>
+                            <div class="item">
+                                <button class="btn px-0 close-overlay-choice" onclick="callLayer('.mypassportphoto');" data-toggle="tooltip" data-placement="bottom" title="Take Photo or Video">
+                                    <img src="../img/member/icon_camera.png">
+                                </button>
+                            </div>
+                        </li>
+                        <li class="flex-inline-between">
+                            <div class="item">
+                                <button class="btn px-0">
+                                    相簿
+                                </button>
+                            </div>
+                            <div class="item">
+                                <button class="btn px-0">
+                                    <img src="../img/member/icon_photo.png">
+                                </button>
+                            </div>
+                        </li>
+                        <li class="flex-inline-between">
+                            <div class="item">
+                                <button class="btn px-0">
+                                    瀏覽
+                                </button>
+                            </div>
+                            <div class="item">
+                                <button class="btn px-0">
+                                    <img src="../img/member/icon_dot.png">
+                                </button>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="choice-status close-overlay-choice">
+                    取消
+                </div>
+            </div>
+            <div class="modal-backdrop fade show d-none"></div>
+        </div>
+        <!--提示台胞證4-->
+        <div class="mymtpsnote">
+            <div class="headerbox container title-box">
+                <div class="item ctrl-btn">                        
+                    <button class="btn px-0" onclick="backLayer();" data-toggle="tooltip" data-placement="bottom" title="關閉">
+                        關閉
+                    </button>
+                </div>
+                <div class="item title-name"></div>
+                <div class="item ctrl-btn"></div>
+            </div>
+            <div class="upload-passport-noti">
+                <div class="noti-text">
+                    <strong>提示：</strong>
+                    <p>對準台胞證的資料頁面拍攝，請注意內容是否清晰</p>
+                    <small>備註：台胞證資料僅供核對使用</small>
+                </div>
+                <div class="img-box">
+                    <img src="../img/member/passport-noti.svg" alt="">
+                </div>
+                <div class="btn next-btn open-overlay-choice">
+                    下一步
+                </div>
+            </div>
+            <!--拍照或錄像-->
+            <div class="overlay-choice" style="display: none;">
+                <div class="choice-list">
+                    <ul>
+                        <li class="flex-inline-between">
+                            <div class="item">
+                                <button class="btn px-0 close-overlay-choice" onclick="callLayer('.mymtpsphoto');" data-toggle="tooltip" data-placement="bottom" title="Take Photo or Video">
+                                    拍照或攝影
+                                </button>
+                            </div>
+                            <div class="item">
+                                <button class="btn px-0 close-overlay-choice" onclick="callLayer('.mymtpsphoto');" data-toggle="tooltip" data-placement="bottom" title="Take Photo or Video">
+                                    <img src="../img/member/icon_camera.png">
+                                </button>
+                            </div>
+                        </li>
+                        <li class="flex-inline-between">
+                            <div class="item">
+                                <button class="btn px-0">
+                                    相簿
+                                </button>
+                            </div>
+                            <div class="item">
+                                <button class="btn px-0">
+                                    <img src="../img/member/icon_photo.png">
+                                </button>
+                            </div>
+                        </li>
+                        <li class="flex-inline-between">
+                            <div class="item">
+                                <button class="btn px-0">
+                                    瀏覽
+                                </button>
+                            </div>
+                            <div class="item">
+                                <button class="btn px-0">
+                                    <img src="../img/member/icon_dot.png">
+                                </button>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="choice-status close-overlay-choice">
+                    取消
+                </div>
+            </div>
+            <div class="modal-backdrop fade show d-none"></div>
+        </div>    
+        <!--護照上傳確認5-->
+        <div class="mypassportphoto">
+            <div class="passport-pic">
+                <div class="passport-box"></div>
+            </div>
+            <div class="passport-pic-status">
+                <strong>這張護照資料是否清楚？</strong>
+                <p>此照片應包含所有的資料，並且確定沒有任何模糊或被切除的部分</p>
+                <div class="btn-group">                     
+                    <button class="btn next-btn w-50 " onclick="backLayer();">
+                        重新拍照
+                    </button>                  
+                    <button class="btn next-btn w-50 " onclick="callLayer('.mypassportok');">
+                        確定上傳
+                    </button>
+                </div>
+            </div>
+        </div>        
+        <!--台胞照上傳確認5-->
+        <div class="mymtpsphoto">
+            <div class="passport-pic">
+                <div class="passport-box"></div>
+            </div>
+            <div class="passport-pic-status">
+                <strong>這張台胞證資料是否清楚？</strong>
+                <p>此照片應包含所有的資料，並且確定沒有任何模糊或被切除的部分</p>
+                <div class="btn-group">                    
+                    <button class="btn next-btn w-50 " onclick="backLayer();" data-toggle="tooltip" data-placement="bottom" title="重新拍照">
+                        重新拍照
+                    </button>                  
+                    <button class="btn next-btn w-50 " onclick="callLayer('.mymtpsok');" data-toggle="tooltip" data-placement="bottom" title="確定上傳">
+                        確定上傳
+                    </button>
+                </div>
+            </div>
+        </div>         
+        <!--上傳護照成功6-->
+        <div class="mypassportok">
+            <div class="headerbox container title-box">
+                <div class="item icon-btn">                        
+                    <button class="btn px-0" onclick="backLayer();" data-toggle="tooltip" data-placement="bottom" title="回上一頁">
+                        <i class="material-icons">&#xe314;</i>
+                    </button>
+                </div>
+                <div class="item title-name">上傳護照</div>
+                <div class="item ctrl-btn">
+                    <button class="btn px-0" onclick="callLayer('.mysetting');" data-toggle="tooltip" data-placement="bottom" title="變更">
+                        變更
+                    </button>
+                </div>
+            </div>
+            <div class="my-info-box">                    
+                <label for="file-upload2" class="custom-file-upload">                        
+                    <div class="upload-box">
+                        <img src="../img/member/passport.svg">
+                        <div class="change-btn">
+                            變更
+                        </div>
+                    </div>
+                </label>
+                <input id="file-upload2" type="file"/>
+                <div class="passport-status">
+                    <i class="material-icons">&#xE5CA;</i>已上傳
+                </div>
+            </div>
+            <div class="my-list-box">
+                <ul>
+                    <li>
+                        <div class="item">有效期限</div>
+                        <div class="item input-box3">
+                            <input class="inp js-date3 text-right text-bluedk border-0" placeholder="YYYY/MM/DD" value="1990/07/10">
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!--上傳台胞證成功6-->
+        <div class="mymtpsok">
+            <div class="headerbox container title-box">
+                <div class="item icon-btn">                                             
+                    <button class="btn px-0" onclick="backLayer();" data-toggle="tooltip" data-placement="bottom" title="回上一頁">
+                        <i class="material-icons">&#xe314;</i>
+                    </button>
+                </div>
+                <div class="item title-name">上傳台胞證</div>
+                <div class="item ctrl-btn">                        
+                    <button class="btn px-0" onclick="callLayer('.mysetting');" data-toggle="tooltip" data-placement="bottom" title="變更">
+                        變更
+                    </button>
+                </div>
+            </div>
+            <div class="my-info-box">
+                <div class="upload-box">
+                    <img src="../img/member/mtps.svg">
+                    <div class="change-btn">
+                        變更
+                    </div>
+                </div>
+                <div class="passport-status">
+                    <i class="material-icons">&#xE5CA;</i>已上傳
+                </div>
+            </div>
+            <div class="my-list-box">
+                <ul>
+                    <li>
+                        <div class="item">有效期限</div>
+                        <div class="item input-box4">
+                            <input class="inp js-date4 text-right text-bluedk border-0" placeholder="YYYY/MM/DD" value="1990/07/10">
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>   
+        <!--手機驗證2-->
+        <div class="myphone0">
+            <div class="headerbox container title-box">
+                <div class="item icon-btn">                        
+                    <button class="btn px-0" onclick="backLayer();" data-toggle="tooltip" data-placement="bottom" title="回上一頁">
+                        <i class="material-icons">&#xe314;</i>
+                    </button>
+                </div>
+                <div class="item title-name">手機驗證</div>
+                <div class="item ctrl-btn"></div>
+            </div> 
+            <div class="my-phone-list">
+                <p class="text-left mt-2">您的手機號碼已完成驗證，如需變更手機號碼，請重新驗證。</p>
+                <p class="text-left mb-3">手機號碼：0912345678</p>
+                <button class="btn next-btn w-100" onclick="callLayer('.myphone')">重新驗證</button>
+            </div> 
+        </div>   
+        <!--手機驗證3-->
+        <div class="myphone">
+            <div class="headerbox container title-box">
+                <div class="item icon-btn">                        
+                    <button class="btn px-0" onclick="backLayer();" data-toggle="tooltip" data-placement="bottom" title="回上一頁">
+                        <i class="material-icons">&#xe314;</i>
+                    </button>
+                </div>
+                <div class="item title-name">手機驗證</div>
+                <div class="item ctrl-btn"></div>
+            </div>
+            <div class="my-phone-list">
+                <table class="form-group mt-3 w-100">
+                    <tbody>
+                        <tr>
+                            <td width="25%" class="linebt-td">
+                                <button type="button" value="886" id="t2" class="telcode btn">台灣(+886)
+                                    <!-- <input type="hidden" value="886" id="t2" class="telcode"> -->
+                                </button>
+                            </td>
+                            <td width="5%"></td>
+                            <td width="70%" class="linebt-td"><input type="tel" class="form-control" id="myPhone" placeholder="手機"></td>
+                        </tr>
+                    </tbody>
+                </table>                
+                <button class="btn next-btn w-100" onclick="callLayer('.myphone1')">傳送簡訊驗證碼</button>
+            </div>
+            <!-- 國碼 -->
+            <div class="telcodelist">
+                <div id="open-pagebox">
+                    <div class="open-page-title flex-inline-between">
+                        <div class="title-icon">
+                            <button class="btn closelayer">
+                                <i class="material-icons">&#xe314;</i>
+                            </button>
+                        </div>
+                        <div class="title-txt">
+                            選擇國家或地區
+                        </div>
+                        <div class="title-txt">
+                        </div>
+                    </div>
+                    <ul class="open-page-ul" id="telcodels">
+                    </ul>                       
+                </div>
+            </div>    
+        </div> 
+        <!--手機驗證3-->
+        <div class="myphone1">
+            <div class="headerbox container title-box">
+                <div class="item icon-btn">                        
+                    <button class="btn px-0" onclick="backLayer();" data-toggle="tooltip" data-placement="bottom" title="回上一頁">
+                        <i class="material-icons">&#xe314;</i>
+                    </button>
+                </div>
+                <div class="item title-name">手機驗證</div>
+                <div class="item ctrl-btn"></div>
+            </div> 
+            <div class="my-phone-list d-flex flex-column justify-content-center" id="myphone6">
+                <small>驗證碼已發送至 +886 972 XXX XXX</small>
+                <form class="d-flex d-inline">
+                    <input type="number" maxlength="1">
+                    <input type="number" maxlength="1">
+                    <input type="number" maxlength="1">
+                    <input type="number" maxlength="1">
+                    <input type="number" maxlength="1">
+                    <input type="number" maxlength="1"> 
+                </form>                   
+                <button class="btn next-btn w-100 mt-3 msg-open" value="msg-phone" data-toggle="modal" data-target="#messageModal">送出</button>
+                <small class="text-left">沒有收到驗證碼？<button type="button" class="btn p-1 small-80 text-blue" onclick="backLayer();">59秒後重新傳送</button></small>
+            </div> 
+        </div> 
+
+        <!--我的地址2-->
+        <div class="myaddress">
+            <div class="headerbox container title-box">
+                <div class="item icon-btn">                        
+                    <button class="btn px-0" onclick="backLayer();" data-toggle="tooltip" data-placement="bottom" title="回上一頁">
+                        <i class="material-icons">&#xe314;</i>
+                    </button>
+                </div>
+                <div class="item title-name">我的地址</div>
+                <div class="item ctrl-btn"></div>
+            </div>
+            <div class="my-address-list ">
+                <ul>
+                    <li class="is-default" onclick="callLayer('.myaddressedit');">
+                        <div class="item">
+                            <p>艾斯移動</p>
+                            <p class="tel">0227078600</p>
+                            <p class="small">106 台北市大安區敦化南路2段76號5樓</p>
+                        </div>
+                        <div class="item default-item auto-left">
+                            <p class="t-nowrap">[預設]</p>
+                        </div>
+                    </li>
+                    <li class="" onclick="callLayer('.myaddressedit');">
+                        <div class="item">
+                            <p>Jason Yang</p>
+                            <p class="tel">0912345678</p>
+                            <p class="small">106 台北市大安區敦化南路2段76號5樓</p>
+                        </div>
+                    </li>
+                </ul>
+                <div class="add-address-btn">
+                    <button class="btn px-0" onclick="callLayer('.myaddressadd');">
+                        新增地址<i class="material-icons">&#xE145;</i>
+                    </button>
+                </div>
+            </div>
+            <div class="fixed-btn container">
+                <button class="btn next-btn w-100">確認</button>
+            </div>
+        </div>        
+        <!--新增地址3-->
+        <div class="myaddressadd">
+            <div class="headerbox container title-box">
+                <div class="item icon-btn">                                          
+                    <button class="btn px-0" onclick="backLayer();" data-toggle="tooltip" data-placement="bottom" title="回上一頁">
+                        <i class="material-icons">&#xe314;</i>
+                    </button>
+                </div>
+                <div class="item title-name">新增地址</div>
+                <div class="item ctrl-btn"></div>
+            </div>
+            <div class="my-address-list ">
+                <ul>
+                    <li>
+                        <div class="item w-84">
+                            <p>姓名 / 公司名稱</p>
+                        </div>
+                        <div class="item auto-left">
+                            <input type="text" class="form-control" id="validationDefault01" placeholder="請輸入" required>
+                        </div>
+                    </li>
+                    <li class="index-flex">
+                        <div class="item one">手機號碼</div>
+                        <div class="item two auto-left">
+                            <input type="tel" class="form-control" id="validationDefault02" placeholder="請輸入" required>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item">城市</div>
+                        <div class="item auto-left citydefault" onclick="callsortLayer('.city');" value="臺北市">
+                            臺北市<i class="material-icons">&#xe315;</i>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item">行政區</div>
+                        <div class="item auto-left distdefault" data-city="臺北市" onclick="callsortLayer('.dist');" value="100">
+                            中正區<i class="material-icons">&#xe315;</i>
+                        </div>
+                    </li>
+                    <li class="index-flex">
+                        <div class="item one">郵遞區號</div>
+                        <div class="item two auto-left">
+                            <input type="number" value="100" id="validationDefault05" class="zipdefault" required>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item">詳細地址<small>里道路或街名，巷弄號</small></div>
+                        <div class="item w-100">
+                            <input type="text" placeholder="請輸入地址" id="validationDefault06" required>
+                        </div>
+                    </li>
+                </ul>
+                <div class="default-setting flex-inline-between note-box">
+                    <div class="item p-3">
+                        設定為預設地址
+                    </div>
+                    <div class="item item-checkbox center-v">
+                        <div class="sitem-checkbox text-right">
+                            <div class="icheck-material-blue center-v">
+                                <input id="products002" type="checkbox" checked>
+                                <label for="products002"></label>  
+                            </div>  
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            
+            <div class="fixed-btn container">
+                <button class="btn next-btn w-100">確認</button>
+            </div>
+        </div>                        
+        <!--修改地址3-->
+        <div class="myaddressedit">
+            <div class="headerbox container title-box">
+                <div class="item icon-btn">                                          
+                    <button class="btn px-0" onclick="backLayer();" data-toggle="tooltip" data-placement="bottom" title="回上一頁">
+                        <i class="material-icons">&#xe314;</i>
+                    </button>
+                </div>
+                <div class="item title-name">修改地址</div>
+                <div class="item del-btn">
+                    <button type="button" class="btn msg-open" value="msg-myaddressdelete" data-toggle="modal" data-target="#messageModal" data-dismiss="modal" aria-label="Close">刪除</button>
+                </div>
+            </div>
+            <div class="my-address-list ">
+                <ul>
+                    <li>
+                        <div class="item w-84">
+                            <p>姓名 / 公司名稱</p>
+                        </div>
+                        <div class="item auto-left">
+                            <input type="text"  value="艾斯移動">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item w-84">
+                            <p>手機號碼</p>
+                        </div>
+                        <div class="item auto-left">
+                            <input type="text"  value="02 27078600">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item">城市</div>
+                        <div class="item auto-left citydefault" onclick="callsortLayer('.city');" value="臺北市">
+                            臺北市<i class="material-icons">&#xe315;</i>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item">行政區</div>
+                        <div class="item auto-left distdefault" data-city="臺北市" onclick="callsortLayer('.dist');" value="100">
+                            中正區<i class="material-icons">&#xe315;</i>
+                        </div>
+                    </li>
+                    <li class="index-flex">
+                        <div class="item one">郵遞區號</div>
+                        <div class="item two auto-left">
+                            <input type="number" value="100" id="validationDefault05" class="zipdefault" required>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item w-84">
+                            <p>詳細地址</p>
+                            <p class="small-70">里道路或街名，巷弄號</p>
+                        </div>
+                        <div class="item auto-left">
+                            <input type="text" value="敦化南路2段76號5樓">
+                        </div>
+                    </li>
+                </ul>
+                <div class="flex-inline-between note-box">
+                    <div class="p-3">設定為預設地址</div>
+                    <div class="icheck-material-blue center-v">
+                        <input id="i3" type="checkbox" checked>
+                        <label for="i3"></label>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="fixed-btn container">
+                <button class="btn next-btn w-100">確認</button>
+            </div>
+        </div>
+
+        <!--支付設定2-->
+        <div class="mypay">
+            <div class="headerbox container title-box">
+                <div class="item icon-btn">                        
+                    <button class="btn px-0" onclick="backLayer();" data-toggle="tooltip" data-placement="bottom" title="回上一頁">
+                        <i class="material-icons">&#xe314;</i>
+                    </button>
+                </div>
+                <div class="item title-name">付款設定</div>
+                <div class="item icon-btn"></div>
+            </div>
+            <div class="my-creditcard-list">
+                <ul class="main-list">
+                    <li>
+                        <a class="collapsed" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                            <div class="item item-img">
+                                <img src="../img/member/member-creditcard.svg" alt="">
+                            </div>
+                            <div class="item">信用卡/ＶISA金融卡</div>
+                            <div class="item auto-left">
+                                <i class="material-icons">&#xE316;</i>
+                            </div>
+                        </a>
+                        <div class="collapse" id="collapseExample">
+                            <ul class="sub-list">
+                                <li onclick="callLayer('.mypaycardinfo');">
+                                    <div class="item item-img">
+                                        <img src="../img/member/creditcard-01.svg" alt="">
+                                    </div>
+                                    <div class="item card-type">mastercard</div>
+                                    <div class="item item-card-num">*1234</div>
+                                    <div class="item item-default auto-left">[預設]</div>
+                                </li>
+                                <li onclick="callLayer('.mypaycardinfo');">
+                                    <div class="item item-img">
+                                        <img src="../img/member/creditcard-02.svg" alt="">
+                                    </div>
+                                    <div class="item card-type">mastercard</div>
+                                    <div class="item item-card-num">*1234</div>
+                                    <div class="item item-default auto-left"></div>
+                                </li>
+                                <li onclick="callLayer('.mypaycardinfo');">
+                                    <div class="item item-img">
+                                        <img src="../img/member/creditcard-03.svg" alt="">
+                                    </div>
+                                    <div class="item card-type">mastercard</div>
+                                    <div class="item item-card-num">*1234</div>
+                                    <div class="item item-default auto-left"></div>
+                                </li>
+                                <li>
+                                    <div class="item item-icon">
+                                        <i class="material-icons">&#xE145;</i>
+                                    </div>
+                                    <div class="item add-card">
+                                        <button class="btn px-0 text-left" onclick="callLayer('.mypayaddcard');">新增信用卡</button>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="fixed-btn container">
+                <button class="btn next-btn w-100">確認</button>
+            </div>
+        </div>
+        <!--新增信用卡3-->
+        <div class="mypayaddcard">
+            <div class="headerbox container title-box">
+                <div class="item icon-btn">                        
+                    <button class="btn px-0" onclick="backLayer();" data-toggle="tooltip" data-placement="bottom" title="回上一頁">
+                        <i class="material-icons">&#xe314;</i>
+                    </button>
+                </div>
+                <div class="item title-name">新增信用卡</div>
+                <div class="item icon-btn"></div>
+            </div>
+            <form action="" >
+                <div class="my-creditcard-info">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="form-group">
+                                    <label for="card_01">信用卡 / 簽帳金融卡卡號</label>
+                                    <input type="text" class="form-control" id="card_01" aria-describedby="" placeholder="0000 0000 0000 0000">
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="form-group">
+                                    <label for="card_02">有效年月</label>
+                                    <input type="text" class="form-control" id="card_02" aria-describedby="" placeholder="MM / YY">
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="form-group">
+                                    <label for="card_03">背面末三碼</label>
+                                    <input type="text" class="form-control" id="card_03" aria-describedby="" placeholder="000">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="setting-default pl-3">                        
+                            <div class="icheck-material-blue">
+                                <input id="i4" type="checkbox" checked>
+                                <label for="i4">設定為預設地址</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12">
+                                <button class="btn next-btn w-100">完成</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="neweb-pay">
+                    <p>本安全服務由藍新金流服務平台提供</p>
+                    <img src="../img/member/logo_neweb.svg" alt="">
+                    <small>Powered by Neweb Technologies Co., Ltd.</small>
+                </div>
+            </form>
+        </div>
+        <!--信用卡資訊3-->
+        <div class="mypaycardinfo">
+            <div class="headerbox container title-box">
+                <div class="item icon-btn">                        
+                    <button class="btn px-0" onclick="backLayer();" data-toggle="tooltip" data-placement="bottom" title="回上一頁">
+                        <i class="material-icons">&#xe314;</i>
+                    </button>
+                </div>
+                <div class="item title-name">信用卡資訊</div>
+                <div class="item del-btn">
+                    <button type="button" class="btn msg-open" value="msg-myaddressdelete" data-toggle="modal" data-target="#messageModal" data-dismiss="modal" aria-label="Close">刪除</button>
+                </div>
+            </div>
+            <form action="">
+                <div class="my-creditcard-list">
+                    <ul class="main-list">
+                        <li>
+                            <!-- <div class="d-flex d-inline">
+                                <div class="item item-img">
+                                    <img src="../img/member/member-creditcard.svg" alt="">
+                                </div>
+                                <div class="item">鑽金卡/元大</div>
+                                <div class="item">
+                                </div>
+                            </div> -->
+                            <div>
+                                <ul class="sub-list pl-3">
+                                    <li>
+                                        <div class="item item-img">
+                                            <img src="../img/member/creditcard-01.svg" alt="">
+                                        </div>
+                                        <div class="item card-type">mastercard</div>
+                                        <div class="item">*1234</div>
+                                        <!-- <div class="item item-default auto-left"></div> -->
+                                        <div class="item item-dates">
+                                            <div class="item item-date">有效日期</div>
+                                            <div class="item item-date-txt">02／2025</div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                    
+                    <div class="flex-inline-between setting-default">
+                        <div class="p-3">設定為預設地址</div>
+                        <div class="icheck-material-blue center-v">
+                            <input id="i5" type="checkbox" checked>
+                            <label for="i5"></label>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <!--變更密碼2-->
+        <div class="mypsw">
+            <div class="headerbox container title-box">
+                <div class="item icon-btn">                        
+                    <button class="btn px-0" onclick="backLayer();" data-toggle="tooltip" data-placement="bottom" title="回上一頁">
+                        <i class="material-icons">&#xe314;</i>
+                    </button>
+                </div>
+                <div class="item title-name">變更密碼</div>
+                <div class="item icon-btn"></div>
+            </div>
+            <form action="">
+                <div class="change-password-list">
+                    <ul>
+                        <li class="is-open">
+                            <input type="password" placeholder="舊密碼" autocomplete="on">
+                            <i class="toggle-password material-icons visibility d-none">&#xE8F5;</i>
+                            <i class="toggle-password material-icons visibility-off">&#xE8F4;</i>
+                        </li>
+                        <li>
+                            <div class="password-item">
+                                <input id="password-field-1" type="text" placeholder="輸入新密碼"> 
+                                <small id="emailHelp" class="form-text text-muted">字元至少8位，需包含英文字母及數字</small>
+                                <span toggle="#password-field-1" class="toggle-password"> 
+                                    <i class="material-icons visibility d-none">&#xE8F4;</i>
+                                    <i class="material-icons visibility-off">&#xE8F5;</i>
+                                </span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="password-item">
+                                <input id="password-field-2" type="text" placeholder="再次輸入新密碼">
+                                <small id="emailHelp2" class="form-text text-muted">兩個密碼不相符</small>
+                                <span toggle="#password-field-2" class="toggle-password"> 
+                                    <i class="material-icons visibility d-none">&#xE8F4;</i>
+                                    <i class="material-icons visibility-off">&#xE8F5;</i>
+                                </span>
+                            </div>
+                        </li>
+                    </ul>
+                    <button type="button" class="btn next-btn w-100">保存</button>
+                </div>
+            </form>
+        </div>
+
+        <!--社群帳號綁定2-->
+        <div class="mysocial">
+            <div class="headerbox container title-box">
+                <div class="item icon-btn">                        
+                    <button class="btn px-0" onclick="backLayer();" data-toggle="tooltip" data-placement="bottom" title="回上一頁">
+                        <i class="material-icons">&#xe314;</i>
+                    </button>
+                </div>
+                <div class="item title-name">社群帳號綁定</div>
+                <div class="item icon-btn"></div>
+            </div>
+            <div class="my-list-box">
+                <p>社群帳號</p>
+                <ul class="social-account">
+                    <li>
+                        <div class="item item-img">
+                            <img src="../img/index/social/wechat.svg" alt="">
+                        </div>
+                        <div class="item">微信</div>
+                        <div class="item auto-left">
+                            <button type="button" class="btn msg-open" value="msg-mysocialremove" data-toggle="modal" data-target="#messageModal" data-dismiss="modal" aria-label="Close">綁定</button>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item item-img">
+                            <img src="../img/index/social/wechat.svg" alt="">
+                        </div>
+                        <div class="item">李曉龍</div>
+                        <div class="item auto-left">
+                            <button type="button" class="btn msg-open" value="msg-mysocialbind" data-toggle="modal" data-target="#messageModal" data-dismiss="modal" aria-label="Close">解除綁定</button>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item item-img">
+                            <img src="../img/index/social/facebook.svg" alt="">
+                        </div>
+                        <div class="item">Facebook</div>
+                        <div class="item auto-left">
+                            <button type="button" class="btn msg-open" value="msg-mysocialremove" data-toggle="modal" data-target="#messageModal" data-dismiss="modal" aria-label="Close">綁定</button>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item item-img">
+                            <img src="../img/index/social/line.svg" alt="">
+                        </div>
+                        <div class="item">LINE</div>
+                        <div class="item auto-left">
+                            <button type="button" class="btn msg-open" value="msg-mysocialremove" data-toggle="modal" data-target="#messageModal" data-dismiss="modal" aria-label="Close">綁定</button>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item item-img">
+                            <img src="../img/index/social/google.svg" alt="">
+                        </div>
+                        <div class="item">Google</div>
+                        <div class="item auto-left">
+                            <button type="button" class="btn msg-open" value="msg-mysocialremove" data-toggle="modal" data-target="#messageModal" data-dismiss="modal" aria-label="Close">綁定</button>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+           
+        <!--使用者規範2-->
+        <div class="myclause">
+            <a name="clause"></a>
+            <div class="headerbox container title-box">
+                <div class="item icon-btn">                        
+                    <button class="btn px-0" onclick="backLayer();" data-toggle="tooltip" data-placement="bottom" title="回上一頁">
+                        <i class="material-icons">&#xe314;</i>
+                    </button>
+                </div>
+                <div class="item title-name">使用者規範</div>
+                <div class="item icon-btn"></div>
+            </div>
+            <div class="member-body">
+                歡迎您註冊Mobii! 帳號並使用Mobii! 平台的服務！<br>
+                本《Mobii! 平台使用者條款》（以下簡稱「本條款」）是您與Mobii! 平台之間就註冊Mobii! 使用者帳號及使用Mobii! 的各項服務等相關事宜所訂立的協定。在您使用本平台與服務前應當仔細閱讀並遵守本條款的全部內容，如您勾選「我同意《Mobii! 平台使用者條款》」並通過註冊帳號或其他任何方式使用或接受Mobii! 的任何服務，即表示您已閱讀、暸解並同意接受本使用條款之全部內容。如您對本條款的內容（特別是涉及免除或者責任限制的條款）有任何疑義，可隨時按照本條款中列明的連絡方式與我們聯繫，我們將根據您的要求為您進一步解釋和說明相關內容。請您在決定註冊或使用服務前再次確認您已知悉並完全理解本條款的所有內容。 <br>
+                如果您未滿18歲，請務必在家長和其他法定監護人的陪同下閱讀本條款，並在進行註冊、訂購、支付等任何行為或使用Mobii! 的其他任何服務前，應事先徵得您的家長和其他法定監護人的同意。 <br>
+                本條款所述「服務」既包括您使用Mobii! 使用者帳號接受Mobii! 平台相關商家、個人所提供的服務，亦包括在某些特定的業務類別下您使用Mobii! 使用者帳號向其他商家、個人或其他主體提供服務的情形。無論「服務」屬於上述何種情形，本《Mobii! 平台使用者條款》都將予以適用。<br>
+            
+                <ul class="pt-5"><h6>一、協定的範圍</h6>
+                <li>【協定內容】本服務協定內容同時包括：<br>
+                （1） 本《Mobii! 平台使用者條款》文本；<br>
+                （2）《Mobii! 平台隱私權政策》（連結位址：<a href="https://www.mobii.ai/Privacy">https://www.mobii.ai/Privacy</a>）：Mobii! 非常重視您的個人資訊和隱私的保護，將按照《Mobii! 平台隱私權政策》中所公佈的政策在具體服務中進行隱私及個人資訊的收集、儲存、使用、揭露等活動。您在註冊Mobii! 帳號前，請仔細閱讀《Mobii! 平台隱私權政策》；<br>
+                （3） 具體服務的服務條款：您的Mobii! 平台帳號一經註冊，即可憑該帳號享受Mobii!平台上的各項豐富的服務。為提供您更好的服務，Mobii! 平台針對具體的服務制定了專門的服務條款，供服務各方遵守。您可在【相關具體服務的網站、頁面或應用程式】中查閱並下載此類專門服務條款。在使用具體服務前，請您仔細閱讀該服務所適用的服務條款，您註冊Mobii! 帳號並利用Mobii! 帳號使用具體服務即表示您已同時接受該等服務條款，並將受該等服務條款的約束；<br>
+                （4） 專項商品或服務規則。為提升您的使用體驗，Mobii! 在若干具體專項商品或服務中特別制定了詳細的規則，供各方遵守。 <br>
+                （5） 協力廠商服務相關的使用者授權協定。為方便您在使用Mobii! 平台服務的同時，根據您自身需要，通過Mobii! 平台進行跳轉等方式，自願選擇接受獨立協力廠商服務商及部分關聯協力廠商服務商所提供的服務，您將在使用該等協力廠商服務前對相應的使用者授權協定予以同意確認，以作為您和Mobii! 平台之間就該等協力廠商服務的使用所涉及的相關事項的權利義務依據。  <br>
+                上述各項內容之間如存在不一致之處，以時間上最新發佈的內容版本為準。</li><br>
+                <li>【協定遵守】您理解並同意：<br>
+                （1）上述【協定內容】中所述的協定、政策、條款與規則構成本條款不可分割的組成部分，共同適用于您所使用的Mobii! 平台服務。 <br>
+                （2）根據國家法律法規變化、營運需要或為提升服務品質的目的，Mobii! 平台將在必要的時候對上述各項協定、條款與規則不時地進行修改更新，並通過在網頁或行動裝置上發出公告、站內信等合理、醒目的方式向您進行提前通知，上述修改更新內容將在相關更新說明中指定的日期開始實施，通常情況下不短於發佈之日後八個工作日。 <br>
+                （3）您可以即時查閱並瞭解相關更新修改內容，如您不同意相關更新修改內容，可停止使用相關更新修改內容所涉及的服務，此情形下，變更事項對您不產生效力；如您在上述更新修改內容實施後繼續使用所涉及的服務，將視為您已同意各項更新修改內容。 </li>
+                <li>【適用平台】本條款適用於網頁、行動裝置（包括iOS、Android及已有或未來將新增的任何其他行動裝置）等各類平台或媒介Mobii! 所提供的各項服務。 您知悉並理解，為享受上述相關服務，使用者需自行準備相關上網設備（如：個人電腦、手機、平板電腦或其他設備），相關網路使用和商品服務支付所產生的有關費用由使用者個人負擔。 </li>
+                <li>【第三方連結】Mobii! 平台可能含有連結至Mobii! 以外之第三方網站，由於Mobii! 就這些網站及資源沒有控制權亦未實際參與營運，因此使用者在使用各該第三方網站前，請自行暸解各該第三方網站之使用者條款及隱私權政策。若因第三方網站或資源獲得的任何內容、商品或服務所產生的任何損害或損失，Mobii! 不負任何直接或間接之責任。且Mobii! 並未保證前述第三方網站或資源之正確性及完整性。</li>
+                </ul>
+            
+                <ul class="pt-5"><h6>二、帳號的註冊</h6>
+                <li>【註冊資料】，使用者向Mobii! 提交相關註冊資料，不應包括任何違法或不良或虛偽錯誤之資訊，相關資料如有變動，使用者應即時更新。如果因使用者所提供的註冊資料不合法、不真實、不準確或未即時更新，從而導致相關法律責任或不利後果的，使用者須自行承擔相應的法律責任及後果。 
+                使用者已知悉，在Mobii! 帳號註冊過程中，因安全性、內部管理等原因，部分初始註冊資料可能將無法再次更改。 因此，使用者應謹慎核查此部分註冊資料，確保正確填寫。
+                <li>【民事行為能力】使用者知悉並承諾，使用者具有完全民事權利能力和行為能力，或雖不具有完全民事權利能力和行為能力但已經過使用者的家長和其他法定監護人同意並由使用者的家長和其他法定監護人代理註冊及使用Mobii! 的各項服務。 若使用者不具備前述相適應的民事行為能力即進行帳號註冊的，則使用者及使用者的家長和其他法定監護人應依照法律規定承擔因此而導致的一切後果。 
+                <li>【真實身份】因特定服務（如金融服務等）需要，使用者有可能需要在註冊或使用該等服務的特定環節中填寫真實的身份資訊，並需通過相關驗證流程後方可使用服務，如使用者填寫的身份資訊不完整、不真實或未通過驗證，將導致使用者無法使用該服務、損害自身、他人利益或造成其他不利後果，該等後果將由使用者予以承擔。 
+                <li>【註冊資訊保護】Mobii! 將對使用者所提交的註冊資訊予以保護，不會將其披露給任何非關聯的協力廠商，除非：<br>
+                （1） 相關法律法規要求；<br>
+                （2） Mobii! 發生相關合併、分立、收購或資產轉移；<br>
+                （3） 為提供相關服務所必須的。</li>
+                <li>對於使用者所提交的註冊資訊中涉及個人資訊的內容，Mobii! 將嚴格按照《Mobii! 平台隱私權政策》的規定進行收集、處理和使用。</li>
+                <li>【帳號數量】除因歷史原因、業務整合等Mobii! 平台所認可的特殊情況外，Mobii! 平台原則上只允許使用者使用一個Mobii! 使用者帳號。如有證據證明或Mobii! 有理由相信使用者存在不當註冊或不當使用多個Mobii! 帳號的情形，Mobii! 可將相關帳號資訊進行合併或採取其他合理措施，如因使用者不當註冊或不當使用造成Mobii! 及相關方損失，相應的賠償責任由您承擔。此外，出於相關業務需要，Mobii! 也可對同一使用者的多個帳號或相關資訊進行合併，如該等合併將對使用者的權益產生實質影響，Mobii! 平台將在進行上述合併前事先徵得使用者的同意。 </li>
+                </ul>
+            
+                <ul class="pt-5"><h6>三、帳號的使用</h6>
+                <li>【帳號登錄】使用者可以使用註冊帳號時填寫登記並獲得系統審核通過的帳號密碼登入Mobii! 平台。為了使用者的使用便利，Mobii! 將適時提供指紋識別、人臉識別等更為安全便捷的登錄方式，Mobii! 可根據相關法律法規、使用者體驗、風險控制等因素對登入方式予以適時調整或增減，或在具體業務類別的使用者服務條款等規定中予以進一步細化或調整。</li>
+                <li>【帳號使用】使用者對您帳號項下的所有行為（包括但不限於線上簽署任何協定，瀏覽、購買、支付、點評、上傳、發佈、輸入任何內容）所產生的一切後果負責，通過您使用者的帳號所發生的上述各項行為將視為使用者本人的真實意思表示。</li>
+                <li>Mobii! 平台提醒您，您通過自身帳號在接受Mobii! 的各項服務中所上傳、發送的任何內容都應具有合法來源，如相關內容涉及任何協力廠商的合法權益，應事先獲得相應的許可。 如Mobii! 收到涉及您的相關舉報或投訴，Mobii! 可採取相關法律法規所要求或允許的方式，向相關爭議方、相關部門提供包括帳號在內的必要的資訊，以便解決糾紛爭議，保護正當權利人的合法權益。</li>
+                <li>【帳號借用】為保證相關帳號安全，未經Mobii! 平台的書面同意，使用者不應將Mobii! 平臺上所註冊的帳號借給他人使用，否則使用者應當承擔由此產生的全部責任，Mobii! 平台保留拒絕提供相應服務、凍結或收回註冊帳號或終止本服務協定的權利，並可要求您對 Mobii! 平台所承受的損失予以賠償。 </li>
+                <li>【安全義務】如您發現帳號存在安全問題，請您立即聯繫Mobii! 平台予以調查處理，否則Mobii! 平台對潛在損失的產生或擴大不承擔任何責任。 </li>
+                <li>Mobii! 平台特別提醒您，您應該妥善保管您的帳號和密碼，當您使用完畢Mobii! 平台的服務後，您應安全登出。 此外，請經常留意Mobii! 平台有關防範詐騙犯罪的提示，不輕信借款、索要密碼或其他涉及財產的網路資訊。凡涉及金錢財產操作，請一定先核實對方身份。 您知悉並同意，如您在帳號資訊的保管上、相關上網設備的網路安全維護上存在任何過失導致帳號丟失、洩露，您對此所產生的任何後果負責，Mobii平台對此不負任何責任，如Mobii! 平台因此產生相關支出，Mobii! 平台將有權向您予以追償。 </li>
+                <li>【限制凍結】您知悉並同意，在符合法律法規的規定前提下，Mobii! 平台有權對您的註冊帳號進行限制或凍結，在該等情況下，您可能無法繼續登入或使用您的註冊帳號。</li>
+                </ul>
+            
+                <ul class="pt-5"><h6>四、使用者行為規範與責任承擔</h6>
+                <li>【使用者義務】您知悉並承諾，在使用Mobii! 平台所提供的服務的過程中，您應遵守相關法律法規，不應從事如下違反法律法規的規定，影響正常服務提供或損害他人合法利益的行為：</li>
+                <li>（1）不應利用Mobii! 平台或相關服務從事違法犯罪活動，不設立用於實施詐騙，傳授犯罪方法，製作或者銷售違禁物品、管制物品等違法犯罪活動的網站、通訊群組，不利用網路發佈涉及實施詐騙，製作或者銷售違禁物品、管制物品以及其他違法犯罪活動的資訊；</li>
+                <li>（2）不應製作、發佈、複製、查閱和傳播、存儲、連結下列資訊：捏造、散佈謠言，侵犯他人權利，擾亂經濟、社會秩序；散佈淫穢、色情、賭博、暴力、兇殺、恐怖或者教唆犯罪的；侮辱或者誹謗他人，侵害他人合法權益的；宣揚恐怖主義、極端主義的；違背當地風俗習慣的；含有法律、行政法規禁止的其他內容的；</li>
+                <li>（3）不應從事下列危害電腦資訊網路安全的活動：對網路服務及相關軟硬體設施進行破解、破壞、刪除、修改或者增加的；對電腦資訊網路中存儲或者傳輸的資料和應用程式進行刪除、修改或者增加的；使用軟體或硬體等方式竊取他人口令、非法入侵他人電腦系統；故意製作、傳播電腦病毒等破壞性程式的；其他危害電腦資訊網路安全的活動；</li>
+                <li>（4）不應擅自複製和使用網路上未公開和未授權的檔案。 除相關著作權人明示同意，不應在網路中擅自破解、傳播、下載或複製第三人享有著作權的軟體或進行其他任何侵害他人智慧財產權的活動；</li>
+                <li>（5）不應私自傳播廣告資訊或以不正當方式説明他人提升評價或利用評價權利對其他使用者、商家實施威脅、敲詐勒索；</li>
+                <li>（6）不應通過侵犯第三人合法權益、作弊、擾亂系統、實施網路攻擊、惡意套現、捏造信譽、批量註冊、用機器註冊Mobii! 平台帳戶（無論數量）、用機器類比用戶端等手段進行交易或參加Mobii! 平台或其所授權的協力廠商發佈的任何活動；</li>
+                <li>（7）未經Mobii! 平台事先書面許可，不應自行或授權、協助任何協力廠商非法存取Mobii! 平台所展示的任何內容（「非法存取」是指採用未經Mobii! 平台認可的程式或者非正常流覽等技術手段獲取內容資料的行為）。 </li>
+                <li>【責任承擔】如使用者在使用Mobii! 平台服務過程中涉及上述行為中的一項或多項，則需要對自己的行為承擔法律責任。承擔法律責任的形式包括但不限於：對受到侵害者進行賠償，以及在Mobii! 平台首先承擔了因使用者的行為導致的行政處罰或侵權損害賠償責任等損失（含訴訟費、律師費等相關法律程序費用）後，使用者應立即給予Mobii! 平台等額的賠償。此外，根據具體違法違規情形，Mobii! 平台有權作出獨立判斷，立即暫停或終止對使用者提供部分或全部服務，包括鎖定、登出、刪除帳號等措施。</li>
+                <li>使用者知悉並理解，如果Mobii! 平台發現使用者的上述違法違規行為，依據相關法律法規的規定，Mobii! 平台有權或有義務立即停止相關服務，刪除相關違規資訊、服務評價，並視情況進行調查取證，保存有關記錄。 同時，Mobii! 平台有權自主刪除含有該內容的任何資料資訊。 </li>
+                <li>【廣告促銷】您理解並同意：為向您提供更為細緻、貼心的服務，在經過您的事先確認後，Mobii! 平台或Mobii! 平台授權、認可的協力廠商商家、廣告商可能通過您註冊時填寫的手機號碼或者電子信箱向您發送您可能感興趣的商品服務的廣告宣傳資訊、 促銷優惠等商業性資訊，其方式和範圍可不經向您特別通知而變更；如果您不願意接收此類資訊，您有權通過Mobii! 平台提供的相應的退訂方式進行退訂。</li>
+                <li>您理解並同意，對上述的相關廣告資訊，使用者應審慎判斷其真實性和可靠性，除法律法規明確規定外，使用者應對依該廣告資訊進行的交易自行負責。</li>
+                <li>【使用目的】除非在特定服務條款或規則中您與Mobii! 平台另有約定或Mobii! 平台另行予以書面同意，您將確保本條款下的服務僅為您個人非商業性質的使用。未經Mobii! 平台書面同意，使用者不得使用未經Mobii! 平台授權的任何外掛程式、外掛或協力廠商工具對本條款下的服務進行干擾、破壞、修改或施加其他影響。 </li>
+                </ul>
+            
+                <ul class="pt-5"><h6>五、智慧財產權</h6>
+                <li>【智慧財產權】您理解並知悉，除另有書面聲明以外，以下資訊和內容的智慧財產權（包括但不限於專利權、著作權、商標權及營業秘密）均歸Mobii! 平台所有：<br>
+                <li>1.在Mobii! 平台相關服務中所提供的內容和資訊（包括但不限於軟體、技術、程式、網頁、文字、圖片、圖像、地圖、圖示、音訊、影片、圖表、版面設計、電子文檔、資料等）；<br>
+                <li>2. Mobii! 平台用於提供上述內容和資訊的基礎設施和平台（包括但不限於軟體、網站、應用程式等）之架構、設計介面、部分及全部的程式碼等；<br>
+                <li>3.在Mobii! 平台提供相關服務中所使用的各項商標、商業形象、商業標識、技術訣竅、標語、文案等；<br>
+                <li>4. Mobii! 平台服務的開發、營運、維護等過程中產生的所有資料和資訊。 </li>
+                <li>Mobii! 平台所擁有的上述權利及所提供服務中所包含的任何內容的智慧財產權均受到法律保護，未經Mobii! 平台事先書面許可，您承諾不應且不應允許或協助任何人以任何形式（包括但不限於通過任何機器人、爬蟲、截圖等程式或設備）進行使用、出租、出借、分發、展示、複製、修改、連結、轉載、彙編、發表、出版、抓取、監視、引用或創造相關衍生作品。</li>
+                <li>【使用者生成內容】您理解並同意，您在使用Mobii! 平台提供的服務時上傳、提交、儲存或發佈的內容（包括但不限於文字、圖片、影片、音訊、動畫等）均由您原創或已獲合法授權。您通過Mobii! 平台上傳、提交、儲存或發佈的任何內容的智慧財產權歸屬您或原始著作權人所有，您的上傳、提交、儲存或發佈行為不會侵犯他人的智慧財產權或其他合法權益。</li>
+                <li>您知悉、理解並同意，當您接受本服務協定，即表明您主動將上述內容的非專屬、可轉讓的財產性權利，如著作權（包括但不限於：複製權、發行權、出租權、展覽權、表演權、放映權、廣播權、資訊網路傳播權、攝製權、改編權、翻譯權、彙編權以及應當由著作權人享有的其他可轉讓權利），在全世界範圍內永久、免費、獨家且不可撤銷地授權給Mobii! 平台及其關係企業， Mobii! 平台及其關係企業可基於該等授權使用上述內容（包括但不限於用於商業用途）或向協力廠商自主進行任何必要的轉授權。該等授權、轉授權的使用場景包括但不限於當前或其他任何網站、應用程式、產品或移動終端設備等，且Mobii! 平台及其關係企業或Mobii! 平台及其關係企業所授權許可的協力廠商可通過對上述授權內容進行修改、複製、改編、翻譯、彙編或製作，形成衍生產品。在不違反相關法律法規的強制性規定、尊重相關原始授權內容的智慧財產權的基礎上，該等衍生產品的相關智慧財產權歸Mobii! 平台及其關係企業或Mobii! 平台所授權許可的協力廠商所有。 </li>
+                <li>您確認並同意授權Mobii! 平台及其關係企業以自己的名義或委託專業協力廠商針對有關您上傳、提交、儲存或發佈的內容（含衍生作品）的侵權行為進行獨立自主的救濟並獲得全部賠償。 救濟形式包括但不限於：監測侵權行為、發送存證信函或律師信、提起訴訟或仲裁、調解、和解等。 Mobii! 平台及其關係企業有權對救濟事宜做出獨立決策並予以實施。</li>
+                <li>您同意，因您通過Mobii! 平台上傳、發佈的任何內容導致的智慧財產權侵權問題，您將承擔全部責任；如Mobii! 平台及其關係企業，或Mobii! 平台授權的其他服務提供者因協力廠商智慧財產權維權而產生損失，您將等額賠償。</li>
+                <li>使用者在Mobii! 平台發佈的任何受著作權法保護的作品內容，無論該內容形成於本條款簽訂前還是本條款簽訂後。 Mobii! 平台及Mobii! 平台轉授權、許可的相關方有權將您在Mobii! 平台發表的產品使用體驗、產品討論或圖片進行使用或者與其他人合作使用，使用範圍包括但不限於網站、電子雜誌、雜誌、刊物、海報、Line官方帳號、FB粉絲專頁、Instagram、廣告、公眾號文章、微信小程式等。</li>
+                <li>【軟體使用】在使用Mobii! 平台相關用戶端的過程中，您可能需要下載特定軟體。 為了改善使用者體驗、修復漏洞、保障安全性等考慮，Mobii! 平台有權對軟體進行更新，您應該將相關軟體更新至最新版本，否則Mobii! 平台將不保證您能正常使用相關軟體。</li>
+                <li>如果您從未經Mobii! 平台授權的協力廠商獲取軟體或與該軟體名稱相同的安裝程式，Mobii! 平台無法保證該軟體能夠正常使用，由此造成的相關損失，Mobii! 平台不予負責。
+                <li>【軟體使用禁止性規定】除非Mobii! 平台書面許可，您在使用Mobii! 平台的軟體時不得從事下列任一行為：</li>
+                <li>（1） 刪除、編輯或遮擋軟體及其副本上關於著作權、商標或其他權利標識或標記的資訊；</li>
+                <li>（2） 複製、發佈、出售或出租軟體或其任何部分；</li>
+                <li>（3） 對軟體進行反向工程、反向彙編、反向組譯，或者以其他方式嘗試挖掘、提取軟體的原始程式碼；</li>
+                <li>（4） 其他對軟體、軟體所產生的資料所進行的任何增加、刪減、變動的任何行為，包含製作、利用、授權各種協力廠商外掛、外掛程式、系統進行上述行為。 </li>
+                </ul>
+            
+                <ul class="pt-5"><h6>六、會員卡綁定與點數</h6>
+                <li>會員所使用之會員卡如為一卡通，請特別注意並了解以下事項：</li>
+                <li>1.	會員同意提供其一卡通卡號作為 Mobii! 會員之身分辨識及累兌點之資料依據；相關之累兌點及會員權益事項，概與一卡通公司無涉。</li>
+                <li>2.	原屬無記名式一卡通完成Mobii! 會員卡片綁定作業後，仍為無記名式一卡通，不因完成卡片綁定作業而成為記名式一卡通；會員如欲辦理一卡通之記名作業或就一卡通本身之權益事項（如掛失、退費）需自行洽詢一卡通公司辦理。</li>
+                <li>3.	會員同意提供一卡通卡號資訊予Mobii! ，以利Mobii! 提供卡片綁定、客戶服務等會員服務；Mobii! 亦得提供會員所綁定之一卡通卡號予一卡通公司，於Mobii! 特約商進行會員累兌點資料傳輸時，確認持卡人會員資格之用。</li>
+                <li>4.	會員同意一卡通公司得將一卡通卡號、交易紀錄「包含每日交易總次數及總金額」傳送予Mobii! ，確認持卡人會員點數回饋之用。</li>
+                <li>5.	會員之一卡通向一卡通公司辦理退卡或卡片異常無法使用(例如：遺失、損毀)之處理：</li>
+                <li class="px-3">(1)	會員所持之一卡通，應由會員盡善良管理人之注意使用並保管該卡，如有退卡、遺失、損毀等情況，會員應向一卡通公司辦理退費、卡片掛失或換發新卡等手續，惟一卡通如為無記名，則無法辦理掛失作業；一卡通卡片本身之問題皆與 Mobii! 無關。</li>
+                <li class="px-3">(2)	會員之一卡通如有辦理退卡或異常無法使用之情況產生，會員應主動通知  Mobii!，並於Mobii!i 操作刪除會員卡以取消綁定。如會員未主動通知，致影響自身點數及享受Mobii! 相關服務等權益，其後果須自行承擔。</li>
+                <li>6.	會員獲贈之點數，可使用至點數入帳日+365天。若點數到期前未使用完畢，點數將自動歸零。如個別活動辦法中另有規定點數轉入會員帳戶、使用期限或其他注意及限制事項，則以活動辦法為準。消費新增累積之點數原則上於登錄後48小時內轉入會員帳戶，且兌換贈品所需點數將以入帳日在前者優先扣除。會員如就已消費並贈送點數之商品或服務向原特約商退換貨時，特約商將扣回該商品贈送點數，如點數不足扣回時，會員可能須繳還點數處理成本費用予原特約商後始得進行退換貨。</li>
+                <li>7.	兌換優惠商品或服務如由各特約商直接提供予會員，其寄送、使用、保證、瑕疵擔保等問題，均由各特約商提供並負責之。會員以點數申請兌換、換購商品或服務，如因商品瑕疵或其他因素，向原兌換商品之特約商或平台進行退換貨，退換貨處理原則以各特約商退換貨辦法進行辦理。若會員與特約商所提供之贈品或服務發生爭議時，均應由該特約商自行負責，概與Mobii! 無涉，且會員不得要求Mobii! 或各特約商將之折算現金或為其他與本活動無關之給付。會員以點數兌換各活動之贈品而應繳納任何稅捐時，由會員自行負擔該筆稅款，如依相關稅法規定應代為扣繳稅款或所兌贈品應併個人所得時，其相關作業均由各特約商處理。</li>
+                <li>8.	Mobii! 具有更改各項服務內容或終止任一會員帳戶服務之權利。若會員決定終止會員資格，自終止會員身份之日起，喪失所有本服務所提供之優惠及權益，會員主動申請終止會員身分，視同為放棄原來所擁有之點數，會員不得要求Mobii! 兌換成現金。</li>
+                </ul>
+            
+                <ul class="pt-5"><h6>七、協定的終止</h6>
+                <li>使用者同意Mobii! 集團有權可基於其判斷或任何原因，隨時以各樣理由終止或暫停會員使用Mobii! 之服務，包括但不限於該會員鮮少使用服務、違反本條款等。Mobii! 平台於終止服務後，不論是否已通知，均得刪除該會員之帳號及內容，並可避免該使用者於未來連結至Mobii! 平台或使用Mobii!。本條款於終止服務之日終止。 </li>
+                <li>本條款終止後，Mobii! 平台將無法繼續向使用者提供任何服務或履行任何其他義務，包括但不限於為使用者保留或向使用者揭露其原Mobii! 平台帳號中的任何資訊，向使用者或協力廠商轉發任何未曾閱讀或發送過的資訊等。</li>
+                <li>本條款的終止不影響第五條智慧財產權條款以及其他根據其內容應繼續有效的條款的有效性，也不影響本服務協定終止前各方的相關權利和義務，包括但不限於守約方依據本條款向違約方追究相應的違約責任。</li>
+                </ul>
+            
+                <ul class="pt-5"><h6>八、通知與送達</h6>
+                <li>您知悉並認可，Mobii! 平台可視情況通過下列任意一種或幾種方式向使用者通知重要資訊：</li>
+                <li>（1）向您註冊時所提交的電子信箱位址發送電子資訊；</li>
+                <li>（2）向您註冊時所提交的手機號碼發送電子資訊；</li>
+                <li>（3）向您提供的實際位址進行寄送紙本資訊；</li>
+                <li>（4）在網站或用戶端顯著位置刊登電子資訊；</li>
+                <li>（5）向Mobii! 平台網站或相應用戶端的帳戶的站內信或其他即時通信用戶端發送電子資訊。 </li>
+                </ul>
+                
+                上述電子資訊在發送成功或刊登完成後即視為送達。 相關紙質載體的發送以相關郵寄憑證上的郵寄日期後的第五個日曆日視為送達。<br>
+                上述送達方式同樣可適用於相關仲裁或司法程序（含起訴、審理、執行等各階段）。<br>
+                您應當保證所提供的連絡方式是準確、有效的，並進行適時更新，如因提供的連絡方式不準確或怠於更新等不可歸責於Mobii! 平台的原因，導致相關通知、檔案、文書無法送達或及時送達，您將自行承擔由此可能產生的法律後果。<br>
+            
+                <ul class="pt-5"><h6>九、不可抗力或其他免責事由</h6>
+                <li>【不可抗力】您理解並同意，在使用本服務的過程中，可能會遇到不可抗力等風險因素，使本條款下的服務發生中斷或終止。不可抗力是指不能預見、不能克服並不能避免且對一方或雙方造成重大影響的客觀事件，包括但不限於資訊網路設備維護、資訊網路連接故障、電腦、通訊或其他系統的故障、電力故障、罷工、勞動爭議、暴亂、生產力或生產資料不足、 火災、洪水、風暴、爆炸、戰爭、政府行為、法律法規變動、司法行政機關的命令、其他不可抗力或協力廠商的不作為而造成的不能服務或延遲服務等行為。 出現上述情況時，Mobii! 平台將努力在第一時間與相關部門配合，及時進行修復，但是由此給您造成的損失，Mobii! 平台在法律允許的範圍內免責。</li>
+                <li>【其他免責事由】您理解並同意，在法律允許的範圍內，Mobii! 平台對以下事由所導致的服務中斷或終止不承擔責任：</li>
+                <li>（1）受到電腦病毒、木馬或其他惡意程式、駭客攻擊的破壞；</li>
+                <li>（2）使用者或Mobii! 平台的電腦軟體、系統、硬體和通信線路出現故障；</li>
+                <li>（3）使用者操作不當；</li>
+                <li>（4）使用者通過非Mobii! 平台授權的方式使用本服務；</li>
+                <li>（5）其他Mobii! 平台無法控制或合理預見的情形。 </li>
+                <li>【資訊真實性】Mobii! 平台提醒您，在使用本服務的過程中，您可能會遇到網路資訊或其他使用者行為帶來的風險，該等風險包含他人匿名或冒名的含有威脅、誹謗、令人反感、非法、誤導、欺騙等任何資訊或行為所造成任何心理、生理上的傷害或經濟損失。請您仔細甄別，並在遇到上述相關不法行為時及時向Mobii! 平台或有關機關檢舉或投訴。Mobii! 平台將對相關內容進行日常檢查並在收到檢舉或投訴時進行相應處理，但請您注意，Mobii! 平台不對非Mobii! 平台所發出或刊登的任何資訊的真實性、適用性、合法性承擔責任，也不對因協力廠商侵權行為給您造成的損害負責。</li>
+                <li>【責任限制】除非另有明確書面說明，在符合法律法規規定的情況下，Mobii! 平台不對其網站和用戶端上的資訊、內容、材料、產品或服務做任何形式的明示或默示的聲明或擔保 </li>
+                </ul>
+                
+                <ul class="py-5"><h6>十、管轄、法律適用與爭議解決</h6>
+                <li>本條款的成立、生效、履行、解釋與糾紛解決，均以中華民國法律為準據法。使用者與Mobii! 平台就本服務、本條款或其他有關事項發生的爭議，應以台灣台北地方法院為第一審管轄法院。倘本條款之部分規定因與中華民國法律抵觸而無效者，本條款其他規定仍應具有完整的效力及效果。本條款之標題僅供方便而設，不具任何法律或契約效果。</li>
+                <li>如您對本條款有任何問題或建議，請在工作時間聯繫Mobii! 平台客服部門。 </li>
+                <li>再次感謝您的耐心閱讀！</li>
+                </ul>        
+                    <!-- <a href="#clause" class="BackTop toTop-arrow"></a> -->
+            </div>
+        </div>
+        <!--隱私權政策2-->
+        <div class="myprivate">
+            <a name="private"></a>
+            <div class="headerbox container title-box">
+                <div class="item icon-btn">                        
+                    <button class="btn px-0" onclick="backLayer();" data-toggle="tooltip" data-placement="bottom" title="回上一頁">
+                        <i class="material-icons">&#xe314;</i>
+                    </button>
+                </div>
+                <div class="item title-name">隱私權政策</div>
+                <div class="item icon-btn"></div>
+            </div>
+            <div class="member-body">
+                <p>感謝您造訪Mobii! 平台mobii.ai（以下簡稱「Mobii!」，「我們」，「我們的」），我們非常重視您的隱私權，此隱私權政策描述了我們如何蒐集您的個人資料，以及這些資料將如何被處理及利用，還有您可以如何管理及控制我們藉由Mobii! 所蒐集到您的相關資料。我們強烈建議您在使用我們的網站、服務及與我們進行交易前，先行仔細閱讀此隱私權政策及我們的使用者條款。透過持續使用Mobii!，即視為您已仔細閱讀且接受此隱私權政策中揭露的資料蒐集的行為，並同意我們就該蒐集到的資訊加以處理及利用。</p>
+                <h6 class="pt-5">資料搜集之個人資料類別 </h6>                        
+                <ul>當您造訪或使用Mobii! 時，我們可能會蒐集您的個人資料（包括但不限於以下項目）：                         
+                    <li>個人身份識別資訊（例如：姓名、住址、出生年月日、性別、出生地等）。</li>
+                    <li>個人聯絡方式（電子郵件信箱、行動電話、社群帳號）</li>
+                    <li>財務資訊（例如：信用卡或簽帳卡之號碼、銀行帳戶之號碼與往來帳戶名義人姓名）。</li>
+                    <li>財務交易資訊（例如：透過平台或平台推廣交易的購買品項、收付金額、支付方式、帳務往來紀錄等）。</li>
+                    <li>安全細節（例如：密碼）。</li>
+                    <li>所使用的電腦與行動應用裝置之資料，含軟硬體規格、裝置辨識資料、IP 位址、Cookie 與裝置地理位置。</li>
+                    <li>未分類之資料，可能包含了：對AI客服的發問內容、備註、其他無法歸類之檔案、使用紀錄或錯誤報告、您的個人留言及評論內容等）</li> 
+                </ul>
+                <p>Mobii! 遵守Facebook 與 Google 網站的隱私權政策及廣告宣傳規範，經您授權同意讓Mobii! 所蒐集的個人資料，將僅被使用於協助Mobii! 提供客製化後的優質商業推廣資訊或其他服務給您。Mobii! 在您使用 Facebook 或 Google 登錄時，僅蒐集並使用您的 E-mail 帳號與性別資訊，以提供製化的內容及服務。</p>
+                <p>當您於Mobii! 平台購買商品、服務或進行支付時，所填寫之個人財務資料，包括信用卡資訊等，其蒐集、處理及利用將透過我們的金流協力廠商 （包括但不限於藍新金流NewebPay、LINE Pay等），Mobii! 將不會直接蒐集及處理對應之個人財務資料。</p>
+                <p>Mobii! 如舉辦抽獎或任何回饋活動，您所提供給Mobii! 的聯繫資料，也僅供當次活動執行使用。</p>                        
+                <h6 class="pt-5">Cookies </h6>                        
+                <p>我們會在您的電腦或行動裝置上設定並存取cookies，它們是一種小型的資訊檔，經由您的瀏覽器儲存於您的終端機記憶體或行動裝置中。cookie 的種類主要分為 session cookie、persistent cookie，前者並未設置一定的保存期限，當您關閉瀏覽器時，session cookie 將自動刪除，後者則設置了一定的保存期限（例如一個月），除非期限屆滿或者您手動刪除，persistent cookie 將會一直保存在您的電腦或行動裝置中。 </p>                        
+                <ul>根據cookie的功能差異，有以下幾種類型：                         
+                    <li>必要型cookie：此類cookie是維持Mobii! 網站運作所必須的，如果刪除將導致網站無法正常運行。</li>
+                    <li>安全性cookie：此類 cookie 是用來驗證使用者身分、防止登入憑證遭到冒用或竄改等。</li>
+                    <li>功能型cookie：此類 cookie 會記住您的瀏覽偏好，例如您的瀏覽紀錄、語言和地區、行動裝置的類型等等，以提供最符合您需求的瀏覽體驗。</li>
+                    <li>分析型cookie：此類 cookie 讓Mobii! 收集您使用本網站的方式，例如您最常瀏覽哪些頁面，用以分析網站是否有需要改進的地方，以提供您更優質的體驗。</li>
+                    <li>廣告型cookie：此類 cookie 將被使用於精準行銷目的，例如Mobii! 可能將依據您過去曾點閱過的內容，自動篩選或提供您可能感興趣的資訊類別與內容種類。</li>
+                </ul>
+                <h6 class="pt-5">個人資料的搜集、處理與目的 </h6>                        
+                    <p>Mobii! 所蒐集之個人資料將用於提供服務、維持網站營運及提供技術支援和資安保護： </p>                        
+                    <p>為提升服務品質，我們會依照所提供服務之性質記錄您在Mobii! 平台網站瀏覽或查詢時伺服器自行產生的相關記錄，包括您使用連線設備的IP位址、使用時間、使用的瀏覽器、瀏覽及點選資料紀錄等，本網站會對個別連線者的瀏覽器予以標示，歸納使用者瀏覽器在網站內所瀏覽的網頁。但是這些資料僅供作流量分析和網路行為動態調查，以便於改善本公司相關網站的服務品質，這些資料也只是使用者瀏覽與點擊總量上或商業消費趨勢上的分析。在Mobii! 刊登廣告連結之廠商，或與Mobii! 連結的外部網站，也可能透過其他的方式蒐集您的個人資料。對於您主動提供的個人資訊，這些廣告廠商或連結網站均可能有其個別的隱私權保護政策，Mobii! 以外網站的個人資料蒐集與處理措施將不適用Mobii! 的隱私權保護政策，恕Mobii! 無法負擔任何相關責任。 </p>
+                    <p>您的個人資料均會被適當地保存在Mobii! 的資料庫系統中。就該資訊部分，任何人均需在Mobii! 公司嚴格訂定的資料瀏覽權限管理規範下，始得於商業行為上必要的範圍進行資料之取得與利用，非經公司內部政策確實授權的人員，將難以透過任何方法取得或在其他用途上利用您的個人資料。Mobii! 將依法律規定、於您同意之服務條款中所訂之特定目的及範圍內，進行您的個人資料之處理及利用，Mobii! 不會超出特定目的以外的用途，除了商業用途上不帶個人識別應的消費趨勢分析外，Mobii! 亦不會任意對其他第三者揭露。
+                        Mobii! 為了行銷、客戶管理與服務、提供網路電子商務服務以履行法定或交易合約義務、保護當事人及相關利害關係人之權益、售後服務、以及經營合於營業登記項目或組織章程所定之事業營運內容等目的，依照各該服務之性質，可能蒐集得以直接或間接識別使用者身分之個人資料。</p>                        
+                <h6 class="pt-5">個人資料的利用 </h6>                        
+                    <p>Mobii! 所搜集的足以識別使用者身分的個人資料，將會依據個人資料保護法受到完善的保護，Mobii! 將特別注重該資料庫的資訊安全，以及制定內部相關資訊取得之層級權限、資訊使用用途與規範辦法，僅供本公司於其內部、依照法定允許之蒐集之目的及範圍內進行處理和利用，除了下述特定情形，否則本公司不會將足以識別使用者身分的個人資料提供、出售或以其他方式提供給第三人（包括境內及境外）、或移作蒐集目的以外之使用。在合約有效期間內，以及法令所定應保存之期間內，本公司會持續妥善保管、處理及利用您的相關資料。，若本公司未事先另行通知您並獲得同意，外部公司均無權以「帶有個人識別性」的方式使用本公司提供的個人資料用於提供商品資訊或服務以外的其他用途。</p>
+                    <p>為了提供您其他服務或優惠權益，Mobii! 需要與提供該服務或優惠之第三者共用您的資料時，我們會在活動方案時即揭露充分說明並告知相關資訊，您可以自由選擇是否接受這項服務或優惠。若您拒絕，也可能影響您參與該服務或優惠活動的權益。</p>
+                    <p>若司法檢調單位或其他政府主管機關經合法正式的程序要求本公司提供您的個人資訊時，依照維護社會整體利益的目的，Mobii!將依照檢調單位予以提供，並不再另行通知。</p>
+                    <p>為了增加整體服務內容的豐富與多樣化程度，透過本網站所播送推廣的內容如果也包含非本公司所提供的服務或其他優惠權益訊息，我們將會在活動時事先揭露，您可以事後決定您是否願意接受Mobii!所提供的此類特定服務或促銷活動內容。本網站將在註冊登錄程序中先行取得您的同意後，可能傳送優惠活動、問卷調查資料或電子郵件給您。除了在該資料或電子郵件上註明是由本網站發送，也會盡量在該資料或電子郵件上提供您能隨時停止接收這些資料或電子郵件的方法、說明或功能連結。</p>
+                    <p>為了保護使用者個人隱私，本公司無法為您查詢其他使用者的帳號資料及其他個人資料，請您見諒！若您有相關法律上問題需查閱他人資料時，請務必遵循法律規定程序，向警察或司法檢調單位提出告訴，若依照警察機關或檢調單位明令本公司將全力配合警察或司法檢調單位調查並提供所有相關資料，以協助維持公益及社會秩序，或避免犯罪之產生或受害者範圍擴大！</p>
+                <h6 class="pt-5">資料安全 </h6>                        
+                    <p>為保障您的隱私及安全，您在本網站所使用的相關帳號、密碼與資料，本公司將以合於當時產業一般合理期待水準的標準之合理技術及程序，維護您個人資料之安全。 </p>
+                <h6 class="pt-5">個人資料之權利 </h6>                        
+                    <p>本公司將僅於事業營運特定目的存在之期間內，或是於個人資料保護法之規定期間內，蒐集並利用您的資料。在本公司收集與保管資料的期間中，依照中華民國的個人資料保護法或歐盟GDPR，您同時也享有查詢或請求閱覽、請求製給複製本、請求補充或更正、請求停止蒐集、處理或利用、請求刪除資料、請求攜出資料、請求查閱您本人於本公司網站內所留下資料之法定權利。如欲提出上述請求，請來電或來信提供相關訊息及您的需求至本公司的客服專線或客服信箱：<a href="mailto:mobiics@mobii.ai">mobiics@mobii.ai</a>，本公司於確實收到您的通知後，盡快通知相關部門處理您的要求、並儘速告知您相關處理進度及結果。當您提出前述請求時，您明白該請求將可能需要一定的後續處理作業時間，並可能Mobii! 無法繼續提供您部分或全部功能。</p>                        
+                <h6 class="pt-5">自我保護措施 </h6>                        
+                    <p>請妥善保管您在Mobii! 的帳號、密碼或個人資料，不要將任何資料，尤其是密碼提供給任何人或其他機構。</p>                        
+                    <p>在您使用完本網站所提供的服務後，特別是使用別人的電腦或公共場所電腦時，請務必記得在瀏覽網站完畢後登出，並盡可能移除電腦就使用帳號的紀錄。若您是與他人共享電腦或使用公共電腦，切記要關閉瀏覽器視窗，以防止他人於不經意間即讀取了您的個人資料或信件。此類細部行為將有助於保護您的個人資料。倘若您發現有任何非經授權的第三者冒用您的帳號，進行任何詢問或訂購時，請立即通知本公司，本公司將於確認您身分後即進行後續對應。
+                        若您不願意提供各服務或交易所要求的相關個人資料予本公司，或不同意本公司就該等個人資料依法令規定、以及本隱私權政策聲明及相關告知內容為有關之個人資料蒐集、處理、利用及國際傳輸，本公司將尊重您的決定，但依照各服務之性質或條件，您可能因此拒絕提供資訊之行為而導致無法使用該等服務或完成相關交易，且此時，鑒於資訊不足應保護雙方交易安全的角度，本公司將保留是否同意繼續提供該等相關服務給使用者，或讓使用者完成相關交易之權利。</p>                        
+                <h6 class="pt-5">第三方連結 </h6>                        
+                    <p>Mobii! 可能會於平台網站/手機應用程式服務內嵌方式提供第三方外部連結，如果您點擊該連結進入第三方網站，離開Mobii! 平台網站/手機應用程式後，關於您的個人資料之蒐集、處理、利用都應受該外部網站之隱私權政策或該外部網站的相關規範，故建議您於透過Mobii! 使用該網站前，先行詳閱其隱私權政策，就第三方網站如何蒐集及利用您的個人資料，將為該第三方網站的行為，與Mobii! 無涉，恕Mobii! 難以擔負相關責任。</p>                        
+                    <p class="pb-5">再次感謝您的耐心閱讀！ </p> 
+                <!-- <a href="#private" class="BackTop toTop-arrow"></a> -->
+                <!-- <button type="button" class="btn toTop-arrow totop"></button> -->
+            </div>
+        </div>    
+        <!--關於2-->
+        <div class="myabout">
+            <div class="headerbox container title-box">
+                <div class="item icon-btn">                        
+                    <button class="btn px-0" onclick="backLayer();" data-toggle="tooltip" data-placement="bottom" title="回上一頁">
+                        <i class="material-icons">&#xe314;</i>
+                    </button>
+                </div>
+                <div class="item title-name">關於</div>
+                <div class="item icon-btn"></div>
+            </div>
+            <div class="my-list-box">
+                <p>
+                    
+                </p>
+            </div>
+        </div>
+ 
+    </div> 
+
+    <!-- 城市/行政區選單 -->
+    <div class="sortlayer">
+        <div class="city">
+            <div id="open-pagebox">
+                <div class="open-page-title flex-inline-between">
+                    <div class="title-icon">
+                        <button class="btn" onclick="backsortLayer();">
+                            <i class="material-icons">&#xe314;</i>
+                        </button>
+                    </div>
+                    <div class="title-txt">
+                        城市
+                    </div>
+                    <div class="title-txt">
+                    </div>
+                </div>
+                <ul class="open-page-ul" id="citylist">
+                    <label>北北基宜</label>
+                    <li class="flex-inline-between" onclick="callsortLayer('.dist');" value="臺北市">
+                        <div class="item">
+                            臺北市
+                        </div>
+                        <div class="item">
+                            <i class="fas fa-check"></i>
+                        </div>    
+                    </li>
+                    <li class="flex-inline-between" onclick="callsortLayer('.dist');" value="新北市">
+                        <div class="item">
+                            新北市
+                        </div>
+                        <div class="item">
+                            <i class="fas fa-check"></i>
+                        </div>    
+                    </li>
+                    <li class="flex-inline-between" onclick="callsortLayer('.dist');" value="基隆市">
+                        <div class="item">
+                            基隆市
+                        </div>
+                        <div class="item">
+                            <i class="fas fa-check"></i>
+                        </div>    
+                    </li>
+                    <li class="flex-inline-between" onclick="callsortLayer('.dist');" value="宜蘭縣">
+                        <div class="item">
+                            宜蘭縣
+                        </div>
+                        <div class="item">
+                            <i class="fas fa-check"></i>
+                        </div>    
+                    </li>
+                    <label>桃竹苗</label>
+                    <li class="flex-inline-between" onclick="callsortLayer('.dist');" value="桃園縣">
+                        <div class="item">
+                            桃園縣
+                        </div>
+                        <div class="item">
+                            <i class="fas fa-check"></i>
+                        </div>    
+                    </li>
+                    <li class="flex-inline-between" onclick="callsortLayer('.dist');" value="新竹市">
+                        <div class="item">
+                            新竹市
+                        </div>
+                        <div class="item">
+                            <i class="fas fa-check"></i>
+                        </div>    
+                    </li>
+                    <li class="flex-inline-between" onclick="callsortLayer('.dist');" value="新竹縣">
+                        <div class="item">
+                            新竹縣
+                        </div>
+                        <div class="item">
+                            <i class="fas fa-check"></i>
+                        </div>    
+                    </li>
+                    <li class="flex-inline-between" onclick="callsortLayer('.dist');" value="苗栗縣">
+                        <div class="item">
+                            苗栗縣
+                        </div>
+                        <div class="item">
+                            <i class="fas fa-check"></i>
+                        </div>    
+                    </li>
+                    <label>中彰投</label>
+                    <li class="flex-inline-between" onclick="callsortLayer('.dist');" value="台中市">
+                        <div class="item">
+                            台中市
+                        </div>
+                        <div class="item">
+                            <i class="fas fa-check"></i>
+                        </div>    
+                    </li>
+                    <li class="flex-inline-between" onclick="callsortLayer('.dist');" value="彰化縣">
+                        <div class="item">
+                            彰化縣
+                        </div>
+                        <div class="item">
+                            <i class="fas fa-check"></i>
+                        </div>    
+                    </li>
+                    <li class="flex-inline-between" onclick="callsortLayer('.dist');" value="南投縣">
+                        <div class="item">
+                            南投縣
+                        </div>
+                        <div class="item">
+                            <i class="fas fa-check"></i>
+                        </div>    
+                    </li>
+                    <label>雲嘉南</label>
+                    <li class="flex-inline-between" onclick="callsortLayer('.dist');" value="嘉義市">
+                        <div class="item">
+                            嘉義市
+                        </div>
+                        <div class="item">
+                            <i class="fas fa-check"></i>
+                        </div>    
+                    </li>
+                    <li class="flex-inline-between" onclick="callsortLayer('.dist');" value="嘉義縣">
+                        <div class="item">
+                            嘉義縣
+                        </div>
+                        <div class="item">
+                            <i class="fas fa-check"></i>
+                        </div>    
+                    </li>
+                    <li class="flex-inline-between" onclick="callsortLayer('.dist');" value="雲林縣">
+                        <div class="item">
+                            雲林縣
+                        </div>
+                        <div class="item">
+                            <i class="fas fa-check"></i>
+                        </div>    
+                    </li>
+                    <li class="flex-inline-between" onclick="callsortLayer('.dist');" value="台南市">
+                        <div class="item">
+                            台南市
+                        </div>
+                        <div class="item">
+                            <i class="fas fa-check"></i>
+                        </div>    
+                    </li>
+                    <label>高屏澎</label>
+                    <li class="flex-inline-between" onclick="callsortLayer('.dist');" value="高雄市">
+                        <div class="item">
+                            高雄市
+                        </div>
+                        <div class="item">
+                            <i class="fas fa-check"></i>
+                        </div>    
+                    </li>
+                    <li class="flex-inline-between" onclick="callsortLayer('.dist');" value="澎湖縣">
+                        <div class="item">
+                            澎湖縣
+                        </div>
+                        <div class="item">
+                            <i class="fas fa-check"></i>
+                        </div>    
+                    </li>
+                    <li class="flex-inline-between" onclick="callsortLayer('.dist');" value="屏東縣">
+                        <div class="item">
+                            屏東縣
+                        </div>
+                        <div class="item">
+                            <i class="fas fa-check"></i>
+                        </div>    
+                    </li>
+                    <label>花東</label>
+                    <li class="flex-inline-between" onclick="callsortLayer('.dist');" value="台東縣">
+                        <div class="item">
+                            台東縣
+                        </div>
+                        <div class="item">
+                            <i class="fas fa-check"></i>
+                        </div>    
+                    </li>
+                    <li class="flex-inline-between" onclick="callsortLayer('.dist');" value="花蓮縣">
+                        <div class="item">
+                            花蓮縣
+                        </div>
+                        <div class="item">
+                            <i class="fas fa-check"></i>
+                        </div>    
+                    </li>
+                    <label>金馬</label>
+                    <li class="flex-inline-between" onclick="callsortLayer('.dist');" value="金門縣">
+                        <div class="item">
+                            金門縣
+                        </div>
+                        <div class="item">
+                            <i class="fas fa-check"></i>
+                        </div>    
+                    </li>
+                    <li class="flex-inline-between" onclick="callsortLayer('.dist');" value="連江縣">
+                        <div class="item">
+                            連江縣
+                        </div>
+                        <div class="item">
+                            <i class="fas fa-check"></i>
+                        </div>    
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+        <div class="dist">
+            <div id="open-pagebox1">
+                <div class="open-page-title flex-inline-between">                
+                    <div class="close-btn">
+                        <button class="btn" onclick="backsortLayer();">
+                            <i class="material-icons">&#xe314;</i>
+                        </button>
+                    </div>
+                    <div class="title-txt">
+                        行政區
+                    </div>
+                    <div class="title-txt">
+                    </div>
+                </div>
+                <ul class="open-page-ul" id="distlist">
+                    <!-- dist動態內容 -->
+                </ul>
+            </div>
+        </div>
+    </div> 
+
+</div> 
+<div id="open-mask"></div>
+
+<div id="loginhtml"></div>
+<div id="footerMobii"></div>
+  
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="../js/vendor/bs4/js/jquery-3.2.1.min.js"></script>
+    <!-- Latest compiled and minified JavaScript -->    
+    <script src="../js/vendor/bs4/js/popper.min.js"></script>
+    <script src="../js/vendor/bs4/js/bootstrap.min.js"></script>
+    <script src="../js/vendor/jquery-editable-select-master/dist/jquery-editable-select.js"></script>
+
+    <!-- vendor js -->
+    <script src="../js/vendor/swiper/js/swiper.min.js"></script>
+    <script src="../js/vendor/imgLiquid.js"></script>
+    <script src="../js/vendor/popoPicker-master/js/popoPicker.js"></script>
+
+    <!-- custom js -->    
+    <script src="../js/animateCss.js"></script>
+    <script>
+        //popoPicker Date
+        new popoDateTime('.js-date',{
+            container:'.input-box',
+            time: false
+        });
+        new popoDateTime('.js-date1',{
+            container:'.input-box1',
+            time: false
+        });
+        new popoDateTime('.js-date2',{
+            container:'.input-box2',
+            time: false
+        });
+        new popoDateTime('.js-date3',{
+            container:'.input-box3',
+            time: false
+        });
+        new popoDateTime('.js-date4',{
+            container:'.input-box4',
+            time: false
+        });
+        //cityzip
+        $(document).ready(function() { 
+            var JData = [{id:"t1", telname:"中國大陸", telcode:"86"},
+                        {id:"t2", telname:"台灣", telcode:"886"},
+                        {id:"t3", telname:"香港", telcode:"852"},
+                        {id:"t4", telname:"印度", telcode:"91"},
+                        {id:"t5", telname:"馬爾地夫", telcode:"960"},
+                        {id:"t6", telname:"印尼", telcode:"62"},
+                        {id:"t7", telname:"伊朗", telcode:"98"},
+                        {id:"t8", telname:"伊拉克", telcode:"964"},
+                        {id:"t9", telname:"以色列", telcode:"972"},
+                        {id:"t10", telname:"日本", telcode:"81"},
+                        {id:"t11", telname:"所羅門群島", telcode:"677"},
+                        {id:"t12", telname:"斯里蘭卡", telcode:"94"},
+                        {id:"t13", telname:"泰國", telcode:"66"},
+                        {id:"t14", telname:"南韓", telcode:"82"},
+                        {id:"t15", telname:"科威特", telcode:"965"},
+                        {id:"t16", telname:"巴基斯坦", telcode:"92"},
+                        {id:"t17", telname:"澳門", telcode:"853"},
+                        {id:"t18", telname:"馬來西亞", telcode:"60"},
+                        {id:"t19", telname:"菲律賓", telcode:"63"},
+                        {id:"t20", telname:"沙烏地阿拉伯", telcode:"966"},
+                        {id:"t21", telname:"新加坡", telcode:"65"},
+                        {id:"t22", telname:"巴布亞 新幾內亞", telcode:"675"},
+                        {id:"t23", telname:"尼泊爾", telcode:"977"},
+                        {id:"t24", telname:"葉門", telcode:"66"},
+                        {id:"t25", telname:"土耳其", telcode:"90"},
+                        {id:"t26", telname:"越南", telcode:"84"},
+                        {id:"t27", telname:"葡萄牙", telcode:"351"},
+                        {id:"t28", telname:"西班牙", telcode:"34"},
+                        {id:"t29", telname:"瑞典", telcode:"46"},
+                        {id:"t30", telname:"瑞士", telcode:"41"},
+                        {id:"t31", telname:"英國", telcode:"44"},
+                        {id:"t32", telname:"德國", telcode:"49"},
+                        {id:"t33", telname:"俄羅斯", telcode:"7"},
+                        {id:"t34", telname:"匈牙利", telcode:"36"},
+                        {id:"t35", telname:"冰島", telcode:"354"},
+                        {id:"t36", telname:"愛爾蘭", telcode:"353"},
+                        {id:"t37", telname:"馬爾他", telcode:"356"},
+                        {id:"t38", telname:"希臘", telcode:"30"},
+                        {id:"t39", telname:"義大利", telcode:"39"},
+                        {id:"t40", telname:"盧森堡", telcode:"352"},
+                        {id:"t41", telname:"摩洛哥", telcode:"377"},
+                        {id:"t42", telname:"荷蘭", telcode:"31"},
+                        {id:"t43", telname:"挪威", telcode:"47"},
+                        {id:"t44", telname:"波蘭", telcode:"48"},
+                        {id:"t45", telname:"羅馬尼亞", telcode:"40"},
+                        {id:"t46", telname:"奧地利", telcode:"43"},
+                        {id:"t47", telname:"比利時", telcode:"32"},
+                        {id:"t48", telname:"丹麥", telcode:"45"},
+                        {id:"t49", telname:"芬蘭", telcode:"358"},
+                        {id:"t50", telname:"法國", telcode:"358"},
+                        {id:"t51", telname:"阿根廷", telcode:"54"},
+                        {id:"t52", telname:"美國", telcode:"1"},
+                        {id:"t53", telname:"加拿大", telcode:"1"},
+                        {id:"t54", telname:"智利", telcode:"56"},
+                        {id:"t55", telname:"哥倫比亞", telcode:"57"},
+                        {id:"t56", telname:"多明尼亞", telcode:"1809"},
+                        {id:"t57", telname:"巴拿馬", telcode:"507"},
+                        {id:"t58", telname:"宏都拉斯", telcode:"504"},
+                        {id:"t59", telname:"尼加拉瓜", telcode:"505"},
+                        {id:"t60", telname:"厄瓜多爾", telcode:"593"},
+                        {id:"t61", telname:"墨西哥", telcode:"52"},
+                        {id:"t62", telname:"烏拉圭", telcode:"598"},
+                        {id:"t63", telname:"祕魯", telcode:"51"},
+                        {id:"t64", telname:"瓜地馬拉", telcode:"502"},
+                        {id:"t65", telname:"哥斯大黎加", telcode:"506"},
+                        {id:"t66", telname:"薩爾瓦多", telcode:"503"},
+                        {id:"t67", telname:"巴西", telcode:"55"},
+                        {id:"t68", telname:"澳洲", telcode:"61"},
+                        {id:"t69", telname:"帛琉", telcode:"680"},
+                        {id:"t70", telname:"斐濟", telcode:"679"},
+                        {id:"t71", telname:"關島", telcode:"1671"},
+                        {id:"t72", telname:"紐西蘭", telcode:"64"},
+                        {id:"t73", telname:"摩洛哥", telcode:"212"},
+                        {id:"t74", telname:"奈及利亞", telcode:"234"},
+                        {id:"t75", telname:"南非", telcode:"27"},
+                        {id:"t76", telname:"肯亞", telcode:"254"},
+                        {id:"t77", telname:"坦薩尼亞", telcode:"255"},
+                        {id:"t78", telname:"阿爾及利亞", telcode:"213"},
+                        {id:"t79", telname:"埃及", telcode:"20"},];
+            var NumOfJData = JData.length;
+            $('.telcode').on('click',function(){
+                $('.telcodelist').removeClass('d-none').animateCss('slideInRight', '+d-block').before("<div class='modal-backdrop' style='z-index:0'></div>");
+                $('#open-pagebox').addClass('container');
+                if($('#telcodels').children().length === 0){
+                    for (var i = 0; i < NumOfJData; i++) {
+                        $('#telcodels').append($("<li class='"+JData[i]['id']+" flex-inline-between "+(($('.telcode').attr('id')==JData[i]['id']) ? 'active': '')+"' value='"+(JData[i]['telcode'])+"'>").append($("<div class='item'>").append(JData[i]['telname'])).append("<div class='item'>"+(JData[i]['telcode'])+"</div>"));
+                    };
+                }else{       
+                    $('#telcodels li').each(function(){ 
+                        ($(this).attr('class').split(/\s+/)[0]==$('.telcode').attr('id')) ? $(this).addClass('active') : $(this).removeClass('active');
+                    });      
+                }                
+                $('#telcodels li').on('click',function(){
+                    $('.telcode').empty().attr({'value':($(this).val()),'id':($(this).attr('class').split(/\s+/)[0])}).append($(this).children('div:first').text()+'(+'+$(this).val()+')');
+                    $('.telcodelist').animateCss('slideOutRight', '-d-block').addClass('d-none').siblings('div.modal-backdrop').remove();
+                });
+                $('.closelayer').on('click',function(){
+                    $('.telcodelist').animateCss('slideOutRight', '-d-block').addClass('d-none').siblings('div.modal-backdrop').remove();
+                });
+
+            });
+        });
+
+
+        // (edit, clear, back, submit) button & input control
+        // $('.edit-btn').on('click',function(){
+        //     var btn = $(this).parents(".title-box");
+        //     $(btn).find(".submit-btn, .clear-btn").removeClass('d-none').addClass('d-block');
+        //     $(btn).find(".edit-btn, .back-btn").removeClass('d-block').addClass('d-none');
+        //     $(btn).siblings(".my-list-box").find("div.input-box>input").removeClass('d-none').addClass('d-block');
+        //     $(btn).siblings(".my-list-box").find("div.infohas").removeClass('d-block').addClass('d-none');
+        // });
+        // $('.clear-btn, .submit-btn').on('click',function(){
+        //     var btn = $(this).parents(".title-box");
+        //     $(btn).find('.edit-btn, .back-btn').removeClass('d-none').addClass('d-block');
+        //     $(btn).find('.submit-btn, .clear-btn').removeClass('d-block').addClass('d-none');
+        //     $(btn).siblings(".my-list-box").find("div.input-box>input").removeClass('d-block').addClass('d-none');
+        //     $(btn).siblings(".my-list-box").find("div.infohas").removeClass('d-none').addClass('d-block');
+        // });
+
+        // target to top
+        // $('.totop').on('click', function () {
+        // $(this).parents().find('div').scrollTop(0);
+        // });
+
+
+        //dist choosen
+        var distdata = {
+        "臺北市" : [["中正區","大同區","中山區","松山區","大安區","萬華區","信義區","士林區","北投區","內湖區","南港區","文山區"],["100","103","104","105","106","108","110","111","112","114","115","116"]],
+        "基隆市" : [["仁愛區","信義區","中正區","中山區","安樂區","暖暖區","七堵區"],["200","201","202","203","204","205","206"]],
+        "新北市" : [["萬里區","金山區","板橋區","汐止區","深坑區","石碇區","瑞芳區","平溪區","雙溪區","貢寮區","新店區","坪林區","烏來區","永和區","中和區","土城區","三峽區","樹林區","鶯歌區","三重區","新莊區","泰山區","林口區","蘆洲區","五股區","八里區","淡水區","三芝區","石門區"],["207","208","220","221","222","223","224","226","227","228","231","232","233","234","235","236","237","238","239","241","242","243","244","247","248","249","251","252","253"]],
+        "宜蘭縣" : [["宜蘭市","頭城鎮","礁溪鄉","壯圍鄉","員山鄉","羅東鎮","三星鄉","大同鄉","五結鄉","冬山鄉","蘇澳鎮","南澳鄉","釣魚台列嶼"],["260","261","262","263","264","265","266","267","268","269","270","272","290"]],
+        "桃園市" : [["中壢區","平鎮區","龍潭區","楊梅區","新屋區","觀音區","桃園區","龜山區","八德區","大溪區","復興區","大園區","蘆竹區"],["320","324","325","326","327","328","330","333","334","335","336","337","338"]],
+        "新竹市" : [["東區","北區","香山區"],["300","300","300"]],
+        "新竹縣" : [["竹北市","湖口鄉","新豐鄉","新埔鎮","關西鎮","芎林鄉","寶山鄉","竹東鎮","五峰鄉","橫山鄉","尖石鄉","北埔鄉","峨眉鄉"],["302","303","304","305","306","307","308","310","311","312","313","314","315"]],
+        "苗栗縣" : [["竹南鎮","頭份市","三灣鄉","南庄鄉","獅潭鄉","後龍鎮","通霄鎮","苑裡鎮","苗栗市","造橋鄉","頭屋鄉","公館鄉","大湖鄉","泰安鄉","銅鑼鄉","三義鄉","西湖鄉","卓蘭鎮"],["350","351","352","353","354","356","357","358","360","361","362","363","364","365","366","367","368","369"]],
+        "台中市" : [["中區","東區","南區","西區","北區","北屯區","西屯區","南屯區","太平區","大里區","霧峰區","烏日區","豐原區","后里區","石岡區","東勢區","和平區","新社區","潭子區","大雅區","神岡區","大肚區","沙鹿區","龍井區","梧棲區","清水區","大甲區","外埔區","大安區"],["400","401","402","403","404","406","407","408","411","412","413","414","420","421","422","423","424","426","427","428","429","432","433","434","435","436","437","438","439"]],
+        "彰化縣" : [["彰化市","芬園鄉","花壇鄉","秀水鄉","鹿港鎮","福興鄉","線西鄉","和美鎮","伸港鄉","員林市","社頭鄉","永靖鄉","埔心鄉","溪湖鎮","大村鄉","埔鹽鄉","田中鎮","北斗鎮","田尾鄉","埤頭鄉","溪州鄉","竹塘鄉","二林鎮","大城鄉","芳苑鄉","二水鄉"],["500","502","503","504","505","506","507","508","509","510","511","512","513","514","515","516","520","521","522","523","524","525","526","527","528","530"]],
+        "南投縣" : [["南投市","中寮鄉","草屯鎮","國姓鄉","埔里鎮","仁愛鄉","名間鄉","集集鎮","水里鄉","魚池鄉","信義鄉","竹山鎮","鹿谷鄉"],["540","541","542","544","545","546","551","552","553","555","556","557","558"]],
+        "嘉義市" : [["東區","西區"],["600","600"]],
+        "嘉義縣" : [["番路鄉","梅山鄉","竹崎鄉","阿里山","中埔鄉","大埔鄉","水上鄉","鹿草鄉","太保市","朴子市","東石鄉","六腳鄉","新港鄉","民雄鄉","大林鎮","溪口鄉","義竹鄉","布袋鎮"],["602","603","604","605","606","607","608","611","612","613","614","615","616","621","622","623","624","625"]],
+        "雲林縣" : [["斗南鎮","大埤鄉","虎尾鎮","土庫鎮","褒忠鄉","東勢鄉","台西鄉","崙背鄉","麥寮鄉","斗六市","林內鄉","古坑鄉","莿桐鄉","西螺鎮","二崙鄉","北港鎮","水林鄉","口湖鄉","四湖鄉","元長鄉"],["630","631","632","633","634","635","636","637","638","640","643","646","647","648","649","651","652","653","654","655"]],
+        "台南市" : [["中西區","東區","南區","北區","安平區","安南區","永康區","歸仁區","新化區","左鎮區","玉井區","楠西區","南化區","仁德區","關廟區","龍崎區","官田區","麻豆區","佳里區","西港區","七股區","將軍區","學甲區","北門區","新營區","後壁區","白河區","東山區","六甲區","下營區","柳營區","鹽水區","善化區","大內區","山上區","新市區","安定區"],["700","701","702","704","708","709","710","711","712","713","714","715","716","717","718","719","720","721","722","723","724","725","726","727","730","731","732","733","734","735","736","737","741","742","743","744","745"]],
+        "高雄市" : [["新興區","前金區","苓雅區","鹽埕區","鼓山區","旗津區","前鎮區","三民區","楠梓區","小港區","左營區","仁武區","大社區","東沙群島","南沙群島","岡山區","路竹區","阿蓮區","田寮區","燕巢區","橋頭區","梓官區","彌陀區","永安區","湖內區","鳳山區","大寮區","林園區","鳥松區","大樹區","旗山區","美濃區","六龜區","內門區","杉林區","甲仙區","桃源區","那瑪夏區","茂林區","茄萣區"],["800","801","802","803","804","805","806","807","811","812","813","814","815","817","819","820","821","822","823","824","825","826","827","828","829","830","831","832","833","840","842","843","844","845","846","847","848","849","851","852"]],
+        "澎湖縣" : [["馬公市","西嶼鄉","望安鄉","七美鄉","白沙鄉","湖西鄉"],["880","881","882","883","884","885"]],
+        "金門縣" : [["金沙鎮","金湖鎮","金寧鄉","金城鎮","烈嶼鄉","烏坵鄉"],["890","891","892","893","894","896"]],
+        "屏東縣" : [["屏東市","三地門鄉","霧台鄉","瑪家鄉","九如鄉","里港鄉","高樹鄉","鹽埔鄉","長治鄉","麟洛鄉","竹田鄉","內埔鄉","萬丹鄉","潮州鎮","泰武鄉","來義鄉","萬巒鄉","崁頂鄉","新埤鄉","南州鄉","林邊鄉","東港鎮","琉球鄉","佳冬鄉","新園鄉","枋寮鄉","枋山鄉","春日鄉","獅子鄉","車城鄉","牡丹鄉","恆春鎮","滿州鄉"],["900","901","902","903","904","905","906","907","908","909","911","912","913","920","921","922","923","924","925","926","927","928","929","931","932","940","941","942","943","944","945","946","947"]],
+        "台東縣" : [["台東市","綠島鄉","蘭嶼鄉","延平鄉","卑南鄉","鹿野鄉","關山鎮","海端鄉","池上鄉","東河鄉","成功鎮","長濱鄉","太麻里","金峰鄉","大武鄉","達仁鄉"],["950","951","952","953","954","955","956","957","958","959","961","962","963","964","965","966"]],
+        "花蓮縣" : [["花蓮市","新城鄉","秀林鄉","吉安鄉","壽豐鄉","鳳林鎮","光復鄉","豐濱鄉","瑞穗鄉","萬榮鄉","玉里鎮","卓溪鄉","富里鄉"],["970","971","972","973","974","975","976","977","978","979","981","982","983"]],
+        "連江縣" : [["南竿鄉","北竿鄉","莒光鄉","東引鄉"],["209","210","211","212"]]            
+    };
+    var citychoosen = $('.citydefault').attr('value'),
+        distchoosen = $('.distdefault').attr('value'),
+        disttxt;
+    $('.citydefault').on('click',function(){
+        //city active
+        $('#citylist li').each(function() {
+            (String($(this).attr('value'))==String($('.citydefault').attr('value')))? $(this).addClass('active') : $(this).removeClass('active');
+        }); 
+    });
+    $('.distdefault').on('click',function(){
+        //dist active
+        var citydata = $(this).attr('data-city');
+        var dist = distdata[citydata][0];
+        var zipcode = distdata[citydata][1];
+        $('#distlist').empty();
+        $.each(dist,function(idx,values){
+            $('#distlist').append($("<li class='flex-inline-between "+((zipcode[idx]===distchoosen) ? 'active': '')+"' onclick='backsortLayer();backsortLayer()' value='"+zipcode[idx]+"'>").append($("<div class='item'>").append(values)).append("<div class='item'><i class='fas fa-check'></i></div>"));
+        });
+        //skip citylist and press distlist
+        $('#distlist li').each(function() {
+            (String($(this).attr('value'))==String($('.distdefault').attr('value')))? $(this).addClass('active') : $(this).removeClass('active');
+        }); 
+        $('#distlist li').on('click',function(){
+            //return value
+            distchoosen = $(this).attr('value');
+            disttxt = $.trim($(this).text());
+            $('.citydefault').attr('value',citychoosen).html(citychoosen+"<i class='material-icons'>&#xe315;</i>");
+            $('.distdefault').attr('value',distchoosen).attr('data-city',citychoosen).html(disttxt+"<i class='material-icons'>&#xe315;</i>");
+            $('.zipdefault').attr('value',distchoosen);
+        });
+    });
+    //press citylist
+    $('#citylist li').on('click',function(){
+        //dist create
+        citychoosen = $(this).attr('value');
+        $('#distlist').empty();
+        var dist = distdata[citychoosen][0];
+        var zipcode = distdata[citychoosen][1];
+        $.each(dist,function(idx,values){
+            $('#distlist').append($("<li class='flex-inline-between "+((zipcode[idx]===distchoosen) ? 'active': '')+"' onclick='backsortLayer();backsortLayer()' value='"+zipcode[idx]+"'>").append($("<div class='item'>").append(values)).append("<div class='item'><i class='fas fa-check'></i></div>"));
+        });
+        $('#distlist li').on('click',function(){
+            //return value
+            distchoosen = $(this).attr('value');
+            disttxt = $.trim($(this).text());
+            $('.citydefault').attr('value',citychoosen).html(citychoosen+"<i class='material-icons'>&#xe315;</i>");
+            $('.distdefault').attr('value',distchoosen).attr('data-city',citychoosen).html(disttxt+"<i class='material-icons'>&#xe315;</i>");
+            $('.zipdefault').attr('value',distchoosen);
+        });
+    });
+
+    //bootstrap validation
+    (function () {
+        "use strict";
+        window.addEventListener(
+            "load",
+            function () {
+                // Fetch all the forms we want to apply custom Bootstrap validation styles to
+                var forms = document.getElementsByClassName("needs-validation");
+                // Loop over them and prevent submission
+                var validation = Array.prototype.filter.call(forms, function (form) {
+                    form.addEventListener(
+                        "submit",
+                        function (event) {
+                            if (form.checkValidity() === false) {
+                                event.preventDefault();
+                                event.stopPropagation();
+                            }
+                            form.classList.add("was-validated");
+                        },
+                        false
+                    );
+                });
+            },
+            false
+        );
+    })();    
+
+    //phone 6 input
+    var demo=document.getElementById('myphone6');
+        input=demo.getElementsByTagName('input');
+        var iNow=0;
+        type   = !-[1,] ? 'onpropertychange' : 'oninput',
+                limit  = 1; //滿足自動切換焦點的字元數
+        for(var i=0;i<input.length-1;i++){
+            input[i].index=i;
+            input[i][type]=function () {
+                iNow=this.index;
+                var that=this;
+                setTimeout(function () {
+                   that.value.length>limit-1&&input[iNow+1].focus();
+                },0)
+            }
+        }
+
+
+    </script>
+
+    <script>    
+        $("#loginhtml").load("../login.html");
+        $("#footerMobii").load("../footerMobii.html");
+    </script>
+    <script src="../js/index.js"></script>
+</body>
+
+</html>
