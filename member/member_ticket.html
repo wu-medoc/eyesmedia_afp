@@ -467,9 +467,9 @@
             var filter = $(this).data('filter');
             $('#' + filter).toggleClass('is-open');
             $('#' + filter).siblings().removeClass('is-open');
-            $( ".mask-container" ).removeClass("d-block");
-            if ($( "button.filter-item" ).hasClass("active")) {
-                $( ".mask-container" ).addClass("d-block");
+            $('#' + filter).parents('.tab-pane').children().find(".mask-container").removeClass("d-block");
+            if ($(this).hasClass("active")) {
+                $('#' + filter).parents('.tab-pane').children().find(".mask-container").addClass("d-block");
             }
         })
         // 篩選列表勾選控制
