@@ -183,6 +183,14 @@
         $("#footerMobii").load("../footerMobii.html");         
         $("#footerMobii").hide(); 
         $( document ).ready(function() {
+            //hash判斷是否為車票
+            var hashVal=window.location.hash.split("#")[1];
+            if(hashVal=="tk"){
+                $('.ticket-mark, .fixed-btn, .tk-main .small-80').hide();
+                $('.header-secondary .title-name').text("票券詳情");
+                $('.ticket-content .img-box img').attr('src','https://picsum.photos/300/200/?random=2');
+                $('.badge').html("<img src='../img/share/2600.png'>購物");
+            }
 
             //get stepval
             var stepval = getCookie('step');
@@ -209,15 +217,6 @@
             oneLayer.length=0;
         };
 
-        //判斷是車票
-        var hashVal=window.location.hash.split("#")[1];
-        if(hashVal=="tk"){
-            $('.ticket-mark, .fixed-btn, .tk-main .small-80').hide();
-            $('.header-secondary .title-name').text("票券詳情");
-            $('.ticket-content .img-box img').attr('src','https://picsum.photos/300/200/?random=2');
-            $('.badge').html("<img src='../img/share/2600.png'>購物");
-            
-        }
     </script>
     <script src="../js/index.js"></script>
 </body>
