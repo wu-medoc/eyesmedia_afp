@@ -340,20 +340,20 @@
                     $('.title-name').text(JData[i]['title']);
             }
 
-            // 開啟篩選清單
-            $('.filter-item').on('click', function(){
-                $(this).toggleClass('active').siblings().removeClass('active');
-                var filter = $(this).data('filter');
-                $('#' + filter).toggleClass('is-open');
-                $('#' + filter).siblings().removeClass('is-open');
-                $( ".mask-container" ).removeClass("d-block");
-                if ($( "button.filter-item" ).hasClass("active")) {
-                    $( ".mask-container" ).addClass("d-block");
-                }
-            })
-        });
 
-        // show&hide fa-check
+        });
+        // 開啟篩選清單
+        $('.filter-item').on('click', function(){
+            $(this).toggleClass('active').siblings().removeClass('active');
+            var filter = $(this).data('filter');
+            $('#' + filter).toggleClass('is-open');
+            $('#' + filter).siblings().removeClass('is-open');
+            $( ".mask-container" ).removeClass("d-block");
+            if ($( "button.filter-item" ).hasClass("active")) {
+                $( ".mask-container" ).addClass("d-block");
+            }
+        })
+        // 篩選列表勾選控制
         $('#type .open-page-ul li, #open-pagebox .open-page-ul li, #open-pagebox1 .open-page-ul li').on('click',function(){
             $(this).toggleClass('active').siblings().removeClass('active');
         });

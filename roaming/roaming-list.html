@@ -727,19 +727,20 @@
     <!-- custom js -->
     <script src="../js/animateCss.js"></script>
     <script>            
-        $(document).ready(function() {
-            
-            // 開啟分類清單
-            $('.filter-item').on('click', function(){
-                $(this).toggleClass('active').siblings().removeClass('active');
-                var filter = $(this).data('filter');
-                $('#' + filter).toggleClass('is-open');
-                $('#' + filter).siblings().removeClass('is-open');
-                $( ".mask-container" ).removeClass("d-block");
-                if ($( "button.filter-item" ).hasClass("active")) {
-                    $( ".mask-container" ).addClass("d-block");
-                }
-            });
+        // 開啟篩選清單
+        $('.filter-item').on('click', function(){
+            $(this).toggleClass('active').siblings().removeClass('active');
+            var filter = $(this).data('filter');
+            $('#' + filter).toggleClass('is-open');
+            $('#' + filter).siblings().removeClass('is-open');
+            $( ".mask-container" ).removeClass("d-block");
+            if ($( "button.filter-item" ).hasClass("active")) {
+                $( ".mask-container" ).addClass("d-block");
+            }
+        })
+        // 篩選列表勾選控制
+        $('#type .open-page-ul li, #open-pagebox .open-page-ul li, #open-pagebox1 .open-page-ul li').on('click',function(){
+            $(this).toggleClass('active').siblings().removeClass('active');
         });
 
         // masonry JS for shopping

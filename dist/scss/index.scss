@@ -588,7 +588,10 @@ figure.image{
 }  
 .text-lightpink{
   color: #E473FF;
-}   
+}  
+.text-org{
+  color: $onlineshopping-default;
+}
 .bg-lightpink{
   color: #fff;
   background-color: #E473FF;
@@ -596,6 +599,9 @@ figure.image{
 .bg-lightpink-1{
   background-color: rgba(228, 115, 255, 0.1);
 }   
+.bg-F6F6E9{
+  background-color: #F6F6E9;
+}
 .opacity5{
   opacity :0.5;
 }
@@ -1103,6 +1109,44 @@ h6 {
         }
         .card-body{
           padding: 1em;
+          /*member_ticket*/
+          &.ticket-card{
+            padding: 0;
+            .ticket-card-grid{
+              display: grid;
+              grid-template-columns: 2.1em auto;
+              width: 100%;
+              min-height: 98px;
+              >.item:first-child{
+                color: #fff;
+                background: $cardfooter-color;
+                font-size: small;
+                writing-mode: vertical-lr;
+                text-align: center;
+                border-top-left-radius: .5em;
+                border-bottom-left-radius: .5em;
+                padding: .25em;
+              }
+              >.item:nth-child(2){
+                padding: .5em;
+                .rwdimgbox-80, .rwdimgbox-80 div{
+                  border-radius: 0;
+                }
+                .item.three{
+                  width: -webkit-fill-available;
+                  p.ticket-des{
+                    height: 3em;
+                  }
+                  .ticket-stat{
+                    float: right;
+                    left: 0;
+                    font-size: small;
+                    color: $onlineshopping-default;
+                  }
+                }
+              }
+            }
+          }
         }
       }
       column-count: 1;
@@ -1123,6 +1167,7 @@ h6 {
           }
       }
   }
+
 }
 img.coinimg-m{
     width: 1.5em;

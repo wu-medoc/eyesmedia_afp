@@ -490,5 +490,5 @@ function animRouter(e) {
         window.location = e;
     });
 };
-$('body').addClass("slideInRight animated");
+$('.header-secondary, .headerbox').parents().find('.wrap').addClass("slideInRight animated");
 $('.animated').css('animation-fill-mode','inherit');

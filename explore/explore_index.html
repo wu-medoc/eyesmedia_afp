@@ -492,6 +492,10 @@
                     $( ".mask-container" ).addClass("d-block");
                 }
             })
+            // 篩選列表勾選控制
+            $('#type .open-page-ul li, #open-pagebox .open-page-ul li, #open-pagebox1 .open-page-ul li').on('click',function(){
+                $(this).toggleClass('active').siblings().removeClass('active');
+            });
             
             // 篩選清單層級樣式
             // $('.nav-container .levelOne > li').on('click', function(){

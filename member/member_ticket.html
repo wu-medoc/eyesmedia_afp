@@ -44,7 +44,7 @@
                     </div>
                 </div>
                 <div class="item three text-center">
-                    <div class="title-name">我的票券</div>
+                    <div class="title-name">我的車票</div>
                 </div>
                 <div class="item two">
                 </div>
@@ -86,7 +86,7 @@
                         <div class="div-switch d-block">
                             <div class="choice-filter-box py-1">
                                 <div class="flex-inline-between">
-                                    <div class="item center-v"> 分類</div>
+                                    <div class="item center-v"> 選擇分類</div>
                                     <div class="item pr-2">
                                         <button class="btn px-0 filter-item" data-filter="type"><i class="material-icons">&#xE313;</i></button>
                                     </div>
@@ -104,136 +104,110 @@
                                 <div class="mask-container d-none w-100 h-100"></div>
                                 <div class="mycoin-couponbox card-columns px-3">                            
                                     <div class="card border-radius5">
-                                        <div class="card-body">
-                                        <div class="card-text">  
-                                            <div class="member-flex">
-                                                <div class="item one">
-                                                    <div style="background-image: url('https://picsum.photos/300/300/?random=1');" class="rwdimg logo-img"></div>   
-                                                </div>                                   
-                                                <div class="item three px-2">
-                                                    <p>7-11</p>
-                                                    <p>關東煮9折 兌換券</p>
-                                                    <p>2019/11/15 ~ 2019/12/31</p>
-                                                </div>                                 
-                                                <div class="item one">
-                                                    <button class="btn px-2 index-outline-btn small-80" onclick="callLayer('.useticket')">使用</button>
-                                                    <div class="m-quantity small pl-1"><img src="../img/share/mobiicoin_red.png" class="coinimg-m"> 1</div>
+                                        <div class="ticket-card card-body">
+                                            <div class="card-text" onclick="callLayer('.useticket')">  
+                                                <div class="ticket-card-grid">
+                                                    <div class="item">            
+                                                        <img src="../img/share/2600_w.png" class="nearbyimg" alt="">交通     
+                                                    </div>
+                                                    <div class="item d-flex">
+                                                        <div class="item one img-box rwdimgbox-80">
+                                                            <div style="background-image: url('https://picsum.photos/300/300/?random=1');" class="rwdimg"></div>   
+                                                        </div>                                   
+                                                        <div class="item three px-2">
+                                                            <div class="ticket-stat">未啟用</div>
+                                                            <p>高雄捷運</p>
+                                                            <p class="ticket-des">高雄捷運一日 QR CODE 搭乘券</p>
+                                                            <p>使用效期：2020/06/23 ~ 2020/12/20</p>
+                                                        </div>  
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
-                                        </div>
-                                        <div class="card-footer bg-cardfooter pt-2 pb-0">
-                                            <div class="member-flex small-80">    
-                                                <div class="item one text-nowrap">                        
-                                                    <img src="../img/share/2200_w.png" class="nearbyimg" alt="">美食     
-                                                </div>       
-                                            </div>
-                                        </div>
-                                    </div>                         
+                                    </div>  
                                     <div class="card border-radius5">
-                                        <div class="card-body">
-                                        <div class="card-text">  
-                                            <div class="member-flex">
-                                                <div class="item one">
-                                                    <div style="background-image: url('https://picsum.photos/300/300/?random=1');" class="rwdimg logo-img"></div>   
-                                                </div>                                   
-                                                <div class="item three px-2">
-                                                    <p>新光三越</p>
-                                                    <p>捷運一日效期QRCODE票</p>
-                                                    <p>2019/11/15 ~ 2019/12/31</p>
-                                                </div>                                 
-                                                <div class="item one">
-                                                    <button class="btn px-2 index-outline-btn unable small-80">未生效</button>
-                                                    <div class="m-quantity small pl-1"><img src="../img/share/mobiicoin_red.png" class="coinimg-m"> 1</div>
+                                        <div class="ticket-card card-body">
+                                            <div class="card-text" onclick="callLayer('.useticket')">  
+                                                <div class="ticket-card-grid">
+                                                    <div class="item">            
+                                                        <img src="../img/share/2600_w.png" class="nearbyimg" alt="">交通     
+                                                    </div>
+                                                    <div class="item d-flex">
+                                                        <div class="item one img-box rwdimgbox-80">
+                                                            <div style="background-image: url('https://picsum.photos/200/300/?random=2');" class="rwdimg"></div>   
+                                                        </div>                                   
+                                                        <div class="item three px-2">
+                                                            <div class="ticket-stat">使用中</div>
+                                                            <p>高雄捷運</p>
+                                                            <p class="ticket-des">高雄捷運一日 QR CODE 搭乘券</p>
+                                                            <p>使用效期：2020/06/30</p>
+                                                        </div>  
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
-                                        </div>
-                                        <div class="card-footer bg-cardfooter pt-2 pb-0">
-                                            <div class="member-flex small-80">    
-                                                <div class="item one text-nowrap">                        
-                                                    <img src="../img/share/2000_w.png" class="nearbyimg" alt="">景點     
-                                                </div>         
-                                            </div>
-                                        </div>
-                                    </div>                         
+                                    </div>  
                                     <div class="card border-radius5">
-                                        <div class="card-body">
-                                        <div class="card-text">  
-                                            <div class="member-flex">
-                                                <div class="item one">
-                                                    <div style="background-image: url('https://picsum.photos/300/300/?random=1');" class="rwdimg logo-img"></div>   
-                                                </div>                                   
-                                                <div class="item three px-2">
-                                                    <p>7-11</p>
-                                                    <p>關東煮9折 兌換券</p>
-                                                    <p>2019/11/15 ~ 2019/12/31</p>
-                                                </div>                                 
-                                                <div class="item one">
-                                                    <button class="btn px-2 index-outline-btn small-80" onclick="callLayer('.useticket')">使用</button>
-                                                    <div class="m-quantity small pl-1"><img src="../img/share/mobiicoin_red.png" class="coinimg-m"> 1</div>
+                                        <div class="ticket-card card-body">
+                                            <div class="card-text" onclick="callLayer('.useticket')">  
+                                                <div class="ticket-card-grid">
+                                                    <div class="item">            
+                                                        <img src="../img/share/2600_w.png" class="nearbyimg" alt="">交通     
+                                                    </div>
+                                                    <div class="item d-flex">
+                                                        <div class="item one img-box rwdimgbox-80">
+                                                            <div style="background-image: url('https://picsum.photos/300/200/?random=3');" class="rwdimg"></div>   
+                                                        </div>                                   
+                                                        <div class="item three px-2">
+                                                            <div class="ticket-stat">未啟用</div>
+                                                            <p>高雄捷運</p>
+                                                            <p class="ticket-des">菲絲蔻指定商品抵用券$400(振興券適用)</p>
+                                                            <p>使用效期：2020/06/23 ~ 2020/12/20</p>
+                                                        </div>  
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
-                                        </div>
-                                        <div class="card-footer bg-cardfooter pt-2 pb-0">
-                                            <div class="member-flex small-80">    
-                                                <div class="item one text-nowrap">                        
-                                                    <img src="../img/share/2400_w.png" class="nearbyimg" alt="">購物     
-                                                </div>   
-                                            </div>
-                                        </div>
-                                    </div>
+                                    </div>  
                                 </div>
                             </div>
+                            <!-- 目錄篩選視窗 -->
                             <div id="type" class="filter-content pb-wrap">
                                 <ul class="open-page-ul">
-                                    <li class="flex-inline-between active" onclick="">                
-                                        <div class="">
+                                    <li class="flex-inline-between" (click)="dirFilter()">                
+                                        <div>
                                             全部顯示
                                         </div>
-                                        <div class="">
-                                            22<i class="fas fa-check"></i>
+                                        <div>
+                                            <span>22</span>
+                                            <i class="fas fa-check"></i>
                                         </div>   
                                     </li>
-                                    <li class="flex-inline-between">
-                                        <div class="">
-                                            熱門
+                                    <li class="flex-inline-between active" (click)="dirFilter()">
+                                        <div>
+                                            台北
                                         </div>
-                                        <div class="">
-                                            8<i class="fas fa-check"></i>
+                                        <div>
+                                            <span>8</span>
+                                            <i class="fas fa-check"></i>
+                                        </div>                
+                                    </li>
+                                    <li class="flex-inline-between" (click)="dirFilter()">
+                                        <div>
+                                            台中
+                                        </div>
+                                        <div>
+                                            <span>2</span>
+                                            <i class="fas fa-check"></i>
                                         </div>                
                                     </li>
                                     <li class="flex-inline-between" onclick="">
-                                        <div class="">
-                                            美食
+                                        <div>
+                                            高雄
                                         </div>
-                                        <div class="">
-                                            1231<i class="fas fa-check"></i>
-                                        </div>                
-                                    </li>
-                                    <li class="flex-inline-between" onclick="">
-                                        <div class="">
-                                            購物
-                                        </div>
-                                        <div class="">
-                                            274<i class="fas fa-check"></i>
-                                        </div>                
-                                    </li>
-                                    <li class="flex-inline-between" onclick="">
-                                        <div class="">
-                                            景點
-                                        </div>
-                                        <div class="">
-                                            1374<i class="fas fa-check"></i>
-                                        </div>                
-                                    </li>
-                                    <li class="flex-inline-between" onclick="">
-                                        <div class="">
-                                            遊樂
-                                        </div>
-                                        <div class="">
-                                            1327<i class="fas fa-check"></i>
+                                        <div>
+                                            <span>2</span>
+                                            <i class="fas fa-check"></i>
                                         </div>                
                                     </li>
                                 </ul>
@@ -241,34 +215,29 @@
                         </div>
                     </div>            
                     <div role="tabpanel" class="tab-pane" id="tickettag02">
-                        <div class="mycoin-couponbox card-columns px-3">  
+                        <div class="mycoin-couponbox card-columns px-3">   
                             <div class="card border-radius5">
-                                <div class="card-body">
-                                <div class="card-text">  
-                                    <div class="member-flex">
-                                        <div class="item one">
-                                            <div style="background-image: url('https://picsum.photos/300/300/?random=1');" class="rwdimg logo-img"></div>   
-                                        </div>                                   
-                                        <div class="item three px-2">
-                                            <p>新光三越</p>
-                                            <p>捷運一日效期QRCODE票</p>
-                                            <p>2019/11/15 ~ 2019/12/31</p>
-                                        </div>                                 
-                                        <div class="item one">
-                                            <button class="btn px-2 index-outline-btn unable small-80">已使用</button>
-                                            <div class="m-quantity small pl-1"><img src="../img/share/mobiicoin_red.png" class="coinimg-m"> 1</div>
+                                <div class="ticket-card card-body">
+                                    <div class="card-text" onclick="callLayer('.useticket')">  
+                                        <div class="ticket-card-grid">
+                                            <div class="item">            
+                                                <img src="../img/share/2600_w.png" class="nearbyimg" alt="">交通     
+                                            </div>
+                                            <div class="item d-flex">
+                                                <div class="item one img-box rwdimgbox-80">
+                                                    <div style="background-image: url('https://picsum.photos/300/200/?random=3');" class="rwdimg"></div>   
+                                                </div>                                   
+                                                <div class="item three px-2">
+                                                    <div class="ticket-stat">已過期</div>
+                                                    <p>高雄捷運</p>
+                                                    <p class="ticket-des">菲絲蔻指定商品抵用券$400(振興券適用)</p>
+                                                    <p>使用效期：2020/06/23 ~ 2020/12/20</p>
+                                                </div>  
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                                </div>
-                                <div class="card-footer bg-cardfooter pt-2 pb-0">
-                                    <div class="member-flex small-80">    
-                                        <div class="item one text-nowrap">                        
-                                            <img src="../img/share/2000_w.png" class="nearbyimg" alt="">景點     
-                                        </div>         
-                                    </div>
-                                </div>
-                            </div>  
+                            </div> 
                         </div>
                     </div>    
                 </div>
@@ -288,6 +257,9 @@
                     <div class="title-txt">
                         商品分類
                     </div>
+                    <button class="btn" onclick="backsortLayer();">
+                        確定
+                    </button>
                 </div>
                 <ul class="open-page-ul">
                     <li class="flex-inline-between">
@@ -295,7 +267,7 @@
                             全部顯示
                         </div>
                         <div class="">
-                            
+                            <i class="fas fa-check"></i>
                         </div>                
                     </li>
                     <li class="flex-inline-between">
@@ -303,7 +275,8 @@
                             內容文字
                         </div>
                         <div class="">
-                            13274
+                            <span>3</span>
+                            <i class="fas fa-check"></i>    
                         </div>                
                     </li>
                     <li class="flex-inline-between">
@@ -311,7 +284,8 @@
                             內容文字
                         </div>
                         <div class="">
-                            1231
+                            <span>51</span>
+                            <i class="fas fa-check"></i>    
                         </div>                
                     </li>
                     <li class="flex-inline-between">
@@ -319,7 +293,8 @@
                             內容文字
                         </div>
                         <div class="">
-                            274
+                            <span>121</span>
+                            <i class="fas fa-check"></i>    
                         </div>                
                     </li>
                     <li class="flex-inline-between">
@@ -327,7 +302,8 @@
                             內容文字
                         </div>
                         <div class="">
-                            1374
+                            <span>1</span>
+                            <i class="fas fa-check"></i>    
                         </div>                
                     </li>
                     <li class="flex-inline-between active">
@@ -335,7 +311,8 @@
                             內容文字
                         </div>
                         <div class="">
-                            1327<i class="fas fa-check"></i>
+                            <span>1</span>
+                            <i class="fas fa-check"></i>    
                         </div>                
                     </li>
                 </ul>
@@ -354,102 +331,17 @@
                 </div>
                 <div class="item title-name">使用票券</div>
                 <div class="item icon-btn">
-                    <button class="btn bluedk-outline-btn bt-small" onclick="callLayer('.ticketdetail')">優惠詳情</button>
+                    <button class="btn bluedk-outline-btn bt-small" onclick="animRouter('../offers/VoucherDetail.html#tk')">優惠詳情</button>
                 </div>
             </div>
             <div class="text-bluedk text-center">
                 高雄捷運股份有限公司
-                <h6>捷運一日效期QRCODE票</h6>
-                <small>使用期限：2019/11/12 ~ 2019/11/29</small>
+                <h6 class="ticket-desc">捷運一日效期QRCODE票</h6>
                 <div class="border rounded p-3 m-3"><img src="../img/member/QRcode.svg"></div>
-                <div class="bg-light p-2">可使用次數：1次</div>
+                <div class="bg-F6F6E9 text-org p-2">狀態：<span class="tk-stat">未使用</span></div>
+                <small>使用期限：2019/11/12 ~ 2019/11/29</small>
             </div>
-        </div>     
-        <div class="ticketdetail">
-            <div class="title-box">
-                <div class="item icon-btn">
-                    <button class="btn px-0" onclick="backLayer();" data-toggle="tooltip" data-placement="bottom" title="回上一頁">
-                        <i class="material-icons">&#xe314;</i>
-                    </button>
-                </div>
-                <div class="item title-name">票券詳情</div>
-                <div class="item icon-btn">
-                </div>
-            </div>
-            <div class="main-ticket-box">
-                <div class="ticket-top-bg">
-                    <div class="line"></div>
-                </div>
-                <div class="ticket-content">
-                    <div class="ticket-mark">
-                        限量
-                    </div>
-                    <div class="img-box">
-                        <img src="../img/callcar/sogo.png" alt="">
-                    </div>
-                    <div class="index-flex p-3">
-                        <div class="item three font-bold text-bluedk">
-                            <h6>高雄捷運股份有限公司</h6>
-                            <h6>捷運一日效期QRCODE票</h6>
-                        </div>
-                        <div class="item one auto-left">
-                            <div class="shopping-store-badge">                        
-                                <span class="badge badge-pill text-explore"><img src="../img/share/2400.png" alt="">購物</span> 
-                            </div>
-                        </div>
-                    </div>
-                    <div class="ticket-detailrow">
-                        <div class="p-3">
-                            <p class="font-bold">優惠內容:</p>
-                            <p>捷運一日效期QRCODE票</p>
-                        </div>
-                    </div>
-                    <div class="ticket-detailrow">
-                        <div class="d-flex p-3">
-                            <div class="item item-icon">
-                                <i class="material-icons"></i>
-                            </div>
-                            <div class="item">
-                                SOGO復興館12Ｆ、復興館9F、敦化館5Ｆ
-                            </div>
-                        </div>
-                    </div>
-                    <div class="ticket-detailrow">
-                        <div class="d-flex p-3">
-                            <div class="item item-icon">
-                                <i class="material-icons"></i>
-                            </div>
-                            <div class="item">
-                                10/9(三)～11/3(日)
-                            </div>
-                        </div>
-                    </div>
-                    <div class="ticket-detailrow">
-                        <div class="p-3">
-                            <p class="font-bold">注意事項：</p>
-                            <small>
-                            折價券可適用範圍為於本公司的Web網頁下單e-catalog刊載的商品時使用。(傳真或電話訂購恕無法使用)<br>
-                            ・同時訂購多樣商品時，使用折價券折抵的金額，會依折價券的對象商品價格按比例平均做折扣。依比例所折扣的結果，實際折抵的金額會與折價券上記載的折扣金額有所差異。訂購時請注意顯示的折扣金額。<br>
-                            ・1張訂單只能使用1張折價券，恕無法同時使用2張以上的折價券。<br>
-                            ・折價券請在有效期間內使用。<br>
-                            ・折價券的使用以訂單成立為前提要件。另，敬請留意以下情況將無法使用折價券：(1)單次下單商品單價未達100元(未稅)，數量1000個以上時(2)出貨日顯示”需另行確認”時(3)其他本公司另行定義無法使用折價券的交易。<br>
-                            ・由顧客輸入的訂單內容，如在日後需要修改時，變更後的訂單有可能不適用折價券，敬請見諒。<br>
-                            ・使用折價券所購買的商品，若有退款的事由發生，退款金額的上限為客戶實際支付本公司的金額。<br>
-                            ・折價券如有遺失，恕無法另行補發。<br>
-                            ・折價券恕無法折換現金。<br>
-                            ・如發現使用偽造或具有取得疑慮的折價券，本公司有權拒絕折價券的使用。<br>
-                            ・本公司得於沒有告知的情況下變更折價券的使用方式，敬請見諒並請隨時留意本公司之網頁公告。
-                            </small>
-                        </div>
-                    </div>
-                    <div class="circle">.</div>
-                </div>
-                <div class="h100"></div>
-                <div class="fixed-btn container">
-                    <button type="button" class="btn next-btn w-100 msg-open" value="msg-mycard" data-toggle="modal" data-target="#messageModal" data-dismiss="modal" aria-label="Close">完成</button>
-                </div>
-            </div>
-        </div>  
+        </div>    
     </div>
 
 </div> 
@@ -472,7 +364,7 @@
     <script src="../js/animateCss.js"></script>
     <script> 
         
-        // 開啟分類清單
+        // 開啟篩選清單
         $('.filter-item').on('click', function(){
             $(this).toggleClass('active').siblings().removeClass('active');
             var filter = $(this).data('filter');
@@ -482,6 +374,31 @@
             if ($( "button.filter-item" ).hasClass("active")) {
                 $( ".mask-container" ).addClass("d-block");
             }
+        })
+        // 篩選列表勾選控制
+        $('#type .open-page-ul li, #open-pagebox .open-page-ul li, #open-pagebox1 .open-page-ul li').on('click',function(){
+            $(this).toggleClass('active').siblings().removeClass('active');
+        });
+
+        //ticket stat
+        $('.card-text').on('click',function(){
+            var desc = $(this).children().find('.ticket-des').text();
+            var stat1 = $(this).children().find('.ticket-stat').text();
+            var stat2 = "";
+            switch(stat1){
+                case "已過期":
+                    stat2 = "已過期";
+                    break;
+                case "使用中":
+                    stat2 = "使用中";
+                    break;
+                default :
+                    stat2 = "未使用";
+                    break;
+            }
+            $('.tk-stat').text(stat2);
+            $('.ticket-desc').text(desc);    
+            console.log(stat1);
         });
     </script>
 

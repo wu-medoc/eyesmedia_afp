@@ -386,6 +386,9 @@
                     <div class="title-txt">
                         商品分類
                     </div>
+                    <button class="btn" onclick="backsortLayer();">
+                        確定
+                    </button>
                 </div>
                 <ul class="open-page-ul">
                     <li class="flex-inline-between">
@@ -393,7 +396,7 @@
                             全部顯示
                         </div>
                         <div class="">
-                            
+                            <i class="fas fa-check"></i>
                         </div>                
                     </li>
                     <li class="flex-inline-between">
@@ -401,7 +404,8 @@
                             內容文字
                         </div>
                         <div class="">
-                            13274
+                            <span>3</span>
+                            <i class="fas fa-check"></i>    
                         </div>                
                     </li>
                     <li class="flex-inline-between">
@@ -409,7 +413,8 @@
                             內容文字
                         </div>
                         <div class="">
-                            1231
+                            <span>51</span>
+                            <i class="fas fa-check"></i>    
                         </div>                
                     </li>
                     <li class="flex-inline-between">
@@ -417,7 +422,8 @@
                             內容文字
                         </div>
                         <div class="">
-                            274
+                            <span>121</span>
+                            <i class="fas fa-check"></i>    
                         </div>                
                     </li>
                     <li class="flex-inline-between">
@@ -425,7 +431,8 @@
                             內容文字
                         </div>
                         <div class="">
-                            1374
+                            <span>1</span>
+                            <i class="fas fa-check"></i>    
                         </div>                
                     </li>
                     <li class="flex-inline-between active">
@@ -433,7 +440,8 @@
                             內容文字
                         </div>
                         <div class="">
-                            1327<i class="fas fa-check"></i>
+                            <span>1</span>
+                            <i class="fas fa-check"></i>    
                         </div>                
                     </li>
                 </ul>
@@ -461,7 +469,7 @@
     <script>     
 
 
-        // 開啟分類清單
+        // 開啟篩選清單
         $('.filter-item').on('click', function(){
             $(this).toggleClass('active').siblings().removeClass('active');
             var filter = $(this).data('filter');
@@ -471,6 +479,10 @@
             if ($( "button.filter-item" ).hasClass("active")) {
                 $( ".mask-container" ).addClass("d-block");
             }
+        })
+        // 篩選列表勾選控制
+        $('#type .open-page-ul li, #open-pagebox .open-page-ul li, #open-pagebox1 .open-page-ul li').on('click',function(){
+            $(this).toggleClass('active').siblings().removeClass('active');
         });
 
     </script>

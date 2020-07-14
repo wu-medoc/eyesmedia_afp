@@ -62,16 +62,16 @@
                 <div class="img-box">
                     <img src="../img/callcar/sogo.png" alt="">
                 </div>
-                <div class="index-flex p-3">
+                <div class="index-flex p-3 tk-main">
                     <div class="item three text-bluedk">
                         <h6>高雄捷運股份有限公司</h6>
                         <h5 class="font-bold">捷運一日效期QRCODE票</h5>
-                        <div class="flex-inline-between">
+                        <div class="flex-inline-between small-80">
                             <div class="item">近忠孝新生捷運站</div>
                             <div class="item">距離33km</div>
                         </div>
                     </div>
-                    <div class="item one text-right">
+                    <div class="item one text-right align-self-start">
                         <div class="shopping-store-badge">                        
                             <span class="badge badge-pill text-explore"><img src="../img/share/2400.png" alt="">購物</span> 
                         </div>
@@ -209,6 +209,15 @@
             oneLayer.length=0;
         };
 
+        //判斷是車票
+        var hashVal=window.location.hash.split("#")[1];
+        if(hashVal=="tk"){
+            $('.ticket-mark, .fixed-btn, .tk-main .small-80').hide();
+            $('.header-secondary .title-name').text("票券詳情");
+            $('.ticket-content .img-box img').attr('src','https://picsum.photos/300/200/?random=2');
+            $('.badge').html("<img src='../img/share/2600.png'>購物");
+            
+        }
     </script>
     <script src="../js/index.js"></script>
 </body>
