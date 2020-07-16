@@ -1141,6 +1141,9 @@ input[type="file"] {
             &:last-child{
                 margin-top: auto;
             }
+            &.text-org{
+                color: $onlineshopping-default;
+            }
         }
     }
 }
@@ -1265,4 +1268,35 @@ input[type="file"] {
     }
   }
 }
-
+.order-tabSubox{
+    padding: 1em;
+    overflow: hidden;
+    .nav-tabSub{
+        text-align: center;
+        width: max-content;
+        li{
+            border-top:1px solid $onlineshopping-default;
+            border-bottom:1px solid $onlineshopping-default;
+            border-right:1px solid $onlineshopping-default;
+            &:first-child{
+                border-left:1px solid $onlineshopping-default;
+                border-top-left-radius: .25em;
+                border-bottom-left-radius: .25em;
+            }
+            &:last-child{
+                border-top-right-radius: .25em;
+                border-bottom-right-radius: .25em;
+            }
+            a.tabsub-link{
+                display:inline-block;
+                width:100%;
+                height:100%;
+                color: $onlineshopping-default;
+                &.active{
+                    color: #fff;
+                    background: $onlineshopping-default;
+                }
+            }
+        }
+    }
+}

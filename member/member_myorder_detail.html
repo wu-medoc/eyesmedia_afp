@@ -71,12 +71,12 @@
         </div>
         <div class="order-box">
             <div class="order-subtitle">
-                <i class="material-icons">&#xE8D1;</i><span class="store-name">昇恆昌免稅購物網站</span>
+                <img src="../img/share/fa-store.png" class="h20 mx-1"><span class="store-name">昇恆昌免稅購物網站</span>
             </div>
             <ul class="order-shop-list">
                 <li>
                     <div class="item rwdimgbox-80">
-                        <div style="background-image: url('https://picsum.photos/300/300/?random=1');" class="rwdimg-cover"></div>
+                        <div style="background-image: url('https://picsum.photos/200/300/?random=1');" class="rwdimg"></div>
                     </div>
                     <div class="item item-txt">
                         <p>超級超好吃的舊振南鳳梨酥</p>
@@ -87,7 +87,7 @@
                 </li>
                 <li>
                     <div class="item rwdimgbox-80">
-                        <div style="background-image: url('https://picsum.photos/300/300/?random=2');" class="rwdimg-cover"></div>
+                        <div style="background-image: url('https://picsum.photos/300/300/?random=2');" class="rwdimg"></div>
                     </div>
                     <div class="item item-txt">
                         <p>超級超好吃的舊振南鳳梨酥</p>
@@ -96,8 +96,11 @@
                     </div>
                     <div class="item item-num order-quantity">x2</div>
                 </li>
+                <li class="tk4">
+                    <div class="small text-danger text-right w-100 status1">退款處理中</div>
+                </li>
             </ul>
-            <div class="order-method-box">
+            <div class="order-method-box sendbox">
                 <ul class="method-list">
                     <li class="index-flex">
                         <div class="item"><i class="material-icons">&#xE558;</i>寄送方式</div>
@@ -123,18 +126,32 @@
         </div>
         <div class="order-box">
             <div class="order-method-box">
-                <ul class="method-list">
+                <ul class="method-list tk0">
                     <li class="index-flex">
-                        <div class="item one d-flex d-inline"><i class="material-icons">&#xE263;</i>付款方式</div>
+                        <div class="item one d-flex d-inline"><img src="../img/share/store-payment.png" class="h24 mx-1"><span>付款方式</span></div>
                         <div class="item two item-right">信用卡/VISA金融卡 *9405</div>
                     </li>
-                    <li class="index-flex">
-                        <div class="item one d-flex d-inline"><div class="invo-box"><i class="material-icons">&#xE8B0;</i></div>電子發票</div>
+                    <li class="index-flex invobox">
+                        <div class="item one d-flex d-inline"><img src="../img/share/store-invo.png" class="h24 mx-1"><span>電子發票</span></div>
                         <div class="item two item-right">ZP49652322</div>
                     </li>
                     <li class="index-flex">
-                        <div class="item two d-flex d-inline"><i class="material-icons reverse">&#xE54E;</i>使用優惠券、折扣碼</div>
+                        <div class="item two d-flex d-inline"><img src="../img/share/store-coupon.png" class="h24 mx-1"><span>使用優惠券、折扣碼</span></div>
                         <div class="item one item-right">-$188</div>
+                    </li>
+                </ul>
+                <ul class="method-list tk4">
+                    <li class="index-flex">
+                        <div class="item one d-flex d-inline"><span>訂單金額</span></div>
+                        <div class="item two item-right text-danger">NT$ 108</div>
+                    </li>
+                    <li class="index-flex">
+                        <div class="item one d-flex d-inline"><span>退款金額</span></div>
+                        <div class="item two item-right text-danger">NT$ 108</div>
+                    </li>
+                    <li class="index-flex">
+                        <div class="item one d-flex d-inline"><span>付款方式</span></div>
+                        <div class="item two item-right">信用卡/VISA金融卡 ＊9405</div>
                     </li>
                 </ul>
             </div>
@@ -167,7 +184,7 @@
                 </ul>
             </div>
             <div class="border-t5 w-100"></div>
-            <div class="order-method-box">
+            <div class="order-method-box iconbox">
                 <ul class="method-list">
                     <li class="flex-inline-between">
                         <div class="item font-bold"><img src="../img/share/mobiicoin_red.png" alt="" class="coinimg-m m-0">可賺到的Mobii! Point <span class="small-expired">(猶豫期後入帳)</span></div>
@@ -176,31 +193,14 @@
                 </ul>
             </div>
             <div class="border-t5 w-100"></div>
-            <!-- 自取 | 訂單處理中 -->
-            <div class="flex-inline-between align-items-end pb-3 px-3 processing">
-                <div class="item w-100 p-2"><button type="button" class="btn bluedk-outline-btn w-100">聯絡店家</button></div>
-                <div class="item w-100 p-2"><button type="button" class="btn bluedk-outline-btn w-100" onclick="location.href='../shopping/store-info.html'">去逛賣場</button></div>
-            </div>
-            <!-- 訂單完成 | 鑑賞期已過 -->
-            <div class="flex-inline-between align-items-end pb-3 px-3 completed">
+            <div class="flex-inline-between align-items-end pb-3 px-3">
                 <div class="item w-100 p-2">
-                    <p class="small-expired unable">鑑賞期已過</p>
-                    <button type="button" class="btn bluedk-outline-btn unable w-100">退換貨</button>
+                    <p class="footp small-expired unable">鑑賞期已過</p>
+                    <button type="button" class="footbtn1 btn bluedk-outline-btn w-100" onclick="location.href='../shopping/store-info.html'">去逛賣場</button>
                 </div>
-                <div class="item w-100 p-2"><button type="button" class="btn bluedk-outline-btn w-100">聯絡店家</button></div>
-            </div>
-            <!-- 寄送 | 訂單完成 | 鑑賞期內 -->
-            <div class="flex-inline-between align-items-end pb-3 px-3 send pick completed">
-                <div class="item w-100 p-2"><button type="button" class="btn bluedk-outline-btn w-100" onclick="location.href='member_returns.html'">退換貨</button></div>
-                <div class="item w-100 p-2"><button type="button" class="btn bluedk-outline-btn w-100">聯絡店家</button></div>
-            </div>
-            <!-- 訂單完成 | 申請退換貨 -->
-            <div class="flex-inline-between align-items-end pb-3 px-3 returned">
                 <div class="item w-100 p-2">
-                    <p class="small-expired">已申請退換貨</p>
-                    <button type="button" class="btn bluedk-outline-btn w-100" onclick="location.href='member_returns_detail.html'">退換貨詳情</button>
+                    <button type="button" class="footbtn2 btn bluedk-outline-btn w-100">聯絡店家</button>
                 </div>
-                <div class="item w-100 p-2"><button type="button" class="btn bluedk-outline-btn w-100">聯絡店家</button></div>
             </div>
         </div>   
         
@@ -236,7 +236,7 @@
         <ul>
             <li>
                 <!-- <div class="item send">
-                    <button type="button" class="btn index-outline-btn w-100">退換貨</button>
+                    <button type="button" class="btn index-outline-btn w-100">退貨</button>
                 </div>
                 <div class="item send">
                     <button type="button" class="btn index-btn w-100 msg-open" value="msg-receipt" data-toggle="modal" data-target="#messageModal">確認收貨</button>
@@ -263,10 +263,13 @@
     <script>
         $("#loginhtml").load("../login.html"); 
 
-        //class不影響版面,僅判斷用,可移除
+        //.send, .pick, .processing, .completed, .returned, .tk0, .tk4, .sendbox, invobox, iconbox
+        //以上class不影響版面,僅判斷用,可移除
         var parameterN ="";
-        parameterN = parseInt($(location).attr("href").split("#")[1]);
-        $('.send, .pick, .processing, .completed, .returned').hide();
+        parameterN = window.location.hash.split("#")[1];
+        //parameterN = parseInt($(location).attr("href").split("#")[1]);
+        //console.log(parameterN);
+        $('.send, .pick, .processing, .completed, .returned, .tk0, .tk4').hide();
         switch(parameterN) {
             case 1:
                 // pick自取
@@ -274,13 +277,19 @@
                 $('footer').show();
                 $('.status1').text("待收貨");
                 $('.status2').html("商品已到店，請於 <span>2020/4/1</span> 前完成取貨");
+                $('.footp').hide();
+                $('.footbtn1').attr('onclick','location.href=\'member_returns.html\'').text('退貨');
+                $('.footbtn2').attr('onclick','location.href=\'#\'').text('聯絡店家');
                 break;
             case 2:
                 // send寄送
                 $('.send').show();
                 $('footer').hide();
                 $('.status1').text("待收貨");
-                $('.status2').html("店家已在 2020/03/25 出貨囉！<br>2020/4/14前可申請退換貨");
+                $('.status2').html("店家已在 2020/03/25 出貨囉！<br>2020/4/14前可申請退貨");
+                $('.footp').hide();
+                $('.footbtn1').attr('onclick','location.href=\'member_returns.html\'').text('退貨');
+                $('.footbtn2').attr('onclick','location.href=\'#\'').text('聯絡店家');
                 orderCompleted();
                 break;
             case 3: 
@@ -288,14 +297,79 @@
                 $('.completed').show();
                 $('footer').hide();
                 $('.status1').text("已完成");
-                $('.status2').html("訂單已完成，再去賣場逛逛吧。<br>2020/4/8前可申請退換貨");
+                $('.status2').html("訂單已完成，再去賣場逛逛吧。<br>2020/4/8前可申請退貨");
+                $('footp').addClass("unable").text("鑑賞期已過");
+                $('footbtn1').addClass("unable").text('退貨');
+                $('footbtn2').attr('onclick','location.href=\'#\'').text('聯絡店家');
+                $('.footp').hide();
+                $('.footbtn1').attr('onclick','location.href=\'member_returns.html\'').text('退貨');
+                $('.footbtn2').attr('onclick','location.href=\'#\'').text('聯絡店家');
                 break;
             case 4:
-                // returned退換貨
+                // returned退貨
                 $('.returned').show();
                 $('footer').hide();
                 $('.status1').text("待收貨");
-                $('.status2').html("店家已在 2020/03/25 出貨囉！<br>2020/4/14前可申請退換貨");
+                $('.status2').html("店家已在 2020/03/25 出貨囉！<br>2020/4/14前可申請退貨");
+                $('footp').addClass("unable").text("已申請退貨");
+                $('.footbtn1').attr('onclick','location.href=\'member_returns_detail.html\'').text('退貨詳情');
+                $('.footbtn2').attr('onclick','location.href=\'#\'').text('聯絡店家');
+                break;
+            case 'tk0':
+                // 車票 | 處理中
+                $('.tk0').show();
+                $('footer, .sendbox, .order-shop-list li:first-child').hide();
+                $('.status1').text("處理中");
+                $('.status2').html("店家正在處理您的訂單，請耐心等候");
+                $('.footp').hide();
+                $('.footbtn1').attr('onclick','location.href=\'member_returns.html#tk\'').text('退貨');
+                $('.footbtn2').attr('onclick','location.href=\'#\'').text('聯絡店家');
+                break;
+            case 'tk1':
+                // 車票 | 已完成
+                $('.tk0').show();
+                $('footer, .sendbox, .order-shop-list li:first-child').hide();
+                $('.status1').text("已完成");
+                $('.status2').html("電子票券已發送，請於期限內使用，逾期失效<br>2020/12/20 前可申請退款");
+                $('.footp').hide();
+                $('.footbtn1').attr('onclick','location.href=\'member_returns.html#tk\'').text('退款');
+                $('.footbtn2').attr('onclick','location.href=\'#\'').text('聯絡店家');
+                break;
+            case 'tk2':
+                // 車票 | 已完成 | 電子票券已使用
+                $('.tk0').show();
+                $('footer, .sendbox, .order-shop-list li:first-child').hide();
+                $('.status1').text("已完成");
+                $('.status2').html("電子票券已使用");
+                $('.footp').addClass("unable").text("電子票券已使用");
+                $('.footbtn1').addClass("unable").removeAttr('onclick').text('退款');
+                $('.footbtn2').attr('onclick','location.href=\'#\'').text('聯絡店家');
+                break;
+            case 'tk3':
+                // 車票 | 已完成 | 已逾期
+                $('.tk0').show();
+                $('footer, .sendbox, .order-shop-list li:first-child').hide();
+                $('.status1').text("已完成");
+                $('.status2').html("已逾期");
+                $('.footp').addClass("unable").text("電子票券已逾期");
+                $('.footbtn1').addClass("unable").removeAttr('onclick').text('退款');
+                $('.footbtn2').attr('onclick','location.href=\'#\'').text('聯絡店家');
+                break;
+            case 'tk4':
+                // 車票 | 退款處理中
+                $('.tk4').show();
+                $('footer, .sendbox, .order-shop-list li:first-child, .invobox, .total-price-box, .iconbox').hide();;
+                $('.status1').text("退款處理中");
+                $('.status2').html("電子票券已退回，退款處理中");
+                $('.footp').hide();
+                break;
+            case 'tk5':
+                // 車票 | 退款完成
+                $('.tk4').show();
+                $('footer, .sendbox, .order-shop-list li:first-child, .invobox, .total-price-box, .iconbox').hide();;
+                $('.status1').text("退款完成");
+                $('.status2').html("款項將退回原付款之信用卡");
+                $('.footp').hide();
                 break;
             default:
                 // processing處理中
@@ -303,6 +377,9 @@
                 $('footer').hide();
                 $('.status1').text("處理中");
                 $('.status2').html("店家正在處理您的訂單，請耐心等候");
+                $('.footp').hide();
+                $('.footbtn1').attr('onclick','location.href=\'#\'').text('聯絡店家');
+                $('.footbtn2').attr('onclick','location.href=\'../shopping/store-info.html\'').text('去逛賣場');
         }
         
         // completed onclick modal(msg-mobii)
@@ -313,6 +390,18 @@
         $('.msg-open').on('click', function(){  
             orderCompleted();
         });
+
+        // ticket data(車票資料帶入)
+        if( parameterN=='tk0' || 'tk1' || 'tk2' || 'tk3' || 'tk4'){  
+            $('.store-name').text('艾斯移動');
+            $('.order-shop-list .item-txt p:first-child').text('高雄捷運一日 QR CODE 搭乘券');
+            $('.order-shop-list .item-txt p:nth-child(2)').text('規格：單一規格');
+            $('.order-shop-list .item-txt p:nth-child(3)').text('$120');
+            $('.order-quantity').text('x1');
+            $('.invobox div:last-child').html('<a href>查看收據</a>');
+            $('.invobox div:first-child span').text('收據');
+            $('.invobox div:last-child').html('<a href>查看收據</a>');
+        }
     </script>
     <script src="../js/animateCss.js"></script>
     <script src="../js/index.js"></script>
