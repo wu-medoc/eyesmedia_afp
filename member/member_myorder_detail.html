@@ -387,9 +387,9 @@
             $('.order-shop-list .item-txt p:nth-child(2)').text('規格：單一規格');
             $('.order-shop-list .item-txt p:nth-child(3)').text('$120');
             $('.order-quantity').text('x1');
-            $('.invobox div:last-child').html('<a href>查看收據</a>');
             $('.invobox div:first-child span').text('收據');
-            $('.invobox div:last-child').html('<a href>查看收據</a>');
+            $('.invobox div:last-child').html("<button type='button' class='btn px-0 text-primary msg-open' value='msg-nullreceipt' data-toggle='modal' data-target='#messageModal'>查看收據</button>");
+            
         }
     </script>
     <script src="../js/animateCss.js"></script>
