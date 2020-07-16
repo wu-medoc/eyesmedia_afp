@@ -195,7 +195,7 @@
             <div class="border-t5 w-100"></div>
             <div class="flex-inline-between align-items-end pb-3 px-3">
                 <div class="item w-100 p-2">
-                    <p class="footp small-expired unable">鑑賞期已過</p>
+                    <div class="footp small-expired unable d-none">鑑賞期已過</div>
                     <button type="button" class="footbtn1 btn bluedk-outline-btn w-100">去逛賣場</button>
                 </div>
                 <div class="item w-100 p-2">
@@ -271,47 +271,42 @@
         //console.log(parameterN);
         $('.send, .pick, .processing, .completed, .returned, .tk0, .tk4').hide();
         switch(parameterN) {
-            case 1:
+            case '1':
                 // pick自取
                 $('.pick').show();
                 $('footer').show();
                 $('.status1').text("待收貨");
                 $('.status2').html("商品已到店，請於 <span>2020/4/1</span> 前完成取貨");
-                $('.footp').hide();
                 $('.footbtn1').attr('onclick','location.href=\'member_returns.html\'').text('退貨');
                 $('.footbtn2').attr('onclick','location.href=\'#\'').text('聯絡店家');
                 break;
-            case 2:
+            case '2':
                 // send寄送
                 $('.send').show();
                 $('footer').hide();
                 $('.status1').text("待收貨");
                 $('.status2').html("店家已在 2020/03/25 出貨囉！<br>2020/4/14前可申請退貨");
-                $('.footp').hide();
                 $('.footbtn1').attr('onclick','location.href=\'member_returns.html\'').text('退貨');
                 $('.footbtn2').attr('onclick','location.href=\'#\'').text('聯絡店家');
                 orderCompleted();
                 break;
-            case 3: 
+            case '3': 
                 // completed已完成
                 $('.completed').show();
                 $('footer').hide();
                 $('.status1').text("已完成");
                 $('.status2').html("訂單已完成，再去賣場逛逛吧。<br>2020/4/8前可申請退貨");
-                $('footp').addClass("unable").text("鑑賞期已過");
-                $('footbtn1').addClass("unable").text('退貨');
-                $('footbtn2').attr('onclick','location.href=\'#\'').text('聯絡店家');
-                $('.footp').hide();
-                $('.footbtn1').attr('onclick','location.href=\'member_returns.html\'').text('退貨');
+                $('.footp').removeClass('d-none').text("鑑賞期已過");
+                $('.footbtn1').addClass("unable").text('退貨');
                 $('.footbtn2').attr('onclick','location.href=\'#\'').text('聯絡店家');
                 break;
-            case 4:
+            case '4':
                 // returned退貨
                 $('.returned').show();
                 $('footer').hide();
                 $('.status1').text("待收貨");
                 $('.status2').html("店家已在 2020/03/25 出貨囉！<br>2020/4/14前可申請退貨");
-                $('footp').addClass("unable").text("已申請退貨");
+                $('.footp').removeClass('d-none').text("已申請退貨");
                 $('.footbtn1').attr('onclick','location.href=\'member_returns_detail.html\'').text('退貨詳情');
                 $('.footbtn2').attr('onclick','location.href=\'#\'').text('聯絡店家');
                 break;
@@ -321,7 +316,6 @@
                 $('footer, .sendbox, .order-shop-list li:first-child').hide();
                 $('.status1').text("處理中");
                 $('.status2').html("店家正在處理您的訂單，請耐心等候");
-                $('.footp').hide();
                 $('.footbtn1').addClass('msg-open').attr('value','msg-ticket1').attr('data-toggle','modal').attr('data-target','#messageModal').text('退款');
                 $('.footbtn2').attr('onclick','location.href=\'#\'').text('聯絡店家');
                 break;
@@ -331,8 +325,7 @@
                 $('footer, .sendbox, .order-shop-list li:first-child').hide();
                 $('.status1').text("已完成");
                 $('.status2').html("電子票券已發送，請於期限內使用，逾期失效<br>2020/12/20 前可申請退款");
-                $('.footp').hide();
-                $('.footbtn1').attr('onclick','location.href=\'member_returns.html#tk\'').text('退款');
+                $('.footbtn1').addClass('msg-open').attr('value','msg-ticket1').attr('data-toggle','modal').attr('data-target','#messageModal').text('退款');
                 $('.footbtn2').attr('onclick','location.href=\'#\'').text('聯絡店家');
                 break;
             case 'tk2':
@@ -341,8 +334,7 @@
                 $('footer, .sendbox, .order-shop-list li:first-child').hide();
                 $('.status1').text("已完成");
                 $('.status2').html("電子票券已使用");
-                $('.footp').addClass("unable").text("電子票券已使用");
-                $('.footbtn1').addClass("unable").removeAttr('onclick').text('退款');
+                $('.footbtn1').addClass('msg-open').attr('value','msg-ticket2').attr('data-toggle','modal').attr('data-target','#messageModal').text('退款');
                 $('.footbtn2').attr('onclick','location.href=\'#\'').text('聯絡店家');
                 break;
             case 'tk3':
@@ -351,7 +343,7 @@
                 $('footer, .sendbox, .order-shop-list li:first-child').hide();
                 $('.status1').text("已完成");
                 $('.status2').html("已逾期");
-                $('.footp').addClass("unable").text("電子票券已逾期");
+                $('.footp').removeClass('d-none').text("電子票券已逾期");
                 $('.footbtn1').addClass("unable").removeAttr('onclick').text('退款');
                 $('.footbtn2').attr('onclick','location.href=\'#\'').text('聯絡店家');
                 break;
@@ -361,7 +353,6 @@
                 $('footer, .sendbox, .order-shop-list li:first-child, .invobox, .total-price-box, .iconbox').hide();;
                 $('.status1').text("退款處理中");
                 $('.status2').html("電子票券已退回，退款處理中");
-                $('.footp').hide();
                 break;
             case 'tk5':
                 // 車票 | 退款完成
@@ -369,7 +360,6 @@
                 $('footer, .sendbox, .order-shop-list li:first-child, .invobox, .total-price-box, .iconbox').hide();;
                 $('.status1').text("退款完成");
                 $('.status2').html("款項將退回原付款之信用卡");
-                $('.footp').hide();
                 break;
             default:
                 // processing處理中
@@ -377,22 +367,21 @@
                 $('footer').hide();
                 $('.status1').text("處理中");
                 $('.status2').html("店家正在處理您的訂單，請耐心等候");
-                $('.footp').hide();
                 $('.footbtn1').attr('onclick','location.href=\'#\'').text('聯絡店家');
                 $('.footbtn2').attr('onclick','location.href=\'../shopping/store-info.html\'').text('去逛賣場');
         }
         
         // completed onclick modal(msg-mobii)
-        function orderCompleted(){
-            setTimeout(function(){ 
-            window.location.replace('member_myorder_detail.html#3'); },3000);
-        }        
-        $('.msg-open').on('click', function(){  
-            orderCompleted();
-        });
+        // function orderCompleted(){
+        //     setTimeout(function(){ 
+        //     window.location.replace('member_myorder_detail.html#3'); },3000);
+        // }        
+        // $('.msg-open').on('click', function(){  
+        //     orderCompleted();
+        // });
 
         // ticket data(車票資料帶入)
-        if( parameterN=='tk0' || 'tk1' || 'tk2' || 'tk3' || 'tk4'){  
+        if( parameterN=='tk0' || parameterN=='tk1' || parameterN=='tk2' || parameterN=='tk3' || parameterN=='tk4'){  
             $('.store-name').text('艾斯移動');
             $('.order-shop-list .item-txt p:first-child').text('高雄捷運一日 QR CODE 搭乘券');
             $('.order-shop-list .item-txt p:nth-child(2)').text('規格：單一規格');
