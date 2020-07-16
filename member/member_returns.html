@@ -42,7 +42,7 @@
                         </div>
                     </div>
                     <div class="item three text-center">
-                        <div class="title-name">退貨</div>
+                        <div class="title-name tk">退貨</div>
                     </div>
                     <div class="item two text-right">
                         <button type="button" class="btn bluedk-outline-btn bt-small mr-1" onclick="callsortLayer('.returnInfo')">退換說明</button>
@@ -89,7 +89,7 @@
                 </ul>
                 <div class="order-method-box">
                     <ul class="method-list">
-                        <li class="index-flex">
+                        <li class="index-flex chkbox">
                             <div class="item one">選擇方式</div>
                             <div class="item three item-right">
                                 <div class="form-check-inline">   
@@ -162,7 +162,7 @@
         
         <!--次頁-->
         <div class="multilayer">
-            <!-- 退換貨原因 -->
+            <!-- 退貨原因 -->
             <div class="returnReason">
                 <div class="title-box">
                     <div class="item icon-btn">
@@ -170,7 +170,7 @@
                             <i class="material-icons">&#xe314;</i>
                         </button>
                     </div>
-                    <div class="item title-name">退換貨的原因</div>
+                    <div class="item title-name tk">退貨的原因</div>
                     <div class="item icon-btn"></div>
                 </div>
                 <div class="return-box">
@@ -203,6 +203,26 @@
                             其他
                         </li>
                     </ul>            
+                    <ul class="reason-list tk d-none">
+                        <li>
+                            想要的日期/時段不易預約
+                        </li>
+                        <li>
+                            價格/條件劣於其他通路
+                        </li>
+                        <li>
+                            原訂計畫取消
+                        </li>
+                        <li>
+                            現場有更優惠促銷
+                        </li>
+                        <li>
+                            店家要求現場直接付費
+                        </li>
+                        <li>
+                            其他
+                        </li>
+                    </ul>  
                     <div class="addheight"></div>
                     <footer class="shopping-cartfooter container fixed-bottom">
                         <ul>
@@ -558,7 +578,7 @@
                     </ul>
                 </div>
             </div>
-            <!-- 退換貨說明 -->
+            <!-- 退貨說明 -->
             <div class="returnInfo">
                 <div id="open-pagebox">
                     <div class="open-page-title flex-inline-between">
@@ -568,26 +588,26 @@
                             </button>
                         </div>
                         <div class="title-txt">
-                            退換貨說明
+                            退貨說明
                         </div>
                         <div class="title-txt">
                         </div>
                     </div>
                     <div class="p-3 text-bluedk">
-                        <h6>【退換貨原則】</h6>
+                        <h6>【退貨原則】</h6>
                         <p>
                             會員所購買的商品均享有商品猶豫期。退回之商品必須於猶豫期內寄回。 <br>                        
-                            辦理退換貨時，商品必須是全新狀態與完整包裝(請注意保持商品本體、配件、贈品、保證書、原廠包裝及所有附隨文件或資料的完整性，切勿缺漏任何配件或損毀原廠外盒)。退回商品無法回復原狀者，恐將影響退貨權益或需負擔部分費用。 
+                            辦理退貨時，商品必須是全新狀態與完整包裝(請注意保持商品本體、配件、贈品、保證書、原廠包裝及所有附隨文件或資料的完整性，切勿缺漏任何配件或損毀原廠外盒)。退回商品無法回復原狀者，恐將影響退貨權益或需負擔部分費用。 
                         </p>
                         <h6>【商品猶豫期計算】</h6>
                         <p>
-                            宅配商品之猶豫期為商店出貨日+20天，例：商店出貨日為2020/4/1，則商品猶豫期計算至2020/4/21止，超過期限將不提供退換貨服務。<br>                          
-                            自取商品之猶豫期為取貨期限+7天，例：取貨期限為2020/4/1，則商品猶豫期計算至2020/4/8止，超過期限將不提供退換貨服務。
+                            宅配商品之猶豫期為商店出貨日+20天，例：商店出貨日為2020/4/1，則商品猶豫期計算至2020/4/21止，超過期限將不提供退貨服務。<br>                          
+                            自取商品之猶豫期為取貨期限+7天，例：取貨期限為2020/4/1，則商品猶豫期計算至2020/4/8止，超過期限將不提供退貨服務。
                         </p>
                         
-                        <h6>【退換貨處理】</h6>
+                        <h6>【退貨處理】</h6>
                         <p>
-                            貨運司機將於退/換貨申請確認後3~7天內與你聯繫取件，請保持手機暢通以利聯絡，請將你所訂購之完整商品、配件、贈品、原包裝置入原外包裝箱內，以利後續退換貨作業。<br>
+                            貨運司機將於退/換貨申請確認後3~7天內與你聯繫取件，請保持手機暢通以利聯絡，請將你所訂購之完整商品、配件、贈品、原包裝置入原外包裝箱內，以利後續退貨作業。<br>
                             退款方式：確認退貨後，款項將退至原信用卡帳戶中。
                         </p>
                     </div>
@@ -819,12 +839,16 @@
         var loctk="location.href=\'member_myorder_detail.html#"+parameterN+"4\'";
         $('.btn.index-outline-btn.w-100').attr('onclick',loctk);
         if(parameterN=='tk'){
-            $('.ticket, .note-boxbg').hide();
+            $('.ticket, .note-boxbg, .order-shop-list li:first-child, .chkbox').hide();
             $('.store-name').text('艾斯移動');
             $('.order-shop-list .item-txt p:first-child').text('高雄捷運一日 QR CODE 搭乘券');
             $('.order-shop-list .item-txt p:nth-child(2)').text('規格：單一規格');
             $('.order-shop-list .item-txt p:nth-child(3)').text('$120');
             $('.order-quantity').text('x1');
+            $('header .title-name.tk').text($('header .title-name.tk').text().replace('退貨','退款'));
+            $('.returnReason .title-name.tk').text($('.returnReason .title-name.tk').text().replace('退貨','退款'));
+            $('.returnReason .reason-list').hide();
+            $('.returnReason .reason-list.tk').removeClass('d-none').show();
         }
     </script>
     <script src="../js/animateCss.js"></script>

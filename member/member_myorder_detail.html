@@ -196,7 +196,7 @@
             <div class="flex-inline-between align-items-end pb-3 px-3">
                 <div class="item w-100 p-2">
                     <p class="footp small-expired unable">鑑賞期已過</p>
-                    <button type="button" class="footbtn1 btn bluedk-outline-btn w-100" onclick="location.href='../shopping/store-info.html'">去逛賣場</button>
+                    <button type="button" class="footbtn1 btn bluedk-outline-btn w-100">去逛賣場</button>
                 </div>
                 <div class="item w-100 p-2">
                     <button type="button" class="footbtn2 btn bluedk-outline-btn w-100">聯絡店家</button>
@@ -322,7 +322,7 @@
                 $('.status1').text("處理中");
                 $('.status2').html("店家正在處理您的訂單，請耐心等候");
                 $('.footp').hide();
-                $('.footbtn1').attr('onclick','location.href=\'member_returns.html#tk\'').text('退貨');
+                $('.footbtn1').addClass('msg-open').attr('value','msg-ticket1').attr('data-toggle','modal').attr('data-target','#messageModal').text('退款');
                 $('.footbtn2').attr('onclick','location.href=\'#\'').text('聯絡店家');
                 break;
             case 'tk1':
