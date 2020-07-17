@@ -331,20 +331,18 @@
             case 'tk2':
                 // 車票 | 已完成 | 電子票券已使用
                 $('.tk0').show();
-                $('footer, .sendbox, .order-shop-list li:first-child').hide();
+                $('footer, .sendbox, .order-shop-list li:first-child, .align-items-end').hide();
                 $('.status1').text("已完成");
                 $('.status2').html("電子票券已使用");
-                $('.footbtn1').addClass('msg-open').attr('value','msg-ticket2').attr('data-toggle','modal').attr('data-target','#messageModal').text('退款');
-                $('.footbtn2').attr('onclick','location.href=\'#\'').text('聯絡店家');
+                // $('.footbtn1').addClass('msg-open').attr('value','msg-ticket2').attr('data-toggle','modal').attr('data-target','#messageModal').text('退款');
+                // $('.footbtn2').attr('onclick','location.href=\'#\'').text('聯絡店家');
                 break;
             case 'tk3':
                 // 車票 | 已完成 | 已逾期
                 $('.tk0').show();
-                $('footer, .sendbox, .order-shop-list li:first-child').hide();
+                $('footer, .sendbox, .order-shop-list li:first-child, .align-items-end').hide();
                 $('.status1').text("已完成");
                 $('.status2').html("電子票券已逾期");
-                $('.footbtn1').addClass('msg-open').attr('value','msg-ticket2').attr('data-toggle','modal').attr('data-target','#messageModal').text('退款');
-                $('.footbtn2').attr('onclick','location.href=\'#\'').text('聯絡店家');
                 break;
             case 'tk4':
                 // 車票 | 退款處理中
