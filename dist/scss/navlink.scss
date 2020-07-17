@@ -91,6 +91,9 @@
   
   /* all tablist-link */
   .afp-tab-box{
+    .tab-pane{
+      min-height: 50px;
+    }
     a.tablist-link{
       display: inline-block;
       width: 100%;

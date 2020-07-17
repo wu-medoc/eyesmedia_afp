@@ -332,20 +332,16 @@
         //點選時控制
         function ScrollTag(e) {
             var id_name=e;
-            console.log(e);
             $('.tag-topbox').addClass('fixed-top container');
             $('.tablist-link').removeClass('active show');
             $('#tab-'+id_name).addClass('active show');
-            console.log('#tab-'+id_name);
             $('html,body').animate({scrollTop: $('#'+id_name).offset().top-50}, 1000);
         }
         //取得tag 
-        var sectionIds = {};
+        var sectionIds = [];
         $(".tab-pane").each(function () {
-            var $this = $(this);
-            sectionIds[$this.attr("id")] = $this.offset().top-50;
+            sectionIds[$(this).attr("id")] = $(this).offset().top;
         });
-        
         //捲動時控制
         $(window).scroll(function (event) {
             var scrolled = $(this).scrollTop();
@@ -356,14 +352,16 @@
             }else{
                 $('.tag-topbox').addClass('fixed-top container');
                 $('.onbuy').addClass('fixed-bottom container shopping-cartfooter py-3 px-3');
-            }
-            //位置控制
-            for (key in sectionIds) {       
-                if ( (scrolled >= sectionIds[key]) && (scrolled>600) ) {     
-                    $("#tab-"+key).addClass("active show");
-                    $('.tablist-link').removeClass("active show");
-                    $("#tab-"+key).addClass("active show");
-                    console.log(scrolled +' '+ sectionIds[key]+' '+ key );        
+                //位置控制
+
+                for (key in sectionIds) {   
+                    var tag=sectionIds[key];
+                    if ( scrolled >= tag ) {     
+                        $("#tab-"+key).addClass("active show");
+                        $('.tablist-link').removeClass("active show");
+                        $("#tab-"+key).addClass("active show");
+                        //console.log(scrolled +' '+ sectionIds[key]+' '+ key );        
+                    }
                 }
             }
         });
