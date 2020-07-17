@@ -76,7 +76,7 @@
                 <footer class="shopping-cartfooter container fixed-bottom">
                     <ul>
                         <li>
-                            <div class="item w-100 p-2"><button type="button" class="btn index-btn w-100" onclick="location.href='member_myorder_detail.html#tk4'">確認</button></div>
+                            <div class="item w-100 p-2"><button type="button" class="btn index-btn w-100 msg-open" value="msg-ticket-re" onclick="chk()">確認</button></div>
                         </li>
                     </ul>
                 </footer>
@@ -84,7 +84,7 @@
         </main>   
 
 
-        
+        <div id="loginhtml"></div> 
  
     </div>    
 
@@ -102,11 +102,21 @@
     
     <!-- custom js -->
     <script>
+        $("#loginhtml").load("../login.html"); 
         //return reason back
+        let s=0;
         $('.reason-list li').on('click',function(){
             $(this).addClass('active').siblings().removeClass('active');
             $('.reason-txt').text($(this).text());
+            s=1;
         });
+        function chk(){
+            if(s==0){
+                $('#messageModal').modal('toggle')
+            }else{
+                location.href='member_myorder_detail.html#tk4';
+            }
+        }
     </script>
     <script src="../js/animateCss.js"></script>
     <script src="../js/index.js"></script>
