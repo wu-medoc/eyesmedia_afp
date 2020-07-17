@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=1, user-scalable=no">
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../js/vendor/bs4/css/bootstrap.min.css">
+    <!-- vendor css -->
+    <link rel="stylesheet" href="../js/vendor/jquery-editable-select-master/dist/jquery-editable-select.min.css">
+    <link rel="stylesheet" href="../js/vendor/swiper/css/swiper.min.css">
+    <!-- fontawesome css -->
+    <link rel="stylesheet" href="../js/vendor/fontawesome/css/fontawesome.css">
+    <link rel="stylesheet" href="../js/vendor/fontawesome/css/brands.css">
+    <link rel="stylesheet" href="../js/vendor/fontawesome/css/solid.css">
+    <!-- custom css -->
+    <link rel="stylesheet" href="../dist/style/css.min.css">
+    <link rel="stylesheet" href="../dist/style/global.min.css">
+    <link rel="stylesheet" href="../dist/style/index.min.css">
+    <link rel="stylesheet" href="../dist/style/receipt.min.css">
+    <title>Mobii!</title>
+</head>
+
+<body>
+    <div class="receiptbox container">
+        <img src="../img/shopping/store/receiptLogo.png" class="receiptLogo">
+        <div class="eyesmedia">
+            <h6>艾斯移動股份有限公司</h6>
+            <h6>收     據</h6>	
+            <p>中華民國 <span class="1"></span> 年 <span class="2"></span> 月 <span class="3"></span> 日</p>
+        </div>
+        <div class="table-responsive px-1">
+            <div class="receipt-title">
+                <div class="item1">
+                    <p>買 受 人:<span class="4"></span></p>
+                    <p>統一編號:<span class="6"></span></p>
+                    <p>地    址:<span class="8"></span></p>
+                </div>
+                <div class="item2">
+                    <p>收據編號:<span class="5"></span></p>
+                    <p>訂單編號:<span class="7"></span></p>
+                </div>
+            </div>
+            <table class="table table-bordered table-sm">
+                <thead>
+                  <tr>
+                    <th scope="col">品  名</th>
+                    <th scope="col">數  量</th>
+                    <th scope="col">單  價</th>
+                    <th scope="col">金  額</th>
+                    <th scope="col">備  註</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="9"></span></td>
+                    <td><span class="10"></span></td>
+                    <td><span class="11"></span></td>
+                    <td><span class="12"></span></td>
+                    <td rowspan="4"></td>
+                  </tr>
+                  <tr>
+                    <td><span class="13"></span></td>
+                    <td><span class="14"></span></td>
+                    <td><span class="15"></span></td>
+                    <td><span class="16"></span></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>營業人蓋用統一發票專用章</td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td rowspan="4" class="text-center">
+                        <p>艾斯移動股份有限公司</p>
+                        <p>統一編號:28010606</p>
+                        <p>負責人:曾敏滄</p>
+                        <p>電話:02-27078600</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td colspan="4">總計新台幣 <span class="17"></span> 元整</td>
+                  </tr>
+                </tbody>
+            </table>
+            <p class="px-2 pb-4 mb-4">收據如需更改請於次月5號前通知,逾期恕無法辦理。</p>
+        </div>
+
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="../js/vendor/bs4/js/jquery-3.2.1.min.js"></script>
+    <!-- Latest compiled and minified JavaScript -->    
+    <script src="../js/vendor/bs4/js/popper.min.js"></script>
+    <script src="../js/vendor/bs4/js/bootstrap.min.js"></script>
+
+    <!-- custom js -->    
+    <script>
+        const arr = ['','109','7','17','OOO','00005678','12345678','RM12345678','',
+        '代售高捷捷運 QR-Code 一日票','1','140','140','代售高捷捷運 QR-Code 一日票','2','140','280','肆佰貳拾'];
+        jQuery.each( arr, function( i, val ) {
+            $("." + i).text(val);
+        });
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+
+@media (max-width: 480px) {
+    .receiptbox{
+        font-size: 0.8em;
+        .receiptLogo{
+            max-width: 7em;
+        }
+        .eyesmedia{
+            width: 100%;
+            text-align: center;
+        }
+        .receipt-title{
+            width: 650px;
+            padding: 1em;
+            display: flex;
+            flex-direction: row;
+            .item2{
+                margin-left: auto;
+            }
+        }
+    }
+}
+@media (min-width: 481px) {
+    .receiptbox{
+        font-size: 1em;
+        .receiptLogo{
+            max-width: 8em;
+        }
+        .eyesmedia{
+            max-width: 650px;
+            text-align: center;
+            transform: translate(0, -65%);
+        }
+        .receipt-title{
+            width: 650px;
+            padding: 0 1em 1em 1em;
+            display: flex;
+            flex-direction: row;
+            .item2{
+                margin-left: auto;
+            }
+        }
+    }
+}
+
+h6{
+    font-weight: 400;
+}
+.table{
+    width: 650px;
+}
+.table th, .table td{
+    height: 34px;
+}

@@ -127,9 +127,9 @@
                                 <div class="item three"><i class="material-icons reverse">&#xE54E;</i>使用優惠券、折扣碼</div>
                                 <div class="item one discount-price text-right"><span class="store1-discount-price" value="0">-$0</span><i class="material-icons">&#xe315;</i></div>
                             </li>
-                            <li class="index-flex invobox">
+                            <li class="index-flex invobox" onclick="callLayer('.shopping-invoice')">
                                 <div class="item d-flex d-inline"><div class="invo-box"><i class="material-icons">&#xE8B0;</i></div>電子發票/收據</div>
-                                <div class="item text-right invoice-txt"><span class="text-muted">開立收據</span></div>
+                                <div class="item text-right invoice-txt"><span>請選擇收據樣式</span><i class="material-icons">&#xe315;</i></div>
                             </li>
                         </ul>
                     </div>
@@ -350,7 +350,7 @@
                                 </div>
                             </div>
                             <div class="item three text-center">
-                                <div class="title-name">電子發票</div>
+                                <div class="title-name">收據</div>
                             </div>
                             <div class="item two text-right">
                                 <div class="close-btn"></div>
@@ -364,43 +364,15 @@
                             <ul class="invoice">
                                 <li>
                                     <div class="item">
-                                        <label class="radio-box">發票捐贈
+                                        <label class="radio-box">不需抬頭與統編
                                             <input type="radio" name="radio">
                                             <span class="checkmark"></span>
                                         </label>
-                                    </div>
-                                    <div class="d-flex align-items-center auto-left">
-                                        <div class="item">
-                                            <input type="text" placeholder="請輸入愛心碼" class="heartcode">
-                                        </div>
-                                        <div class="item search-txt pl-2" onclick="callsortLayer('.hcode');">
-                                            查詢<i class="material-icons">&#xe315;</i>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="item">
-                                        <label class="radio-box">會員載具
-                                            <input type="radio" name="radio">
-                                            <span class="checkmark"></span>
-                                        </label>
-                                    </div>
-                                    <div class="item auto-left"><small>電子發票若中獎將寄送至會員預設地址</small></div>
-                                </li>
-                                <li>
-                                    <div class="item">
-                                        <label class="radio-box">手機條碼載具
-                                            <input type="radio" name="radio">
-                                            <span class="checkmark"></span>
-                                        </label>
-                                    </div>
-                                    <div class="item auto-left">
-                                        <input type="text" placeholder="請填寫手機條碼">
                                     </div>
                                 </li>
                                 <li>
                                     <div class="item item-self">
-                                        <label class="radio-box">三聯式發票
+                                        <label class="radio-box">要抬頭與統編
                                             <input type="radio" name="radio">
                                             <span class="checkmark"></span>
                                         </label>
@@ -419,71 +391,8 @@
                     </footer>     
                 </form>
             </div>
-        </div>
-                
+        </div>               
         
-        <div class="sortlayer">
-            <!-- 愛心碼選單 -->
-            <div class="hcode">
-                <div id="open-pagebox">
-                    <div class="open-page-title flex-inline-between">
-                        <div class="title-icon">
-                            <button class="btn" onclick="backsortLayer();">
-                                <i class="material-icons">&#xe314;</i>
-                            </button>
-                        </div>
-                        <div class="title-txt">
-                            查詢愛心碼
-                        </div>
-                        <div class="title-txt">
-                        </div>
-                    </div>
-                    <ul class="open-page-ul" id="queryhcode" onclick="backsortLayer();">
-                        <li class="flex-inline-between" value="119">
-                            <div class="item">
-                                社團法人台灣流浪動物希望協會
-                            </div>
-                            <div class="item">
-                                119
-                            </div>    
-                        </li>
-                        <li class="flex-inline-between" value="0095">
-                            <div class="item">
-                                財團法人法鼓山文教基金會
-                            </div>
-                            <div class="item">
-                                0095
-                            </div>    
-                        </li>
-                        <li class="flex-inline-between" value="172">
-                            <div class="item">
-                                流浪貓保護協會
-                            </div>
-                            <div class="item">
-                                172
-                            </div>    
-                        </li>
-                        <li class="flex-inline-between" value="0528">
-                            <div class="item">
-                                中華民國流浪動物花園協會
-                            </div>
-                            <div class="item">
-                                0528
-                            </div>    
-                        </li>
-                        <li class="flex-inline-between" value="529">
-                            <div class="item">
-                                社團法人高雄市關懷流浪動物協會
-                            </div>
-                            <div class="item">
-                                529
-                            </div>    
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
-        </div> 
     </div>
 
     <!-- message Modal -->
@@ -577,12 +486,8 @@
         };
 
         //invoice choosen
-        $('#queryhcode li').on('click',function(){
-            hcode=$(this).attr('value');
-            $('input.heartcode').attr('value',hcode);
-        });
-        $('.invoice>li').on('click',function(){
-            $(this).find('input').prop('checked',true);
+        $('.shopping-invoice label').on('click',function(){
+            $('.invoice-txt').html("<span>"+$(this).text()+"</span>");
         });
         
         /** 避免輸入鍵盤擋到輸入框 */

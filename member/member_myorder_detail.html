@@ -229,7 +229,23 @@
                 </div>
             </div>  
         </div>
-
+        <!-- 收據視窗 -->
+        <div class="modal fade nullreceipt" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+              <div class="modal-content">
+                <div id="msg-nullreceipt">
+                    <div class="mb-4">
+                        <iframe src="../shopping/receipt.html" class="receiptiframe"></iframe>
+                    </div>
+                    <div class="d-flex justify-content-center text-center bg-light border-t py-2">
+                        <button type="button" class="btn btn-login font-bold w-100" data-dismiss="modal" aria-label="Close">
+                            關閉
+                        </button>
+                    </div>
+                </div>  
+              </div>
+            </div>
+        </div>
     </div>   
     <div id="loginhtml"></div> 
     <footer class="shopping-cartfooter container fixed-bottom">
@@ -385,7 +401,7 @@
             $('.order-shop-list .item-txt p:nth-child(3)').text('$120');
             $('.order-quantity').text('x1');
             $('.invobox div:first-child span').text('收據');
-            $('.invobox div:last-child').html("<button type='button' class='btn px-0 text-primary msg-open' value='msg-nullreceipt' data-toggle='modal' data-target='#messageModal'>查看收據</button>");
+            $('.invobox div:last-child').html("<button type='button' class='btn px-0 text-primary' data-toggle='modal' data-target='.nullreceipt'>查看收據</button>");
             
         }
     </script>
