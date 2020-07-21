@@ -162,6 +162,13 @@
         }        
         a{
           color: $blue-dark;
+          &.disable{
+            color: gray;
+            img{
+              filter: grayscale(100%);
+              opacity: .4;
+            }
+          }
         }
     }
     .swiper-button-next{

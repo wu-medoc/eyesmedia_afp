@@ -640,7 +640,7 @@ header + div,
     padding-bottom: 58px;
   }
 }
-.headerbox, 
+ 
 .header-secondary {
   background-color: #fff;
   padding: 15px;
@@ -682,7 +682,25 @@ header + div,
     text-align: -webkit-right;
   }
 }
-
+.headerbox{
+  background-color: #fff;
+  padding: 15px;
+  width: 100%;
+  position: absolute;
+  .title-name{
+    font-size: 1.3em;
+    font-weight: bold;
+    white-space: nowrap;    
+    text-align: center;
+  }
+  div.item:first-child{
+    text-align: left;
+  }
+  div.item:last-child{
+    text-align: right;
+    text-align: -webkit-right;
+  }
+}
 .header-sort{
   background-color: #fff;
   padding: 0px 5px 0 10px;
