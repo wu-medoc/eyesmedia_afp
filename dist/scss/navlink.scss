@@ -106,11 +106,6 @@
       &.active{
         font-weight: 700;
         color: $index-default;
-        -webkit-transform: translateX(-50%);
-        transform: translateX(-50%);
-        animation-name:tabline;
-        animation-duration:0.5s;
-        animation-fill-mode: forwards;
         &::after {
           content: '';
           display: block;
@@ -120,6 +115,11 @@
           position: absolute;
           left: 50%;
           bottom: -5px;
+          -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+          animation-name:tabline;
+          animation-duration:0.5s;
+          animation-fill-mode: forwards;
         } 
       }
     }
