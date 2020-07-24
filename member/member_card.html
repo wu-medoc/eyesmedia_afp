@@ -287,35 +287,37 @@
                 msgpara();
                 $('#msgP1').text("卡號格式錯誤，請確認您的卡號重新輸入。");
             }else if(num=='11111111111'){
-                //已綁定的卡片11111111111(請比對資料)
+                //已綁定的卡片11111111111(假資料)
                 msgpara();
                 $('#msgP1').text("此卡號已被綁定，請確認您的卡號重新輸入。");
             }else{
                 msgpara();
                 $('#msgP1').text("成功加入卡片");
-                $('#msgpara .btn-login').text("確定").attr('onclick','javascript:location.search=\'member_card.html#1\';backLayer();');
+                $('#msgpara .btn-login').text("確定").attr('onclick','stat(1);backLayer();');
             }
         }
         //修改卡片
-        var hashVal=window.location.hash.split("#")[1];
-        if(hashVal=='1'){
-            console.log(hashVal);
-            $('.member-item-group').removeClass('d-none');
-            $('.my-info-box').addClass('d-none');
-        }else{
-            $('.my-info-box').removeClass('d-none');
-            $('.member-item-group').addClass('d-none');
+        function stat(e){
+            if(e=='1'){
+                $('.member-item-group').removeClass('d-none');
+                $('.my-info-box').addClass('d-none');
+            }else{
+                $('.my-info-box').removeClass('d-none');
+                $('.member-item-group').addClass('d-none');
+            }
         }
+        window.addEventListener("hashchange",watchHash());
         function myCardup(){
             msgpara();
             $('#msgP1').text("修改完成");
-            $('#msgpara .btn-login').text("確定").attr('onclick','javascript:location.search=\'member_card.html#1\';backLayer();');
+            $('#msgpara .btn-login').text("確定").attr('onclick','stat(1);backLayer();');
         }
         function myCarddel(){
             msgpara2();
             $('#msgP2').text("是否確定解除此會員卡");
-            $('#msgpara2 .btn-login').text("確定").attr('onclick','javascript:=\'member_card.html\';backLayer();');
+            $('#msgpara2 .btn-login').text("確定").attr('onclick','stat(2);backLayer();');
         }
+
     </script>
 
     <script>    
