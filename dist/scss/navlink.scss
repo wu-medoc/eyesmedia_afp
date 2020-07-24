@@ -46,10 +46,21 @@
         flex-basis: 0;
         text-align: center;
         white-space:nowrap;
-        a {
-          border: none;
-          padding: 0;
-          cursor: pointer;
+        a{
+          display: inline-table;
+          width: 100%;
+          height: 100%;
+          color: $gray-color;
+          width: 100%;
+          background-color: transparent;
+          &.active{
+            font-weight: 700;
+            color: $index-default;
+            border-bottom: solid 3px $index-default;
+            animation-name:tabline;
+            animation-duration:0.7s;
+            animation-fill-mode: forwards;
+          }
         }
       }
     }
@@ -79,11 +90,22 @@
         flex-basis: 0;
         text-align: center;
         white-space:nowrap;
-        a {
-          border: none;
+        a{
           font-size: 1.1em;
-          padding: 0;
-          cursor: pointer;
+          display: inline-table;
+          width: 100%;
+          height: 100%;
+          color: $gray-color;
+          width: 100%;
+          background-color: transparent;
+          &.active{
+            font-weight: 700;
+            color: $index-default;
+            border-bottom: solid 3px $index-default;
+            animation-name:tabline;
+            animation-duration:0.7s;
+            animation-fill-mode: forwards;
+          }
         }
       }
     }
@@ -95,32 +117,19 @@
       min-height: 50px;
     }
     a.tablist-link{
-      display: inline-block;
+      display: inline-table;
       width: 100%;
       height: 100%;
       color: $gray-color;
-      position: relative;
-      top: -3px;
       width: 100%;
       background-color: transparent;
       &.active{
         font-weight: 700;
         color: $index-default;
-        &::after {
-          content: '';
-          display: block;
-          height: 3px;
-          background-color: $index-default;
-          border-radius: 1px;
-          position: absolute;
-          left: 50%;
-          bottom: -5px;
-          -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-          animation-name:tabline;
-          animation-duration:0.5s;
-          animation-fill-mode: forwards;
-        } 
+        border-bottom: solid 3px $index-default;
+        animation-name:tabline;
+        animation-duration:0.7s;
+        animation-fill-mode: forwards;
       }
     }
   }
