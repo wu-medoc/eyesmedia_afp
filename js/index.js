@@ -484,11 +484,7 @@ $('.animated').css('animation-fill-mode','inherit');
 
 
 //member, explore footer pc hide
-var strFullPath=window.document.location.href; 
 var strPath=window.document.location.pathname; 
-var pos=strFullPath.indexOf(strPath); 
-var prePath=strFullPath.substring(0,pos); 
-var postPath=strPath.substring(0,strPath.substr(1).indexOf('/')+1); 
 if (strPath.toLowerCase().indexOf("member")>0){
     $('footer.for-pc').hide();
 }; 
