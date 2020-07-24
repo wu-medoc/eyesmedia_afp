@@ -355,6 +355,30 @@ window.onload = function(){
         $('#messageModal .modal-body>div').hide();
         $('#'+msgval).show();
     });
+
+    //member, explore footer pc hide
+    var strPath1=window.document.location.pathname; 
+    if (strPath1.toLowerCase().indexOf("member")>0){
+        $('footer.for-pc').hide();
+    }; 
+    if (strPath1.toLowerCase().indexOf("explore")>0){
+        $('footer.for-pc').hide();
+    }; 
+    // function getRootPath(){ 
+    //     var strFullPath=window.document.location.href; 
+    //     var strPath=window.document.location.pathname; 
+    //     var pos=strFullPath.indexOf(strPath); 
+    //     var prePath=strFullPath.substring(0,pos); 
+    //     var postPath=strPath.substring(0,strPath.substr(1).indexOf('/')+1); 
+    //     return(strPath) 
+    // } 
+    // var pathfoot = ["member","explore"];
+    // console.log(getRootPath().toLowerCase().indexOf("member"));
+    // $.each(pathfoot, function( key, value ) {
+    //     if (getRootPath().toLowerCase().indexOf(value)>0){
+    //         $('footer.for-pc').hide();
+    //     }; 
+    // });
 };
 
 //#messageModal message 
@@ -483,26 +507,3 @@ $('.header-secondary, .headerbox').parents().find('.wrap').addClass("slideInRigh
 $('.animated').css('animation-fill-mode','inherit');
 
 
-//member, explore footer pc hide
-var strPath=window.document.location.pathname; 
-if (strPath.toLowerCase().indexOf("member")>0){
-    $('footer.for-pc').hide();
-}; 
-if (strPath.toLowerCase().indexOf("explore")>0){
-    $('footer.for-pc').hide();
-}; 
-    // function getRootPath(){ 
-    //     var strFullPath=window.document.location.href; 
-    //     var strPath=window.document.location.pathname; 
-    //     var pos=strFullPath.indexOf(strPath); 
-    //     var prePath=strFullPath.substring(0,pos); 
-    //     var postPath=strPath.substring(0,strPath.substr(1).indexOf('/')+1); 
-    //     return(strPath) 
-    // } 
-    // var pathfoot = ["member","explore"];
-    // console.log(getRootPath().toLowerCase().indexOf("member"));
-    // $.each(pathfoot, function( key, value ) {
-    //     if (getRootPath().toLowerCase().indexOf(value)>0){
-    //         $('footer.for-pc').hide();
-    //     }; 
-    // });
