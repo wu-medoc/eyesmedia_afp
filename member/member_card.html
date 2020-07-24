@@ -41,17 +41,14 @@
                 </button>
             </div>
             <div class="item title-name">我的卡片</div>                
-            <div class="item icon-btn btn-img">                         
-                <button class="btn div-switch d-none" onclick="callLayer('.mycardadd');" data-toggle="tooltip" data-placement="bottom" title="新增卡片">
-                    <i class="material-icons">&#xe145;</i>
-                </button>
+            <div class="item icon-btn btn-img">  
             </div>
         </div>
         <div class="pb-5">
             <!--卡片初始頁-->
-            <div class="my-info-box border-bottom-0 div-switch d-block">
-                <div class="py-3 text-left">
-                    <p class="font-bold">尚未新增會員卡</p>
+            <div class="my-info-box border-bottom-0">
+                <div class="py-3 text-bluedk">
+                    <p class="font-bold text-center pt-3 pb-1">尚未新增會員卡</p>
                     <p>快加入指定會員卡，可提升會員等級，還有一堆好禮優惠可以拿喔～</p>
                 </div>
                 <div class="py-3 text-center">
@@ -64,67 +61,29 @@
                         立即新增卡片
                     </div>    
                 </div>
-                <button type="button" class="btn index-outline-btn w-100 mt-4" onclick="div_switch();">卡片列表(如有卡片時的顯示畫面)</button>   
             </div>            
             <!--卡片列表-->
-            <div class="member-item-group border-bottom-0 text-center div-switch d-none">  
-                <button class="btn open-overlay-choice"> 
-                    <div class="mycard-box">
+            <div class="member-item-group border-bottom-0 border-t text-center d-none">  
+                    <div class="mycard-box mt-4">
                         <img class="mycard-img" src="../img/member/mycard-blue.png">
                         <div class="mycard-info">
                             <img class="mycard-simg ml-auto" src="../img/member/ipass1.png">
-                            <p class="info-bc align-self-center">超級會員</p>
+                            <p class="info-bc align-self-center">MoBii好玩卡</p>
                             <p class="info-bb mt-auto ml-auto"> 890 1</p>
                         </div>
+                        <img class="uploadphoto" src="../img/member/uploadphoto.png" onclick="callLayer('.mycardedit');">
                     </div>
-                </button> 
-                <div class="small-80 p-3">＊卡片掛失服務請依一卡通掛失規定辦理<a href=" https://www.i-pass.com.tw/Miss/Lost" target="_blank"><span class="text-index">前往掛失</span></a></div>    
+                <div class="small-80 pt-3 px-2 text-bluedk">＊如需記名服務，請至一卡通官網申請<a href="https://www.i-pass.com.tw/Miss" target="_blank"><span class="text-index">前往掛失</span></a></div>    
+                <div class="small-80 pb-3 px-2 text-bluedk">＊卡片掛失服務請依一卡通掛失規定辦理<a href="https://www.i-pass.com.tw/Miss/Lost" target="_blank"><span class="text-index">前往掛失</span></a></div>    
                 <!-- 還未給連結 -->
                 <div class="d-flex d-inline p-3">
-                    <button class="btn bluedk-outline-btn w-50 m-2">乘車紀錄</button>
-                    <button class="btn bluedk-outline-btn w-50 m-2">消費記錄</button>
+                    <button class="btn index-outline-btn w-50 m-2">乘車紀錄</button>
+                    <button class="btn index-outline-btn w-50 m-2">消費記錄</button>
                 </div>
-                <!-- <ul>
-                    <li>                                                  
-                        <button class="btn open-overlay-choice w-100"> 
-                            <div class="flex-inline-between">
-                                <div class="item item-img">
-                                    <img src="../img/member/mycard-ipass.svg" alt="">
-                                </div>
-                                <div class="item">
-                                    <div class="item card-type">Mobii!好玩卡</div>
-                                    <div class="item item-card-num">123 456890 1</div>
-                                </div>
-                            </div>     
-                        </button>
-                    </li>
-                </ul> -->
             </div>
         </div>
     </div>
   
-        <!--修改卡片選單-->
-        <div class="overlay-choice container p-3" style="display: none;">
-            <div class="choice-list">
-                <ul>
-                    <li>
-                        <button class="btn close-overlay-choice w-100" onclick="callLayer('.mycardedit');">
-                            編輯此卡
-                        </button>
-                    </li>
-                    <li>
-                        <button class="btn close-overlay-choice w-100 msg-open" value="msg-mycard" data-toggle="modal" data-target="#messageModal" data-dismiss="modal" aria-label="Close">
-                            解除此卡
-                        </button>
-                    </li>
-                </ul>
-            </div>
-            <div class="choice-status close-overlay-choice">
-                取消
-            </div>
-        </div>
-        <!-- <div class="modal-backdrop fade show d-none"></div> -->
-
     <!--次頁-->
     <div class="multilayer">       
 
@@ -140,30 +99,54 @@
                 <div class="item">     
                 </div>
             </div>
-            <div class="my-list-box">
-                <div class="item">
-                    <ul>
-                        <li>
-                            <div class="item">名稱</div>
-                            <div class="item input-box">
-                                <input type="text" value="" placeholder="自訂卡片名稱">
-                            </div>
-                        </li>
-                        <li>
-                            <div class="item">卡片號碼</div>
-                            <div class="item input-box">
-                                <input type="text" value="" placeholder="請輸入">
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-                <div class="item note-box">
-                    <div class="note-item">不知道卡片號碼在哪裡？<span class="text-pink" onclick="callLayerUp('.mycardprompt');">請看這裡</span></div>
-                </div> 
-                <div class="fixed-btn container">
-                    <button type="button" class="btn next-btn w-100 msg-open" value="msg-mycard" data-toggle="modal" data-target="#messageModal" data-dismiss="modal" aria-label="Close">確認</button>
-                </div>          
-                <div class="modal-backdrop fade show d-none"></div>
+            <div class="my-list-box cardbox">
+                <form id="addcard">
+                    <div class="item">
+                        <ul>
+                            <li>
+                                <div class="item">名稱</div>
+                                <div class="item input-box">
+                                    <input type="text" value="" placeholder="自訂卡片名稱">
+                                </div>
+                            </li>
+                            <li>
+                                <div class="item">卡片號碼<span class="text-org">*</span></div>
+                                <div class="item input-box">
+                                    <input id="cardnumber" type="text" value="" placeholder="請輸入">
+                                </div>
+                            </li>
+                            <li class="item small-end">
+                                不知道卡片號碼在哪裡？<span class="text-org" onclick="callLayerUp('.mycardprompt');">請看這裡</span>
+                            </li>
+                            <li>
+                                <div class="item">身分證末四碼</div>
+                                <div class="item input-box">
+                                    <input type="text" value="" placeholder="請輸入">
+                                </div>
+                            </li>
+                            <li class="item small-end">
+                                記名式一卡通請提供身分證末四碼驗證
+                            </li>
+                            <li>
+                                <div class="item">請輸入圖形驗證碼<span class="text-org">*</span></div>
+                                <div class="item input-box">
+                                    <input id="captchaInput" type="text" value="" placeholder="請輸入">
+                                </div>
+                            </li>
+                            <li class="item small-end border-bottom-0">
+                                <span class="text-org">*</span>為必填
+                            </li>
+                            <li class="item captchabox border-bottom-0">
+                                <canvas width="140" height="36" id="captcha1"></canvas>
+                                <button type="button" class="btn index-outline-btn catchaBtn py-1 mx-2">重新產生</button>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="fixed-btn container">
+                        <button type="button" class="btn next-btn w-100" onclick="myCard()">確認</button>
+                    </div>          
+                    <div class="modal-backdrop fade show d-none"></div>
+                </form>
             </div>
         </div> 
          <!--修改卡片2-->
@@ -190,16 +173,16 @@
                         <li>
                             <div class="item">卡片號碼</div>
                             <div class="item input-box">
-                                <input type="text" value="123 456890 1" placeholder="請輸入">
+                                <input type="text" value="123 456890 1" disabled class="text-muted">
                             </div>
                         </li>
                     </ul>
                 </div>
-                <div class="item note-box">
-                    <div class="note-item">不知道卡片號碼在哪裡？<span class="text-pink" onclick="callLayerUp('.mycardprompt');">請看這裡</span></div>
-                </div> 
+                <div class="item text-center p-4">
+                    <button class="btn index-outline-btn px-4" onclick="myCarddel()">解除綁定</button>
+                </div>  
                 <div class="fixed-btn container">
-                    <button type="button" class="btn next-btn w-100 msg-open" value="msg-mycard" data-toggle="modal" data-target="#messageModal" data-dismiss="modal" aria-label="Close">完成</button>
+                    <button type="button" class="btn next-btn w-100" onclick="myCardup()">完成</button>
                 </div>          
                 <div class="modal-backdrop fade show d-none"></div>
             </div>
@@ -208,11 +191,15 @@
 
     <!--卡片圖示-->
     <div class="uplayer">
-        <div class="mycardprompt p-3 text-center">
+        <div class="mycardprompt">
+            <div class="cardnum-title">卡片號碼位置</div>
             <div class="cardnum">
-                <img src="../img/member/mycard-prompt.png" class=" w-50">
+                <p>一卡通</p>
+                <img src="../img/member/mycardPrompt1.png">
+                <p>一卡通聯名卡</p>
+                <img src="../img/member/mycardPrompt2.png">
+                <button type="button" class="btn index-outline-btn w-100 mt-4 masklayer-close" onclick="backLayerUp();">關閉</button>
             </div>
-            <button type="button" class="btn index-outline-btn w-100 mt-4 masklayer-close" onclick="backLayerUp();">關閉</button>
         </div>
     </div>
 </div> 
@@ -233,6 +220,7 @@
 
     <!-- custom js -->    
     <script src="../js/animateCss.js"></script>
+    <script src="../js/vendor/captcha/captcha-mini.js"></script>
     <script>
         // footer control
         // function getRootPath(){ 
@@ -263,6 +251,71 @@
             $(this).toggleClass('active').siblings().removeClass('active');
         });
         
+        //圖形驗證 https://github.com/saucxs/captcha-mini
+        let name, num, cap;
+        let captcha1 = new CaptchaMini({
+            lineWidth: 1, //線條寬度
+            lineNum: 3, //線條數量
+            dotR: 1, //點的半徑
+            dotNum: 8, //點的數量
+            preGroundColor: [10, 80], //前景色區間
+            backGroundColor: [150, 250], //背景色區間
+            fontSize: 30, //字體大小
+            fontFamily: ['Georgia', 'Helvetica', 'System'], //字體類型
+            fontStyle: 'fill', //字體繪製方法，有fill和stroke
+            content: 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789', //驗證碼內容
+            length: 4 //驗證碼長度
+        }); 
+        captcha1.draw(document.querySelector('#captcha1'), r => {
+            cap=r;
+        });
+        $('.catchaBtn').on('click',function(){
+            captcha1.clear();
+            captcha1.draw(this.callbak);
+        });
+        //新增卡片驗證
+        function myCard(){
+            num = $('#cardnumber').val();
+            if (num=="" || cap==""){
+                //msgpara()放在index.js
+                msgpara();
+                $('#msgP1').text("請輸入卡號及圖形驗證碼");
+            }else if ( $('#captchaInput').val().toLowerCase() != cap.toLowerCase() ){
+                msgpara();
+                $('#msgP1').text("驗證碼輸入錯誤");
+            }else if(num.length != 11){
+                msgpara();
+                $('#msgP1').text("卡號格式錯誤，請確認您的卡號重新輸入。");
+            }else if(num=='11111111111'){
+                //已綁定的卡片11111111111(請比對資料)
+                msgpara();
+                $('#msgP1').text("此卡號已被綁定，請確認您的卡號重新輸入。");
+            }else{
+                msgpara();
+                $('#msgP1').text("成功加入卡片");
+                $('#msgpara .btn-login').text("確定").attr('onclick','javascript:location.search=\'member_card.html#1\';backLayer();');
+            }
+        }
+        //修改卡片
+        var hashVal=window.location.hash.split("#")[1];
+        if(hashVal=='1'){
+            console.log(hashVal);
+            $('.member-item-group').removeClass('d-none');
+            $('.my-info-box').addClass('d-none');
+        }else{
+            $('.my-info-box').removeClass('d-none');
+            $('.member-item-group').addClass('d-none');
+        }
+        function myCardup(){
+            msgpara();
+            $('#msgP1').text("修改完成");
+            $('#msgpara .btn-login').text("確定").attr('onclick','javascript:location.search=\'member_card.html#1\';backLayer();');
+        }
+        function myCarddel(){
+            msgpara2();
+            $('#msgP2').text("是否確定解除此會員卡");
+            $('#msgpara2 .btn-login').text("確定").attr('onclick','javascript:=\'member_card.html\';backLayer();');
+        }
     </script>
 
     <script>    

@@ -6,11 +6,7 @@
     text-align: right;
     padding-bottom: 4px;
   }
-  
-  .btn-login{
-    font-weight: 400;
-    background-color: transparent;
-  }
+
   
   .modal-smbox {
     width: 100%;
@@ -118,10 +114,23 @@
     label.form-check-label {
       vertical-align: super;
       line-height: initial;
-    }
-    .btn-login {
+    }    
+    .btn-cls{
+      padding-top: .75em;
+      padding-bottom: .75em;
+      font-weight: 400;
       font-size: 80%;
       color: #005792;
+      background-color: transparent;
+      border-right: 1px solid #ccc;
+    }
+    .btn-login {
+      padding-top: .75em;
+      padding-bottom: .75em;
+      font-size: 80%;
+      color: #005792;
+      font-weight: 400;
+      background-color: transparent;
     }
     .vcode-msg {
       font-size: .8em;
@@ -711,6 +720,20 @@
     min-height:100vh;
     height:100%;
     z-index: 1;
+    // div.headerbox{
+    //   animation-name: TopIn;
+    //   animation-duration: 1s;
+    //   animation-fill-mode: both;
+    // }
+  //   @keyframes TopIn {
+  //     0% {    
+  //       top: -100px;
+  //       opacity: 0;}
+  //     100% {
+  //       top: 0;
+  //       opacity: 1;
+  //     }
+  //  }
   }
   .sortlayer,
   .uplayer{

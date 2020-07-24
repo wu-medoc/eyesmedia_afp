@@ -357,6 +357,17 @@ window.onload = function(){
     });
 };
 
+//#messageModal message 
+function msgpara(){
+    $('#messageModal').modal('show');
+    $('#messageModal .modal-body>div').hide();
+    $('#msgpara').show();
+}
+function msgpara2(){
+    $('#messageModal').modal('show');
+    $('#messageModal .modal-body>div').hide();
+    $('#msgpara2').show();
+}
 // div switch
 function div_switch() {
     $('.div-switch.d-block').removeClass('d-block').addClass('d-none1');

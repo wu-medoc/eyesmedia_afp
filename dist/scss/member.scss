@@ -82,6 +82,7 @@ ul{
     }
 }
 
+//我的卡片
 .member-item-group{
     background-color: $default-white;
     .mycard-box{        
@@ -94,6 +95,17 @@ ul{
         .mycard-img {
             position: relative;
             width: 100%;
+        }
+        .uploadphoto{
+            width: 64px;
+            position: absolute;
+            top: 50%;
+            right: 0;
+            transform: translate(-31%, -50%);
+            @media (max-width: 480px) {
+                width: 48px;
+                transform: translate(-22%, -50%);
+            }
         }
         .mycard-info {
             top:0;
@@ -219,6 +231,27 @@ ul{
                 }      
             }
         }
+    }    
+    &.cardbox {
+        height: 100%;
+        background: $gray-light8;
+        ul{
+            background: #fff;
+            li.small-end{
+                padding: 5px 15px;
+                justify-content: flex-end;
+                font-size: small;
+                background: $gray-light8;
+            }
+            li.captchabox{
+                padding: 5px 15px;
+                justify-content: flex-end;
+                background: $gray-light8;
+                button{
+                    color: $index-default;
+                }
+            }
+        }
     }
     p{
         padding: 2px 15px;
@@ -333,9 +366,31 @@ ul{
         }
     }    
 }
-.cardnum img{
-    max-width: 300px;
+
+.uplayer>div.mycardprompt {
+    overflow: hidden;
+    max-height: 82vh;
+    padding-bottom: 60px;
+    @media (min-width: 768px){
+        max-height: 65vh;
+    }
 }
+.cardnum-title{
+    text-align: center;
+    background: $gray-light8;
+    padding: .5em;
+}
+.cardnum{
+    padding: 1em;
+    text-align: center;
+    color: $index-default;
+    img{
+        width: 300px;
+        @media (max-width: 480px) {
+            width: 200px;
+        }
+    }
+} 
 
 // 我的帳戶 - 檔案
 .my-info-box{
@@ -405,6 +460,9 @@ ul{
     }
     .add-btnbg {
         width: 130px;
+        @media (min-width: 768px) {
+            width: 200px;
+        }
     }
 }
 // 上傳護照提示
@@ -1230,6 +1288,12 @@ input[type="file"] {
 }
 
 .faq-content{
+    top: 0;
+    bottom:0;
+    position: absolute;;
+    overflow-y:auto;
+    overflow-x:hidden;
+    z-index: -1;
     color: $blue-dark;
     ul.decimal{
         list-style-type:decimal;
