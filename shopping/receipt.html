@@ -150,7 +150,7 @@
               var img = $("<img/>", { src: canvas.toDataURL("images/png") }).addClass('rimg d-none').appendTo($div);
               let aLink=document.createElement('a');
               aLink.href=$('.rimg').attr('src');//設定下載的圖片連結
-              aLink.download='imgName.png'//設定圖片下載之後的名稱
+              aLink.download='receipt.png'//設定圖片下載之後的名稱
               aLink.click()//觸發點選事件
               console.log($('.rimg'));
           });
