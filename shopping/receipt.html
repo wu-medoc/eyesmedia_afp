@@ -25,6 +25,7 @@
 
 <body>
     <div class="receiptbox container">
+      <div class="rbox">
         <img src="../img/shopping/store/receiptLogo.png" class="receiptLogo">
         <div class="eyesmedia">
             <h6>艾斯移動股份有限公司</h6>
@@ -115,9 +116,13 @@
                   </tr>
                 </tbody>
             </table>
-            <p class="px-2 pb-4 mb-4">收據如需更改請於次月5號前通知,逾期恕無法辦理。</p>
+            <div class="px-2 pb-4 mb-4">收據如需更改請於次月5號前通知,逾期恕無法辦理。<input type="button" value="下載圖檔" /></div>
         </div>
-
+      </div>
+      <fieldset>
+        <div>
+        </div>
+      </fieldset>
     </div>
 
     <!-- Optional JavaScript -->
@@ -126,7 +131,7 @@
     <!-- Latest compiled and minified JavaScript -->    
     <script src="../js/vendor/bs4/js/popper.min.js"></script>
     <script src="../js/vendor/bs4/js/bootstrap.min.js"></script>
-
+    <script src="../js/html2canvas.js"></script>
     <!-- custom js -->    
     <script>
         const arr = ['','109','7','17','OOO','00005678','12345678','RM12345678','',
@@ -135,6 +140,21 @@
             $("." + i).text(val);
         });
 
+        //下載圖檔
+        $(":button").click(function() {
+          html2canvas($(".rbox")[0]).then(function(canvas) {
+              var $div = $("fieldset div");
+              $div.empty();
+              //利用canvas中toDataURL()將圖片轉為dataURL(base64)的方法
+              //$("<img />", { src: canvas.toDataURL("images/png") }).appendTo($div);
+              var img = $("<img/>", { src: canvas.toDataURL("images/png") }).addClass('rimg d-none').appendTo($div);
+              let aLink=document.createElement('a');
+              aLink.href=$('.rimg').attr('src');//設定下載的圖片連結
+              aLink.download='imgName.png'//設定圖片下載之後的名稱
+              aLink.click()//觸發點選事件
+              console.log($('.rimg'));
+          });
+        });
     </script>
 </body>
 </html>
