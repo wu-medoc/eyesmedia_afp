@@ -412,16 +412,16 @@ footer.for-mobile {
   position: fixed;
   width: 101%;  
   min-width: 320px;
-  left: 0;
+  left: 50%;
   bottom: 0;
   z-index: 300;
   background-color: #fff;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
-  // -webkit-transform: translate(-50%, 0);
-  // transform: translate(-50%, 0);
-  transform: translateZ(0);
-  -webkit-transform: translateZ(0);
+  -webkit-transform: translate3d(-50%, 0, 0);
+  transform: translate3d(-50%, 0, 0);
+  // transform: translateZ(0);
+  // -webkit-transform: translateZ(0);
 }
 
 footer.for-pc{
