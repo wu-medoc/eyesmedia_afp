@@ -25,7 +25,7 @@
 
 <body>
     <div class="receiptbox container">
-      <div class="rbox">
+      <div id="rbox">
         <img src="../img/shopping/store/receiptLogo.png" class="receiptLogo">
         <div class="eyesmedia">
             <h6>艾斯移動股份有限公司</h6>
@@ -135,7 +135,7 @@
             </table>
         </div>
       </div>
-      <div class="px-2 pb-4 mb-4">收據如需更改請於次月5號前通知,逾期恕無法辦理。<input type="button" value="下載收據圖檔" /></div>
+      <div class="px-2 pb-4 mb-4">收據如需更改請於次月5號前通知,逾期恕無法辦理。<button type="button" class="btn bluedk-outline-btn">下載收據圖檔</button></div>
       <fieldset>
         <div>
         </div>
@@ -149,6 +149,7 @@
     <script src="../js/vendor/bs4/js/popper.min.js"></script>
     <script src="../js/vendor/bs4/js/bootstrap.min.js"></script>
     <script src="../js/html2canvas.js"></script>
+    <script src="../js/jspdf.debug.js"></script>
     <!-- custom js -->    
     <script>
         const arr = ['','109','7','17','OOO','00005678','12345678','RM12345678','',
@@ -158,19 +159,21 @@
         });
 
         //下載圖檔
-        $(":button").click(function() {
-          html2canvas($(".rbox")[0]).then(function(canvas) {
-              var $div = $("fieldset div");
-              $div.empty();
-              //利用canvas中toDataURL()將圖片轉為dataURL(base64)的方法
-              var img = $("<img/>", { src: canvas.toDataURL("images/png") }).addClass('rimg d-none').appendTo($div);
-              let aLink=document.createElement('a');
-              aLink.href=$('.rimg').attr('src');//設定下載的圖片連結
-              aLink.download='receipt.png'//設定圖片下載之後的名稱
-              aLink.click()//觸發點選事件
-              console.log($('.rimg'));
+        $(document).ready(function(){
+          $("button").click(function(){
+              html2canvas(document.getElementById("rbox"), {
+                  onrendered: function(canvas) {
+
+                      var imgData = canvas.toDataURL('image/png');
+                      console.log('Report Image URL: '+imgData);
+                      var doc = new jsPDF('p', 'mm', [297, 210]); 
+                      
+                      doc.addImage(imgData, 'PNG', 10, 10);
+                      doc.save('sample.pdf');
+                  }
+              });
           });
-        });
+        })
     </script>
 </body>
 </html>
