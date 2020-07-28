@@ -685,11 +685,10 @@ footer{
         }
     }
     .products-label {
-        padding: 0 .25em;
+        padding: .1em .25em;
         color: $onlineshopping-default;
         border: 1px solid $onlineshopping-default;
         font-size: 85%;
-        height: 1.5em;
         white-space: nowrap;
     }
     .products-title {   
@@ -757,7 +756,7 @@ footer{
     }    
     .products-btn-addcart button, 
     .products-btn-buynow button{
-        height: 2em;
+        height: auto;
     }
     .products-store{
         background-color: #eee;
