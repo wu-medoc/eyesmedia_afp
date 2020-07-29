@@ -432,7 +432,7 @@ function callLayer(nextLayer) {
 };
 function backLayer() {
     var lastlayer = tLayer.pop();
-	$(lastlayer).animateCss('slideOutRight', '+d-block container faster').removeAttr('style');
+	$(lastlayer).animateCss('slideOutRight', '-d-block container faster').removeAttr('style');
     if (tLayer.length === 0) {
         $('.multilayer').animateCss('slideOutRight', '-d-block container faster').removeAttr('style');        
         tLayer.length=0; $('.modal-backdrop').remove();zz
