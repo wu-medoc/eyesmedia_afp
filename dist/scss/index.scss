@@ -930,6 +930,31 @@ header + div,
   }
 }
 
+.my-address-list, 
+.shopping-discount{
+  .radio-box .checkmark {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        height: 18px;
+        width: 18px;
+        border: 1px #DADADA solid;
+        transform: translateY(-50%);
+        &:after {
+            content: "✔";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 10px;
+            height: 12px;
+            color: $default-white;
+            display: none;
+            line-height: 1em;
+            background: transparent;
+        }
+    }
+} 
 /* index flex */
 .shopping-flex, 
 .index-flex{
