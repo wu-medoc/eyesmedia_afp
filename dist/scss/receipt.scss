@@ -52,7 +52,7 @@
             transform: translate(0, -65%);
         }
         .receipt-title{
-            width: 650px;
+            width: 100%;
             padding: 0 1em 1em 1em;
             display: flex;
             flex-direction: row;
@@ -63,7 +63,8 @@
     }
     .table{
         font-size: .9em;
-        width: 650px;
+        width: 100%;
+        max-width: 650px;
         border-collapse: collapse;
         border: 2px solid #dee2e6;
         .forxl{

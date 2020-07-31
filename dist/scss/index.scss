@@ -466,12 +466,15 @@ figure.image{
   background: $index-default;
   border-radius: 30px;
   white-space: nowrap;
-  &.unable{
-    color: #fff;
-    background: $gray-color;
-  }
   &:hover{
     color: $blue-dark;
+  }
+  &.unable{
+    color: #fff;
+    background: $gray-unable;
+    &:hover{
+      color: #fff;
+    }
   }
 }
 .index-outline-btn{
@@ -507,7 +510,7 @@ figure.image{
   white-space: nowrap;
   &.unable{
     color: #fff;
-    background: $gray-color;
+    background: $gray-unable;
   }
   &:hover{
     color: $index-default;
@@ -601,6 +604,9 @@ figure.image{
 }   
 .bg-F6F6E9{
   background-color: #F6F6E9;
+}
+.bg-gray8{
+  background-color: $gray-light8;
 }
 .opacity5{
   opacity :0.5;
@@ -1121,6 +1127,7 @@ h6 {
               >.item:first-child{
                 color: #fff;
                 background: $cardfooter-color;
+                min-height: 98px;
                 font-size: small;
                 writing-mode: vertical-lr;
                 text-align: center;

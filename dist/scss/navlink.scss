@@ -111,6 +111,39 @@
     }
   }
   
+  .store-tab-box{
+    li {
+      color: #8E8E93;
+      text-decoration: none;
+      position: relative;
+      -webkit-transition: .5s color;
+      transition: .5s color;
+      border: none;
+      display: block;
+      flex-grow: 1;
+      flex-basis: 0;
+      text-align: center;
+      white-space:nowrap;
+      .nav-link, 
+      a.nav-link{
+        display: inline-table;
+        width: 100%;
+        height: 100%;
+        color: $gray-color;
+        width: 100%;
+        background-color: transparent;
+        border-color: transparent;
+        &.active{
+          font-weight: 700;
+          color: $index-default;
+          border-bottom: solid 3px $index-default;
+          animation-name:tabline;
+          animation-duration:0.7s;
+          animation-fill-mode: forwards;
+        }
+      }
+    }
+  }
   /* all tablist-link */
   .afp-tab-box{
     .tab-pane{

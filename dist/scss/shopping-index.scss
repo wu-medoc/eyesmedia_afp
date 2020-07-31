@@ -690,6 +690,7 @@ footer{
         border: 1px solid $onlineshopping-default;
         font-size: 85%;
         white-space: nowrap;
+        height: 1.8em;
     }
     .products-title {   
         color: $blue-dark;
@@ -1024,6 +1025,7 @@ footer{
         opacity: 0.7;      
     }
     .store-container {
+        color: $blue-dark;
         height: auto;
         position: relative;
         margin-top: -1em;
@@ -1196,30 +1198,6 @@ footer{
                 flex: 1;
                 text-align: center;
                 position: relative;
-            }
-
-            .nav-link {
-                border-color: #fff #fff #dee2e6;
-                &:after {
-                    content: "";
-                    display: none;
-                    width: 25%;
-                    height: 3px;
-                    background-color: $onlineshopping-default;
-                    border-radius: 1px;
-                    position: absolute;
-                    left: 50%;
-                    transform: translateX(-50%);
-                    bottom: 0;
-                }
-
-                &.active {
-                    color: $onlineshopping-default;
-                    border-color: #fff #fff #dee2e6;
-                    &:after {
-                        display: block;
-                    }
-                }
             }
         }
 

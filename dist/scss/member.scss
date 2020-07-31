@@ -8,12 +8,10 @@ ul{
     }
 }
 .w-84{
-    width: auto;
-    @media screen and (max-width: 480px) {
-        width: 84px;
-    }
-    @media screen and (max-width: 320px) {
-        width: 77px;
+    width: 87px;
+    line-height: initial;
+    @media (min-width: 376px) {
+        white-space: nowrap;
     }
 }
 .member-top-box{
@@ -576,9 +574,13 @@ input[type="file"] {
 
 // 我的地址
 .my-address-list{
+    color: $blue-dark;
+    &.L2height{
+        line-height: 2em;
+    }
     ul{
         li{
-            padding: 15px;
+            padding: 10px 15px;
             border-bottom: 1px $gray-light solid;
             display: flex;
             align-items: center;
@@ -613,7 +615,7 @@ input[type="file"] {
                 border: none;
                 text-align: right;
                 color: $blue-dark;
-                border-bottom: 1px $gray-light solid;
+                //border-bottom: 1px $gray-light solid;
             }
         }
     }
@@ -627,7 +629,16 @@ input[type="file"] {
         font-size: 18px;
         vertical-align: sub;
     }
+    label.radio-box {
+        line-height: initial;
+    }
 }
+.multilayer .my-address-list{
+    ul li{
+        line-height: 2em;
+    }
+}
+
 // 付款設定
 .my-creditcard-list{
     .main-list{
