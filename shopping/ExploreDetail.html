@@ -662,9 +662,10 @@
         let parameterN = window.location.hash.split("#")[1];
         switch(parameterN){
             case "explor":
-                $(".shopping-store-btn").hide();
+                $(".shopping-store-btn, .success-mode").hide();
                 break;
             case "store":
+                $(".success-mode").hide();
                 break;
             case "delivery" :
                 $(".shopping-store-badge span").slice(1).hide();
@@ -672,6 +673,7 @@
                 break;
             default:
                 $(".shopping-store-btn").removeAttr("style");
+                $(".success-mode").hide();
                 break;
         }
     </script>
