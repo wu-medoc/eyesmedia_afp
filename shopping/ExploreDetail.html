@@ -411,7 +411,7 @@
             <div class="addheight"></div>
             <div class="h-50 d-inline-block"></div>
         </div>
-        <footer class="success-mode container fixed-bottom z-index300">
+        <footer class="success-mode container fixed-bottom z-index301">
             <button class="btn-ok" onclick="animRouter('DeliveryInfo.html');">外送點餐</button>
         </footer>
     </main>
@@ -669,7 +669,7 @@
                 break;
             case "delivery" :
                 $(".shopping-store-badge span").slice(1).hide();
-                $("#footerMobii, #storeTab li:nth-child(2)").hide();
+                $("#storeTab li:nth-child(2)").hide();
                 break;
             default:
                 $(".shopping-store-btn").removeAttr("style");
