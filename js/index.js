@@ -435,7 +435,7 @@ function backLayer() {
 	$(lastlayer).animateCss('slideOutRight', '-d-block container faster').removeAttr('style');
     if (tLayer.length === 0) {
         $('.multilayer').animateCss('slideOutRight', '-d-block container faster').removeAttr('style');        
-        tLayer.length=0; $('.modal-backdrop').remove();zz
+        tLayer.length=0; $('.modal-backdrop').remove();
     }
     tLayer = jQuery.grep(tLayer, function(value) {
         return value !== lastlayer;
