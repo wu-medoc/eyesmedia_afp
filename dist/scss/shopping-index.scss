@@ -1909,6 +1909,16 @@ footer{
                 font-weight: 700;
                 &.sub-discount{
                     font-weight: 400;
+                    &::before{
+                        position: absolute;
+                        content: "(";
+                        display: contents;
+                    }
+                    &::after{
+                        position: absolute;
+                        content: ")";
+                        display: contents;
+                    }
                 }
             }
         }
