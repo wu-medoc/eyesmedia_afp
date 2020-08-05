@@ -1907,19 +1907,19 @@ footer{
             }
             .item:last-child{
                 font-weight: 700;
-                &.sub-discount{
-                    font-weight: 400;
-                    &::before{
-                        position: absolute;
-                        content: "(";
-                        display: contents;
-                    }
-                    &::after{
-                        position: absolute;
-                        content: ")";
-                        display: contents;
-                    }
-                }
+                // &.sub-discount{
+                //     font-weight: 400;
+                //     &::before{
+                //         position: absolute;
+                //         content: "(";
+                //         display: contents;
+                //     }
+                //     &::after{
+                //         position: absolute;
+                //         content: ")";
+                //         display: contents;
+                //     }
+                // }
             }
         }
     }
