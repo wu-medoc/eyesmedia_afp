@@ -1710,6 +1710,9 @@ footer{
     .index-flex{
         .item:first-child{
             font-weight: 700;
+            &.left-line{
+                font-weight: 400;
+            }
         }
     }
     .auto-left{
@@ -1904,6 +1907,9 @@ footer{
             }
             .item:last-child{
                 font-weight: 700;
+                &.sub-discount{
+                    font-weight: 400;
+                }
             }
         }
     }

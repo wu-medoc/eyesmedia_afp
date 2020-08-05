@@ -10,7 +10,16 @@
   padding-right: 0; 
   padding-left: 0; 
 }
-
+.fixed-bottom{
+  min-height: 64px;
+  background: #fff;
+  @media (max-width: 767px) {
+    min-height: 78px;
+  }
+  @media (max-width: 480px) {
+    min-height: 55px;
+  }
+}
 figure.image{
   img{
     max-width: -webkit-fill-available;
@@ -759,6 +768,7 @@ header + div,
 .left-line{
   padding-left: 15px;
   position: relative;
+  font-weight: 400;
   &:before{
       content: '';
       display: block;
