@@ -13,6 +13,7 @@
 .fixed-bottom{
   min-height: 64px;
   background: #fff;
+  
   @media (max-width: 767px) {
     min-height: 78px;
   }

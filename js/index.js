@@ -506,4 +506,4 @@ function animRouter(e) {
 $('.header-secondary, .headerbox').parents().find('.wrap').addClass("slideInRight animated");
 $('.animated').css('animation-fill-mode','inherit');
 
-
+$('.fixed-bottom').addClass('slideInRight animated faster');
