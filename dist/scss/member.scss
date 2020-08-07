@@ -189,7 +189,7 @@ ul{
         border-radius: 10px;
         .member-items{
             display: flex;
-            &:first-child{
+            &:not(:last-child){
                 border-bottom: 1px #eee solid;
             }
             .member-item{
@@ -614,6 +614,16 @@ input[type="file"] {
                     p{
                         color: $member-default;
                         margin-top: -10px;
+                    }
+                }
+                &.foodstatus{
+                    p{
+                        color: $gray-color;
+                    }
+                    &.active{
+                        p{
+                            color: $member-default;
+                        }
                     }
                 }
             }
