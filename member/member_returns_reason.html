@@ -102,7 +102,6 @@
     
     <!-- custom js -->
     <script>
-        $("#loginhtml").load("../login.html"); 
         //return reason back
         let s=0;
         $('.reason-list li').on('click',function(){
@@ -117,6 +116,8 @@
                 location.href='member_myorder_detail.html#tk4';
             }
         }
+        
+        $("#loginhtml").load("../login.html"); 
     </script>
     <script src="../js/animateCss.js"></script>
     <script src="../js/index.js"></script>

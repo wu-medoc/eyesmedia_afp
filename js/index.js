@@ -402,7 +402,6 @@ function div_switch() {
 //     $(e).siblings('div').hide();
 // }
 
-
 // cookie access
 function getCookie(cname) {
     var ss = document.cookie;

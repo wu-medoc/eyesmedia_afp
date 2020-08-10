@@ -38,13 +38,31 @@
 </head>
 
 <body>
+<section class="appNotifyBox">
+    <div class="appNotify container">
+        <div class="d-flex">
+            <img src="img/index/AppLogo.png" class="item AppLogo">
+            <div class="item">
+                <p>Mobii! 城市生活服務平台</p>
+                <small>立刻下載App,開始驚奇旅程</small>
+            </div>
+            <div class="item appNotifyBtn">
+                <button class="btn dwbtn">立即下載</button>
+                <button type="button" class="close appclose">&times;</button>
+            </div>
+        </div>
+    </div>
+</section>
 <div class="wrap container">
     <header>
         <div class="mobii-topbox">
             <div class="container">
                 <img src="img/share/mlogo.png" class="m-topbox-item mobiitoplogo"> 
                 <div class="m-topbox-item d-flex align-items-center"> 
-                    <!-- 未登入 -->            
+                    <!-- 未登入 -->     
+                    <div class="for-pc dwloadApp" data-toggle="tooltip">下載App
+                        <img src="img/index/dwApp.png" class="appQR">
+                    </div>
                     <button type="button" class="m-topbox-item btn bluedk-outline-btn btw-small" data-toggle="modal" data-target="#loginModalCenter">
                         登入/註冊
                     </button>
@@ -1880,6 +1898,7 @@
             </div>
         </div>
     </main>
+    
 </div>
     <div id="footerMobii"></div>
 
@@ -2049,8 +2068,13 @@
                 $('#webservice').removeClass();
             });
 
-        });
+            //app notify
+            $('.appclose').on('click',function(){
+                $('section.appNotifyBox').addClass("d-none");
+            });
 
+        });
+        
     </script> 
     <script>            
         $(".userbox").load("userbox.html");
