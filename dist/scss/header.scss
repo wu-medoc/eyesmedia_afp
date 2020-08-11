@@ -295,9 +295,28 @@
 .appQR{
   display: none;
   position: absolute;
-  width: 144px;
+  width: 140px;
+  height: 145px;
   top:56px;
   transform: translateX(-25%);
+  background: #fff;
+  box-shadow: 0 1px 2px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  text-align: center;
+  vertical-align: middle;
+  #qrcode, qrcode{
+    width: 116px;
+    height: 116px;
+    transform: translate(10%, 5%);
+    position: initial;
+    display: flex;
+  }
+  strong{
+    transform: translate(-50%,0%);
+    position: absolute;
+    bottom: 10px;
+  }
 }
 .dwloadApp{
   font-size: small;
