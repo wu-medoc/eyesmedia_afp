@@ -97,7 +97,7 @@
                                     <div class="d-flex">
                                         <a href class="d-flex align-items-start w-100">                                                
                                             <div class="img-box rwdimgbox-80">
-                                                <div style="background-image: url('https://picsum.photos/300/300/?random=1');" class="rwdimg-cover"></div>
+                                                <div style="background-image: url('https://picsum.photos/300/300/?random=1');" class="rwdimg"></div>
                                             </div>
                                             <div class="info-box w-100">
                                                 <ul class="info-list">
@@ -137,10 +137,11 @@
                                             刪除
                                         </div>
                                     </div>
-                                    <div class="d-flex">
+                                    <!-- 下架商品class加入brightness -->
+                                    <div class="d-flex brightness">
                                         <a href class="d-flex align-items-start w-100">                                             
                                             <div class="img-box rwdimgbox-80">
-                                                <div style="background-image: url('https://picsum.photos/300/300/?random=2');" class="rwdimg-cover"></div>
+                                                <div style="background-image: url('https://picsum.photos/300/300/?random=2');" class="rwdimg"></div>
                                             </div>
                                             <div class="info-box w-100">
                                                 <ul class="info-list">
@@ -224,10 +225,11 @@
                     </div>                       
                     <div role="tabpanel" class="tab-pane" id="favoritetag03">
                         <div class="favorite-explore p-0">
-                                <div class="d-flex">
+                            <!-- 下架商品class加入brightness -->
+                                <div class="d-flex brightness">
                                     <a href class="d-flex align-items-start w-100">                                             
                                         <div class="img-box rwdimgbox-80">
-                                            <div style="background-image: url('https://picsum.photos/300/300/?random=1');" class="rwdimg-cover"></div>
+                                            <div style="background-image: url('https://picsum.photos/300/300/?random=1');" class="rwdimg"></div>
                                         </div>
                                         <div class="info-box w-100">
                                             <ul class="info-list">
@@ -246,7 +248,7 @@
                                 <div class="d-flex">
                                     <a href class="d-flex align-items-start w-100">                                             
                                         <div class="img-box rwdimgbox-80">
-                                            <div style="background-image: url('https://picsum.photos/300/300/?random=3');" class="rwdimg-cover"></div>
+                                            <div style="background-image: url('https://picsum.photos/300/300/?random=3');" class="rwdimg"></div>
                                         </div>
                                         <div class="info-box w-100">
                                             <ul class="info-list">
@@ -269,7 +271,7 @@
                             <div class="d-flex">
                                 <a href class="d-flex align-items-start w-100">                                             
                                     <div class="img-box rwdimgbox-80">
-                                        <div style="background-image: url('https://picsum.photos/300/300/?random=1');" class="rwdimg-cover"></div>
+                                        <div style="background-image: url('https://picsum.photos/300/300/?random=1');" class="rwdimg"></div>
                                     </div>
                                     <div class="info-box w-100">
                                         <ul class="info-list">
@@ -289,7 +291,7 @@
                             <div class="d-flex">
                                 <a href class="d-flex align-items-start w-100">                                             
                                     <div class="img-box rwdimgbox-80">
-                                        <div style="background-image: url('https://picsum.photos/300/300/?random=1');" class="rwdimg-cover"></div>
+                                        <div style="background-image: url('https://picsum.photos/300/300/?random=1');" class="rwdimg"></div>
                                     </div>
                                     <div class="info-box w-100">
                                         <ul class="info-list">
@@ -437,6 +439,9 @@
         $('.open-page-ul li').on('click',function(){
             $(this).toggleClass('active').siblings().removeClass('active');
         });
+
+        // 下架商品禁用連結
+        $('.brightness a').removeAttr('href');
     </script>
 
     <script>    

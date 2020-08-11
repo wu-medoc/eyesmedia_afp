@@ -1416,3 +1416,22 @@ input[type="file"] {
         }
     }
 }
+
+.brightness{
+    &:before{
+        color: #fff;
+        content: '已下架';
+        display: block;
+        position: absolute;
+        left: inherit;
+        transform: translate(50%, 150%);
+        z-index: 1;
+    }
+    .img-box{
+        filter: brightness(0.40);
+    }
+    ul{
+        filter: grayscale(100%);
+        opacity: .45;
+    }
+}
