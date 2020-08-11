@@ -36,7 +36,12 @@
             <div class="container">
                 <img src="../img/share/mlogo.png" class="m-topbox-item mobiitoplogo"> 
                 <div class="m-topbox-item d-flex align-items-center"> 
-                    <!-- 未登入 -->            
+                    <!-- 未登入 -->     
+                    <div class="for-pc dwloadApp" data-toggle="tooltip">下載App
+                        <div class="appQR">
+                            <qrcode id="qrcode" class="p-2"></qrcode>
+                        <strong>下載享優惠</strong></div>
+                    </div>       
                     <button type="button" class="m-topbox-item btn bluedk-outline-btn btw-small" data-toggle="modal" data-target="#loginModalCenter">
                         登入/註冊
                     </button>
@@ -470,6 +475,7 @@
     <script src="../js/vendor/swiper/js/swiper.min.js"></script>
     <script src="../js/vendor/imgLiquid.js"></script>
     <script src="../js/masonry.pkgd.min.js"></script>
+    <script src="../js/qrcode.min.js"></script>
 
     <!-- custom js -->
     <script>    
@@ -502,6 +508,16 @@
                 $('.m-topbox-item.btn').css("display","none");
                 $('.userbox.d-none').removeClass('d-none');
                 $('.userdrop').removeClass('d-none');
+            });
+
+            //qrcode
+            var qrcode = new QRCode(document.getElementById("qrcode"), {
+                text: "https://play.google.com/store/apps/details?id=com.eyesmedia.afp",
+                width: 100,
+                height: 100,
+                colorDark : "#000000",
+                colorLight : "#ffffff",
+                correctLevel : QRCode.CorrectLevel.H
             });
         });
         
