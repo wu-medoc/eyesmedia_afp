@@ -296,7 +296,7 @@
   display: none;
   position: absolute;
   width: 140px;
-  height: 145px;
+  height: 146px;
   top:56px;
   transform: translateX(-25%);
   background: #fff;
@@ -315,7 +315,7 @@
   strong{
     transform: translate(-50%,0%);
     position: absolute;
-    bottom: 10px;
+    bottom: 4px;
   }
 }
 .dwloadApp{
@@ -397,16 +397,6 @@ section.appNotifyBox{
   @media (max-width: 767px){
     display: flex;
     justify-content: center;
-    &.d-none{
-      + .wrap{
-        position: unset;
-        padding-top: 0;
-        .mobii-topbox{
-          position: fixed;
-          top: 0;
-        }
-      }
-    }
     + .wrap{
       position: relative;
       padding-top: 60px;
@@ -419,6 +409,18 @@ section.appNotifyBox{
         animation: MoveUpDown2 1s ease-in;
       }
       animation: MoveUpDown1 1s ease-in;
+    }
+    &.d-none{
+      + .wrap{
+        position: unset;
+        padding-top: 0;
+        animation:none;
+        .mobii-topbox{
+          position: fixed;
+          top: 0;
+          animation:none;
+        }
+      }
     }
   }
 }
