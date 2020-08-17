@@ -1,0 +1,367 @@
+﻿<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=1, user-scalable=no">
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../js/vendor/bs4/css/bootstrap.min.css">
+    <!-- vendor css -->
+    <link rel="stylesheet" href="../js/vendor/jquery-editable-select-master/dist/jquery-editable-select.min.css">
+    <link rel="stylesheet" href="../js/vendor/swiper/css/swiper.min.css">
+    <!-- fontawesome css -->
+    <link rel="stylesheet" href="../js/vendor/fontawesome/css/fontawesome.css">
+    <link rel="stylesheet" href="../js/vendor/fontawesome/css/brands.css">
+    <link rel="stylesheet" href="../js/vendor/fontawesome/css/solid.css">
+    <!-- custom css -->
+    <link rel="stylesheet" href="../dist/style/css.min.css">
+    <link rel="stylesheet" href="../dist/style/global.min.css">
+    <link rel="stylesheet" href="../dist/style/index.min.css">
+    <link rel="stylesheet" href="../dist/style/shopping-index.min.css">
+    <link rel="stylesheet" href="../dist/style/animate.min.css">
+    <title>Mobii!</title>
+</head>
+
+<body>
+<div class="wrap container">
+    <header>
+        <div class="header-secondary container">
+            <div class="index-flex justify-content-between">
+                <div class="item two">
+                    <div class="close-btn">
+                        <button class="btn px-0" onclick="history.back();" data-toggle="tooltip" data-placement="bottom" title="回上一頁">
+                            <i class="material-icons">&#xe314;</i>
+                        </button>
+                    </div>
+                </div>
+                <div class="item three text-center">
+                    <div class="title-name">交通訂票</div>
+                </div>
+                <div class="item two">
+                    <div class="top-item climate text-right"> 
+                            <button onclick="location.href='shopping-cart.html'" class="badge-img px-0" data-toggle="tooltip" data-placement="bottom" title="購物車">
+                                <span class="badge badge-on">99+</span><img src="../img/shopping/icon_shoppingcart.svg">
+                            </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>   
+        <div class="header-sort choice-filter-box py-1">
+            <div class="flex-inline-between">
+                <div class="item center-v">高雄</div>
+                <!-- 分類鈕（第二層目錄）-->
+                <div class="item pr-2">
+                    <button class="btn px-0 filter-item" data-filter="type" (click)="dirMenuToggle()" [ngClass]="{'active' : showDirMenu}">
+                      <i class="material-icons">&#xE313;</i>
+                    </button>
+                </div>
+            </div>
+            <!-- 篩選鈕（規格值篩選及排序） -->
+            <div class="filter-box" onclick="callsortLayer('.productslistsort');">
+                <button class="btn px-0">
+                  <i class="material-icons">&#xE152;</i>
+                </button>
+            </div>
+        </div>
+        <div class="filter-outbox">
+            <div class="filter-main">
+                <div class="mask-container d-none w-100 h-100"></div>
+                <!-- 列表內容 -->
+                <div class="products-listbox-nom">        
+                    <div class="row products-item">
+                        <div class="col-6 col-xl-4 pl-0 pb-3">
+                            <div class="w-100 bg-white">
+                                <a href="products-detail.html">
+                                    <div class="products-img">
+                                        <div class="img-box">
+                                            <div class="rwdimg" style="background-image: url('https://picsum.photos/300/300/?random=4');"></div>
+                                        </div> 
+                                    </div>
+                                    <div class="products-title">
+                                        <p class="txt-line-clamp2">[下殺限定]Apple iPhone XS 256G 5.8吋智慧型手機</p>
+                                    </div>
+                                    <div class="products-price">
+                                        <div class="price-asking">$30,320</div>
+                                        <div class="price-original">$37,000</div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>                        
+                        <div class="col-6 col-xl-4 pl-0 pb-3">
+                            <div class="w-100 bg-white">
+                                <a href="products-detail.html">
+                                    <div class="products-img">
+                                        <div class="img-box">
+                                            <div class="rwdimg" style="background-image: url('https://picsum.photos/200/300/?random=2');"></div>
+                                        </div> 
+                                    </div>
+                                    <div class="products-title">
+                                        <p class="txt-line-clamp2">[下殺限定]Apple iPhone XS 256G 5.8吋智慧型手機</p>
+                                    </div>
+                                    <div class="products-price">
+                                        <div class="price-asking">$30,320</div>
+                                        <div class="price-original">$37,000</div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>                      
+                        <div class="col-6 col-xl-4 pl-0 pb-3">
+                            <div class="w-100 bg-white">
+                                <a href="products-detail.html#tk">
+                                    <div class="products-img">
+                                        <div class="img-box">
+                                            <div class="rwdimg" style="background-image: url('https://picsum.photos/300/200/?random=1');"></div>
+                                        </div> 
+                                    </div>
+                                    <div class="products-title">
+                                        <p class="txt-line-clamp2">高雄捷運一日 QR CODE 搭乘券</p>
+                                    </div>
+                                    <div class="products-price">
+                                        <div class="price-asking">$120</div>
+                                        <div class="price-original">$120</div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 目錄篩選視窗 -->
+                <div id="type" class="filter-content pb-wrap">
+                    <ul class="open-page-ul">
+                        <li class="flex-inline-between" (click)="dirFilter()">                
+                            <div>
+                                全部顯示
+                            </div>
+                            <div>
+                                <span>22</span>
+                                <i class="fas fa-check"></i>
+                            </div>   
+                        </li>
+                        <li class="flex-inline-between active" (click)="dirFilter()">
+                            <div>
+                                台北
+                            </div>
+                            <div>
+                                <span>8</span>
+                                <i class="fas fa-check"></i>
+                            </div>                
+                        </li>
+                        <li class="flex-inline-between" (click)="dirFilter()">
+                            <div>
+                                台中
+                            </div>
+                            <div>
+                                <span>2</span>
+                                <i class="fas fa-check"></i>
+                            </div>                
+                        </li>
+                        <li class="flex-inline-between" onclick="">
+                            <div>
+                                高雄
+                            </div>
+                            <div>
+                                <span>2</span>
+                                <i class="fas fa-check"></i>
+                            </div>                
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div id="loginhtml"></div>
+    </main>
+    <!-- 規格篩選視窗 -->
+    <div class="sortlayer">
+        <div class="productslistsort">
+            <div id="open-pagebox">
+                <div class="open-page-title flex-inline-between">
+                    <div class="title-icon">
+                        <button class="btn" onclick="backsortLayer();">
+                            <i class="material-icons">&#xe314;</i>
+                        </button>
+                    </div>
+                    <div class="title-txt">
+                        篩選與排序
+                    </div>
+                    <button (click)="filter()" class="btn px-0" onclick="backsortLayer();">確定</button>
+                </div>
+                <ul class="open-page-ul">
+                    <label>篩選</label>
+                    <li class="flex-inline-between active" onclick="callsortLayer('.productslistsort1');">
+                        <div class="">
+                            捷運
+                        </div>
+                        <div class="">
+                            一日票<i class="material-icons">&#xe315;</i>
+                        </div>    
+                    </li>
+                    <li class="flex-inline-between" onclick="callsortLayer('.productslistsort1');">
+                        <div class="">
+                            輕軌
+                        </div>
+                        <div class="">
+                            全部顯示<i class="material-icons">&#xe315;</i>
+                        </div>    
+                    </li>
+                    <li class="flex-inline-between" onclick="callsortLayer('.productslistsort1');">
+                        <div class="">
+                            渡輪
+                        </div>
+                        <div class="">
+                            全部顯示<i class="material-icons">&#xe315;</i>
+                        </div>   
+                    </li>
+                </ul>
+                <ul class="open-page-ul">
+                    <label>排序</label>
+                    <li class="flex-inline-between">        
+                        <div class="">
+                            最新上架優先
+                        </div>
+                        <div class="">
+                            <i class="fas fa-check"></i>
+                        </div>          
+                    </li>
+                    <li class="flex-inline-between active">
+                        <div class="">
+                            熱門程度優先
+                        </div>
+                        <div class="">
+                            <i class="fas fa-check"></i>
+                        </div>             
+                    </li>
+                    <li class="flex-inline-between">    
+                        <div class="">
+                            價格由低而高
+                        </div>
+                        <div class="">
+                            <i class="fas fa-check"></i>
+                        </div>      
+                    </li>
+                    <li class="flex-inline-between">         
+                        <div class="">
+                            價格由高而低
+                        </div>
+                        <div class="">
+                            <i class="fas fa-check"></i>
+                        </div>               
+                    </li>
+                </ul>
+                <button class="btn all-reset">
+                    全部重設
+                </button>
+            </div>
+        </div>
+        <div class="productslistsort1">
+            <div id="open-pagebox1">
+                <div class="open-page-title flex-inline-between">                
+                    <div class="close-btn">
+                        <button class="btn" onclick="backsortLayer();">
+                            <i class="material-icons">&#xe314;</i>
+                        </button>
+                    </div>
+                    <div class="title-txt">
+                        商品分類
+                    </div>
+                    <div class="title-txt">
+                    </div>
+                </div>
+                <ul class="open-page-ul">
+                    <li class="flex-inline-between active">                                
+                        <div class="">
+                            <i class="fas fa-check"></i> 全部顯示
+                        </div>
+                        <div class="">
+                        </div>   
+                    </li>
+                    <li class="flex-inline-between">                                
+                        <div class="">
+                            單次票
+                        </div>
+                        <div class="">
+                            <span>1</span>
+                            <i class="fas fa-check"></i>                            
+                        </div>   
+                    </li>
+                    <li class="flex-inline-between">
+                        <div class="">
+                            一日票
+                        </div>
+                        <div class="">
+                            <span>1</span>
+                            <i class="fas fa-check"></i>                            
+                        </div>        
+                    </li>
+                    <li class="flex-inline-between">
+                        <div class="">
+                            二日票
+                        </div>
+                        <div class="">
+                            <span>1</span>
+                            <i class="fas fa-check"></i>                            
+                        </div>      
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div> 
+</div>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="../js/vendor/bs4/js/jquery-3.2.1.min.js"></script>
+    <!-- Latest compiled and minified JavaScript -->    
+    <script src="../js/vendor/bs4/js/popper.min.js"></script>
+    <script src="../js/vendor/bs4/js/bootstrap.min.js"></script>
+    
+    
+    <script src="../js/vendor/jquery-editable-select-master/dist/jquery-editable-select.js"></script>
+
+    <!-- vendor js -->
+    <script src="../js/vendor/swiper/js/swiper.min.js"></script>
+    <script src="../js/vendor/imgLiquid.js"></script>
+
+    <!-- custom js -->
+    <script src="../js/animateCss.js"></script>
+    <script>    
+        $(document).ready(function() { 
+            // title-name
+            var hashVal=window.location.hash.split("#")[1];
+            var JData = [{id:"01", title:"台灣伴手禮"},{id:"02", title:"交通訂票"},{id:"03", title:"漫遊"},
+                        {id:"04", title:"免運專區"},{id:"05", title:"刷卡＆活動"}];
+            for (let i = 0; i < JData.length; i++) {
+                if (JData[i]['id']==hashVal) 
+                    $('.title-name').text(JData[i]['title']);
+            }
+
+
+        });
+        
+        // 開啟篩選清單
+        $('.filter-item').on('click', function(){
+            $(this).toggleClass('active').siblings().removeClass('active');
+            var filter = $(this).data('filter');
+            $('#' + filter).toggleClass('is-open');
+            $('#' + filter).siblings().removeClass('is-open');
+            $('#' + filter).parents('.tab-pane').children().find(".mask-container").removeClass("d-block");
+            if ($(this).hasClass("active")) {
+                $('#' + filter).parents('.tab-pane').children().find(".mask-container").addClass("d-block");
+            }
+        })
+        // 篩選列表勾選控制
+        $('.open-page-ul li').on('click',function(){
+            $(this).toggleClass('active').siblings().removeClass('active');
+        });
+
+        $("#loginhtml").load("../login.html");
+    </script>
+    <script src="../js/index.js"></script>
+</body>
+
+</html>

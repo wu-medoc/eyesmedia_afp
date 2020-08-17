@@ -429,6 +429,105 @@
     z-index: 1040;
     height: 100vh;
   }
+  
+  // .sortlayer{ position: fixed; }
+  // .sortlayer>div{ position: absolute; } = productsOpensort
+  .productsOpensort{
+    width: 80vw;
+    right: 0;
+    @media (min-width: 980px) {
+      width: 650px;
+    }
+  }
+  #open-sortbox{
+    background: $gray-light;
+    position: relative;
+    overflow-y: auto;
+    width: 100%;
+    height: 100vh;
+    border-top-left-radius: 20px;
+    color: $blue-dark;
+    .open-sort-title{
+      position: fixed;
+      top:0 ;
+      background:#fff;
+      padding-left: 0.5em;
+      padding-right: 0.5em;
+      border-top-left-radius: 20px;
+      height: 3em;
+      border-bottom: 1px #C4C2C2 solid;
+      .title-txt {
+        font-size: 1.1em;
+        align-self: center;
+        font-weight: bold; 
+      } 
+    }
+    .open-sort-num{    
+      margin-top: 3em;  
+      padding: .75em 1em;
+      background:#fff;
+      color: $index-default;
+      font-weight: bold;
+      font-size: .9em;
+    }
+    .open-sort-cont{
+      padding: 1em 1em 3em 1em;
+      position: relative;      
+      line-height: 2em;
+        label{
+          font-weight: bold;
+          font-size: 1.1em;
+        }
+        .sortGroup{
+          margin-bottom: 1em;
+          flex-wrap: wrap;
+          .item{
+            border: 1px solid $blue-dark;
+            border-radius: 30px;
+            margin: .15em;
+            padding: 0 .75em;
+            width: fit-content;
+            &.active{
+              border: 1px solid $index-default;
+              color: $index-default;
+            }
+          }
+        }
+        .open-sort-ul{
+          margin-bottom: 1em;
+          li{
+            border-radius: 5px;
+            background: #fff;
+            padding: .25em 1em;
+            margin: .25em 0;
+            i{
+              display: none;
+            }
+            &.active{
+              i{
+                color:$index-default;
+                display: block;
+              }
+            }
+          }
+        }
+    }
+    .open-sort-footer{
+      position: fixed;
+      bottom: 0;
+      height: 3em;
+      background:#fff;
+      z-index: 1;
+      font-weight: bold; 
+      text-align: center;
+    }
+    .open-sort-title, .open-sort-footer, .open-sort-cont{
+      width: 80vw;
+      @media (min-width: 980px) {
+        width: 650px;
+      }
+    }
+  }
   #open-pagebox1,
   #open-pagebox {
     position: absolute;
@@ -453,10 +552,10 @@
           font-size: 0.9em;
           font-weight: bold;  
         }
+      } 
+      a{
+        font-size: 0.9em;
       }
-    }
-    .open-page-title a{
-      font-size: 0.9em;
     }
     .open-page-ul label{
       line-height: 3em;

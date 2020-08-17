@@ -134,6 +134,7 @@
   .bearservice-lg {
     border-left: 1px solid #ccc;
     border-right: 1px solid #ccc;
+    min-height: 85vh;
     .chat-box {
       //overflow: hidden;
       background-color: #ffffff;
@@ -222,19 +223,19 @@
         bottom: 79px;
       }
       @media (max-width: 570px) {
-        bottom: 82px;
-      }
-      @media (max-width: 480px) {
         bottom: 74px;
       }
-      @media (max-width: 375px) {
-        bottom: 63px;
+      @media (max-width: 480px) {
+        bottom: 64px;
       }
-      @media (max-width: 320px) {
+      @media (max-width: 375px) {
         bottom: 58px;
       }
+      @media (max-width: 320px) {
+        bottom: 57px;
+      }
       @media (min-width: 768px) {  
-        bottom: 180px;
+        bottom: 165px;
       }
       input{
         border: 1px solid #ccc;
@@ -411,6 +412,7 @@
       margin: 5px 30px 0 0;
       padding: 5px 10px;
       position: relative;
+      min-height: 36px;
     }
     .guests-chat-msg{         
       margin-left: auto !important;
@@ -456,6 +458,7 @@
       position: relative;
       text-align: right;
       float: right;
+      min-height: 36px;
     }
     .guests-chat-name {
       text-align: right;
