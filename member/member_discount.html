@@ -73,33 +73,20 @@
                 </div>
                 <!-- Tab panes -->
                 <div class="tab-content">
-                    <div role="tabpanel" class="tab-pane fade active show w-100" id="discounttag01">  
-                        <div class="div-switch d-none">
-                            <div class="choice-filter-box d-flex py-1">
-                                <div class="w-80 pl-1">
+                    <div role="tabpanel" class="tab-pane fade active show w-100" id="discounttag01">      
+                        <div>
+                            <div class="choice-filter-box py-1">
+                                <div class="s-bar pl-1" onclick="div_switch();">
                                     <div class="input-box border border-radius5">
                                         <button class="btn"><i class="material-icons">&#xE8B6;</i></button>
-                                        <input type="search" placeholder="搜尋" class="border-0">
+                                        <input type="search" placeholder="輸入關鍵字搜尋店家、優惠券" class="border-0">
                                     </div>
                                 </div>
-                                <div class="w-20">
+                                <div class="s-btn div-switch d-none">
                                     <button class="btn w-100" onclick="div_switch();">取消</button>
                                 </div>
-                            </div>
-                        </div>     
-                        <div class="div-switch d-block">
-                            <div class="choice-filter-box py-1">
-                                <div class="flex-inline-between">
-                                    <div class="item center-v">選擇分類</div>
-                                    <div class="item pr-2">
-                                        <button class="btn px-0 filter-item" data-filter="type"><i class="material-icons">&#xE313;</i></button>
-                                    </div>
-                                </div>
-                                <div class="filter-box">
-                                    <button class="btn px-0 item-search" onclick="div_switch();"><i class="material-icons">&#xe8b6;</i></button>
-                                </div>
-                                <div class="filter-box" onclick="callsortLayer('.productsOpensort');">
-                                    <button class="btn px-0"><i class="material-icons">&#xE152;</i></button>
+                                <div class="filter-box div-switch d-block" onclick="callsortLayer('.productsOpensort');">
+                                    <button class="btn px-1"><i class="material-icons">&#xE152;</i></button>
                                 </div>
                             </div>
                         </div>
@@ -391,8 +378,8 @@
                     </div>
                     <label>使用範圍</label>
                     <div class="d-flex sortGroup flex-row">
-                        <div class="item">全部</div>
-                        <div class="item defItem active">到店使用</div>
+                        <div class="item defItem">全部</div>
+                        <div class="item active">到店使用</div>
                         <div class="item">線上使用</div>
                     </div>
                     <label>優惠券類型</label>
