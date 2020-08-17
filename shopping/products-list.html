@@ -311,8 +311,7 @@
         // 篩選列表勾選控制
         $('.sortGroup .item').on('click',function(){
             $(this).toggleClass('active').siblings().removeClass('active');
-        });
-        
+        });        
         $('.open-sort-ul li:first-child').click(function(e){
             $(this).addClass('active').siblings().removeClass('active');
         });
@@ -320,9 +319,10 @@
             $(this).parent().find("li:first-child").removeClass('active');
             $(this).addClass('active');
         });
+        // 重置
         $('.all-reset').on('click',function(){
-            $('.active').removeClass('active');
-            $('.defItem').addClass('active');
+            $('#open-sortbox .active').removeClass('active');
+            $('#open-sortbox .defItem').addClass('active');
         });        
         $("#loginhtml").load("../login.html");
     </script>
