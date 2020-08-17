@@ -757,8 +757,16 @@
         }
       }  
     }
-    .s-bar{ width: calc(100% - 65px);}
-    .s-btn{ width: 65px;}
+    .s-bar{ 
+      width: calc(100% - 60px);
+      .input-box{
+        display: flex;
+        @media (max-width: 480px) {
+          font-size: small;
+        }
+      }
+    }
+    .s-btn{ width: 60px;}
   }
 
 
