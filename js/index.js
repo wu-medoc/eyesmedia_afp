@@ -490,9 +490,9 @@ var nextLayerOne = '.wrap';
 };
 function backLayerOne() {
     $(oneLayer.pop()).animateCss('slideOutRight', '-container faster');
-    $('.wrap').fadeOut(200,function(){ 
+    //$('.wrap').fadeOut(200,function(){ 
         (history.length<=2) ? window.location.href='../index.html' : history.back(); 
-    });
+    //});
     oneLayer.length=0;
 };
 
