@@ -50,7 +50,7 @@
                                 <button type="button" onclick="history.back()" data-toggle="tooltip" data-placement="top" title="回上一頁"><img src="../img/share/icon_back.png" class="imgicon"></button>
                             </div>
                             <div class="ml-auto d-flex d-inline align-items-center">
-                                <button class="btn add-share" type="button" data-url="../shopping/ExploreDetail.html#explores" data-trigger="copy" data-toggle="modal" data-target=".share-modal-sm"><img src="../img/share/icon_share.png" class="imgicon"></button>
+                                <button class="btn add-share" type="button" data-trigger="copy" data-toggle="modal" data-target=".share-modal-sm"><img src="../img/share/icon_share.png" class="imgicon"></button>
                                 <div class="add-favorite">
                                     <button type="button" class="active" data-toggle="modal" data-target=".bd-example-modal-sm" data-toggle="tooltip" data-placement="top" title="加入收藏"><img src="../img/share/icon_favorite.png" class="imgicon"></button>
                                 </div>
@@ -649,6 +649,7 @@
         //copy url
         $(document).ready(function() {
             $('[data-trigger="copy"]').on('click', function(e) {
+                $('.add-share').attr('data-url',window.document.location.href);
                 var temp = $('<input>'); // 建立input物件            
                 $('body').append(temp); // 將input物件增加到body
                 var url = $(this).data('url'); // 取得要複製的連結

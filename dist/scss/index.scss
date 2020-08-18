@@ -220,6 +220,13 @@ figure.image{
     color: #fff;
   }
 }
+input[type='search']{
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: -webkit-fill-available;
+  margin-right: .5em;
+}
 .searchbox{  
   background: #fff;
   position: relative;
@@ -465,6 +472,9 @@ figure.image{
       padding-right: 8px;
       font-size: 70%;
       border:1px solid $onlineshopping-default;
+      &.brBlue{
+        border:1px solid $blue;
+      }
   }
 }
 /* color ui */

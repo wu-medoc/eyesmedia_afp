@@ -1,6 +1,5 @@
 @import "../style/module/mixin";
 @import '../style/module/variable';
-@import "../dist/style/module/variable";
 
 ul.notifylist{
     color: $blue-dark;
@@ -46,6 +45,16 @@ ul.newlist{
                 display: flex;
                 align-items: center;
             }
+            .newinfo-body{
+                width: calc(100% - 24px);
+            }
+            .moreBtn{
+                width: 100%;
+                text-align: right;
+                button{
+                    font-size: .9em;
+                }
+            }
         }
         label{
             font-weight: bold;
@@ -74,8 +83,42 @@ ul.newlist{
                 display: hidden;
             }         
             .auto-left{
-                align-items: flex-end;
+                align-items: center;
             }
         }
+    }
+}
+.onImgbar{
+    padding: .5em;
+    width: -webkit-fill-available;
+    position: absolute;
+    top: 1%;
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+.nDimgbox{
+    overflow: hidden;
+    max-height: 48vh;
+}
+.nDcontent{
+    .item-title{
+        font-weight: bold;
+        font-size: 1.1em;
+        padding: .5em 0;
+    }
+    .item-date{
+        color: $gray-color;
+        font-size: 0.9em;
+        padding-bottom: 1em;
+    }
+    .item-content{
+        p{
+            padding: .5em 0 1em 0;
+        }
+    }
+    img {
+        max-width: 100%;
     }
 }
