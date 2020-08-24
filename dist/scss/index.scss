@@ -1258,3 +1258,46 @@ img.coinimg-m{
 img.nearbyimg{
   height: 2em;
 }
+
+/* no data and error page */
+.no-data, 
+.no-order{
+  padding: 3em;
+  text-align: center;
+  h4{
+    padding-top: 1.5em;
+    font-weight: bold;
+  }
+  img{
+      width: 60%;
+      max-width: 360px;
+      &.icon404{
+        max-width: 48px * 2;
+        min-width: 48px;
+      }
+  }
+  p{
+      margin-top: 20px;
+      font-weight: 700;
+      font-size: 1em;
+      color: $blue-dark;
+      &.dfBK{
+        color: $default-black;
+        margin-top: 5px;
+      }
+  }
+  .errorMenu{
+    max-width: 600px;
+    min-width: 300px;
+    padding: 2.5em 1em;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    a{
+      color: $default-black;
+      font-weight: bold;
+      white-space: nowrap;
+      text-align: center;
+    }
+  }
+}
