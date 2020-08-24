@@ -31,6 +31,7 @@
     <link rel="stylesheet" href="dist/style/serviceQA.min.css"> -->
     <link rel="stylesheet" href="dist/style/home.min.css">
     <link rel="stylesheet" href="dist/style/index.min.css">
+    <link rel="stylesheet" href="dist/style/blockUI.min.css">
     <link rel="stylesheet" href="dist/style/travel-index.min.css">
     <link rel="stylesheet" href="dist/style/animate.min.css">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
@@ -1912,15 +1913,34 @@
     <script src="js/vendor/bs4/js/popper.min.js"></script>
     <script src="js/vendor/bs4/js/bootstrap.min.js"></script>
     
-
+    
     <!-- vendor js -->
     <script src="js/vendor/swiper/js/swiper.min.js"></script>
     <script src="js/vendor/bs4/js/imgLiquid.js"></script>
     <script src="js/animateCss.js"></script>    
     <script src="js/qrcode.min.js"></script>    
+    <script src="js/jquery.blockUI.js"></script>
 
     <!-- custom js -->    
     <script>
+        $(document).ready(function() { 
+                
+            $.blockUI({ 
+                message: "Loading...", 
+                css: { 'background-color':'transparent', 'border': '0', 'color': '#fff' } ,
+                timeout: 300 
+            }); 
+            $('.blockMsg').append(
+                    "<div class='spinner-box'><div class='spinner-layer'>" +
+                    "<div class='circle-clipper left'>" +
+                    "<div class='circle'></div>" +
+                    "</div>" +
+                    "<div class='circle-clipper right'>" +
+                    "<div class='circle'></div>" +
+                    "</div>" +
+                    "</div></div>");
+            $('.blockOverlay, .blockMsg').css('z-index','9999');
+        }); 
         $(window).on('load',function() { 
             
             var JData = [{id:"t1", telname:"中國大陸", telcode:"86"},
