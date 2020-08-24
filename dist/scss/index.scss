@@ -1275,6 +1275,9 @@ img.nearbyimg{
         max-width: 48px * 2;
         min-width: 48px;
       }
+      &.errorImg{        
+        margin-top: 2em;
+      }
   }
   p{
       margin-top: 20px;

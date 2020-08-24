@@ -77,13 +77,13 @@
         switch(parameterN){
             case '500':
                 $('.errorImg').attr('src','img/share/500.png');
-                $('h4').text('500');
+                $('h4').text('');
                 $('.dfBK').text('Oops! 內部伺服器有問題，請稍後再次重整');
                 $('.errorMenu').addClass('d-none');
                 break;            
             case '503':
                 $('.errorImg').attr('src','img/share/503.png');
-                $('h4').text('503');
+                $('h4').text('');
                 $('.dfBK').text('Oops! 連線已逾時，請稍後再次重整');
                 $('.errorMenu').addClass('d-none');
                 break;              
@@ -96,7 +96,7 @@
                 break;                
             default:
                 $('.errorImg').attr('src','img/share/404.png');
-                $('h4').text('404');
+                $('h4').text('');
                 $('.dfBK').text('您造訪的頁面已迷失在Mobii!星球中...');
                 $('.errorMenu').removeClass('d-none');
                 break;
