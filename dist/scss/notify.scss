@@ -102,6 +102,9 @@ ul.newlist{
 .nDimgbox{
     overflow: hidden;
     max-height: 48vh;
+    .img-fluid{
+        height: -webkit-fill-available;
+    }
 }
 .nDcontent{
     .item-title{

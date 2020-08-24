@@ -23,6 +23,10 @@ body {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
+*::-ms-clear,*::-ms-reveal
+{
+  display:none;
+}
 
 // scroll ui
 ::-webkit-scrollbar-track {

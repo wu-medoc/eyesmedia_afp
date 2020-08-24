@@ -226,6 +226,10 @@ input[type='search']{
   appearance: none;
   width: -webkit-fill-available;
   margin-right: .5em;
+  &::-webkit-search-cancel-button{
+    -webkit-appearance: none;
+    appearance: none;
+  }
 }
 .searchbox{  
   background: #fff;
@@ -1042,6 +1046,28 @@ header + div,
       flex-direction: column;
     }     
   }  
+}
+
+// member clause&private
+.member-body {
+  padding-left: 1em;
+  padding-right: 1em;
+  text-align: justify;
+  text-justify: auto;
+  //position: inherit;
+  ul{
+      padding: .5em 0 .25em 0;
+      font-weight: 700;
+  }
+  li{
+      font-weight: 400;
+      margin-left : 3em;
+      text-indent : -3em ;
+  }
+  h6{
+      padding: .5em 0 .25em 0;
+      font-weight: 700;
+  }
 }
 
 /* Effect 2: Move Up */
