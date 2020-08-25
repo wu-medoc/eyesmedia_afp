@@ -224,7 +224,9 @@ input[type='search']{
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  width: -webkit-fill-available;
+  max-width: -webkit-fill-available;
+  max-width: -moz-available;
+  max-width: stretch;
   margin-right: .5em;
   &::-webkit-search-cancel-button{
     -webkit-appearance: none;
@@ -961,8 +963,8 @@ header + div,
         position: absolute;
         top: 50%;
         left: 0;
-        height: 18px;
-        width: 18px;
+        height: 20px;
+        width: 20px;
         border: 1px #DADADA solid;
         transform: translateY(-50%);
         &:after {
@@ -1216,7 +1218,9 @@ h6 {
                   border-radius: 0;
                 }
                 .item.three{
-                  width: -webkit-fill-available;
+                  max-width: -webkit-fill-available;
+                  max-width: -moz-available;
+                  max-width: stretch;
                   p.ticket-des{
                     height: 3em;
                   }
