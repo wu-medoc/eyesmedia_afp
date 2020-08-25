@@ -909,7 +909,7 @@ header + div,
               background-color: #4A90E2;
               border-color: #4A90E2;
               &:after {
-                  display: block;
+                  color:#fff;
               }
           }
       }
@@ -934,7 +934,7 @@ header + div,
           height: 6px;
           border-radius: 50%;
           background: $default-white;
-          display: none;
+          display: block;
       }
   }
   &:hover{
@@ -946,9 +946,9 @@ header + div,
               ~.checkmark {
                   background-color: #4A90E2;
                   border-color: #4A90E2;
-                  &:after {
-                      display: block;
-                  }
+                  // &:after {
+                  //     display: block;
+                  // }
               }
           }
       }
@@ -971,10 +971,10 @@ header + div,
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            width: 10px;
-            height: 12px;
+            // width: 10px;
+            // height: 12px;
             color: $default-white;
-            display: none;
+            display: inline-table;
             line-height: 1em;
             background: transparent;
         }
