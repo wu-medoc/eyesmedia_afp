@@ -910,6 +910,7 @@ header + div,
           ~.checkmark {
               background-color: #4A90E2;
               border-color: #4A90E2;
+              color:#fff;
               &:after {
                 display: block;
               }
@@ -948,6 +949,7 @@ header + div,
               ~.checkmark {
                   background-color: #4A90E2;
                   border-color: #4A90E2;
+                  color:#fff;
                   &:after {
                     display: inline-table;
                   }
@@ -973,8 +975,6 @@ header + div,
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            // width: 10px;
-            // height: 12px;
             color: $default-white;
             display: none;
             line-height: 1em;
