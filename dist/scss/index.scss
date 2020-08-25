@@ -951,7 +951,7 @@ header + div,
                   border-color: #4A90E2;
                   color:#fff;
                   &:after {
-                    display: inline-table;
+                    display: block;
                   }
               }
           }
@@ -961,7 +961,23 @@ header + div,
 
 .my-address-list, 
 .shopping-discount{
-  .radio-box .checkmark {
+  .radio-box {
+    input {
+      position: absolute;
+      opacity: 0;
+      cursor: pointer;
+      &:checked{
+          ~.checkmark {
+              background-color: #4A90E2;
+              border-color: #4A90E2;
+              color:#fff;
+              &:after {
+                display: inline-table;
+              }
+          }
+      }
+    }
+    .checkmark {
         position: absolute;
         top: 50%;
         left: 0;
@@ -981,6 +997,7 @@ header + div,
             background: transparent;
         }
     }
+  }
 } 
 /* index flex */
 .shopping-flex, 
