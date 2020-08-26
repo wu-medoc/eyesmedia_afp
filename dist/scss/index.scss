@@ -1184,6 +1184,9 @@ h6 {
         -webkit-line-clamp: 1;
       }
     }
+    &.h24{
+      height: 24px;
+    }
   }
   .products-sub{
     color: $index-default;
