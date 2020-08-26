@@ -634,6 +634,9 @@ input[type='search']{
 .bg-F6F6E9{
   background-color: #F6F6E9;
 }
+.bg-FFF6F1{
+  background-color: #FFF6F1;
+}
 .bg-gray8{
   background-color: $gray-light8;
 }
@@ -1156,43 +1159,61 @@ h6 {
     display: block;
   }
   .products-img .img-box{
+    border-radius: .5em;
+    border: 1px solid $gray-light;
+    resize: none;
+    .rwdimg{
       border-radius: .5em;
-      border: 1px solid $gray-light;
-      resize: none;
-      .rwdimg{
-          border-radius: .5em;
-      }
+    }
   }
   .products-title {
-      color: $blue-dark;
-      font-weight: bold;
-      padding: 0 0.5em;
-      height: 48px;
-      width:auto;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      display: -webkit-box;
-       -webkit-box-orient: vertical;
-      -webkit-line-clamp: 2;
+    color: $blue-dark;
+    font-weight: bold;
+    padding: 0 0.5em;
+    height: 48px;
+    width:auto;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    @media (min-width: 768px) {   
+      -webkit-line-clamp: 1;   
+      height: 24px;
+      .txt-line-clamp2{
+        -webkit-line-clamp: 1;
+      }
+    }
+  }
+  .products-sub{
+    color: $index-default;
+    font-size: .9em;
+    padding-bottom: .5em;
+    margin-bottom: .5em;
+    border-bottom: 1px solid $gray-unable;
+  }
+  .products-sub, .products-offers{
+    padding-left: .5em;
+    padding-right: .5em;
   }
   .products-price {
-      padding: 0 0.5em;
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      flex-direction: column;
-      .price-asking {
-          color: tomato;
-          font-weight: bold;
-          font-size: 1.1em;
-      }
-      .price-original {
-          color: gray;
-          text-decoration: line-through;
-          text-align: bottom;
-          font-size: 0.8em; 
-          height: 1em;
-      }
+    padding: 0 0.5em;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-direction: column;
+    .price-asking {
+      color: tomato;
+      font-weight: bold;
+      font-size: 1.1em;
+    }
+    .price-original {
+      color: gray;
+      text-decoration: line-through;
+      text-align: bottom;
+      font-size: 0.8em; 
+      height: 1em;
+    }
   }
 }
 
