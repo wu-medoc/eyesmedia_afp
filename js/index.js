@@ -267,9 +267,15 @@ $(document).ready(function(){
         var onsaleswiper = new Swiper('.onsale-products.swiper-container', {
             observer:true,
             observeParents:true,
-            slidesPerView: 3,
+            slidesPerView: 2.6,
             spaceBetween: 10,
             loop: true,
+            breakpoints: {
+                640: {
+                slidesPerView: 3,
+                spaceBetween: 20
+                }
+            },
             //updateOnWindowResize: false,
             preloadImages: true,
             updateOnImagesReady : true,
