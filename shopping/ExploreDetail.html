@@ -50,7 +50,7 @@
                                 <button type="button" onclick="history.back()" data-toggle="tooltip" data-placement="top" title="回上一頁"><img src="../img/share/icon_back.png" class="imgicon"></button>
                             </div>
                             <div class="ml-auto d-flex d-inline align-items-center">
-                                <button class="btn add-share" type="button" data-trigger="copy" data-toggle="modal" data-target=".share-modal-sm"><img src="../img/share/icon_share.png" class="imgicon"></button>
+                                <button class="btn add-share" type="button" onclick="callLayerUp('.sharebox');"><img src="../img/share/icon_share.png" class="imgicon"></button>
                                 <div class="add-favorite">
                                     <button type="button" class="active" data-toggle="modal" data-target=".bd-example-modal-sm" data-toggle="tooltip" data-placement="top" title="加入收藏"><img src="../img/share/icon_favorite.png" class="imgicon"></button>
                                 </div>
@@ -586,7 +586,22 @@
                 </div>
             </div>
         </div> 
-
+        <!-- 分享 -->
+        <div class="uplayer">
+            <div class="sharebox">
+                <div class="sharelist">
+                    <div class="item" onclick=""><img src="../img/share/instargram.png"><p>Instargram</p></div>
+                    <div class="item" onclick=""><img src="../img/share/line.png"><p>Line</p></div>
+                    <div class="item" onclick=""><img src="../img/share/messenger.png"><p>messenger</p></div>
+                    <div class="item" onclick=""><img src="../img/share/facebook.png"><p>Facebook</p></div>
+                    <div class="item" onclick=""><img src="../img/share/twitter.png"><p>Twitter</p></div>
+                    <div class="item" onclick=""><img src="../img/share/wahtsapp.png"><p>WahtsApp</p></div>
+                    <div class="item" onclick=""><img src="../img/share/imessenger.png"><p>iMessanger</p></div>
+                    <div class="item" onclick="copyUrl()"><img src="../img/share/copyicon.png"><p>複製連結</p></div>
+                </div>
+                <button class="btn index-outline-btn small-80 w-80" onclick="backLayerUp()">取消</button>
+            </div>
+        </div>
 
     </div>
 
@@ -646,18 +661,25 @@
             }
         });
         
-        //copy url
-        $(document).ready(function() {
-            $('[data-trigger="copy"]').on('click', function(e) {
-                $('.add-share').attr('data-url',window.document.location.href);
-                var temp = $('<input>'); // 建立input物件            
-                $('body').append(temp); // 將input物件增加到body
-                var url = $(this).data('url'); // 取得要複製的連結
-                temp.val(url).select(); // 將連結加到input物件value
-                document.execCommand('copy'); // 複製
-                temp.remove(); // 移除input物件
-            });
+        //window size
+        $(window).resize(function() {
+            var widthSize=$(window).width();
+            if(widthSize > 767){
+                $('.add-share').removeAttr('onclick')
+            }else{
+                $('.add-share').attr('onclick',"callLayerUp('.sharebox')");
+            }
         });
+
+        //copy url
+        function copyUrl(){
+            var url = window.document.location.href;
+            var temp = $('<input>'); // 建立input物件            
+            $('body').append(temp); // 將input物件增加到body
+            temp.val(url).select(); // 將連結加到input物件value
+            document.execCommand('copy'); // 複製
+            temp.remove(); // 移除input物件
+        };
 
         //hash choose
         let parameterN = window.location.hash.split("#")[1];

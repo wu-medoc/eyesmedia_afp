@@ -894,6 +894,37 @@ header + div,
     }
   }
 }
+.sharebox{
+  text-align: center;
+  .sharelist{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 2em 1em;
+    .item{
+      width: 25%;
+      padding: 0 .5em 1.5em .5em;
+      text-align: center;
+    }
+    @media (max-width: 767px) {
+      .item{
+        font-size: small;
+        img{
+          width: 60px;
+        }
+      }
+    }
+    @media (max-width: 320px) {
+      .item{
+        font-size: x-small;
+        white-space: nowrap;
+        img{
+          width: 50px;
+        }
+      }
+    }
+  }
+}
+
 
 /* radio box ui */
 .radio-box {
