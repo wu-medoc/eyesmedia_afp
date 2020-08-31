@@ -512,3 +512,15 @@ $('.header-secondary, .headerbox').parents().find('.wrap').addClass("slideInRigh
 $('.animated').css('animation-fill-mode','inherit');
 
 $('.fixed-bottom').addClass('slideInRight animated faster');
+
+
+//copy url
+function copyUrl(){
+    var url = window.document.location.href;
+    var temp = $('<input id="copyinput">'); // 建立input物件      
+    $('body').prepend(temp); // 將input物件增加到body
+    temp.val(url).select(); // 將連結加到input物件value    
+    temp.focus();  
+    document.execCommand('copy'); // 複製
+    temp.remove(); // 移除input物件
+};

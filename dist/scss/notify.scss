@@ -103,7 +103,7 @@ ul.newlist{
     overflow: hidden;
     max-height: 48vh;
     .img-fluid{
-        height: -webkit-fill-available;
+        height: auto;
     }
 }
 .nDcontent{
