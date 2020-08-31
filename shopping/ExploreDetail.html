@@ -50,7 +50,8 @@
                                 <button type="button" onclick="history.back()" data-toggle="tooltip" data-placement="top" title="回上一頁"><img src="../img/share/icon_back.png" class="imgicon"></button>
                             </div>
                             <div class="ml-auto d-flex d-inline align-items-center">
-                                <button class="btn add-share" type="button" onclick="callLayerUp('.sharebox');"><img src="../img/share/icon_share.png" class="imgicon"></button>
+                                <!-- <button class="btn add-share" type="button"><img src="../img/share/icon_share.png" class="imgicon"></button> -->
+                                <button class="btn add-share msg-open" type="button" value="msg-share" data-toggle="modal" data-target="#messageModal"><img src="../img/share/icon_share.png" class="imgicon"></button>
                                 <div class="add-favorite">
                                     <button type="button" class="active" data-toggle="modal" data-target=".bd-example-modal-sm" data-toggle="tooltip" data-placement="top" title="加入收藏"><img src="../img/share/icon_favorite.png" class="imgicon"></button>
                                 </div>
@@ -587,7 +588,7 @@
             </div>
         </div> 
         <!-- 分享 -->
-        <div class="uplayer">
+        <!-- <div class="uplayer">
             <div class="sharebox">
                 <h6 class="pt-4">分享給好友</h6>
                 <div class="sharelist">
@@ -602,8 +603,7 @@
                 </div>
                 <button class="btn index-outline-btn small-80 w-80" onclick="backLayerUp()">取消</button>
             </div>
-        </div>
-        <input class="temp d-none">
+        </div> -->
     </div>
 
     <div id="loginhtml"></div>
@@ -658,21 +658,21 @@
         });
         
         //window size        
-        var widthSize=$(window).width();
-        changeShareBtn(widthSize);
-        $(window).resize(function() {
-            var widthSize=$(window).width();
-            changeShareBtn(widthSize);
-        });
-        function changeShareBtn(e){
-            if(e > 767){
-                $('.add-share').removeAttr('onclick').addClass("msg-open").attr('value','msg-share')
-                .attr('data-toggle',"modal").attr('data-target',"#messageModal");
-            }else{
-                $('.add-share').removeClass("msg-open").removeAttr('value').removeAttr('data-toggle').removeAttr('data-target')
-                .attr('onclick',"callLayerUp('.sharebox')");
-            }
-        }
+        // var widthSize=$(window).width();
+        // changeShareBtn(widthSize);
+        // $(window).resize(function() {
+        //     var widthSize=$(window).width();
+        //     changeShareBtn(widthSize);
+        // });
+        // function changeShareBtn(e){
+        //     if(e > 767){
+        //         $('.add-share').removeAttr('onclick').addClass("msg-open").attr('value','msg-share')
+        //         .attr('data-toggle',"modal").attr('data-target',"#messageModal");
+        //     }else{
+        //         $('.add-share').removeClass("msg-open").removeAttr('value').removeAttr('data-toggle').removeAttr('data-target')
+        //         .attr('onclick',"callLayerUp('.sharebox')");
+        //     }
+        // }
 
         //hash choose
         let parameterN = window.location.hash.split("#")[1];
