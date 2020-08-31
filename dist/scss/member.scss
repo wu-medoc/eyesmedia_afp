@@ -466,6 +466,19 @@ ul{
         top: 40%;
         left: 50%;
         transform: translate(-50%, -50%);
+        &.uploadItembox{
+            position: relative;
+            top: 0;
+            left: 0;
+            transform: none;
+            .uploadItem{
+                position: relative;
+                width: 100%;
+                min-width: 260px;
+                display: flex;
+                justify-content: space-between;
+            }
+        }
     }
     .change-btn{
         width: 60px;

@@ -780,11 +780,14 @@
   .overlay-choice{
     position: absolute;
     margin: 0 auto;
-    left: 50%;
-    transform: translate(-50%, 5%);
-    -webkit-transform: translate(-50%, 5%);
+    // left: 50%;
+    // transform: translate(-50%, 5%);
+    // -webkit-transform: translate(-50%, 5%);
     bottom: 85px;
     z-index: 1041;
+    &.bg-tr{
+      background-color: transparent;
+    }
     .choice-list, .choice-status{
         background-color: $default-white;
         border-radius: 12px;
