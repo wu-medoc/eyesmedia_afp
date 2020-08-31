@@ -104,6 +104,13 @@
                             </button>                                
                         </div>
                     </li>
+                    <li>
+                        <div class="item w-100">
+                            <button class="btn px-0 w-100" onclick="callLayer('.mystudent');">
+                                上傳學生證 <span class="auto-left"><i class="material-icons">&#xe315;</i></span>
+                            </button>                                
+                        </div>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -193,6 +200,36 @@
                 </ul>
             </div>
         </div>      
+        <!--上傳學生證3-->
+        <div class="mystudent">
+            <div class="headerbox container title-box">
+                <div class="item icon-btn">                                             
+                    <button class="btn px-0" onclick="backLayer();" data-toggle="tooltip" data-placement="bottom" title="回上一頁">
+                        <i class="material-icons">&#xe314;</i>
+                    </button>
+                </div>
+                <div class="item title-name">上傳學生證</div>
+                <div class="item ctrl-btn">                        
+                    <button class="btn px-0" onclick="callLayer('.mystudentnote');" data-toggle="tooltip" data-placement="bottom" title="儲存">
+                        儲存
+                    </button>
+                </div>
+            </div>
+            <div class="my-info-box">
+                <label for="file-upload" class="custom-file-upload">                        
+                    <div class="upload-box">
+                        <img src="../img/member/mtps.svg">
+                        <div class="add-btn">
+                            <img src="../img/member/uploadphoto.svg" alt="">
+                        </div>
+                    </div>
+                </label>
+                <input id="file-upload" type="file"/>
+                <div class="passport-status">
+                    未上傳
+                </div>
+            </div>
+        </div> 
         <!--提示護照4-->
         <div class="mypassportnote">
             <div class="headerbox container title-box">
@@ -336,7 +373,79 @@
                 </div>
             </div>
             <div class="modal-backdrop fade show d-none"></div>
-        </div>    
+        </div>            
+        <!--提示學生證4-->
+        <div class="mystudentnote">
+            <div class="headerbox container title-box">
+                <div class="item ctrl-btn">                        
+                    <button class="btn px-0" onclick="backLayer();" data-toggle="tooltip" data-placement="bottom" title="關閉">
+                        關閉
+                    </button>
+                </div>
+                <div class="item title-name"></div>
+                <div class="item ctrl-btn"></div>
+            </div>
+            <div class="upload-passport-noti">
+                <div class="noti-text">
+                    <strong>提示：</strong>
+                    <p>對準學生證的資料頁面拍攝，請注意內容是否清晰</p>
+                    <small>備註：學生證資料僅供核對使用</small>
+                </div>
+                <div class="img-box">
+                    <img src="../img/member/passport-noti.svg" alt="">
+                </div>
+                <div class="btn next-btn open-overlay-choice">
+                    下一步
+                </div>
+            </div>
+            <!--拍照或錄像-->
+            <div class="overlay-choice" style="display: none;">
+                <div class="choice-list">
+                    <ul>
+                        <li class="flex-inline-between">
+                            <div class="item">
+                                <button class="btn px-0 close-overlay-choice" onclick="callLayer('.mystudentphoto');" data-toggle="tooltip" data-placement="bottom" title="Take Photo or Video">
+                                    拍照或攝影
+                                </button>
+                            </div>
+                            <div class="item">
+                                <button class="btn px-0 close-overlay-choice" onclick="callLayer('.mystudentphoto');" data-toggle="tooltip" data-placement="bottom" title="Take Photo or Video">
+                                    <img src="../img/member/icon_camera.png">
+                                </button>
+                            </div>
+                        </li>
+                        <li class="flex-inline-between">
+                            <div class="item">
+                                <button class="btn px-0">
+                                    相簿
+                                </button>
+                            </div>
+                            <div class="item">
+                                <button class="btn px-0">
+                                    <img src="../img/member/icon_photo.png">
+                                </button>
+                            </div>
+                        </li>
+                        <li class="flex-inline-between">
+                            <div class="item">
+                                <button class="btn px-0">
+                                    瀏覽
+                                </button>
+                            </div>
+                            <div class="item">
+                                <button class="btn px-0">
+                                    <img src="../img/member/icon_dot.png">
+                                </button>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="choice-status close-overlay-choice">
+                    取消
+                </div>
+            </div>
+            <div class="modal-backdrop fade show d-none"></div>
+        </div>
         <!--護照上傳確認5-->
         <div class="mypassportphoto">
             <div class="passport-pic">
@@ -372,7 +481,25 @@
                     </button>
                 </div>
             </div>
-        </div>         
+        </div>  
+        <!--學生證上傳確認5-->
+        <div class="mystudentphoto">
+            <div class="passport-pic">
+                <div class="passport-box"></div>
+            </div>
+            <div class="passport-pic-status">
+                <strong>這張學生證資料是否清楚？</strong>
+                <p>此照片應包含所有的資料，並且確定沒有任何模糊或被切除的部分</p>
+                <div class="btn-group">                    
+                    <button class="btn next-btn w-50 " onclick="backLayer();" data-toggle="tooltip" data-placement="bottom" title="重新拍照">
+                        重新拍照
+                    </button>                  
+                    <button class="btn next-btn w-50 " onclick="callLayer('.mystudentok');" data-toggle="tooltip" data-placement="bottom" title="確定上傳">
+                        確定上傳
+                    </button>
+                </div>
+            </div>
+        </div> 
         <!--上傳護照成功6-->
         <div class="mypassportok">
             <div class="headerbox container title-box">
@@ -448,6 +575,34 @@
                         </div>
                     </li>
                 </ul>
+            </div>
+        </div>   
+        
+        <!--上傳學生證成功6-->
+        <div class="mystudentok">
+            <div class="headerbox container title-box">
+                <div class="item icon-btn">                                             
+                    <button class="btn px-0" onclick="backLayer();" data-toggle="tooltip" data-placement="bottom" title="回上一頁">
+                        <i class="material-icons">&#xe314;</i>
+                    </button>
+                </div>
+                <div class="item title-name">上傳學生證</div>
+                <div class="item ctrl-btn">                        
+                    <button class="btn px-0" onclick="animRouter('Setting.html')" data-toggle="tooltip" data-placement="bottom" title="變更">
+                        變更
+                    </button>
+                </div>
+            </div>
+            <div class="my-info-box">
+                <div class="upload-box">
+                    <img src="../img/member/mtps.svg">
+                    <div class="change-btn">
+                        變更
+                    </div>
+                </div>
+                <div class="passport-status">
+                    <i class="material-icons">&#xE5CA;</i>已上傳
+                </div>
             </div>
         </div>   
     </div>
