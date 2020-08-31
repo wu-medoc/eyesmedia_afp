@@ -41,7 +41,8 @@
                         <button type="button" onclick="backLayerOne()" data-toggle="tooltip" data-placement="top" title="回上一頁"><img src="../img/share/icon_back.png" class="imgicon"></button>
                     </div>
                     <div class="shareBox">
-                        <button class="btn add-share" type="button" data-trigger="copy" data-toggle="modal" data-target=".share-modal-sm"><img src="../img/share/icon_share.png" class="imgicon"></button>
+                        <!-- <button class="btn add-share" type="button" data-trigger="copy" data-toggle="modal" data-target=".share-modal-sm"><img src="../img/share/icon_share.png" class="imgicon"></button> -->
+                        <button class="btn add-share msg-open" type="button" value="msg-share" data-toggle="modal" data-target="#messageModal" data-title="分享行程"><img src="../img/share/icon_share.png" class="imgicon"></button>
                     </div>
                 </div> 
             </div>  
@@ -94,19 +95,6 @@
         // login.html load
         $("#loginhtml").load("../login.html");
         
-        //copy url
-        $(document).ready(function() {
-            $('[data-trigger="copy"]').on('click', function(e) {
-                $('.add-share').attr('data-url',window.document.location.href);
-                var temp = $('<input>');          
-                $('body').append(temp); 
-                var url = $(this).data('url'); 
-                temp.val(url).select(); 
-                document.execCommand('copy'); 
-                temp.remove(); 
-            });
-        });
-
     </script>
     <script src="../js/index.js"></script>
 </body>

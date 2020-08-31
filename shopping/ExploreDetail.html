@@ -51,7 +51,7 @@
                             </div>
                             <div class="ml-auto d-flex d-inline align-items-center">
                                 <!-- <button class="btn add-share" type="button"><img src="../img/share/icon_share.png" class="imgicon"></button> -->
-                                <button class="btn add-share msg-open" type="button" value="msg-share" data-toggle="modal" data-target="#messageModal"><img src="../img/share/icon_share.png" class="imgicon"></button>
+                                <button class="btn add-share msg-open" type="button" value="msg-share" data-toggle="modal" data-target="#messageModal" data-title="分享好店"><img src="../img/share/icon_share.png" class="imgicon"></button>
                                 <div class="add-favorite">
                                     <button type="button" class="active" data-toggle="modal" data-target=".bd-example-modal-sm" data-toggle="tooltip" data-placement="top" title="加入收藏"><img src="../img/share/icon_favorite.png" class="imgicon"></button>
                                 </div>
@@ -679,6 +679,7 @@
         switch(parameterN){
             case "explor":
                 $(".shopping-store-btn, .success-mode").hide();
+                $(".add-share").attr("data-title","好點分享");
                 break;
             case "store":
                 $(".success-mode").hide();
@@ -690,6 +691,7 @@
             default:
                 $(".shopping-store-btn").removeAttr("style");
                 $(".success-mode").hide();
+                $(".add-share").attr("data-title","好店分享");
                 break;
         }
         // login.html load

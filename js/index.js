@@ -360,6 +360,9 @@ window.onload = function(){
         var msgval = $(this).val();
         $('#messageModal .modal-body>div').hide();
         $('#'+msgval).show();
+        if($(this).attr('data-title').length > 1){
+            $('.dataTit').text($(this).attr('data-title'));
+        }
     });
 
     //member, explore footer pc hide
