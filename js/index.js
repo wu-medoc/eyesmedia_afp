@@ -347,6 +347,7 @@ $(document).ready(function(){
 
 var curPath=window.document.location.pathname;
 window.onload = function(){  
+
     //footer bar active
     var strPath=window.document.location.pathname.replace("/eyesmedia_afp","");
     var postPath=strPath.substring(0,strPath.substr(1).indexOf('/')+1).replace("/",""); 
@@ -531,3 +532,4 @@ function copyUrl(){
     document.execCommand('copy'); // 複製
     temp.remove(); // 移除input物件
 };
+
