@@ -1,0 +1,13 @@
+[{
+    "title": "測試商店1",
+    "img": "https://picsum.photos/300/300/?random=5"
+}, {
+    "title": "測試商店2",
+    "img": "https://picsum.photos/400/300/?random=6"
+}, {
+    "title": "測試商店3",
+    "img": "https://picsum.photos/300/400/?random=7"
+}, {
+    "title": "測試商店4",
+    "img": "https://picsum.photos/700/400/?random=8"
+}]

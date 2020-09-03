@@ -366,6 +366,9 @@ input[type='search']{
   &.h37{
     padding-bottom:37%;
   }
+  &.h50{
+    padding-bottom:50%;
+  }
   &.h55{
     padding-bottom:55%;
   }
@@ -708,10 +711,10 @@ header + div,
   @media (max-width: 767px) {
     max-width: 540px;
   }
-  @media (min-width: 768px) and (max-width: 979px) {
+  @media (min-width: 768px) and (max-width: 991px) {
     max-width: 720px;
   }
-  @media (min-width: 980px) {
+  @media (min-width: 992px) {
     max-width: 960px;
   }
   @media (min-width: 1200px) {

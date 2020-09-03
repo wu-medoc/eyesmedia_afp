@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=1, user-scalable=no">
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../js/vendor/bs4/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../js/vendor/jquery-editable-select-master/dist/jquery-editable-select.min.css">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+    <!-- vendor css -->
+    <link rel="stylesheet" href="../js/vendor/swiper/css/swiper.min.css">
+    <!-- custom css -->
+    <link rel="stylesheet" href="../dist/style/css.min.css">
+    <link rel="stylesheet" href="../dist/style/global.min.css">
+    <link rel="stylesheet" href="../dist/style/index.min.css">
+    <link rel="stylesheet" href="../dist/style/restaurant.min.css">
+    <link rel="stylesheet" href="../dist/style/animate.min.css">
+
+    <title>Mobii! - 校園美食專區</title>
+</head>
+
+<body>    
+<div class="wrap container">
+
+    <header>
+        <div class="header-secondary container linebt-row">
+            <div class="index-flex justify-content-between">
+                <div class="item two">
+                    <div class="close-btn" onclick="history.back();" data-toggle="tooltip" data-placement="bottom" title="回上一頁">
+                        <i class="material-icons">&#xe314;</i>
+                    </div>
+                </div>
+                <div class="item three text-center">
+                    <div class="title-name">德霖校園美食專區</div>
+                </div>
+                <div class="item two text-right">
+                    <div class="close-btn"></div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="RESlistbox">
+        <div class="RESbnbox">
+            <img src="../img/restaurant/bn_hudt.png" class="bnImg">
+            <div class="bnBottom">&emsp;</div>
+        </div>
+        <div class="container REScontent">
+            <h5>🍽 德霖校園美食推薦</h5>
+            <p class="text-index">*本區店家僅供德霖教職員訂餐自取</p>
+            <div class="row resImgbox">
+                <div class="col-12 col-md-6 col-xl-6" onclick="">
+                    <div class="img-box">
+                        <div class="rwdimg-cover h50 border-radius5" style="background-image: url('../img/restaurant/store-1.png');"></div>
+                    </div>                 
+                    <p>小木屋鬆餅</p>
+                </div>
+                <div class="col-12 col-md-6 col-xl-6" onclick="">
+                    <div class="img-box">
+                        <div class="rwdimg-cover h50 border-radius5" style="background-image: url('../img/restaurant/store-2.png');"></div>
+                    </div>                               
+                    <p>釜山崔炸雞</p>
+                </div>
+                <div class="col-12 col-md-6 col-xl-6" onclick="">
+                    <div class="img-box">
+                        <div class="rwdimg-cover h50 border-radius5" style="background-image: url('../img/restaurant/store-3.png');"></div>
+                    </div>                             
+                    <p>五花馬水餃</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="images"></div>
+</div> 
+<div id="loginhtml"></div>
+<div id="footerMobii"></div>
+
+     
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="../js/vendor/bs4/js/jquery-3.2.1.min.js"></script>
+    <!-- Latest compiled and minified JavaScript -->    
+    <script src="../js/vendor/bs4/js/popper.min.js"></script>
+    <script src="../js/vendor/bs4/js/bootstrap.min.js"></script>
+    
+    
+    <script src="../js/vendor/jquery-editable-select-master/dist/jquery-editable-select.js"></script>
+
+    <!-- vendor js -->
+    <script src="../js/vendor/swiper/js/swiper.min.js"></script>
+    <script src="../js/vendor/imgLiquid.js"></script>
+
+    <!-- custom js -->    
+    <script src="../js/animateCss.js"></script>
+    <script src="../js/jquery.countdown.min.js"></script>
+    <script>
+
+    </script>
+
+    <script>   
+        (function() {
+        $.getJSON( "data.json")
+            .done(function( data ) {
+                $.each( data, function( i, item ) {
+                    $(".resImgbox").append('<div class="col-12 col-md-6 col-xl-6" onclick=""><div class="img-box"><div style="background-image: url(\''+item.img
+                    +'\');" class="rwdimg-cover h50 border-radius5"></div></div><p>'+item.title+'</p></div>');
+                });
+            });
+        })();
+        // $(window).on('load',function() {
+        //     $.each( $(".resImg"), function( i, item ) {
+        //         if(item.height > item.width) $(this).attr('style','transform:translateY(-50%)');
+        //     });
+        // });
+        $("#loginhtml").load("../login.html"); 
+        $("#footerMobii").load("../footerMobii.html"); 
+    </script>
+    <script src="../js/index.js"></script>
+</body>
+
+</html>

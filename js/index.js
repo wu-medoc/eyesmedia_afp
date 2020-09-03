@@ -373,6 +373,10 @@ window.onload = function(){
     if (strPath1.toLowerCase().indexOf("explore")>0){
         $('footer.for-pc').hide();
     }; 
+
+    //footer pc position controll 
+    if($('body').height() < $(window).height())   
+        $('footer.for-pc').css('position','absolute');
     // function getRootPath(){ 
     //     var strFullPath=window.document.location.href; 
     //     var strPath=window.document.location.pathname; 

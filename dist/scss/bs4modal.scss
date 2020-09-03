@@ -435,7 +435,7 @@
   .productsOpensort{
     width: 80vw;
     right: 0;
-    @media (min-width: 980px) {
+    @media (min-width: 992px) {
       width: 650px;
     }
   }
@@ -526,7 +526,7 @@
     }
     .open-sort-title, .open-sort-footer, .open-sort-cont{
       width: 80vw;
-      @media (min-width: 980px) {
+      @media (min-width: 992px) {
         width: 650px;
       }
     }
