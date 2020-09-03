@@ -29,6 +29,36 @@ figure.image{
   }
 }
 
+#player, 
+figure iframe.ifrwd{
+    width: 85vw;
+    height: 200px;
+    @media (max-width: 767px) {
+        width: 62vw;
+        height: 330px;
+    }
+    @media (max-width: 680px) {
+        width: 70vw;
+        height: 330px;
+    }
+    @media (max-width: 480px) {
+        width: 85vw;
+        height: 250px;
+    }
+    @media (max-width: 375px) {
+        width: 85vw;
+        height: 200px;
+    }
+    @media (min-width: 768px) and (max-width: 991px) {
+        width: 66vw;
+        height: 370px;
+    }
+    @media (min-width: 992px) {
+        width: 638px;
+        height: 480px;
+    }
+}
+
 .center{
   position: absolute;
   top: 50%;

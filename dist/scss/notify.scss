@@ -102,6 +102,8 @@ ul.newlist{
 .nDimgbox{
     overflow: hidden;
     max-height: 48vh;
+    background: #eee;
+    text-align: -webkit-center;
     .img-fluid{
         height: auto;
     }
