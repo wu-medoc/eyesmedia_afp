@@ -114,11 +114,14 @@
                 });
             });
         })();
-        // $(window).on('load',function() {
-        //     $.each( $(".resImg"), function( i, item ) {
-        //         if(item.height > item.width) $(this).attr('style','transform:translateY(-50%)');
-        //     });
-        // });
+        $(window).on('load',function() {
+            $(".col-12").each(function(){
+                $(this).text();
+            });
+            $.each( $(".col-12"), function( i, item ) {
+                $(this).attr('onclick','location.href="../shopping/ExploreDetail.html#delivery"');                
+            });
+        });
         $("#loginhtml").load("../login.html"); 
         $("#footerMobii").load("../footerMobii.html"); 
     </script>

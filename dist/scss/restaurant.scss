@@ -20,6 +20,9 @@
     .REScontent{
         width: 100%;
         padding: 1.5em;
+        .col-12{
+            cursor: pointer;
+        }
         h5{
             font-weight: bold;
         }
