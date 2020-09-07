@@ -115,17 +115,20 @@
                             <li class="item small-80">
                                 <div class="item text-danger d-none numMK">請填寫卡片號碼</div>
                                 <div class="small-end text-right ml-auto">
-                                    <span class="text-org" onclick="callLayerUp('.mycardprompt');">不知道卡片號碼在哪裡？</span>
+                                    <span class="text-org cursor-pointer" onclick="callLayerUp('.mycardprompt');">不知道卡片號碼在哪裡？</span>
                                 </div>
                             </li>
                             <li>
                                 <div class="item">身分證字號</div>
                                 <div class="item input-box">
-                                    <input type="text" value="" placeholder="請輸入">
+                                    <input id="cardid" type="text" value="" placeholder="請輸入">
                                 </div>
                             </li>
-                            <li class="item small-end">
-                                記名式一卡通請提供身分證字號驗證
+                            <li class="item small-end">                                
+                                <div class="item text-danger align-self-baseline d-none idMK">請輸入身分證字號</div>
+                                <div class="text-right ml-auto">
+                                    記名式一卡通<br>請提供身分證字號驗證
+                                </div>
                             </li>
                             <li>
                                 <div class="item">請輸入圖形驗證碼<span class="text-org">*</span></div>
@@ -269,13 +272,17 @@
         });
         //新增卡片驗證
         function myCard(){
+            cid = $('#cardid').val();
             num = $('#cardnumber').val();
             capIup = $('#captchaInput').val();
             if (num=="" || capIup==""){
                 (num=="") ? $('.numMK').removeClass("d-none") : $('.numMK').addClass("d-none");
                 (capIup=="") ? $('.imgMK').removeClass("d-none") : $('.imgMK').addClass("d-none");
+                (cid=="") ? $('.idMK').removeClass("d-none") : $('.idMK').addClass("d-none");
             }else if ( capIup.toLowerCase() != cap.toLowerCase() ){
                 $('.imgMK').text("驗證碼輸入錯誤").removeClass("d-none");
+            }else if(cid.length < 10){
+                $('.idMK').text("身份證字號錯誤").removeClass("d-none");
             }else if(num.length != 11){
                 $('.numMK').text("卡號格式錯誤").removeClass("d-none");
             }else if(num=='11111111111'){
@@ -287,7 +294,7 @@
                 msgpara();
                 $('#msgP1').text("成功加入卡片");
                 $('#msgpara .btn-login').text("確定").attr('onclick','stat(1);backLayer();');
-                $('.numMK, .imgMK').addClass("d-none");
+                $('.numMK, .imgMK, .idMK').addClass("d-none");
             }
         }
         //修改卡片

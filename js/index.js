@@ -342,7 +342,6 @@ $(document).ready(function(){
     //     },1000);
     // }); 
 
-   
 });
 
 var curPath=window.document.location.pathname;
