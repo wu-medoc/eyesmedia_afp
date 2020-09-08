@@ -41,6 +41,13 @@ ul{
             font-size: 16px;
             &.info-name{
                 width: auto;
+                max-width: 250px;
+                @media (max-width: 767px) {
+                    width: 180px;
+                }
+                @media (max-width: 480px) {
+                    width: 120px;
+                }
                 @media (max-width: 375px) {
                     width: 74px;
                 }
@@ -213,6 +220,9 @@ ul{
 }
 
 // 我的帳戶 & mycard
+.title-box {
+    min-width: 320px;
+}
 .my-list-box{    
     /* Chrome, Safari, Edge, Opera */
         input::-webkit-outer-spin-button,
@@ -252,6 +262,7 @@ ul{
     &.cardbox {
         height: 100%;
         background: $gray-light8;
+        min-width: 320px;
         ul{
             background: #fff;
             li.small-end{
