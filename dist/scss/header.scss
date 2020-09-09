@@ -241,7 +241,7 @@
       border-radius:4px;
       width:36px;    
   }
-  .dropdown-toggle::after {
+  .dropdown-toggle:after {
     display:none;
   }
   .dropdown-menu>li>a {
@@ -332,7 +332,7 @@
 }
 .dwloadApp{
   font-size: small;
-  &::after{
+  &:after{
     @media (min-width: 768px){
       content: "";
       border-left: 1px solid $cardfooter-color;

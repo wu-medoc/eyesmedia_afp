@@ -1088,7 +1088,7 @@ input[type="file"] {
     bottom: 1rem;
     left: 80%;
 }
-.toTop-arrow::before, .toTop-arrow::after {
+.toTop-arrow::before, .toTop-arrow:after {
 	width: 18px;
 	height: 5px;
 	border-radius: 3px;
@@ -1101,7 +1101,7 @@ input[type="file"] {
 	transform: rotate(-45deg) translate(0, -50%);
 	left: 0.5rem;
 }
-.toTop-arrow::after {
+.toTop-arrow:after {
 	transform: rotate(45deg) translate(0, -50%);
 	right: 0.5rem;
 }
@@ -1328,7 +1328,7 @@ input[type="file"] {
             }
             &.active{
                 color: $index-default;
-                &::after{
+                &:after{
                     content:"✔";
                     float: right;
                 }

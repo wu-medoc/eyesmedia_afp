@@ -365,7 +365,7 @@
       .direct-info a:visited{    
         color: #327DDE;
       }
-      .doted-border::after {
+      .doted-border:after {
         background: transparent none repeat scroll 0 0 !important;
         border-right: 2px dotted #fff !important;
         bottom: 0;
@@ -378,11 +378,11 @@
         z-index: 99999999;
       }
     } 
-    .direct-chat-text::after, 
+    .direct-chat-text:after, 
     .direct-chat-text::before {
       border-color: transparent #E5E5EA transparent transparent;        
     }
-    .direct-chat-text::after, 
+    .direct-chat-text:after, 
     .direct-chat-text::before {
       -moz-border-bottom-colors: none;
       -moz-border-left-colors: none;
@@ -400,7 +400,7 @@
       top: 15px;
       width: 0;
     }
-    .direct-chat-text::after {
+    .direct-chat-text:after {
       border-width: 5px;
       margin-top: -5px;
     }
@@ -420,11 +420,11 @@
       display: inline-grid;
       justify-items: self-end;
     }
-    .guests-chat-text::after, 
+    .guests-chat-text:after, 
     .guests-chat-text::before {
       border-color: transparent transparent #0A86F9 transparent;        
     }
-    .guests-chat-text::after, 
+    .guests-chat-text:after, 
     .guests-chat-text::before {
       -moz-border-bottom-colors: none;
       -moz-border-left-colors: none;
@@ -442,7 +442,7 @@
       top: 15px;
       width: 0;
     }
-    .guests-chat-text::after {
+    .guests-chat-text:after {
       border-width: 5px;
       margin-top: -5px;
     }
