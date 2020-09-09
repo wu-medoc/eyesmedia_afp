@@ -20,6 +20,10 @@
       max-width: 300px;
       top: 50%;
       left: 50%;
+      -o-transform: translate(-50%, -50%);
+      -webkit-transform: translate(-50%, -50%);
+      -moz-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
       transform: translate(-50%, -50%);
     }
   }
@@ -190,8 +194,11 @@
           position: absolute;
           right: 10px;
           top: 40%;
-          -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
+          -o-transform: translateX(-50%);
+          -webkit-transform: translateX(-50%);
+          -moz-transform: translateX(-50%);
+          -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
           z-index: 2;
           color: rgba(24, 43, 86, 0.5);
         }
@@ -752,7 +759,11 @@
             top: 50%;
             left: 7px;
             background-color: $gray-light;
-            transform: translateY(-50%);
+            -o-transform: translateX(-50%);
+            -webkit-transform: translateX(-50%);
+            -moz-transform: translateX(-50%);
+            -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
         }
     }
     .filter-item{

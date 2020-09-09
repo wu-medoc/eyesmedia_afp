@@ -59,6 +59,10 @@ button{
 
             .material-icons {
                 position: static;
+                -o-transform: translate(0, 0);
+                -webkit-transform: translate(0, 0);
+                -moz-transform: translate(0, 0);
+                -ms-transform: translate(0, 0);
                 transform: translate(0, 0);
                 display: inline-block;
             }
@@ -234,6 +238,10 @@ button.active{
                     border-radius: 1px;
                     position: absolute;
                     left: 50%;
+                    -o-transform: translateX(-50%);
+                    -webkit-transform: translateX(-50%);
+                    -moz-transform: translateX(-50%);
+                    -ms-transform: translateX(-50%);
                     transform: translateX(-50%);
                     bottom: 0;
                 }

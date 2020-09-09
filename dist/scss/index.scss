@@ -63,8 +63,11 @@ figure iframe.ifrwd{
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
   -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
 .center-v{
       display: -webkit-box;
@@ -314,8 +317,11 @@ input[type='search']{
     position: absolute;
     right: 5px;
     top: 50%;
+    -o-transform: translateY(-50%);
     -webkit-transform: translateY(-50%);
-            transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
     background: -webkit-gradient(linear, right top, left top, from(#568EE3), to(#36D1DB));
     background: linear-gradient(270deg, #568EE3 0%, #36D1DB 100%);
     border-radius: 5px;
@@ -828,6 +834,10 @@ header + div,
       top: 50%;
       left: 1px;
       background-color: #ccc;
+      -o-transform: translateY(-50%);
+      -webkit-transform: translateY(-50%);
+      -moz-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
       transform: translateY(-50%);
   }
 }
@@ -844,6 +854,10 @@ header + div,
       top: 50%;
       left: 6px;
       background-color: #ccc;
+      -o-transform: translateY(-50%);
+      -webkit-transform: translateY(-50%);
+      -moz-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
       transform: translateY(-50%);
   }
 }
@@ -925,8 +939,11 @@ header + div,
   @media (min-width: 768px){
     top: calc(100% - 150px);
   }
-  transform: translate(-2%, -50%);
+  -o-transform: translate(-2%, -50%);
   -webkit-transform: translate(-2%, -50%);
+  -moz-transform: translate(-2%, -50%);
+  -ms-transform: translate(-2%, -50%);
+  transform: translate(-2%, -50%);
   button{
     border: 0;
     padding: 0;
@@ -1015,12 +1032,20 @@ img[data-toggle='tooltip'],
       background-color: $default-white;
       border: 1px #DADADA solid;
       border-radius: 50%;
+      -o-transform: translateY(-50%);
+      -webkit-transform: translateY(-50%);
+      -moz-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
       transform: translateY(-50%);
       &:after {
           content: "";
           position: absolute;
           top: 50%;
           left: 50%;
+          -o-transform: translate(-50%, -50%);
+          -webkit-transform: translate(-50%, -50%);
+          -moz-transform: translate(-50%, -50%);
+          -ms-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
           width: 6px;
           height: 6px;
@@ -1073,12 +1098,20 @@ img[data-toggle='tooltip'],
         height: 20px;
         width: 20px;
         border: 1px #DADADA solid;
+        -o-transform: translateY(-50%);
+        -webkit-transform: translateY(-50%);
+        -moz-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
         transform: translateY(-50%);
         &:after {
             content: "✔";
             position: absolute;
             top: 50%;
             left: 50%;
+            -o-transform: translate(-50%, -50%);
+            -webkit-transform: translate(-50%, -50%);
+            -moz-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
             color: $default-white;
             display: none;
@@ -1282,6 +1315,10 @@ h6 {
     .hr-g{
       border-bottom: 1px solid $gray-unable;
       position: absolute;
+      -o-transform: translate(-50%, 8px);
+      -webkit-transform: translate(-50%, 8px);
+      -moz-transform: translate(-50%, 8px);
+      -ms-transform: translate(-50%, 8px);
       transform: translate(-50%, 8px);
       left: 50%;
       width: calc(100% - 40px);
@@ -1455,6 +1492,10 @@ img.nearbyimg{
     padding: 2.5em 1em;
     position: absolute;
     left: 50%;
+    -o-transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
     transform: translateX(-50%);
     a{
       color: $default-black;
