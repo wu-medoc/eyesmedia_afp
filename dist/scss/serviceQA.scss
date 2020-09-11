@@ -134,7 +134,7 @@
   .bearservice-lg {
     border-left: 1px solid #ccc;
     border-right: 1px solid #ccc;
-    min-height: 85vh;
+    height: calc(100vh - 63px);
     .chat-box {
       //overflow: hidden;
       background-color: #ffffff;
@@ -219,24 +219,6 @@
       width: 100%;
       min-width: 320px;
       padding: .5em;
-      @media (max-width: 767px) {
-        bottom: 79px;
-      }
-      @media (max-width: 570px) {
-        bottom: 74px;
-      }
-      @media (max-width: 480px) {
-        bottom: 64px;
-      }
-      @media (max-width: 375px) {
-        bottom: 58px;
-      }
-      @media (max-width: 320px) {
-        bottom: 57px;
-      }
-      @media (min-width: 768px) {  
-        bottom: 165px;
-      }
       input{
         border: 1px solid #ccc;
         border-radius: 16px;

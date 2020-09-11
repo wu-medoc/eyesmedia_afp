@@ -28,8 +28,7 @@ figure.image{
     max-width: stretch;
   }
 }
-
-#player, 
+#player, .item-content figure.media, 
 figure iframe.ifrwd{
     width: 85vw;
     height: 200px;
@@ -663,6 +662,9 @@ input[type='search']{
 }  
 .text-org{
   color: $onlineshopping-default;
+}
+.text-a8{
+  color: #a8a8a8a8;
 }
 .bg-lightpink{
   color: #fff;

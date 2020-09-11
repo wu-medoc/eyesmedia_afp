@@ -107,6 +107,9 @@ ul.newlist{
     .img-fluid{
         height: auto;
     }
+    @media (min-width: 992px) {
+        min-height: 394px;
+    }
 }
 .nDcontent{
     .item-title{

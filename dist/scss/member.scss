@@ -139,6 +139,7 @@ ul{
                 }
             }       
             .info-bc{
+                width: 72%;
                 color: #fff;
                 position: absolute;
                 text-align: left;
@@ -512,7 +513,7 @@ ul{
 }
 // 上傳護照提示
 .upload-passport-noti{
-    height: calc(100vh - 54px);
+    height: calc(100vh - 100px);
     display: flex;
     flex-direction: column;
     padding: 30px 15px;
@@ -521,6 +522,18 @@ ul{
     }
     .img-box{
         margin: auto;
+    }
+    .nextBtnFixed{
+        position: fixed;
+        width: 75%;
+        bottom: 0;
+        margin-bottom: 1em;
+        left: 50%;
+        -o-transform: translateX(-50%);
+        -webkit-transform: translateX(-50%);
+        -moz-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+        transform: translateX(-50%);
     }
 }
 input[type="file"] {

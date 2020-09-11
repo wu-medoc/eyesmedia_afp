@@ -85,7 +85,7 @@
   }
 }
 .user-hi{
-    max-width: 137px;
+    width: 86px;
     font-size: 13px;    
     @media (max-width: 570px) {
       font-size: small;
@@ -332,6 +332,7 @@
 }
 .dwloadApp{
   font-size: small;
+  width: 66px;
   &:after{
     @media (min-width: 768px){
       content: "";
