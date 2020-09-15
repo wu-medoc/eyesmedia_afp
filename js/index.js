@@ -394,21 +394,19 @@ window.onload = function(){
     // });
 
     //退貨問題記錄輸入框位置設定
-    if( document.querySelector('.service-store-footer') != null ){
+    if(document.querySelector('.service-store-footer')!=null){
         let sfot = document.querySelector('.service-store-footer');
-        var footmb, footpc;
-        ( document.getElementById('footer-mb') != null )?
-            footmb = document.getElementById('footer-mb').clientHeight : footmb=0;
-        ( document.getElementById('footer-pc') != null )?
-            footpc = document.getElementById('footer-pc').clientHeight : footpc=0;
-        if( footmb != 0 ){
-            sfot.style='bottom:' + footmb + 'px';
-        }else if( footpc != 0 ){
-            sfot.style='bottom:' + footpc + 'px';
+        let footmb = document.getElementById('footer-mb')[0].clientHeight;
+        let footpc = document.getElementById('footer-pc')[0].clientHeight;
+        if(footmb!=0){
+            sfot.style='bottom:'+footmb+'px';
+        }else if(footpc!=0){
+            sfot.style='bottom:'+footpc+'px';
         }else{
             sfot.style='bottom:0px'
         }
-    };    
+    };
+    
 };
 
 //#messageModal message 
