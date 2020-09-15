@@ -139,7 +139,8 @@ ul{
                 }
             }       
             .info-bc{
-                width: 72%;
+                width: 66%;
+                max-width: 330px;
                 color: #fff;
                 position: absolute;
                 text-align: left;
@@ -147,6 +148,8 @@ ul{
                 left: 10%;
                 font-size: 1.2em;
                 @media (max-width: 375px) {
+                    width: 66%;
+                    max-width: 168px;
                     font-size: 1em;
                     top: 45%;
                 }
@@ -338,6 +341,9 @@ ul{
                     border: 0;
                     text-align: right;
                     color: $blue-dark;
+                    &.text-a8{
+                        color: #a8a8a8a8;
+                    }
                 }
                 input[type='tel'],
                 input[type='email'],
