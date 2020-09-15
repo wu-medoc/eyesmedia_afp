@@ -458,22 +458,20 @@
 <div class="modal fade" id="discountModal" tabindex="-1" role="dialog" aria-labelledby="discountModalTitle" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-sm" role="document">
       <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+        <div class="modal-header d-none">
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
         <div class="modal-body">
-            <h5 class="pt-0">新增優惠</h5>
-            <input type="text" placeholder="請輸入您的優惠碼">
+            <h5 class="pt-0 text-index">新增優惠</h5>
+            <input type="text" class="input-index w-80 px-2 my-2" placeholder="請輸入您的優惠碼">
         </div>
-        <div class="modal-footer">
-          <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Save changes</button> -->
-          <button type="button" class="btn btn-login font-bold left-mline w-100 msg-open" value="msg-mydiscount-add">
+        <div class="modal-footer justify-content-center border-top-0">
+          <button type="button" class="btn w-75 index-btn msg-open" value="msg-mydiscount-add" data-dismiss="modal" data-toggle="modal" data-target="#messageModal">
               新增
           </button>
+          <button type="button" class="btn close-modalbtn" data-dismiss="modal"><img src="../img/share/close.png"></button>
         </div>
       </div>
     </div>

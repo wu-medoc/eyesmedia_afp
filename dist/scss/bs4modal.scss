@@ -27,7 +27,12 @@
       transform: translate(-50%, -50%);
     }
   }
-  
+  .close-modalbtn{
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%,15%);
+  }
   button.close{
     &:focus{
       outline: none;
@@ -114,6 +119,13 @@
       width: 100%;
       border: 0;
       border-bottom: 1px #eee solid;
+      &.input-index{
+        border-radius: 0.5em;
+        border-top: 1px solid $index-default;
+        border-bottom: 1px solid $index-default;
+        border-right: 1px solid $index-default;
+        border-left: 1px solid $index-default;
+      }
     }
     label.form-check-label {
       vertical-align: super;
