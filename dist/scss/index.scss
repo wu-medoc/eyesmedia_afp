@@ -528,6 +528,7 @@ input[type='search']{
   background: $cardfooter-color;
   white-space: nowrap;
 }
+.edit-btn, 
 .next-btn, 
 .index-btn{
   color: #fff;
@@ -543,6 +544,10 @@ input[type='search']{
     &:hover{
       color: #fff;
     }
+  }
+  &.fit{
+    height: fit-content;
+    padding: .25em .5em;
   }
 }
 .index-outline-btn{
