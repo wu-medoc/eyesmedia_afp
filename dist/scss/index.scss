@@ -547,6 +547,8 @@ input[type='search']{
   }
   &.fit{
     height: fit-content;
+    text-align: center;
+    display: inline-block;
     padding: .25em .5em;
   }
 }

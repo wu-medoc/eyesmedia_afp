@@ -1,0 +1,186 @@
+[
+  {
+    "service": "生活資訊",
+    "img": "category2_news",
+    "tit": "新聞",
+    "link": "index.html",
+    "item": 1,
+    "disable": ""
+  },
+  {
+    "service": "生活資訊",
+    "img": "category2_1dollar",
+    "tit": "一元搶購",
+    "link": "offers/offers_one.html",
+    "item": 2,
+    "disable": ""
+  },
+  {
+    "service": "娛樂放鬆",
+    "img": "category2_games",
+    "tit": "遊戲",
+    "link": "game/game.html",
+    "item": 3,
+    "disable": ""
+  },
+  {
+    "service": "生活資訊",
+    "img": "category2_thunder",
+    "tit": "彩蛋",
+    "link": "index.html",
+    "item": 4,
+    "disable": ""
+  },
+  {
+    "service": "饗食達人",
+    "img": "category2_sushi",
+    "tit": "壽司",
+    "link": "index.html",
+    "item": "",
+    "disable": ""
+  },
+  {
+    "service": "饗食達人",
+    "img": "category2_coffee",
+    "tit": "咖啡",
+    "link": "index.html",
+    "item": 6,
+    "disable": ""
+  },
+  {
+    "service": "饗食達人",
+    "img": "category2_tea",
+    "tit": "茶藝",
+    "link": "index.html",
+    "item": "",
+    "disable": ""
+  },
+  {
+    "service": "饗食達人",
+    "img": "category2_orgaic",
+    "tit": "有機",
+    "link": "index.html",
+    "item": "",
+    "disable": ""
+  },
+  {
+    "service": "饗食達人",
+    "img": "category2_a5",
+    "tit": "和牛",
+    "link": "index.html",
+    "item": 5,
+    "disable": ""
+  },
+  {
+    "service": "饗食達人",
+    "img": "category2_agriculture",
+    "tit": "神農獎",
+    "link": "index.html",
+    "item": "",
+    "disable": ""
+  },
+  {
+    "service": "美麗生活",
+    "img": "category2_fasion",
+    "tit": "時尚精品",
+    "link": "index.html",
+    "item": 9,
+    "disable": ""
+  },
+  {
+    "service": "美麗生活",
+    "img": "category2_makeups",
+    "tit": "美妝",
+    "link": "index.html",
+    "item": "",
+    "disable": ""
+  },
+  {
+    "service": "美麗生活",
+    "img": "category2_haircut",
+    "tit": "美髮",
+    "link": "index.html",
+    "item": "",
+    "disable": ""
+  },
+  {
+    "service": "美麗生活",
+    "img": "category2_nail",
+    "tit": "美甲",
+    "link": "index.html",
+    "item": 7,
+    "disable": ""
+  },
+  {
+    "service": "美麗生活",
+    "img": "category2_cosmetology",
+    "tit": "醫美",
+    "link": "index.html",
+    "item": "",
+    "disable": ""
+  },
+  {
+    "service": "美麗生活",
+    "img": "category2_feet",
+    "tit": "足療",
+    "link": "index.html",
+    "item": "",
+    "disable": ""
+  },
+  {
+    "service": "美麗生活",
+    "img": "category2_spa",
+    "tit": "SPA",
+    "link": "index.html",
+    "item": "",
+    "disable": ""
+  },
+  {
+    "service": "美麗生活",
+    "img": "category2_femaleshoes",
+    "tit": "女鞋",
+    "link": "index.html",
+    "item": 8,
+    "disable": ""
+  },
+  {
+    "service": "美麗生活",
+    "img": "category2_femalebag",
+    "tit": "女包",
+    "link": "index.html",
+    "item": "",
+    "disable": ""
+  },
+  {
+    "service": "美麗生活",
+    "img": "category2_car",
+    "tit": "汽車百貨",
+    "link": "index.html",
+    "item": "",
+    "disable": ""
+  },
+  {
+    "service": "交通服務",
+    "img": "category3_qrcode",
+    "tit": "乘車碼",
+    "link": "ridecode/ridecode_index.html",
+    "item": "",
+    "disable": ""
+  },
+  {
+    "service": "交通服務",
+    "img": "category3_planning",
+    "tit": "路線規劃",
+    "link": "explore/explore_index.html",
+    "item": "",
+    "disable": ""
+  },
+  {
+    "service": "生活資訊",
+    "img": "category3_payment",
+    "tit": "繳費",
+    "link": "",
+    "item": "",
+    "disable": "disable"
+  }
+]
