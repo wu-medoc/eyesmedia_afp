@@ -207,7 +207,6 @@
             }
 
             function handleclick(e) {
-                console.log(this);
                 if(this.classList.contains("editbox")){
                     //exclude edit button
                     this.classList.remove('add-item','remove-item'); 
@@ -239,11 +238,14 @@
                         };  
                         document.querySelector('.editnote').innerHTML = "";
                     }else{
-                            document.querySelector('.editnote').innerHTML = "請至少選擇4種服務";
-                        };        
-                    };
+                        document.querySelector('.editnote').innerHTML = "請至少選擇4種服務";
+                    };        
+                };
+                // add remove icons
                 document.querySelectorAll('#moreServiceList .link-item').forEach(function(item) {
-                    item.addEventListener('click', handleclick, false);
+                    item.addEventListener('click', handleclick, false);                    
+                    item.children[0].setAttribute("rel",item.children[0].getAttribute("href"));
+                    item.children[0].removeAttribute("href");
                 });
             };
 
@@ -258,12 +260,19 @@
                     item.addEventListener('drop', handleDrop, false);
                     item.addEventListener('dragend', handleDragEnd, false);
                     item.addEventListener('click', handleclick, false);
+                    item.children[0].setAttribute("rel",item.children[0].getAttribute("href"));
+                    item.children[0].removeAttribute("href");
                 });
             });
 
             // close edit
             document.querySelector('.edit-title-cancel').addEventListener('click', function(){
-                document.querySelector('.setting').classList.remove('edit-mode');
+                document.querySelector('.setting').classList.remove('edit-mode');                
+                document.querySelectorAll('.link-item').forEach(function(item) {
+                    item.addEventListener('click', handleclick, false);                    
+                    item.children[0].setAttribute("href",item.children[0].getAttribute("rel"));
+                    item.children[0].removeAttribute("rel");
+                });
             });
 
         });

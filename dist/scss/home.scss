@@ -243,6 +243,9 @@
   }
   &.edit-mode{
     .main-link {
+      a{
+        pointer-events:none;
+      }
       &.sort-block{
         .editbox{
           display: none;        
