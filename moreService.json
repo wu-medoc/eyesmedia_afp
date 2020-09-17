@@ -1,186 +1,200 @@
 [
   {
+    "key": 1,
     "service": "生活資訊",
     "img": "category2_news",
     "tit": "新聞",
     "link": "index.html",
     "item": 1,
-    "disable": ""
+    "disable": 1
   },
   {
+    "key": 2,
     "service": "生活資訊",
     "img": "category2_1dollar",
     "tit": "一元搶購",
     "link": "offers/offers_one.html",
     "item": 2,
-    "disable": ""
+    "disable": 1
   },
   {
+    "key": 3,
     "service": "娛樂放鬆",
     "img": "category2_games",
     "tit": "遊戲",
     "link": "game/game.html",
     "item": 3,
-    "disable": ""
+    "disable": 1
   },
   {
+    "key": 4,
     "service": "生活資訊",
     "img": "category2_thunder",
     "tit": "彩蛋",
     "link": "index.html",
     "item": 4,
-    "disable": ""
+    "disable": 1
   },
   {
+    "key": 5,
     "service": "饗食達人",
     "img": "category2_sushi",
     "tit": "壽司",
     "link": "index.html",
     "item": "",
-    "disable": ""
+    "disable": 1
   },
   {
+    "key": 6,
     "service": "饗食達人",
     "img": "category2_coffee",
     "tit": "咖啡",
     "link": "index.html",
     "item": 6,
-    "disable": ""
+    "disable": 1
   },
   {
+    "key": 7,
     "service": "饗食達人",
     "img": "category2_tea",
     "tit": "茶藝",
     "link": "index.html",
     "item": "",
-    "disable": ""
+    "disable": 1
   },
   {
+    "key": 8,
     "service": "饗食達人",
     "img": "category2_orgaic",
     "tit": "有機",
     "link": "index.html",
     "item": "",
-    "disable": ""
+    "disable": 1
   },
   {
+    "key": 9,
     "service": "饗食達人",
     "img": "category2_a5",
     "tit": "和牛",
     "link": "index.html",
     "item": 5,
-    "disable": ""
+    "disable": 1
   },
   {
+    "key": 10,
     "service": "饗食達人",
     "img": "category2_agriculture",
     "tit": "神農獎",
     "link": "index.html",
     "item": "",
-    "disable": ""
+    "disable": 1
   },
   {
+    "key": 11,
     "service": "美麗生活",
     "img": "category2_fasion",
     "tit": "時尚精品",
     "link": "index.html",
     "item": 9,
-    "disable": ""
+    "disable": 1
   },
   {
+    "key": 12,
     "service": "美麗生活",
     "img": "category2_makeups",
     "tit": "美妝",
     "link": "index.html",
     "item": "",
-    "disable": ""
+    "disable": 1
   },
   {
+    "key": 13,
     "service": "美麗生活",
     "img": "category2_haircut",
     "tit": "美髮",
     "link": "index.html",
     "item": "",
-    "disable": ""
+    "disable": 1
   },
   {
+    "key": 14,
     "service": "美麗生活",
     "img": "category2_nail",
     "tit": "美甲",
     "link": "index.html",
     "item": 7,
-    "disable": ""
+    "disable": 1
   },
   {
+    "key": 15,
     "service": "美麗生活",
     "img": "category2_cosmetology",
     "tit": "醫美",
     "link": "index.html",
     "item": "",
-    "disable": ""
+    "disable": 1
   },
   {
+    "key": 16,
     "service": "美麗生活",
     "img": "category2_feet",
     "tit": "足療",
     "link": "index.html",
     "item": "",
-    "disable": ""
+    "disable": 1
   },
   {
+    "key": 17,
     "service": "美麗生活",
     "img": "category2_spa",
     "tit": "SPA",
     "link": "index.html",
     "item": "",
-    "disable": ""
+    "disable": 1
   },
   {
+    "key": 18,
     "service": "美麗生活",
     "img": "category2_femaleshoes",
     "tit": "女鞋",
     "link": "index.html",
     "item": 8,
-    "disable": ""
+    "disable": 1
   },
   {
+    "key": 19,
     "service": "美麗生活",
     "img": "category2_femalebag",
     "tit": "女包",
     "link": "index.html",
     "item": "",
-    "disable": ""
+    "disable": 1
   },
   {
+    "key": 20,
     "service": "美麗生活",
     "img": "category2_car",
     "tit": "汽車百貨",
     "link": "index.html",
     "item": "",
-    "disable": ""
+    "disable": 1
   },
   {
+    "key": 21,
     "service": "交通服務",
     "img": "category3_qrcode",
     "tit": "乘車碼",
-    "link": "ridecode/ridecode_index.html",
+    "link": "",
     "item": "",
-    "disable": ""
+    "disable": 1
   },
   {
-    "service": "交通服務",
-    "img": "category3_planning",
-    "tit": "路線規劃",
-    "link": "explore/explore_index.html",
-    "item": "",
-    "disable": ""
-  },
-  {
+    "key": 22,
     "service": "生活資訊",
     "img": "category3_payment",
     "tit": "繳費",
     "link": "",
     "item": "",
-    "disable": "disable"
+    "disable": 0
   }
 ]

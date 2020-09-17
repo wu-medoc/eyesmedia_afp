@@ -85,32 +85,17 @@
             <div class="title-item pt-3">
                 我的服務<span class="pl-2 small text-muted">長按可以拖動排序</span>
             </div>
-            <div class="service-title pt-0">
+            <div class="service-title">
                 <div class="main-link edit-link sort-block" id="moreService01">
-                    <!-- <div class="link-item remove-item">
-                        <a href="" class="disable">
-                            <div class="img-box">
-                                <img src="img/index/icons/seemore.png" alt="see more">
-                            </div>
-                        </a>
-                    </div> -->
-                    <div class="link-item text-center bg-white">
+                    <div class="link-item bg-white editbox">
                         <div class="title-item edit-btn fit small-80 border-radius5">編輯</div>
                     </div>
                 </div>
             </div>
+            <div class="w-100 text-right text-danger small-70 pb-3 editnote"></div>
         </div>
         <div class="service-box bt1-solid" id="moreServiceList">
-            <!-- <div class="main-link edit-link">
-                <div class="link-item add-item">
-                    <a href="offers/offers_index.html" data-num="11" data-item="找優惠" class="disable">
-                        <div class="img-box">
-                            <img src="img/index/icons/category3_coupon.png" alt="">
-                        </div>
-                        <p>找優惠</p>
-                    </a>
-                </div>
-                <div class="link-item remove-item">
+            <!-- <div class="link-item remove-item">
                     <a href="" data-num="12" data-item="繳費" class="disable">
                         <div class="img-box">
                             <img src="img/index/icons/category3_payment.png" alt="">
@@ -150,7 +135,7 @@
                 $.each( data, function( i, item ) {
                     if( item.item >= 1){
                         $("#moreService01").prepend('<div class="link-item remove-item" draggable="true"><a href="'+item.link
-                        +'"><div class="img-box"><img src="img/index/icons/'+item.img+'.png"></div><p>'+item.tit+'</p></a></div>');
+                        +'" data-key="'+item.key+'"><div class="img-box"><img src="img/index/icons/'+item.img+'.png"></div><p>'+item.tit+'</p></a></div>');
                     }                    
                 });
                 //group
@@ -162,13 +147,15 @@
                 }, []);
                 $.each(result, function( i, items ) {  
                     $("#moreServiceList").append('<div class="title-item pt-3">'+items.name+'</div><div class="main-link edit-link items'+i+'"></div>'); 
-                    $.each(items.children, function( k, icons) {
-                        if( icons.item >= 1){
-                            $(".items"+i).append('<div class="link-item remove-item"><a href="'+icons.link
-                            +'"><div class="img-box"><img src="img/index/icons/'+icons.img+'.png"></div><p>'+icons.tit+'</p></a></div>');
+                    $.each(items.children, function( k, icons) {    
+                        let dis = '';          
+                        if ( icons.disable == 0 ){ dis = 'disable' };
+                        if ( icons.item >= 1){
+                            $(".items"+i).append('<div class="link-item remove-item '+dis+'"><a href="'+icons.link
+                            +'" data-key="'+icons.key+'"><div class="img-box"><img src="img/index/icons/'+icons.img+'.png"></div><p>'+icons.tit+'</p></a></div>');
                         }else{
-                            $(".items"+i).append('<div class="link-item add-item"><a href="'+icons.link
-                            +'"><div class="img-box"><img src="img/index/icons/'+icons.img+'.png"></div><p>'+icons.tit+'</p></a></div>');
+                            $(".items"+i).append('<div class="link-item add-item '+dis+'"><a href="'+icons.link
+                            +'" data-key="'+icons.key+'"><div class="img-box"><img src="img/index/icons/'+icons.img+'.png"></div><p>'+icons.tit+'</p></a></div>');
                         }  
                     });
                 });            
@@ -178,10 +165,9 @@
 
         document.addEventListener('DOMContentLoaded', (event) => {
 
-            var dragSrcEl = null;
+            let dragSrcEl = null;            
 
-            function handleDragStart(e) {
-                //this.style.opacity = '0.4';                
+            function handleDragStart(e) {         
                 dragSrcEl = this;
                 e.dataTransfer.effectAllowed = 'move';
                 e.dataTransfer.setData('text/html', this.innerHTML);
@@ -205,7 +191,7 @@
 
             function handleDrop(e) {
                 if (e.stopPropagation) {
-                    e.stopPropagation(); // stops the browser from redirecting.
+                    e.stopPropagation();
                 }                
                 if (dragSrcEl != this) {
                     dragSrcEl.innerHTML = this.innerHTML;
@@ -214,36 +200,75 @@
                 return false;
             }
 
-            function handleDragEnd(e) {
-                this.style.opacity = '1';
-                
-                items.forEach(function (item) {
+            function handleDragEnd(e) {                
+                document.querySelectorAll('#moreService01 .link-item').forEach(function (item) {
                     item.classList.remove('over');
                 });
             }
 
-            window.addEventListener("load", function(event) {
-                let items = document.querySelectorAll('#moreService01 .link-item');
-                items.forEach(function(item) {
+            function handleclick(e) {
+                console.log(this);
+                if(this.classList.contains("editbox")){
+                    //exclude edit button
+                    this.classList.remove('add-item','remove-item'); 
+                    //exclude disable icon
+                    document.querySelector(".disable").classList.remove('add-item','remove-item');
+                }else if(this.classList.contains("add-item")){
+                    if(document.querySelectorAll('#moreService01 .link-item').length < 10){
+                        this.classList.remove('add-item');
+                        this.classList.add('remove-item'); 
+                        let str = '<div class="link-item remove-item" draggable="true">' + this.innerHTML + '</div>';
+                        document.querySelector('.editbox').insertAdjacentHTML( 'beforebegin', str );
+                        document.querySelector('.editnote').innerHTML = "";
+                    }else{
+                        document.querySelector('.editnote').innerHTML = "至多可選擇9種服務";
+                    };
+                }else{
+                    if(document.querySelectorAll('#moreService01 .link-item').length >5){
+                        this.classList.remove('remove-item');
+                        this.classList.add('add-item');
+                        let iconkey = this.children[0].dataset.key;
+                        if(this.getAttribute("draggable") == 'true'){
+                            this.remove();
+                            document.querySelectorAll('#moreServiceList a').forEach(function(key) {
+                                if(key.dataset.key == iconkey){
+                                    key.parentElement.classList.remove('remove-item');
+                                    key.parentElement.classList.add('add-item');
+                                };
+                            });
+                        };  
+                        document.querySelector('.editnote').innerHTML = "";
+                    }else{
+                            document.querySelector('.editnote').innerHTML = "請至少選擇4種服務";
+                        };        
+                    };
+                document.querySelectorAll('#moreServiceList .link-item').forEach(function(item) {
+                    item.addEventListener('click', handleclick, false);
+                });
+            };
+
+            // move edit
+            document.querySelector('.edit-btn').addEventListener("click", function(event) {
+                document.querySelector('.setting').classList.add('edit-mode');
+                document.querySelectorAll('#moreService01 .link-item').forEach(function(item) {
                     item.addEventListener('dragstart', handleDragStart, false);
                     item.addEventListener('dragenter', handleDragEnter, false);
                     item.addEventListener('dragover', handleDragOver, false);
                     item.addEventListener('dragleave', handleDragLeave, false);
                     item.addEventListener('drop', handleDrop, false);
                     item.addEventListener('dragend', handleDragEnd, false);
+                    item.addEventListener('click', handleclick, false);
                 });
+            });
+
+            // close edit
+            document.querySelector('.edit-title-cancel').addEventListener('click', function(){
+                document.querySelector('.setting').classList.remove('edit-mode');
             });
 
         });
 
 
-        // 側欄 - 關閉編輯
-        $('.setting .close-btn, .setting .edit-title-cancel').on('click', function(){
-            $(this).closest('.setting').removeClass('edit-mode');
-        });
-        $('.title-item.edit-btn').on('click', function(){
-            $(this).closest('.setting').addClass('edit-mode');
-        });
     </script> 
     
 </body>

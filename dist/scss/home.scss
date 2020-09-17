@@ -67,7 +67,6 @@
     .service-box {
       padding: 0 15px;
       .service-title {
-        padding: 15px 0;
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
@@ -196,7 +195,7 @@
   }
 
 /* more-link-aside  */
-.setting{   
+.setting{ 
   [draggable] {
     user-select: none;
   } 
@@ -206,7 +205,7 @@
     display: flex;
     flex-wrap: wrap;
     width: 100%;
-    a, a.link-item {
+    .link-item, a, a.link-item {
       text-align: center;
       color: $blue-dark;
       font-size: .8em;
@@ -224,27 +223,37 @@
           opacity: .4;
         }
       }
-    }    
+    }
+    .link-item.disable a{
+      color: gray;
+    }
     &.sort-block{
       display: flex;
-      .edit-btn{
-        display: inline-block;        
+      .editbox{
+        display: inline-block;
+        align-self: flex-end;
       }
       p{
         display: none;
       }
     }
+  }  
+  .editnote{
+    display: none;
   }
-  &.setting.edit-mode{
+  &.edit-mode{
     .main-link {
       &.sort-block{
-        .edit-btn{
+        .editbox{
           display: none;        
         }
         p{
           display: block;
         }
       }
+    }
+    .editnote{
+      display: block;
     }
   }
 }
