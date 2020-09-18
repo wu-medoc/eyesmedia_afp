@@ -86,7 +86,7 @@
                 我的服務<span class="pl-2 small text-muted">長按可以拖動排序</span>
             </div>
             <div class="service-title">
-                <div class="main-link edit-link sort-block" id="moreService01">
+                <div class="main-link edit-link sort-block" id="myService">
                     <div class="link-item bg-white editbox">
                         <div class="title-item edit-btn fit small-80 border-radius5">編輯</div>
                     </div>
@@ -134,7 +134,7 @@
                 });                
                 $.each( data, function( i, item ) {
                     if( item.item >= 1){
-                        $("#moreService01").prepend('<div class="link-item remove-item" draggable="true"><a href="'+item.link
+                        $('#myService').prepend('<div class="link-item remove-item" draggable="true"><a href="'+item.link
                         +'" data-key="'+item.key+'"><div class="img-box"><img src="img/index/icons/'+item.img+'.png"></div><p>'+item.tit+'</p></a></div>');
                     }                    
                 });
@@ -146,7 +146,7 @@
                     return r;
                 }, []);
                 $.each(result, function( i, items ) {  
-                    $("#moreServiceList").append('<div class="title-item pt-3">'+items.name+'</div><div class="main-link edit-link items'+i+'"></div>'); 
+                    $('#moreServiceList').append('<div class="title-item pt-3">'+items.name+'</div><div class="main-link edit-link items'+i+'"></div>'); 
                     $.each(items.children, function( k, icons) {    
                         let dis = '';          
                         if ( icons.disable == 0 ){ dis = 'disable' };
@@ -165,9 +165,9 @@
 
         document.addEventListener('DOMContentLoaded', (event) => {
 
-            let dragSrcEl = null;            
+            let dragSrcEl = null;
 
-            function handleDragStart(e) {         
+            function handleDragStart(e) {   
                 dragSrcEl = this;
                 e.dataTransfer.effectAllowed = 'move';
                 e.dataTransfer.setData('text/html', this.innerHTML);
@@ -201,49 +201,70 @@
             }
 
             function handleDragEnd(e) {                
-                document.querySelectorAll('#moreService01 .link-item').forEach(function (item) {
+                document.querySelectorAll('#myService .link-item').forEach(function (item) {
                     item.classList.remove('over');
                 });
             }
 
             function handleclick(e) {
+                
+                //this is myService.link-item or moreSerivce.link-item
                 if(this.classList.contains("editbox")){
                     //exclude edit button
                     this.classList.remove('add-item','remove-item'); 
                     //exclude disable icon
                     document.querySelector(".disable").classList.remove('add-item','remove-item');
-                }else if(this.classList.contains("add-item")){
-                    if(document.querySelectorAll('#moreService01 .link-item').length < 10){
+                }else{
+                    let iconkey = this.children[0].dataset.key;
+                    let add = this.classList.contains("add-item");
+                    let re = this.classList.contains("remove-item");
+                    
+                    // remove icon                   
+                    if((re == true) && (document.querySelectorAll('#myService .link-item').length > 5)){
+                        this.classList.remove('remove-item');
+                        this.classList.add('add-item');
+                        document.querySelectorAll('#moreServiceList a').forEach(function(key1) {
+                            if(key1.dataset.key == iconkey){
+                                key1.parentElement.classList.remove('remove-item');
+                                key1.parentElement.classList.add('add-item');
+                            };
+                        });
+                        document.querySelectorAll('#myService a').forEach(function(key) {
+                            if(key.dataset.key == iconkey){
+                                key.parentElement.remove();
+                            };
+                        });
+                    }else{
+                        document.querySelector('.editnote').innerHTML = "請至少選擇4種服務";
+                    };
+                    
+                    // add icon
+                    if((add == true) && (document.querySelectorAll('#myService .link-item').length < 10) && (document.querySelectorAll('#myService .link-item').length >= 5)){        
                         this.classList.remove('add-item');
-                        this.classList.add('remove-item'); 
+                        this.classList.add('remove-item');                                
                         let str = '<div class="link-item remove-item" draggable="true">' + this.innerHTML + '</div>';
                         document.querySelector('.editbox').insertAdjacentHTML( 'beforebegin', str );
                         document.querySelector('.editnote').innerHTML = "";
+                        // 讓新增的服務可以移動
+                        document.querySelectorAll('#myService .link-item').forEach(function(item) {
+                            item.addEventListener('dragstart', handleDragStart, false);
+                            item.addEventListener('dragenter', handleDragEnter, false);
+                            item.addEventListener('dragover', handleDragOver, false);
+                            item.addEventListener('dragleave', handleDragLeave, false);
+                            item.addEventListener('drop', handleDrop, false);
+                            item.addEventListener('dragend', handleDragEnd, false);
+                        });
                     }else{
-                        document.querySelector('.editnote').innerHTML = "至多可選擇9種服務";
+                        if(document.querySelectorAll('#myService .link-item').length >= 10){
+                            document.querySelector('.editnote').innerHTML = "至多可選擇9種服務";
+                        };
                     };
-                }else{
-                    if(document.querySelectorAll('#moreService01 .link-item').length >5){
-                        this.classList.remove('remove-item');
-                        this.classList.add('add-item');
-                        let iconkey = this.children[0].dataset.key;
-                        if(this.getAttribute("draggable") == 'true'){
-                            this.remove();
-                            document.querySelectorAll('#moreServiceList a').forEach(function(key) {
-                                if(key.dataset.key == iconkey){
-                                    key.parentElement.classList.remove('remove-item');
-                                    key.parentElement.classList.add('add-item');
-                                };
-                            });
-                        };  
-                        document.querySelector('.editnote').innerHTML = "";
-                    }else{
-                        document.querySelector('.editnote').innerHTML = "請至少選擇4種服務";
-                    };        
+                                           
                 };
+
                 // add remove icons
                 document.querySelectorAll('#moreServiceList .link-item').forEach(function(item) {
-                    item.addEventListener('click', handleclick, false);                    
+                    item.addEventListener('click', handleclick, false);              
                     item.children[0].setAttribute("rel",item.children[0].getAttribute("href"));
                     item.children[0].removeAttribute("href");
                 });
@@ -252,7 +273,7 @@
             // move edit
             document.querySelector('.edit-btn').addEventListener("click", function(event) {
                 document.querySelector('.setting').classList.add('edit-mode');
-                document.querySelectorAll('#moreService01 .link-item').forEach(function(item) {
+                document.querySelectorAll('#myService .link-item').forEach(function(item) {
                     item.addEventListener('dragstart', handleDragStart, false);
                     item.addEventListener('dragenter', handleDragEnter, false);
                     item.addEventListener('dragover', handleDragOver, false);
@@ -266,15 +287,17 @@
             });
 
             // close edit
-            document.querySelector('.edit-title-cancel').addEventListener('click', function(){
+            document.querySelector('.edit-title-save').addEventListener('click', function(){
                 document.querySelector('.setting').classList.remove('edit-mode');                
                 document.querySelectorAll('.link-item').forEach(function(item) {
-                    item.addEventListener('click', handleclick, false);                    
                     item.children[0].setAttribute("href",item.children[0].getAttribute("rel"));
                     item.children[0].removeAttribute("rel");
                 });
             });
 
+            document.querySelector('.edit-title-cancel').addEventListener('click', function(){
+                location.reload();
+            });
         });
 
 
