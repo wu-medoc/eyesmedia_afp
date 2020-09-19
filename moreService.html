@@ -47,9 +47,9 @@
             </button>
             </div>
             <div class="edit-title-box">
-                <div class="edit-item edit-title-cancel">取消</div>
+                <div class="edit-item edit-title-cancel" onclick="editEnd();">取消</div>
                 <div class="edit-item edit-title">編輯我的服務</div>
-                <div class="edit-item edit-title-save">確定</div>
+                <div class="edit-item edit-title-save" onclick="editSave();">確定</div>
             </div>
         </div>        
         <div class="service-sysbox bb3-solid">
@@ -83,11 +83,11 @@
         </div>
         <div class="service-box bt1-solid">
             <div class="title-item pt-3">
-                我的服務<span class="pl-2 small text-muted">長按可以拖動排序</span>
+                我的服務<span class="pl-2 small text-muted editnote1">長按可以拖動排序</span>
             </div>
             <div class="service-title">
                 <div class="main-link edit-link sort-block" id="myService">
-                    <div class="link-item bg-white editbox">
+                    <div class="link-edit bg-white editbox">
                         <div class="title-item edit-btn fit small-80 border-radius5">編輯</div>
                     </div>
                 </div>
@@ -121,10 +121,15 @@
     <script src="js/animateCss.js"></script>    
     <script src="js/qrcode.min.js"></script>    
     <script src="js/jquery.blockUI.js"></script>
+
+    <script src="js/vendor/sortable/Sortable.js"></script>    
+	<script type="text/javascript" src="js/vendor/sortable/st/prettify/prettify.js"></script>
+    <script type="text/javascript" src="js/vendor/sortable/st/prettify/run_prettify.js"></script>
     
     <!-- custom js -->    
     <script>   
-        
+
+        // import data
         (function() {
         $.getJSON( "moreService.json")
             .done(function( data ) {
@@ -163,48 +168,8 @@
 
         })();    
 
+        // addEventListener
         document.addEventListener('DOMContentLoaded', (event) => {
-
-            let dragSrcEl = null;
-
-            function handleDragStart(e) {   
-                dragSrcEl = this;
-                e.dataTransfer.effectAllowed = 'move';
-                e.dataTransfer.setData('text/html', this.innerHTML);
-            }
-
-            function handleDragOver(e) {
-                if (e.preventDefault) {
-                    e.preventDefault();
-                }
-                e.dataTransfer.dropEffect = 'move';                
-                return false;
-            }
-
-            function handleDragEnter(e) {
-                this.classList.add('over');
-            }
-
-            function handleDragLeave(e) {
-                this.classList.remove('over');
-            }
-
-            function handleDrop(e) {
-                if (e.stopPropagation) {
-                    e.stopPropagation();
-                }                
-                if (dragSrcEl != this) {
-                    dragSrcEl.innerHTML = this.innerHTML;
-                    this.innerHTML = e.dataTransfer.getData('text/html');
-                }                
-                return false;
-            }
-
-            function handleDragEnd(e) {                
-                document.querySelectorAll('#myService .link-item').forEach(function (item) {
-                    item.classList.remove('over');
-                });
-            }
 
             function handleclick(e) {
                 
@@ -214,13 +179,16 @@
                     this.classList.remove('add-item','remove-item'); 
                     //exclude disable icon
                     document.querySelector(".disable").classList.remove('add-item','remove-item');
+                    document.querySelector(".disable").addEventListener('click', function (e) {
+                        e.stopPropagation();
+                    }, true);
                 }else{
                     let iconkey = this.children[0].dataset.key;
                     let add = this.classList.contains("add-item");
                     let re = this.classList.contains("remove-item");
                     
                     // remove icon                   
-                    if((re == true) && (document.querySelectorAll('#myService .link-item').length > 5)){
+                    if((re == true) && (document.querySelectorAll('#myService .link-item').length > 4)){
                         this.classList.remove('remove-item');
                         this.classList.add('add-item');
                         document.querySelectorAll('#moreServiceList a').forEach(function(key1) {
@@ -239,67 +207,65 @@
                     };
                     
                     // add icon
-                    if((add == true) && (document.querySelectorAll('#myService .link-item').length < 10) && (document.querySelectorAll('#myService .link-item').length >= 5)){        
+                    if((add == true) && (document.querySelectorAll('#myService .link-item').length < 9) && (document.querySelectorAll('#myService .link-item').length >= 4)){        
                         this.classList.remove('add-item');
                         this.classList.add('remove-item');                                
                         let str = '<div class="link-item remove-item" draggable="true">' + this.innerHTML + '</div>';
                         document.querySelector('.editbox').insertAdjacentHTML( 'beforebegin', str );
                         document.querySelector('.editnote').innerHTML = "";
-                        // 讓新增的服務可以移動
+                        // Let the new service be triggered
                         document.querySelectorAll('#myService .link-item').forEach(function(item) {
-                            item.addEventListener('dragstart', handleDragStart, false);
-                            item.addEventListener('dragenter', handleDragEnter, false);
-                            item.addEventListener('dragover', handleDragOver, false);
-                            item.addEventListener('dragleave', handleDragLeave, false);
-                            item.addEventListener('drop', handleDrop, false);
-                            item.addEventListener('dragend', handleDragEnd, false);
+                            item.addEventListener('click', handleclick, false);
                         });
                     }else{
-                        if(document.querySelectorAll('#myService .link-item').length >= 10){
+                        if(document.querySelectorAll('#myService .link-item').length >= 9){
                             document.querySelector('.editnote').innerHTML = "至多可選擇9種服務";
                         };
                     };
                                            
-                };
-
-                // add remove icons
-                document.querySelectorAll('#moreServiceList .link-item').forEach(function(item) {
-                    item.addEventListener('click', handleclick, false);              
-                    item.children[0].setAttribute("rel",item.children[0].getAttribute("href"));
-                    item.children[0].removeAttribute("href");
-                });
+                }; 
             };
 
-            // move edit
+            // edit
             document.querySelector('.edit-btn').addEventListener("click", function(event) {
                 document.querySelector('.setting').classList.add('edit-mode');
-                document.querySelectorAll('#myService .link-item').forEach(function(item) {
-                    item.addEventListener('dragstart', handleDragStart, false);
-                    item.addEventListener('dragenter', handleDragEnter, false);
-                    item.addEventListener('dragover', handleDragOver, false);
-                    item.addEventListener('dragleave', handleDragLeave, false);
-                    item.addEventListener('drop', handleDrop, false);
-                    item.addEventListener('dragend', handleDragEnd, false);
+                document.querySelectorAll('.link-item').forEach(function(item) {
                     item.addEventListener('click', handleclick, false);
                     item.children[0].setAttribute("rel",item.children[0].getAttribute("href"));
                     item.children[0].removeAttribute("href");
-                });
-            });
+                });             
+            });            
 
-            // close edit
-            document.querySelector('.edit-title-save').addEventListener('click', function(){
-                document.querySelector('.setting').classList.remove('edit-mode');                
-                document.querySelectorAll('.link-item').forEach(function(item) {
-                    item.children[0].setAttribute("href",item.children[0].getAttribute("rel"));
-                    item.children[0].removeAttribute("rel");
-                });
-            });
-
-            document.querySelector('.edit-title-cancel').addEventListener('click', function(){
-                location.reload();
-            });
         });
 
+        // move
+        var sortable;
+        document.querySelector('.edit-btn').onclick = function() {
+            sortable = new Sortable(document.getElementById('myService'), {
+                animation: 150,
+                ghostClass: 'blue-background-class'
+            });  
+        }; 
+
+        // save 
+        function editSave() {  
+            var state = sortable.option("disabled"); // get
+            sortable.option("disabled", !state); // set
+            document.querySelector('.setting').classList.remove('edit-mode');                
+            document.querySelectorAll('.link-item').forEach(function(item) {
+                item.children[0].setAttribute("href",item.children[0].getAttribute("rel"));
+                item.children[0].removeAttribute("rel");
+                item.setAttribute('draggable',false);
+                item.addEventListener('click', function (e) {    
+                    e.stopPropagation();
+                }, true);
+            });                
+        };
+
+        // close 
+        function editEnd() {
+            location.reload();
+        };
 
     </script> 
     

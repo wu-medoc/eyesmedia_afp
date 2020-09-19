@@ -206,6 +206,16 @@
     display: flex;
     flex-wrap: wrap;
     width: 100%;
+    .link-edit{
+      cursor: pointer;
+      text-align: center;
+      width: 22%;
+      padding-bottom: 0.9em;
+      @media (min-width: 481px) {
+        width: 18%;
+        padding-bottom: 1.5em;
+      }
+    }
     .link-item, a, a.link-item {
       text-align: center;
       color: $blue-dark;
@@ -240,7 +250,7 @@
       }
     }
   }  
-  .editnote{
+  .editnote, .editnote1{
     display: none;
   }
   &.edit-mode{
@@ -259,6 +269,9 @@
     }
     .editnote{
       display: block;
+    }
+    .editnote1{
+      display: initial;
     }
   }
 }

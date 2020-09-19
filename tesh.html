@@ -1,77 +1,309 @@
 <!doctype html>
-<html>
-    <head>
-        <title>弹窗</title>
-        <meta charset="utf-8">
-        <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
-        <style>
-            body{margin:0;padding:0;}
-            .barrage{position:fixed;display:block;top:0;}
-            .barrage_name{width:70px;height:70px;background:-webkit-gradient(linear,0 0,100% 100%,from(#f00), to(#0f0));border-radius:50%;}
-            .barrage_name_hover{width:70px;height:70px;background:-webkit-gradient(linear,0 0,100% 100%,from(#ff0), to(#00f));border-radius:50%;}
-            .col1{color:#fff;display: block;padding: 17px;text-align: center;}
-        </style>
-    </head>
-    <body>
-        <div class="barrage" id="barrage">
-            <div class="barrage_name" id="barrage_name">
-                <span class="col1">打开弹幕</span>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=1, user-scalable=no">
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="js/vendor/bs4/css/bootstrap.min.css">
+    <link rel="stylesheet" href="js/vendor/jquery-editable-select-master/dist/jquery-editable-select.min.css">
+    <!-- owl.carousel core CSS -->
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+    <!-- vendor css -->
+    <link rel="stylesheet" href="js/vendor/swiper/css/swiper.min.css">
+    <!-- fontawesome css -->
+    <link rel="stylesheet" href="js/vendor/fontawesome/css/fontawesome.css">
+    <link rel="stylesheet" href="js/vendor/fontawesome/css/brands.css">
+    <link rel="stylesheet" href="js/vendor/fontawesome/css/solid.css">
+    <!-- custom css -->
+    <link rel="stylesheet" href="dist/style/css.min.css">
+    <link rel="stylesheet" href="dist/style/global.min.css">
+    <!-- <link rel="stylesheet" href="dist/style/bs4modal.min.css">
+    <link rel="stylesheet" href="dist/style/swiperSet.min.css">
+    <link rel="stylesheet" href="dist/style/navlink.min.css">
+    <link rel="stylesheet" href="dist/style/footer.min.css">
+    <link rel="stylesheet" href="dist/style/serviceQA.min.css"> -->
+    <link rel="stylesheet" href="dist/style/home.min.css">
+    <link rel="stylesheet" href="dist/style/index.min.css">
+    <link rel="stylesheet" href="dist/style/blockUI.min.css">
+    <link rel="stylesheet" href="dist/style/travel-index.min.css">
+    <link rel="stylesheet" href="dist/style/animate.min.css">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <title>Mobii!｜城市生活服務平台</title>
+</head>
+
+<body>
+    <div class="setting">
+        <div class="aside-header">
+            <div>
+            <button class="btn px-0 close-btn" onclick="backLayer();" data-toggle="tooltip" data-placement="bottom" title="回上一頁">
+                <i class="material-icons">&#xe314;</i>
+            </button>
             </div>
+            <div class="edit-title-box">
+                <div class="edit-item edit-title-cancel">取消</div>
+                <div class="edit-item edit-title">編輯我的服務</div>
+                <div class="edit-item edit-title-save">確定</div>
+            </div>
+        </div>        
+        <div class="service-sysbox bb3-solid">
+            <div class="title-item pt-3">
+                系統服務
+            </div>
+            <div class="title-group">
+                <div class="title-box">
+                    <div class="sys-item">
+                        <img src="img/index/icons/category1_scan.png" alt="">
+                        <p>掃碼</p>
+                    </div>
+                    <div class="sys-item">
+                        <img src="img/index/icons/category1_fooddrink.png" alt="">
+                        <p>點餐</p>
+                    </div>
+                    <div class="sys-item">
+                        <img src="img/index/icons/category1_shopping.png" alt="">
+                        <p>線上商城</p>
+                    </div>
+                    <div class="sys-item">
+                        <img src="img/index/icons/category1_coupon.png" alt="">
+                        <p>找優惠</p>
+                    </div>
+                    <div class="sys-item">
+                        <img src="img/index/icons/category1_travel.png" alt="">
+                        <p>去旅行</p>
+                    </div>
+                </div>
+            </div> 
         </div>
-        <div>
-        <p>我是来打酱油的</p>
-        <p>我是来打酱油的</p>
-        <p>我是来打酱油的</p>
-        <p>我是来打酱油的</p>
-        <p>我是来打酱油的</p>
-        <p>我是来打酱油的</p>
-        <p>我是来打酱油的</p>
-        <p>我是来打酱油的</p>
+        <div class="service-box bt1-solid">
+            <div class="title-item pt-3">
+                我的服務<span class="pl-2 small text-muted">長按可以拖動排序</span>
+            </div>
+            <div class="service-title">
+                <div class="main-link edit-link sort-block" id="myService">
+                    <div class="link-item bg-white editbox">
+                        <div class="title-item edit-btn fit small-80 border-radius5">編輯</div>
+                    </div>
+                </div>
+            </div>
+            <div class="w-100 text-right text-danger small-70 pb-3 editnote"></div>
         </div>
-    </body>
-    <script type="text/javascript">
-    $(function(){
-        var cont=$("#barrage");
-        var contW=$("#barrage").width();
-        var contH=$("#barrage").height();
-        var startX,startY,sX,sY,moveX,moveY;
-        var winW=$(window).width();
-        var winH=$(window).height();
-        var barrage_name=$("#barrage_name");
-        var barrage_frame=$("#barrage_frame");
-        var body=$("body");
+        <div class="service-box bt1-solid" id="moreServiceList">
+            <!-- <div class="link-item remove-item">
+                    <a href="" data-num="12" data-item="繳費" class="disable">
+                        <div class="img-box">
+                            <img src="img/index/icons/category3_payment.png" alt="">
+                        </div>
+                        <p>繳費</p>
+                    </a>
+                </div>
+            </div> -->
+        </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="js/vendor/bs4/js/jquery-3.2.1.min.js"></script>
+    <!-- Latest compiled and minified JavaScript -->    
+    <script src="js/vendor/bs4/js/popper.min.js"></script>
+    <script src="js/vendor/bs4/js/bootstrap.min.js"></script>
+    
+    
+    <!-- vendor js -->
+    <script src="js/vendor/swiper/js/swiper.min.js"></script>
+    <script src="js/vendor/bs4/js/imgLiquid.js"></script>
+    <script src="js/vendor/sortable/Sortable.min.js"></script>
+    <script src="js/animateCss.js"></script>    
+    <script src="js/qrcode.min.js"></script>    
+    <script src="js/jquery.blockUI.js"></script>
+    
+    <!-- custom js -->    
+    <script>   
+        
+        (function() {
+        $.getJSON( "moreService.json")
+            .done(function( data ) {
+                //myservice
+                data.sort(function (a, b) {
+                    return b.item-a.item;
+                });                
+                $.each( data, function( i, item ) {
+                    if( item.item >= 1){
+                        $('#myService').prepend('<div class="link-item remove-item" draggable="true"><a href="'+item.link
+                        +'" data-key="'+item.key+'"><div class="img-box"><img src="img/index/icons/'+item.img+'.png"></div><p>'+item.tit+'</p></a></div>');
+                    }                    
+                });
+                //group
+                result = data.reduce((r, { service: name, ...object }) => {
+                    var temp = r.find(o => o.name === name);
+                    if (!temp) r.push(temp = { name, children: [] });
+                    temp.children.push(object);
+                    return r;
+                }, []);
+                $.each(result, function( i, items ) {  
+                    $('#moreServiceList').append('<div class="title-item pt-3">'+items.name+'</div><div class="main-link edit-link items'+i+'"></div>'); 
+                    $.each(items.children, function( k, icons) {    
+                        let dis = '';          
+                        if ( icons.disable == 0 ){ dis = 'disable' };
+                        if ( icons.item >= 1){
+                            $(".items"+i).append('<div class="link-item remove-item '+dis+'"><a href="'+icons.link
+                            +'" data-key="'+icons.key+'"><div class="img-box"><img src="img/index/icons/'+icons.img+'.png"></div><p>'+icons.tit+'</p></a></div>');
+                        }else{
+                            $(".items"+i).append('<div class="link-item add-item '+dis+'"><a href="'+icons.link
+                            +'" data-key="'+icons.key+'"><div class="img-box"><img src="img/index/icons/'+icons.img+'.png"></div><p>'+icons.tit+'</p></a></div>');
+                        }  
+                    });
+                });            
+            });            
+
+        })();    
+
+        document.addEventListener('DOMContentLoaded', (event) => {
+
+            let dragSrcEl = null;
+
+            function handleDragStart(e) {   
+                dragSrcEl = this;
+                e.dataTransfer.effectAllowed = 'move';
+                e.dataTransfer.setData('text/html', this.innerHTML);
+            }
+
+            function handleDragOver(e) {
+                if (e.preventDefault) {
+                    e.preventDefault();
+                }
+                e.dataTransfer.dropEffect = 'move';                
+                return false;
+            }
+
+            function handleDragEnter(e) {
+                this.classList.add('over');
+            }
+
+            function handleDragLeave(e) {
+                this.classList.remove('over');
+            }
+
+            function handleDrop(e) {
+                if (e.stopPropagation) {
+                    e.stopPropagation();
+                }                
+                if (dragSrcEl != this) {
+                    dragSrcEl.innerHTML = this.innerHTML;
+                    this.innerHTML = e.dataTransfer.getData('text/html');
+                }                
+                return false;
+            }
+
+            function handleDragEnd(e) {                
+                document.querySelectorAll('#myService .link-item').forEach(function (item) {
+                    item.classList.remove('over');
+                });
+            }
+
+            function handleclick(e) {
+                
+                //this is myService.link-item or moreSerivce.link-item
+                if(this.classList.contains("editbox")){
+                    //exclude edit button
+                    this.classList.remove('add-item','remove-item'); 
+                    //exclude disable icon
+                    document.querySelector(".disable").classList.remove('add-item','remove-item');
+                }else{
+                    let iconkey = this.children[0].dataset.key;
+                    let add = this.classList.contains("add-item");
+                    let re = this.classList.contains("remove-item");
+                    
+                    // remove icon                   
+                    if((re == true) && (document.querySelectorAll('#myService .link-item').length > 5)){
+                        this.classList.remove('remove-item');
+                        this.classList.add('add-item');
+                        document.querySelectorAll('#moreServiceList a').forEach(function(key1) {
+                            if(key1.dataset.key == iconkey){
+                                key1.parentElement.classList.remove('remove-item');
+                                key1.parentElement.classList.add('add-item');
+                            };
+                        });
+                        document.querySelectorAll('#myService a').forEach(function(key) {
+                            if(key.dataset.key == iconkey){
+                                key.parentElement.remove();
+                            };
+                        });
+                    }else{
+                        document.querySelector('.editnote').innerHTML = "請至少選擇4種服務";
+                    };
+                    
+                    // add icon
+                    if((add == true) && (document.querySelectorAll('#myService .link-item').length < 10) && (document.querySelectorAll('#myService .link-item').length >= 5)){        
+                        this.classList.remove('add-item');
+                        this.classList.add('remove-item');                                
+                        let str = '<div class="link-item remove-item" draggable="true">' + this.innerHTML + '</div>';
+                        document.querySelector('.editbox').insertAdjacentHTML( 'beforebegin', str );
+                        document.querySelector('.editnote').innerHTML = "";
+                        // 讓新增的服務可以移動
+                        document.querySelectorAll('#myService .link-item').forEach(function(item) {
+                            item.addEventListener('dragstart', handleDragStart, false);
+                            item.addEventListener('dragenter', handleDragEnter, false);
+                            item.addEventListener('dragover', handleDragOver, false);
+                            item.addEventListener('dragleave', handleDragLeave, false);
+                            item.addEventListener('drop', handleDrop, false);
+                            item.addEventListener('dragend', handleDragEnd, false);
+                        });
+                    }else{
+                        if(document.querySelectorAll('#myService .link-item').length >= 10){
+                            document.querySelector('.editnote').innerHTML = "至多可選擇9種服務";
+                        };
+                    };
+                                           
+                };
+
+                // add remove icons
+                document.querySelectorAll('#moreServiceList .link-item').forEach(function(item) {
+                    item.addEventListener('click', handleclick, false);              
+                    item.children[0].setAttribute("rel",item.children[0].getAttribute("href"));
+                    item.children[0].removeAttribute("href");
+                });
+            };
+
+            // move edit
+            document.querySelector('.edit-btn').addEventListener("click", function(event) {
+                document.querySelector('.setting').classList.add('edit-mode');
+                document.querySelectorAll('#myService .link-item').forEach(function(item) {
+                    item.addEventListener('dragstart', handleDragStart, false);
+                    item.addEventListener('dragenter', handleDragEnter, false);
+                    item.addEventListener('dragover', handleDragOver, false);
+                    item.addEventListener('dragleave', handleDragLeave, false);
+                    item.addEventListener('drop', handleDrop, false);
+                    item.addEventListener('dragend', handleDragEnd, false);
+                    item.addEventListener('click', handleclick, false);
+                    item.children[0].setAttribute("rel",item.children[0].getAttribute("href"));
+                    item.children[0].removeAttribute("href");
+                });
+            });
+
+            // close edit
+            document.querySelector('.edit-title-save').addEventListener('click', function(){
+                document.querySelector('.setting').classList.remove('edit-mode');                
+                document.querySelectorAll('.link-item').forEach(function(item) {
+                    item.children[0].setAttribute("href",item.children[0].getAttribute("rel"));
+                    item.children[0].removeAttribute("rel");
+                });
+            });
+
+            document.querySelector('.edit-title-cancel').addEventListener('click', function(){
+                location.reload();
+            });
+        });
 
 
-        cont.on({//绑定事件
-            touchstart:function(e){
-                startX = e.originalEvent.targetTouches[0].pageX;    //获取点击点的X坐标
-                startY = e.originalEvent.targetTouches[0].pageY;    //获取点击点的Y坐标
-                //console.log("startX="+startX+"************startY="+startY);
-                sX=$(this).offset().left;//相对于当前窗口X轴的偏移量
-                sY=$(this).offset().top;//相对于当前窗口Y轴的偏移量
-                //console.log("sX="+sX+"***************sY="+sY);
-                leftX=startX-sX;//鼠标所能移动的最左端是当前鼠标距div左边距的位置
-                rightX=winW-contW+leftX;//鼠标所能移动的最右端是当前窗口距离减去鼠标距div最右端位置
-                topY=startY-sY;//鼠标所能移动最上端是当前鼠标距div上边距的位置
-                bottomY=winH-contH+topY;//鼠标所能移动最下端是当前窗口距离减去鼠标距div最下端位置
-                },
-            touchmove:function(e){
-                e.preventDefault();
-                moveX=e.originalEvent.targetTouches[0].pageX;//移动过程中X轴的坐标
-                moveY=e.originalEvent.targetTouches[0].pageY;//移动过程中Y轴的坐标
-                //console.log("moveX="+moveX+"************moveY="+moveY);
-                if(moveX<leftX){moveX=leftX;}
-                if(moveX>rightX){moveX=rightX;}
-                if(moveY<topY){moveY=topY;}
-                if(moveY>bottomY){moveY=bottomY;}
-                $(this).css({
-                    "left":moveX+sX-startX,
-                    "top":moveY+sY-startY,
-                    })
-                },
+    </script> 
+    
+</body>
 
-        })
-
-        })
-    </script>
 </html>
