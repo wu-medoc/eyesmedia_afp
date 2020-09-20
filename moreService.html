@@ -168,8 +168,36 @@
 
         })();    
 
-        // addEventListener        
-        var sortable, stop = false;
+        // move
+        var sortable;
+        document.querySelector('.edit-btn').onclick = function() {
+            sortable = new Sortable(document.getElementById('myService'), {
+                animation: 150,
+                ghostClass: 'blue-background-class'
+            });  
+        }; 
+
+        // save 
+        function editSave() {  
+            var state = sortable.option("disabled"); // get
+            sortable.option("disabled", !state); // set
+            document.querySelector('.setting').classList.remove('edit-mode');                
+            document.querySelectorAll('.link-item').forEach(function(item) {
+                item.children[0].setAttribute("href",item.children[0].getAttribute("rel"));
+                item.children[0].removeAttribute("rel");
+                item.setAttribute('draggable',false);
+                item.addEventListener('click', function (e) {    
+                    e.stopPropagation();
+                }, true);
+            });                
+        };
+
+        // close 
+        function editEnd() {
+            location.reload();
+        };
+
+        // addEventListener
         document.addEventListener('DOMContentLoaded', (event) => {
 
             function handleclick(e) {
@@ -230,50 +258,14 @@
             // edit
             document.querySelector('.edit-btn').addEventListener("click", function(event) {
                 document.querySelector('.setting').classList.add('edit-mode');
-                // Let the my service be triggered
                 document.querySelectorAll('.link-item').forEach(function(item) {
                     item.addEventListener('click', handleclick, false);
                     item.children[0].setAttribute("rel",item.children[0].getAttribute("href"));
                     item.children[0].removeAttribute("href");
-                    if ( stop ) {
-                        event.stopImmediatePropagation();
-                        event.preventDefault();
-                        stop = false;
-                    };
                 });             
             });            
 
         });
-
-        // move
-        document.querySelector('.edit-btn').onclick = function() {
-            sortable = new Sortable(document.getElementById('myService'), {
-                animation: 150,                
-                stop: function() {
-                    stop = true;
-                }
-            });  
-        }; 
-
-        // save 
-        function editSave() {  
-            var state = sortable.option("disabled"); // get
-            sortable.option("disabled", !state); // set
-            document.querySelector('.setting').classList.remove('edit-mode');                
-            document.querySelectorAll('.link-item').forEach(function(item) {
-                item.children[0].setAttribute("href",item.children[0].getAttribute("rel"));
-                item.children[0].removeAttribute("rel");
-                item.setAttribute('draggable',false);
-                item.addEventListener('click', function (e) {    
-                    e.stopPropagation();
-                }, true);
-            });                
-        };
-
-        // close 
-        function editEnd() {
-            location.reload();
-        };
 
     </script> 
     
