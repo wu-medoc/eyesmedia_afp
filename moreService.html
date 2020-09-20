@@ -168,7 +168,8 @@
 
         })();    
 
-        // addEventListener
+        // addEventListener        
+        var sortable, stop = false;
         document.addEventListener('DOMContentLoaded', (event) => {
 
             function handleclick(e) {
@@ -229,21 +230,28 @@
             // edit
             document.querySelector('.edit-btn').addEventListener("click", function(event) {
                 document.querySelector('.setting').classList.add('edit-mode');
+                // Let the my service be triggered
                 document.querySelectorAll('.link-item').forEach(function(item) {
                     item.addEventListener('click', handleclick, false);
                     item.children[0].setAttribute("rel",item.children[0].getAttribute("href"));
                     item.children[0].removeAttribute("href");
+                    if ( stop ) {
+                        event.stopImmediatePropagation();
+                        event.preventDefault();
+                        stop = false;
+                    };
                 });             
             });            
 
         });
 
         // move
-        var sortable;
         document.querySelector('.edit-btn').onclick = function() {
             sortable = new Sortable(document.getElementById('myService'), {
-                animation: 150,
-                ghostClass: 'blue-background-class'
+                animation: 150,                
+                stop: function() {
+                    stop = true;
+                }
             });  
         }; 
 
