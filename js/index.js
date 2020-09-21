@@ -395,8 +395,10 @@ window.onload = function(){
 
     //退貨問題記錄輸入框位置設定
     if( document.querySelector('.service-store-footer') != null ){
+        let footmb = 0;
         let sfot = document.querySelector('.service-store-footer');
-        let footmb = document.getElementById('footer-mb').clientHeight;
+        if( document.querySelector('.service-store-footer') != null )
+            footmb = document.getElementById('footer-mb').clientHeight;
         let footpc = document.getElementById('footer-pc').clientHeight;
         if(footmb!=0){
             sfot.style='bottom:'+footmb+'px';

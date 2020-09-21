@@ -1936,204 +1936,61 @@
         <div class="multilayer">
             <div class="setting">
                 <div class="aside-header">
-                    <!-- <div class="close-btn">
-                        <i class="material-icons">&#xe314;</i>首頁
-                    </div> -->
                     <div>
                     <button class="btn px-0 close-btn" onclick="backLayer();" data-toggle="tooltip" data-placement="bottom" title="回上一頁">
-                        <i class="material-icons">&#xe314;</i>首頁
+                        <i class="material-icons">&#xe314;</i>
                     </button>
                     </div>
                     <div class="edit-title-box">
-                        <div class="edit-item edit-title-cancel">取消</div>
+                        <div class="edit-item edit-title-cancel" onclick="editEnd();">取消</div>
                         <div class="edit-item edit-title">編輯我的服務</div>
-                        <div class="edit-item edit-title-save">確定</div>
+                        <div class="edit-item edit-title-save" onclick="editSave();">確定</div>
                     </div>
-                </div>
-                <div class="service-box my-service">
-                    <div class="title-item pt-3">我的服務<span class="pl-2 small text-muted">長按可以拖動排序</span>
+                </div>        
+                <div class="service-sysbox bb3-solid">
+                    <div class="title-item pt-3">
+                        系統服務
                     </div>
-                    <div class="service-title pt-0">
-                        <!-- 未編輯模式 -->
-                        <div class="title-group no-edit">
-                            <div class="title-box">
-                                <div class="title-item">
-                                    <img src="img/index/icons/category3_shuttleservice.png" alt="">
-                                </div>
-                                <div class="title-item">
-                                    <img src="img/index/icons/category3_info.png" alt="">
-                                </div>
-                                <div class="title-item">
-                                    <img src="img/index/icons/category3_taxi.png" alt="">
-                                </div>
-                                <div class="title-item">
-                                    <img src="img/index/icons/category3_onlineshopping.png" alt="">
-                                </div>
-                                <div class="title-item">
-                                    <img src="img/index/icons/category3_sightseeing.png" alt="">
-                                </div>
-                                <div class="title-item">
-                                    <img src="img/index/icons/category3_coupon.svg" alt="">
-                                </div>
-                                <div class="title-item">
-                                    <img src="img/index/icons/category3_game.png" alt="">
-                                </div>
-                                <div class="title-item">
-                                    <img src="img/index/icons/category3_payment.png" alt="">
-                                </div>
-                                <div class="title-item">
-                                    <i class="material-icons">&#xE5D3;</i>
-                                </div>
+                    <div class="title-group">
+                        <div class="title-box">
+                            <div class="sys-item">
+                                <img src="img/index/icons/category1_scan.png" alt="">
+                                <p>掃碼</p>
                             </div>
-                            <div class="title-item edit-btn fit small-80">編輯</div>
-                        </div>
-                        <!-- 可編輯模式 -->
-                        <div class="main-link edit-link">
-                            <div class="link-item remove-item">
-                                <a href="">
-                                    <div class="img-box">
-                                        <img src="img/index/icons/category3_shuttleservice.png" alt="">
-                                    </div>
-                                    <p>機場接送</p>
-                                </a>
+                            <div class="sys-item">
+                                <img src="img/index/icons/category1_fooddrink.png" alt="">
+                                <p>點餐</p>
                             </div>
-                            <div class="link-item remove-item">
-                                <a href="traffic/traffic_index.html">
-                                    <div class="img-box">
-                                        <img src="img/index/icons/category3_info.png" alt="">
-                                    </div>
-                                    <p>交通資訊</p>
-                                </a>
-                            </div>
-                            <div class="link-item remove-item">
-                                <a href="javascript:;">
-                                    <div class="img-box">
-                                        <img src="img/index/icons/category3_sightseeing.png" alt="">
-                                    </div>
-                                    <p>景點/門票</p>
-                                </a>
-                            </div>
-                            <div class="link-item remove-item">
-                                <a href="javascript:;">
-                                    <div class="img-box">
-                                        <img src="img/index/icons/category3_onlinecourse.png" alt="">
-                                    </div>
-                                    <p>線上課程</p>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="service-box default-service">
-                    <div class="service-title">
-                        Mobii!服務
-                    </div>
-                    <div class="main-link edit-link">
-                        <div class="link-item add-item">
-                            <a href="ridecode/ridecode_index.html" data-num="0" data-item="乘車碼">
-                                <div class="img-box">
-                                    <img src="img/index/icons/category3_qrcode.png" alt="">
-                                </div>
-                                <p>乘車碼</p>
-                            </a>
-                        </div>
-                        <div class="link-item remove-item">
-                            <a href="explore/explore_index.html" data-num="1">
-                                <div class="img-box">
-                                    <img src="img/index/icons/category3_planning.png" alt="">
-                                </div>
-                                <p>路線規劃</p>
-                            </a>
-                        </div>
-                        <div class="link-item add-item">
-                            <a href="" data-num="2" data-item="美食">
-                                <div class="img-box">
-                                    <img src="img/index/icons/category3_food.png" alt="">
-                                </div>
-                                <p>美食</p>
-                            </a>
-                        </div>
-                        <div class="link-item remove-item">
-                            <a href="" data-num="3" data-item="購物">
-                                <div class="img-box">
-                                    <img src="img/index/icons/category3_shopping.png" alt="">
-                                </div>
-                                <p>購物</p>
-                            </a>
-                        </div>
-                        <div class="link-item remove-item">
-                            <a href="javascript:;" data-num="4" data-item="機場接送">
-                                <div class="img-box">
-                                    <img src="img/index/icons/category3_shuttleservice.png" alt="">
-                                </div>
-                                <p>機場接送</p>
-                            </a>
-                        </div>
-                        <div class="link-item add-item">
-                            <a href="javascript:;" data-num="5" data-item="景點/門票">
-                                <div class="img-box">
-                                    <img src="img/index/icons/category3_sightseeing.png" alt="">
-                                </div>
-                                <p>景點/門票</p>
-                            </a>
-                        </div>
-                        <div class="link-item remove-item">
-                            <a href="traffic/traffic_index.html" data-num="6" data-item="線上課程">
-                                <div class="img-box">
-                                    <img src="img/index/icons/category3_onlinecourse.png" alt="">
-                                </div>
-                                <p>線上課程</p>
-                            </a>
-                        </div>
-                        <div class="link-item remove-item">
-                            <a href="travel/index.html" data-num="7" data-item="去旅行">
-                                <div class="img-box">
-                                    <img src="img/index/icons/category3_travel.png" alt="">
-                                </div>
-                                <p>去旅行</p>
-                            </a>
-                        </div>
-                        <div class="link-item add-item">
-                            <a href="game/game.html" data-num="8" data-item="遊戲">
-                                <div class="img-box">
-                                    <img src="img/index/icons/category3_game.png" alt="">
-                                </div>
-                                <p>遊戲</p>
-                            </a>
-                        </div>
-                        <div class="link-item add-item">
-                            <a href="shopping/index.html" data-num="9" data-item="線上商城">
-                                <div class="img-box">
-                                    <img src="img/index/icons/category3_onlineshopping.png" alt="">
-                                </div>
+                            <div class="sys-item">
+                                <img src="img/index/icons/category1_shopping.png" alt="">
                                 <p>線上商城</p>
-                            </a>
-                        </div>
-                        <div class="link-item add-item">
-                            <a href="shopping/index.html" data-num="10" data-item="１元搶購">
-                                <div class="img-box">
-                                    <img src="img/index/icons/category3_one.png" alt="">
-                                </div>
-                                <p>１元搶購</p>
-                            </a>
-                        </div>
-                        <div class="link-item add-item">
-                            <a href="shopping/products-list.html#02" data-num="10" data-item="交通訂票">
-                                <div class="img-box">
-                                    <img src="img/index/icons/category3_transport.png" alt="">
-                                </div>
-                                <p>交通訂票</p>
-                            </a>
-                        </div>
-                        <div class="link-item add-item">
-                            <a href="offers/offers_index.html" data-num="11" data-item="找優惠" class="disable">
-                                <div class="img-box">
-                                    <img src="img/index/icons/category3_coupon.png" alt="">
-                                </div>
+                            </div>
+                            <div class="sys-item">
+                                <img src="img/index/icons/category1_coupon.png" alt="">
                                 <p>找優惠</p>
-                            </a>
+                            </div>
+                            <div class="sys-item">
+                                <img src="img/index/icons/category1_travel.png" alt="">
+                                <p>去旅行</p>
+                            </div>
                         </div>
-                        <div class="link-item remove-item">
+                    </div> 
+                </div>
+                <div class="service-box bt1-solid">
+                    <div class="title-item pt-3">
+                        我的服務<span class="pl-2 small text-muted editnote1">長按可以拖動排序</span>
+                    </div>
+                    <div class="service-title">
+                        <div class="main-link edit-link sort-block" id="myService">
+                            <div class="link-edit bg-white editbox">
+                                <div class="title-item edit-btn fit small-80 border-radius5">編輯</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-100 text-right text-danger small-70 pb-3 editnote"></div>
+                </div>
+                <div class="service-box bt1-solid" id="moreServiceList">
+                    <!-- <div class="link-item remove-item">
                             <a href="" data-num="12" data-item="繳費" class="disable">
                                 <div class="img-box">
                                     <img src="img/index/icons/category3_payment.png" alt="">
@@ -2141,7 +1998,7 @@
                                 <p>繳費</p>
                             </a>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>
@@ -2353,6 +2210,148 @@
             //var qrcode = new QRCode(document.getElementById("qrcode"), "https://mobii.ai/AppDownload");
         });
 
+        
+        // import data
+        (function() {
+        $.getJSON( "moreService.json")
+            .done(function( data ) {
+                //myservice
+                data.sort(function (a, b) {
+                    return b.item-a.item;
+                });                
+                $.each( data, function( i, item ) {
+                    if( item.item >= 1){
+                        $('#myService').prepend('<div class="link-item remove-item" draggable="true"><a href="'+item.link
+                        +'" data-key="'+item.key+'"><div class="img-box"><img src="img/index/icons/'+item.img+'.png"></div><p>'+item.tit+'</p></a></div>');
+                    }                    
+                });
+                //group
+                result = data.reduce((r, { service: name, ...object }) => {
+                    var temp = r.find(o => o.name === name);
+                    if (!temp) r.push(temp = { name, children: [] });
+                    temp.children.push(object);
+                    return r;
+                }, []);
+                $.each(result, function( i, items ) {  
+                    $('#moreServiceList').append('<div class="title-item pt-3">'+items.name+'</div><div class="main-link edit-link items'+i+'"></div>'); 
+                    $.each(items.children, function( k, icons) {    
+                        let dis = '';          
+                        if ( icons.disable == 0 ){ dis = 'disable' };
+                        if ( icons.item >= 1){
+                            $(".items"+i).append('<div class="link-item remove-item '+dis+'"><a href="'+icons.link
+                            +'" data-key="'+icons.key+'"><div class="img-box"><img src="img/index/icons/'+icons.img+'.png"></div><p>'+icons.tit+'</p></a></div>');
+                        }else{
+                            $(".items"+i).append('<div class="link-item add-item '+dis+'"><a href="'+icons.link
+                            +'" data-key="'+icons.key+'"><div class="img-box"><img src="img/index/icons/'+icons.img+'.png"></div><p>'+icons.tit+'</p></a></div>');
+                        }  
+                    });
+                });            
+            });            
+
+        })();    
+
+        // addEventListener
+        
+        var sortable;
+
+        document.addEventListener('DOMContentLoaded', (event) => {
+
+            function handleclick(e) {
+                
+                //this is myService.link-item or moreSerivce.link-item
+                if(this.classList.contains("editbox")){
+                    //exclude edit button
+                    this.classList.remove('add-item','remove-item'); 
+                    //exclude disable icon
+                    document.querySelector(".disable").classList.remove('add-item','remove-item');
+                    document.querySelector(".disable").addEventListener('click', function (e) {
+                        e.stopPropagation();
+                    }, true);
+                }else{
+                    let iconkey = this.children[0].dataset.key;
+                    let add = this.classList.contains("add-item");
+                    let re = this.classList.contains("remove-item");
+                    
+                    // remove icon                   
+                    if((re == true) && (document.querySelectorAll('#myService .link-item').length > 4)){
+                        this.classList.remove('remove-item');
+                        this.classList.add('add-item');
+                        document.querySelectorAll('#moreServiceList a').forEach(function(key1) {
+                            if(key1.dataset.key == iconkey){
+                                key1.parentElement.classList.remove('remove-item');
+                                key1.parentElement.classList.add('add-item');
+                            };
+                        });
+                        document.querySelectorAll('#myService a').forEach(function(key) {
+                            if(key.dataset.key == iconkey){
+                                key.parentElement.remove();
+                            };
+                        });
+                    }else{
+                        document.querySelector('.editnote').innerHTML = "請至少選擇4種服務";
+                    };
+                    
+                    // add icon
+                    if((add == true) && (document.querySelectorAll('#myService .link-item').length < 9) && (document.querySelectorAll('#myService .link-item').length >= 4)){        
+                        this.classList.remove('add-item');
+                        this.classList.add('remove-item');                                
+                        let str = '<div class="link-item remove-item" draggable="true">' + this.innerHTML + '</div>';
+                        document.querySelector('.editbox').insertAdjacentHTML( 'beforebegin', str );
+                        document.querySelector('.editnote').innerHTML = "";
+                        // Let the new service be triggered
+                        document.querySelectorAll('#myService .link-item').forEach(function(item) {
+                            item.addEventListener('click', handleclick, false);
+                        });
+                    }else{
+                        if(document.querySelectorAll('#myService .link-item').length >= 9){
+                            document.querySelector('.editnote').innerHTML = "至多可選擇9種服務";
+                        };
+                    };
+                                           
+                }; 
+            };
+
+            // edit
+            document.querySelector('.edit-btn').addEventListener("click", function(event) {
+                document.querySelector('.setting').classList.add('edit-mode');
+                // Let the all service be triggered
+                document.querySelectorAll('.link-item').forEach(function(item) {
+                    item.addEventListener('click', handleclick, false);
+                    item.children[0].setAttribute("rel",item.children[0].getAttribute("href"));
+                    item.children[0].removeAttribute("href");
+                });             
+            });            
+
+        });
+
+        // move
+        document.querySelector('.edit-btn').onclick = function() {
+            sortable = new Sortable(document.getElementById('myService'), {
+                animation: 150,
+                handle: '.link-item > a', 
+                items: '.link-item',
+            });  
+        }; 
+
+        // save 
+        function editSave() {  
+            var state = sortable.option("disabled"); // get
+            sortable.option("disabled", !state); // set
+            document.querySelector('.setting').classList.remove('edit-mode');                
+            document.querySelectorAll('.link-item').forEach(function(item) {
+                item.children[0].setAttribute("href",item.children[0].getAttribute("rel"));
+                item.children[0].removeAttribute("rel");
+                item.setAttribute('draggable',false);
+                item.addEventListener('click', function (e) {    
+                    e.stopPropagation();
+                }, true);
+            });                
+        };
+
+        // close 
+        function editEnd() {
+            location.reload();
+        };
     </script> 
     <script>            
         $(".userbox").load("userbox.html");
