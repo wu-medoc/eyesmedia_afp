@@ -71,15 +71,15 @@ $(document).ready(function(){
     }
 
     // 側欄 - 關閉編輯
-    $('.setting .close-btn').on('click', function(){
-        $('.multilayer>.setting').removeClass('edit-mode')
-    })
-    $('.title-item.edit-btn').on('click', function(){
-        $(this).closest('.multilayer>.setting').addClass('edit-mode');
-    })
-    $('.setting .edit-title-cancel').on('click', function(){
-        $(this).closest('.multilayer>.setting').removeClass('edit-mode');
-    })
+    // $('.setting .close-btn').on('click', function(){
+    //     $('.multilayer>.setting').removeClass('edit-mode')
+    // })
+    // $('.title-item.edit-btn').on('click', function(){
+    //     $(this).closest('.multilayer>.setting').addClass('edit-mode');
+    // })
+    // $('.setting .edit-title-cancel').on('click', function(){
+    //     $(this).closest('.multilayer>.setting').removeClass('edit-mode');
+    // })
 
 
 
