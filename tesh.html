@@ -1,77 +1,55 @@
 <!doctype html>
 <html>
-    <head>
-        <title>弹窗</title>
-        <meta charset="utf-8">
-        <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
-        <style>
-            body{margin:0;padding:0;}
-            .barrage{position:fixed;display:block;top:0;}
-            .barrage_name{width:70px;height:70px;background:-webkit-gradient(linear,0 0,100% 100%,from(#f00), to(#0f0));border-radius:50%;}
-            .barrage_name_hover{width:70px;height:70px;background:-webkit-gradient(linear,0 0,100% 100%,from(#ff0), to(#00f));border-radius:50%;}
-            .col1{color:#fff;display: block;padding: 17px;text-align: center;}
-        </style>
-    </head>
-    <body>
-        <div class="barrage" id="barrage">
-            <div class="barrage_name" id="barrage_name">
-                <span class="col1">打开弹幕</span>
-            </div>
-        </div>
-        <div>
-        <p>我是来打酱油的</p>
-        <p>我是来打酱油的</p>
-        <p>我是来打酱油的</p>
-        <p>我是来打酱油的</p>
-        <p>我是来打酱油的</p>
-        <p>我是来打酱油的</p>
-        <p>我是来打酱油的</p>
-        <p>我是来打酱油的</p>
-        </div>
-    </body>
-    <script type="text/javascript">
-    $(function(){
-        var cont=$("#barrage");
-        var contW=$("#barrage").width();
-        var contH=$("#barrage").height();
-        var startX,startY,sX,sY,moveX,moveY;
-        var winW=$(window).width();
-        var winH=$(window).height();
-        var barrage_name=$("#barrage_name");
-        var barrage_frame=$("#barrage_frame");
-        var body=$("body");
+<head>
+    <meta charset='utf-8' />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+    <title></title>
+    <style>
+        .div{text-align: center;font-size:30px;}
+    </style>
+</head>
+<body>
+    <div class="div" style="width:100px;height:100px;line-height:100px;background-color:red;position:absolute;top:0;left:0;">1</div>
+    <div class="div" style="width:100px;height:100px;line-height:100px;background-color:red;position:absolute;top:0;left:110px;">2</div>
+    <div class="div" style="width:100px;height:100px;line-height:100px;background-color:red;position:absolute;top:0;left:220px;">3</div>
+    <div class="div" style="width:100px;height:100px;line-height:100px;background-color:red;position:absolute;top:110px;left:0;">4</div>
+    <div class="div" style="width:100px;height:100px;line-height:100px;background-color:red;position:absolute;top:110px;left:110px;">5</div>
+    <div class="div" style="width:100px;height:100px;line-height:100px;background-color:red;position:absolute;top:110px;left:220px;">6</div>
+    <script src="js/vendor/bs4/js/jquery-3.2.1.min.js"></script>
+<script>
+    function getcolor(){
+        var color_arr = ["0","1","2","3","4","5","6","7","8","9","a","b","c","d","e","f"];
+        function suiji(){
+            return Math.floor(Math.random()*16);
+        }
+        var colorSTR ="#"+color_arr[suiji()]+color_arr[suiji()]+color_arr[suiji()]+color_arr[suiji()]+color_arr[suiji()]+color_arr[suiji()];
+        return colorSTR;
+    }
+    var divd = $(".div");
+    divd.each(function(index){
+        $(this).on('touchstart', function(evt) {
+            var e = event || evt;
+            e.preventDefault();//阻止其他事件
+            //要做的事情
+        }).on('touchmove', function(evt) {
+            var e = event || evt;
+            e.preventDefault();//阻止其他事件
 
-
-        cont.on({//绑定事件
-            touchstart:function(e){
-                startX = e.originalEvent.targetTouches[0].pageX;    //获取点击点的X坐标
-                startY = e.originalEvent.targetTouches[0].pageY;    //获取点击点的Y坐标
-                //console.log("startX="+startX+"************startY="+startY);
-                sX=$(this).offset().left;//相对于当前窗口X轴的偏移量
-                sY=$(this).offset().top;//相对于当前窗口Y轴的偏移量
-                //console.log("sX="+sX+"***************sY="+sY);
-                leftX=startX-sX;//鼠标所能移动的最左端是当前鼠标距div左边距的位置
-                rightX=winW-contW+leftX;//鼠标所能移动的最右端是当前窗口距离减去鼠标距div最右端位置
-                topY=startY-sY;//鼠标所能移动最上端是当前鼠标距div上边距的位置
-                bottomY=winH-contH+topY;//鼠标所能移动最下端是当前窗口距离减去鼠标距div最下端位置
-                },
-            touchmove:function(e){
-                e.preventDefault();
-                moveX=e.originalEvent.targetTouches[0].pageX;//移动过程中X轴的坐标
-                moveY=e.originalEvent.targetTouches[0].pageY;//移动过程中Y轴的坐标
-                //console.log("moveX="+moveX+"************moveY="+moveY);
-                if(moveX<leftX){moveX=leftX;}
-                if(moveX>rightX){moveX=rightX;}
-                if(moveY<topY){moveY=topY;}
-                if(moveY>bottomY){moveY=bottomY;}
-                $(this).css({
-                    "left":moveX+sX-startX,
-                    "top":moveY+sY-startY,
-                    })
-                },
-
+            // 如果這個元素的位置內只有一個手指的話
+            //console.log(e.targetTouches)
+            //console.log(event.targetTouches[0].clientX+"/"+event.targetTouches[0].clientY+"/"+event.targetTouches[0].pageX+"/"+event.targetTouches[0].pageY)
+            if (e.targetTouches.length == 1) {
+                var touch = e.targetTouches[0];  // 把元素放在手指所在的位置
+                $(this).css("left",(touch.pageX- parseInt($(this).width())/2 + 'px'));
+                $(this).css("top",(touch.pageY- parseInt($(this).height())/2 + 'px'));
+                $(this).css("background", getcolor());
+            }
+        }).on('touchend', function(evt) {
+            var e = event || evt;
+            e.preventDefault();//阻止其他事件
+            $(this).css("background",getcolor());
         })
-
-        })
-    </script>
+    });
+</script>
+</body>
 </html>
