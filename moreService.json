@@ -182,9 +182,9 @@
   {
     "key": 21,
     "service": "交通服務",
-    "img": "category3_qrcode",
-    "tit": "乘車碼",
-    "link": "",
+    "img": "category3_info",
+    "tit": "交通資訊",
+    "link": "traffic/traffic_index.html",
     "item": "",
     "disable": 1
   },
