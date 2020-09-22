@@ -1,10 +1,17 @@
 <footer id="footer-pc" class="for-pc"> 
     <!--web service-->
+    <script>
+            (window.document.location.host.indexOf("127.0.0.1"))? (url="http://"+window.document.location.host):(url="https://wu-medoc.github.io/eyesmedia_afp/");
+    </script>
     <div class="bearservice">            
         <div class="scroll-top-wrapper">
             <span class="scroll-top-inner">
-                <button type="button" id="webservice"><img src="https://wu-medoc.github.io/eyesmedia_afp/img/index/icons/for-pc/icon_service.png"></button>
-                <button type="button" id="webservice_close" class="d-none"><img src="https://wu-medoc.github.io/eyesmedia_afp/img/index/icons/for-pc/icon_close.png"></button>
+                <button type="button" id="webservice"></button>   
+                <button type="button" id="webservice_close" class="d-none"></button>   
+                <script>
+                    $('#webservice, #webservice_close').append('<img src="'+ url +'/img/index/icons/for-pc/icon_service.png">')
+                </script>                 
+                <!-- <button type="button" id="webservice_close" class="d-none"><img src="https://wu-medoc.github.io/eyesmedia_afp/img/index/icons/for-pc/icon_close.png"></button> -->
             </span>
         </div>
         <div class="popup-box chat-popup" id="qnimate">
