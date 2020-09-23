@@ -52,7 +52,7 @@
             <button class="btn"><i class="material-icons">&#xE8B6;</i></button>
             <input type="text" placeholder="搜尋" class="border-0">
         </div>
-        <div class="flex-inline-between p-2">
+        <div class="flex-inline-between p-2 limitedTime">
             <div class="item"><span class="p-2">限時搶購 </span><span id="clock"></span></div>
             <div class="item small-80"><a href="offers_list.html">更多優惠券<i class="material-icons chevron_right">&#xe315;</i></a></div>
         </div>
@@ -858,6 +858,14 @@
         $('#clock').countdown(endTime, function(event) {
         $(this).html("<span class='item-time'>"+event.strftime('%H')+"</span><span class='item-time'>"+event.strftime('%M')+"</span><span class='item-time'>"+event.strftime('%S'));
         });
+
+        //shopping tickets
+        var parameter = window.location.hash.split("#")[1];
+        if(parameter=="tickets"){
+            $('.title-name').text("店家優惠券");
+            $('#footerMobii, .searchbox, .limitedTime, .afp-tab-box').hide();
+        }
+        
     </script>
 
     <script>    

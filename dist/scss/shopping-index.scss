@@ -752,7 +752,10 @@ footer{
         }
         .input-group-btn button{
             font-size: 0.7em;
-            padding: 3px 6px;
+            padding: 1px 4px;
+            .material-icons{
+                font-size: 12px;
+            }
         }   
     }    
     .products-btn-addcart button, 
@@ -1401,6 +1404,9 @@ footer{
                         padding: 2px 3px;
                         line-height: 1em;
                         font-size: 0.7em;
+                        .material-icons{
+                            font-size: 12px;
+                        }
                     }   
                 }
             }            
