@@ -77,7 +77,7 @@
                             <div class="circle circle-top"></div>
                             <div class="circle circle-bottom"></div>
                             <div class="d-flex flex-column">
-                                <button class="btn index-btn small-80 msg-open" value="msg-offers" data-toggle="modal" data-target="#messageModal" data-dismiss="modal" aria-label="Close">兌換</button>
+                                <button class="btn index-btn small-80 msg-open" value="msg-offers" data-toggle="modal" data-target="#messageModal">兌換</button>
                                 <div class="m-quantity small"><img src="../img/share/mobiicoin_red.png" class="coinimg-m"> 3,820</div>
                             </div>
                         </div>
@@ -151,7 +151,7 @@
                             <div class="circle circle-top"></div>
                             <div class="circle circle-bottom"></div>
                             <div class="d-flex flex-column">
-                                <button class="btn gray-obtn small-80">已使用</button>
+                                <button class="btn gray-obtn small-80 sendval" type="submit" name="type" value="step2">已使用</button>
                             </div>
                         </div>
                     </div>
@@ -838,11 +838,13 @@
     <script src="../js/animateCss.js"></script>
     <script src="../js/jquery.countdown.min.js"></script>
     <script>
+  
         //send stepval
-        $('button.sendval').on('click',function(){
+        $(document).on('click','button.sendval', function(){
             var sendval = $(this).val();
             document.cookie = 'step='+sendval;
             window.location.href='VoucherDetail.html';
+            console.log("click");
         });
 
         //that counts from now to 10:00 am
