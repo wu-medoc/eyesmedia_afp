@@ -243,9 +243,10 @@
   }  
   
   .editbox{    
-    position: absolute;
-    right: 1em;
-    display: inline-block;
+    display: block;
+    float: right;
+    margin-right: 5px;
+    text-align: center;
     width: 18%;
     .edit-btn{
       align-self: flex-end;
