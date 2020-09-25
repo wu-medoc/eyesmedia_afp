@@ -84,12 +84,10 @@
         <div class="service-box bt1-solid">
             <div class="title-item pt-3">
                 我的服務<span class="pl-2 small text-muted editnote1">長按可以拖動排序</span>
+                <div class="editbox"><button class="btn title-item edit-btn fit small-80 border-radius5 py-0">編輯</button></div>
             </div>
             <div class="service-title">
                 <div class="main-link edit-link sort-block" id="myService">
-                    <div class="link-edit bg-white editbox">
-                        <div class="title-item edit-btn fit small-80 border-radius5">編輯</div>
-                    </div>
                 </div>
             </div>
             <div class="w-100 text-right text-danger small-70 pb-3 editnote"></div>
@@ -168,6 +166,7 @@
 
         })();    
 
+
         // addEventListener
         
         var sortable;
@@ -177,9 +176,7 @@
             function handleclick(e) {
                 
                 //this is myService.link-item or moreSerivce.link-item
-                if(this.classList.contains("editbox")){
-                    //exclude edit button
-                    this.classList.remove('add-item','remove-item'); 
+                if(this.classList.contains("disable")){
                     //exclude disable icon
                     document.querySelector(".disable").classList.remove('add-item','remove-item');
                     document.querySelector(".disable").addEventListener('click', function (e) {
@@ -214,7 +211,8 @@
                         this.classList.remove('add-item');
                         this.classList.add('remove-item');                                
                         let str = '<div class="link-item remove-item" draggable="true">' + this.innerHTML + '</div>';
-                        document.querySelector('.editbox').insertAdjacentHTML( 'beforebegin', str );
+                        // document.querySelector('#myService').insertAdjacentHTML( 'beforebegin', str );
+                        document.querySelector('#myService .link-item:last-child').insertAdjacentHTML( 'afterend', str );
                         document.querySelector('.editnote').innerHTML = "";
                         // Let the new service be triggered
                         document.querySelectorAll('#myService .link-item').forEach(function(item) {
@@ -263,7 +261,7 @@
                 item.addEventListener('click', function (e) {    
                     e.stopPropagation();
                 }, true);
-            });                
+            });
         };
 
         // close 
