@@ -241,24 +241,22 @@
     }
     &.sort-block{
       display: flex;
-      .editbox{
-        display: inline-block;
-        align-self: flex-end;
-      }
       p{
         display: none;
       }
     }
   }  
+  
+  .editbox{
+    display: inline-block;
+    align-self: flex-end;
+  }
   .editnote, .editnote1{
     display: none;
   }
   &.edit-mode{
     .main-link {
       &.sort-block{
-        .editbox{
-          display: none;        
-        }
         p{
           display: block;
         }
@@ -272,6 +270,9 @@
     }
     .editnote1{
       display: initial;
+    }
+    .editbox{
+      display: none;        
     }
   }
 }
