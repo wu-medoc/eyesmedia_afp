@@ -404,6 +404,15 @@ ul{
             border-bottom: 0px;
         }
     }    
+    #sexSelect{
+        float: right;
+        text-align-last: right;
+        width: 50%;
+        color: rgb(118, 118, 118);
+        option{
+            color: $blue-dark;
+        }
+    }
 }
 
 .uplayer>div.mycardprompt {
