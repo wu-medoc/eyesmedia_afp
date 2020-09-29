@@ -770,6 +770,9 @@
     //border-top: 1px $gray-light solid;
     border-bottom: 1px $gray-light solid;
     margin-top: 0;
+    &.h3em{
+      height: 3em;
+    }
     .filter-box{
         padding-left: 15px;
         position: relative;
@@ -782,11 +785,11 @@
             top: 50%;
             left: 7px;
             background-color: $gray-light;
-            -o-transform: translateX(-50%);
-            -webkit-transform: translateX(-50%);
-            -moz-transform: translateX(-50%);
-            -ms-transform: translateX(-50%);
-            transform: translateX(-50%);
+            -o-transform: translateY(-50%);
+            -webkit-transform: translateY(-50%);
+            -moz-transform: translateY(-50%);
+            -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
         }
     }
     .filter-item{
