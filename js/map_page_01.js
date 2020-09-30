@@ -200,6 +200,9 @@ function initMap() {
         user: {
             icon: iconBase + 'user.svg'
         },
+        shopp: {
+            icon: iconBase + 'map_shopping.svg'
+        },
         taxi: {
             icon: iconBase + 'taxi-dot.svg'
         }
@@ -210,7 +213,7 @@ function initMap() {
         type: 'taxi'
     }, {
         position: new google.maps.LatLng(25.048136, 121.547851),
-        type: 'taxi'
+        type: 'shopp'
     }, {
         position: new google.maps.LatLng(25.048676, 121.545433),
         type: 'user'
