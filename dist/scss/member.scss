@@ -223,6 +223,41 @@ ul{
     }
 }
 
+// faq
+.faqbox{
+    button{
+        &:focus{
+            outline: none;
+            box-shadow: none;
+        }
+        &[aria-expanded="true"] {
+            i.material-icons {
+                transform: rotate(180deg);
+            }
+        }
+    }
+    li{
+        color: $blue-dark;
+        border-bottom: 1px $gray-light solid;
+        .col-12{
+            font-size: small;
+            color: gray;
+            button{
+                font-size: small;
+                color: gray;
+                border-bottom: 1px $gray-light solid;
+            }
+            .abox{
+                background: $gray-light;
+                padding: 1em;
+            }
+            li{
+                color: gray;
+            }
+        }
+    }    
+}
+
 // 我的帳戶 & mycard
 .title-box {
     min-width: 320px;
