@@ -193,7 +193,7 @@ button{
     position: relative;
 
     .explore-card-list {
-        height: 100%;
+        height: calc(100vh - 117px);
         overflow: auto;
         -webkit-overflow-scrolling: touch;
     }

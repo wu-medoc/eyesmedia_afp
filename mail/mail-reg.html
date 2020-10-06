@@ -21,41 +21,127 @@
         a{
             color: #2796DF;
         }
+        #wrap{
+            padding: 30px 0;
+            display: flex;
+            justify-content: center;
+        }
+        #topbar{
+            color: #fff;
+            background: #13334C;
+            text-align: right; 
+            padding: .25em .75em;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+        }
+        #imgbox{
+            text-align: center;
+        }
+        #imgbox img{
+            padding: 2.5em 1em 1em 1em;
+            width: 75%;
+            max-width: 250px;
+        }        
+        #apps{
+            padding: 15px 24px;
+        }
+        #apps img{
+            padding: 0.5em 2em;
+            width: 75%;
+            max-width: 280px;
+        } 
+        #service{
+            padding: 15px 24px;
+            background: #efefef;
+        }
+        .sbox{
+            display: flex;
+            flex-direction: row;
+        }
+        .s1{
+            padding-right: 3em;
+            padding-top: 1em;
+        }
+        #footer{
+            color: #828282;
+            padding: 15px 24px;
+            font-size: small;
+        }        
+        .fb{
+            float: right;
+            padding: 2em 0.5em;
+            width: 40px;
+        }
+        @media (max-width: 480px) {                
+            #wrap{
+                padding: 0;
+            }
+            .sbox{
+                display: flex;
+                flex-direction: column;
+            }
+        }
     </style>
-    <title>Mobii!</title>
+    <title>Mobii! 系統通知</title>
 </head>
 
 <body style="margin: 0; padding: 0;">
-<div width="100%" style="align-content: center; padding: 30px 15px;">
-    <center>
+<div id="wrap">
         <table cellpadding="0" cellspacing="0">
             <tr>
-                <td bgcolor="#F6F6E9">
-                    <center>
-                        <img src="https://wu-medoc.github.io/eyesmedia_afp/img/share/mobii-mail.png">
-                    </center>
+                <td id="topbar">
+                    <img src="https://wu-medoc.github.io/eyesmedia_afp/img/share/mobii-mail.png">
+                    <span>&ensp;系統通知</span>
+                </td>
+            </tr>
+            <tr>
+                <td id="imgbox">
+                    <img src="https://wu-medoc.github.io/eyesmedia_afp/img/share/mail-notify.png">
                 </td>
             </tr>        
             <tr>
-                <td style="padding: 15px 24px">
-                    <p>
-                        親愛的會員您好：<br>
-                        感謝您註冊 Mobii! 會員， 您的驗證碼為：<b>732395</b><br>
-                        完成註冊即可享Mobii!平台多樣服務。<br>
-                        如有任何問題，請聯絡<a href="#" target="_blank">Mobii!客服</a>，我們將用心為您服務！
-                    </p>
+                <td id="apps">
+                    <p>親愛的店家 您好</p>
+                    <p>xxxx 歡迎加入 Mobii! 開店寶！</p>
+                    <p>開店系統的初始設定已完成開通，合約已正式生效並開始計算開店系統月租等費用，<br>
+                        即日起可登入 Mobii! 店家管理系統。</p>
+                    <p>以下為您的帳號密碼，首次登入後請更改您的密碼，以確保您的權益。<br>
+                        xx 商店代號：20200101<br>
+                        xx 帳號：2020010101<br>
+                        xx 密碼：0912345678</p>
+                    <p>Mobii! 開店寶相關連結網址<br>
+                        一、開店寶後台連結：<a href="https://afpsystem.mobii.ai/" target="_blank">https://afpsystem.mobii.ai/</a></p>
+                    <p><img src="https://wu-medoc.github.io/eyesmedia_afp/img/share/mail-app.png"></p>
+                    <p>二、下載 Mobii! 開店寶 APP。</p>
+                    <p>三、Mobii ! 開店寶操作手冊連結：<a href="https://afpsystem.mobii.ai/" target="_blank">https://afpsystem.mobii.ai/</a></p>
                 </td>
-            </tr>        
+            </tr>                 
             <tr>
-                <td>
-                    <p align="center" style="color:#818181; font-size: small; line-height: 24px;">
-                        這是 Mobii! 系統發出的信，請不要直接回覆。<br>
-                        © 2020 Mobii!. All Rights Reserved.
-                    </p>
+                <td id="service">
+                    <div style="font-weight: 700;">如有任何疑問，歡迎與我們聯繫</div>
+                    <div class="sbox">
+                        <div class="s1">
+                            聯絡專線：02-2707-8685<br>
+                            聯絡Mail：mobiics@mobii.ai<br>
+                            或是登入店家聯盟APP並點選客服
+                        </div>
+                        <div class="s1">
+                            每週一～週五<br>
+                            09:00~12:00、14:00~18:00<br>
+                            國定假日除外
+                        </div>
+                    </div>
+                </td>
+            </tr>    
+            <tr>
+                <td id="footer">
+                    <img src="https://wu-medoc.github.io/eyesmedia_afp/img/share/icons8-facebook.png" class="fb">
+                    <p>本郵件為系統自動發送，請勿直接回覆！若有任何使用問題歡迎與我們聯繫<br>
+                    © 2020 Mobii!. All Rights Reserved.</p>
                 </td>
             </tr>        
         </table>
-    </center>
 </div>
 </body>
 
