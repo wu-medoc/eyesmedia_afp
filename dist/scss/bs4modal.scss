@@ -59,6 +59,12 @@
     overflow-x: hidden;
     overflow-y: auto;
   }
+  #forgetModalCenter{
+    .col-12, .col-7, .col-5{
+      padding-right: 0;
+      padding-left: 0;
+    }
+  }
   #messageModal{
     .modal-body>div {
       display: none;

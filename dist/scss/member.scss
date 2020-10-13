@@ -906,7 +906,11 @@ input[type="file"] {
             //             display: block;
             //         }
             //     }
-            // }      
+            // }   
+            .password-tit{
+                color: $blue-dark;
+                padding-left: 2px;
+            }   
             input{
                 width: 100%;
                 border: none;
