@@ -259,33 +259,48 @@
                     <!-- <div class="logo-box">
                         <img src="https://wu-medoc.github.io/eyesmedia_afp/img/share/mlogo.png" alt="">
                     </div>        -->
-                    <div class="index-flex">
+                    <div class="index-flex pt-0">
                         <div class="item one d-flex justify-content-start">
-                            <button type="button" class="btn close" data-toggle="modal" data-target="#loginModalCenter" data-dismiss="modal" aria-label="Close">
+                            <button type="button" class="btn px-2 close" data-toggle="modal" data-target="#loginModalCenter" data-dismiss="modal" aria-label="Close">
                                 <i class="material-icons">&#xe314;</i>
                             </button>  
                         </div>
                         <div class="item two"><h5>忘記密碼</h5></div>
                         <div class="item one"></div>
                     </div>
-                    <div class="container px-3 pt-2">
+                    <div class="container px-3 py-2">
                         <h6 class="text-left">
-                            請輸入註冊時使用的電子信箱或手機：
+                            為了保障您的個人資料安全，在重新設定密碼之前，請先再度進行手機驗證
                         </h6>
-                        <p class="text-left">
-                            我們會發送驗證碼以重設密碼
-                        </p>
-                        <form id="forget-form">
-                            <input type="text" placeholder="Email/手機" id="vcode">
-                            <div class="small-warning">查無此帳號，你可以
-                                <button type="button" class="btn btn-login font-bold px-0" data-toggle="modal" data-target="#registeredModalCenter" data-dismiss="modal" aria-label="Close">
-                                    立即註冊
-                                </button>
+                        <div class="row">
+                            <div class="col-12 text-left pt-4">
+                                帳號
+                            </div>                            
+                            <div class="col-12 pb-3">
+                                <input type="text" placeholder="請輸入註冊時使用的手機號碼" id="vphone">
+                                <div class="small-warning pl-0 warningNote invisible"><span>請輸入帳號</span></div>
                             </div>
+                            <div class="col-12 text-left">
+                                驗證碼
+                            </div>                            
+                            <div class="col-7 pb-3 pr-0">
+                                <input type="text" placeholder="請輸入收到的驗證碼" id="vcode">
+                                <div class="small-warning t-gray pl-0 stepV1 d-none"><p>驗證碼已發送至 0912345678<br>沒有收到驗證碼？<span class="text-blue">59秒後重新傳送</span></p></div>
+                                <div class="small-warning pl-0 warningNote invisible"><span>請輸入驗證碼</span></div>
+                            </div>                          
+                            <div class="col-5 pl-1">
+                                <button type="button" class="btn index-btn border-radius5 w-100 px-1 small-70" onclick="warningNote()" id="getPhone">取得手機驗證碼</button>
+                            </div>
+                            <div class="col-12 py-3">
+                                <button type="button" class="btn index-btn w-90 footerBtn msg-open" value="msg-vphone" data-toggle="modal" data-target="#messageModal" data-dismiss="modal" aria-label="Close">立即驗證</button>
+                            </div>           
+                        </div>
+                        <!-- <form id="forget-form">
+                            <input type="text" placeholder="Email/手機" id="vcode">
                             <button type="button" class="btn index-btn w-100 btn-vcode" data-toggle="modal" data-target="#VcodeModalCenter" data-dismiss="modal" aria-label="Close">發送驗證碼</button>
-                        </form>
+                        </form> -->
                     </div>
-                    </div>
+                </div>
             </div>
             </div>
         </div>      
@@ -633,7 +648,17 @@
                                 關閉
                             </button>
                         </div>
-                    </div>  
+                    </div>                       
+                    <div id="msg-vphone">
+                        <div class="p-2 mb-4">
+                            <p>手機驗證成功！<br>立即重設密碼</p>
+                        </div>
+                        <div class="d-flex justify-content-center text-center bg-light border-t ">
+                            <button type="button" class="btn btn-login font-bold w-100" data-dismiss="modal" aria-label="Close">
+                                確認
+                            </button>
+                        </div>
+                    </div>     
                     <div id="msg-share">
                         <div class="mb-5">
                             <h6 class="dataTit p-2">分享給好友</h6>

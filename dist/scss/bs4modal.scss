@@ -101,6 +101,7 @@
       height: 3.5em;
       border-radius:4em;
     }  
+    
     .small-warning {
       width: 100%;
       font-size: 80%;
@@ -111,6 +112,12 @@
       &.regtd{
         position: absolute;
         padding-left: 10px;
+      }
+      &.t-gray{
+        color: #13334C;
+        position: absolute;
+        white-space: nowrap;
+        font-size: 70%;
       }
     }
     input[type='password'], 
@@ -125,6 +132,9 @@
         border-bottom: 1px solid $index-default;
         border-right: 1px solid $index-default;
         border-left: 1px solid $index-default;
+      }
+      &.bb-org{
+        border-bottom: 1px solid $index-default;
       }
     }
     label.form-check-label {
@@ -228,6 +238,10 @@
           input[type=number] {
           -moz-appearance: textfield;
           }
+    }
+    .footerBtn{
+      width: 100%;
+      position: relative;
     }
   }
   
@@ -399,6 +413,13 @@
         h5 {
           padding: .7em 0;
           font-weight: bold;
+        }        
+        .footerBtn{
+          width: 90%;
+          position: fixed;
+          bottom: 70px;
+          left: 50%;
+          transform: translateX(-50%);
         }
       }
     }

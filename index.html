@@ -2337,6 +2337,27 @@
         $(".userbox").load("userbox.html");
         $("#loginhtml").load("login.html");
         $("#footerMobii").load("footerMobii.html");
+
+    // 忘記密碼setp    
+    let warningfag = 0;
+    function warningNote(){
+        switch(warningfag){
+            case 1:
+                $('#getPhone').addClass('unable');
+                $('#vphone').val('0912345678');
+                $('.stepV1').toggleClass('d-none');
+                $('.warningNote').toggleClass('invisible');
+                $('.warningNote').siblings('input[type=text]').toggleClass("bb-org");
+                break;
+            case 2:
+                break;
+            default:
+                $('.warningNote').toggleClass('invisible');
+                $('.warningNote').siblings('input[type=text]').toggleClass("bb-org");
+                break;
+        }
+        warningfag += 1;
+    };
     </script> 
     <script src="js/index.js"></script>
     
