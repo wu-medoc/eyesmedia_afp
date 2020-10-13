@@ -102,24 +102,6 @@
       border-radius:4em;
     }  
     
-    .small-warning {
-      width: 100%;
-      font-size: 80%;
-      color: #dc3545;
-      text-align: left;
-      padding-left: 62px;
-      line-height: initial;
-      &.regtd{
-        position: absolute;
-        padding-left: 10px;
-      }
-      &.t-gray{
-        color: #13334C;
-        position: absolute;
-        white-space: nowrap;
-        font-size: 70%;
-      }
-    }
     input[type='password'], 
     input[type='text'] {
       line-height: 2em;
@@ -144,9 +126,9 @@
     .btn-cls{
       padding-top: .75em;
       padding-bottom: .75em;
-      font-weight: 400;
+      font-weight: 500;
       font-size: 80%;
-      color: #005792;
+      color: #007AFF;
       background-color: transparent;
       border-right: 1px solid #ccc;
     }
@@ -154,8 +136,8 @@
       padding-top: .75em;
       padding-bottom: .75em;
       font-size: 80%;
-      color: #005792;
-      font-weight: 400;
+      color: #007AFF;
+      font-weight: 500;
       background-color: transparent;
     }
     .vcode-msg {
@@ -239,10 +221,6 @@
           -moz-appearance: textfield;
           }
     }
-    .footerBtn{
-      width: 100%;
-      position: relative;
-    }
   }
   
   #vcode-form {
@@ -282,7 +260,7 @@
       border-bottom-right-radius: 0;
     }
     a {
-      color: #005792;
+      color: #007AFF;
     }
     input[type='checkbox'] {
       width: 18px;
@@ -413,14 +391,7 @@
         h5 {
           padding: .7em 0;
           font-weight: bold;
-        }        
-        .footerBtn{
-          width: 90%;
-          position: fixed;
-          bottom: 70px;
-          left: 50%;
-          transform: translateX(-50%);
-        }
+        } 
       }
     }
   }

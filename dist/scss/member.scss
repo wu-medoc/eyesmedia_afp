@@ -903,7 +903,7 @@ input[type="file"] {
             //             display: none;
             //         }
             //         &.visibility-off{
-            //             display: block;;
+            //             display: block;
             //         }
             //     }
             // }      
@@ -911,6 +911,9 @@ input[type="file"] {
                 width: 100%;
                 border: none;
                 border-bottom: 1px $gray-light solid;
+                &.bb-org{
+                  border-bottom: 1px solid $index-default;
+                }
             }
             .text-muted{
                 position: absolute;
@@ -920,8 +923,6 @@ input[type="file"] {
             .material-icons{
                 position: absolute;
                 right: 0;
-                top: 50%;
-                transform: translateY(-50%);
                 color: rgba(24, 43, 86, 0.5);
             }
         }

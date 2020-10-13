@@ -2022,6 +2022,39 @@
         }); 
         $(window).on('load',function() { 
             
+            // 忘記密碼setp    
+            let warningfag = 1;
+            function warningNote(){
+                warningfag = warningfag % 2;
+                console.log(warningfag);
+                switch(warningfag){
+                    case 0:
+                        $('#getPhone').addClass('unable');
+                        $('#vphone').val('0912345678');
+                        $('.stepV1').removeClass('d-none');
+                        $('.warningNote').toggleClass('invisible');
+                        $('.warningNote').siblings('input[type=text]').toggleClass("bb-org");
+                        break;
+                    case 1:
+                        $('#getPhone').removeClass('unable');
+                        $('#vphone').val('');
+                        $('.stepV1').addClass('d-none');
+                        $('.warningNote').toggleClass('invisible');
+                        $('.warningNote').siblings('input[type=text]').toggleClass("bb-org");
+                        break;
+                    default:
+                        $('.warningNote').toggleClass('invisible');
+                        $('.warningNote').siblings('input[type=text]').toggleClass("bb-org");
+                        break;
+                }
+                warningfag += 1;
+            };
+            
+            $('button.msg-open').on('click', function(){  
+                $('#msgP1').html("<p>手機驗證成功！<br>立即重設密碼</p>");
+                $('#msgpara .btn-login').text("確定").attr('onclick','');
+            });
+            
             var JData = [{id:"t1", telname:"中國大陸", telcode:"86"},
                         {id:"t2", telname:"台灣", telcode:"886"},
                         {id:"t3", telname:"香港", telcode:"852"},
@@ -2337,34 +2370,6 @@
         $(".userbox").load("userbox.html");
         $("#loginhtml").load("login.html");
         $("#footerMobii").load("footerMobii.html");
-
-    // 忘記密碼setp    
-    let warningfag = 1;
-    function warningNote(){
-        warningfag = warningfag % 2;
-        console.log(warningfag);
-        switch(warningfag){
-            case 0:
-                $('#getPhone').addClass('unable');
-                $('#vphone').val('0912345678');
-                $('.stepV1').removeClass('d-none');
-                $('.warningNote').toggleClass('invisible');
-                $('.warningNote').siblings('input[type=text]').toggleClass("bb-org");
-                break;
-            case 1:
-                $('#getPhone').removeClass('unable');
-                $('#vphone').val('');
-                $('.stepV1').addClass('d-none');
-                $('.warningNote').toggleClass('invisible');
-                $('.warningNote').siblings('input[type=text]').toggleClass("bb-org");
-                break;
-            default:
-                $('.warningNote').toggleClass('invisible');
-                $('.warningNote').siblings('input[type=text]').toggleClass("bb-org");
-                break;
-        }
-        warningfag += 1;
-    };
     </script> 
     <script src="js/index.js"></script>
     
