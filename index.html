@@ -2024,7 +2024,7 @@
             
             // 忘記密碼setp    
             let warningfag = 1;
-            function warningNote(){
+            $('#getPhone').on("click",function(){
                 warningfag = warningfag % 2;
                 console.log(warningfag);
                 switch(warningfag){
@@ -2048,7 +2048,7 @@
                         break;
                 }
                 warningfag += 1;
-            };
+            });
             
             $('button.msg-open').on('click', function(){  
                 $('#msgP1').html("<p>手機驗證成功！<br>立即重設密碼</p>");
