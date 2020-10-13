@@ -639,6 +639,29 @@ input[type="file"] {
 }
 
 // 手機驗證
+.vphone{    
+    .col-12, .col-7, .col-5{
+        padding-right: 0;
+        padding-left: 0;
+    }
+    input[type='password'], 
+    input[type='text'] {
+      line-height: 2em;
+      width: 100%;
+      border: 0;
+      border-bottom: 1px #eee solid;
+      &.input-index{
+        border-radius: 0.5em;
+        border-top: 1px solid $index-default;
+        border-bottom: 1px solid $index-default;
+        border-right: 1px solid $index-default;
+        border-left: 1px solid $index-default;
+      }
+      &.bb-org{
+        border-bottom: 1px solid $index-default;
+      }
+    }
+}
 .my-phone-list{
     padding-right: 1em;
     padding-left: 1em;
