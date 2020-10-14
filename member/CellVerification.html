@@ -43,31 +43,40 @@
             <div class="item ctrl-btn"></div>
         </div> 
         <div class="container px-3">            
-            <h6 class="text-bluedk pt-4">請完成手機認證，馬上享受Mobii!優惠折扣</h6>
-            <p class="text-gray small-80 py-3">未完成手機認證，將無法取得會員專屬權益與優惠折扣喔!</p>
-            <div class="row vphone">
-                <div class="col-12 text-left pt-4">
-                    帳號
-                </div>                            
-                <div class="col-12 pb-3">
-                    <input type="tel" placeholder="請輸入註冊時使用的手機號碼" id="vphone">
-                    <div class="small-warning pl-0 warningNote invisible"><span>請輸入帳號</span></div>
-                </div>
-                <div class="col-12 text-left">
-                    驗證碼
-                </div>                            
-                <div class="col-7 pb-3 pr-0">
-                    <input type="tel" placeholder="請輸入收到的驗證碼" id="vcode">
-                    <div class="small-warning t-gray pl-0 stepV1 d-none"><p>驗證碼已發送至 0912345678<br>沒有收到驗證碼？<span class="text-blue">59秒後重新傳送</span></p></div>
-                    <div class="small-warning pl-0 warningNote invisible"><span>請輸入驗證碼</span></div>
-                </div>                          
-                <div class="col-5 pl-1">
-                    <button type="button" class="btn index-btn border-radius5 w-100 px-1 small-70" id="getPhone">取得手機驗證碼</button>
-                </div>
-            </div>                
-            <div class="fixed-btn container">
-                <button class="btn next-btn w-100"  onclick="msgpara('<p>手機驗證失敗！<br>驗證碼錯誤，請重新取得驗證碼<br>並正確輸入</p>','確定','')" data-dismiss="modal" aria-label="Close">立即驗證</button>
-            </div>   
+            <div class="div-switch d-block">                
+                <h6 class="text-bluedk pt-4">您的手機號碼已完成驗證，如需變更手機號碼，請重新驗證。</h6>
+                <p class="text-gray small-80 py-3">手機號碼：0912345678</p>
+                <div class="fixed-btn container">
+                    <button class="btn next-btn w-100"  onclick="div_switch()">重新驗證</button>
+                </div> 
+            </div>
+            <div class="div-switch d-none"> 
+                <h6 class="text-bluedk pt-4">請完成手機認證，馬上享受Mobii!優惠折扣</h6>
+                <p class="text-gray small-80 py-3">未完成手機認證，將無法取得會員專屬權益與優惠折扣喔!</p>
+                <div class="row vphone">
+                    <div class="col-12 text-left pt-4">
+                        帳號
+                    </div>                            
+                    <div class="col-12 pb-3">
+                        <input type="tel" placeholder="請輸入註冊時使用的手機號碼" id="vphone">
+                        <div class="small-warning pl-0 warningNote invisible"><span>請輸入帳號</span></div>
+                    </div>
+                    <div class="col-12 text-left">
+                        驗證碼
+                    </div>                            
+                    <div class="col-7 pb-3 pr-0">
+                        <input type="tel" placeholder="請輸入收到的驗證碼" id="vcode">
+                        <div class="small-warning t-gray pl-0 stepV1 d-none"><p>驗證碼已發送至 0912345678<br>沒有收到驗證碼？<span class="text-blue">59秒後重新傳送</span></p></div>
+                        <div class="small-warning pl-0 warningNote invisible"><span>請輸入驗證碼</span></div>
+                    </div>                          
+                    <div class="col-5 pl-1">
+                        <button type="button" class="btn index-btn border-radius5 w-100 px-1 small-70" id="getPhone">取得手機驗證碼</button>
+                    </div>
+                </div>                
+                <div class="fixed-btn container">
+                    <button class="btn next-btn w-100"  onclick="msgpara('<p>手機驗證失敗！<br>驗證碼錯誤，請重新取得驗證碼<br>並正確輸入</p>','確定','')" data-dismiss="modal" aria-label="Close">立即驗證</button>
+                </div>   
+            </div>
         </div> 
     </div>   
 
