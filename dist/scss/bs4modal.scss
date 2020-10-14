@@ -979,11 +979,11 @@
 
   #customBtnFB {
     display: inline-block;
-    background:#4267b2;
-    color: #fff;
+    background:#fff;
+    color: #444;
     width: 280px;
     height: 32px;
-    border: thin solid #4267b2;
+    border: thin solid #888;
     border-radius: 30px;
     white-space: nowrap;    
     text-align: center;
@@ -992,7 +992,7 @@
       font-weight: normal;
     }
     span.icon {
-      background: url('/img/index/social/fb.png') transparent no-repeat center/80%;
+      background: url('https://wu-medoc.github.io/eyesmedia_afp/img/index/social/iconFacebook.png') transparent no-repeat center/80%;
       display: inline-block;
       vertical-align: middle;
       width: 30px;
