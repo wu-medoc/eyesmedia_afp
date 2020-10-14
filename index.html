@@ -2052,7 +2052,7 @@
             
             $('button.msg-open').on('click', function(){  
                 $('#msgP1').html("<p>手機驗證成功！<br>立即重設密碼</p>");
-                $('#msgpara .btn-login').text("確定").attr('onclick','');
+                $('#msgpara .btn-login').text("確定").attr('onclick','').attr('data-toggle','modal').attr('data-target','#resetPsw');
             });
             
             var JData = [{id:"t1", telname:"中國大陸", telcode:"86"},

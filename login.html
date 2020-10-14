@@ -305,6 +305,63 @@
             </div>
         </div>      
  
+        <!-- reset Modal -->
+        <div class="modal fade" id="resetPsw" tabindex="-1" role="dialog" aria-labelledby="forgetModalCenterTitle" aria-hidden="true">
+            <div class="modal-full modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header" data-dismiss="modal" aria-label="Close">
+                </div>
+                <div class="popup-banner for-mobile">
+                    <button type="button" class="close close-btn" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">     
+                    <div class="index-flex pt-0">
+                        <div class="item one d-flex justify-content-start">
+                            <button type="button" class="btn px-2 close" data-toggle="modal" data-target="#loginModalCenter" data-dismiss="modal" aria-label="Close">
+                                <i class="material-icons">&#xe314;</i>
+                            </button>  
+                        </div>
+                        <div class="item two"><h5>重設密碼</h5></div>
+                        <div class="item one"></div>
+                    </div>
+                    <div class="container px-3 py-2">                       
+                        <form action="">
+                            <div class="change-password-list pt-5">
+                                <ul>
+                                    <li>
+                                        <div class="password-tit">密碼</div>
+                                        <div class="password-item">
+                                            <input id="password-field-1" type="password" placeholder="6～12位英數混合，不接受特殊字元"> 
+                                            <span toggle="#password-field-1" class="toggle-password"> 
+                                                <i class="material-icons visibility d-none">&#xE8F4;</i>
+                                                <i class="material-icons visibility-off">&#xE8F5;</i>
+                                            </span>
+                                            <div class="small-warning pl-0 warningNote invisible" id="pswT1"><span>請輸入密碼</span></div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="password-tit">確認密碼</div>
+                                        <div class="password-item">
+                                            <input id="password-field-2" type="password" placeholder="請再次輸入密碼">
+                                            <span toggle="#password-field-2" class="toggle-password"> 
+                                                <i class="material-icons visibility d-none">&#xE8F4;</i>
+                                                <i class="material-icons visibility-off">&#xE8F5;</i>
+                                            </span>
+                                            <div class="small-warning pl-0 warningNote invisible" id="pswT2"><span>請再次輸入密碼</span></div>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <button type="button" class="btn index-btn w-90 footerBtn">立即驗證</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>    
+
         <!-- Verification code  Modal -->
         <div class="modal fade" id="VcodeModalCenter" tabindex="-1" role="dialog" aria-labelledby="VcodeModalCenterTitle" aria-hidden="true">
             <div class="modal-full modal-dialog modal-dialog-centered" role="document">
