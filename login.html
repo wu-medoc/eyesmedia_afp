@@ -292,7 +292,7 @@
                                 <button type="button" class="btn index-btn border-radius5 w-100 px-1 small-70" id="getPhone">取得手機驗證碼</button>
                             </div>
                             <div class="col-12 py-3">
-                                <button type="button" class="btn index-btn footerBtn msg-open" value="msgpara" data-toggle="modal" data-target="#messageModal" data-dismiss="modal" aria-label="Close">立即驗證</button>
+                                <button type="button" class="btn index-btn footerBtn" onclick="msgpara('<p>手機驗證成功！<br>立即重設密碼</p>','確定','#resetPsw')" data-dismiss="modal" aria-label="Close">立即驗證</button>
                             </div>           
                         </div>
                         <!-- <form id="forget-form">
@@ -338,7 +338,7 @@
                                                 <i class="material-icons visibility d-none">&#xE8F4;</i>
                                                 <i class="material-icons visibility-off">&#xE8F5;</i>
                                             </span>
-                                            <div class="small-warning pl-0 warningNote invisible" id="pswT1"><span>請輸入密碼</span></div>
+                                            <div class="small-warning pl-0 warningNote visible" id="pswT1"><span>請輸入密碼</span></div>
                                         </div>
                                     </li>
                                     <li>
@@ -349,11 +349,13 @@
                                                 <i class="material-icons visibility d-none">&#xE8F4;</i>
                                                 <i class="material-icons visibility-off">&#xE8F5;</i>
                                             </span>
-                                            <div class="small-warning pl-0 warningNote invisible" id="pswT2"><span>請再次輸入密碼</span></div>
+                                            <div class="small-warning pl-0 warningNote visible" id="pswT2"><span>請再次輸入密碼</span></div>
                                         </div>
                                     </li>
                                 </ul>
-                                <button type="button" class="btn index-btn w-90 footerBtn">立即驗證</button>
+                                <button type="button" class="btn index-btn w-90 footerBtn" 
+                                        onclick="msgpara('密碼重設成功！','<a href=\'index.html\'>前往登入</a>','')"
+                                        data-dismiss="modal" aria-label="Close">保存</button>
                             </div>
                         </form>
                     </div>
@@ -680,7 +682,7 @@
                     <div id="msgpara">
                         <div class="p-2 mb-4" id="msgP1"></div>
                         <div class="d-flex justify-content-center text-center bg-light border-t ">
-                            <button type="button" id="msgB1" class="btn btn-login font-bold w-100" data-dismiss="modal" aria-label="Close">
+                            <button type="button" id="msgB1" class="btn btn-login font-bold w-100">
                                 返回
                             </button>
                         </div>

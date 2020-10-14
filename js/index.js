@@ -305,18 +305,7 @@ $(document).ready(function(){
         }     
     });
 
-    // password visiblity
-    $(".toggle-password").on('click', function(e) {
-        const target = $('.toggle-password').index(e.currentTarget);
-        $('.toggle-password').eq(target).find('i.visibility').toggleClass('d-inline-block');
-        $('.toggle-password').eq(target).find('i.visibility-off').toggleClass('d-none');
-        if ($('.toggle-password').eq(target).siblings('input').attr('type') === 'password') {
-            $('.toggle-password').eq(target).siblings('input').attr('type', 'text');
-          } else {
-            $('.toggle-password').eq(target).siblings('input').attr('type', 'password');
-          }
-    });
-    
+   
     // overlay-choice open close control
     $('.open-overlay-choice').on("click", function () {
         $('.overlay-choice').parent().append("<a onclick='location.replace(\""+curPath+"\");' class='w-100 h-100 masklayer'><div class='modal-backdrop container'></div></a>");
@@ -346,6 +335,17 @@ $(document).ready(function(){
 
 var curPath=window.document.location.pathname;
 window.onload = function(){  
+    // password visiblity
+    $(".toggle-password").on('click', function(e) {
+        const target = $('.toggle-password').index(e.currentTarget);
+        $('.toggle-password').eq(target).find('i.visibility').toggleClass('d-inline-block');
+        $('.toggle-password').eq(target).find('i.visibility-off').toggleClass('d-none');
+        if ($('.toggle-password').eq(target).siblings('input').attr('type') === 'password') {
+            $('.toggle-password').eq(target).siblings('input').attr('type', 'text');
+          } else {
+            $('.toggle-password').eq(target).siblings('input').attr('type', 'password');
+          }
+    });
 
     //footer bar active
     var strPath=window.document.location.pathname.replace("/eyesmedia_afp","");
@@ -414,10 +414,17 @@ window.onload = function(){
 };
 
 //#messageModal message 
-function msgpara(){
+function msgpara(x,y,a){
     $('#messageModal').modal('show');
     $('#messageModal .modal-body>div').hide();
     $('#msgpara').show();
+    $('#msgP1').html(x);
+    $('#msgB1').html(y).removeAttr('data-dismiss','modal').removeAttr('data-label','Close');
+    (a!='')? 
+        $('#msgB1').attr('data-toggle','modal').attr('data-target', a): 
+        $('#msgB1').removeAttr('data-toggle').removeAttr('data-target');
+    $('#msgB1').attr('data-dismiss','modal').attr('data-label','Close');
+    // Close需在最後
 }
 function msgpara2(){
     $('#messageModal').modal('show');

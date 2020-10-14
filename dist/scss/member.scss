@@ -910,51 +910,6 @@ input[type="file"] {
     box-shadow: 0 -5px 8px rgba(0,0,0,.2);
 }
 
-// 變更密碼
-.change-password-list{
-    padding: 35px 15px 0;
-    border-top: 1px $gray-light solid;
-    ul{
-        padding: 0 15px;
-        margin-bottom: 60px;
-        li{
-            margin-bottom: 30px;
-            position: relative;
-            // &.is-open{
-            //     .material-icons{
-            //         &.visibility{
-            //             display: none;
-            //         }
-            //         &.visibility-off{
-            //             display: block;
-            //         }
-            //     }
-            // }   
-            .password-tit{
-                color: $blue-dark;
-                padding-left: 2px;
-            }   
-            input{
-                width: 100%;
-                border: none;
-                border-bottom: 1px $gray-light solid;
-                &.bb-org{
-                  border-bottom: 1px solid $index-default;
-                }
-            }
-            .text-muted{
-                position: absolute;
-                top: 100%;
-                color: $member-default !important;
-            }
-            .material-icons{
-                position: absolute;
-                right: 0;
-                color: rgba(24, 43, 86, 0.5);
-            }
-        }
-    }
-}
 
 // 我的優惠
 .discount-card{
