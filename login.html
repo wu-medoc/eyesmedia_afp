@@ -58,21 +58,6 @@
                                                 data-height="32"
                                                 class="method-item" (click)="signInWithApple()">
                                             </div>
-                                            <!-- <div class="method-item">
-                                                <img src="https://wu-medoc.github.io/eyesmedia_afp/img/index/social/facebook.png" alt="">
-                                            </div>
-                                            <div class="method-item">
-                                                <img src="https://wu-medoc.github.io/eyesmedia_afp/img/index/social/line.png" alt="">
-                                            </div>
-                                            <div class="method-item">
-                                                <img src="https://wu-medoc.github.io/eyesmedia_afp/img/index/social/google.png" alt="">
-                                            </div>
-                                            <div class="method-item">
-                                                <img src="https://wu-medoc.github.io/eyesmedia_afp/img/index/social/wechat.png" alt="">
-                                            </div>
-                                            <div class="method-item">
-                                                <img src="https://wu-medoc.github.io/eyesmedia_afp/img/index/social/apple.png" alt="">
-                                            </div> -->
                                         </div>
                                         <div class="d-flex justify-content-center">
                                             <div class="line-middle">
@@ -81,35 +66,37 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <form id="login-form">
-                                            <div class="form-group form-inline">
-                                                <label for="loginInputEmailTel">帳號</label>
-                                                <input type="text" class="form-control" id="loginInputEmailTel" placeholder="請輸入Email/手機">
-                                                <div class="small-warning"><span>帳號輸入錯誤</span></div>
-                                            </div>
-                                            <div class="form-group form-inline">
-                                                <label for="loginInputPassword">密碼</label>
-                                                <input type="password" class="form-control" id="loginInputPassword" autocomplete="on" placeholder="請輸入密碼">
-                                                <div class="small-warning"><span>密碼輸入錯誤</span></div>
-                                            </div>
-                                            <button type="button" class="btn index-btn w-100 login-ok my-2" data-dismiss="modal">登入</button>
-                                            <span class="text-left small-80 text-secondary">
-                                                還不是會員嗎?
-                                            </span>
-                                            <button type="button" class="btn btn-login font-bold px-0 modalopen" data-toggle="modal" data-target="#registeredModalCenter" data-dismiss="modal" aria-label="Close">
-                                                馬上註冊
-                                            </button>
-                                            <div class="text-center p-3"> 
-                                                <span>
-                                                    <a href class="font-bold small-80" data-toggle="modal" data-target="#forgetModalCenter" data-dismiss="modal" aria-label="Close">忘記密碼?</a>
-                                                    | <a class="font-bold small-80" href="https://wu-medoc.github.io/eyesmedia_afp/member/member_faq.html">常見問題</a>
-                                                </span>
+                                        <form>
+                                            <div class="change-password-list pt-5 px-0">
+                                                <ul class="px-0">
+                                                    <li>
+                                                        <div class="password-tit">帳號</div>
+                                                        <div class="password-item">
+                                                            <input id="loginInputEmailTel" type="text" placeholder="請輸入手機號碼，例：0912345678"> 
+                                                            <div class="small-warning pl-0 warningNote visible"><span>請輸入手機號碼</span></div>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="password-tit">密碼</div>
+                                                        <div class="password-item">
+                                                            <input id="loginInputPassword" type="password" placeholder="6～12位英數混合，不接受特殊字元">
+                                                            <div class="small-warning pl-0 warningNote visible"><span>密碼錯誤</span></div>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                                <button type="button" class="btn index-btn w-100 login-ok mt-0 mb-2" data-dismiss="modal">登入</button>
+                                                <div class="text-center p-3"> 
+                                                    <span>
+                                                        <a href class="font-bold small-80" data-toggle="modal" data-target="#forgetModalCenter" data-dismiss="modal" aria-label="Close">忘記密碼?</a>
+                                                        | <a class="font-bold small-80" href="https://wu-medoc.github.io/eyesmedia_afp/member/member_faq.html">常見問題</a>
+                                                    </span>
+                                                </div>
                                             </div>
                                         </form>
                                     </div>
                                 </div>
                                 <!-- 會員註冊 -->
-                                <div role="tabpanel" class="tab-pane fade active show w-100" id="logintag02"> 2
+                                <div role="tabpanel" class="tab-pane fade w-100" id="logintag02"> 2
                                 </div>
                             </div>
                         </div>

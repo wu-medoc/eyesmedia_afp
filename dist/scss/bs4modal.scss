@@ -387,6 +387,7 @@
         margin: 0 auto;
         width: 101%;
         left: -3px;
+        min-width: 320px;
         //position: absolute;
       .modal-body {
         background-color: #fff;
@@ -995,8 +996,8 @@
       background: url('https://wu-medoc.github.io/eyesmedia_afp/img/index/social/iconFacebook.png') transparent no-repeat center/80%;
       display: inline-block;
       vertical-align: middle;
-      width: 30px;
-      height: 30px;
+      width: 24px;
+      height: 24px;
     }
     span.buttonText {
       display: inline-block;
