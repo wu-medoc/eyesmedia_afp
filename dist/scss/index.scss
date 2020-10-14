@@ -1539,6 +1539,14 @@ img.nearbyimg{
   width: 100%;
   position: relative;
   margin-bottom: 2em;
+  &.fixed{
+    width: 90%;
+    max-width: 1140px;
+    position: fixed;
+    bottom: 70px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
   @media (max-width: 767px) {
     width: 90%;
     position: fixed;
