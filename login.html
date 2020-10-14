@@ -66,21 +66,21 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <form>
-                                            <div class="change-password-list pt-5 px-0">
+                                        <form id="login-form">
+                                            <div class="change-password-list pt-4 px-0 border-top-0">
                                                 <ul class="px-0">
                                                     <li>
                                                         <div class="password-tit">帳號</div>
                                                         <div class="password-item">
-                                                            <input id="loginInputEmailTel" type="text" placeholder="請輸入手機號碼，例：0912345678"> 
-                                                            <div class="small-warning pl-0 warningNote visible"><span>請輸入手機號碼</span></div>
+                                                            <input id="loginEmailTel" type="text" placeholder="請輸入手機號碼，例：0912345678"> 
+                                                            <div class="small-warning pl-0 warningNote invisible"><span>請輸入手機號碼</span></div>
                                                         </div>
                                                     </li>
                                                     <li>
                                                         <div class="password-tit">密碼</div>
                                                         <div class="password-item">
-                                                            <input id="loginInputPassword" type="password" placeholder="6～12位英數混合，不接受特殊字元">
-                                                            <div class="small-warning pl-0 warningNote visible"><span>密碼錯誤</span></div>
+                                                            <input id="loginPassword" type="password" placeholder="6～12位英數混合，不接受特殊字元">
+                                                            <div class="small-warning pl-0 warningNote invisible"><span>密碼錯誤</span></div>
                                                         </div>
                                                     </li>
                                                 </ul>
@@ -96,7 +96,66 @@
                                     </div>
                                 </div>
                                 <!-- 會員註冊 -->
-                                <div role="tabpanel" class="tab-pane fade w-100" id="logintag02"> 2
+                                <div role="tabpanel" class="tab-pane fade w-100" id="logintag02">
+                                    <div class="container px-3">
+                                        <form id="registered-form">                                            
+                                            <div class="change-password-list pt-2 px-0 border-top-0">
+                                                <ul class="p-0 m-0">
+                                                    <li>
+                                                        <div class="password-tit">暱稱</div>
+                                                        <div class="password-item">
+                                                            <input id="regName" type="text" placeholder="請輸入1～10個字元"> 
+                                                            <div class="small-warning pl-0 warningNote invisible"><span>請輸入暱稱</span></div>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="password-tit">帳號</div>
+                                                        <div class="password-item">
+                                                            <input id="regEmailTel" type="text" placeholder="請輸入手機號碼，例：0912345678"> 
+                                                            <div class="small-warning pl-0 warningNote invisible"><span>帳號已存在，請重新輸入</span></div>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="password-tit">密碼</div>
+                                                        <div class="password-item">
+                                                            <input id="regPassword" type="password" placeholder="6～12位英數混合，不接受特殊字元">
+                                                            <div class="small-warning pl-0 warningNote invisible"><span>請輸入密碼</span></div>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="password-tit">確認密碼</div>
+                                                        <div class="password-item">
+                                                            <input id="regPasswordCk" type="password" placeholder="請再次輸入密碼">
+                                                            <div class="small-warning pl-0 warningNote invisible"><span>請再次輸入密碼</span></div>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="password-tit">驗證碼</div>
+                                                        <div class="password-item row">
+                                                            <div class="col-7 pb-3 px-0">
+                                                                <input id="regEmailTel" type="tel" placeholder="請輸入收到的驗證碼"> 
+                                                                <div class="small-warning t-gray pl-0 stepV1 d-none"><p>驗證碼已發送至 0912345678<br>沒有收到驗證碼？<span class="text-blue">59秒後重新傳送</span></p></div>
+                                                                <div class="small-warning pl-0 warningNote invisible"><span>請輸入驗證碼</span></div>
+                                                            </div>
+                                                            <div class="col-5 px-1">
+                                                                <button type="button" class="btn index-btn border-radius5 w-100 px-1 small-70" id="getPhone">取得手機驗證碼</button>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="form-inline agree">
+                                                            <input type="checkbox" class="form-check-input icheckBgOrg" id="registeredCheck1">
+                                                            <label class="form-check-label" for="registeredCheck1">我同意 Mobii! 的</label>
+                                                            <a href='member/member_clause.html' target="_blank" class="font-bold">&ensp;會員條款&ensp;</a>及                                                                   
+                                                            <a href='member/member_private.html' target="_blank" class="font-bold">&ensp;隱私政策&ensp;</a>
+                                                            <div class="small-warning pl-0 warningNote invisible"><span>未同意條款與隱私</span></div>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                                <button type="button" class="btn index-btn w-100 login-ok mt-0 mb-2" data-dismiss="modal">立即註冊</button>
+                                            </div>
+                                        </form>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -288,14 +347,14 @@
                                 帳號
                             </div>                            
                             <div class="col-12 pb-3">
-                                <input type="text" placeholder="請輸入註冊時使用的手機號碼" id="vphone">
+                                <input type="tel" placeholder="請輸入註冊時使用的手機號碼" id="vphone">
                                 <div class="small-warning pl-0 warningNote invisible"><span>請輸入帳號</span></div>
                             </div>
                             <div class="col-12 text-left">
                                 驗證碼
                             </div>                            
                             <div class="col-7 pb-3 pr-0">
-                                <input type="text" placeholder="請輸入收到的驗證碼" id="vcode">
+                                <input type="tel" placeholder="請輸入收到的驗證碼" id="vcode">
                                 <div class="small-warning t-gray pl-0 stepV1 d-none"><p>驗證碼已發送至 0912345678<br>沒有收到驗證碼？<span class="text-blue">59秒後重新傳送</span></p></div>
                                 <div class="small-warning pl-0 warningNote invisible"><span>請輸入驗證碼</span></div>
                             </div>                          
@@ -514,29 +573,6 @@
                         <div class="p-2 mb-4">
                             是否確定要刪除此地址
                         </div>                     
-                        <div class="d-flex justify-content-center text-center bg-light border-t ">
-                            <button type="button" class="btn btn-cls font-bold w-100 masklayer-close"  data-dismiss="modal" aria-label="Close">
-                                取消
-                            </button>
-                            <button type="button" class="btn btn-login font-bold left-mline w-100 masklayer-close"  data-dismiss="modal" aria-label="Close">
-                                確定
-                            </button>
-                        </div>
-                    </div>
-                    <div id="msg-mysocialbind">
-                        <div class="p-2 mb-4">
-                            已綁定   
-                        </div>
-                        <div class="text-center bg-light border-t py-2">
-                            <button type="button" class="btn btn-login font-bold w-100 masklayer-close"  data-dismiss="modal" aria-label="Close">
-                                確定
-                            </button>
-                        </div>
-                    </div>
-                    <div id="msg-mysocialremove">
-                        <div class="p-2 mb-4">
-                            是否確定要解除綁定
-                        </div>                        
                         <div class="d-flex justify-content-center text-center bg-light border-t ">
                             <button type="button" class="btn btn-cls font-bold w-100 masklayer-close"  data-dismiss="modal" aria-label="Close">
                                 取消

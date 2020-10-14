@@ -351,8 +351,11 @@ ul{
             .auto-left{
                 color: $member-default;
             }
-            button.msg-open{
+            button.bind{
                 color: $member-default;
+                &.unable{
+                    color: $mission-color;
+                }
             }
         }
         li{
@@ -644,6 +647,7 @@ input[type="file"] {
         padding-right: 0;
         padding-left: 0;
     }
+    input[type='tel'],
     input[type='password'], 
     input[type='text'] {
       line-height: 2em;

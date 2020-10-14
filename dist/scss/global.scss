@@ -288,7 +288,6 @@ ul, ol {
         }
       }
       & + label {
-        font-size: 14px;
         line-height: 21px;
         display: inline-block;
         vertical-align: top;
@@ -297,6 +296,10 @@ ul, ol {
       }
     }
     input[type='checkbox'] {
+      &.icheckBgOrg{
+      --active: #FD5F00;
+      --border-hover: #FD5F00;
+      }
       &:not(.switch) {
         border-radius: 7px;
         &:after {

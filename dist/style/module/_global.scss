@@ -288,7 +288,6 @@ ul, ol {
         }
       }
       & + label {
-        font-size: 14px;
         line-height: 21px;
         display: inline-block;
         vertical-align: top;
@@ -297,6 +296,10 @@ ul, ol {
       }
     }
     input[type='checkbox'] {
+      &.icheckBgOrg{
+      --active: #FD5F00;
+      --border-hover: #FD5F00;
+      }
       &:not(.switch) {
         border-radius: 7px;
         &:after {
@@ -422,7 +425,10 @@ footer.for-mobile {
   background-color: #fff;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
+  -o-transform: translate3d(-50%, 0, 0);
   -webkit-transform: translate3d(-50%, 0, 0);
+  -moz-transform: translate3d(-50%, 0, 0);
+  -ms-transform: translate3d(-50%, 0, 0);
   transform: translate3d(-50%, 0, 0);
   // transform: translateZ(0);
   // -webkit-transform: translateZ(0);

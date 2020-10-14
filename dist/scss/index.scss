@@ -824,13 +824,26 @@ header + div,
     color: $blue-dark;
   }
 }
+.nav-tabs-box::after{
+  content: '';
+  display: block;
+  height: 1px;
+  width: 100%;
+  background-color: #ccc;
+  position: relative;
+  top: -8px;
+  left: 0;
+}
 .bt-line{
   border-top: 1px solid #eee;
- }
- td.linebt-td,
- .linebt-row {
-   border-bottom: 1px solid #ccc;
- }
+}
+.bb-line{
+  border-bottom: 1px solid #eee;
+}
+td.linebt-td,
+.linebt-row {
+  border-bottom: 1px solid #ccc;
+}
 
 .flex-inline-between {
   width: 100%;
@@ -1563,9 +1576,9 @@ img.nearbyimg{
   ul{
       text-align: left;
       padding: 0 15px;
-      margin-bottom: 60px;
+      margin-bottom: 2em;
       li{
-          margin-bottom: 30px;
+          margin-bottom: 1em;
           position: relative;
           // &.is-open{
           //     .material-icons{
@@ -1580,6 +1593,7 @@ img.nearbyimg{
           .password-tit{
               color: $blue-dark;
               padding-left: 2px;
+              line-height: initial;
           }   
           input{
               width: 100%;
@@ -1597,7 +1611,7 @@ img.nearbyimg{
           .material-icons{
               position: absolute;
               right: 0;
-              color: rgba(24, 43, 86, 0.5);
+              color: $cardfooter-color;
           }
       }
   }

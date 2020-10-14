@@ -426,10 +426,17 @@ function msgpara(x,y,a){
     $('#msgB1').attr('data-dismiss','modal').attr('data-label','Close');
     // Close需在最後
 }
-function msgpara2(){
+function msgpara2(x,y,z,a){
     $('#messageModal').modal('show');
     $('#messageModal .modal-body>div').hide();
     $('#msgpara2').show();
+    $('#msgP2').html(x);
+    $('#msgC1').html(z);
+    $('#msgK1').html(y).removeAttr('data-dismiss','modal').removeAttr('data-label','Close');
+    (a!='')? 
+        $('#msgK1').attr('data-toggle','modal').attr('data-target', a): 
+        $('#msgK1').removeAttr('data-toggle').removeAttr('data-target');
+    $('#msgK1').attr('data-dismiss','modal').attr('data-label','Close');
 }
 // div switch
 function div_switch() {

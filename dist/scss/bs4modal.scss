@@ -79,6 +79,7 @@
       margin-top: 0;
     }
   }
+  
   .modal-body {
     margin-top: 1.2em;
     text-align: center;
@@ -107,7 +108,8 @@
       height: 3.5em;
       border-radius:4em;
     }  
-    
+    // 手機驗證
+    input[type='tel'], 
     input[type='password'], 
     input[type='text'] {
       line-height: 2em;
@@ -242,7 +244,7 @@
   
   #login-form ,
   #registered-form {
-    line-height: 2.5em;
+    line-height: 2em;
     text-align: left;
     font-size: .95em;
     max-width: 350px;
@@ -264,18 +266,17 @@
       border-bottom-left-radius: 0;
       border-bottom-right-radius: 0;
     }
+    .form-inline.agree{
+      text-align: left;
+      line-height: initial;
+      font-size: x-small;
+    }
     a {
       color: #007AFF;
     }
     input[type='checkbox'] {
-      width: 18px;
-      height: 18px;
-      border-radius: .5em;
-      &:after{
-        width: 8px;
-        height: 8px;
-        left: 3px;
-      }
+      border-radius: 100%;
+      border: 1px solid $index-default;
     }
     .form-group.reg-form{
       width: 100%;
