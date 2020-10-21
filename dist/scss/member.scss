@@ -237,16 +237,20 @@ ul{
         }
     }
     li{
-        padding: 0 15px;
+        padding: .5em;
         color: $blue-dark;
         border-bottom: 1px $gray-light solid;
         .col-12{
             font-size: small;
             color: gray;
             button{
+                padding: .75em 0;
                 font-size: small;
                 color: gray;
-                border-bottom: 1px $gray-light solid;
+                border-top: 1px $gray-light solid;
+            }
+            &:first-child button{
+                border-top:0;
             }
             .abox{
                 background: $gray-light;
@@ -1192,6 +1196,7 @@ input[type="file"] {
 }   
 .auto-left{
     margin-left: auto;
+    text-align: right;
 }
 #open-mask.modal-backdrop {
     z-index: 1040;
