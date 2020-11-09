@@ -2024,19 +2024,19 @@
             
             // 忘記密碼setp    
             let warningfag = 1;
-            $('#getPhone').on("click",function(){
+            $('.getPhone').on("click",function(){
                 warningfag = warningfag % 2;
                 console.log(warningfag);
                 switch(warningfag){
                     case 0:
-                        $('#getPhone').addClass('unable');
+                        $('.getPhone').addClass('unable');
                         $('#vphone').val('0912345678');
                         $('.stepV1').removeClass('d-none');
                         $('.warningNote').toggleClass('invisible');
                         $('.warningNote').siblings('input[type=text],input[type=password],input[type=tel]').toggleClass("bb-org");
                         break;
                     case 1:
-                        $('#getPhone').removeClass('unable');
+                        $('.getPhone').removeClass('unable');
                         $('#vphone').val('');
                         $('.stepV1').addClass('d-none');
                         $('.warningNote').toggleClass('invisible');

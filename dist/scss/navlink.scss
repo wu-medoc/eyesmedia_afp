@@ -12,7 +12,8 @@
         text-align: center;
         list-style: none;
         display: inline-block;
-        white-space: nowrap;    
+        white-space: nowrap;   
+        overflow: hidden; 
       }
       &.nav-tabs{
         border-bottom: 0px;
