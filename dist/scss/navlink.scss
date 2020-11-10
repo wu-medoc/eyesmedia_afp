@@ -2,6 +2,8 @@
 /* afp-tab-box nav-link*/
 .afp-tab-box {
     #nav-tab, 
+    #nav-tab-hitArea,
+    #nav-tab-deliveryArea,
     #nav-tab-member, 
     #nav-tab-featured {
       display: inline-table;
@@ -76,7 +78,7 @@
       list-style: none;
       text-align: center;
       border-bottom: 0px;
-      line-height: 3em;
+      line-height: 3.8em;
       background-color: #fff;
       li {
         font-size: .9em;  

@@ -835,8 +835,11 @@ header + div,
   left: 0;
   top: -1px;
 }
-.nav-tabs-box.tablist-swiper:after{
-  top: -8px;
+.nav-tabs-box.tablist-swiper{
+  line-height: 1.3em;
+  &:after{
+    top: -0.8em;
+  }
 }
 .bt-line{
   border-top: 1px solid #eee;
