@@ -480,6 +480,10 @@ input[type='search']{
     font-size: 70%;
   }
 }
+.nowrap-absolute{
+  white-space: nowrap;
+  position: absolute;
+}
 .h20{
   height: 20px;
 }
