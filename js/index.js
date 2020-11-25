@@ -565,3 +565,6 @@ function copyUrl(){
     temp.remove(); // 移除input物件
 };
 
+function hideDiv(e){
+    $(e).toggle();
+}

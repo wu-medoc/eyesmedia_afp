@@ -450,7 +450,7 @@ section.appNotifyBox{
 }
 @keyframes MoveUpDown1 {
   0% {
-    padding-top: 0px;;
+    padding-top: 0px;
   }
   100% {
     padding-top: 60px;
@@ -458,9 +458,25 @@ section.appNotifyBox{
 }
 @keyframes MoveUpDown2 {
   0% {
-    top: 0px;;
+    top: 0px;
   }
   100% {
     top: 60px;
+  }
+}
+.sysmsgbox{
+  background: #fff;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  animation: MoveUp 0.8s ease-in;
+  z-index: 1050;
+}
+@keyframes MoveUp {
+  0% {
+    transform: translateY(60px);
+  }
+  100% {
+    transform: translateY(0px);
   }
 }
