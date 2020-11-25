@@ -1,7 +1,7 @@
 @charset "utf-8";
 
-@import '../dist/style/module/mixin';
-@import '../dist/style/module/global';
+@import '../style/module/variable';
+@import '../style/module/global';
 
 .search-taxi-wave{
     position: absolute;

@@ -1,4 +1,4 @@
-@import "../style/module/mixin";
+
 @import '../style/module/variable';
 
 input[type=number]::-webkit-inner-spin-button, 
@@ -1414,7 +1414,7 @@ footer{
                 color: tomato;
                 font-weight: bold;
                 text-align: right;
-                padding: .25em;
+                padding: .25em .75em .25em .25em;
             }
             .price-original {
                 color: gray;

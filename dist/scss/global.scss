@@ -106,7 +106,10 @@ body {
   z-index: 500;
   display: none;
 }
-
+img.source-image + .overlay{
+  background-color: none;
+  display: none;
+}
 
 //全站共用標籤
 div, span, object, iframe, img, table, caption, thead, tbody,
@@ -186,6 +189,21 @@ ul, ol {
   list-style: none;
   padding-left: 0;
   padding-right: 0;
+}
+
+.abox{
+  ul{
+      list-style: disc
+  }
+  ol{
+      list-style: decimal
+  }
+  ul, ol{
+    padding: inherit;
+  }
+  p{
+      line-height: 2em;
+  }
 }
 
 :focus {
@@ -432,6 +450,12 @@ footer.for-mobile {
   transform: translate3d(-50%, 0, 0);
   // transform: translateZ(0);
   // -webkit-transform: translateZ(0);
+  @media (max-width: 767px) {
+    height: 79px;
+  }
+  @media (max-width: 375px) {
+    height: 63px;
+  }
 }
 
 footer.for-pc{
@@ -443,6 +467,7 @@ footer.for-pc{
   display: inline-block;
   bottom: 0;
   clear:both;
+  height: 170px;
   @media (max-width: 767px) {
     display: none;
   }

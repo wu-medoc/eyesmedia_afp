@@ -392,7 +392,7 @@
             var zipcode = distdata[citydata][1];
             $('#distlist').empty();
             $.each(dist,function(idx,values){
-                $('#distlist').append($("<li class='flex-inline-between "+((zipcode[idx]===distchoosen) ? 'active': '')+"' onclick='backsortLayer();backsortLayer()' value='"+zipcode[idx]+"'>").append($("<div class='item'>").append(values)).append("<div class='item'><i class='fas fa-check'></i></div>"));
+                $('#distlist').append($("<li class='flex-inline-between "+((zipcode[idx]===distchoosen) ? 'active': '')+"' onclick='backsortLayer();backsortLayer()' value='"+zipcode[idx]+"'>").append($("<div class='item'>").append(values)).append("<div class='item'><i class="material-icons done">&#xe876;</i></div>"));
             });
             //skip citylist and press distlist
             $('#distlist li').each(function() {
@@ -415,7 +415,7 @@
             var dist = distdata[citychoosen][0];
             var zipcode = distdata[citychoosen][1];
             $.each(dist,function(idx,values){
-                $('#distlist').append($("<li class='flex-inline-between "+((zipcode[idx]===distchoosen) ? 'active': '')+"' onclick='backsortLayer();backsortLayer()' value='"+zipcode[idx]+"'>").append($("<div class='item'>").append(values)).append("<div class='item'><i class='fas fa-check'></i></div>"));
+                $('#distlist').append($("<li class='flex-inline-between "+((zipcode[idx]===distchoosen) ? 'active': '')+"' onclick='backsortLayer();backsortLayer()' value='"+zipcode[idx]+"'>").append($("<div class='item'>").append(values)).append("<div class='item'><i class="material-icons done">&#xe876;</i></div>"));
             });
             $('#distlist li').on('click',function(){
                 //return value

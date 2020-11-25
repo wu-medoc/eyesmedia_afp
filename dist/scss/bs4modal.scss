@@ -826,7 +826,10 @@
     bottom: 85px;
     z-index: 1041;
     &.bg-tr{
-      background-color: transparent;
+      background-color: transparent;      
+      @media (max-width: 767px) {
+        bottom: 63px;
+      }
     }
     .choice-list, .choice-status{
         background-color: $default-white;

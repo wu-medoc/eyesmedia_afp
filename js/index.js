@@ -4,7 +4,7 @@ $(document).ready(function(){
     
     /*****************  index  ********************/
     //index ad
-    $(".imgLiquidFill").imgLiquid();
+    // $(".imgLiquidFill").imgLiquid();
     var swiper = new Swiper('.kv-box .swiper-container', {
         effect: 'fade',
         loop: true,

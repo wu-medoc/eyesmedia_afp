@@ -21,6 +21,10 @@
     min-height: 55px;
   }
 }
+img{
+  width: auto;
+  height: auto;
+}
 figure.image{
   img{
     max-width: -webkit-fill-available;
@@ -1336,6 +1340,7 @@ h6 {
   .products-img .img-box{
     border-radius: .5em;
     border: 1px solid $gray-light;
+    background: $gray-light;
     resize: none;
     .rwdimg{
       border-radius: .5em;
@@ -1490,17 +1495,22 @@ h6 {
           column-count: 2;
           flex-wrap: wrap;
       }    
-      .item.three p{
-          color: $cardfooter-color;
-          font-size: .9em;
-          font-weight: 700;
-          overflow:hidden;
-          height: 1.5em;
-          &:last-child{
-              font-size: .7em;
-              color: $gray-color;
-              position: absolute;
-          }
+      .item.three{        
+        min-width: 110px;
+        p{
+            color: $cardfooter-color;
+            font-size: .9em;
+            font-weight: 700;
+            height: 1.5em;
+            overflow:hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            &:last-child{
+                font-size: .7em;
+                color: $gray-color;
+                position: absolute;
+            }
+        }
       }
   }
 
