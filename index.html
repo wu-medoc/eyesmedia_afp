@@ -1907,9 +1907,12 @@
 
         <div id="loginhtml"></div>
         <!-- 版控 -->
-        <div class="container p-3 sysmsgbox">  
-            <p class="py-2">您的系統版本過低，請更新至最新版本</p>
-            <button type="button" class="btn index-btn w-100" onclick="hideDiv('.sysmsgbox')">關閉</button>
+        <div class="sysmsgcontainer">
+            <div class="container p-3 sysmsgbox">  
+                <p class="py-2">您的系統版本過低，請更新至最新版本</p>
+                <button type="button" class="btn index-btn w-100" onclick="hideDiv('.sysmsgcontainer')">關閉</button>
+            </div>
+            <div class="modal-backdrop"></div>
         </div>
         <!-- 自訂功能側邊欄 -->
         <div class="multilayer">

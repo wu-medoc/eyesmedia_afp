@@ -469,14 +469,16 @@ section.appNotifyBox{
   text-align: center;
   position: fixed;
   bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 0px);
   animation: MoveUp 0.8s ease-in;
   z-index: 1050;
 }
 @keyframes MoveUp {
   0% {
-    transform: translateY(60px);
+    transform: translate(-50%, 60px);
   }
   100% {
-    transform: translateY(0px);
+    transform: translate(-50%, 0px);
   }
 }
