@@ -1910,7 +1910,7 @@
         <div class="sysmsgcontainer">
             <div class="container p-3 sysmsgbox">  
                 <p class="py-2">您的系統版本過低，請更新至最新版本</p>
-                <button type="button" class="btn index-btn w-100" onclick="hideDiv('.sysmsgcontainer')">關閉</button>
+                <button type="button" class="btn index-btn w-100" onclick="hideDiv('.sysmsgcontainer');closeDown('.sysmsgbox');">關閉</button>
             </div>
             <div class="modal-backdrop"></div>
         </div>
@@ -2207,7 +2207,8 @@
 
             //app notify
             $('.appclose').on('click',function(){
-                $('section.appNotifyBox').addClass("d-none");
+                setTimeout(function(){$('section.appNotifyBox').addClass("d-none")},500);
+                $('.appNotify').removeAttr('style').addClass('animationMoveUpOut');
             });
             
             //qrcode

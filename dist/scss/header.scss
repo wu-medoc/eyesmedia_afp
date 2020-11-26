@@ -470,15 +470,55 @@ section.appNotifyBox{
   position: fixed;
   bottom: 0;
   left: 50%;
-  transform: translate(-50%, 0px);
+  transform: translate(-50%, 0);
   animation: MoveUp 0.8s ease-in;
+  z-index: 1050;
+}
+.animationMoveDownOut{  
+  background: #fff;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  animation: MoveUpOut 1.8s ease-in-out;
   z-index: 1050;
 }
 @keyframes MoveUp {
   0% {
-    transform: translate(-50%, 60px);
+    transform: translate(-50%, 50%);
+    opacity: 0;
   }
   100% {
     transform: translate(-50%, 0px);
+    opacity: 1;
+  }
+}
+@keyframes MoveUpOut {
+  0% {
+    transform: translate(-50%, 0);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, 50%);
+    opacity: 0;
+  }
+}
+
+.animationMoveUpOut{  
+  text-align: center;
+  position: fixed;
+  top: -100%;
+  animation: MoveDownOut 1.8s ease-in-out;
+  z-index: 1050;
+}
+@keyframes MoveDownOut {
+  0% {
+    opacity: 1;
+    top: 0;
+  }
+  100% {
+    opacity: 0;
+    top: -100%;
   }
 }

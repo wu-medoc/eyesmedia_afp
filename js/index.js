@@ -565,6 +565,10 @@ function copyUrl(){
     temp.remove(); // 移除input物件
 };
 
-function hideDiv(e){
-    $(e).toggle();
+function hideDiv(e){    
+    setTimeout(function(){$(e).toggle()},1700);
+}
+
+function closeDown(e){
+    $(e).removeAttr('style').addClass('animationMoveDownOut');
 }
