@@ -1914,6 +1914,26 @@
             </div>
             <div class="modal-backdrop"></div>
         </div>
+        <!-- 進場廣告 -->
+        <div class="enterbox d-none">
+            <div class="swiper-container enterswiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="https://wu-medoc.github.io/eyesmedia_afp/img/index/enter/enter01.png">
+                    </div>
+                    <div class="swiper-slide">                        
+                        <img src="https://wu-medoc.github.io/eyesmedia_afp/img/index/enter/enter02.png">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="https://wu-medoc.github.io/eyesmedia_afp/img/index/enter/enter03.png">
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+            <div class="modal-backdrop"></div>
+        </div>
         <!-- 自訂功能側邊欄 -->
         <div class="multilayer">
             <div class="setting">
@@ -2205,7 +2225,7 @@
                 $('#webservice').removeClass();
             });
 
-            //app notify
+            // app notify
             $('.appclose').on('click',function(){
                 setTimeout(function(){$('section.appNotifyBox').addClass("d-none")},500);
                 $('.appNotify').removeAttr('style').addClass('animationMoveUpOut');
@@ -2220,7 +2240,8 @@
                 colorLight : "#ffffff",
                 correctLevel : QRCode.CorrectLevel.H
             });
-            //var qrcode = new QRCode(document.getElementById("qrcode"), "https://mobii.ai/AppDownload");
+            // var qrcode = new QRCode(document.getElementById("qrcode"), "https://mobii.ai/AppDownload");
+
         });
 
         
@@ -2265,10 +2286,8 @@
 
         })();    
 
-        // addEventListener
-        
+        // addEventListener        
         var sortable;
-
         document.addEventListener('DOMContentLoaded', (event) => {
 
             function handleclick(e) {

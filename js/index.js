@@ -571,4 +571,5 @@ function hideDiv(e){
 
 function closeDown(e){
     $(e).removeAttr('style').addClass('animationMoveDownOut');
+    setTimeout(function(){$('.enterbox').removeClass('d-none')},1700);
 }
