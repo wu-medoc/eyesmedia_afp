@@ -311,6 +311,7 @@ function toggleDiv(e){
 }
 function hideDiv(e){    
     $(e).toggle();
+    $('body').removeAttr('style');
 }
 
 function closeDown(e){

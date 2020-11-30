@@ -2387,6 +2387,9 @@
             location.reload();
         };
 
+        document.querySelector('.enterbox').addEventListener('touchstart', (event) => {
+            $('body').attr('style','overflow: hidden');
+        });
     </script> 
     <script>            
         $(".userbox").load("userbox.html");
