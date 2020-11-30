@@ -177,10 +177,14 @@ h6 {
     //border-bottom: 1px solid #ccc;
     padding: 1px 10px;  
     color: $default-black;
+    font-size: small;
     .price-asking {
       color: tomato;
       font-weight: bold;
-      font-size: medium;
+      font-size: small;
+    }
+    .material-icons{
+      font-size: 20px;
     }
   }
   a .item-day{

@@ -250,3 +250,18 @@
     }
   }
 }
+
+/* enterbox */
+.enterbox{
+  .swiper-slide{
+    border-radius: .5em;
+    overflow: hidden;
+    max-height: 420px;
+    @media (min-width: 768px) {
+      max-height: 550px;
+    }
+    .img{
+      border-radius: .5em;
+    }
+  }
+}
