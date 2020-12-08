@@ -534,7 +534,7 @@ section.appNotifyBox{
     z-index: 1051;
     position: fixed;
     left: 50%;
-    top: 50%;
+    top: 49%;
     -o-transform: translate(-50%, -40%);
     -webkit-transform: translate(-50%, -40%);
     -moz-transform: translate(-50%, -40%);
@@ -547,8 +547,9 @@ section.appNotifyBox{
       height: auto;
     }
     .swiper-pagination{
+      position: relative;
+      padding-top: 2em;
       left: 50%;
-      bottom: 18%;
       -o-transform: translate(-50%, 0);;
       -webkit-transform: translate(-50%, 0);;
       -moz-transform: translate(-50%, 0);;

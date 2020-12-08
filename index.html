@@ -2181,21 +2181,21 @@
 
             });
             //phone 6 input
-            var demo=document.getElementById('myphoneinput');
-            input=demo.getElementsByTagName('input');
-            var iNow=0;
-            type   = !-[1,] ? 'onpropertychange' : 'oninput',
-                    limit  = 1; //滿足自動切換焦點的字元數
-            for(var i=0;i<input.length-1;i++){
-                input[i].index=i;
-                input[i][type]=function () {
-                    iNow=this.index;
-                    var that=this;
-                    setTimeout(function () {
-                        that.value.length>limit-1&&input[iNow+1].focus();
-                    },0)
-                }
-            }
+            // var demo=document.getElementById('myphoneinput');
+            // input=demo.getElementsByTagName('input');
+            // var iNow=0;
+            // type   = !-[1,] ? 'onpropertychange' : 'oninput',
+            //         limit  = 1; //滿足自動切換焦點的字元數
+            // for(var i=0;i<input.length-1;i++){
+            //     input[i].index=i;
+            //     input[i][type]=function () {
+            //         iNow=this.index;
+            //         var that=this;
+            //         setTimeout(function () {
+            //             that.value.length>limit-1&&input[iNow+1].focus();
+            //         },0)
+            //     }
+            // }
 
             //login ok
             $('.login-ok').on('click',function(){
@@ -2391,13 +2391,13 @@
             $('body').attr('style','overflow: hidden');
         });
     </script> 
+    <script src="js/index.js"></script>
+    <script src="js/indexSwiper.js"></script>
     <script>            
         $(".userbox").load("userbox.html");
         $("#loginhtml").load("login.html");
         $("#footerMobii").load("footerMobii.html");
     </script> 
-    <script src="js/index.js"></script>
-    <script src="js/indexSwiper.js"></script>
     
 </body>
 

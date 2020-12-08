@@ -76,15 +76,15 @@ $(document).ready(function(){
     if ($( ".tablist-swiper" ).hasClass("swiper-container")) {
         var swiper = new Swiper('.tablist-swiper.swiper-container', {
             paginationClickable: true,
-            slidesPerView: 5,
+            slidesPerView: 3,
             spaceBetween: 10,
             breakpoints: { 
                 320: {
-                slidesPerView: 4,
+                slidesPerView: 3,
                 spaceBetween: 10
                 },
                 480: { 
-                slidesPerView: 5,
+                slidesPerView: 4,
                 spaceBetween: 15
                 },
                 640: {
@@ -282,3 +282,4 @@ $(document).ready(function(){
         });
     }
 })
+

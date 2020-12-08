@@ -113,32 +113,32 @@ window.onload = function(){
     }); 
 
     //member, explore footer pc hide
-    var strPath1=window.document.location.pathname; 
-    if (strPath1.toLowerCase().indexOf("member")>0){
-        $('footer.for-pc').hide();
-    }; 
-    if (strPath1.toLowerCase().indexOf("explore")>0){
-        $('footer.for-pc').hide();
-    }; 
+    // var strPath1=window.document.location.pathname; 
+    // if (strPath1.toLowerCase().indexOf("member")>0){
+    //     $('footer.for-pc').hide();
+    // }; 
+    // if (strPath1.toLowerCase().indexOf("explore")>0){
+    //     $('footer.for-pc').hide();
+    // }; 
 
     //footer pc position controll 
     if($('body').height() < $(window).height())   
         $('footer.for-pc').css('position','absolute');
-    // function getRootPath(){ 
-    //     var strFullPath=window.document.location.href; 
-    //     var strPath=window.document.location.pathname; 
-    //     var pos=strFullPath.indexOf(strPath); 
-    //     var prePath=strFullPath.substring(0,pos); 
-    //     var postPath=strPath.substring(0,strPath.substr(1).indexOf('/')+1); 
-    //     return(strPath) 
-    // } 
-    // var pathfoot = ["member","explore"];
-    // console.log(getRootPath().toLowerCase().indexOf("member"));
-    // $.each(pathfoot, function( key, value ) {
-    //     if (getRootPath().toLowerCase().indexOf(value)>0){
-    //         $('footer.for-pc').hide();
-    //     }; 
-    // });
+    function getRootPath(){ 
+        var strFullPath=window.document.location.href; 
+        var strPath=window.document.location.pathname; 
+        var pos=strFullPath.indexOf(strPath); 
+        var prePath=strFullPath.substring(0,pos); 
+        var postPath=strPath.substring(0,strPath.substr(1).indexOf('/')+1); 
+        return(strPath) 
+    } 
+    var pathfoot = ["member","explore"];
+    console.log(getRootPath().toLowerCase().indexOf("member"));
+    $.each(pathfoot, function( key, value ) {
+        if (getRootPath().toLowerCase().indexOf(value)>0){
+            $('footer.for-pc').hide();
+        }; 
+    });
 
     //退貨問題記錄輸入框位置設定
     if( document.querySelector('.service-store-footer') != null ){
