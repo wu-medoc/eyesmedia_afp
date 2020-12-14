@@ -3,15 +3,9 @@ ul{
     padding: 0;
 }
 .title-box{    
+    min-width: 320px;
     button.btn{
         color: $blue-dark;
-    }
-}
-.w-84{
-    width: 87px;
-    line-height: initial;
-    @media (min-width: 376px) {
-        white-space: nowrap;
     }
 }
 .member-top-box{
@@ -84,6 +78,13 @@ ul{
 .btn-img{
     img{
         height: 24px;
+    }
+}
+.w-84{
+    width: 87px;
+    line-height: initial;
+    @media (min-width: 376px) {
+        white-space: nowrap;
     }
 }
 
@@ -264,9 +265,6 @@ ul{
 }
 
 // 我的帳戶 & mycard
-.title-box {
-    min-width: 320px;
-}
 .my-list-box{    
     border-top: 1px $gray-light solid;
     /* Chrome, Safari, Edge, Opera */
@@ -909,18 +907,6 @@ input[type="file"] {
     }
 }
 
-.fixed-btn{
-    position: fixed;
-    width: 100%;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    padding: 15px;
-    background-color: $default-white;
-    box-shadow: 0 -5px 8px rgba(0,0,0,.2);
-}
-
-
 // 我的優惠
 .discount-card{
     .item-img{
@@ -1118,17 +1104,6 @@ input[type="file"] {
     }
 }
 
-// fixed button bottom
-.fixed-btn{
-    position: fixed;
-    width: 100%;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    padding: 15px;
-    background-color: $default-white;
-    box-shadow: 0 -5px 8px rgba(0,0,0,.2);
-}
 
 /* totop arrow 40px */
 .toTop-arrow {
@@ -1166,25 +1141,25 @@ input[type="file"] {
 
 
 // other sharing
-.member-select {
-    appearance:none;
-    -moz-appearance:none;
-    -webkit-appearance:none;  
-    background: url("/img/member/forward.svg") no-repeat right center transparent;
-    width: 130px;
-    border: none;
-    border-bottom: 1px #eee solid;
-    height: 2em;
-    padding-left: 2em;
-    color:#182B56;
-}
-.member-select::-ms-expand { 
-    display: none; 
-}
-.member-select:focus{
-    box-shadow: 0 0 5px 2px #eee;    
-    border-radius: .25em;
-}
+// .member-select {
+//     appearance:none;
+//     -moz-appearance:none;
+//     -webkit-appearance:none;  
+//     background: url("/img/member/forward.svg") no-repeat right center transparent;
+//     width: 130px;
+//     border: none;
+//     border-bottom: 1px #eee solid;
+//     height: 2em;
+//     padding-left: 2em;
+//     color:#182B56;
+// }
+// .member-select::-ms-expand { 
+//     display: none; 
+// }
+// .member-select:focus{
+//     box-shadow: 0 0 5px 2px #eee;    
+//     border-radius: .25em;
+// }
 
 .note-box{    
     border-top: 5px #f8f8f8 solid;
@@ -1259,18 +1234,11 @@ input[type="file"] {
     background: linear-gradient(to bottom right,#36D1DB,#568EE3);
 }
 
-.w-10{
-    width: 10%;
-  }
-  .w-90{
-    width: 90%;
-  }
-
 .mysetting{
     height: 100vh;
 }
 
-
+/* member order */
 .wait-pay-list{
     li{
         width: 100%;
@@ -1319,7 +1287,6 @@ input[type="file"] {
         }
     }
 }
-
 .order-status{
     padding: 5em 15px 15px 15px;
     background-color: $blue-dark;
@@ -1353,27 +1320,27 @@ input[type="file"] {
     }
 }
 
-.qrcode-box{
-    padding: 50px 0;
-    border-top: 1px #eee solid;
-    p{
-        margin: 5px 0;
-        &.date-limit{
-            color: tomato;
-        }
-    }
-    .qrcode{
-        padding: 15px;
-        border: 1px #eee solid;
-        border-radius: 5px;
-        margin: 30px 15px;
-    }
-    .can-use-num{
-        padding: 5px 15px;
-        background-color: #F6F6E9;
-        color: #818181;
-    }
-}
+// .qrcode-box{
+//     padding: 50px 0;
+//     border-top: 1px #eee solid;
+//     p{
+//         margin: 5px 0;
+//         &.date-limit{
+//             color: tomato;
+//         }
+//     }
+//     .qrcode{
+//         padding: 15px;
+//         border: 1px #eee solid;
+//         border-radius: 5px;
+//         margin: 30px 15px;
+//     }
+//     .can-use-num{
+//         padding: 5px 15px;
+//         background-color: #F6F6E9;
+//         color: #818181;
+//     }
+// }
 
 .return-box{
     .reason-list{
@@ -1401,26 +1368,19 @@ input[type="file"] {
     }
 }
 
-.faq-content{
-    top: 0;
-    bottom:0;
-    position: absolute;;
-    overflow-y:auto;
-    overflow-x:hidden;
-    z-index: -1;
-    color: $blue-dark;
-    ul.decimal{
-        list-style-type:decimal;
-        padding-left: 1.5em;
-    }
-}
-.receiptiframe{
-    width: 100%;
-    min-height: 400px;
-    @media (min-width: 480px) {
-        min-height: 680px;
-    }
-}
+// .faq-content{
+//     top: 0;
+//     bottom:0;
+//     position: absolute;;
+//     overflow-y:auto;
+//     overflow-x:hidden;
+//     z-index: -1;
+//     color: $blue-dark;
+//     ul.decimal{
+//         list-style-type:decimal;
+//         padding-left: 1.5em;
+//     }
+// }
 
 
 /* member private & clause */
@@ -1451,6 +1411,15 @@ input[type="file"] {
       padding: .5em 0;
     }
   }
+}
+
+/* receipt 電子票券 */
+.receiptiframe{
+    width: 100%;
+    min-height: 400px;
+    @media (min-width: 480px) {
+        min-height: 680px;
+    }
 }
 .order-tabSubox{
     padding: 1em;
