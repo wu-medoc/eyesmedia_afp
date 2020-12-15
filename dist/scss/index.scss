@@ -811,7 +811,7 @@ header + div,
   background-color: #ccc;
   position: relative;
   left: 0;
-  top: -1px;
+  // top: -1px;
 }
 .nav-tabs-box.tablist-swiper{
   line-height: 1.3em;
@@ -1357,6 +1357,7 @@ h6 {
                 padding: .25em;
               }
               >.item:nth-child(2){
+                width: calc(100% - 15px);
                 padding: .5em;
                 .rwdimgbox-80, .rwdimgbox-80 div{
                   border-radius: 0;
@@ -1365,12 +1366,15 @@ h6 {
                   max-width: -webkit-fill-available;
                   max-width: -moz-available;
                   max-width: stretch;
+                  width: 100%;
                   p.ticket-des{
                     height: 3em;
+                    width: calc(100% - 40px);
                   }
                   .ticket-stat{
-                    float: right;
-                    left: 0;
+                    display: inline-block;
+                    position: absolute;
+                    right: 10px;
                     font-size: small;
                     color: $onlineshopping-default;
                   }

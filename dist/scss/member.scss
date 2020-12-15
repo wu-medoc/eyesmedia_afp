@@ -8,6 +8,9 @@ ul{
         color: $blue-dark;
     }
 }
+.input-box{
+    display: flex;
+}
 .member-top-box{
     background: $index-default;
     .title-box{
