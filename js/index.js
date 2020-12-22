@@ -133,7 +133,7 @@ window.onload = function(){
         return(strPath) 
     } 
     var pathfoot = ["member","explore"];
-    console.log(getRootPath().toLowerCase().indexOf("member"));
+    //console.log(getRootPath().toLowerCase().indexOf("member"));
     $.each(pathfoot, function( key, value ) {
         if (getRootPath().toLowerCase().indexOf(value)>0){
             $('footer.for-pc').hide();

@@ -1,0 +1,41 @@
+@import '../module/variable';
+
+.RESlistbox{
+    .RESbnbox{
+        position: relative;
+        img.bnImg{
+            width: 100%;
+            height: auto;
+        }
+        .bnBottom{
+            width: 100%;
+            background: #fff;
+            border-top-left-radius: 0.5em;
+            border-top-right-radius: 0.5em;
+            position: absolute;
+            bottom: 0;
+            transform: translateY(1em);
+        }
+    }
+    .REScontent{
+        width: 100%;
+        padding: 1.5em;
+        .col-12{
+            cursor: pointer;
+        }
+        h5{
+            font-weight: bold;
+        }
+        p.text-index{            
+            font-size: .95em;
+            padding: .5em 0 1em 0;
+        }
+        .resImgbox{
+            p{
+                font-weight: bold;
+                font-size: .95em;
+                padding: .5em 0 1em 0;
+            }
+        }
+    }
+}

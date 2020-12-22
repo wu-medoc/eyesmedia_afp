@@ -1,0 +1,31 @@
+@import '../module/variable';
+
+/* shopping index header */
+.shopping-headerbox{
+    .shopping-headermobile{
+        background-color: $onlineshopping-default;
+        position: relative;
+        height: 56px;
+        top: 0;
+        padding-top: .25em;
+        .go-cart{
+            position: absolute;
+            right: .5em;
+        }
+    }
+}
+.shoppingkv-mt{
+  overflow: hidden;
+  margin-top: 56px;
+}
+
+/* shopping main */
+.material-icons.offer{
+    padding-right: 2px;
+    transform:scaleX(-1);
+}
+
+/* shopping-adbn */
+.shopping-adimgbox .rwdimg-h20{
+    border-radius: 0.5em;
+}
