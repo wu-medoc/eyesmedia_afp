@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=1, user-scalable=no">
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../js/vendor/bs4/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../js/vendor/jquery-editable-select-master/dist/jquery-editable-select.min.css">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+    <!-- vendor css -->
+    <link rel="stylesheet" href="../js/vendor/swiper/css/swiper.min.css">
+
+    <!-- custom css -->
+    <link rel="stylesheet" href="../styles/css.min.css">    
+    <link rel="stylesheet" href="../styles/style.min.css">
+    <link rel="stylesheet" href="../styles/animate.min.css">
+
+    <title>Mobii! - 遊戲館</title>
+</head>
+
+<body>    
+<div class="wrap container">
+    <header>
+        <div class="header-secondary container">
+            <div class="index-flex justify-content-between">
+                <div class="item two">
+                    <div class="close-btn">
+                        <button class="btn" onclick="history.back();" data-toggle="tooltip" data-placement="bottom" title="回上一頁">
+                            <i class="material-icons">&#xe314;</i>
+                        </button>
+                    </div>
+                </div>
+                <div class="item three text-center">
+                    <div class="title-name">遊戲館</div>
+                </div>
+                <div class="item two">
+                </div>
+            </div>
+        </div>  
+    </header>
+    <main>
+        <div class="banner-box">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="../img/mission/game-bn01.png" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="../img/mission/game-bn01.png" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="../img/mission/game-bn01.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="game-list p-3 div-switch d-block">
+            <h6 class="py-2">遊戲列表</h6>
+            <div class="member-flex flex-gamebn">
+                <div class="item" onclick="location.replace('game/luckspin/luckspin.html');">
+                    <img src="../img/mission/banner2-s.png" alt="" class="img-fluid border-radius5">
+                </div>
+                <div class="item" onclick="location.replace('game/scratch/scratch.html');">
+                    <img src="../img/mission/banner3-s.png" alt="" class="img-fluid border-radius5">
+                </div>
+            </div>
+        </div>
+        <div class="no-data div-switch d-none">
+            <img src="../img/share/game-null.png" alt="">
+            <p>Oops！下次再來玩...</p>
+        </div>
+        <div class="w-100 text-center">
+            <button class="btn index-outline-btn" onclick="div_switch()">畫面切換</button>
+        </div>
+    </main>
+    
+</div> 
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="../js/vendor/bs4/js/jquery-3.2.1.min.js"></script>
+    <!-- Latest compiled and minified JavaScript -->    
+    <script src="../js/vendor/bs4/js/popper.min.js"></script>
+    <script src="../js/vendor/bs4/js/bootstrap.min.js"></script>
+    <script src="../js/vendor/jquery-editable-select-master/dist/jquery-editable-select.js"></script>
+
+    <!-- vendor js -->
+    <script src="../js/vendor/swiper/js/swiper.min.js"></script>
+    <script src="../js/vendor/imgLiquid.js"></script>
+    <script src="../js/animateCss.js"></script>
+
+    <!-- custom js -->
+    <script>
+    $(document).ready(function() {
+        var mySwiper = new Swiper ('.swiper-container', {
+            observer:true,
+            observeParents:true,
+            slidesPerView: 1,
+            spaceBetween: 0,
+            preloadImages: true,
+            updateOnImagesReady : true,
+            loop: true,
+        });
+        callLayerOne();
+    });
+    </script>
+    <script src="../js/index.js"></script>
+    <script src="../js/indexSwiper.js"></script>
+</body>
+
+</html>

@@ -201,7 +201,7 @@ function initMap() {
             icon: iconBase + 'user.svg'
         },
         shopp: {
-            icon: iconBase + 'map_shopping.svg'
+            icon: iconBase + '2400.svg'
         },
         taxi: {
             icon: iconBase + 'taxi-dot.svg'

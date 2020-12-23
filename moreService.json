@@ -22,7 +22,7 @@
     "service": "娛樂放鬆",
     "img": "category2_games",
     "tit": "遊戲",
-    "link": "game/game.html",
+    "link": "game-center/game.html",
     "item": 3,
     "disable": 1
   },

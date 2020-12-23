@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=1, user-scalable=no">
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../../js/vendor/bs4/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../js/vendor/jquery-editable-select-master/dist/jquery-editable-select.min.css">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+    <!-- vendor css -->
+    <link rel="stylesheet" href="../../js/vendor/swiper/css/swiper.min.css">
+
+    <!-- custom css -->
+    <link rel="stylesheet" href="../../styles/css.min.css">
+    
+    <link rel="stylesheet" href="../../styles/style.min.css">
+    <link rel="stylesheet" href="../../styles/member.min.css">
+    <link rel="stylesheet" href="../../styles/cell-verification.min.css">
+    <link rel="stylesheet" href="../../styles/animate.min.css">
+    <link rel="stylesheet" href="../../js/vendor/popoPicker-master/css/popoPicker.css">
+
+    <title>Mobii! - 我的首頁</title>
+</head>
+
+<body>    
+<div class="wrap container">
+
+    <!--手機驗證2-->
+    <div class="myphone">
+        <div class="headerbox container title-box">
+            <div class="item icon-btn">                        
+                <button class="btn px-0" onclick="history.back()" data-toggle="tooltip" data-placement="bottom" title="回上一頁">
+                    <i class="material-icons">&#xe314;</i>
+                </button>
+            </div>
+            <div class="item title-name">手機驗證</div>
+            <div class="item ctrl-btn"></div>
+        </div> 
+        <div class="container px-3">            
+            <div class="div-switch d-block">                
+                <h6 class="text-bluedk pt-4">您的手機號碼已完成驗證，如需變更手機號碼，請重新驗證。</h6>
+                <p class="text-gray small-80 py-3">手機號碼：0912345678</p>
+                <div class="fixed-btn container">
+                    <button class="btn next-btn w-100"  onclick="div_switch()">重新驗證</button>
+                </div> 
+            </div>
+            <div class="div-switch d-none"> 
+                <h6 class="text-bluedk pt-4">請完成手機認證，馬上享受Mobii!優惠折扣</h6>
+                <p class="text-gray small-80 py-3">未完成手機認證，將無法取得會員專屬權益與優惠折扣喔!</p>
+                <div class="row vphone">
+                    <div class="col-12 text-left pt-4">
+                        帳號
+                    </div>                            
+                    <div class="col-12 pb-3">
+                        <input type="tel" placeholder="請輸入註冊時使用的手機號碼" id="vphone">
+                        <div class="small-warning pl-0 warningNote invisible"><span>請輸入帳號</span></div>
+                    </div>
+                    <div class="col-12 text-left">
+                        驗證碼
+                    </div>                            
+                    <div class="col-7 pb-3 pr-0">
+                        <input type="tel" placeholder="請輸入收到的驗證碼" id="vcode">
+                        <div class="small-warning t-gray pl-0 stepV1 d-none"><p>沒有收到驗證碼？<span class="text-blue">可重新點選「取得驗證碼」</span></p></div>
+                        <!-- <div class="small-warning pl-0 warningNote invisible"><span>請輸入驗證碼</span></div> -->
+                    </div>                          
+                    <div class="col-5 pl-1">
+                        <button type="button" class="btn index-btn border-radius5 w-100 px-1 small-70" id="getPhone">取得手機驗證碼</button>
+                    </div>
+                </div>                
+                <div class="fixed-btn container">
+                    <button class="btn next-btn w-100"  onclick="msgpara('<p>手機驗證失敗！<br>驗證碼錯誤，請重新取得驗證碼<br>並正確輸入</p>','確定','')" data-dismiss="modal" aria-label="Close">立即驗證</button>
+                </div>   
+            </div>
+        </div> 
+    </div>   
+
+    <div class="addheight"></div>
+</div> 
+<div id="loginhtml"></div>
+  
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="../../js/vendor/bs4/js/jquery-3.2.1.min.js"></script>
+    <!-- Latest compiled and minified JavaScript -->    
+    <script src="../../js/vendor/bs4/js/popper.min.js"></script>
+    <script src="../../js/vendor/bs4/js/bootstrap.min.js"></script>
+    <script src="../../js/vendor/jquery-editable-select-master/dist/jquery-editable-select.js"></script>
+
+    <!-- vendor js -->
+    <script src="../../js/vendor/swiper/js/swiper.min.js"></script>
+    <script src="../../js/vendor/imgLiquid.js"></script>
+    <script src="../../js/vendor/popoPicker-master/js/popoPicker.js"></script>
+
+    <!-- custom js -->    
+    <script src="../../js/animateCss.js"></script>
+
+    <script>    
+        var now,hours,minutes,seconds,timeValue;
+        function showtime(){
+            now = new Date();
+            hours = now.getHours();
+            minutes = now.getMinutes();
+            seconds = now.getSeconds();
+            timeValue = (hours >= 12) ? "下午 " : "上午 ";
+            timeValue += ((hours > 12) ? hours - 12 : hours) + " 點";
+            timeValue += ((minutes < 10) ? " 0" : " ") + minutes + " 分";
+            timeValue += ((seconds < 10) ? " 0" : " ") + seconds + " 秒";
+            let x = 0 ;
+            x = x + (59 - seconds);
+            //document.getElementById("getPhone").innerHTML = "剩餘"+ x +"秒";
+            $('#getPhone').addClass('unable').html("剩餘"+ x +"秒");
+            if(x != 0) {
+                setTimeout("showtime()",1000);
+            }
+        }
+
+        $(window).on('load',function() {
+
+            // 手機驗證setp    
+            let warningfag = 1;
+            $('#getPhone').on("click",function(){
+                warningfag = warningfag % 2;
+                switch(warningfag){
+                    case 0:                        
+                        $('#getPhone').addClass('unable');
+                        $('#vphone').val('0912345678');
+                        $('.stepV1').removeClass('d-none');
+                        $('.warningNote').toggleClass('invisible');
+                        $('.warningNote').siblings('input[type=text]').toggleClass("bb-org");
+                        showtime();
+                        break;
+                    case 1:
+                        $('#getPhone').removeClass('unable').html("取得手機驗證碼");
+                        $('#vphone').val('');
+                        $('.stepV1').addClass('d-none');
+                        $('.warningNote').toggleClass('invisible');
+                        $('.warningNote').siblings('input[type=text]').toggleClass("bb-org");
+                        break;
+                    default:
+                        $('.warningNote').toggleClass('invisible');
+                        $('.warningNote').siblings('input[type=text]').toggleClass("bb-org");
+                        break;
+                }
+                warningfag += 1;
+            });
+        });
+
+        $("#loginhtml").load("../../login.html");
+    </script>
+    <script src="../../js/index.js"></script>
+</body>
+
+</html>

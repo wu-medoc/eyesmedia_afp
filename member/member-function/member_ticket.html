@@ -1,0 +1,506 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=1, user-scalable=no">
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../../js/vendor/bs4/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../js/vendor/jquery-editable-select-master/dist/jquery-editable-select.min.css">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+    <!-- vendor css -->
+    <link rel="stylesheet" href="../../js/vendor/swiper/css/swiper.min.css">
+
+    <!-- custom css -->
+    <link rel="stylesheet" href="../../styles/css.min.css">
+    
+    <link rel="stylesheet" href="../../styles/style.min.css">
+    <link rel="stylesheet" href="../../styles/member.min.css">
+    <link rel="stylesheet" href="../../styles/animate.min.css">
+
+    <title>Mobii! - 我的首頁</title>
+</head>
+
+<body>    
+<div class="wrap container">
+    <!--我的票券-->
+    <header>
+        <div class="header-secondary container">
+            <div class="index-flex justify-content-between">
+                <div class="item two">
+                    <div class="close-btn">
+                         <button type="button" class="btn" onclick="animRouter('../member/member_index.html')" data-toggle="tooltip" data-placement="bottom" title="回上一頁">
+                            <i class="material-icons">&#xe314;</i>
+                        </button>
+                    </div>
+                </div>
+                <div class="item three text-center">
+                    <div class="title-name">我的車票</div>
+                </div>
+                <div class="item two">
+                </div>
+            </div>
+        </div>
+    </header>       
+    <div class="iconpage">
+        <!-- tab content for record-->
+        <div class="afp-tab-box">
+            <div class="afp-tab">
+                <div class="nav-tabs-box">
+                    <!-- Nav tabs -->                                
+                    <ul class="nav-tab-list nav nav-tabs nav-line d-flex justify-content-around" role="tablist">
+                            <li role="presentation" class="active">
+                                <a href="#tickettag01" class="tablist-link active" aria-controls="tickettag01" role="tab" data-toggle="tab" aria-selected="true">可用票券</a>
+                            </li>
+                            <li role="presentation">
+                                <a href="#tickettag02" class="tablist-link" aria-controls="tickettag02" role="tab" data-toggle="tab" aria-selected="false">歷史票券</a>
+                            </li>
+                    </ul>    
+                    <div class="tab-line w-100"></div> 
+                </div>
+                <!-- Tab panes -->
+                <div class="tab-content">
+                    <div role="tabpanel" class="tab-pane fade active show w-100" id="tickettag01">  
+                        <div class="div-switch d-none">
+                            <div class="d-flex py-1">
+                                <div class="w-80 pl-1">
+                                    <div class="input-box border border-radius5">
+                                        <button class="btn"><i class="material-icons">&#xE8B6;</i></button>
+                                        <input type="text" placeholder="搜尋" class="border-0">
+                                    </div>
+                                </div>
+                                <div class="w-20">
+                                    <button class="btn w-100" onclick="div_switch();">取消</button>
+                                </div>
+                            </div>
+                        </div>     
+                        <div class="div-switch d-block">
+                            <div class="choice-filter-box py-1">
+                                <div class="flex-inline-between">
+                                    <div class="item center-v"> 選擇分類</div>
+                                    <div class="item pr-2">
+                                        <button class="btn px-0 filter-item" data-filter="type"><i class="material-icons">&#xE313;</i></button>
+                                    </div>
+                                </div>
+                                <div class="filter-box">
+                                    <button class="btn px-0 item-search" onclick="div_switch();"><i class="material-icons">&#xe8b6;</i></button>
+                                </div>
+                                <div class="filter-box" onclick="callsortLayer('.sortpage1');">
+                                    <button class="btn px-0"><i class="material-icons">&#xE152;</i></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="filter-outbox">
+                            <div class="filter-main">
+                                <div class="mask-container d-none w-100 h-100"></div>
+                                <div class="mycoin-couponbox card-columns px-3">                            
+                                    <div class="card border-radius5">
+                                        <div class="ticket-card card-body">
+                                            <div class="card-text" onclick="callLayer('.useticket')">  
+                                                <div class="ticket-card-grid">
+                                                    <div class="item">            
+                                                        <img src="../../img/share/2600_w.png" class="nearbyimg" alt="">交通     
+                                                    </div>
+                                                    <div class="item d-flex">
+                                                        <div class="item one img-box rwdimgbox-80">
+                                                            <div style="background-image: url('https://picsum.photos/300/300/?random=1');" class="rwdimg"></div>   
+                                                        </div>                                   
+                                                        <div class="item three px-2">
+                                                            <div class="ticket-stat">未啟用</div>
+                                                            <p>高雄捷運</p>
+                                                            <p class="ticket-des">高雄捷運一日 QR CODE 搭乘券</p>
+                                                            <p>使用效期：2020/06/23 ~ 2020/12/20</p>
+                                                        </div>  
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>  
+                                    <div class="card border-radius5">
+                                        <div class="ticket-card card-body">
+                                            <div class="card-text" onclick="callLayer('.useticket')">  
+                                                <div class="ticket-card-grid">
+                                                    <div class="item">            
+                                                        <img src="../../img/share/2600_w.png" class="nearbyimg" alt="">交通     
+                                                    </div>
+                                                    <div class="item d-flex">
+                                                        <div class="item one img-box rwdimgbox-80">
+                                                            <div style="background-image: url('https://picsum.photos/200/300/?random=2');" class="rwdimg"></div>   
+                                                        </div>                                   
+                                                        <div class="item three px-2">
+                                                            <div class="ticket-stat">使用中</div>
+                                                            <p>高雄捷運</p>
+                                                            <p class="ticket-des">高雄捷運一日 QR CODE 搭乘券</p>
+                                                            <p>使用效期：2020/06/30</p>
+                                                        </div>  
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>  
+                                    <div class="card border-radius5">
+                                        <div class="ticket-card card-body">
+                                            <div class="card-text" onclick="callLayer('.useticket')">  
+                                                <div class="ticket-card-grid">
+                                                    <div class="item">            
+                                                        <img src="../../img/share/2600_w.png" class="nearbyimg" alt="">交通     
+                                                    </div>
+                                                    <div class="item d-flex">
+                                                        <div class="item one img-box rwdimgbox-80">
+                                                            <div style="background-image: url('https://picsum.photos/300/200/?random=3');" class="rwdimg"></div>   
+                                                        </div>                                   
+                                                        <div class="item three px-2">
+                                                            <div class="ticket-stat">未啟用</div>
+                                                            <p>高雄捷運</p>
+                                                            <p class="ticket-des">菲絲蔻指定商品抵用券$400(振興券適用)</p>
+                                                            <p>使用效期：2020/06/23 ~ 2020/12/20</p>
+                                                        </div>  
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>  
+                                </div>
+                            </div>
+                            <!-- 目錄篩選視窗 -->
+                            <div id="type" class="filter-content pb-wrap">
+                                <ul class="open-page-ul">
+                                    <li class="flex-inline-between" (click)="dirFilter()">                
+                                        <div>
+                                            全部顯示
+                                        </div>
+                                        <div>
+                                            <span>22</span>
+                                            <i class="material-icons check">&#xe5ca;</i>
+                                        </div>   
+                                    </li>
+                                    <li class="flex-inline-between active" (click)="dirFilter()">
+                                        <div>
+                                            台北
+                                        </div>
+                                        <div>
+                                            <span>8</span>
+                                            <i class="material-icons check">&#xe5ca;</i>
+                                        </div>                
+                                    </li>
+                                    <li class="flex-inline-between" (click)="dirFilter()">
+                                        <div>
+                                            台中
+                                        </div>
+                                        <div>
+                                            <span>2</span>
+                                            <i class="material-icons check">&#xe5ca;</i>
+                                        </div>                
+                                    </li>
+                                    <li class="flex-inline-between" onclick="">
+                                        <div>
+                                            高雄
+                                        </div>
+                                        <div>
+                                            <span>2</span>
+                                            <i class="material-icons check">&#xe5ca;</i>
+                                        </div>                
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>            
+                    <div role="tabpanel" class="tab-pane fade w-100" id="tickettag02">  
+                        <div class="div-switch d-none">
+                            <div class="d-flex py-1">
+                                <div class="w-80 pl-1">
+                                    <div class="input-box border border-radius5">
+                                        <button class="btn"><i class="material-icons">&#xE8B6;</i></button>
+                                        <input type="text" placeholder="搜尋" class="border-0">
+                                    </div>
+                                </div>
+                                <div class="w-20">
+                                    <button class="btn w-100" onclick="div_switch();">取消</button>
+                                </div>
+                            </div>
+                        </div>     
+                        <div class="div-switch d-block">
+                            <div class="choice-filter-box py-1">
+                                <div class="flex-inline-between">
+                                    <div class="item center-v"> 選擇分類</div>
+                                    <div class="item pr-2">
+                                        <button class="btn px-0 filter-item" data-filter="type1"><i class="material-icons">&#xE313;</i></button>
+                                    </div>
+                                </div>
+                                <div class="filter-box">
+                                    <button class="btn px-0 item-search" onclick="div_switch();"><i class="material-icons">&#xe8b6;</i></button>
+                                </div>
+                                <div class="filter-box" onclick="callsortLayer('.sortpage1');">
+                                    <button class="btn px-0"><i class="material-icons">&#xE152;</i></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="filter-outbox">
+                            <div class="filter-main">
+                                <div class="mask-container d-none w-100 h-100"></div>
+                                <div class="mycoin-couponbox card-columns px-3">                            
+                                    <div class="card border-radius5">
+                                        <div class="ticket-card card-body">
+                                            <div class="card-text" onclick="callLayer('.useticket')">  
+                                                <div class="ticket-card-grid">
+                                                    <div class="item">            
+                                                        <img src="../../img/share/2600_w.png" class="nearbyimg" alt="">交通     
+                                                    </div>
+                                                    <div class="item d-flex">
+                                                        <div class="item one img-box rwdimgbox-80">
+                                                            <div style="background-image: url('https://picsum.photos/300/300/?random=1');" class="rwdimg"></div>   
+                                                        </div>                                   
+                                                        <div class="item three px-2">
+                                                            <div class="ticket-stat">已過期</div>
+                                                            <p>高雄捷運</p>
+                                                            <p class="ticket-des">高雄捷運一日 QR CODE 搭乘券</p>
+                                                            <p>使用效期：2020/06/23 ~ 2020/12/20</p>
+                                                        </div>  
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>  
+                                    <div class="card border-radius5">
+                                        <div class="ticket-card card-body">
+                                            <div class="card-text" onclick="callLayer('.useticket')">  
+                                                <div class="ticket-card-grid">
+                                                    <div class="item">            
+                                                        <img src="../../img/share/2600_w.png" class="nearbyimg" alt="">交通     
+                                                    </div>
+                                                    <div class="item d-flex">
+                                                        <div class="item one img-box rwdimgbox-80">
+                                                            <div style="background-image: url('https://picsum.photos/200/300/?random=2');" class="rwdimg"></div>   
+                                                        </div>                                   
+                                                        <div class="item three px-2">
+                                                            <div class="ticket-stat">已過期</div>
+                                                            <p>高雄捷運</p>
+                                                            <p class="ticket-des">高雄捷運二日 QR CODE 搭乘券</p>
+                                                            <p>使用效期：2020/06/30</p>
+                                                        </div>  
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>  
+                                </div>
+                            </div>
+                            <!-- 目錄篩選視窗 -->
+                            <div id="type1" class="filter-content pb-wrap">
+                                <ul class="open-page-ul">
+                                    <li class="flex-inline-between" (click)="dirFilter()">                
+                                        <div>
+                                            全部顯示
+                                        </div>
+                                        <div>
+                                            <span>22</span>
+                                            <i class="material-icons check">&#xe5ca;</i>
+                                        </div>   
+                                    </li>
+                                    <li class="flex-inline-between active" (click)="dirFilter()">
+                                        <div>
+                                            台北
+                                        </div>
+                                        <div>
+                                            <span>8</span>
+                                            <i class="material-icons check">&#xe5ca;</i>
+                                        </div>                
+                                    </li>
+                                    <li class="flex-inline-between" (click)="dirFilter()">
+                                        <div>
+                                            台中
+                                        </div>
+                                        <div>
+                                            <span>2</span>
+                                            <i class="material-icons check">&#xe5ca;</i>
+                                        </div>                
+                                    </li>
+                                    <li class="flex-inline-between" onclick="">
+                                        <div>
+                                            高雄
+                                        </div>
+                                        <div>
+                                            <span>2</span>
+                                            <i class="material-icons check">&#xe5ca;</i>
+                                        </div>                
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>  
+                </div>
+            </div>                        
+        </div> 
+    </div>         
+
+
+    <!--篩選-->
+    <div class="sortlayer">       
+        <div class="sortpage1">
+            <div id="open-pagebox">
+                <div class="open-page-title flex-inline-between">
+                    <button class="btn" onclick="backsortLayer();">
+                        <i class="material-icons">&#xe314;</i>
+                    </button>
+                    <div class="title-txt">
+                        商品分類
+                    </div>
+                    <button class="btn" onclick="backsortLayer();">
+                        確定
+                    </button>
+                </div>
+                <ul class="open-page-ul">
+                    <li class="flex-inline-between">
+                        <div class="">
+                            全部顯示
+                        </div>
+                        <div class="">
+                            <i class="material-icons check">&#xe5ca;</i>
+                        </div>                
+                    </li>
+                    <li class="flex-inline-between">
+                        <div class="">
+                            內容文字
+                        </div>
+                        <div class="">
+                            <span>3</span>
+                            <i class="material-icons check">&#xe5ca;</i>    
+                        </div>                
+                    </li>
+                    <li class="flex-inline-between">
+                        <div class="">
+                            內容文字
+                        </div>
+                        <div class="">
+                            <span>51</span>
+                            <i class="material-icons check">&#xe5ca;</i>    
+                        </div>                
+                    </li>
+                    <li class="flex-inline-between">
+                        <div class="">
+                            內容文字
+                        </div>
+                        <div class="">
+                            <span>121</span>
+                            <i class="material-icons check">&#xe5ca;</i>    
+                        </div>                
+                    </li>
+                    <li class="flex-inline-between">
+                        <div class="">
+                            內容文字
+                        </div>
+                        <div class="">
+                            <span>1</span>
+                            <i class="material-icons check">&#xe5ca;</i>    
+                        </div>                
+                    </li>
+                    <li class="flex-inline-between active">
+                        <div class="">
+                            內容文字
+                        </div>
+                        <div class="">
+                            <span>1</span>
+                            <i class="material-icons check">&#xe5ca;</i>    
+                        </div>                
+                    </li>
+                </ul>
+            </div>
+        </div>    
+    </div> 
+
+    <!--次頁-->
+    <div class="multilayer">       
+        <div class="useticket">
+            <div class="title-box">
+                <div class="item icon-btn">
+                    <button class="btn px-0" onclick="backLayer();" data-toggle="tooltip" data-placement="bottom" title="回上一頁">
+                        <i class="material-icons">&#xe314;</i>
+                    </button>
+                </div>
+                <div class="item title-name">使用票券</div>
+                <div class="item icon-btn">
+                    <button class="btn bluedk-outline-btn bt-small" onclick="location.href='../../offers/VoucherDetail.html#tk'">票券詳情</button>
+                </div>
+            </div>
+            <div class="text-bluedk text-center">
+                高雄捷運股份有限公司
+                <h6 class="ticket-desc">捷運一日效期QRCODE票</h6>
+                <div class="border rounded p-3 m-3"><img src="../../img/member/QRcode.svg"></div>
+                <div class="bg-F6F6E9 text-org p-2">狀態：<span class="tk-stat">未使用</span></div>
+                <small>使用期限：2019/11/12 ~ 2019/11/29</small>
+            </div>
+        </div>    
+    </div>
+
+</div> 
+<div id="loginhtml"></div>
+<div id="footerMobii"></div>  
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="../../js/vendor/bs4/js/jquery-3.2.1.min.js"></script>
+    <!-- Latest compiled and minified JavaScript -->    
+    <script src="../../js/vendor/bs4/js/popper.min.js"></script>
+    <script src="../../js/vendor/bs4/js/bootstrap.min.js"></script> 
+    <script src="../../js/vendor/jquery-editable-select-master/dist/jquery-editable-select.js"></script>
+
+    <!-- vendor js -->
+    <script src="../../js/vendor/swiper/js/swiper.min.js"></script>
+    <script src="../../js/vendor/imgLiquid.js"></script>
+
+    <!-- custom js -->    
+    <script src="../../js/animateCss.js"></script>
+    <script> 
+        
+        // 開啟篩選清單
+        $('.filter-item').on('click', function(){
+            $(this).toggleClass('active').siblings().removeClass('active');
+            var filter = $(this).data('filter');
+            $('#' + filter).toggleClass('is-open');
+            $('#' + filter).siblings().removeClass('is-open');
+            $('#' + filter).parents('.tab-pane').children().find(".mask-container").removeClass("d-block");
+            if ($(this).hasClass("active")) {
+                $('#' + filter).parents('.tab-pane').children().find(".mask-container").addClass("d-block");
+            }
+        })
+        // 篩選列表勾選控制
+        $('.open-page-ul li').on('click',function(){
+            $(this).toggleClass('active').siblings().removeClass('active');
+        });
+
+        //ticket stat
+        $('.card-text').on('click',function(){
+            var desc = $(this).children().find('.ticket-des').text();
+            var stat1 = $(this).children().find('.ticket-stat').text();
+            var stat2 = "";
+            switch(stat1){
+                case "已過期":
+                    stat2 = "已過期";
+                    break;
+                case "使用中":
+                    stat2 = "使用中";
+                    break;
+                default :
+                    stat2 = "未使用";
+                    break;
+            }
+            $('.tk-stat').text(stat2);
+            $('.ticket-desc').text(desc);    
+            console.log(stat1);
+        });
+    </script>
+
+    <script>    
+        $("#loginhtml").load("../../login.html");
+        $("#footerMobii").load("../../footerMobii.html"); 
+    </script>
+    <script src="../../js/index.js"></script>
+</body>
+
+</html>

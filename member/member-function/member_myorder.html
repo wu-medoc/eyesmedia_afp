@@ -1,0 +1,438 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=1, user-scalable=no">
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../../js/vendor/bs4/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../js/vendor/jquery-editable-select-master/dist/jquery-editable-select.min.css">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+    <!-- vendor css -->
+    <link rel="stylesheet" href="../../js/vendor/swiper/css/swiper.min.css">
+
+    <!-- custom css -->
+    <link rel="stylesheet" href="../../styles/css.min.css">
+    
+    <link rel="stylesheet" href="../../styles/style.min.css">
+    <link rel="stylesheet" href="../../styles/member.min.css">
+    <link rel="stylesheet" href="../../styles/member-order.min.css">
+    <link rel="stylesheet" href="../../styles/animate.min.css">
+
+    <title>Mobii! - 我的訂單</title>
+</head>
+
+<body>
+    <div class="wrap container">
+        <header>
+            <div class="header-secondary container">
+                <div class="index-flex justify-content-between">
+                    <div class="item two">
+                             <button type="button" class="btn" onclick="animRouter('../member/member_index.html')" data-toggle="tooltip" data-placement="bottom" title="回上一頁">
+                                <i class="material-icons">&#xe314;</i>
+                            </button>
+                    </div>
+                    <div class="item three text-center">
+                        <div class="title-name">我的訂單</div>
+                    </div>
+                    <div class="item two">
+                    </div>
+                </div>
+            </div>
+        </header>   
+        <div class="">  
+        <!-- tab content for record-->
+        <div class="afp-tab-box">
+            <div class="afp-tab">
+                <div class="nav-tabs-box">
+                    <!-- Nav tabs -->                                
+                    <ul class="nav-tab-list nav nav-tabs nav-line d-flex justify-content-around" role="tablist" id="mainTab">
+                            <li role="presentation" class="active">
+                                <a href="#ordertag01" class="tablist-link active" aria-controls="ordertag01" role="tab" data-toggle="tab" aria-selected="true">電子票券</a>
+                            </li>
+                            <li role="presentation">
+                                <a href="#ordertag02" class="tablist-link" aria-controls="ordertag02" role="tab" data-toggle="tab" aria-selected="false">購物商城</a>
+                            </li>
+                    </ul>    
+                    <div class="tab-line w-100"></div> 
+                </div>
+                <!-- Tab panes -->
+                <div class="tab-content tab-line">
+                    <!-- 電子票券 -->
+                    <div role="tabpanel" class="tab-pane fade active show w-100" id="ordertag01">  
+                        <div class="order-tabSubox">
+                            <div class="orderticket-swiper swiper-container">
+                                <!-- Nav tabs -->                                
+                                <ul class="swiper-wrapper nav nav-tabSub" role="tablist">
+                                    <li role="presentation" class="active swiper-slide">
+                                        <a href="#ticket-tab-1" class="tabsub-link active" aria-controls="ticket-tab-1" role="tab" data-toggle="tab" aria-selected="true">處理中</a>
+                                    </li>
+                                    <li role="presentation" class="swiper-slide">
+                                        <a href="#ticket-tab-2" class="tabsub-link" aria-controls="ticket-tab-2" role="tab" data-toggle="tab" aria-selected="false">已完成</a>
+                                    </li>
+                                    <li role="presentation" class="swiper-slide">
+                                        <a href="#ticket-tab-3" class="tabsub-link" aria-controls="ticket-tab-3" role="tab" data-toggle="tab" aria-selected="false">退貨</a>
+                                    </li>
+                                </ul>     
+                            </div>
+                        </div>
+                        <!-- Tab panes -->
+                        <div class="tab-content tab-line mt-1">
+                            <!-- 處理中 -->
+                            <div role="tabpanel" class="tab-pane active" id="ticket-tab-1">
+                                <div class="wait-pay-list">
+                                    <ul>
+                                        <li onclick="location.href='member_myorder_detail.html#tk0'">
+                                            <div class="item rwdimgbox-80">
+                                                <div style="background-image: url('https://picsum.photos/id/670/600/400');" class="rwdimg"></div>
+                                            </div>
+                                            <div class="item item-info">
+                                                <p>高雄捷運一日 QR CODE 搭乘券</p>
+                                                <p class="price-asking">NT$ 120</p>
+                                                <p>2020/01/20</p>
+                                            </div>
+                                            <div class="item item-type">
+                                                <p></p>
+                                                <p><span>1</span>樣商品</p>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!-- 已完成 -->
+                            <div role="tabpanel" class="tab-pane" id="ticket-tab-2">
+                                <div class="wait-pay-list">
+                                    <ul>
+                                        <li onclick="location.href='member_myorder_detail.html#tk1'">
+                                            <div class="item rwdimgbox-80">
+                                                <div style="background-image: url('https://picsum.photos/id/684/600/400');" class="rwdimg"></div>
+                                            </div>
+                                            <div class="item item-info">
+                                                <p>高雄捷運一日 QR CODE 搭乘券</p>
+                                                <p class="price-asking">NT$ 120</p>
+                                                <p>2020/01/20</p>
+                                            </div>
+                                            <div class="item item-type">
+                                                <p class="text-org">未使用</p>
+                                                <p><span>1</span>樣商品</p>
+                                            </div>
+                                        </li>
+                                        <li onclick="location.href='member_myorder_detail.html#tk2'">
+                                            <div class="item rwdimgbox-80">
+                                                <div style="background-image: url('https://picsum.photos/id/680/600/600');" class="rwdimg"></div>
+                                            </div>
+                                            <div class="item item-info">
+                                                <p>高雄捷運一日 QR CODE 搭乘券</p>
+                                                <p class="price-asking">NT$ 120</p>
+                                                <p>2020/01/20</p>
+                                            </div>
+                                            <div class="item item-type">
+                                                <p class="text-muted">已使用</p>
+                                                <p><span>1</span>樣商品</p>
+                                            </div>
+                                        </li>
+                                        <li onclick="location.href='member_myorder_detail.html#tk3'">
+                                            <div class="item rwdimgbox-80">
+                                                <div style="background-image: url('https://picsum.photos/id/682/400/600');" class="rwdimg"></div>
+                                            </div>
+                                            <div class="item item-info">
+                                                <p>高雄捷運一日 QR CODE 搭乘券</p>
+                                                <p class="price-asking">NT$ 120</p>
+                                                <p>2020/01/20</p>
+                                            </div>
+                                            <div class="item item-type">
+                                                <p class="text-muted">已逾期</p>
+                                                <p><span>1</span>樣商品</p>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!-- 退貨 -->
+                            <div role="tabpanel" class="tab-pane" id="ticket-tab-3">
+                                <div class="wait-pay-list">
+                                    <ul>
+                                        <li onclick="location.href='member_myorder_detail.html#tk4'">
+                                            <div class="item rwdimgbox-80">
+                                                <div style="background-image: url('https://picsum.photos/id/687/600/600');" class="rwdimg"></div>
+                                            </div>
+                                            <div class="item item-info">
+                                                <p>高雄捷運一日 QR CODE 搭乘券</p>
+                                                <p class="price-asking">NT$ 120</p>
+                                                <p>2020/01/20</p>
+                                            </div>
+                                            <div class="item item-type">
+                                                <p class="text-org">退款中</p>
+                                                <p><span>1</span>樣商品</p>
+                                            </div>
+                                        </li>
+                                        <li onclick="location.href='member_myorder_detail.html#tk5'">
+                                            <div class="item rwdimgbox-80">
+                                                <div style="background-image: url('https://picsum.photos/id/688/600/400');" class="rwdimg"></div>
+                                            </div>
+                                            <div class="item item-info">
+                                                <p>高雄捷運一日 QR CODE 搭乘券</p>
+                                                <p class="price-asking">NT$ 120</p>
+                                                <p>2020/01/20</p>
+                                            </div>
+                                            <div class="item item-type">
+                                                <p class="text-muted">已退款</p>
+                                                <p><span>1</span>樣商品</p>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>     
+                    <!-- 購物商城 -->
+                    <div role="tabpanel" class="tab-pane fade w-100" id="ordertag02">  
+                        <div class="order-tabSubox">
+                            <div class="ordershop-swiper swiper-container">
+                                <!-- Nav tabs -->                                
+                                <ul class="swiper-wrapper nav nav-tabSub" role="tablist">
+                                    <li role="presentation" class="active swiper-slide">
+                                        <a href="#order-tab-1" class="tabsub-link active" aria-controls="order-tab-1" role="tab" data-toggle="tab" aria-selected="true">待付款</a>
+                                    </li>
+                                    <li role="presentation" class="swiper-slide">
+                                        <a href="#order-tab-2" class="tabsub-link" aria-controls="order-tab-2" role="tab" data-toggle="tab" aria-selected="false">處理中</a>
+                                    </li>
+                                    <li role="presentation" class="swiper-slide">
+                                        <a href="#order-tab-3" class="tabsub-link" aria-controls="order-tab-3" role="tab" data-toggle="tab" aria-selected="false">待收貨</a>
+                                    </li>
+                                    <li role="presentation" class="swiper-slide">
+                                        <a href="#order-tab-4" class="tabsub-link" aria-controls="order-tab-4" role="tab" data-toggle="tab" aria-selected="false">已完成</a>
+                                    </li>
+                                    <li role="presentation" class="swiper-slide">
+                                        <a href="#order-tab-5" class="tabsub-link" aria-controls="order-tab-5" role="tab" data-toggle="tab" aria-selected="false">退貨</a>
+                                    </li>  
+                                </ul>     
+                            </div>
+                        </div>
+                        <!-- Tab panes -->
+                        <div class="tab-content tab-line mt-1">
+                            <!-- 待付款 -->
+                            <div role="tabpanel" class="tab-pane active" id="order-tab-1">
+                                <!-- 有訂單時顯示 -->
+                                <div class="wait-pay-list div-switch d-none">
+                                    <ul>
+                                        <li onclick="location.href='../../shopping/shopping-order.html'">
+                                            <div class="item rwdimgbox-80">
+                                                <div style="background-image: url('https://picsum.photos/id/684/600/400');" class="rwdimg"></div>
+                                            </div>
+                                            <div class="item item-info">
+                                                <p>昇恆昌免稅購物網站</p>
+                                                <p class="price-asking">NT$ 4,880</p>
+                                                <p>2020/01/20</p>
+                                            </div>
+                                            <div class="item item-type">
+                                                <p>購物商城</p>
+                                                <p><span>1</span>樣商品</p>
+                                            </div>
+                                        </li>
+                                        <li onclick="location.href='../../shopping/shopping-order.html'">
+                                            <div class="item rwdimgbox-80">
+                                                <div style="background-image: url('https://picsum.photos/id/686/600/400');" class="rwdimg"></div>
+                                            </div>
+                                            <div class="item item-info">
+                                                <p>昇恆昌免稅購物網站</p>
+                                                <p class="price-asking">NT$ 4,880</p>
+                                                <p>2020/01/20</p>
+                                            </div>
+                                            <div class="item item-type">
+                                                <p>購物商城</p>
+                                                <p><span>1</span>樣商品</p>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!-- 無訂單時顯示 -->
+                                <div class="no-order div-switch d-block">
+                                    <img src="../../img/shopping/noorder.png" alt="">
+                                    <p>尚無訂單</p>
+                                    <button type="button" class="btn gray-btn mt-2" onclick="div_switch()">顯示有訂單狀態</button>
+                                </div>
+                            </div>
+                            <!-- 處理中 -->
+                            <div role="tabpanel" class="tab-pane" id="order-tab-2">
+                                <div class="wait-pay-list">
+                                    <ul>
+                                        <li onclick="location.href='member_myorder_detail.html'">
+                                            <div class="item rwdimgbox-80">
+                                                <div style="background-image: url('https://picsum.photos/id/670/600/400');" class="rwdimg"></div>
+                                            </div>
+                                            <div class="item item-info">
+                                                <p>昇恆昌免稅購物網站</p>
+                                                <p class="price-asking">NT$ 4,880</p>
+                                                <p>2020/01/20</p>
+                                            </div>
+                                            <div class="item item-type">
+                                                <p>購物商城</p>
+                                                <p><span>1</span>樣商品</p>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!-- 待收貨 -->
+                            <div role="tabpanel" class="tab-pane" id="order-tab-3">
+                                <div class="wait-pay-list">
+                                    <ul>
+                                        <li onclick="location.href='member_myorder_detail.html#1'">
+                                            <div class="item rwdimgbox-80">
+                                                <div style="background-image: url('https://picsum.photos/id/684/600/400');" class="rwdimg"></div>
+                                            </div>
+                                            <div class="item item-info">
+                                                <p>(自取）昇恆昌免稅購物網站</p>
+                                                <p class="price-asking">NT$ 4,880</p>
+                                                <p>2020/01/20</p>
+                                            </div>
+                                            <div class="item item-type">
+                                                <p>購物商城</p>
+                                                <p><span>1</span>樣商品</p>
+                                            </div>
+                                        </li>
+                                        <li onclick="location.href='member_myorder_detail.html#2'">
+                                            <div class="item rwdimgbox-80">
+                                                <div style="background-image: url('https://picsum.photos/id/686/600/400');" class="rwdimg"></div>
+                                            </div>
+                                            <div class="item item-info">
+                                                <p>(寄送）昇恆昌免稅購物網站</p>
+                                                <p class="price-asking">NT$ 4,880</p>
+                                                <p>2020/01/20</p>
+                                            </div>
+                                            <div class="item item-type">
+                                                <p>購物商城</p>
+                                                <p><span>1</span>樣商品</p>
+                                            </div>
+                                        </li>
+                                        <li onclick="location.href='member_myorder_tour.html'">
+                                            <div class="item rwdimgbox-80">
+                                                <div style="background-image: url('https://picsum.photos/id/654/600/400');" class="rwdimg"></div>
+                                            </div>
+                                            <div class="item item-info">
+                                                <p>(喜鴻）昇恆昌免稅購物網站</p>
+                                                <p class="price-asking">NT$ 4,880</p>
+                                                <p>2020/01/20</p>
+                                            </div>
+                                            <div class="item item-type">
+                                                <p>購物商城</p>
+                                                <p><span>1</span>樣商品</p>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!-- 已完成 -->
+                            <div role="tabpanel" class="tab-pane" id="order-tab-4">
+                                <div class="wait-pay-list">
+                                    <ul>
+                                        <li onclick="location.href='member_myorder_detail.html#3'">
+                                            <div class="item rwdimgbox-80">
+                                                <div style="background-image: url('https://picsum.photos/id/684/600/400');" class="rwdimg"></div>
+                                            </div>
+                                            <div class="item item-info">
+                                                <p>昇恆昌免稅購物網站</p>
+                                                <p class="price-asking">NT$ 4,880</p>
+                                                <p>2020/01/20</p>
+                                            </div>
+                                            <div class="item item-type">
+                                                <p>購物商城</p>
+                                                <p><span>1</span>樣商品</p>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!-- 退貨 -->
+                            <div role="tabpanel" class="tab-pane" id="order-tab-5">
+                                <div class="wait-pay-list">
+                                    <ul>
+                                        <li onclick="location.href='../../return/returns-detail.html'">
+                                            <div class="item rwdimgbox-80">
+                                                <div style="background-image: url('https://picsum.photos/id/684/600/400');" class="rwdimg"></div>
+                                            </div>
+                                            <div class="item item-info">
+                                                <p>昇恆昌免稅購物網站</p>
+                                                <p class="price-asking">NT$ 4,880</p>
+                                                <p>2020/01/20</p>
+                                            </div>
+                                            <div class="item item-type">
+                                                <p>購物商城</p>
+                                                <p><span>1</span>樣商品</p>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>  
+                </div>
+            </div>                        
+        </div> 
+        </div>
+    </div>
+    <div id="loginhtml"></div>
+    <div id="footerMobii"></div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="../../js/vendor/bs4/js/jquery-3.2.1.min.js"></script>
+    <!-- Latest compiled and minified JavaScript -->    
+    <script src="../../js/vendor/bs4/js/popper.min.js"></script>
+    <script src="../../js/vendor/bs4/js/bootstrap.min.js"></script>
+    <script src="../../js/vendor/jquery-editable-select-master/dist/jquery-editable-select.js"></script>
+
+    <!-- vendor js -->
+    <script src="../../js/vendor/swiper/js/swiper.min.js"></script>
+    <script src="../../js/vendor/imgLiquid.js"></script>
+
+    <!-- custom js -->    
+    <script src="../../js/animateCss.js"></script>
+    <script> 
+        $( document ).ready(function() {
+         
+            //$('.swiper-container').css('max-width','block').css('display','block');
+            //$('.swiper-wrapper').css('width','auto');
+            var shopSwiper = new Swiper('.ordershop-swiper.swiper-container', {
+                paginationClickable: true,
+                slidesPerView: 4.5,
+                spaceBetween: 0,
+                observer:true,
+                observeParents:true,
+                freeMode:false
+            }); 
+            var ticketSwiper = new Swiper('.orderticket-swiper.swiper-container', {
+                paginationClickable: true,
+                slidesPerView: 3,
+                spaceBetween: 0,
+                observer:true,
+                observeParents:true,
+                freeMode:false
+            }); 
+            // slidesPerView:x.5時,可視定位
+            $( ".ordershop-swiper .nav-tabSub li:first-child" ).on('click',function() { $(this).parent('.nav-tabSub').css('transform','translate3d(0px, 0px, 0px)')});
+            $( ".ordershop-swiper .nav-tabSub li:last-child" ).on('click',function() { $(this).parent('.nav-tabSub').css('transform','translate(-15%, 0)' )});
+
+        });
+        window.onload = function(){  
+        }
+
+        
+    </script>
+
+    <script>    
+        $("#loginhtml").load("../../login.html");         
+        $("#footerMobii").load("../../footerMobii.html"); 
+    </script>
+    <script src="../../js/index.js"></script>
+    <script src="../../js/indexSwiper.js"></script>
+</body>
+
+</html>

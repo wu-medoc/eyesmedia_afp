@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=1, user-scalable=no">
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../js/vendor/bs4/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../js/vendor/jquery-editable-select-master/dist/jquery-editable-select.min.css">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+    <!-- vendor css -->
+    <link rel="stylesheet" href="../js/vendor/swiper/css/swiper.min.css">
+
+    <!-- custom css -->
+    <link rel="stylesheet" href="../styles/css.min.css">
+    
+    <link rel="stylesheet" href="../styles/style.min.css">
+    <link rel="stylesheet" href="../styles/member.min.css">
+    <link rel="stylesheet" href="../styles/member-order.min.css">
+    <link rel="stylesheet" href="../styles/shopping-index.min.css">
+    <link rel="stylesheet" href="../styles/animate.min.css">
+
+    <title>Mobii! - 退換貨詳情</title>
+</head>
+
+<body>
+    <div class="wrap container">
+        <header>
+            <div class="header-secondary container linebt-row">
+                <div class="index-flex justify-content-between">
+                    <div class="item two">
+                        <div class="close-btn" onclick="history.back();" data-toggle="tooltip" data-placement="bottom" title="回上一頁">
+                            <i class="material-icons">&#xe314;</i>
+                        </div>
+                    </div>
+                    <div class="item three text-center">
+                        <div class="title-name">退換貨詳情</div>
+                    </div>
+                    <div class="item two text-right">
+                        <button type="button" class="btn bluedk-outline-btn bt-small mr-1" onclick="callsortLayer('.returnInfo')">退換說明</button>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="order-status">
+            <div class="item"><i class="material-icons">&#xE85D;</i></div>
+            <div class="item">                
+                <p class="">退/換貨</p>
+                <p class="small-80">退/換貨申請中，商店將盡快回覆您！</p>
+            </div>
+        </div>
+        <div class="order-info">
+            <ul>
+                <li class="flex-inline-between">
+                    <div class="item">客服單編號</div>
+                    <div class="item">123456789876543</div>
+                </li>
+            </ul>
+        </div>        
+        <div class="order-box">
+            <div class="order-method-box">
+                <ul class="method-list">
+                    <li class="index-flex">
+                        <div class="item one">選擇方式</div>
+                        <div class="item three item-right">
+                            退貨
+                        </div>
+                    </li>
+                    <li class="index-flex">
+                        <div class="item one">原因</div>
+                        <div class="item three item-right">
+                            商家寄錯商品
+                        </div>
+                    </li>
+                    <li class="index-flex">
+                        <div class="item one">備註</div>
+                        <div class="item three item-right">
+                            寄錯顏色,我想要的是黑金色.另外可以更換寄送地址嗎?我想要寄到家裡,地址是新北市板橋區,再麻煩了,謝謝.
+                        </div>
+                    </li>
+                    <li class="index-flex">
+                        <div class="item">取件地址</div>
+                        <div class="item-group send completed returned">
+                            <div class="item small">
+                                106 台北市大安區敦化南路2段76號5樓<br>
+                                李曉龍<br>
+                                0912345678
+                            </div>
+                        </div>
+                    </li>
+                    <li class="index-flex">
+                        <div class="item one">訂單編號</div>
+                        <div class="item three item-right">
+                            AFP20200111004
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="order-box">
+            <div class="order-subtitle">
+                <img src="../img/share/fa-store.png" class="h20 mx-1"><span class="store-name">昇恆昌免稅購物網站</span>
+            </div>
+            <ul class="order-shop-list">
+                <li>
+                    <div class="item rwdimgbox-80">
+                        <div style="background-image: url('https://picsum.photos/300/300/?random=1');" class="rwdimg-cover"></div>
+                    </div>
+                    <div class="item item-txt">
+                        <p>超級超好吃的舊振南鳳梨酥</p>
+                        <p>規格：32入</p>
+                        <p class="order-price auto-top">$880</p>
+                    </div>
+                    <div class="item item-num order-quantity">x2</div>
+                </li>
+                <li>
+                    <div class="item rwdimgbox-80">
+                        <div style="background-image: url('https://picsum.photos/300/300/?random=2');" class="rwdimg-cover"></div>
+                    </div>
+                    <div class="item item-txt">
+                        <p>超級超好吃的舊振南鳳梨酥</p>
+                        <p>規格：32入</p>
+                        <p class="order-price auto-top">$880</p>
+                    </div>
+                    <div class="item item-num order-quantity">x2</div>
+                </li>
+            </ul>
+        </div>
+        <div class="border-t5 w-100"></div>
+        <div class="order-box">
+            <div class="total-price-box">
+                <ul>
+                    <li class="total-pay index-flex">
+                        <div class="item">訂單金額</div>
+                        <div class="item text-right order-sumtotal">$1,772</div>
+                    </li>
+                    <li class="total-way index-flex">
+                        <div class="item text-bluedk">付款方式</div>
+                        <div class="item two text-right text-bluedk">信用卡/VISA金融卡 *9405</div>
+                    </li>
+                </ul>
+            </div>
+        </div>   
+        
+        
+        <div class="multilayer">       
+        </div>
+
+        <!-- 退換貨說明 -->
+        <div class="sortlayer">
+            <div class="returnInfo">
+                <div id="open-pagebox">
+                    <div class="open-page-title flex-inline-between">
+                        <div class="title-icon">
+                            <button class="btn" onclick="backsortLayer();">
+                                <i class="material-icons">&#xe314;</i>
+                            </button>
+                        </div>
+                        <div class="title-txt">
+                            退換貨說明
+                        </div>
+                        <div class="title-txt">
+                        </div>
+                    </div>
+                    <div class="p-3 text-bluedk">
+                        <h6>【退換貨原則】</h6>
+                        <p>
+                            會員所購買的商品均享有商品猶豫期。退回之商品必須於猶豫期內寄回。 <br>                        
+                            辦理退換貨時，商品必須是全新狀態與完整包裝(請注意保持商品本體、配件、贈品、保證書、原廠包裝及所有附隨文件或資料的完整性，切勿缺漏任何配件或損毀原廠外盒)。退回商品無法回復原狀者，恐將影響退貨權益或需負擔部分費用。 
+                        </p>
+                        <h6>【商品猶豫期計算】</h6>
+                        <p>
+                            宅配商品之猶豫期為商店出貨日+20天，例：商店出貨日為2020/4/1，則商品猶豫期計算至2020/4/21止，超過期限將不提供退換貨服務。<br>                          
+                            自取商品之猶豫期為取貨期限+7天，例：取貨期限為2020/4/1，則商品猶豫期計算至2020/4/8止，超過期限將不提供退換貨服務。
+                        </p>
+                        
+                        <h6>【退換貨處理】</h6>
+                        <p>
+                            貨運司機將於退/換貨申請確認後3~7天內與你聯繫取件，請保持手機暢通以利聯絡，請將你所訂購之完整商品、配件、贈品、原包裝置入原外包裝箱內，以利後續退換貨作業。<br>
+                            退款方式：確認退貨後，款項將退至原信用卡帳戶中。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>   
+    <div id="loginhtml"></div> 
+    <footer class="shopping-cartfooter container fixed-bottom">
+        <ul>
+            <li>
+                <div class="item">
+                    <button type="button" class="btn index-outline-btn w-100 font-bold" onclick="location.href='../member/member_service_store.html'">問答紀錄</button>
+                </div>
+
+            </li>
+        </ul>
+    </footer>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="../js/vendor/bs4/js/jquery-3.2.1.min.js"></script>
+    <!-- Latest compiled and minified JavaScript -->    
+    <script src="../js/vendor/bs4/js/popper.min.js"></script>
+    <script src="../js/vendor/bs4/js/bootstrap.min.js"></script>    
+    <script src="../js/vendor/jquery-editable-select-master/dist/jquery-editable-select.js"></script>
+
+    <!-- vendor js -->
+    <script src="../js/vendor/swiper/js/swiper.min.js"></script>
+    <script src="../js/vendor/imgLiquid.js"></script>
+    
+    <!-- custom js -->
+    <script>
+        $("#loginhtml").load("../login.html"); 
+
+    </script>
+    <script src="../js/animateCss.js"></script>
+    <script src="../js/index.js"></script>
+</body>
+
+</html>

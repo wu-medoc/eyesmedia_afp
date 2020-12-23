@@ -1,0 +1,680 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=1, user-scalable=no">
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../../js/vendor/bs4/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../js/vendor/jquery-editable-select-master/dist/jquery-editable-select.min.css">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+    <!-- vendor css -->
+    <link rel="stylesheet" href="../../js/vendor/swiper/css/swiper.min.css">
+
+    <!-- custom css -->
+    <link rel="stylesheet" href="../../styles/css.min.css">
+    
+    <link rel="stylesheet" href="../../styles/style.min.css">
+    <link rel="stylesheet" href="../../styles/member.min.css">
+    <link rel="stylesheet" href="../../styles/my-profile.min.css">
+    <link rel="stylesheet" href="../../styles/animate.min.css">
+    <link rel="stylesheet" href="../../js/vendor/popoPicker-master/css/popoPicker.css">
+
+    <title>Mobii! - 我的首頁</title>
+</head>
+
+<body>    
+<div class="wrap container">
+
+    <!--我的檔案2-->
+    <div class="myfile">
+        <div class="headerbox container title-box">
+            <div class="item icon-btn">
+                <button class="btn px-0 back-btn div-switch d-block" onclick="animRouter('Setting.html')" data-toggle="tooltip" data-placement="bottom" title="回上一頁">
+                    <i class="material-icons">&#xe314;</i>
+                </button>
+                <button class="btn div-switch d-none" onclick="div_switch()">取消</button>
+            </div>
+            <div class="item title-name">我的檔案</div>
+            <div class="item ctrl-btn">
+                <button class="btn div-switch d-none" onclick="div_switch()">確定</button>
+                <button class="btn div-switch d-block" onclick="div_switch()">編輯</button>
+            </div>
+        </div>
+        <div>
+            <div class="my-info-box p-3">
+                <div class="info-box info-img mr-0">
+                    <div class="info-item">
+                        <img src="https://picsum.photos/300/300/?random=1">
+                    </div>
+                </div>
+                <div class="info-box info-email">
+                    mo***@eyesmedia.com
+                </div>
+            </div>
+            <div class="my-list-box">
+                <ul>
+                    <li>
+                        <div class="item">名稱</div>
+                        <div class="item auto-left">李曉龍</div>
+                    </li>
+                    <li>
+                        <div class="item">暱稱</div>
+                        <div class="item auto-left">曉龍大安直男</div>
+                    </li>
+                    <li>
+                        <div class="item">生日</div>
+                        <div class="item input-box div-switch d-none">
+                            <input class="inp js-date text-right text-bluedk border-0" placeholder="YYYY/MM/DD" value="1990/05/10">
+                        </div>
+                        <div class="item auto-left div-switch d-block">1990/05/10</div>
+                    </li>
+                    <li>
+                        <div class="item">性別</div>
+                        <div class="item input-box div-switch d-none">
+                            <select class="form-control" id="sexSelect">
+                                <option>請選擇</option>
+                                <option>男</option>
+                                <option>女</option>
+                                <option>其他</option>
+                            </select>
+                        </div>
+                        <div class="item auto-left div-switch d-block">男</div>
+                    </li>
+                    <li>
+                        <div class="item">手機號碼</div>
+                        <div class="item input-box">
+                            <input type="text" value="" class="div-switch d-none" placeholder="請輸入">
+                        </div>
+                        <div class="item div-switch d-block text-danger">尚未驗證</div>
+                        <!-- <div class="item auto-left div-switch d-block">09******78</div> -->
+                    </li>
+                    <li>
+                        <div class="item">E-mail</div>
+                        <div class="item input-box">
+                            <input type="text" value="" class="div-switch d-none" placeholder="請輸入">
+                        </div>
+                        <div class="item div-switch d-block">
+                            <input class="txt-line-clamp1 border-0 float-right" value="mo********************@eyesmedia.com">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item w-100">
+                            <button class="btn px-0 w-100" onclick="callLayer('.mypassport');">
+                                上傳護照 <span class="auto-left"><i class="material-icons">&#xe315;</i></span>
+                            </button>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item w-100">
+                            <button class="btn px-0 w-100" onclick="callLayer('.mymtps');">
+                                上傳台胞證 <span class="auto-left"><i class="material-icons">&#xe315;</i></span>
+                            </button>                                
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item w-100">
+                            <button class="btn px-0 w-100" onclick="callLayer('.mystudent');">
+                                上傳學生證 <span class="auto-left"><i class="material-icons">&#xe315;</i></span>
+                            </button>                                
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!--次頁-->
+    <div class="multilayer">
+        <!--上傳護照3-->
+        <div class="mypassport">
+            <div class="headerbox container title-box">
+                <div class="item icon-btn">                        
+                    <button class="btn px-0" onclick="backLayer();" data-toggle="tooltip" data-placement="bottom" title="回上一頁">
+                        <i class="material-icons">&#xe314;</i>
+                    </button>
+                </div>
+                <div class="item title-name">上傳護照</div>
+                <div class="item ctrl-btn">
+                    <button class="btn px-0" onclick="callLayer('.mypassportnote');" data-toggle="tooltip" data-placement="bottom" title="儲存">
+                        儲存
+                    </button>
+                </div>
+            </div>
+            <div class="my-info-box">
+                <label for="file-upload" class="custom-file-upload">                        
+                    <div class="upload-box">
+                        <img src="../../img/member/passport.svg">
+                        <div class="add-btn">
+                            <img src="../../img/member/uploadphoto.svg" alt="">
+                        </div>
+                    </div>
+                </label>
+                <input id="file-upload" type="file"/>
+                <div class="passport-status">
+                    未上傳
+                </div>
+            </div>
+            <div class="my-list-box edit-list">
+                <ul>
+                    <li>
+                        <div class="item">有效期限</div>
+                        <div class="item input-box1">
+                            <input class="inp js-date1 text-right text-bluedk border-0" placeholder="YYYY/MM/DD" value="1990/07/10">
+                        </div>
+                        <div class="item auto-left"></div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!--上傳台胞證3-->
+        <div class="mymtps">
+            <div class="headerbox container title-box">
+                <div class="item icon-btn">                                             
+                    <button class="btn px-0" onclick="backLayer();" data-toggle="tooltip" data-placement="bottom" title="回上一頁">
+                        <i class="material-icons">&#xe314;</i>
+                    </button>
+                </div>
+                <div class="item title-name">上傳台胞證</div>
+                <div class="item ctrl-btn">                        
+                    <button class="btn px-0" onclick="callLayer('.mymtpsnote');" data-toggle="tooltip" data-placement="bottom" title="儲存">
+                        儲存
+                    </button>
+                </div>
+            </div>
+            <div class="my-info-box">
+                <label for="file-upload3" class="custom-file-upload">                        
+                    <div class="upload-box">
+                        <img src="../../img/member/mtps.svg">
+                        <div class="add-btn">
+                            <img src="../../img/member/uploadphoto.svg" alt="">
+                        </div>
+                    </div>
+                </label>
+                <input id="file-upload3" type="file"/>
+                <div class="passport-status">
+                    未上傳
+                </div>
+            </div>
+            <div class="my-list-box edit-list">
+                <ul>
+                    <li>
+                        <div class="item">有效期限</div>
+                        <div class="item input-box2">
+                            <input class="inp js-date2 text-right text-bluedk border-0" placeholder="YYYY/MM/DD" value="1990/07/10">
+                        </div>
+                        <div class="item auto-left"></div>
+                    </li>
+                </ul>
+            </div>
+        </div>      
+        <!--上傳學生證3-->
+        <div class="mystudent">
+            <div class="headerbox container title-box">
+                <div class="item icon-btn">                                             
+                    <button class="btn px-0" onclick="backLayer();" data-toggle="tooltip" data-placement="bottom" title="回上一頁">
+                        <i class="material-icons">&#xe314;</i>
+                    </button>
+                </div>
+                <div class="item title-name">上傳學生證</div>
+                <div class="item ctrl-btn">                        
+                    <button class="btn px-0" onclick="callLayer('.mystudentnote');" data-toggle="tooltip" data-placement="bottom" title="儲存">
+                        儲存
+                    </button>
+                </div>
+            </div>
+            <div class="my-info-box">
+                <label for="file-upload4" class="custom-file-upload">                        
+                    <div class="upload-box">
+                        <img src="../../img/member/mtps.svg">
+                        <div class="add-btn">
+                            <img src="../../img/member/uploadphoto.svg" alt="">
+                        </div>
+                    </div>
+                </label>
+                <input id="file-upload4" type="file"/>
+                <div class="passport-status">
+                    未上傳
+                </div>
+            </div>
+        </div> 
+        <!--提示護照4-->
+        <div class="mypassportnote">
+            <div class="headerbox container title-box">
+                <div class="item ctrl-btn">
+                    <button class="btn px-0" onclick="backLayer();" data-toggle="tooltip" data-placement="bottom" title="關閉">
+                        關閉
+                    </button>
+                </div>
+                <div class="item title-name"></div>
+                <div class="item ctrl-btn"></div>
+            </div>
+            <div class="upload-passport-noti">
+                <div class="noti-text">
+                    <strong>提示：</strong>
+                    <p>對準護照的資料頁面拍攝，請注意內容是否清晰</p>
+                    <small>備註：護照資料僅供核對使用</small>
+                </div>
+                <div class="img-box">
+                    <img src="../../img/member/passport-noti.svg" alt="">
+                </div>
+                <div class="btn next-btn open-overlay-choice nextBtnFixed">
+                    下一步
+                </div>
+            </div>
+            <!--拍照或錄像-->
+            <div class="overlay-choice w-100 p-3" style="display: none;">
+                <div class="choice-list">
+                    <ul>
+                        <li class="flex-inline-between">
+                            <div class="item">
+                                <button class="btn px-0 close-overlay-choice" onclick="callLayer('.mypassportphoto');" data-toggle="tooltip" data-placement="bottom" title="Take Photo or Video">
+                                    拍照或攝影
+                                </button>
+                            </div>
+                            <div class="item">
+                                <button class="btn px-0 close-overlay-choice" onclick="callLayer('.mypassportphoto');" data-toggle="tooltip" data-placement="bottom" title="Take Photo or Video">
+                                    <img src="../../img/member/icon_camera.png">
+                                </button>
+                            </div>
+                        </li>
+                        <li class="flex-inline-between">
+                            <div class="item">
+                                <button class="btn px-0">
+                                    相簿
+                                </button>
+                            </div>
+                            <div class="item">
+                                <button class="btn px-0">
+                                    <img src="../../img/member/icon_photo.png">
+                                </button>
+                            </div>
+                        </li>
+                        <li class="flex-inline-between">
+                            <div class="item">
+                                <button class="btn px-0">
+                                    瀏覽
+                                </button>
+                            </div>
+                            <div class="item">
+                                <button class="btn px-0">
+                                    <img src="../../img/member/icon_dot.png">
+                                </button>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="choice-status close-overlay-choice">
+                    取消
+                </div>
+            </div>
+            <div class="modal-backdrop fade show d-none"></div>
+        </div>
+        <!--提示台胞證4-->
+        <div class="mymtpsnote">
+            <div class="headerbox container title-box">
+                <div class="item ctrl-btn">                        
+                    <button class="btn px-0" onclick="backLayer();" data-toggle="tooltip" data-placement="bottom" title="關閉">
+                        關閉
+                    </button>
+                </div>
+                <div class="item title-name"></div>
+                <div class="item ctrl-btn"></div>
+            </div>
+            <div class="upload-passport-noti">
+                <div class="noti-text">
+                    <strong>提示：</strong>
+                    <p>對準台胞證的資料頁面拍攝，請注意內容是否清晰</p>
+                    <small>備註：台胞證資料僅供核對使用</small>
+                </div>
+                <div class="img-box">
+                    <img src="../../img/member/passport-noti.svg" alt="">
+                </div>
+                <div class="btn next-btn open-overlay-choice nextBtnFixed">
+                    下一步
+                </div>
+            </div>
+            <!--拍照或錄像-->
+            <div class="overlay-choice w-100 p-3" style="display: none;">
+                <div class="choice-list">
+                    <ul>
+                        <li class="flex-inline-between">
+                            <div class="item">
+                                <button class="btn px-0 close-overlay-choice" onclick="callLayer('.mymtpsphoto');" data-toggle="tooltip" data-placement="bottom" title="Take Photo or Video">
+                                    拍照或攝影
+                                </button>
+                            </div>
+                            <div class="item">
+                                <button class="btn px-0 close-overlay-choice" onclick="callLayer('.mymtpsphoto');" data-toggle="tooltip" data-placement="bottom" title="Take Photo or Video">
+                                    <img src="../../img/member/icon_camera.png">
+                                </button>
+                            </div>
+                        </li>
+                        <li class="flex-inline-between">
+                            <div class="item">
+                                <button class="btn px-0">
+                                    相簿
+                                </button>
+                            </div>
+                            <div class="item">
+                                <button class="btn px-0">
+                                    <img src="../../img/member/icon_photo.png">
+                                </button>
+                            </div>
+                        </li>
+                        <li class="flex-inline-between">
+                            <div class="item">
+                                <button class="btn px-0">
+                                    瀏覽
+                                </button>
+                            </div>
+                            <div class="item">
+                                <button class="btn px-0">
+                                    <img src="../../img/member/icon_dot.png">
+                                </button>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="choice-status close-overlay-choice">
+                    取消
+                </div>
+            </div>
+            <div class="modal-backdrop fade show d-none"></div>
+        </div>            
+        <!--提示學生證4-->
+        <div class="mystudentnote">
+            <div class="headerbox container title-box">
+                <div class="item ctrl-btn">                        
+                    <button class="btn px-0" onclick="backLayer();" data-toggle="tooltip" data-placement="bottom" title="關閉">
+                        關閉
+                    </button>
+                </div>
+                <div class="item title-name"></div>
+                <div class="item ctrl-btn"></div>
+            </div>
+            <div class="upload-passport-noti">
+                <div class="noti-text">
+                    <strong>提示：</strong>
+                    <p>對準學生證的資料頁面拍攝，請注意內容是否清晰</p>
+                    <small>備註：學生證資料僅供核對使用</small>
+                </div>
+                <div class="img-box">
+                    <img src="../../img/member/passport-noti.svg" alt="">
+                </div>
+                <div class="btn next-btn open-overlay-choice nextBtnFixed">
+                    下一步
+                </div>
+            </div>
+            <!--拍照或錄像-->
+            <div class="overlay-choice w-100 p-3" style="display: none;">
+                <div class="choice-list">
+                    <ul>
+                        <!-- <li class="flex-inline-between">
+                            <div class="item">
+                                <button class="btn px-0 close-overlay-choice" onclick="callLayer('.mystudentphoto');" data-toggle="tooltip" data-placement="bottom" title="Take Photo or Video">
+                                    拍照或攝影
+                                </button>
+                            </div>
+                            <div class="item">
+                                <button class="btn px-0 close-overlay-choice" onclick="callLayer('.mystudentphoto');" data-toggle="tooltip" data-placement="bottom" title="Take Photo or Video">
+                                    <img src="../../img/member/icon_camera.png">
+                                </button>
+                            </div>
+                        </li>
+                        <li class="flex-inline-between">
+                            <div class="item">
+                                <button class="btn px-0">
+                                    相簿
+                                </button>
+                            </div>
+                            <div class="item">
+                                <button class="btn px-0">
+                                    <img src="../../img/member/icon_photo.png">
+                                </button>
+                            </div>
+                        </li> -->
+                        
+                        <li>
+                            <div class="item">
+                                <label for="file-upload5" class="custom-file-upload w-100">                        
+                                    <div class="upload-box">
+                                        <div class="add-btn uploadItembox">
+                                            <div class="uploadItem">
+                                                <div class="item">瀏覽</div>
+                                                <div class="item"><img src="../../img/member/icon_dot.png"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </label>
+                                <input id="file-upload5" type="file"/>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="choice-status close-overlay-choice">
+                    取消
+                </div>
+            </div>
+            <div class="modal-backdrop fade show d-none"></div>
+        </div>
+        <!--護照上傳確認5-->
+        <div class="mypassportphoto">
+            <div class="passport-pic">
+                <div class="passport-box"></div>
+            </div>
+            <div class="passport-pic-status">
+                <strong>這張護照資料是否清楚？</strong>
+                <p>此照片應包含所有的資料，並且確定沒有任何模糊或被切除的部分</p>
+                <div class="btn-group">                     
+                    <button class="btn next-btn w-50 " onclick="backLayer();">
+                        重新拍照
+                    </button>                  
+                    <button class="btn next-btn w-50 " onclick="callLayer('.mypassportok');">
+                        確定上傳
+                    </button>
+                </div>
+            </div>
+        </div>        
+        <!--台胞照上傳確認5-->
+        <div class="mymtpsphoto">
+            <div class="passport-pic">
+                <div class="passport-box"></div>
+            </div>
+            <div class="passport-pic-status">
+                <strong>這張台胞證資料是否清楚？</strong>
+                <p>此照片應包含所有的資料，並且確定沒有任何模糊或被切除的部分</p>
+                <div class="btn-group">                    
+                    <button class="btn next-btn w-50 " onclick="backLayer();" data-toggle="tooltip" data-placement="bottom" title="重新拍照">
+                        重新拍照
+                    </button>                  
+                    <button class="btn next-btn w-50 " onclick="callLayer('.mymtpsok');" data-toggle="tooltip" data-placement="bottom" title="確定上傳">
+                        確定上傳
+                    </button>
+                </div>
+            </div>
+        </div>  
+        <!--學生證上傳確認5-->
+        <div class="mystudentphoto">
+            <div class="passport-pic">
+                <div class="passport-box"></div>
+            </div>
+            <div class="passport-pic-status">
+                <strong>這張學生證資料是否清楚？</strong>
+                <p>此照片應包含所有的資料，並且確定沒有任何模糊或被切除的部分</p>
+                <div class="btn-group">                    
+                    <button class="btn next-btn w-50 " onclick="backLayer();" data-toggle="tooltip" data-placement="bottom" title="重新拍照">
+                        重新拍照
+                    </button>                  
+                    <button class="btn next-btn w-50 " onclick="callLayer('.mystudentok');" data-toggle="tooltip" data-placement="bottom" title="確定上傳">
+                        確定上傳
+                    </button>
+                </div>
+            </div>
+        </div> 
+        <!--上傳護照成功6-->
+        <div class="mypassportok">
+            <div class="headerbox container title-box">
+                <div class="item icon-btn">                        
+                    <button class="btn px-0" onclick="backLayer();" data-toggle="tooltip" data-placement="bottom" title="回上一頁">
+                        <i class="material-icons">&#xe314;</i>
+                    </button>
+                </div>
+                <div class="item title-name">上傳護照</div>
+                <div class="item ctrl-btn">
+                    <button class="btn px-0" onclick="animRouter('Setting.html');" data-toggle="tooltip" data-placement="bottom" title="變更">
+                        變更
+                    </button>
+                </div>
+            </div>
+            <div class="my-info-box">                    
+                <label for="file-upload2" class="custom-file-upload">                        
+                    <div class="upload-box">
+                        <img src="../../img/member/passport.svg">
+                        <div class="change-btn">
+                            變更
+                        </div>
+                    </div>
+                </label>
+                <input id="file-upload2" type="file"/>
+                <div class="passport-status">
+                    <i class="material-icons">&#xE5CA;</i>已上傳
+                </div>
+            </div>
+            <div class="my-list-box">
+                <ul>
+                    <li>
+                        <div class="item">有效期限</div>
+                        <div class="item input-box3">
+                            <input class="inp js-date3 text-right text-bluedk border-0" placeholder="YYYY/MM/DD" value="1990/07/10">
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!--上傳台胞證成功6-->
+        <div class="mymtpsok">
+            <div class="headerbox container title-box">
+                <div class="item icon-btn">                                             
+                    <button class="btn px-0" onclick="backLayer();" data-toggle="tooltip" data-placement="bottom" title="回上一頁">
+                        <i class="material-icons">&#xe314;</i>
+                    </button>
+                </div>
+                <div class="item title-name">上傳台胞證</div>
+                <div class="item ctrl-btn">                        
+                    <button class="btn px-0" onclick="animRouter('Setting.html')" data-toggle="tooltip" data-placement="bottom" title="變更">
+                        變更
+                    </button>
+                </div>
+            </div>
+            <div class="my-info-box">
+                <div class="upload-box">
+                    <img src="../../img/member/mtps.svg">
+                    <div class="change-btn">
+                        變更
+                    </div>
+                </div>
+                <div class="passport-status">
+                    <i class="material-icons">&#xE5CA;</i>已上傳
+                </div>
+            </div>
+            <div class="my-list-box">
+                <ul>
+                    <li>
+                        <div class="item">有效期限</div>
+                        <div class="item input-box4">
+                            <input class="inp js-date4 text-right text-bluedk border-0" placeholder="YYYY/MM/DD" value="1990/07/10">
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>   
+        
+        <!--上傳學生證成功6-->
+        <div class="mystudentok">
+            <div class="headerbox container title-box">
+                <div class="item icon-btn">                                             
+                    <button class="btn px-0" onclick="backLayer();" data-toggle="tooltip" data-placement="bottom" title="回上一頁">
+                        <i class="material-icons">&#xe314;</i>
+                    </button>
+                </div>
+                <div class="item title-name">上傳學生證</div>
+                <div class="item ctrl-btn">                        
+                    <button class="btn px-0" onclick="animRouter('Setting.html')" data-toggle="tooltip" data-placement="bottom" title="變更">
+                        變更
+                    </button>
+                </div>
+            </div>
+            <div class="my-info-box">
+                <div class="upload-box">
+                    <img src="../../img/member/mtps.svg">
+                    <div class="change-btn">
+                        變更
+                    </div>
+                </div>
+                <div class="passport-status">
+                    <i class="material-icons">&#xE5CA;</i>已上傳
+                </div>
+            </div>
+        </div>   
+    </div>
+    <div class="addheight"></div>
+</div> 
+<div id="open-mask"></div>
+<div id="loginhtml"></div>
+<div id="footerMobii"></div>
+  
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="../../js/vendor/bs4/js/jquery-3.2.1.min.js"></script>
+    <!-- Latest compiled and minified JavaScript -->    
+    <script src="../../js/vendor/bs4/js/popper.min.js"></script>
+    <script src="../../js/vendor/bs4/js/bootstrap.min.js"></script>
+    <script src="../../js/vendor/jquery-editable-select-master/dist/jquery-editable-select.js"></script>
+
+    <!-- vendor js -->
+    <script src="../../js/vendor/swiper/js/swiper.min.js"></script>
+    <script src="../../js/vendor/imgLiquid.js"></script>
+    <script src="../../js/vendor/popoPicker-master/js/popoPicker.js"></script>
+
+    <!-- custom js -->    
+    <script src="../../js/animateCss.js"></script>
+
+    <script>    
+        //popoPicker Date
+        new popoDateTime('.js-date',{
+            container:'.input-box',
+            time: false
+        });
+        new popoDateTime('.js-date1',{
+            container:'.input-box1',
+            time: false
+        });
+        new popoDateTime('.js-date2',{
+            container:'.input-box2',
+            time: false
+        });
+        new popoDateTime('.js-date3',{
+            container:'.input-box3',
+            time: false
+        });
+        new popoDateTime('.js-date4',{
+            container:'.input-box4',
+            time: false
+        });
+        $(".headerbox").css('z-index','1');
+
+        $("#loginhtml").load("../../login.html");
+        $("#footerMobii").load("../../footerMobii.html");
+    </script>
+    <script src="../../js/index.js"></script>
+</body>
+
+</html>
