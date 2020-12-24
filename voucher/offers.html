@@ -1,0 +1,881 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=1, user-scalable=no">
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../js/vendor/bs4/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../js/vendor/jquery-editable-select-master/dist/jquery-editable-select.min.css">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+    <!-- vendor css -->
+    <link rel="stylesheet" href="../js/vendor/swiper/css/swiper.min.css">
+
+    <!-- custom css -->
+    <link rel="stylesheet" href="../styles/css.min.css">
+    
+    <link rel="stylesheet" href="../styles/style.min.css">
+    <link rel="stylesheet" href="../styles/offers.min.css">
+    <link rel="stylesheet" href="../styles/animate.min.css">
+
+    <title>Mobii! - 找優惠</title>
+</head>
+
+<body>    
+<div class="wrap container">
+    <header>
+        <div class="header-secondary container">
+            <div class="index-flex justify-content-between">
+                <div class="item two">
+                    <div class="close-btn">
+                         <button type="button" class="btn" onclick="history.back();" data-toggle="tooltip" data-placement="bottom" title="回上一頁">
+                            <i class="material-icons">&#xe314;</i>
+                        </button>
+                    </div>
+                </div>
+                <div class="item three text-center">
+                    <div class="title-name">找優惠</div>
+                </div>
+                <div class="item two">
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="offerslist">
+        <div class="searchbox">
+            <button class="btn"><i class="material-icons">&#xE8B6;</i></button>
+            <input type="text" placeholder="搜尋" class="border-0">
+        </div>
+        <div class="flex-inline-between p-2 limitedTime">
+            <div class="item"><span class="p-2">限時搶購 </span><span id="clock"></span></div>
+            <div class="item small-80"><a href="offers_list.html">更多優惠券<i class="material-icons chevron_right">&#xe315;</i></a></div>
+        </div>
+        <div class="other-discount-list">
+            <div class="row p-2">
+                <div class="col-sm-12 col-md-6 discount-box">
+                    <div class="discount-item">
+                        <a href="../voucher/voucher-detail.html" class="item">
+                            <div class="pr-2">
+                                <div class="img-box">
+                                    <img src="../img/shopping/store/everrich.png" alt="">
+                                </div>
+                            </div>
+                            <div class="discount-text">
+                                <p>昇恆昌</p>
+                                <p><i class="material-icons local_offer">&#xe54e;</i> <span>全站滿千打9折/不限兌換使用次數/可合併使用</span></p>
+                                <p>2019/11/15 ~ 2019/12/31</p>
+                            </div>
+                        </a>
+                        <div class="item ">
+                            <div class="line-box"></div>
+                            <div class="circle circle-top"></div>
+                            <div class="circle circle-bottom"></div>
+                            <div class="d-flex flex-column">
+                                <button class="btn index-btn small-80 msg-open" value="msg-offers" data-toggle="modal" data-target="#messageModal">兌換</button>
+                                <div class="m-quantity small"><img src="../img/share/mobiicoin_red.png" class="coinimg-m"> 3,820</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-6 discount-box">
+                    <div class="discount-item">
+                        <a href="../voucher/voucher-detail.html" class="item">
+                            <div class="pr-2">
+                                <div class="img-box">
+                                    <img src="../img/shopping/store/everrich.png" alt="">
+                                </div>
+                            </div>
+                            <div class="discount-text">
+                                <p>昇恆昌</p>
+                                <p><i class="material-icons local_offer">&#xe54e;</i> <span>全站滿千打9折/不限兌換使用次數/可合併使用</span></p>
+                                <p>2019/11/15 ~ 2019/12/31</p>
+                            </div>
+                        </a>
+                        <div class="item ">
+                            <div class="line-box"></div>
+                            <div class="circle circle-top"></div>
+                            <div class="circle circle-bottom"></div>
+                            <div class="d-flex flex-column">
+                                <button class="btn px-2 index-btn small-80 sendval" type="submit" name="type" value="step0">兌換</button>
+                                <div class="m-quantity small"><img src="../img/share/mobiicoin_red.png" class="coinimg-m"> 3,820</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-6 discount-box">
+                    <div class="discount-item">
+                        <a href="../voucher/voucher-detail.html" class="item">
+                            <div class="pr-2">
+                                <div class="img-box">
+                                    <img src="../img/shopping/store/everrich.png" alt="">
+                                </div>
+                            </div>
+                            <div class="discount-text">
+                                <p>昇恆昌</p>
+                                <p><i class="material-icons local_offer">&#xe54e;</i> <span>9折</span> 折扣券</p>
+                                <p>2019/11/15 ~ 2019/12/31</p>
+                            </div>
+                        </a>
+                        <div class="item ">
+                            <div class="line-box"></div>
+                            <div class="circle circle-top"></div>
+                            <div class="circle circle-bottom"></div>
+                            <div class="d-flex flex-column">
+                                <button class="btn px-2 index-outline-btn small-80 sendval" type="submit" name="type" value="step1">使用</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-6 discount-box">
+                    <div class="discount-item">
+                        <a href="../voucher/voucher-detail.html" class="item">
+                            <div class="pr-2">
+                                <div class="img-box">
+                                    <img src="../img/shopping/store/everrich.png" alt="">
+                                </div>
+                            </div>
+                            <div class="discount-text">
+                                <p>昇恆昌</p>
+                                <p><i class="material-icons local_offer">&#xe54e;</i> <span>9折</span> 折扣券</p>
+                                <p>2019/11/15 ~ 2019/12/31</p>
+                            </div>
+                        </a>
+                        <div class="item ">
+                            <div class="line-box"></div>
+                            <div class="circle circle-top"></div>
+                            <div class="circle circle-bottom"></div>
+                            <div class="d-flex flex-column">
+                                <button class="btn gray-obtn small-80 sendval" type="submit" name="type" value="step2">已使用</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- tab content -->
+        <div class="afp-tab-box mt-3 pt-2">
+            <div class="afp-tab mb-5">
+                <div class="nav-tabs-box tablist-swiper swiper-container">
+                    <!-- Nav tabs -->                                
+                    <ul id="nav-tab-member" class="swiper-wrapper nav nav-tabs nav-line mb-2" role="tablist">
+                            <li role="presentation" class="active swiper-slide">
+                                <a href="#tag01" class="tablist-link active" aria-controls="tag01" role="tab" data-toggle="tab" aria-selected="true">推薦</a>
+                            </li>
+                            <li role="presentation" class="swiper-slide">
+                                <a href="#tag02" class="tablist-link" aria-controls="tag02" role="tab" data-toggle="tab" aria-selected="false">附近</a>
+                            </li>
+                            <li role="presentation" class="swiper-slide">
+                                <a href="#tag03" class="tablist-link" aria-controls="tag03" role="tab" data-toggle="tab" aria-selected="false">美食</a>
+                            </li>
+                            <li role="presentation" class="swiper-slide">
+                                <a href="#tag04" class="tablist-link" aria-controls="tag04" role="tab" data-toggle="tab" aria-selected="false">購物</a>
+                            </li>
+                            <li role="presentation" class="swiper-slide">
+                                <a href="#tag05" class="tablist-link" aria-controls="tag05" role="tab" data-toggle="tab" aria-selected="false">景點</a>
+                            </li>  
+                            <li role="presentation" class="swiper-slide">
+                                <a href="#tag06" class="tablist-link" aria-controls="tag06" role="tab" data-toggle="tab" aria-selected="false">遊樂</a>
+                            </li>
+                            <li role="presentation" class="swiper-slide">
+                                <a href="#tag07" class="tablist-link" aria-controls="tag07" role="tab" data-toggle="tab" aria-selected="false">其他</a>
+                            </li>
+                    </ul>     
+                </div>
+                <!-- Tab panes -->
+                <div class="tab-content pt-2 mb-5">
+                    <div role="tabpanel" class="tab-pane fade active show w-100" id="tag01">
+                        <div class="mycoin-couponbox card-columns px-3">                            
+                            <div class="card border-radius5">
+                                <div class="card-body">
+                                <div class="card-text">  
+                                    <div class="member-flex">
+                                        <div class="item one">
+                                            <div style="background-image: url('../img/shopping/store/store-logo2.png');" class="rwdimg logo-img"></div>   
+                                        </div>                                   
+                                        <div class="item three px-2">
+                                            <p>7-11</p>
+                                            <p>關東煮9折 限時優惠兌換券</p>
+                                            <p>2019/11/15 ~ 2019/12/31</p>
+                                        </div>                                 
+                                        <div class="item one">
+                                            <button class="btn px-2 index-btn small-80">兌換</button>
+                                            <div class="m-quantity small pl-1"><img src="../img/share/mobiicoin_red.png" class="coinimg-m"> 1</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                </div>
+                                <div class="card-footer bg-cardfooter pt-2 pb-0">
+                                <div class="member-flex small-80">    
+                                    <div class="item one text-nowrap">                        
+                                        <img src="../img/share/2200_w.png" class="nearbyimg" alt="">美食     
+                                    </div>                                        
+                                    <div class="item three txt-line-clamp1 text-center">
+                                        近高雄巨蛋捷運站
+                                    </div>                                
+                                    <div class="item two text-right">
+                                        距離33km
+                                    </div>
+                                </div>
+                                </div>
+                            </div>                         
+                            <div class="card border-radius5">
+                                <div class="card-body">
+                                <div class="card-text">  
+                                    <div class="member-flex">
+                                        <div class="item one">
+                                            <div style="background-image: url('../img/shopping/store/store-logo2.png');" class="rwdimg logo-img"></div>   
+                                        </div>                                   
+                                        <div class="item three px-2">
+                                            <p>7-11</p>
+                                            <p>關東煮9折 兌換券</p>
+                                            <p>2019/11/15 ~ 2019/12/31</p>
+                                        </div>                                 
+                                        <div class="item one">
+                                            <button class="btn px-2 index-btn small-80">兌換</button>
+                                            <div class="m-quantity small pl-1"><img src="../img/share/mobiicoin_red.png" class="coinimg-m"> 1</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                </div>
+                                <div class="card-footer bg-cardfooter pt-2 pb-0">
+                                <div class="member-flex small-80">    
+                                    <div class="item one text-nowrap">                        
+                                        <img src="../img/share/2000_w.png" class="nearbyimg" alt="">景點     
+                                    </div>                                        
+                                    <div class="item three txt-line-clamp1 text-center">
+                                        近高雄巨蛋捷運站
+                                    </div>                                
+                                    <div class="item two text-right">
+                                        距離33km
+                                    </div>
+                                </div>
+                                </div>
+                            </div>                         
+                            <div class="card border-radius5">
+                                <div class="card-body">
+                                <div class="card-text">  
+                                    <div class="member-flex">
+                                        <div class="item one">
+                                            <div style="background-image: url('../img/shopping/store/store-logo2.png');" class="rwdimg logo-img"></div>   
+                                        </div>                                   
+                                        <div class="item three px-2">
+                                            <p>7-11</p>
+                                            <p>關東煮9折 兌換券</p>
+                                            <p>2019/11/15 ~ 2019/12/31</p>
+                                        </div>                                 
+                                        <div class="item one">
+                                            <button class="btn px-2 index-btn small-80">兌換</button>
+                                            <div class="m-quantity small pl-1"><img src="../img/share/mobiicoin_red.png" class="coinimg-m"> 1</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                </div>
+                                <div class="card-footer bg-cardfooter pt-2 pb-0">
+                                <div class="member-flex small-80">    
+                                    <div class="item one text-nowrap">                        
+                                        <img src="../img/share/2400_w.png" class="nearbyimg" alt="">購物     
+                                    </div>                                        
+                                    <div class="item three txt-line-clamp1 text-center">
+                                        近高雄巨蛋捷運站
+                                    </div>                                
+                                    <div class="item two text-right">
+                                        距離33km
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>                    
+                    <div role="tabpanel" class="tab-pane" id="tag02">
+                        <div class="mycoin-couponbox card-columns px-3">                            
+                            <div class="card border-radius5">
+                                <div class="card-body">
+                                <div class="card-text">  
+                                    <div class="member-flex">
+                                        <div class="item one">
+                                            <div style="background-image: url('../img/shopping/store/store-logo2.png');" class="rwdimg logo-img"></div>   
+                                        </div>                                   
+                                        <div class="item three px-2">
+                                            <p>7-11</p>
+                                            <p>關東煮9折 兌換券</p>
+                                            <p>2019/11/15 ~ 2019/12/31</p>
+                                        </div>                                 
+                                        <div class="item one">
+                                            <button class="btn px-2 index-btn small-80">兌換</button>
+                                            <div class="m-quantity small pl-1"><img src="../img/share/mobiicoin_red.png" class="coinimg-m"> 1</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                </div>
+                                <div class="card-footer bg-cardfooter pt-2 pb-0">
+                                <div class="member-flex small-80">    
+                                    <div class="item one text-nowrap">                        
+                                        <img src="../img/share/2600_w.png" class="nearbyimg" alt="">附近     
+                                    </div>                                        
+                                    <div class="item three txt-line-clamp1 text-center">
+                                        近高雄巨蛋捷運站
+                                    </div>                                
+                                    <div class="item two text-right">
+                                        距離33km
+                                    </div>
+                                </div>
+                                </div>
+                            </div>                         
+                            <div class="card border-radius5">
+                                <div class="card-body">
+                                <div class="card-text">  
+                                    <div class="member-flex">
+                                        <div class="item one">
+                                            <div style="background-image: url('../img/shopping/store/store-logo2.png');" class="rwdimg logo-img"></div>   
+                                        </div>                                   
+                                        <div class="item three px-2">
+                                            <p>7-11</p>
+                                            <p>關東煮9折 兌換券</p>
+                                            <p>2019/11/15 ~ 2019/12/31</p>
+                                        </div>                                 
+                                        <div class="item one">
+                                            <button class="btn px-2 index-btn small-80">兌換</button>
+                                            <div class="m-quantity small pl-1"><img src="../img/share/mobiicoin_red.png" class="coinimg-m"> 1</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                </div>
+                                <div class="card-footer bg-cardfooter pt-2 pb-0">
+                                <div class="member-flex small-80">    
+                                    <div class="item one text-nowrap">                        
+                                        <img src="../img/share/2600_w.png" class="nearbyimg" alt="">附近     
+                                    </div>                                        
+                                    <div class="item three txt-line-clamp1 text-center">
+                                        近高雄巨蛋捷運站
+                                    </div>                                
+                                    <div class="item two text-right">
+                                        距離33km
+                                    </div>
+                                </div>
+                                </div>
+                            </div>                         
+                            <div class="card border-radius5">
+                                <div class="card-body">
+                                <div class="card-text">  
+                                    <div class="member-flex">
+                                        <div class="item one">
+                                            <div style="background-image: url('../img/shopping/store/store-logo2.png');" class="rwdimg logo-img"></div>   
+                                        </div>                                   
+                                        <div class="item three px-2">
+                                            <p>7-11</p>
+                                            <p>關東煮9折 兌換券</p>
+                                            <p>2019/11/15 ~ 2019/12/31</p>
+                                        </div>                                 
+                                        <div class="item one">
+                                            <button class="btn px-2 index-btn small-80">兌換</button>
+                                            <div class="m-quantity small pl-1"><img src="../img/share/mobiicoin_red.png" class="coinimg-m"> 1</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                </div>
+                                <div class="card-footer bg-cardfooter pt-2 pb-0">
+                                <div class="member-flex small-80">    
+                                    <div class="item one text-nowrap">                        
+                                        <img src="../img/share/2600_w.png" class="nearbyimg" alt="">附近     
+                                    </div>                                        
+                                    <div class="item three txt-line-clamp1 text-center">
+                                        近高雄巨蛋捷運站
+                                    </div>                                
+                                    <div class="item two text-right">
+                                        距離33km
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>                    
+                    <div role="tabpanel" class="tab-pane" id="tag03">
+                        <div class="mycoin-couponbox card-columns px-3">                            
+                            <div class="card border-radius5">
+                                <div class="card-body">
+                                <div class="card-text">  
+                                    <div class="member-flex">
+                                        <div class="item one">
+                                            <div style="background-image: url('../img/shopping/store/store-logo2.png');" class="rwdimg logo-img"></div>   
+                                        </div>                                   
+                                        <div class="item three px-2">
+                                            <p>7-11</p>
+                                            <p>關東煮9折 兌換券</p>
+                                            <p>2019/11/15 ~ 2019/12/31</p>
+                                        </div>                                 
+                                        <div class="item one">
+                                            <button class="btn px-2 index-btn small-80">兌換</button>
+                                            <div class="m-quantity small pl-1"><img src="../img/share/mobiicoin_red.png" class="coinimg-m"> 1</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                </div>
+                                <div class="card-footer bg-cardfooter pt-2 pb-0">
+                                <div class="member-flex small-80">    
+                                    <div class="item one text-nowrap">                        
+                                        <img src="../img/share/2200_w.png" class="nearbyimg" alt="">美食     
+                                    </div>                                        
+                                    <div class="item three txt-line-clamp1 text-center">
+                                        近高雄巨蛋捷運站
+                                    </div>                                
+                                    <div class="item two text-right">
+                                        距離33km
+                                    </div>
+                                </div>
+                                </div>
+                            </div>                         
+                            <div class="card border-radius5">
+                                <div class="card-body">
+                                <div class="card-text">  
+                                    <div class="member-flex">
+                                        <div class="item one">
+                                            <div style="background-image: url('../img/shopping/store/store-logo2.png');" class="rwdimg logo-img"></div>   
+                                        </div>                                   
+                                        <div class="item three px-2">
+                                            <p>7-11</p>
+                                            <p>關東煮9折 兌換券</p>
+                                            <p>2019/11/15 ~ 2019/12/31</p>
+                                        </div>                                 
+                                        <div class="item one">
+                                            <button class="btn px-2 index-btn small-80">兌換</button>
+                                            <div class="m-quantity small pl-1"><img src="../img/share/mobiicoin_red.png" class="coinimg-m"> 1</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                </div>
+                                <div class="card-footer bg-cardfooter pt-2 pb-0">
+                                <div class="member-flex small-80">    
+                                    <div class="item one text-nowrap">                        
+                                        <img src="../img/share/2200_w.png" class="nearbyimg" alt="">美食     
+                                    </div>                                        
+                                    <div class="item three txt-line-clamp1 text-center">
+                                        近高雄巨蛋捷運站
+                                    </div>                                
+                                    <div class="item two text-right">
+                                        距離33km
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>                    
+                    <div role="tabpanel" class="tab-pane" id="tag04">
+                        <div class="mycoin-couponbox card-columns px-3">                            
+                            <div class="card border-radius5">
+                                <div class="card-body">
+                                <div class="card-text">  
+                                    <div class="member-flex">
+                                        <div class="item one">
+                                            <div style="background-image: url('../img/shopping/store/store-logo2.png');" class="rwdimg logo-img"></div>   
+                                        </div>                                   
+                                        <div class="item three px-2">
+                                            <p>7-11</p>
+                                            <p>關東煮9折 兌換券</p>
+                                            <p>2019/11/15 ~ 2019/12/31</p>
+                                        </div>                                 
+                                        <div class="item one">
+                                            <button class="btn px-2 index-btn small-80">兌換</button>
+                                            <div class="m-quantity small pl-1"><img src="../img/share/mobiicoin_red.png" class="coinimg-m"> 1</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                </div>
+                                <div class="card-footer bg-cardfooter pt-2 pb-0">
+                                <div class="member-flex small-80">    
+                                    <div class="item one text-nowrap">                        
+                                        <img src="../img/share/2400_w.png" class="nearbyimg" alt="">購物     
+                                    </div>                                        
+                                    <div class="item three txt-line-clamp1 text-center">
+                                        近高雄巨蛋捷運站
+                                    </div>                                
+                                    <div class="item two text-right">
+                                        距離33km
+                                    </div>
+                                </div>
+                                </div>
+                            </div>                         
+                            <div class="card border-radius5">
+                                <div class="card-body">
+                                <div class="card-text">  
+                                    <div class="member-flex">
+                                        <div class="item one">
+                                            <div style="background-image: url('../img/shopping/store/store-logo2.png');" class="rwdimg logo-img"></div>   
+                                        </div>                                   
+                                        <div class="item three px-2">
+                                            <p>7-11</p>
+                                            <p>關東煮9折 兌換券</p>
+                                            <p>2019/11/15 ~ 2019/12/31</p>
+                                        </div>                                 
+                                        <div class="item one">
+                                            <button class="btn px-2 index-btn small-80">兌換</button>
+                                            <div class="m-quantity small pl-1"><img src="../img/share/mobiicoin_red.png" class="coinimg-m"> 1</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                </div>
+                                <div class="card-footer bg-cardfooter pt-2 pb-0">
+                                <div class="member-flex small-80">    
+                                    <div class="item one text-nowrap">                        
+                                        <img src="../img/share/2400_w.png" class="nearbyimg" alt="">購物     
+                                    </div>                                        
+                                    <div class="item three txt-line-clamp1 text-center">
+                                        近高雄巨蛋捷運站
+                                    </div>                                
+                                    <div class="item two text-right">
+                                        距離33km
+                                    </div>
+                                </div>
+                                </div>
+                            </div>                         
+                            <div class="card border-radius5">
+                                <div class="card-body">
+                                <div class="card-text">  
+                                    <div class="member-flex">
+                                        <div class="item one">
+                                            <div style="background-image: url('../img/shopping/store/store-logo2.png');" class="rwdimg logo-img"></div>   
+                                        </div>                                   
+                                        <div class="item three px-2">
+                                            <p>7-11</p>
+                                            <p>關東煮9折 兌換券</p>
+                                            <p>2019/11/15 ~ 2019/12/31</p>
+                                        </div>                                 
+                                        <div class="item one">
+                                            <button class="btn px-2 index-btn small-80">兌換</button>
+                                            <div class="m-quantity small pl-1"><img src="../img/share/mobiicoin_red.png" class="coinimg-m"> 1</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                </div>
+                                <div class="card-footer bg-cardfooter pt-2 pb-0">
+                                <div class="member-flex small-80">    
+                                    <div class="item one text-nowrap">                        
+                                        <img src="../img/share/2400_w.png" class="nearbyimg" alt="">購物      
+                                    </div>                                        
+                                    <div class="item three txt-line-clamp1 text-center">
+                                        近高雄巨蛋捷運站
+                                    </div>                                
+                                    <div class="item two text-right">
+                                        距離33km
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>                    
+                    <div role="tabpanel" class="tab-pane" id="tag05">
+                        <div class="mycoin-couponbox card-columns px-3">                            
+                            <div class="card border-radius5">
+                                <div class="card-body">
+                                <div class="card-text">  
+                                    <div class="member-flex">
+                                        <div class="item one">
+                                            <div style="background-image: url('../img/shopping/store/store-logo2.png');" class="rwdimg logo-img"></div>   
+                                        </div>                                   
+                                        <div class="item three px-2">
+                                            <p>7-11</p>
+                                            <p>關東煮9折 兌換券</p>
+                                            <p>2019/11/15 ~ 2019/12/31</p>
+                                        </div>                                 
+                                        <div class="item one">
+                                            <button class="btn px-2 index-btn small-80">兌換</button>
+                                            <div class="m-quantity small pl-1"><img src="../img/share/mobiicoin_red.png" class="coinimg-m"> 1</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                </div>
+                                <div class="card-footer bg-cardfooter pt-2 pb-0">
+                                <div class="member-flex small-80">    
+                                    <div class="item one text-nowrap">                        
+                                        <img src="../img/share/2000_w.png" class="nearbyimg" alt="">景點    
+                                    </div>                                        
+                                    <div class="item three txt-line-clamp1 text-center">
+                                        近高雄巨蛋捷運站
+                                    </div>                                
+                                    <div class="item two text-right">
+                                        距離33km
+                                    </div>
+                                </div>
+                                </div>
+                            </div>                         
+                            <div class="card border-radius5">
+                                <div class="card-body">
+                                <div class="card-text">  
+                                    <div class="member-flex">
+                                        <div class="item one">
+                                            <div style="background-image: url('../img/shopping/store/store-logo2.png');" class="rwdimg logo-img"></div>   
+                                        </div>                                   
+                                        <div class="item three px-2">
+                                            <p>7-11</p>
+                                            <p>關東煮9折 兌換券</p>
+                                            <p>2019/11/15 ~ 2019/12/31</p>
+                                        </div>                                 
+                                        <div class="item one">
+                                            <button class="btn px-2 index-btn small-80">兌換</button>
+                                            <div class="m-quantity small pl-1"><img src="../img/share/mobiicoin_red.png" class="coinimg-m"> 1</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                </div>
+                                <div class="card-footer bg-cardfooter pt-2 pb-0">
+                                <div class="member-flex small-80">    
+                                    <div class="item one text-nowrap">                        
+                                        <img src="../img/share/2000_w.png" class="nearbyimg" alt="">景點     
+                                    </div>                                        
+                                    <div class="item three txt-line-clamp1 text-center">
+                                        近高雄巨蛋捷運站
+                                    </div>                                
+                                    <div class="item two text-right">
+                                        距離33km
+                                    </div>
+                                </div>
+                                </div>
+                            </div>                         
+                            <div class="card border-radius5">
+                                <div class="card-body">
+                                <div class="card-text">  
+                                    <div class="member-flex">
+                                        <div class="item one">
+                                            <div style="background-image: url('../img/shopping/store/store-logo2.png');" class="rwdimg logo-img"></div>   
+                                        </div>                                   
+                                        <div class="item three px-2">
+                                            <p>7-11</p>
+                                            <p>關東煮9折 兌換券</p>
+                                            <p>2019/11/15 ~ 2019/12/31</p>
+                                        </div>                                 
+                                        <div class="item one">
+                                            <button class="btn px-2 index-btn small-80">兌換</button>
+                                            <div class="m-quantity small pl-1"><img src="../img/share/mobiicoin_red.png" class="coinimg-m"> 1</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                </div>
+                                <div class="card-footer bg-cardfooter pt-2 pb-0">
+                                <div class="member-flex small-80">    
+                                    <div class="item one text-nowrap">                        
+                                        <img src="../img/share/2000_w.png" class="nearbyimg" alt="">景點    
+                                    </div>                                        
+                                    <div class="item three txt-line-clamp1 text-center">
+                                        近高雄巨蛋捷運站
+                                    </div>                                
+                                    <div class="item two text-right">
+                                        距離33km
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>                    
+                    <div role="tabpanel" class="tab-pane" id="tag06">
+                        <div class="mycoin-couponbox card-columns px-3">                            
+                            <div class="card border-radius5">
+                                <div class="card-body">
+                                <div class="card-text">  
+                                    <div class="member-flex">
+                                        <div class="item one">
+                                            <div style="background-image: url('../img/shopping/store/store-logo2.png');" class="rwdimg logo-img"></div>   
+                                        </div>                                   
+                                        <div class="item three px-2">
+                                            <p>7-11</p>
+                                            <p>關東煮9折 兌換券</p>
+                                            <p>2019/11/15 ~ 2019/12/31</p>
+                                        </div>                                 
+                                        <div class="item one">
+                                            <button class="btn px-2 index-btn small-80">兌換</button>
+                                            <div class="m-quantity small pl-1"><img src="../img/share/mobiicoin_red.png" class="coinimg-m"> 1</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                </div>
+                                <div class="card-footer bg-cardfooter pt-2 pb-0">
+                                <div class="member-flex small-80">    
+                                    <div class="item one text-nowrap">                        
+                                        <img src="../img/share/2300_w.png" class="nearbyimg" alt="">遊樂     
+                                    </div>                                        
+                                    <div class="item three txt-line-clamp1 text-center">
+                                        近高雄巨蛋捷運站
+                                    </div>                                
+                                    <div class="item two text-right">
+                                        距離33km
+                                    </div>
+                                </div>
+                                </div>
+                            </div>   
+                        </div>
+                    </div>                  
+                    <div role="tabpanel" class="tab-pane" id="tag07">
+                        <div class="mycoin-couponbox card-columns px-3">                            
+                            <div class="card border-radius5">
+                                <div class="card-body">
+                                <div class="card-text">  
+                                    <div class="member-flex">
+                                        <div class="item one">
+                                            <div style="background-image: url('../img/shopping/store/store-logo2.png');" class="rwdimg logo-img"></div>   
+                                        </div>                                   
+                                        <div class="item three px-2">
+                                            <p>7-11</p>
+                                            <p>關東煮9折 兌換券</p>
+                                            <p>2019/11/15 ~ 2019/12/31</p>
+                                        </div>                                 
+                                        <div class="item one">
+                                            <button class="btn px-2 index-btn small-80">兌換</button>
+                                            <div class="m-quantity small pl-1"><img src="../img/share/mobiicoin_red.png" class="coinimg-m"> 1</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                </div>
+                                <div class="card-footer bg-cardfooter pt-2 pb-0">
+                                <div class="member-flex small-80">    
+                                    <div class="item one text-nowrap">                        
+                                        <img src="../img/share/2200_w.png" class="nearbyimg" alt="">美食     
+                                    </div>                                        
+                                    <div class="item three txt-line-clamp1 text-center">
+                                        近高雄巨蛋捷運站
+                                    </div>                                
+                                    <div class="item two text-right">
+                                        距離33km
+                                    </div>
+                                </div>
+                                </div>
+                            </div>                         
+                            <div class="card border-radius5">
+                                <div class="card-body">
+                                <div class="card-text">  
+                                    <div class="member-flex">
+                                        <div class="item one">
+                                            <div style="background-image: url('../img/shopping/store/store-logo2.png');" class="rwdimg logo-img"></div>   
+                                        </div>                                   
+                                        <div class="item three px-2">
+                                            <p>7-11</p>
+                                            <p>關東煮9折 兌換券</p>
+                                            <p>2019/11/15 ~ 2019/12/31</p>
+                                        </div>                                 
+                                        <div class="item one">
+                                            <button class="btn px-2 index-btn small-80">兌換</button>
+                                            <div class="m-quantity small pl-1"><img src="../img/share/mobiicoin_red.png" class="coinimg-m"> 1</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                </div>
+                                <div class="card-footer bg-cardfooter pt-2 pb-0">
+                                <div class="member-flex small-80">    
+                                    <div class="item one text-nowrap">                        
+                                        <img src="../img/share/2200_w.png" class="nearbyimg" alt="">美食     
+                                    </div>                                        
+                                    <div class="item three txt-line-clamp1 text-center">
+                                        近高雄巨蛋捷運站
+                                    </div>                                
+                                    <div class="item two text-right">
+                                        距離33km
+                                    </div>
+                                </div>
+                                </div>
+                            </div>                         
+                            <div class="card border-radius5">
+                                <div class="card-body">
+                                <div class="card-text">  
+                                    <div class="member-flex">
+                                        <div class="item one">
+                                            <div style="background-image: url('../img/shopping/store/store-logo2.png');" class="rwdimg logo-img"></div>   
+                                        </div>                                   
+                                        <div class="item three px-2">
+                                            <p>7-11</p>
+                                            <p>關東煮9折 兌換券</p>
+                                            <p>2019/11/15 ~ 2019/12/31</p>
+                                        </div>                                 
+                                        <div class="item one">
+                                            <button class="btn px-2 index-btn small-80">兌換</button>
+                                            <div class="m-quantity small pl-1"><img src="../img/share/mobiicoin_red.png" class="coinimg-m"> 1</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                </div>
+                                <div class="card-footer bg-cardfooter pt-2 pb-0">
+                                <div class="member-flex small-80">    
+                                    <div class="item one text-nowrap">                        
+                                        <img src="../img/share/2200_w.png" class="nearbyimg" alt="">美食     
+                                    </div>                                        
+                                    <div class="item three txt-line-clamp1 text-center">
+                                        近高雄巨蛋捷運站
+                                    </div>                                
+                                    <div class="item two text-right">
+                                        距離33km
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>                        
+        </div>   
+    </div>
+  
+
+
+</div> 
+<div id="loginhtml"></div>
+<div id="footerMobii"></div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="../js/vendor/bs4/js/jquery-3.2.1.min.js"></script>
+    <!-- Latest compiled and minified JavaScript -->    
+    <script src="../js/vendor/bs4/js/popper.min.js"></script>
+    <script src="../js/vendor/bs4/js/bootstrap.min.js"></script>    
+    <script src="../js/vendor/jquery-editable-select-master/dist/jquery-editable-select.js"></script>
+
+    <!-- vendor js -->
+    <script src="../js/vendor/swiper/js/swiper.min.js"></script>
+    <script src="../js/vendor/imgLiquid.js"></script>
+
+    <!-- custom js -->    
+    <script src="../js/animateCss.js"></script>
+    <script src="../js/jquery.countdown.min.js"></script>
+    <script>
+  
+        //send stepval
+        $(document).on('click','button.sendval', function(){
+            var sendval = $(this).val();
+            document.cookie = 'step='+sendval;
+            window.location.href='../voucher-detail.html';
+            console.log("click");
+        });
+
+        //that counts from now to 10:00 am
+        var currentDate = new Date(new Date().getTime());
+        var hours = currentDate.getHours();
+        var endTime = new Date(currentDate);
+        endTime.setMinutes(0);
+        endTime.setSeconds(0);
+        endTime.setHours(10);
+        if(hours >= 10){
+            endTime.setDate(endTime.getDate() + 1);
+        }
+        $('#clock').countdown(endTime, function(event) {
+        $(this).html("<span class='item-time'>"+event.strftime('%H')+"</span><span class='item-time'>"+event.strftime('%M')+"</span><span class='item-time'>"+event.strftime('%S'));
+        });
+
+        //shopping tickets
+        var parameter = window.location.hash.split("#")[1];
+        if(parameter=="tickets"){
+            $('.title-name').text("店家優惠券");
+            $('#footerMobii, .searchbox, .limitedTime, .afp-tab-box').hide();
+        }
+        
+    </script>
+
+    <script>    
+        $("#loginhtml").load("../login.html"); 
+        $("#footerMobii").load("../footerMobii.html"); 
+    </script>
+    <script src="../js/index.js"></script>
+    <script src="../js/indexSwiper.js"></script>
+</body>
+
+</html>

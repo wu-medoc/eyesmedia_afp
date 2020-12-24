@@ -13,7 +13,7 @@
     "service": "生活資訊",
     "img": "category2_1dollar",
     "tit": "一元搶購",
-    "link": "offers/offers_one.html",
+    "link": "voucher//event.html",
     "item": 2,
     "disable": 1
   },
@@ -184,7 +184,7 @@
     "service": "交通服務",
     "img": "category3_info",
     "tit": "交通資訊",
-    "link": "traffic/traffic_index.html",
+    "link": "info/traffic/traffic.html",
     "item": "",
     "disable": 1
   },

@@ -16,7 +16,8 @@
     <link rel="stylesheet" href="../styles/css.min.css">
     
     <link rel="stylesheet" href="../styles/style.min.css">
-    <link rel="stylesheet" href="../styles/shopping-index.min.css">
+    <link rel="stylesheet" href="../styles/shopping-cart.min.css">
+    <link rel="stylesheet" href="../styles/shopping-footer.min.css">
     <link rel="stylesheet" href="../styles/animate.min.css">
     <title>Mobii!</title>
 </head>
@@ -81,7 +82,7 @@
                             </button>
                         </div>
                     </li>
-                    <li class="bg-tickets small-80" onclick="location.href='../offers/offers_index.html#tickets'">
+                    <li class="bg-tickets small-80" onclick="location.href='../voucher//offers.html#tickets'">
                         <img src="../img/shopping/tickets.png" style="height:30px">
                         <span style="vertical-align: text-top;">店家有新的優惠券，點我領取！！！</span>
                     </li>
@@ -505,7 +506,7 @@
                 $('.shopping-cartfooter').show();
                 if(modifybtnlen=='1'){
                     $(this).hide();
-                    $('.shopping-cartlist').html("<div class='d-flex flex-column justify-content-center align-items-center h-auto'><img src=\"../img/shopping/nocart.png\" class='nocart'><p class='p-2 w-100 text-center'>購物車內還沒有商品？<br>我OK! 你先買～</p><button type='button' class='btn index-btn m-2 w-75 cart-next' onclick='javascript:location.href=\"index.html\"'>立馬去買</button></div>");
+                    $('.shopping-cartlist').html("<div class='d-flex flex-column justify-content-center align-items-center h-auto'><img src=\"../img/shopping/nocart.png\" class='nocart'><p class='p-2 w-100 text-center'>購物車內還沒有商品？<br>我OK! 你先買～</p><button type='button' class='btn index-btn m-2 w-75 cart-next' onclick='javascript:location.href=\"shopping.html\"'>立馬去買</button></div>");
                     $('.shopping-cartfooter').hide();
                 }else{
                     $(this).text('編輯全部').val('store0'); 

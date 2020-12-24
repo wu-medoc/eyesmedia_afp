@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=1, user-scalable=no">
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../js/vendor/bs4/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../js/vendor/jquery-editable-select-master/dist/jquery-editable-select.min.css">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+    <!-- vendor css -->
+    <link rel="stylesheet" href="../js/vendor/swiper/css/swiper.min.css">
+
+    <!-- custom css -->
+    <link rel="stylesheet" href="../styles/css.min.css">
+    
+    <link rel="stylesheet" href="../styles/style.min.css">
+    <link rel="stylesheet" href="../styles/notify.min.css">
+    <link rel="stylesheet" href="../styles/animate.min.css">
+
+    <title>艾斯移動 - 通知</title>
+</head>
+
+<body>    
+    <div class="wrap container py-5 text-center">
+        <div class="slideInRight animated"> 
+            <div class="pt-5">
+                <div class="w-100 no-data">                            
+                    <img src="../img/share/sysMaintain.png">
+                    <p>系統維護中</p>
+                </div>   
+            </div>   
+        </div>
+        <button class="btn bluedk-outline-btn w-25">關閉</button>
+
+
+    </div> 
+    <div id="loginhtml"></div>
+    <div id="footerMobii"></div>
+  
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="../js/vendor/bs4/js/jquery-3.2.1.min.js"></script>
+    <!-- Latest compiled and minified JavaScript -->    
+    <script src="../js/vendor/bs4/js/popper.min.js"></script>
+    <script src="../js/vendor/bs4/js/bootstrap.min.js"></script>
+    <script src="../js/vendor/jquery-editable-select-master/dist/jquery-editable-select.js"></script>
+
+    <!-- vendor js -->
+    <script src="../js/vendor/swiper/js/swiper.min.js"></script>
+    <script src="../js/vendor/imgLiquid.js"></script>
+
+    <!-- custom js -->    
+    <script src="../js/animateCss.js"></script>
+    <script src="../js/jquery.countdown.min.js"></script>
+    <script>
+
+        //send stepval
+        $('button.sendval').on('click',function(){
+            var sendval = $(this).val();
+            document.cookie = 'step='+sendval;
+            window.location.href='../voucher/voucher-detail.html';
+        });
+
+        //that counts from now to 10:00 am
+        var currentDate = new Date(new Date().getTime());
+        var hours = currentDate.getHours();
+        var endTime = new Date(currentDate);
+        endTime.setMinutes(0);
+        endTime.setSeconds(0);
+        endTime.setHours(10);
+        if(hours >= 10){
+            endTime.setDate(endTime.getDate() + 1);
+        }
+        $('#clock').countdown(endTime, function(event) {
+        $(this).html("<span class='item-time'>"+event.strftime('%H')+"</span><span class='item-time'>"+event.strftime('%M')+"</span><span class='item-time'>"+event.strftime('%S'));
+        });
+        $('li').on('click',function(){
+            if($(this).hasClass('active')) {
+                $(this).removeClass('active');
+                $(this).children().find('.msgContent').attr('hidden','hidden');
+                $(this).children().find('.newbody').removeAttr('hidden');
+            }else{
+                $(this).addClass('active');
+                $(this).children().find('.msgContent').removeAttr('hidden');
+                $(this).children().find('.newbody').attr('hidden','hidden');
+            }  
+        })
+    </script>
+
+    <script>    
+        $("#loginhtml").load("../login.html"); 
+        $("#footerMobii").load("../footerMobii.html"); 
+    </script>
+    <script src="../js/index.js"></script>
+</body>
+
+</html>

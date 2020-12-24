@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=1, user-scalable=no">
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../js/vendor/bs4/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../js/vendor/jquery-editable-select-master/dist/jquery-editable-select.min.css">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+    <!-- vendor css -->
+    <link rel="stylesheet" href="../js/vendor/swiper/css/swiper.min.css">
+
+    <!-- custom css -->
+    <link rel="stylesheet" href="../styles/css.min.css">    
+    <link rel="stylesheet" href="../styles/style.min.css">
+    <link rel="stylesheet" href="../styles/animate.min.css">
+
+    <title>Mobii! - 商店客服</title>
+</head>
+
+<body>
+    <div class="wrap container">
+        <header>
+            <div class="header-secondary container">
+                <div class="flex-inline-between">
+                    <div class="item one">
+                        <div class="close-btn" onclick="history.back();" data-toggle="tooltip" data-placement="bottom" title="回上一頁">
+                            <i class="material-icons">&#xe314;</i>
+                        </div>
+                    </div>
+                    <div class="item three text-center">
+                        <div class="d-grid">
+                            <div class="title-name txt-line-clamp1">昇恆昌免稅購物網站</div>
+                        </div>
+                    </div>
+                    <div class="item one text-right">
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="bearservice-lg">              
+            <div class="service-msg">
+                客服單編號：123487563872875
+            </div>           
+            <div class="chat-box">
+                <div class="popup-messages">          
+                    <div class="direct-chat-messages">
+                        <small class="timestamp-s">2020/01/11 11</small>
+                        <div class="direct-chat-sys">買方已提出 退貨 需求</div>
+                        <small class="timestamp-s">2020/01/11 12</small>    
+                        <!-- Message. Default to the right -->
+                        <div class="guests-chat-msg">
+                            <div class="guests-chat-text">
+                                Hi
+                            </div> 
+                        </div>                     
+                        <!-- Message. Default to the left -->
+                        <div class="direct-chat-msg">
+                            <div class="direct-chat-text">
+                                您好，我們會請專人到府收回退貨，再為您處理退款～
+                            </div>                  
+                            <div class="direct-chat-text">
+                                客服專線 0800-xxxxxx
+                            </div>                  
+                        </div>          
+                        <!-- Message. Default to the right -->
+                        <div class="guests-chat-msg">
+                            <div class="guests-chat-text">
+                                請幫我轉真人服務
+                            </div> 
+                        </div>     
+                    </div> 
+                    <bottom class="btn index-outline-btn small-80 m-2 preview">結單(預覽)</bottom>   
+                </div>               
+                <div class="service-overbox text-center d-none">
+                    <small class="timestamp-s">2020/01/11 12</small>
+                    <div class="service-over">                            
+                        此客服單已經結單
+                    </div>  
+                    <bottom class="btn index-outline-btn small-80 m-2" onclick="history.back();">回上一頁</bottom>
+                </div>
+                <div class="service-store-footer container">
+                    <input type="text" class="customer-msg" placeholder="請填寫問題內容（限填200字）">
+                    <i class="material-icons send m-2">&#xe163;</i>
+                </div>  
+            </div>    
+        </div>    
+    </div>   
+
+    <div id="footerMobii"></div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="../js/vendor/bs4/js/jquery-3.2.1.min.js"></script>
+    <!-- Latest compiled and minified JavaScript -->    
+    <script src="../js/vendor/bs4/js/popper.min.js"></script>
+    <script src="../js/vendor/bs4/js/bootstrap.min.js"></script> 
+    <script src="../js/vendor/jquery-editable-select-master/dist/jquery-editable-select.js"></script>
+
+    <!-- vendor js -->
+    <script src="../js/vendor/swiper/js/swiper.min.js"></script>
+    <script src="../js/vendor/imgLiquid.js"></script>
+    
+    <!-- custom js -->
+    <script>
+        $("#footerMobii").load("../footerMobii.html");         
+
+        $('.preview').on('click', function(){
+            $('.preview ,.service-store-footer').addClass('d-none');
+            $(' .service-overbox').removeClass('d-none');
+        });
+
+        $('i.send').on('click', function(){
+            if($('input.customer-msg').val().length>0){
+                $('.direct-chat-messages').append("<div class='guests-chat-msg'><div class='guests-chat-text'>"+$('input.customer-msg').val()+"</div></div>");
+            }
+        });
+            
+    </script>
+    <script src="../js/animateCss.js"></script>
+    <script src="../js/index.js"></script>
+</body>
+
+</html>

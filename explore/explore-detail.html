@@ -1,0 +1,656 @@
+﻿<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=1, user-scalable=no">
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../js/vendor/bs4/css/bootstrap.min.css">
+    <!-- vendor css -->
+    <link rel="stylesheet" href="../js/vendor/jquery-editable-select-master/dist/jquery-editable-select.min.css">
+    <link rel="stylesheet" href="../js/vendor/swiper/css/swiper.min.css">
+
+    <!-- custom css -->
+    <link rel="stylesheet" href="../styles/css.min.css">
+    
+    <link rel="stylesheet" href="../styles/style.min.css">
+    <link rel="stylesheet" href="../styles/explore-detail.min.css">
+    <link rel="stylesheet" href="../styles/product-list.min.css">
+    <link rel="stylesheet" href="../styles/shopping-footer.min.css">
+    <link rel="stylesheet" href="../styles/animate.min.css">
+    <title>Mobii!</title>
+</head>
+
+<body>
+    <div class="wrap container">
+    <main>        
+        <!-- Swiper for shopping-storeimg -->        
+        <div class="shopping-storedetail">
+            <div class="shopping-storedetailbox">
+                <div class="shopping-storeimgbox">
+                    <div class="shopping-storeimg swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div style="background-image: url('https://picsum.photos/1200/800/?random=36');" class="img-fluid"></div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div style="background-image: url('https://picsum.photos/800/1200/?random=3');" class="img-fluid"></div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div style="background-image: url('https://picsum.photos/1200/1200/?random=36');" class="img-fluid"></div>
+                            </div>
+                        </div>
+                        <!-- Add Pagination -->
+                        <div class="swiper-pagination"></div>
+                        <div class="shopping-storeup">         
+                            <div class="back-go">
+                                <button type="button" onclick="history.back()" data-toggle="tooltip" data-placement="top" title="回上一頁"><img src="../img/share/icon_back.png" class="imgicon"></button>
+                            </div>
+                            <div class="ml-auto d-flex d-inline align-items-center">
+                                <!-- <button class="btn add-share" type="button"><img src="../img/share/icon_share.png" class="imgicon"></button> -->
+                                <button class="btn add-share msg-open" type="button" value="msg-share" data-toggle="modal" data-target="#messageModal" data-title="分享好店"><img src="../img/share/icon_share.png" class="imgicon"></button>
+                                <div class="add-favorite">
+                                    <button type="button" class="active" data-toggle="modal" data-target=".bd-example-modal-sm" data-toggle="tooltip" data-placement="top" title="加入收藏"><img src="../img/share/icon_favorite.png" class="imgicon"></button>
+                                </div>
+                            </div>
+                        </div>  
+                    </div>  
+                </div>   
+            </div>
+            <div class="store-container">
+                <div class="store-info-box">
+                    <div class="shopping-flex px-1">
+                        <div class="item three">
+                            <div class="shopping-storebox d-flex flex-row d-inline-block">
+                                <div class="img-box mr-2">
+                                    <div style="background-image: url('../img/shopping/store/receiptLogo.png');" class="rwdimg logo-img"></div>
+                                </div>
+                                <div class="store-title center-v">艾斯移動</div>   
+                            </div>  
+                            <div class="shopping-store-badge">                        
+                                <span class="badge badge-pill text-explore"><img src="../img/share/1100.png" alt="">實體商店</span> 
+                                <span class="badge badge-pill text-explore"><img src="../img/share/2200.png" alt="">美食</span> 
+                                <span class="badge badge-pill text-explore">折價券</span>      
+                            </div>
+                        </div>
+                        <div class="item one align-self-start mt-3 ng-star-inserted">
+                            <div class="shopping-store-btn text-right">                        
+                                <button type="button" class="btn btn-outline-dark border-radius30 py-1" onclick="">聯絡客服</button>      
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex-inline-between store-distance py-3 px-2">
+                        <div>
+                            近左營捷運站
+                        </div>
+                        <div>
+                            距離33km
+                        </div>
+                    </div>
+                    <div class="store-tab-box">
+                        <ul class="nav nav-tabs" id="storeTab" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link active" id="store-tab" data-toggle="tab" href="#store" role="tab" aria-controls="store" aria-selected="true">商家簡介</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="shop-tab" data-toggle="tab" href="#shop" role="tab" aria-controls="shop" aria-selected="false">所有商品</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="ticket-tab" data-toggle="tab" href="#ticket" role="tab" aria-controls="ticket" aria-selected="false">優惠券</a>
+                            </li>
+                        </ul>
+                        <div class="tab-content">
+                            <!-- 商家簡介 -->
+                            <div class="tab-pane fade show active" id="store" role="tabpanel" aria-labelledby="store-tab">
+                                <div class="store-group">
+                                    <div class="store-item store-open">
+                                        <p>
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus delectus, rem voluptates non fugit aliquam accusantium quas corrupti reiciendis illum odit saepe nihil fuga est, placeat animi cumque, perferendis natus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia maiores hic repellendus quia! Voluptatibus, perspiciatis cumque placeat quos explicabo eos hic aliquam aliquid maiores, tenetur dolorem maxime voluptas enim praesentium!
+                                        </p>
+                                        <div class="open-btn ml-auto"><i class="material-icons"></i></div>
+                                    </div>
+                                    <div class="store-item">
+                                        <div class="item-icon">
+                                            <img class="h20" src="../img/share/store-location.png">
+                                        </div>
+                                        <div class="item">
+                                            臺北市信義區松壽路18號
+                                        </div>
+                                    </div>
+                                    <div class="store-item store-itemopen">
+                                        <div class="item-icon">
+                                            <img class="h20" src="../img/share/store-branch.png">
+                                        </div>
+                                        <div class="item">
+                                            分店資訊
+                                        </div>
+                                        <div class="open-btn"><i class="material-icons"></i></div>
+                                        <ul class="itemopen-list">
+                                            <li><span>內湖復興店</span><i class="material-icons keyboard_arrow_right">&#xe315;</i></li>
+                                            <li><span>金湖廣場</span><i class="material-icons keyboard_arrow_right">&#xe315;</i></li>
+                                            <li><span>內湖復興店</span><i class="material-icons keyboard_arrow_right">&#xe315;</i></li>
+                                            <li><span>金湖廣場</span><i class="material-icons keyboard_arrow_right">&#xe315;</i></li>
+                                            <li><span>內湖復興店</span><i class="material-icons keyboard_arrow_right">&#xe315;</i></li>
+                                            <li><span>金湖廣場</span><i class="material-icons keyboard_arrow_right">&#xe315;</i></li>
+                                            <li><span>內湖復興店</span><i class="material-icons keyboard_arrow_right">&#xe315;</i></li>
+                                            <li><span>金湖廣場</span><i class="material-icons keyboard_arrow_right">&#xe315;</i></li>
+                                            <li><span>內湖復興店</span><i class="material-icons keyboard_arrow_right">&#xe315;</i></li>
+                                            <li><span>金湖廣場</span><i class="material-icons keyboard_arrow_right">&#xe315;</i></li>
+                                            <li><span>內湖復興店</span><i class="material-icons keyboard_arrow_right">&#xe315;</i></li>
+                                            <li><span>金湖廣場</span><i class="material-icons keyboard_arrow_right">&#xe315;</i></li>
+                                            <li><span>內湖復興店</span><i class="material-icons keyboard_arrow_right">&#xe315;</i></li>
+                                            <li><span>金湖廣場</span><i class="material-icons keyboard_arrow_right">&#xe315;</i></li>
+                                            <li><span>內湖復興店</span><i class="material-icons keyboard_arrow_right">&#xe315;</i></li>
+                                            <li><span>金湖廣場</span><i class="material-icons keyboard_arrow_right">&#xe315;</i></li>
+                                            <li><span>內湖復興店</span><i class="material-icons keyboard_arrow_right">&#xe315;</i></li>
+                                            <li><span>金湖廣場</span><i class="material-icons keyboard_arrow_right">&#xe315;</i></li>
+                                        </ul>
+                                    </div>
+                                    <div class="store-item store-itemopen">
+                                        <div class="item-icon">
+                                            <img class="h20" src="../img/share/store-time.png">
+                                        </div>
+                                        <div class="item">
+                                            營業中<span>在22:00關閉</span>
+                                        </div>
+                                        <div class="open-btn"><i class="material-icons"></i></div>
+                                        <ul class="itemopen-list">
+                                            <li class="this-day"><span>星期四</span><span>11:00~22:00</span></li>
+                                            <li><span>星期四</span><span>11:00~22:00</span></li>
+                                            <li><span>星期四</span><span>11:00~22:00</span></li>
+                                            <li><span>星期四</span><span>11:00~22:00</span></li>
+                                            <li><span>星期四</span><span>11:00~22:00</span></li>
+                                        </ul>
+                                    </div>
+                                    <div class="store-item">
+                                        <div class="item-icon">
+                                            <img class="h20" src="../img/share/store-phone.png">
+                                        </div>
+                                        <div class="item">
+                                            07 346 9999
+                                        </div>
+                                    </div>
+                                    <div class="store-item">
+                                        <div class="item-icon">
+                                            <img class="h20" src="../img/share/store-payment.png">
+                                        </div>
+                                        <div class="item">
+                                            現金、信用卡、LINE PAY
+                                        </div>
+                                    </div>
+                                    <div class="store-item">
+                                        <div class="item-icon">
+                                            <img class="h20" src="../img/share/store-website.png">
+                                        </div>
+                                        <div class="item">
+                                            <a href="https://www.google.com/">官方網站</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 所有商品 -->
+                            <div class="tab-pane fade" id="shop" role="tabpanel" aria-labelledby="shop-tab">
+                                <div class="flex-inline-between p-2">
+                                    <div class="sub-title">
+                                        <button class="btn">
+                                            篩選與排序
+                                        </button>
+                                    </div>
+                                    <div class="sub-img" onclick="callsortLayer('.productsOpensort');">
+                                        <button class="btn px-0"><i class="material-icons">&#xE152;</i></button>
+                                    </div>
+                                </div>
+                                <div id="products-list">
+                                    <div class="products-listbox">        
+                                            <div class="row">
+                                                <div class="col-6 col-md-4">
+                                                  <div class="products-item">
+                                                    <a href="../shopping/product-detail.html">
+                                                        <div class="products-img">
+                                                            <div class="iproductimg-box">
+                                                                <div class="rwdimg" style="background-image: url('../img/shopping/products/products001.jfif');"></div>
+                                                            </div> 
+                                                        </div>
+                                                        <div class="products-title">
+                                                            <p class="txt-line-clamp2">[下殺限定]Apple iPhone XS 256G 5.8吋智慧型手機</p>
+                                                        </div>
+                                                        <div class="products-price">
+                                                            <div class="price-asking">$30,320</div>
+                                                            <div class="price-original">$37,000</div>
+                                                        </div>
+                                                    </a>
+                                                  </div>
+                                                </div>                                                
+                                                <div class="col-6 col-md-4">
+                                                    <div class="products-item">
+                                                    <a href="../shopping/product-detail.html">
+                                                        <div class="products-img">
+                                                            <div class="iproductimg-box">
+                                                                <div class="rwdimg" style="background-image: url('../img/shopping/products/products001.jfif');"></div>
+                                                            </div> 
+                                                        </div>
+                                                        <div class="products-title">
+                                                            <p class="txt-line-clamp2">[下殺限定]Apple iPhone XS 256G 5.8吋智慧型手機</p>
+                                                        </div>
+                                                        <div class="products-price">
+                                                            <div class="price-asking">$30,320</div>
+                                                            <div class="price-original">$37,000</div>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                              </div>                                                
+                                              <div class="col-6 col-md-4">
+                                                  <div class="products-item">
+                                                    <a href="../shopping/product-detail.html">
+                                                        <div class="products-img">
+                                                            <div class="iproductimg-box">
+                                                                <div class="rwdimg" style="background-image: url('../img/shopping/products/products001.jfif');"></div>
+                                                            </div> 
+                                                        </div>
+                                                        <div class="products-title">
+                                                            <p class="txt-line-clamp2">[下殺限定]Apple iPhone XS 256G 5.8吋智慧型手機</p>
+                                                        </div>
+                                                        <div class="products-price">
+                                                            <div class="price-asking">$30,320</div>
+                                                            <div class="price-original">$37,000</div>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                              </div>                                                
+                                              <div class="col-6 col-md-4">
+                                                  <div class="products-item">
+                                                    <a href="../shopping/product-detail.html">
+                                                        <div class="products-img">
+                                                            <div class="iproductimg-box">
+                                                                <div class="rwdimg" style="background-image: url('../img/shopping/products/products001.jfif');"></div>
+                                                            </div> 
+                                                        </div>
+                                                        <div class="products-title">
+                                                            <p class="txt-line-clamp2">[下殺限定]Apple iPhone XS 256G 5.8吋智慧型手機</p>
+                                                        </div>
+                                                        <div class="products-price">
+                                                            <div class="price-asking">$30,320</div>
+                                                            <div class="price-original">$37,000</div>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                              </div>                                                
+                                              <div class="col-6 col-md-4">
+                                                  <div class="products-item">
+                                                    <a href="../shopping/product-detail.html">
+                                                        <div class="products-img">
+                                                            <div class="iproductimg-box">
+                                                                <div class="rwdimg" style="background-image: url('../img/shopping/products/products001.jfif');"></div>
+                                                            </div> 
+                                                        </div>
+                                                        <div class="products-title">
+                                                            <p class="txt-line-clamp2">[下殺限定]Apple iPhone XS 256G 5.8吋智慧型手機</p>
+                                                        </div>
+                                                        <div class="products-price">
+                                                            <div class="price-asking">$30,320</div>
+                                                            <div class="price-original">$37,000</div>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                              </div>    
+                                            </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 優惠券 -->
+                            <div class="tab-pane fade" id="ticket" role="tabpanel" aria-labelledby="ticket-tab">
+                                <!-- discout -->
+                                <div class="mycoin-couponbox card-columns px-3">                            
+                                    <div class="card border-radius5">
+                                        <div class="card-body">
+                                        <div class="card-text">  
+                                            <div class="member-flex">
+                                                <div class="item one">
+                                                    <div style="background-image: url('../img/shopping/store/store-logo2.png');" class="rwdimg logo-img"></div>   
+                                                </div>                                   
+                                                <div class="item three px-2">
+                                                    <p>7-11</p>
+                                                    <p>關東煮9折 兌換券</p>
+                                                    <p>2019/11/15 ~ 2019/12/31</p>
+                                                </div>                                 
+                                                <div class="item one">
+                                                    <button class="btn px-2 index-btn small-80">領取</button>
+                                                    <div class="m-quantity small pl-1"><img src="../img/share/mobiicoin_red.png" class="coinimg-m"> 1</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        </div>
+                                        <div class="card-footer bg-cardfooter pt-2 pb-0">
+                                        <div class="member-flex small-80">    
+                                            <div class="item one text-nowrap">                        
+                                                <img src="../img/share/2600_w.png" class="nearbyimg" alt="">附近     
+                                            </div>                                        
+                                            <div class="item three txt-line-clamp1 text-center">
+                                                近高雄巨蛋捷運站
+                                            </div>                                
+                                            <div class="item two text-right">
+                                                
+                                            </div>
+                                        </div>
+                                        </div>
+                                    </div>                         
+                                    <div class="card border-radius5">
+                                        <div class="card-body">
+                                        <div class="card-text">  
+                                            <div class="member-flex">
+                                                <div class="item one">
+                                                    <div style="background-image: url('../img/shopping/store/store-logo2.png');" class="rwdimg logo-img"></div>   
+                                                </div>                                   
+                                                <div class="item three px-2">
+                                                    <p>7-11</p>
+                                                    <p>關東煮9折 兌換券</p>
+                                                    <p>2019/11/15 ~ 2019/12/31</p>
+                                                </div>                                 
+                                                <div class="item one">
+                                                    <button class="btn px-2 index-btn small-80">領取</button>
+                                                    <div class="m-quantity small pl-1"><img src="../img/share/mobiicoin_red.png" class="coinimg-m"> 1</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        </div>
+                                        <div class="card-footer bg-cardfooter pt-2 pb-0">
+                                        <div class="member-flex small-80">    
+                                            <div class="item one text-nowrap">                        
+                                                <img src="../img/share/2600_w.png" class="nearbyimg" alt="">附近     
+                                            </div>                                        
+                                            <div class="item three txt-line-clamp1 text-center">
+                                                近高雄巨蛋捷運站
+                                            </div>                                
+                                            <div class="item two text-right">
+                                                
+                                            </div>
+                                        </div>
+                                        </div>
+                                    </div>                         
+                                    <div class="card border-radius5">
+                                        <div class="card-body">
+                                        <div class="card-text">  
+                                            <div class="member-flex">
+                                                <div class="item one">
+                                                    <div style="background-image: url('../img/shopping/store/store-logo2.png');" class="rwdimg logo-img"></div>   
+                                                </div>                                   
+                                                <div class="item three px-2">
+                                                    <p>7-11</p>
+                                                    <p>關東煮9折 兌換券</p>
+                                                    <p>2019/11/15 ~ 2019/12/31</p>
+                                                </div>                                 
+                                                <div class="item one">
+                                                    <button class="btn px-2 index-btn small-80">領取</button>
+                                                    <div class="m-quantity small pl-1"><img src="../img/share/mobiicoin_red.png" class="coinimg-m"> 1</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        </div>
+                                        <div class="card-footer bg-cardfooter pt-2 pb-0">
+                                        <div class="member-flex small-80">    
+                                            <div class="item one text-nowrap">                        
+                                                <img src="../img/share/2600_w.png" class="nearbyimg" alt="">附近     
+                                            </div>                                        
+                                            <div class="item three txt-line-clamp1 text-center">
+                                                近高雄巨蛋捷運站
+                                            </div>                                
+                                            <div class="item two text-right">
+                                                
+                                            </div>
+                                        </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="addheight"></div>
+            <div class="h-50 d-inline-block"></div>
+        </div>
+        <footer class="success-mode container fixed-bottom z-index301">
+            <button class="btn-ok" onclick="animRouter('../shopping/delivery-info.html');">我要點餐</button>
+        </footer>
+    </main>
+    
+    <!-- 規格篩選視窗 -->
+    <div class="sortlayer">
+        <div class="productsOpensort">
+            <div id="open-sortbox">
+                <div class="open-sort-cont">
+                    <label>排序</label>
+                    <div class="d-flex sortGroup flex-column">
+                        <div class="item">即將到期優先</div>
+                        <div class="item">依領取時間(由新到舊)</div>
+                        <div class="item defItem active">依領取時間(由舊到新)</div>
+                    </div>
+                    <label>使用範圍</label>
+                    <div class="d-flex sortGroup flex-row">
+                        <div class="item defItem">全部</div>
+                        <div class="item active">到店使用</div>
+                        <div class="item">線上使用</div>
+                    </div>
+                    <label>優惠券類型</label>
+                    <ul class="open-sort-ul">
+                        <li class="flex-inline-between defItem active">
+                            <div>全部</div>
+                            <i class="material-icons done">&#xe876;</i>
+                        </li>
+                        <li class="flex-inline-between">
+                            <div>美食</div>
+                            <i class="material-icons done">&#xe876;</i>
+                        </li>
+                        <li class="flex-inline-between">
+                            <div>購物</div>
+                            <i class="material-icons done">&#xe876;</i>
+                        </li>
+                        <li class="flex-inline-between">
+                            <div>景點</div>
+                            <i class="material-icons done">&#xe876;</i>
+                        </li>
+                        <li class="flex-inline-between">
+                            <div>遊樂</div>
+                            <i class="material-icons done">&#xe876;</i>
+                        </li>
+                        <li class="flex-inline-between">
+                            <div>住宿</div>
+                            <i class="material-icons done">&#xe876;</i>
+                        </li>
+                        <li class="flex-inline-between">
+                            <div>醫療保健</div>
+                            <i class="material-icons done">&#xe876;</i>
+                        </li>
+                    </ul>
+                    <label>折扣類型使用</label>
+                    <ul class="open-sort-ul">
+                        <li class="flex-inline-between defItem">
+                            <div>全部</div>
+                            <i class="material-icons done">&#xe876;</i>
+                        </li>
+                        <li class="flex-inline-between active">
+                            <div>折扣券</div>
+                            <i class="material-icons done">&#xe876;</i>
+                        </li>
+                        <li class="flex-inline-between">
+                            <div>贈品券</div>
+                            <i class="material-icons done">&#xe876;</i>
+                        </li>
+                        <li class="flex-inline-between active">
+                            <div>免運券</div>
+                            <i class="material-icons done">&#xe876;</i>
+                        </li>
+                    </ul>         
+                </div>
+                <div class="open-sort-title">
+                    <div class="flex-inline-between">
+                        <div class="title-icon">
+                            <button class="btn" onclick="backsortLayer();">
+                                <i class="material-icons">&#xe314;</i>
+                            </button>
+                        </div>
+                        <div class="title-txt">
+                            篩選與排序
+                        </div>
+                        <div></div>
+                    </div>                    
+                    <div class="open-sort-num">
+                        符合項目的優惠券 共 14 張
+                    </div>
+                </div>
+                <div class="open-sort-footer">
+                    <button class="btn all-reset">
+                        <i class="material-icons loop">&#xe028;</i>全部重設
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div> 
+        <!-- 分享 -->
+        <!-- <div class="uplayer">
+            <div class="sharebox">
+                <h6 class="pt-4">分享給好友</h6>
+                <div class="sharelist">
+                    <div class="item" onclick=""><img src="../img/share/instargram.png"><p>Instargram</p></div>
+                    <div class="item" onclick=""><img src="../img/share/line.png"><p>Line</p></div>
+                    <div class="item" onclick=""><img src="../img/share/messenger.png"><p>messenger</p></div>
+                    <div class="item" onclick=""><img src="../img/share/facebook.png"><p>Facebook</p></div>
+                    <div class="item" onclick=""><img src="../img/share/twitter.png"><p>Twitter</p></div>
+                    <div class="item" onclick=""><img src="../img/share/wahtsapp.png"><p>WahtsApp</p></div>
+                    <div class="item" onclick=""><img src="../img/share/imessenger.png"><p>iMessanger</p></div>
+                    <div class="item" onclick="copyUrl()"><img src="../img/share/copyicon.png"><p>複製連結</p></div>
+                </div>
+                <button class="btn index-outline-btn small-80 w-80" onclick="backLayerUp()">取消</button>
+            </div>
+        </div> -->
+    </div>
+
+    <div id="loginhtml"></div>
+    <div id="footerMobii"></div>
+    
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="../js/vendor/bs4/js/jquery-3.2.1.min.js"></script>
+    <!-- Latest compiled and minified JavaScript -->    
+    <script src="../js/vendor/bs4/js/popper.min.js"></script>
+    <script src="../js/vendor/bs4/js/bootstrap.min.js"></script>
+    
+    
+    <script src="../js/vendor/jquery-editable-select-master/dist/jquery-editable-select.js"></script>
+
+    <!-- vendor js -->
+    <script src="../js/vendor/swiper/js/swiper.min.js"></script>
+    <script src="../js/vendor/imgLiquid.js"></script>
+    <script src="../js/masonry.pkgd.min.js"></script>
+
+
+    <!-- custom js -->
+    <script src="../js/animateCss.js"></script>
+    <script>   
+        // 開啟篩選清單
+        $('.filter-item').on('click', function(){
+            $(this).toggleClass('active').siblings().removeClass('active');
+            var filter = $(this).data('filter');
+            $('#' + filter).toggleClass('is-open');
+            $('#' + filter).siblings().removeClass('is-open');
+            $('#' + filter).parents('.tab-pane').children().find(".mask-container").removeClass("d-block");
+            if ($(this).hasClass("active")) {
+                $('#' + filter).parents('.tab-pane').children().find(".mask-container").addClass("d-block");
+            }
+        })
+        // 篩選列表勾選控制
+        $('.sortGroup .item').on('click',function(){
+            $(this).toggleClass('active').siblings().removeClass('active');
+        });        
+        $('.open-sort-ul li:first-child').click(function(e){
+            $(this).addClass('active').siblings().removeClass('active');
+        });
+        $('.open-sort-ul li:not(":first-child")').click(function(e){
+            $(this).parent().find("li:first-child").removeClass('active');
+            $(this).addClass('active');
+        });
+        // 重置
+        $('.all-reset').on('click',function(){
+            $('#open-sortbox .active').removeClass('active');
+            $('#open-sortbox .defItem').addClass('active');
+        }); 
+
+        // swiper for shopping-storeimg
+        if ($( ".shopping-storeimg" ).hasClass("swiper-container")) {
+        var swiper = new Swiper('.shopping-storeimg.swiper-container', {
+            autoplay: true,
+            pagination: {
+                el: '.shopping-storeimgbox .swiper-pagination',
+                type: 'fraction',
+            },
+            navigation: {
+                nextEl: '.shopping-storeimgbox .swiper-button-next',
+                prevEl: '.shopping-storeimgbox .swiper-button-prev',
+            },
+            });
+        }
+
+        // more info drop down toggle
+        $('.open-btn').on('click', function(){
+            $(this).parent().toggleClass('is-open');
+        })
+
+        //scroll top
+        $(document).on( 'scroll', function(){        
+            if ($(window).scrollTop() < 400) {        
+                $('#storeTab').removeClass('fixed-top container');
+            } else {                
+                $('#storeTab').addClass('fixed-top container');
+            }
+        });
+        
+        //window size        
+        // var widthSize=$(window).width();
+        // changeShareBtn(widthSize);
+        // $(window).resize(function() {
+        //     var widthSize=$(window).width();
+        //     changeShareBtn(widthSize);
+        // });
+        // function changeShareBtn(e){
+        //     if(e > 767){
+        //         $('.add-share').removeAttr('onclick').addClass("msg-open").attr('value','msg-share')
+        //         .attr('data-toggle',"modal").attr('data-target',"#messageModal");
+        //     }else{
+        //         $('.add-share').removeClass("msg-open").removeAttr('value').removeAttr('data-toggle').removeAttr('data-target')
+        //         .attr('onclick',"callLayerUp('.sharebox')");
+        //     }
+        // }
+
+        //hash choose
+        let parameterN = window.location.hash.split("#")[1];
+        switch(parameterN){
+            case "explor":
+                $(".shopping-store-btn, .success-mode").hide();
+                $(".add-share").attr("data-title","好點分享");
+                break;
+            case "store":
+                $(".success-mode").hide();
+                break;
+            case "delivery" :
+                $(".shopping-store-badge span").slice(1).hide();
+                $("#storeTab li:nth-child(2)").hide();
+                break;
+            default:
+                $(".shopping-store-btn").removeAttr("style");
+                $(".success-mode").hide();
+                $(".add-share").attr("data-title","好店分享");
+                break;
+        }
+
+        // login.html load
+        $("#loginhtml").load("../login.html");
+        $("#footerMobii").load("../footerMobii.html");
+        
+    </script>
+    <script src="../js/index.js"></script>
+    <script src="../js/indexSwiper.js"></script>
+</body>
+
+</html>

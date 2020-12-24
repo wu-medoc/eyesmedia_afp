@@ -1,0 +1,331 @@
+﻿<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=1, user-scalable=no">
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../js/vendor/bs4/css/bootstrap.min.css">
+    <!-- vendor css -->
+    <link rel="stylesheet" href="../js/vendor/jquery-editable-select-master/dist/jquery-editable-select.min.css">
+    <link rel="stylesheet" href="../js/vendor/swiper/css/swiper.min.css">
+
+    <!-- custom css -->
+    <link rel="stylesheet" href="../styles/css.min.css">
+    
+    <link rel="stylesheet" href="../styles/style.min.css">
+    <link rel="stylesheet" href="../styles/product-list.min.css">
+    <link rel="stylesheet" href="../styles/animate.min.css">
+    <title>Mobii!</title>
+</head>
+
+<body>
+<div class="wrap container">
+    <header>
+        <div class="header-secondary container">
+            <div class="index-flex justify-content-between">
+                <div class="item two">
+                    <div class="close-btn">
+                        <button class="btn px-0" onclick="history.back();" data-toggle="tooltip" data-placement="bottom" title="回上一頁">
+                            <i class="material-icons">&#xe314;</i>
+                        </button>
+                    </div>
+                </div>
+                <div class="item three text-center">
+                    <div class="title-name">交通訂票</div>
+                </div>
+                <div class="item two">
+                    <div class="top-item climate text-right"> 
+                            <button onclick="location.href='shopping-cart.html'" class="badge-img px-0" data-toggle="tooltip" data-placement="bottom" title="購物車">
+                                <span class="badge badge-on">99+</span><img src="../img/shopping/icon_shoppingcart.svg">
+                            </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>   
+        <div class="header-sort choice-filter-box py-1">
+            <div class="s-bar pl-1" onclick="div_switch();">
+                <div class="input-box border border-radius5">
+                    <button class="btn"><i class="material-icons">&#xE8B6;</i></button>
+                    <input type="search" placeholder="輸入關鍵字搜尋店家,優惠券" class="border-0">
+                </div>
+            </div>
+            <div class="s-btn div-switch d-none">
+                <button class="btn w-100" onclick="div_switch();">取消</button>
+            </div>
+            <!-- 篩選鈕（規格值篩選及排序） -->
+            <div class="filter-box div-switch d-block" onclick="callsortLayer('.productsOpensort');">
+                <button class="btn px-1">
+                  <i class="material-icons">&#xE152;</i>
+                </button>
+            </div>
+        </div>
+        <div class="filter-outbox">
+            <div class="filter-main">
+                <div class="mask-container d-none w-100 h-100"></div>
+                <!-- 列表內容 -->
+                <div class="products-listbox-nom">        
+                    <div class="row products-item">
+                        <div class="col-6 col-xl-4 pl-0 pb-3">
+                            <div class="w-100 bg-white">
+                                <a href="product-detail.html">
+                                    <div class="products-img">
+                                        <div class="img-box">
+                                            <div class="rwdimg" style="background-image: url('https://picsum.photos/300/300/?random=4');"></div>
+                                        </div> 
+                                    </div>
+                                    <div class="products-title">
+                                        <p class="txt-line-clamp2">[下殺限定]Apple iPhone XS 256G 5.8吋智慧型手機</p>
+                                    </div>
+                                    <div class="products-price">
+                                        <div class="price-asking">$30,320</div>
+                                        <div class="price-original">$37,000</div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>                        
+                        <div class="col-6 col-xl-4 pl-0 pb-3">
+                            <div class="w-100 bg-white">
+                                <a href="product-detail.html">
+                                    <div class="products-img">
+                                        <div class="img-box">
+                                            <div class="rwdimg" style="background-image: url('https://picsum.photos/200/300/?random=2');"></div>
+                                        </div> 
+                                    </div>
+                                    <div class="products-title">
+                                        <p class="txt-line-clamp2">[下殺限定]Apple iPhone XS 256G 5.8吋智慧型手機</p>
+                                    </div>
+                                    <div class="products-price">
+                                        <div class="price-asking">$30,320</div>
+                                        <div class="price-original">$37,000</div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>                      
+                        <div class="col-6 col-xl-4 pl-0 pb-3">
+                            <div class="w-100 bg-white">
+                                <a href="product-detail.html#tk">
+                                    <div class="products-img">
+                                        <div class="img-box">
+                                            <div class="rwdimg" style="background-image: url('https://picsum.photos/300/200/?random=1');"></div>
+                                        </div> 
+                                    </div>
+                                    <div class="products-title">
+                                        <p class="txt-line-clamp2">高雄捷運一日 QR CODE 搭乘券</p>
+                                    </div>
+                                    <div class="products-price">
+                                        <div class="price-asking">$120</div>
+                                        <div class="price-original">$120</div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 目錄篩選視窗 -->
+                <div id="type" class="filter-content pb-wrap">
+                    <ul class="open-sort-ul">
+                        <li class="flex-inline-between" (click)="dirFilter()">                
+                            <div>
+                                全部顯示
+                            </div>
+                            <div>
+                                <span>22</span>
+                                <i class="material-icons check">&#xe5ca;</i>
+                            </div>   
+                        </li>
+                        <li class="flex-inline-between active" (click)="dirFilter()">
+                            <div>
+                                台北
+                            </div>
+                            <div>
+                                <span>8</span>
+                                <i class="material-icons check">&#xe5ca;</i>
+                            </div>                
+                        </li>
+                        <li class="flex-inline-between" (click)="dirFilter()">
+                            <div>
+                                台中
+                            </div>
+                            <div>
+                                <span>2</span>
+                                <i class="material-icons check">&#xe5ca;</i>
+                            </div>                
+                        </li>
+                        <li class="flex-inline-between" onclick="">
+                            <div>
+                                高雄
+                            </div>
+                            <div>
+                                <span>2</span>
+                                <i class="material-icons check">&#xe5ca;</i>
+                            </div>                
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div id="loginhtml"></div>
+    </main>
+    <!-- 規格篩選視窗 -->
+    <div class="sortlayer">
+        <div class="productsOpensort">
+            <div id="open-sortbox">
+                <div class="open-sort-cont">
+                    <label>排序</label>
+                    <div class="d-flex sortGroup flex-column">
+                        <div class="item">即將到期優先</div>
+                        <div class="item">依領取時間(由新到舊)</div>
+                        <div class="item defItem active">依領取時間(由舊到新)</div>
+                    </div>
+                    <label>使用範圍</label>
+                    <div class="d-flex sortGroup flex-row">
+                        <div class="item defItem">全部</div>
+                        <div class="item active">到店使用</div>
+                        <div class="item">線上使用</div>
+                    </div>
+                    <label>優惠券類型</label>
+                    <ul class="open-sort-ul">
+                        <li class="flex-inline-between defItem active">
+                            <div>全部</div>
+                            <i class="material-icons done">&#xe876;</i>
+                        </li>
+                        <li class="flex-inline-between">
+                            <div>美食</div>
+                            <i class="material-icons done">&#xe876;</i>
+                        </li>
+                        <li class="flex-inline-between">
+                            <div>購物</div>
+                            <i class="material-icons done">&#xe876;</i>
+                        </li>
+                        <li class="flex-inline-between">
+                            <div>景點</div>
+                            <i class="material-icons done">&#xe876;</i>
+                        </li>
+                        <li class="flex-inline-between">
+                            <div>遊樂</div>
+                            <i class="material-icons done">&#xe876;</i>
+                        </li>
+                        <li class="flex-inline-between">
+                            <div>住宿</div>
+                            <i class="material-icons done">&#xe876;</i>
+                        </li>
+                        <li class="flex-inline-between">
+                            <div>醫療保健</div>
+                            <i class="material-icons done">&#xe876;</i>
+                        </li>
+                    </ul>
+                    <label>折扣類型使用</label>
+                    <ul class="open-sort-ul">
+                        <li class="flex-inline-between defItem">
+                            <div>全部</div>
+                            <i class="material-icons done">&#xe876;</i>
+                        </li>
+                        <li class="flex-inline-between active">
+                            <div>折扣券</div>
+                            <i class="material-icons done">&#xe876;</i>
+                        </li>
+                        <li class="flex-inline-between">
+                            <div>贈品券</div>
+                            <i class="material-icons done">&#xe876;</i>
+                        </li>
+                        <li class="flex-inline-between active">
+                            <div>免運券</div>
+                            <i class="material-icons done">&#xe876;</i>
+                        </li>
+                    </ul>         
+                </div>
+                <div class="open-sort-title">
+                    <div class="flex-inline-between">
+                        <div class="title-icon">
+                            <button class="btn" onclick="backsortLayer();">
+                                <i class="material-icons">&#xe314;</i>
+                            </button>
+                        </div>
+                        <div class="title-txt">
+                            篩選與排序
+                        </div>
+                        <div></div>
+                    </div>                    
+                    <div class="open-sort-num">
+                        符合項目的優惠券 共 14 張
+                    </div>
+                </div>
+                <div class="open-sort-footer">
+                    <button class="btn all-reset">
+                        <i class="material-icons loop">&#xe028;</i>全部重設
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div> 
+</div>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="../js/vendor/bs4/js/jquery-3.2.1.min.js"></script>
+    <!-- Latest compiled and minified JavaScript -->    
+    <script src="../js/vendor/bs4/js/popper.min.js"></script>
+    <script src="../js/vendor/bs4/js/bootstrap.min.js"></script>
+    
+    
+    <script src="../js/vendor/jquery-editable-select-master/dist/jquery-editable-select.js"></script>
+
+    <!-- vendor js -->
+    <script src="../js/vendor/swiper/js/swiper.min.js"></script>
+    <script src="../js/vendor/imgLiquid.js"></script>
+
+    <!-- custom js -->
+    <script src="../js/animateCss.js"></script>
+    <script>    
+        $(document).ready(function() { 
+            // title-name
+            var hashVal=window.location.hash.split("#")[1];
+            var JData = [{id:"01", title:"台灣伴手禮"},{id:"02", title:"交通訂票"},{id:"03", title:"漫遊"},
+                        {id:"04", title:"免運專區"},{id:"05", title:"刷卡＆活動"}];
+            for (let i = 0; i < JData.length; i++) {
+                if (JData[i]['id']==hashVal) 
+                    $('.title-name').text(JData[i]['title']);
+            }
+
+
+        });
+        
+        // 開啟篩選清單
+        $('.filter-item').on('click', function(){
+            $(this).toggleClass('active').siblings().removeClass('active');
+            var filter = $(this).data('filter');
+            $('#' + filter).toggleClass('is-open');
+            $('#' + filter).siblings().removeClass('is-open');
+            ($(this).hasClass("active")) ?
+                $('#' + filter).siblings(".mask-container").removeClass("d-none").addClass("d-block"):
+                $('#' + filter).siblings(".mask-container").addClass("d-none").removeClass("d-block");
+        })
+        // 篩選列表勾選控制
+        $('.sortGroup .item').on('click',function(){
+            $(this).toggleClass('active').siblings().removeClass('active');
+        });        
+        $('.open-sort-ul li:first-child').click(function(e){
+            $(this).addClass('active').siblings().removeClass('active');
+        });
+        $('.open-sort-ul li:not(":first-child")').click(function(e){
+            $(this).parent().find("li:first-child").removeClass('active');
+            $(this).addClass('active');
+        });
+        // 重置
+        $('.all-reset').on('click',function(){
+            $('#open-sortbox .active').removeClass('active');
+            $('#open-sortbox .defItem').addClass('active');
+        });        
+        $("#loginhtml").load("../login.html");
+    </script>
+    <script src="../js/index.js"></script>
+</body>
+
+</html>
