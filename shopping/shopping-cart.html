@@ -297,7 +297,7 @@
     </main>
     <form id="cartForm">
         <footer class="shopping-cartfooter">
-            <div class="shopping-coupon container">
+            <div class="shopping-coupon container fixed-bottom slideInUp animated slower">
                 <div class="flex-inline-between coupon-box">
                     <div><i class="material-icons local_offer">&#xe54e;</i>下一步使用優惠券、折扣碼</div>
                 </div>
@@ -547,9 +547,6 @@
             $('.price-subtotal').text('$'+formatPrice(e)).attr('value',e);
         }
 
-        //footer coupon
-        $('.shopping-coupon').addClass('fixed-bottom').slideDown(2000);
-        
         //Currency formatting
         function formatPrice(n) {
         var t = parseInt(n), i, r;
