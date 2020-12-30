@@ -49,11 +49,11 @@
     </header>
     <div class="missionlist">
 
-        <div><img src="../../../../img/mission/banner2.png" class="img-fluid"></div>
+        <div><img src="../../../img/mission/banner2.png" class="img-fluid"></div>
         <div class="bg-mission p-3">
             <div class="bg-white flex-inline-between px-2 brder-mission">
                 <div class="d-flex align-items-center">
-                    <img src="../../../../img/share/mobiicoin_red.png" class="h24">
+                    <img src="../../../img/share/mobiicoin_red.png" class="h24">
                     <span class="mobiicoin-num">2,366</span>
                 </div>
                 <div class="d-flex align-items-center">
@@ -123,7 +123,7 @@
         <div class="winmsg">
             <div class="winbox w-100">
                 <div class="wincontbox">
-                    <img src="../../../../img/shopping/store/stroe-logo-6.png">
+                    <img src="../../../img/shopping/store/stroe-logo-6.png">
                     <p>30元折價券</p>
                     <small>2019/11/15 ~ 2019/12/31</small>
                 </div>
@@ -161,18 +161,18 @@
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="../../../../js/vendor/bs4/js/jquery-3.2.1.min.js"></script>
+    <script src="../../../js/vendor/bs4/js/jquery-3.2.1.min.js"></script>
     <!-- Latest compiled and minified JavaScript -->    
-    <script src="../../../../js/vendor/bs4/js/popper.min.js"></script>
-    <script src="../../../../js/vendor/bs4/js/bootstrap.min.js"></script> 
-    <script src="../../../../js/vendor/jquery-editable-select-master/dist/jquery-editable-select.js"></script>
+    <script src="../../../js/vendor/bs4/js/popper.min.js"></script>
+    <script src="../../../js/vendor/bs4/js/bootstrap.min.js"></script> 
+    <script src="../../../js/vendor/jquery-editable-select-master/dist/jquery-editable-select.js"></script>
     <!-- vendor js -->
-    <script src="../../../../js/vendor/swiper/js/swiper.min.js"></script>
-    <script src="../../../../js/vendor/imgLiquid.js"></script>
-    <!-- <script src="../../../../js/vendor/bs4/js/jquery.eraser.js"></script> -->
+    <script src="../../../js/vendor/swiper/js/swiper.min.js"></script>
+    <script src="../../../js/vendor/imgLiquid.js"></script>
+    <!-- <script src="../../../js/vendor/bs4/js/jquery.eraser.js"></script> -->
 
     <!-- custom js -->    
-    <script src="../../../../js/animateCss.js"></script>
+    <script src="../../../js/animateCss.js"></script>
     <script>
 
         //eraser
@@ -187,7 +187,7 @@
         topCanvas.height = bottomCanvas.height = h;
         var ctxBot = bottomCanvas.getContext("2d");
         var ctxTop = topCanvas.getContext('2d');
-        bottomCanvas.style.backgroundImage = "url('../../../../img/mission/scratch-win.png')"; //銀底圖
+        bottomCanvas.style.backgroundImage = "url('../../../img/mission/scratch-win.png')"; //銀底圖
         ctxBot.font = $('#top').css("font-size")+" Microsoft YaHei"; //字型大小
         //獲取1-1000隨機數
         function random(){
@@ -207,7 +207,7 @@
                 var key="",txt="";
                 $.each(JData, function( key, value ) {
                     if(JData[key]['idx']==luckrandom){
-                        $('.wincontbox').empty().append("<img src='../../../../img/shopping/store/stroe-logo-"+luckrandom+".png'><p>"+JData[key]['txt']+"</p><small>"+JData[key]['deadline']+"</small></div>");
+                        $('.wincontbox').empty().append("<img src='../../../img/shopping/store/stroe-logo-"+luckrandom+".png'><p>"+JData[key]['txt']+"</p><small>"+JData[key]['deadline']+"</small></div>");
                         txt=JData[key]['txt'];
                     }
                    //console.log(JData[key]['idx']);
@@ -217,12 +217,12 @@
         }
 
         var imgTop = new Image();
-        imgTop.src = "../../../../img/mission/scratch-no.png"; //鈔票圖
+        imgTop.src = "../../../img/mission/scratch-no.png"; //鈔票圖
         imgTop.onload = function (){
             drawTop();  
         }
         var imgBot = new Image();
-        imgBot.src = "../../../../img/mission/scratch-win.png"; //銀底圖
+        imgBot.src = "../../../img/mission/scratch-win.png"; //銀底圖
         imgBot.onload = function (){
             drawBot();
         }
@@ -328,10 +328,10 @@
             }
         }
 
-        $("#footerMobii").load("../../../../footerMobii.html"); 
+        $("#footerMobii").load("../../../footerMobii.html"); 
     </script>
 
-    <script src="../../../../js/index.js"></script>
+    <script src="../../../js/index.js"></script>
 </body>
 
 </html>

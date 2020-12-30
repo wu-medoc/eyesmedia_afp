@@ -48,11 +48,11 @@
         </div>
     </header>
     <div class="missionlist">
-        <div><img src="../../../../img/mission/banner3.png" class="img-fluid"></div>
+        <div><img src="../../../img/mission/banner3.png" class="img-fluid"></div>
         <div class="bg-mission p-3">
             <div class="bg-white flex-inline-between px-2 brder-mission">
                 <div class="d-flex align-items-center">
-                    <img src="../../../../img/share/mobiicoin_red.png" class="h24">
+                    <img src="../../../img/share/mobiicoin_red.png" class="h24">
                     <span class="mobiicoin-num">2,366</span>
                 </div>
                 <div class="d-flex align-items-center dedpoint">
@@ -71,10 +71,10 @@
             <div class="luckspin-cont">
                 <div class="luckspin-contbox">
                     <div class="playbox9">
-                        <button type="button" id="playagain" class="btn p-0" onclick="play()"><img src="../../../../img/mission/playbox9.png"></button>
+                        <button type="button" id="playagain" class="btn p-0" onclick="play()"><img src="../../../img/mission/playbox9.png"></button>
                     </div>
                     <div class="playbox">
-                        <button type="button" id="playagain" class="btn p-0" onclick="play()"><img src="../../../../img/mission/playbox.png"></button>
+                        <button type="button" id="playagain" class="btn p-0" onclick="play()"><img src="../../../img/mission/playbox.png"></button>
                         <div id="rundot"><div class="dot"></div><div class="dot1"></div><div class="dot2"></div></div>
                     </div>
                 </div>         
@@ -129,7 +129,7 @@
             <button type="button" class="btn winbtn" onclick="backLayerUp();next();">×</button>
             <div class="winbox w-100">
                 <div class="wincontbox">
-                    <img src="../../../../img/shopping/store/stroe-logo-6.png">
+                    <img src="../../../img/shopping/store/stroe-logo-6.png">
                     <p>30元折價券</p>
                     <small>2019/11/15 ~ 2019/12/31</small>
                 </div>
@@ -146,18 +146,18 @@
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="../../../../js/vendor/bs4/js/jquery-3.2.1.min.js"></script>
+    <script src="../../../js/vendor/bs4/js/jquery-3.2.1.min.js"></script>
     <!-- Latest compiled and minified JavaScript -->    
-    <script src="../../../../js/vendor/bs4/js/popper.min.js"></script>
-    <script src="../../../../js/vendor/bs4/js/bootstrap.min.js"></script> 
-    <script src="../../../../js/vendor/jquery-editable-select-master/dist/jquery-editable-select.js"></script>
+    <script src="../../../js/vendor/bs4/js/popper.min.js"></script>
+    <script src="../../../js/vendor/bs4/js/bootstrap.min.js"></script> 
+    <script src="../../../js/vendor/jquery-editable-select-master/dist/jquery-editable-select.js"></script>
 
     <!-- vendor js -->
-    <script src="../../../../js/vendor/swiper/js/swiper.min.js"></script>
-    <script src="../../../../js/vendor/imgLiquid.js"></script>
+    <script src="../../../js/vendor/swiper/js/swiper.min.js"></script>
+    <script src="../../../js/vendor/imgLiquid.js"></script>
 
     <!-- custom js -->    
-    <script src="../../../../js/animateCss.js"></script>
+    <script src="../../../js/animateCss.js"></script>
     <script>
         $( document ).ready(function() {
             $('footer.for-pc').hide();
@@ -193,8 +193,8 @@
                 //初始資料
                 if(JData[key]['idx']<=parameterN){
                 (JData[key]['quota']=="0") ?            
-                    $('.luckspin-contbox').prepend("<div class='contbox "+ order8.pop() +"' id='p"+ JData[key]['idx'] +"'><img src='../../../../img/shopping/store/thanks.png'><p>再接再厲</p></div>"):
-                    $('.luckspin-contbox').prepend("<div class='contbox "+ order8.pop() +"' id='p"+ JData[key]['idx'] +"'><img src='../../../../img/shopping/store/"+ JData[key]['img'] +"'><p>"+JData[key]['txt']+"</p></div>");
+                    $('.luckspin-contbox').prepend("<div class='contbox "+ order8.pop() +"' id='p"+ JData[key]['idx'] +"'><img src='../../../img/shopping/store/thanks.png'><p>再接再厲</p></div>"):
+                    $('.luckspin-contbox').prepend("<div class='contbox "+ order8.pop() +"' id='p"+ JData[key]['idx'] +"'><img src='../../../img/shopping/store/"+ JData[key]['img'] +"'><p>"+JData[key]['txt']+"</p></div>");
                 };
                     $('.playbox').hide();
                     $('.playbox9').show();
@@ -207,8 +207,8 @@
             $.each(JData, function( key, value ) {
                 //初始資料                
                 (JData[key]['quota']=="0") ?            
-                    $('.luckspin-contbox').prepend("<div class='contbox "+ order12.pop() +"' id='p"+ JData[key]['idx'] +"'><img src='../../../../img/shopping/store/thanks.png'><p>再接再厲</p></div>"):
-                    $('.luckspin-contbox').prepend("<div class='contbox "+ order12.pop() +"' id='p"+ JData[key]['idx'] +"'><img src='../../../../img/shopping/store/"+ JData[key]['img'] +"'><p>"+JData[key]['txt']+"</p></div>");
+                    $('.luckspin-contbox').prepend("<div class='contbox "+ order12.pop() +"' id='p"+ JData[key]['idx'] +"'><img src='../../../img/shopping/store/thanks.png'><p>再接再厲</p></div>"):
+                    $('.luckspin-contbox').prepend("<div class='contbox "+ order12.pop() +"' id='p"+ JData[key]['idx'] +"'><img src='../../../img/shopping/store/"+ JData[key]['img'] +"'><p>"+JData[key]['txt']+"</p></div>");
             });
             $('.playbox9').hide();
             $('.playbox').show();
@@ -232,11 +232,11 @@
                 $.each(JData, function( key, value ) {
                     if(JData[key]['idx']==luckrandom){
                         if (JData[key]['quota']=="0") {
-                            $('.wincontbox').empty().append("<img src='../../../../img/shopping/store/thanks.png'><p>再接再厲</p></div>");
+                            $('.wincontbox').empty().append("<img src='../../../img/shopping/store/thanks.png'><p>再接再厲</p></div>");
                             $('.text-mission').text("好可惜喔！差一點就中了～");
                             $('.index-btn').hide();
                         } else {
-                            $('.wincontbox').empty().append("<img src='../../../../img/shopping/store/"+ JData[key]['img'] +"'><p>"+JData[key]['txt']+"</p><small>"+JData[key]['deadline']+"</small></div>");
+                            $('.wincontbox').empty().append("<img src='../../../img/shopping/store/"+ JData[key]['img'] +"'><p>"+JData[key]['txt']+"</p><small>"+JData[key]['deadline']+"</small></div>");
                             $('.text-mission').text("已發送至您的優惠夾，請注意使用期限");
                         };
                     }
@@ -257,9 +257,9 @@
     </script>
 
     <script>    
-        $("#loginhtml").load("../../../../login.html"); 
+        $("#loginhtml").load("../../../login.html"); 
     </script>
-    <script src="../../../../js/index.js"></script>
+    <script src="../../../js/index.js"></script>
 </body>
 
 </html>
