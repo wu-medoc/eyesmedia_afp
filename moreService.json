@@ -13,7 +13,7 @@
     "service": "生活資訊",
     "img": "category2_1dollar",
     "tit": "一元搶購",
-    "link": "voucher//event.html",
+    "link": "voucher/event.html",
     "item": 2,
     "disable": 1
   },
