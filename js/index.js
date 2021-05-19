@@ -108,7 +108,7 @@ window.onload = function(){
         (msgval=="msg-offers")?$(this).addClass("tempTAG"):$(this).removeClass("tempTAG");
     });
     $(document).on('click','button.step1', function(){
-        $(".tempTAG").parent().prepend('<button class="btn px-2 index-outline-btn small-80 sendval" type="submit" name="type" value="step1">使用</button>');
+        $(".tempTAG").parent().prepend('<button class="btn px-2 index-outline-btn small-80 sendValue" type="submit" name="type" value="step1">使用</button>');
         $(".tempTAG").remove();
     }); 
 

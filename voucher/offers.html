@@ -102,7 +102,7 @@
                             <div class="circle circle-top"></div>
                             <div class="circle circle-bottom"></div>
                             <div class="d-flex flex-column">
-                                <button class="btn px-2 index-btn small-80 sendval" type="submit" name="type" value="step0">兌換</button>
+                                <button class="btn px-2 index-btn small-80 sendValue" type="submit" name="type" value="step0">兌換</button>
                                 <div class="m-quantity small"><img src="../img/share/mobiicoin_red.png" class="coinimg-m"> 3,820</div>
                             </div>
                         </div>
@@ -127,7 +127,7 @@
                             <div class="circle circle-top"></div>
                             <div class="circle circle-bottom"></div>
                             <div class="d-flex flex-column">
-                                <button class="btn px-2 index-outline-btn small-80 sendval" type="submit" name="type" value="step1">使用</button>
+                                <button class="btn px-2 index-outline-btn small-80 sendValue" type="submit" name="type" value="step1">使用</button>
                             </div>
                         </div>
                     </div>
@@ -151,7 +151,7 @@
                             <div class="circle circle-top"></div>
                             <div class="circle circle-bottom"></div>
                             <div class="d-flex flex-column">
-                                <button class="btn gray-obtn small-80 sendval" type="submit" name="type" value="step2">已使用</button>
+                                <button class="btn gray-obtn small-80 sendValue" type="submit" name="type" value="step2">已使用</button>
                             </div>
                         </div>
                     </div>
@@ -839,10 +839,10 @@
     <script src="../js/jquery.countdown.min.js"></script>
     <script>
   
-        //send stepval
-        $(document).on('click','button.sendval', function(){
-            var sendval = $(this).val();
-            document.cookie = 'step='+sendval;
+        //send stepValue
+        $(document).on('click','button.sendValue', function(){
+            var sendValue = $(this).val();
+            document.cookie = 'step='+sendValue;
             window.location.href='../voucher/voucher-detail.html';
             console.log("click");
         });

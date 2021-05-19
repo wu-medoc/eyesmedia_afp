@@ -399,8 +399,8 @@
      * Throws 3 jQuery events:
      *
      * - `circle-animation-start(jqEvent)`
-     * - `circle-animation-progress(jqEvent, animationProgress, stepValue)` - multiple event
-     *   animationProgress: from `0.0` to `1.0`; stepValue: from `0.0` to `value`
+     * - `circle-animation-progress(jqEvent, animationProgress, stepValueue)` - multiple event
+     *   animationProgress: from `0.0` to `1.0`; stepValueue: from `0.0` to `value`
      * - `circle-animation-end(jqEvent)`
      *
      * @protected
@@ -419,9 +419,9 @@
         .css({animationProgress: 0})
         .animate({animationProgress: 1}, $.extend({}, this.animation, {
           step: function(animationProgress) {
-            var stepValue = self.animationStartValue * (1 - animationProgress) + v * animationProgress;
-            self.drawFrame(stepValue);
-            el.trigger('circle-animation-progress', [animationProgress, stepValue]);
+            var stepValueue = self.animationStartValue * (1 - animationProgress) + v * animationProgress;
+            self.drawFrame(stepValueue);
+            el.trigger('circle-animation-progress', [animationProgress, stepValueue]);
           }
         }))
         .promise()

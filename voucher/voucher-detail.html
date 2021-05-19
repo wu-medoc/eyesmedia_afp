@@ -202,9 +202,9 @@
                 $('.badge').html("<img src='../img/share/2600.png'>交通");
             }
 
-            //get stepval
-            var stepval = getCookie('step');
-            if (stepval=='step1'){
+            //get stepValue
+            var stepValue = getCookie('step');
+            if (stepValue=='step1'){
                 $('.fixed-btn').append().html("<button type='button' class='btn px-2 index-outline-btn w-100' onclick=\"callLayer('.useoffers')\">使用</button>");
             }else{
                 $.cookie("cookieName", "", {expires: -1});

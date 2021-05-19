@@ -157,7 +157,7 @@
         <div class="container other-discount-list">
           <div class="p-3">
             <h6>熱門優惠券</h6>
-            <div class="discount-more"><a href="shopping-offers.html">更多優惠券</a></div>
+            <div class="discount-more"><a href="../voucher/shopping-offers.html">更多優惠券</a></div>
             <div class="row">
                 <div class="col-sm-12 col-md-6 discount-box">
                     <div class="discount-item">
@@ -485,10 +485,10 @@
             });
         };
 
-        //send stepval
-        $('button.sendval').on('click',function(){
-            var sendval = $(this).val();
-            document.cookie = 'step='+sendval;
+        //send stepValue
+        $('button.sendValue').on('click',function(){
+            var sendValue = $(this).val();
+            document.cookie = 'step='+sendValue;
             window.location.href='../voucher/voucher-detail.html';
         });
 
